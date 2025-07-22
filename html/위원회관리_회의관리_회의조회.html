@@ -1,25 +1,26 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
-<title>ODA</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-<meta http-equiv="Pragma" content="no-cache">
-<meta http-equiv="Expires" content="0">
+	<title>ODA</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+	<meta http-equiv="Pragma" content="no-cache">
+	<meta http-equiv="Expires" content="0">
 
-<link rel="stylesheet" href="../css/flatpickr.min.css">
-<link rel="stylesheet" href="../css/reset.css">
-<link rel="stylesheet" href="../css/layout.css">
-<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/flatpickr.min.css">
+	<link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" href="../css/layout.css">
+	<link rel="stylesheet" href="../css/style.css">
 
-<script defer src="../js/jquery-3.7.1.min.js"></script>
-<script defer src="../js/flatpickr.js"></script>
-<script defer src="../js/ui.js"></script>
-
+	<script defer src="../js/jquery-3.7.1.min.js"></script>
+	<script defer src="../js/flatpickr.js"></script>
+	<script defer src="../js/ui.js"></script>
 </head>
 
 <body>
+	<!-- wrap -->
 	<div id="wrap" class="wrapper">
 		<!-- 헤더 영역 -->
 		<div id="header" class="header">
@@ -34,18 +35,18 @@
 					<li><a href="javascript:;">ODA 통계</a></li>
 					<li><a href="javascript:;">ODA 사업보고</a></li>
 				</ul>
-				 <div class="userBox">
+				<div class="userBox">
 					<button class="btnUser">운영관리자</button>
 					<ul class="dropDown">
 						<li><a href="javascript:;">쪽지</a></li>
 						<li><a href="javascript:;">마이페이지</a></li>
 						<li><a href="javascript:;">로그아웃</a></li>
 					</ul>
-				 </div>
-				 <div class="searchBox">
+				</div>
+				<div class="searchBox">
 					<input type="text" placeholder="통합검색">
 					<button class="btnSearch">검색</button>
-				 </div>
+				</div>
 			</div>
 		</div>
 		<!-- //헤더 영역 -->
@@ -130,52 +131,54 @@
 
 						<tbody>
 							<tr>
-							<th scope="row">회의명</th>
-							<td>제 53차 국제개발협력위원회</td>
+								<th scope="row">회의명</th>
+								<td>제 53차 국제개발협력위원회</td>
 							</tr>
 							<tr>
-							<th scope="row">회의 일시</th>
-							<td>2025-07-01 11:00</td>
+								<th scope="row">회의 일시</th>
+								<td>2025-07-01 11:00</td>
 							</tr>
 							<tr>
-							<th scope="row">회의 유형</th>
-							<td>국무조정실 4층 대회의장</td>
+								<th scope="row">회의 유형</th>
+								<td>국무조정실 4층 대회의장</td>
 							</tr>
 							<tr>
-							<th scope="row">위원회 유형</th>
-							<td>국제개발협력위원회</td>
+								<th scope="row">위원회 유형</th>
+								<td>국제개발협력위원회</td>
 							</tr>
 							<tr>
-							<th scope="row">내용</th>
-							<td>
-								<div class="txtBox">등록한 DATA가 보여집니다.</div>
-							</td>
+								<th scope="row">내용</th>
+								<td>
+									<div class="txtBox">등록한 DATA가 보여집니다.</div>
+								</td>
 							</tr>
 							<tr>
-							<th scope="row">첨부파일 등록</th>
-							<td>
-								<div class="file">
-									<div class="file-upload">
-										<p class="txt-file">첨부하실 파일을 마우스로 끌어오세요.</p>
-										<input type="file" name="myFile" id="fileu-upload" hidden="">
+								<th scope="row">첨부파일 등록</th>
+								<td>
+									<div class="file">
+										<div class="file-upload">
+											<p class="txt-file">첨부하실 파일을 마우스로 끌어오세요.</p>
+											<input type="file" name="myFile" id="fileu-upload" hidden="">
+										</div>
+
+										<div class="btn-wrap">
+											<button type="button" class="btn-plus"><span class="sr-only">추가</span></button>
+											<button type="button" class="btn-del"><span class="sr-only">삭제</span></button>
+										</div>
 									</div>
 
-									<div class="btn-wrap">
-										<button type="button" class="btn-plus"><span class="sr-only">추가</span></button>
-										<button type="button" class="btn-del"><span class="sr-only">삭제</span></button>
-									</div>
-								</div>
-
-							</td>
+								</td>
 							</tr>
 							<tr>
-							<th scope="row">설정</th>
-							<td>
-								<div class="chkBox">
-									<input type="checkbox" id="chk01-1"><label for="chk01-1">ODA 통합정보포털 &gt; 공지사항 게시판</label>
-									<input type="checkbox" id="chk01-2"><label for="chk01-2">위원회 메일 발송</label>
-								</div>
-							</td>
+								<th scope="row">설정</th>
+								<td>
+									<div class="chkBox">
+										<input type="checkbox" id="chk01-1">
+										<label for="chk01-1">ODA 통합정보포털 &gt; 공지사항 게시판</label>
+										<input type="checkbox" id="chk01-2">
+										<label for="chk01-2">위원회 메일 발송</label>
+									</div>
+								</td>
 							</tr>
 						</tbody>
 					</table>
@@ -245,88 +248,92 @@
 
 						<tbody>
 							<tr>
-							<th scope="row">회의명</th>
-							<td>
-								<input type="text" class="w100" placeholder="회의명을 입력하세요.">
-							</td>
+								<th scope="row">회의명</th>
+								<td>
+									<input type="text" class="w100" placeholder="회의명을 입력하세요.">
+								</td>
 							</tr>
 							<tr>
-							<th scope="row">회의 일시</th>
-							<td>
-								<div class="inputForm">
-									<div class="pickrBox">
-										<input type="text" class="pickr" placeholder="날짜를 선택하세요" readonly="readonly">
-										<p>~</p>
-										<input type="text" class="pickr" placeholder="날짜를 선택하세요" readonly="readonly">
-									</div>
+								<th scope="row">회의 일시</th>
+								<td>
+									<div class="inputForm">
+										<div class="pickrBox">
+											<input type="text" class="pickr" placeholder="날짜를 선택하세요" readonly="readonly">
+											<p>~</p>
+											<input type="text" class="pickr" placeholder="날짜를 선택하세요" readonly="readonly">
+										</div>
 
-									<div class="selectBox sm">
-										<select name="" id="select06">
-											<option value="">11</option>
+										<div class="selectBox sm">
+											<select name="" id="select06">
+												<option value="">11</option>
+											</select>
+										</div>
+										<span>시</span>
+
+										<div class="selectBox sm">
+											<select name="" id="select07">
+												<option value="">00</option>
+											</select>
+										</div>
+										<span>분</span>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">회의 유형</th>
+								<td>
+									<div class="rdoBox">
+										<input type="radio" id="radio01-1" name="rdo01">
+										<label for="radio01-1">대면</label>
+										<input type="text" placeholder="회의 장소를 입력하세요.">
+										<input type="radio" id="radio01-2" name="rdo01">
+										<label for="radio01-2">서면</label>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">위원회 유형</th>
+								<td>
+									<div class="selectBox">
+										<select name="" id="select08">
+											<option value="">선택</option>
 										</select>
 									</div>
-									<span>시</span>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">내용</th>
+								<td>
+									<textarea name="" id="txt01" cols="30" rows="10" class="w100" placeholder="내용을 입력하세요."></textarea>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">첨부파일 등록</th>
+								<td>
+									<div class="file">
+										<div class="file-upload">
+											<p class="txt-file">첨부하실 파일을 마우스로 끌어오세요.</p>
+											<input type="file" name="myFile" id="fileu-upload" hidden="">
+										</div>
 
-									<div class="selectBox sm">
-										<select name="" id="select07">
-											<option value="">00</option>
-										</select>
-									</div>
-									<span>분</span>
-								</div>
-							</td>
-							</tr>
-							<tr>
-							<th scope="row">회의 유형</th>
-							<td>
-								<div class="rdoBox">
-									<input type="radio" id="radio01-1" name="rdo01"><label for="radio01-1">대면</label>
-									<input type="text" placeholder="회의 장소를 입력하세요.">
-									<input type="radio" id="radio01-2" name="rdo01"><label for="radio01-2">서면</label>
-								</div>
-							</td>
-							</tr>
-							<tr>
-							<th scope="row">위원회 유형</th>
-							<td>
-								<div class="selectBox">
-									<select name="" id="select08">
-										<option value="">선택</option>
-									</select>
-								</div>
-							</td>
-							</tr>
-							<tr>
-							<th scope="row">내용</th>
-							<td>
-								<textarea name="" id="txt01" cols="30" rows="10" class="w100" placeholder="내용을 입력하세요."></textarea>
-							</td>
-							</tr>
-							<tr>
-							<th scope="row">첨부파일 등록</th>
-							<td>
-								<div class="file">
-									<div class="file-upload">
-										<p class="txt-file">첨부하실 파일을 마우스로 끌어오세요.</p>
-										<input type="file" name="myFile" id="fileu-upload" hidden="">
+										<div class="btn-wrap">
+											<button type="button" class="btn-plus"><span class="sr-only">추가</span></button>
+											<button type="button" class="btn-del"><span class="sr-only">삭제</span></button>
+										</div>
 									</div>
 
-									<div class="btn-wrap">
-										<button type="button" class="btn-plus"><span class="sr-only">추가</span></button>
-										<button type="button" class="btn-del"><span class="sr-only">삭제</span></button>
-									</div>
-								</div>
-
-							</td>
+								</td>
 							</tr>
 							<tr>
-							<th scope="row">설정</th>
-							<td>
-								<div class="chkBox">
-									<input type="checkbox" id="chk01-1"><label for="chk01-1">ODA 통합정보포털 &gt; 공지사항 게시판</label>
-									<input type="checkbox" id="chk01-2"><label for="chk01-2">위원회 메일 발송</label>
-								</div>
-							</td>
+								<th scope="row">설정</th>
+								<td>
+									<div class="chkBox">
+										<input type="checkbox" id="chk01-1">
+										<label for="chk01-1">ODA 통합정보포털 &gt; 공지사항 게시판</label>
+										<input type="checkbox" id="chk01-2">
+										<label for="chk01-2">위원회 메일 발송</label>
+									</div>
+								</td>
 							</tr>
 						</tbody>
 					</table>
@@ -405,64 +412,68 @@
 
 								<tbody>
 									<tr>
-									<th scope="row" rowspan="4">의결사항 파일 등록</th>
-									<td rowspan="2">
-										<div class="file">
-											<div class="file-upload">
-												<p class="txt-file">첨부하실 파일을 마우스로 끌어오세요.</p>
-												<input type="file" name="myFile" id="fileu-upload1" hidden="">
-											</div>
+										<th scope="row" rowspan="4">의결사항 파일 등록</th>
+										<td rowspan="2">
+											<div class="file">
+												<div class="file-upload">
+													<p class="txt-file">첨부하실 파일을 마우스로 끌어오세요.</p>
+													<input type="file" name="myFile" id="fileu-upload1" hidden="">
+												</div>
 
-											<div class="btn-wrap">
-												<button type="button" class="btn-plus"><span class="sr-only">추가</span></button>
-												<button type="button" class="btn-del"><span class="sr-only">삭제</span></button>
+												<div class="btn-wrap">
+													<button type="button" class="btn-plus"><span class="sr-only">추가</span></button>
+													<button type="button" class="btn-del"><span class="sr-only">삭제</span></button>
+												</div>
 											</div>
-										</div>
-									</td>
-									<td>
-										<div class="chkBox">
-											<input type="checkbox" id="chk02-1"><label for="chk02-1">ODA 통합정보포털 &gt; 공지사항</label>
-										</div>
-									</td>
+										</td>
+										<td>
+											<div class="chkBox">
+												<input type="checkbox" id="chk02-1">
+												<label for="chk02-1">ODA 통합정보포털 &gt; 공지사항</label>
+											</div>
+										</td>
 									</tr>
 									<tr>
-									<td>
-										<div class="chkBox">
-											<input type="checkbox" id="chk02-2"><label for="chk02-2">ODA 홈페이지 (누리집) &gt; 국제개발협력위원회 의결사항</label>
-										</div>
-									</td>
+										<td>
+											<div class="chkBox">
+												<input type="checkbox" id="chk02-2">
+												<label for="chk02-2">ODA 홈페이지 (누리집) &gt; 국제개발협력위원회 의결사항</label>
+											</div>
+										</td>
 									</tr>
 									<tr>
-									<td rowspan="2">
-										<div class="file">
-											<div class="file-upload">
-												<ul>
-													<li>
-														<button type="button" class="btn blue">미리보기</button>
-														<input type="checkbox" id="file02-01">
-														<label for="file02-01" class="hwp">대기관리권역의 대기환경개선에 관한 특별법 시행규칙(규제영향분석서).hwpx</label>
-													</li>
-												</ul>
-											</div>
+										<td rowspan="2">
+											<div class="file">
+												<div class="file-upload">
+													<ul>
+														<li>
+															<button type="button" class="btn blue">미리보기</button>
+															<input type="checkbox" id="file02-01">
+															<label for="file02-01" class="hwp">대기관리권역의 대기환경개선에 관한 특별법 시행규칙(규제영향분석서).hwpx</label>
+														</li>
+													</ul>
+												</div>
 
-											<div class="btn-wrap">
-												<button type="button" class="btn-plus"><span class="sr-only">추가</span></button>
-												<button type="button" class="btn-del"><span class="sr-only">삭제</span></button>
+												<div class="btn-wrap">
+													<button type="button" class="btn-plus"><span class="sr-only">추가</span></button>
+													<button type="button" class="btn-del"><span class="sr-only">삭제</span></button>
+												</div>
 											</div>
-										</div>
-									</td>
-									<td>
-										<div class="chkBox">
-											<input type="checkbox" id="chk02-3"><label for="chk02-3">ODA 통합정보포털 &gt; 공지사항</label>
-										</div>
-									</td>
+										</td>
+										<td>
+											<div class="chkBox">
+												<input type="checkbox" id="chk02-3">
+												<label for="chk02-3">ODA 통합정보포털 &gt; 공지사항</label>
+											</div>
+										</td>
 									</tr>
 									<tr>
-									<td>
-										<div class="chkBox">
-											<input type="checkbox" id="chk02-4"><label for="chk02-4">ODA 홈페이지 (누리집) &gt; 국제개발협력위원회 의결사항</label>
-										</div>
-									</td>
+										<td>
+											<div class="chkBox">
+												<input type="checkbox" id="chk02-4">
+												<label for="chk02-4">ODA 홈페이지 (누리집) &gt; 국제개발협력위원회 의결사항</label>
+											</div>
+										</td>
 									</tr>
 								</tbody>
 							</table>
@@ -520,7 +531,8 @@
 									<tr>
 										<th scope="col">
 											<div class="tblChk">
-												<input type="checkbox" id="chk04"><label for="chk04"></label>
+												<input type="checkbox" id="chk04">
+												<label for="chk04"></label>
 											</div>
 										</th>
 										<th scope="col">성명</th>
@@ -536,7 +548,8 @@
 									<tr>
 										<td>
 											<div class="tblChk">
-												<input type="checkbox" id="chk05"><label for="chk05"></label>
+												<input type="checkbox" id="chk05">
+												<label for="chk05"></label>
 											</div>
 										</td>
 										<td><input type="text" class="w100"></td>
@@ -556,7 +569,8 @@
 									<tr>
 										<td>
 											<div class="tblChk">
-												<input type="checkbox" id="chk06"><label for="chk06"></label>
+												<input type="checkbox" id="chk06">
+												<label for="chk06"></label>
 											</div>
 										</td>
 										<td><input type="text" class="w100"></td>
@@ -576,7 +590,8 @@
 									<tr>
 										<td>
 											<div class="tblChk">
-												<input type="checkbox" id="chk07"><label for="chk07"></label>
+												<input type="checkbox" id="chk07">
+												<label for="chk07"></label>
 											</div>
 										</td>
 										<td></td>
@@ -641,7 +656,8 @@
 									<tr>
 										<th scope="col">
 											<div class="tblChk">
-												<input type="checkbox" id="chk20"><label for="chk20"></label>
+												<input type="checkbox" id="chk20">
+												<label for="chk20"></label>
 											</div>
 										</th>
 										<th scope="col">성명</th>
@@ -657,7 +673,8 @@
 									<tr>
 										<td>
 											<div class="tblChk">
-												<input type="checkbox" id="chk05"><label for="chk05"></label>
+												<input type="checkbox" id="chk05">
+												<label for="chk05"></label>
 											</div>
 										</td>
 										<td><input type="text" class="w100"></td>
@@ -677,7 +694,8 @@
 									<tr>
 										<td>
 											<div class="tblChk">
-												<input type="checkbox" id="chk06"><label for="chk06"></label>
+												<input type="checkbox" id="chk06">
+												<label for="chk06"></label>
 											</div>
 										</td>
 										<td><input type="text" class="w100"></td>
@@ -697,7 +715,8 @@
 									<tr>
 										<td>
 											<div class="tblChk">
-												<input type="checkbox" id="chk07"><label for="chk07"></label>
+												<input type="checkbox" id="chk07">
+												<label for="chk07"></label>
 											</div>
 										</td>
 										<td></td>
@@ -752,64 +771,68 @@
 
 								<tbody>
 									<tr>
-									<th scope="row" rowspan="4">안건 파일 등록</th>
-									<td rowspan="2">
-										<div class="file">
-											<div class="file-upload">
-												<p class="txt-file">첨부하실 파일을 마우스로 끌어오세요.</p>
-												<input type="file" name="myFile" id="fileu-upload1" hidden="">
-											</div>
+										<th scope="row" rowspan="4">안건 파일 등록</th>
+										<td rowspan="2">
+											<div class="file">
+												<div class="file-upload">
+													<p class="txt-file">첨부하실 파일을 마우스로 끌어오세요.</p>
+													<input type="file" name="myFile" id="fileu-upload1" hidden="">
+												</div>
 
-											<div class="btn-wrap">
-												<button type="button" class="btn-plus"><span class="sr-only">추가</span></button>
-												<button type="button" class="btn-del"><span class="sr-only">삭제</span></button>
+												<div class="btn-wrap">
+													<button type="button" class="btn-plus"><span class="sr-only">추가</span></button>
+													<button type="button" class="btn-del"><span class="sr-only">삭제</span></button>
+												</div>
 											</div>
-										</div>
-									</td>
-									<td>
-										<div class="chkBox">
-											<input type="checkbox" id="chk02-1"><label for="chk02-1">ODA 통합정보포털 &gt; 공지사항</label>
-										</div>
-									</td>
+										</td>
+										<td>
+											<div class="chkBox">
+												<input type="checkbox" id="chk02-1">
+												<label for="chk02-1">ODA 통합정보포털 &gt; 공지사항</label>
+											</div>
+										</td>
 									</tr>
 									<tr>
-									<td>
-										<div class="chkBox">
-											<input type="checkbox" id="chk02-2"><label for="chk02-2">위원 알림 발송</label>
-										</div>
-									</td>
+										<td>
+											<div class="chkBox">
+												<input type="checkbox" id="chk02-2">
+												<label for="chk02-2">위원 알림 발송</label>
+											</div>
+										</td>
 									</tr>
 									<tr>
-									<td rowspan="2">
-										<div class="file">
-											<div class="file-upload">
-												<ul>
-													<li>
-														<button type="button" class="btn blue">미리보기</button>
-														<input type="checkbox" id="file02-01">
-														<label for="file02-01" class="hwp">대기관리권역의 대기환경개선에 관한 특별법 시행규칙(규제영향분석서).hwpx</label>
-													</li>
-												</ul>
-											</div>
+										<td rowspan="2">
+											<div class="file">
+												<div class="file-upload">
+													<ul>
+														<li>
+															<button type="button" class="btn blue">미리보기</button>
+															<input type="checkbox" id="file02-01">
+															<label for="file02-01" class="hwp">대기관리권역의 대기환경개선에 관한 특별법 시행규칙(규제영향분석서).hwpx</label>
+														</li>
+													</ul>
+												</div>
 
-											<div class="btn-wrap">
-												<button type="button" class="btn-plus"><span class="sr-only">추가</span></button>
-												<button type="button" class="btn-del"><span class="sr-only">삭제</span></button>
+												<div class="btn-wrap">
+													<button type="button" class="btn-plus"><span class="sr-only">추가</span></button>
+													<button type="button" class="btn-del"><span class="sr-only">삭제</span></button>
+												</div>
 											</div>
-										</div>
-									</td>
-									<td>
-										<div class="chkBox">
-											<input type="checkbox" id="chk02-3"><label for="chk02-3">ODA 통합정보포털 &gt; 공지사항</label>
-										</div>
-									</td>
+										</td>
+										<td>
+											<div class="chkBox">
+												<input type="checkbox" id="chk02-3">
+												<label for="chk02-3">ODA 통합정보포털 &gt; 공지사항</label>
+											</div>
+										</td>
 									</tr>
 									<tr>
-									<td>
-										<div class="chkBox">
-											<input type="checkbox" id="chk02-4"><label for="chk02-4">위원 알림 발송</label>
-										</div>
-									</td>
+										<td>
+											<div class="chkBox">
+												<input type="checkbox" id="chk02-4">
+												<label for="chk02-4">위원 알림 발송</label>
+											</div>
+										</td>
 									</tr>
 								</tbody>
 							</table>
@@ -840,5 +863,7 @@
 		</div>
 		<!-- //컨테이너 영역 -->
 	</div>
+	<!-- //wrap -->
 </body>
+
 </html>
