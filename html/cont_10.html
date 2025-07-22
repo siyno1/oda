@@ -1,26 +1,27 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
-<title>ODA</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-<meta http-equiv="Pragma" content="no-cache">
-<meta http-equiv="Expires" content="0">
+	<title>ODA</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+	<meta http-equiv="Pragma" content="no-cache">
+	<meta http-equiv="Expires" content="0">
 
-<link rel="stylesheet" href="../css/flatpickr.min.css">
-<link rel="stylesheet" href="../css/reset.css">
-<link rel="stylesheet" href="../css/layout.css">
-<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/flatpickr.min.css">
+	<link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" href="../css/layout.css">
+	<link rel="stylesheet" href="../css/style.css">
 
-<script defer src="../js/jquery-3.7.1.min.js"></script>
-<script defer src="../js/flatpickr.js"></script>
-<script defer src="../js/ui.js"></script>
-
+	<script defer src="../js/jquery-3.7.1.min.js"></script>
+	<script defer src="../js/flatpickr.js"></script>
+	<script defer src="../js/ui.js"></script>
 </head>
 
 <body>
-    <div id="wrap" class="wrapper">
+	<!-- wrap -->
+	<div id="wrap" class="wrapper">
 		<!-- 헤더 영역 -->
 		<div id="header" class="header">
 			<div class="wrap">
@@ -34,19 +35,19 @@
 					<li><a href="javascript:;">ODA 통계</a></li>
 					<li><a href="javascript:;">ODA 사업보고</a></li>
 				</ul>
-				 <div class="userBox">
+				<div class="userBox">
 					<button class="btnUser">운영관리자</button>
 					<ul class="dropDown">
 						<li><a href="javascript:;">쪽지</a></li>
 						<li><a href="javascript:;">마이페이지</a></li>
 						<li><a href="javascript:;">로그아웃</a></li>
 					</ul>
-				 </div>
-				 <div class="searchBox">
+				</div>
+				<div class="searchBox">
 					<input type="text" placeholder="통합검색">
 					<button class="btnSearch">검색</button>
-				 </div>
-			</div> 
+				</div>
+			</div>
 		</div>
 		<!-- //헤더 영역 -->
 
@@ -96,197 +97,222 @@
 
 			<!-- 컨텐츠 영역 -->
 			<div class="contents">
+				<!-- pgtBox -->
 				<div class="pgtBox">
 					<div class="lt">
 						<h2>요청 중인 연계</h2>
 					</div>
-					
+
 					<ul class="breadcrumb">
 						<li class="home"><a href="javascript:;">홈</a></li>
 						<li><a href="javascript:;">평가</a></li>
 						<li><a href="javascript:;">자체평가</a></li>
 					</ul>
-					
+
 					<div class="rt"></div>
 				</div>
-				
-				<div class="mapBox">
-				    <div class="map">
-				        <button type="button" class="btn pop" data-target="pop01">팝업</button>
-				    </div>
-					
-					<div class="mapList">
-					    <ul>
-					        <li>
-					            <a href="#">사업분야</a>
-					            <ul>
-					                <li>
-                                        <input type="checkbox" id="chk01-01">
-                                        <label for="chk01-01">교통</label>
-					                </li>
-					                <li>
-                                        <input type="checkbox" id="chk01-02">
-                                        <label for="chk01-02">수자원 및 위생</label>
-					                </li>
-					                <li>
-                                        <input type="checkbox" id="chk01-03">
-                                        <label for="chk01-03">교육</label>
-					                </li>
-					            </ul>
-					        </li>
-					        <li>
-					            <a href="#">SDGs목표</a>
-					            <ul>
-					                <li>
-                                        <input type="checkbox" id="chk02-01">
-                                        <label for="chk02-01">빈곤퇴치</label>
-					                </li>
-					                <li>
-                                        <input type="checkbox" id="chk02-02">
-                                        <label for="chk02-02">기아종식</label>
-					                </li>
-					                <li>
-                                        <input type="checkbox" id="chk02-03">
-                                        <label for="chk02-03">교통</label>
-					                </li>
-					            </ul>
-					        </li>
-					        <li>
-					            <a href="#">사업예산(단위 : 천)</a>
-					            <ul>
-					                <li>
-                                        <input type="checkbox" id="chk03-01">
-                                        <label for="chk03-01">빈곤퇴치</label>
-					                </li>
-					                <li>
-                                        <input type="checkbox" id="chk03-02">
-                                        <label for="chk03-02">기아종식</label>
-					                </li>
-					                <li>
-                                        <input type="checkbox" id="chk03-03">
-                                        <label for="chk03-03">교통</label>
-					                </li>
-					            </ul>
-					        </li>
-					        <li>
-					            <a href="#">유무상 연계사업</a>
-					            <ul>
-					                <li>
-                                        <input type="checkbox" id="chk04-01">
-                                        <label for="chk04-01">빈곤퇴치</label>
-					                </li>
-					                <li>
-                                        <input type="checkbox" id="chk04-02">
-                                        <label for="chk04-02">기아종식</label>
-					                </li>
-					                <li>
-                                        <input type="checkbox" id="chk04-03">
-                                        <label for="chk04-03">교통</label>
-					                </li>
-					            </ul>
-					        </li>
-					        <li>
-					            <a href="#">패키지 사업</a>
-					            <ul>
-					                <li>
-                                        <input type="checkbox" id="chk05-01">
-                                        <label for="chk05-01">빈곤퇴치</label>
-					                </li>
-					                <li>
-                                        <input type="checkbox" id="chk05-02">
-                                        <label for="chk05-02">기아종식</label>
-					                </li>
-					                <li>
-                                        <input type="checkbox" id="chk05-03">
-                                        <label for="chk05-03">교통</label>
-					                </li>
-					            </ul>
-					        </li>
-					        <li>
-					            <a href="#">집행부진 사업</a>
-					            <ul>
-					                <li>
-                                        <input type="checkbox" id="chk06-01">
-                                        <label for="chk06-01">빈곤퇴치</label>
-					                </li>
-					                <li>
-                                        <input type="checkbox" id="chk06-02">
-                                        <label for="chk06-02">기아종식</label>
-					                </li>
-					                <li>
-                                        <input type="checkbox" id="chk06-03">
-                                        <label for="chk06-03">교통</label>
-					                </li>
-					            </ul>
-					        </li>
-					        <li>
-					            <a href="#">SDGs목표</a>
-					            <ul>
-					                <li>
-                                        <input type="checkbox" id="chk07-01">
-                                        <label for="chk07-01">빈곤퇴치</label>
-					                </li>
-					                <li>
-                                        <input type="checkbox" id="chk07-02">
-                                        <label for="chk07-02">기아종식</label>
-					                </li>
-					                <li>
-                                        <input type="checkbox" id="chk07-03">
-                                        <label for="chk07-03">교통</label>
-					                </li>
-					            </ul>
-					        </li>
-					    </ul>
-					</div>
-				</div>
-				
-				<div class="popup mapPopup" id="pop01">
-				    <div class="tit">
-				        <button type="button" class="btn-close"><span class="sr-only">팝업창 닫기</span></button>
-				    </div>
-					
-					<div class="cont">
-						<div class="tab">
-							<ul>
-								<li><button type="button" class="active">텝메뉴명</button></li>
-								<li><button type="button">텝메뉴명</button></li>
-								<li><button type="button">안건관리</button></li>
-							</ul>
-						</div>
-                   
-                        <ul class="tabCont">
-							<li class="active">
-                                <p><b>국가</b> : 미얀마1</p>
-                                <p><b>지역</b> : 치앙마이</p>
-                                <b>사업개요</b>
-                                <p>EDCF 협력 워크숍은 수원국 공무원을 초청하여 △수원국과의 협력 기반을 조성하고 △EDCF 사업 현황 및 사업관리방안 협의 등을 통해 사업의 원활한 추진을 도모하기 위해 개최하는 행사*다.<br>이번 워크숍에서는 아프리카 중점지원국* 공무원 18명을 초청하여 개발재원 소요를 고려한 EDCF의 아프리카 지원비중 확대, ‘K-파이낸스 패키지’ 등을 통한 그린</p>
-							</li>
-                                
-							<li>
-								<p><b>국가</b> : 미얀마2</p>
-                                <p><b>지역</b> : 치앙마이</p>
-                                <b>사업개요</b>
-                                <p>EDCF 협력 워크숍은 수원국 공무원을 초청하여 △수원국과의 협력 기반을 조성하고 △EDCF 사업 현황 및 사업관리방안 협의 등을 통해 사업의 원활한 추진을 도모하기 위해 개최하는 행사*다.<br>이번 워크숍에서는 아프리카 중점지원국* 공무원 18명을 초청하여 개발재원 소요를 고려한 EDCF의 아프리카 지원비중 확대, ‘K-파이낸스 패키지’ 등을 통한 그린</p>
-						   </li>
+				<!-- //pgtBox -->
 
-							<li>
-								<p><b>국가</b> : 미얀마3</p>
-                                <p><b>지역</b> : 치앙마이</p>
-                                <b>사업개요</b>
-                                <p>EDCF 협력 워크숍은 수원국 공무원을 초청하여 △수원국과의 협력 기반을 조성하고 △EDCF 사업 현황 및 사업관리방안 협의 등을 통해 사업의 원활한 추진을 도모하기 위해 개최하는 행사*다.<br>이번 워크숍에서는 아프리카 중점지원국* 공무원 18명을 초청하여 개발재원 소요를 고려한 EDCF의 아프리카 지원비중 확대, ‘K-파이낸스 패키지’ 등을 통한 그린</p>
-						   </li>
-						</ul>
-                    </div>
-					
-					<div class="btn-wrap">
-					    <button type="button" class="btn">사업정보 바로가기</button>
-				    	<button type="button" class="btn">사업계획서 조회</button>
+				<!-- mapBox -->
+				<div class="mapBox">
+					<!-- map -->
+					<div class="map">
+						<button type="button" class="btn pop" data-target="pop01">팝업</button>
 					</div>
+					<!-- //map -->
+
+					<!-- mapList -->
+					<div class="mapList">
+						<ul>
+							<li>
+								<a href="#">사업분야</a>
+								<ul>
+									<li>
+										<input type="checkbox" id="chk01-01">
+										<label for="chk01-01">교통</label>
+									</li>
+									<li>
+										<input type="checkbox" id="chk01-02">
+										<label for="chk01-02">수자원 및 위생</label>
+									</li>
+									<li>
+										<input type="checkbox" id="chk01-03">
+										<label for="chk01-03">교육</label>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">SDGs목표</a>
+								<ul>
+									<li>
+										<input type="checkbox" id="chk02-01">
+										<label for="chk02-01">빈곤퇴치</label>
+									</li>
+									<li>
+										<input type="checkbox" id="chk02-02">
+										<label for="chk02-02">기아종식</label>
+									</li>
+									<li>
+										<input type="checkbox" id="chk02-03">
+										<label for="chk02-03">교통</label>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">사업예산(단위 : 천)</a>
+								<ul>
+									<li>
+										<input type="checkbox" id="chk03-01">
+										<label for="chk03-01">빈곤퇴치</label>
+									</li>
+									<li>
+										<input type="checkbox" id="chk03-02">
+										<label for="chk03-02">기아종식</label>
+									</li>
+									<li>
+										<input type="checkbox" id="chk03-03">
+										<label for="chk03-03">교통</label>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">유무상 연계사업</a>
+								<ul>
+									<li>
+										<input type="checkbox" id="chk04-01">
+										<label for="chk04-01">빈곤퇴치</label>
+									</li>
+									<li>
+										<input type="checkbox" id="chk04-02">
+										<label for="chk04-02">기아종식</label>
+									</li>
+									<li>
+										<input type="checkbox" id="chk04-03">
+										<label for="chk04-03">교통</label>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">패키지 사업</a>
+								<ul>
+									<li>
+										<input type="checkbox" id="chk05-01">
+										<label for="chk05-01">빈곤퇴치</label>
+									</li>
+									<li>
+										<input type="checkbox" id="chk05-02">
+										<label for="chk05-02">기아종식</label>
+									</li>
+									<li>
+										<input type="checkbox" id="chk05-03">
+										<label for="chk05-03">교통</label>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">집행부진 사업</a>
+								<ul>
+									<li>
+										<input type="checkbox" id="chk06-01">
+										<label for="chk06-01">빈곤퇴치</label>
+									</li>
+									<li>
+										<input type="checkbox" id="chk06-02">
+										<label for="chk06-02">기아종식</label>
+									</li>
+									<li>
+										<input type="checkbox" id="chk06-03">
+										<label for="chk06-03">교통</label>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">SDGs목표</a>
+								<ul>
+									<li>
+										<input type="checkbox" id="chk07-01">
+										<label for="chk07-01">빈곤퇴치</label>
+									</li>
+									<li>
+										<input type="checkbox" id="chk07-02">
+										<label for="chk07-02">기아종식</label>
+									</li>
+									<li>
+										<input type="checkbox" id="chk07-03">
+										<label for="chk07-03">교통</label>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+					<!-- //mapList -->
 				</div>
+				<!-- //mapBox -->
 			</div>
 			<!-- //컨텐츠 영역 -->
 		</div>
 		<!-- //컨테이너 영역 -->
 	</div>
+	<!-- //wrap -->
+
+
+	<!-- popup : map -->
+	<div class="popup mapPopup" id="pop01">
+		<div class="tit">
+			<button type="button" class="btn-close"><span class="sr-only">팝업창 닫기</span></button>
+		</div>
+
+		<div class="cont">
+			<div class="tab">
+				<ul>
+					<li><button type="button" class="active">텝메뉴명</button></li>
+					<li><button type="button">텝메뉴명</button></li>
+					<li><button type="button">안건관리</button></li>
+				</ul>
+			</div>
+
+			<ul class="tabCont">
+				<li class="active">
+					<p><b>국가</b> : 미얀마1</p>
+					<p><b>지역</b> : 치앙마이</p>
+					<b>사업개요</b>
+					<p>
+						EDCF 협력 워크숍은 수원국 공무원을 초청하여 △수원국과의 협력 기반을 조성하고 △EDCF 사업 현황 및 사업관리방안 협의 등을 통해 사업의 원활한 추진을 도모하기 위해
+						개최하는 행사*다.<br>이번 워크숍에서는 아프리카 중점지원국* 공무원 18명을 초청하여 개발재원 소요를 고려한 EDCF의 아프리카 지원비중 확대, ‘K-파이낸스 패키지’
+						등을 통한 그린
+					</p>
+				</li>
+
+				<li>
+					<p><b>국가</b> : 미얀마2</p>
+					<p><b>지역</b> : 치앙마이</p>
+					<b>사업개요</b>
+					<p>
+						EDCF 협력 워크숍은 수원국 공무원을 초청하여 △수원국과의 협력 기반을 조성하고 △EDCF 사업 현황 및 사업관리방안 협의 등을 통해 사업의 원활한 추진을 도모하기 위해
+						개최하는 행사*다.<br>이번 워크숍에서는 아프리카 중점지원국* 공무원 18명을 초청하여 개발재원 소요를 고려한 EDCF의 아프리카 지원비중 확대, ‘K-파이낸스 패키지’
+						등을 통한 그린
+					</p>
+				</li>
+
+				<li>
+					<p><b>국가</b> : 미얀마3</p>
+					<p><b>지역</b> : 치앙마이</p>
+					<b>사업개요</b>
+					<p>
+						EDCF 협력 워크숍은 수원국 공무원을 초청하여 △수원국과의 협력 기반을 조성하고 △EDCF 사업 현황 및 사업관리방안 협의 등을 통해 사업의 원활한 추진을 도모하기 위해
+						개최하는 행사*다.<br>이번 워크숍에서는 아프리카 중점지원국* 공무원 18명을 초청하여 개발재원 소요를 고려한 EDCF의 아프리카 지원비중 확대, ‘K-파이낸스 패키지’
+						등을 통한 그린
+					</p>
+				</li>
+			</ul>
+		</div>
+
+		<div class="btn-wrap">
+			<button type="button" class="btn">사업정보 바로가기</button>
+			<button type="button" class="btn">사업계획서 조회</button>
+		</div>
+	</div>
+	<!-- //popup : map -->
 </body>
+
 </html>
