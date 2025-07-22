@@ -5,7 +5,6 @@ $(document).ready(function () {
 
 function init() {
     // flatpickr Plugin
-
     var pickrs = document.querySelectorAll('.pickr');
     pickrs.forEach(function (pickr) {
         var mode = pickr.getAttribute('data-mode');
@@ -37,7 +36,7 @@ function init() {
                     new monthSelectPlugin({
                         shorthand: true,
                         dateFormat: "Y-m", // 선택된 날짜 형식 'YYYY-MM'
-                        altFormat: "F Y", // 보여줄 형식 'January 2025'
+                        altFormat: "F Y"
                     })
                 ],
                 onReady: function (selectedDates, dateStr, instance) {
@@ -76,8 +75,8 @@ function init() {
         $li.siblings().find('button').removeClass('active');
 
         if ($target.hasClass('depth')) {
-            const $depth1 = $target.children().eq(0);
-            const $depth2 = $target.children().eq(1);
+            var $depth1 = $target.children().eq(0);
+            var $depth2 = $target.children().eq(1);
 
             $depth1.children().removeClass('active').first().addClass('active');
             $depth2.children().removeClass('active').first().addClass('active');
@@ -86,12 +85,12 @@ function init() {
 
     // tab Event 2
     $('.tabCont').on('click', '.depth2 button', function () {
-        const $btn = $(this);
-        const index = $btn.index();
+        var $btn = $(this);
+        var index = $btn.index();
 
         $btn.addClass('active').siblings().removeClass('active');
 
-        const $depth2Cont = $btn.closest('.depth2').next('.depth2Cont');
+        var $depth2Cont = $btn.closest('.depth2').next('.depth2Cont');
         $depth2Cont.children().removeClass('active').eq(index).addClass('active');
     });
 
@@ -164,30 +163,79 @@ function init() {
     $('.toggleBox button').on('click', function () {
         $(this).parent().toggleClass('on');
     });
+
+    //연관검색
+    if ($('input[data-match=TRUE]').length) {
+        $('input[data-match=TRUE]').each(function(){
+            var $this = $(this);
+            var $keywords = $this.next('.keywords');
+            var $empty = $keywords.find('.empty');
+
+            if ($keywords) {
+                $this.on("input", function(){
+                    var value = $this.val().trim();
+                    var valueInitials = getInitials(value);
+                    var valueLen = value.length;
+                    var matchesLen = 0;
+
+                    $keywords.find('li').each(function() {
+                        var $keyword = $(this);
+                        var $keywordChild = $keyword.find('button');
+                        if (valueLen) {
+                            var text = $keywordChild.text();
+                            var textInitials = getInitials(text);
+                            if (text.includes(value) || textInitials.includes(valueInitials)) {
+                                $keyword.css('display', '');
+                                matchesLen++;
+                            } else {
+                                $keyword.css('display', 'none');
+                            }
+                        } else {
+                            matchesLen = 1;
+                            $keyword.css('display', '');
+                        }
+                    });
+
+                    if (matchesLen === 0) {
+                        $empty.css('display', 'block');
+                    } else {
+                        $empty.css('display', '');
+                    }
+                });
+
+                $keywords.find('button').on("click", function(){
+                    var $keyword = $(this);
+                    $this.val($keyword.text());
+                    $keyword.blur();
+                });
+            }
+        });
+
+    }
 }
 
 // pickr year input => select[Transform]
 function replaceYearWithSelect(instance) {
-    const container = instance.calendarContainer;
-    const yearInputWrapper = container.querySelector(".flatpickr-current-month .numInputWrapper");
+    var container = instance.calendarContainer;
+    var yearInputWrapper = container.querySelector(".flatpickr-current-month .numInputWrapper");
 
     if (!yearInputWrapper || yearInputWrapper.querySelector("select")) return;
 
-    const input = yearInputWrapper.querySelector("input");
-    const currentYear = instance.currentYear;
+    var input = yearInputWrapper.querySelector("input");
+    var currentYear = instance.currentYear;
 
     // year Range
-    const minYear = 1990;
-    const maxYear = 2035;
+    var minYear = 1990;
+    var maxYear = 2035;
 
     // input Delete
     input.style.display = "none";
 
     // select[Transform]
-    const yearSelect = document.createElement("select");
+    var yearSelect = document.createElement("select");
     yearSelect.className = 'flatpickr-yearDropdown-years';
     for (let y = minYear; y <= maxYear; y++) {
-        const opt = document.createElement("option");
+        var opt = document.createElement("option");
         opt.value = y;
         opt.textContent = y + "년";
         if (y === currentYear) opt.selected = true;
@@ -195,7 +243,7 @@ function replaceYearWithSelect(instance) {
     }
 
     yearSelect.addEventListener("change", function () {
-        const newYear = parseInt(this.value);
+        var newYear = parseInt(this.value);
         instance.changeYear(newYear);
     });
 
@@ -215,3 +263,18 @@ $('.side .gnb a').on('click', function () {
 $('.userBox .btnUser').on('click', function () {
     $(this).parent('.userBox').toggleClass('active');
 })
+
+// 초성 추출 함수
+function getInitials(str) {
+    var CHO = ["ㄱ", "ㄲ", "ㄴ", "ㄷ", "ㄸ", "ㄹ", "ㅁ", "ㅂ", "ㅃ", "ㅅ", "ㅆ", "ㅇ", "ㅈ", "ㅉ", "ㅊ", "ㅋ", "ㅌ", "ㅍ", "ㅎ"];
+    let result = '';
+    for (let i = 0; i < str.length; i++) {
+        var code = str.charCodeAt(i) - 44032;
+        if (code >= 0 && code <= 11171) {
+            result += CHO[Math.floor(code / 588)];
+        } else {
+            result += str[i];
+        }
+    }
+    return result;
+}
