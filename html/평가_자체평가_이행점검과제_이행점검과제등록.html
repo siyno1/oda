@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>ODA</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+
+<link rel="stylesheet" href="../css/flatpickr.min.css">
+<link rel="stylesheet" href="../css/reset.css">
+<link rel="stylesheet" href="../css/layout.css">
+<link rel="stylesheet" href="../css/style.css">
+
+<script defer src="../js/jquery-3.7.1.min.js"></script>
+<script defer src="../js/flatpickr.js"></script>
+<script defer src="../js/ui.js"></script>
+
+</head>
+
+<body>
+    <div id="wrap" class="wrapper">
+		<!-- 헤더 영역 -->
+		<div id="header" class="header">
+			<div class="wrap">
+				<h1><a href="javascript:;"><img src="../img/logo.svg"></a></h1>
+				<ul class="gnb">
+					<li><a href="javascript:;">ODA 사업</a></li>
+					<li class="active"><a href="javascript:;">평가</a></li>
+					<li><a href="javascript:;">위원회 관리</a></li>
+					<li><a href="javascript:;">통합 성과관리</a></li>
+					<li><a href="javascript:;">ODA 정보등록</a></li>
+					<li><a href="javascript:;">ODA 통계</a></li>
+					<li><a href="javascript:;">ODA 사업보고</a></li>
+				</ul>
+				 <div class="userBox">
+					<button class="btnUser">운영관리자</button>
+					<ul class="dropDown">
+						<li><a href="javascript:;">쪽지</a></li>
+						<li><a href="javascript:;">마이페이지</a></li>
+						<li><a href="javascript:;">로그아웃</a></li>
+					</ul>
+				 </div>
+				 <div class="searchBox">
+					<input type="text" placeholder="통합검색">
+					<button class="btnSearch">검색</button>
+				 </div>
+			</div> 
+		</div>
+		<!-- //헤더 영역 -->
+
+		<!-- 컨테이너 영역 -->
+		<div id="container" class="container">
+
+			<!-- LNB 영역 -->
+			<div id="side" class="side">
+				<div class="side_menu">
+					<h2>ODA 사업 관리</h2>
+					<ul class="gnb">
+						<li>
+							<a href="javascript:;">사업목록</a>
+						</li>
+						<li class="hasChild active">
+							<a href="javascript:;">연수 사업 관리</a>
+							<ul>
+								<li><a href="javascript:;" class="on">연수 사업 목록</a></li>
+								<li><a href="javascript:;">연수 프로그램 관리</a></li>
+								<li><a href="javascript:;">연수생 관리</a></li>
+								<li><a href="javascript:;">체크리스트</a></li>
+							</ul>
+						</li>
+						<li class="hasChild">
+							<a href="javascript:;">장학 사업 관리</a>
+							<ul>
+								<li><a href="javascript:;">연수 사업 목록</a></li>
+								<li><a href="javascript:;">연수 프로그램 관리</a></li>
+								<li><a href="javascript:;">연수생 관리</a></li>
+								<li><a href="javascript:;">체크리스트</a></li>
+							</ul>
+						</li>
+						<li class="hasChild">
+							<a href="javascript:;">패키지 사업 관리</a>
+							<ul>
+								<li><a href="javascript:;">연수 사업 목록</a></li>
+								<li><a href="javascript:;">연수 프로그램 관리</a></li>
+								<li><a href="javascript:;">연수생 관리</a></li>
+								<li><a href="javascript:;">체크리스트</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<button class="btnSlide">slide</button>
+			</div>
+			<!-- //LNB 영역 -->
+
+			<!-- 컨텐츠 영역 -->
+			<div class="contents">
+				<div class="pgtBox">
+					<div class="lt">
+						<h2>요청 중인 연계</h2>
+					</div>
+					
+					<ul class="breadcrumb">
+						<li class="home"><a href="javascript:;">홈</a></li>
+						<li><a href="javascript:;">평가</a></li>
+						<li><a href="javascript:;">자체평가</a></li>
+					</ul>
+					
+					<div class="rt"></div>
+				</div>
+				
+				<div class="tabBox">
+				    <div class="tab">
+						<ul>
+							<li><button type="button" class="active">이행점검 과제 등록</button></li>
+							<li><button type="button">이행점검 과제 목록</button></li>
+							<li><button type="button">안건관리</button></li>
+						</ul>
+					</div>
+
+					<ul class="tabCont">
+						<li class="active">
+                            <div class="schBox">
+                                <div class="searchTxt">
+                                    <p>사업명</p>
+                                    <div>
+                                        <input type="text" placeholder="사업명을 입력하세요.">
+                                        <button type="button" class="btn-src">검색</button>
+                                    </div>
+                                </div>
+
+                                <div class="searchFlt">
+                                    <div class="fltList">
+                                        <ul>
+                                            <li><button type="button">평가 건 명</button></li>
+                                            <li><button type="button">평가 연도</button></li>
+                                            <li><button type="button">실시방법</button></li>
+                                            <li><button type="button">평가시기</button></li>
+                                            <li><button type="button">평가대상</button></li>
+                                            <li><button type="button">원조유형</button></li>
+                                            <li><button type="button">평가 진행상태</button></li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="fltCont">
+                                        <ul>
+                                            <li>
+                                                <p>평가 건 명</p>
+                                                <div class="iptBox">
+                                                    <input type="text" placeholder="평가 건 명을 입력해주세요.">
+                                                    <button type="button" class="btn cnf">확인</button>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <p>사업기간</p>
+                                                <div class="pickrBox">
+                                                    <input type="text" class="pickr flatpickr-input" placeholder="날짜를 선택하세요" readonly="readonly">
+                                                    <p>~</p>
+                                                    <input type="text" class="pickr flatpickr-input" placeholder="날짜를 선택하세요" readonly="readonly">
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <p>당해연도 시행계획 예산</p>
+                                                <div class="iptBox">
+                                                    <input type="text" placeholder="금액을 입력하세요.">
+                                                    <button type="button" class="btn cnf">확인</button>
+                                                </div>
+                                            </li>
+
+                                            <li class="contBox type01">
+                                                <p>수원국</p>
+                                                <div class="contList">
+                                                    <div class="">
+                                                        <p>대륙</p>
+                                                        <ul>
+                                                            <li>
+                                                                <button type="button">아시아</button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button">아프리카</button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button">중남미</button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button">중동 · CIS</button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button">오세아니아 · 기타</button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button">그외 지역</button>
+                                                            </li>
+                                                        </ul>    
+                                                    </div>
+
+                                                    <div>
+                                                        <p>상세국가</p>
+                                                        <ul>
+                                                            <li>
+                                                                <button type="button">전체</button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button">가나</button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button">동티모르</button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button">라오스</button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button">네팔</button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button">동티모르</button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button">라오스</button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button">네팔</button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button">말레이시아</button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button">네팔</button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button">동티모르</button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button">라오스</button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button">네팔</button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button">동티모르</button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button">라오스</button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button">네팔</button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button">방글라데시</button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button">네팔</button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button">동티모르</button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button">라오스</button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button">네팔</button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button">동티모르</button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button">라오스</button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button">네팔</button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button">네팔</button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button">방글라데시</button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button">네팔</button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button">동티모르</button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button">라오스</button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button">네팔</button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button">동티모르</button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button">라오스</button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button">네팔</button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </li>
+
+                                            <li class="contBox type02">
+                                                <p>사업분야</p>
+                                                <div class="contList">
+                                                    <div>
+                                                        <ul>
+                                                            <li>
+                                                                <button type="button">교육</button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button">보건</button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button">인구정책/시책 및 생식보건</button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button">식수 공급 및 위생</button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button">공공행정 및 시민사회</button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button">"기타 사회인프라 및 서비스"</button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button">운송 및 창고</button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button">통신</button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button">에너지</button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button">"금융 및 재무 서비스"</button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button">"비즈니스 및 기타서비스"</button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button">농업</button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+
+                                                    <div>
+                                                        <ul>
+                                                            <li>
+                                                                <button type="button">아시아</button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button">아프리카</button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button">중남미</button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button">중동 · CIS</button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button">오세아니아 · 기타</button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button">그외 지역</button>
+                                                            </li>
+                                                        </ul>    
+                                                    </div>
+
+                                                    <div>
+                                                        <ul>
+                                                            <li>
+                                                                <button type="button">아시아</button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button">아프리카</button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button">중남미</button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button">중동 · CIS</button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button">오세아니아 · 기타· 기타</button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button">그외 지역</button>
+                                                            </li>
+                                                        </ul>    
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="fltOpt">
+                                        <ul>
+                                            <li>
+                                                <p>아시아 &gt; 네팔</p>
+                                                <button type="button" class="btn-del"><span class="sr-only">검색조건 삭제</span></button>
+                                            </li>
+                                            <li>
+                                                <p>아프리카 &gt; 가나</p>
+                                                <button type="button" class="btn-del"><span class="sr-only">검색조건 삭제</span></button>
+                                            </li>
+                                            <li>
+                                                <p>아프리카 &gt; 가나</p>
+                                                <button type="button" class="btn-del"><span class="sr-only">검색조건 삭제</span></button>
+                                            </li>
+                                            <li>
+                                                <p>아프리카 &gt; 가나</p>
+                                                <button type="button" class="btn-del"><span class="sr-only">검색조건 삭제</span></button>
+                                            </li>
+                                        </ul>
+                                        <button type="reset" class="btn-reset txt">초기화</button>
+                                    </div>
+                                </div>
+
+                                <button type="button" class="btn-apply">조건검색</button>
+                            </div>
+                            
+                            <div class="schList">
+                    <div class="titBox">
+						<div class="lt">
+						    <h3>자체평가 환류 과제 개요</h3>
+						</div>
+
+						<div class="rt">
+							<div class="btn-wrap">
+								<button type="button" class="btn biz pop" data-target="pop01">추진계획안 등록</button>
+							</div>
+						</div>
+					</div>
+				    
+				    <div class="tblBox">
+						<table class="tbl col">
+							<caption></caption>
+							<colgroup>
+								<col style="width: 70%;">
+								<col style="width: 15%;">
+								<col style="width: 15%;">
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">자체평가 환류 과제 개요서 파일명</th>
+									<th scope="col">등록일시</th>
+									<th scope="col">미리보기</th>
+								</tr>
+							</thead>
+							<tbody>
+							    <tr>
+							        <td>
+							            <a href="#">몽골 날라이흐구/바양주르흐구 지속가능한 '길(Trail)여행' 비즈니스 모델 고도화를 통한 주민 소득증대 사업 2단계('24-'26/1,244백만원)</a>
+							        </td>
+							        <td class="tC">2025.10.28</td>
+							        <td>
+							            <div class="btn-wrap tC">
+							                <button type="button" class="btn-apply">미리보기</button>
+							                <button type="button" class="btn-del txt">삭제</button>
+							            </div>
+							        </td>
+							    </tr>
+							    <tr>
+							        <td>
+							            <a href="#"></a>
+							        </td>
+							        <td class="tC">&nbsp;</td>
+							        <td></td>
+							    </tr>
+							    
+							    <tr>
+							        <td>
+							            <a href="#"></a>
+							        </td>
+							        <td class="tC">&nbsp;</td>
+							        <td></td>
+							    </tr>
+							</tbody>
+						</table>
+					</div>
+						
+					<!-- pagination -->
+				    <div class="pagination">
+				        <button type="button" class="page-navi prev" disabled=""><span class="sr-only">이전</span></button>
+				        <div class="page-links">
+				            <a class="page-link active" href="#"><span class="sr-only">현재페이지</span>1</a>
+				            <a class="page-link" href="#">2</a>
+				            <a class="page-link" href="#">3</a>
+				            <a class="page-link" href="#">4</a>
+				            <a class="page-link" href="#">5</a>
+				        </div>
+				        <button type="button" class="page-navi next"><span class="sr-only">다음</span></button>
+				        
+						<p>총 949건 (1/95)</p>
+						<select name="" id="select01">
+						    <option value="">10</option>
+						</select>
+				    </div>
+				    <!-- //pagination -->
+				    
+				    <div class="titBox">
+						<div class="lt">
+						    <h3>자체평가 목록</h3>
+						</div>
+
+						<div class="rt">
+						</div>
+					</div>
+				    
+				    <div class="tblBox">
+						<table class="tbl col tC">
+							<caption></caption>
+							<colgroup>
+								<col style="width: 15%;">
+								<col style="width: 35%;">
+								<col style="width: 10%;">
+								<col style="width: 10%;">
+								<col style="width: 10%;">
+								<col style="width: 10%;">
+								<col style="width: 10%;">
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">평가연도</th>
+									<th scope="col">평가 건명</th>
+									<th scope="col">제언사항 수</th>
+									<th scope="col">이행점검 과제 수</th>
+									<th scope="col">진행 중인 이행점검 과제</th>
+									<th scope="col">완료된 이행점검 과제</th>
+									<th scope="col">지연된 이행점검 과제</th>
+								</tr>
+							</thead>
+							<tbody>
+							    <tr>
+							        <td>2025</td>
+							        <td class="tL"><a href="#">숲 프로젝트</a></td>
+							        <td>5</td>
+							        <td>10</td>
+							        <td></td>
+							        <td></td>
+							        <td></td>
+							    </tr>
+							    <tr>
+							        <td>2024</td>
+							        <td class="tL"><a href="#"></a></td>
+							        <td></td>
+							        <td></td>
+							        <td></td>
+							        <td></td>
+							        <td></td>
+							    </tr>
+							    <tr>
+							        <td>2023</td>
+							        <td class="tL"><a href="#"></a></td>
+							        <td></td>
+							        <td></td>
+							        <td></td>
+							        <td></td>
+							        <td></td>
+							    </tr>
+							    <tr>
+							        <td>2022</td>
+							        <td class="tL"><a href="#"></a></td>
+							        <td></td>
+							        <td></td>
+							        <td></td>
+							        <td></td>
+							        <td></td>
+							    </tr>
+							    <tr>
+							        <td>2021</td>
+							        <td class="tL"><a href="#"></a></td>
+							        <td></td>
+							        <td></td>
+							        <td></td>
+							        <td></td>
+							        <td></td>
+							    </tr>
+							</tbody>
+						</table>
+					</div>
+						
+					<!-- pagination -->
+				    <div class="pagination">
+				        <button type="button" class="page-navi prev" disabled=""><span class="sr-only">이전</span></button>
+				        <div class="page-links">
+				            <a class="page-link active" href="#"><span class="sr-only">현재페이지</span>1</a>
+				            <a class="page-link" href="#">2</a>
+				            <a class="page-link" href="#">3</a>
+				            <a class="page-link" href="#">4</a>
+				            <a class="page-link" href="#">5</a>
+				        </div>
+				        <button type="button" class="page-navi next"><span class="sr-only">다음</span></button>
+				        
+						<p>총 949건 (1/95)</p>
+						<select name="" id="select01">
+						    <option value="">10</option>
+						</select>
+				    </div>
+				    <!-- //pagination -->
+				    
+				    <div class="titBox">
+						<div class="lt">
+						    <h3>제언항목 별 이행점검 과제 목록</h3>
+						</div>
+
+						<div class="rt">
+						    <div class="btn-wrap">
+								<button type="button" class="btn excel">엑셀다운로드</button>
+                            </div>
+						</div>
+					</div>
+				    
+				    <div class="tblBox">
+						<table class="tbl col tC">
+							<caption></caption>
+							<colgroup>
+								<col style="width: 5%;">
+								<col style="width: 35%;">
+								<col style="width: 20%;">
+								<col style="width: 8%;">
+								<col style="width: 8%;">
+								<col style="width: 8%;">
+								<col style="width: 16%;">
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">
+									    <div class="tblChk">
+									        <input type="checkbox" id="chk1"><label for="chk1"></label>
+									    </div>
+									</th>
+									<th scope="col">제언사항</th>
+									<th scope="col">과제명</th>
+									<th scope="col">담당부서(담당자)</th>
+									<th scope="col">마감기한</th>
+									<th scope="col">상태</th>
+									<th scope="col"> </th>
+								</tr>
+							</thead>
+							<tbody>
+							    <tr>
+							        <td class="tC">
+							            <div class="tblChk">
+							                <input type="checkbox" id="chk11"><label for="chk11"></label>
+							            </div>
+							        </td>
+							        <td class="tL"><a href="#">제언사항 1</a></td>
+							        <td class="tL"><a href="#">과제명 1</a></td>
+							        <td>홍길동</td>
+							        <td>2025.0613</td>
+							        <td><button type="button" class="badge pt">과제 지연</button></td>
+							        <td>
+							            <div class="btn-wrap tC">
+							                <button type="button" class="btn">이행점검 과제 정보 입력하기</button>
+							            </div>
+							        </td>
+							    </tr>
+							    <tr>
+							        <td class="tC">
+							            <div class="tblChk">
+							                <input type="checkbox" id="chk12"><label for="chk12"></label>
+							            </div>
+							        </td>
+							        <td class="tL"><a href="#">제언사항 2</a></td>
+							        <td></td>
+							        <td></td>
+							        <td></td>
+							        <td><button type="button" class="badge orange">과제 진행중</button></td>
+							        <td>
+							            <div class="btn-wrap tC">
+							                <button type="button" class="btn navy">과제 연결하기</button>
+							                <button type="button" class="btn">이행과제 미채택</button>
+							            </div>
+							        </td>
+							    </tr>
+							    <tr>
+							        <td class="tC">
+							            <div class="tblChk">
+							                <input type="checkbox" id="chk13"><label for="chk13"></label>
+							            </div>
+							        </td>
+							        <td class="tL"><a href="#">제언사항 3</a></td>
+							        <td></td>
+							        <td></td>
+							        <td></td>
+							        <td><button type="button" class="badge gray">과제 미채택</button></td>
+							        <td>
+							            <div class="btn-wrap tC">
+							                <button type="button" class="btn">이행과제 미채택 사유 조회</button>
+							            </div>
+							        </td>
+							    </tr>
+							    <tr>
+							        <td class="tC">
+							            <div class="tblChk">
+							                <input type="checkbox" id="chk14"><label for="chk14"></label>
+							            </div>
+							        </td>
+							        <td class="tL"><a href="#">제언사항 4</a></td>
+							        <td></td>
+							        <td></td>
+							        <td></td>
+							        <td></td>
+							        <td></td>
+							    </tr>
+							    <tr>
+							        <td class="tC">
+							            <div class="tblChk">
+							                <input type="checkbox" id="chk15"><label for="chk15"></label>
+							            </div>
+							        </td>
+							        <td class="tL"><a href="#">제언사항 5</a></td>
+							        <td></td>
+							        <td></td>
+							        <td></td>
+							        <td></td>
+							        <td></td>
+							    </tr>
+							</tbody>
+						</table>
+					</div>
+						
+					<!-- pagination -->
+				    <div class="pagination">
+				        <button type="button" class="page-navi prev" disabled=""><span class="sr-only">이전</span></button>
+				        <div class="page-links">
+				            <a class="page-link active" href="#"><span class="sr-only">현재페이지</span>1</a>
+				            <a class="page-link" href="#">2</a>
+				            <a class="page-link" href="#">3</a>
+				            <a class="page-link" href="#">4</a>
+				            <a class="page-link" href="#">5</a>
+				        </div>
+				        <button type="button" class="page-navi next"><span class="sr-only">다음</span></button>
+				        
+						<p>총 949건 (1/95)</p>
+						<select name="" id="select02">
+						    <option value="">10</option>
+						</select>
+				    </div>
+				    <!-- //pagination -->
+				    
+				    <div class="titBox">
+                        <div class="lt">
+                            <h3>이행점검 과제 정보 등록</h3>
+                        </div>
+
+                        <div class="rt">
+
+                        </div>
+                    </div>
+				    
+				    <div class="tblBox">
+                        <table class="tbl row">
+                            <caption></caption>
+                            <colgroup>
+                              <col style="width: 152px;">
+                              <col style="width: calc(100% - 152px);">
+                            </colgroup>
+
+                            <tbody>
+                              <tr>
+                                <th scope="row">제언사항</th>
+                                <td>
+                                    <textarea name="" id="txtbox03" cols="30" rows="10" placeholder="평가배경 및 목적을 입력해 주세요(2000자 이내)" disabled></textarea>
+                                </td>
+                              </tr>
+                              <tr>
+                                <th scope="row">과제명</th>
+                                <td>
+                                    <input type="text">
+                                </td>
+                              </tr>
+                              <tr>
+                                <th scope="row">기한</th>
+                                <td>
+                                    <div class="inputForm">
+                                        <div class="pickrBox">
+                                            <input type="text" class="pickr" placeholder="날짜를 선택하세요">
+                                            <p>~</p>
+                                            <input type="text" class="pickr" placeholder="날짜를 선택하세요">
+                                        </div>
+                                        
+                                        <div class="btn-wrap">
+                                            <button type="button" class="btn">기한 연장 (지연)</button>
+                                            <button type="button" class="btn navy">미추진 과제</button>
+                                        </div>
+                                    </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <th scope="row">연장 기한</th>
+                                <td>
+                                    <div class="inputForm">
+                                        <div class="pickrBox">
+                                            <input type="text" class="pickr" placeholder="날짜를 선택하세요">
+                                            <p>~</p>
+                                            <input type="text" class="pickr" placeholder="날짜를 선택하세요">
+                                        </div>
+                                    </div>
+                                </td>
+                              </tr>
+                              
+                              <tr>
+                                <th scope="row">필요성</th>
+                                <td>
+                                    <textarea name="" id="txtbox04" cols="30" rows="10" placeholder="평가배경 및 목적을 입력해 주세요(2000자 이내)"></textarea>
+                                </td>
+                              </tr>
+                              <tr>
+                                <th scope="row">주요 내용</th>
+                                <td>
+                                    <textarea name="" id="txtbox05" cols="30" rows="10" placeholder="평가배경 및 목적을 입력해 주세요(2000자 이내)"></textarea>
+                                </td>
+                              </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div class="titBox">
+                        <div class="lt">
+                            <h3>담당자 정보</h3>
+                        </div>
+
+                        <div class="rt">
+
+                        </div>
+                    </div>
+                    
+                    <div class="tblBox">
+                        <table class="tbl row">
+                            <caption></caption>
+                            <colgroup>
+                              <col style="width: 152px;">
+                              <col style="width: calc(50% - 152px);">
+                              <col style="width: 152px;">
+                              <col style="width: calc(50% - 152px);">
+                            </colgroup>
+
+                            <tbody>
+                              <tr>
+                                <th scope="row">담당자</th>
+                                <td>
+                                    <div class="selectBox">
+                                        <select name="" id="select10"><option value="">- 선택 -</option></select>
+                                    </div>
+                                </td>
+                                <th scope="row">연락처</th>
+                                <td>
+                                    <input type="tel">
+                                </td>
+                              </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                                
+                    <div class="btn-wrap">
+                        <button type="button" class="btn">목록</button>
+                        <button type="button" class="btn pt">등록</button>
+                    </div>
+				</div>
+						</li>
+
+						<li>
+
+						</li>
+
+						<li>
+
+						</li>
+					</ul>
+				</div>
+				
+			</div>
+			<!-- //컨텐츠 영역 -->
+		</div>
+		<!-- //컨테이너 영역 -->
+	</div>
+</body>
+</html>

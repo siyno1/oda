@@ -1,0 +1,584 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1500">
+<meta name="format-detection" content="telephone=no">
+<meta name="theme-color" content="#fab013">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>ODA - 퍼블리싱 목록</title> 
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<style type="text/css">
+* {margin:0;padding:0;font-weight:400;}
+html {overflow:auto;overflow-y:scroll;}
+body {min-width:1200px;font-size:12px;}
+li {list-style:none;}
+a {color:#444;text-decoration:none;}
+a:hover {color:#444;}
+a:visited, a:focus, a:active {color:#444;}
+h1 {color:#7a7166;font-size:30px;margin:20px 0 25px 0;line-height:40px;letter-spacing:-1px;font-weight:600;}
+h1 img {width:200px;height:auto;margin:-1px 5px 0 0;vertical-align:top;}
+h1 span {font-size:24px;font-weight:600;}
+.info {position:absolute;right:25px;top:40px;}
+.guide {margin:10px 0 5px 0;text-align:right;}
+
+#wrap {position:relative;margin:0 auto;padding:150px 20px 50px 20px;}
+header {position:fixed;left:0;top:0;width:100%;background:#fff;z-index:100;}
+header .cont_area {position:relative;margin:0 auto;padding:0 20px;}
+
+.tit_anchor {margin-bottom:10px;}
+.tit_anchor a {display:inline-block;padding:7px 5px 5px 5px;border:1px solid #B4B6B9;border-radius:4px;background:#cec4b6;color:#fff;font-size:12px;line-height:12px;transition:all 0.4s;}
+.tit_anchor a:hover {background:#f2ca74;border-color:#fdca5f;}
+.tit_anchor a.on {background:#fab013;border-color:#f1a401;}
+.tit_anchor a.com {margin-left:10px;background:#ff8000;border-color:#ff6f00;}
+
+.app {background:#2fcbcd !important;}
+.pc {background:#7846dc !important;}
+.di {background:#a4c400 !important;}
+
+
+h2 {padding:12px 0 8px 15px;font-size:13px;border:1px solid #8a724b;border-bottom:none;background:#7a7166;color:#fff;font-weight:600;}
+h2 span {display:inline-block;margin:-2px 5px 0 0;padding:6px 5px 2px 5px;border-radius:4px;color:#fff;font-family:'KBFGText';font-size:11px;font-weight:500;line-height:11px;vertical-align:top;}
+h2 .proc {float:right;margin:0 15px;font-size:11px;}
+
+caption {display:none;}
+div.cont {display:none;margin-bottom:100px;}
+div.cont.on {display:block;}
+table {border-collapse:collapse;width:100%;border-spacing:0;}
+table * {font-family:'Malgun Gothic','맑은 고딕',Apple Gothic;}
+table thead th {padding:7px 10px;border:1px solid #ababab;background:#dcd4d1;font-size:13px;}
+table tbody td {padding:7px 12px;background:#ddd;border:1px solid #ccc;text-align:left;color:#898989;font-size:11px;/*display:none;*/}
+table tbody td.left {padding:7px 10px;text-align:left;}
+table tbody td.url {padding:7px 10px;text-align:left;}
+table tbody td.url a {text-decoration:underline;color:#e80000;}
+table tbody td.date {padding:7px 5px;text-align:center;}
+table tbody td.id {padding:7px 5px;text-align:center;}
+table tbody tr.hid td {background:#eee;color:#444;}
+table tbody tr.hid .ico {background-color:#aaa !important;}
+table tbody tr.hid2 td {text-decoration: line-through;}
+table tbody tr.com td {background:#fffaeb;color:#444;}
+table tbody tr.mod td {background:#fce9dc;color:#444;}
+table tbody tr.add td {background:#e1f5fe;color:#444;}
+table tbody tr.end td {background:#fff;color:#666;}
+table tbody .num {float:left;margin:0 1px 1px 0;}
+.red {color:#e80000 !important;text-decoration:none !important;}
+.red {color:#e80000 !important;text-decoration:none !important;}
+.red div {margin-top:5px;overflow:hidden;color:#444 !important;}
+.red div:first-child {margin-top:0;}
+
+/* tab_nav */
+.tab_nav {margin-bottom:5px;}
+.tab_nav li {float:left;margin-right:5px;}
+.tab_nav li a {display:block;padding:4px 10px 5px 10px;border:1px solid #B4B6B9;border-radius:4px;background:#cec4b6;color:#fff;font-size:14px;transition:all 0.4s;}
+.tab_nav li a:hover {background:#f2ca74;border-color:#fdca5f;}
+.tab_nav li a.on {background:#fab013;border-color:#f1a401;}
+.tab_nav:after {display:block;clear:both;height:0;content:"";overflow:hidden;}
+
+/* marker */
+.marker {position:absolute;right:22px;bottom:6px;}
+.marker li {position:relative;float:left;margin-left:15px;padding-left:17px;color:#888;font-size:12px;}
+.marker li.dep {padding-right:20px;} 
+.marker li:before {position:absolute;left:0;top:2px;width:12px;height:12px;background:#888;content:"";}
+.marker li.m1:before {background:#00b3e3;}
+.marker li.m2:before {background:#53b100;}
+.marker li.m3:before {background:#e30101;animation:over_a both linear infinite 1.3s;}
+.marker li.m4:before {background:#f68500;}
+.marker li.m5:before {background:/*#9622d2;*/#0142b3;}
+.marker li.m6:before {background:#845aea;}
+
+.marker_m li {display:inline-block;position:relative;margin:0 2px;padding-left:12px;vertical-align:top;}
+.marker_m li:before {position:absolute;left:0;top:2px;width:12px;height:12px;background:#888;content:"";}
+.marker_m li.m0:before {display:none;}
+.marker_m li.m1:before {background:#00b3e3;}
+.marker_m li.m2:before {background:#53b100;}
+.marker_m li.m3:before {background:#e30101;animation:over_a both linear infinite 1.3s;}
+.marker_m li.m4:before {background:#f68500;}
+.marker_m li.m5:before {background:/*#9622d2;*/#0142b3;}
+.marker_m li.m6:before {background:#845aea;}
+.marker_m li.s1:before {background:#f68500;}
+.marker_m li.s2:before {background:#9622d2;}
+.marker_m li.m31:before {background:#e30101;animation:over_a both linear infinite 1.3s;}
+
+
+/* ico */
+.ico {display:inline-block;margin:-1px 4px 0 0;padding:4px 5px 2px 5px;border-radius:4px;color:#fff;font-family:'KBFGText';font-size:11px;font-weight:500;line-height:11px;vertical-align:top;}
+.ico.m1 {background-color:#cd2f2f;}
+.ico.m2 {background-color:#ffb400;}
+.ico.m3 {background-color:#30a701;}
+.ico.m4 {background-color:#2f5fcd;}
+.ico.m5 {background-color:#632fcd;}
+.ico.m6 {background-color:#2fcbcd;}
+.ico.m6 {display:none;}
+
+.prc {position:absolute;right:22px;top:60px;}
+#percentage {font-weight:bold;color:#2f5fcd;}
+
+@keyframes over_a {
+0% {opacity:1;}
+40% {opacity:0.2;}
+60% {opacity:0.2;}
+100% {opacity:1;}
+}
+
+
+/* proc_wrap */
+.proc_wrap {margin-top:0px;font-size:12px;}
+.proc_wrap p {display:inline-block;padding:0 15px;}
+.proc_wrap p:first-child {padding-left:0;}
+.proc_wrap strong {padding:2px 3px;background-color:#f08100;border-radius:4px;;color:#fff;font-weight:bold;}
+.proc_wrap p:last-child strong {background-color:#e30101;}
+.count_num {display:none;}
+</style>
+</head>
+
+<body>
+<!-- wrap -->
+<div id="wrap">
+	<header>
+		<div class="cont_area">
+			<h1>ODA</h1>
+			<p class="info red">2025.07.21 Last update</p>
+			<div class="proc_wrap"></div>
+			<p class="guide"></p>
+            <p class="prc">
+                진행률 <span id="currentCount">0</span> / <span id="totalCount">0</span> <span id="percentage">[0%]</span>
+            </p>
+
+			<!-- marker -->
+			<div class="marker">
+				<ul>
+					<li class="">대기</li>
+					<li class="m6">내부확인</li>
+					<li class="m2">퍼블임시완료</li>
+					<li class="m5">퍼블완료</li>
+					<li class="m3">수정</li>
+				</ul>
+			</div>
+			<!-- //marker -->
+		</div>
+	</header>
+
+
+	<p class="tit_anchor">
+        <a href="#" data-target="an00" class="on">전체</a>
+        <a href="#" data-target="an01">공통</a>
+		<a href="#" data-target="an02">회원</a>
+        <a href="#" data-target="an03">메인</a>
+        <a href="#" data-target="an04">ODA 사업</a>
+	</p>
+
+    <!-- 공통 -->
+	<div class="cont on" data-id="an01">
+        <h2>공통</h2>
+		<table>
+			<caption></caption>
+			<colgroup>
+				<col span="4" style="width:190px;">
+				<col span="1" style="width:110px;">
+				<col span="1">
+				<col span="1" style="width:60px;">
+				<col span="1" style="width:70px;">
+				<col span="1" style="width:20%;">
+			</colgroup>
+			<thead>
+				<tr>
+					<th scope="col">1 Depth</th>
+					<th scope="col">2 Depth</th>
+					<th scope="col">3 Depth</th>
+                    <th scope="col">4 Depth</th>
+					<th scope="col">화면ID</th>
+					<th scope="col">URL</th>
+					<th scope="col">상태</th>
+					<th scope="col">Date</th>
+					<th scope="col">비고</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class="end">
+					<td>레이아웃</td>
+					<td></td>
+					<td></td>
+                    <td></td>
+					<td class="id"></td>
+					<td class="url"><a href="layout.html" target="_blank"></a></td>
+					<td class="date"><ul class="marker_m"><li class=""></li></ul></td>
+					<td class="date"></td>
+					<td></td>
+				</tr>
+                <tr class="end">
+					<td>cont_01</td>
+					<td></td>
+					<td></td>
+                    <td></td>
+					<td class="id"></td>
+					<td class="url"><a href="cont_01.html" target="_blank"></a></td>
+					<td class="date"><ul class="marker_m"><li class=""></li></ul></td>
+					<td class="date"></td>
+					<td>폼</td>
+				</tr>
+                <tr class="end">
+					<td>cont_02</td>
+					<td></td>
+					<td></td>
+                    <td></td>
+					<td class="id"></td>
+					<td class="url"><a href="cont_02.html" target="_blank"></a></td>
+					<td class="date"><ul class="marker_m"><li class=""></li></ul></td>
+					<td class="date"></td>
+					<td>폼 / 탭</td>
+				</tr>
+                <tr class="end">
+					<td>cont_03</td>
+					<td></td>
+					<td></td>
+                    <td></td>
+					<td class="id"></td>
+					<td class="url"><a href="cont_03.html" target="_blank"></a></td>
+					<td class="date"><ul class="marker_m"><li class=""></li></ul></td>
+					<td class="date"></td>
+					<td>View</td>
+				</tr>
+                <tr class="end">
+					<td>cont_04</td>
+					<td></td>
+					<td></td>
+                    <td></td>
+					<td class="id"></td>
+					<td class="url"><a href="cont_04.html" target="_blank"></a></td>
+					<td class="date"><ul class="marker_m"><li class=""></li></ul></td>
+					<td class="date"></td>
+					<td>검색(중앙) / board_list</td>
+				</tr>
+                <tr class="end">
+					<td>cont_05</td>
+					<td></td>
+					<td></td>
+                    <td></td>
+					<td class="id"></td>
+					<td class="url"><a href="cont_05.html" target="_blank"></a></td>
+					<td class="date"><ul class="marker_m"><li class=""></li></ul></td>
+					<td class="date"></td>
+					<td>검색(좌측) / board_list</td>
+				</tr>
+                <tr class="end">
+					<td>cont_06</td>
+					<td></td>
+					<td></td>
+                    <td></td>
+					<td class="id"></td>
+					<td class="url"><a href="cont_06.html" target="_blank"></a></td>
+					<td class="date"><ul class="marker_m"><li class=""></li></ul></td>
+					<td class="date"></td>
+					<td>검색(중앙) / split layout / 폼</td>
+				</tr>
+                <tr class="end">
+					<td>cont_07</td>
+					<td></td>
+					<td></td>
+                    <td></td>
+					<td class="id"></td>
+					<td class="url"><a href="cont_07.html" target="_blank"></a></td>
+					<td class="date"><ul class="marker_m"><li class=""></li></ul></td>
+					<td class="date"></td>
+					<td>폼 / box_list / sub탭</td>
+				</tr>
+                <tr class="end">
+					<td>cont_08</td>
+					<td></td>
+					<td></td>
+                    <td></td>
+					<td class="id"></td>
+					<td class="url"><a href="cont_08.html" target="_blank"></a></td>
+					<td class="date"><ul class="marker_m"><li class=""></li></ul></td>
+					<td class="date"></td>
+					<td>tooltip box</td>
+				</tr>
+                <tr class="end">
+					<td>cont_09</td>
+					<td></td>
+					<td></td>
+                    <td></td>
+					<td class="id"></td>
+					<td class="url"><a href="cont_09.html" target="_blank"></a></td>
+					<td class="date"><ul class="marker_m"><li class=""></li></ul></td>
+					<td class="date"></td>
+					<td>badge / 타이틀 라벨 / 상단 full 검색(with 탭)</td>
+				</tr>
+                <tr class="end">
+					<td>cont_10</td>
+					<td></td>
+					<td></td>
+                    <td></td>
+					<td class="id"></td>
+					<td class="url"><a href="cont_10.html" target="_blank"></a></td>
+					<td class="date"><ul class="marker_m"><li class=""></li></ul></td>
+					<td class="date"></td>
+					<td>우측필터 / map 팝업</td>
+				</tr>
+                <tr class="end">
+					<td>cont_11</td>
+					<td></td>
+					<td></td>
+                    <td></td>
+					<td class="id"></td>
+					<td class="url"><a href="cont_11.html" target="_blank"></a></td>
+					<td class="date"><ul class="marker_m"><li class=""></li></ul></td>
+					<td class="date"></td>
+					<td>모달 with dim</td>
+				</tr>
+                <tr class="end">
+					<td>cont_12</td>
+					<td></td>
+					<td></td>
+                    <td></td>
+					<td class="id"></td>
+					<td class="url"><a href="cont_12.html" target="_blank"></a></td>
+					<td class="date"><ul class="marker_m"><li class=""></li></ul></td>
+					<td class="date"></td>
+					<td>window 팝업</td>
+				</tr>
+                <tr class="end">
+					<td>cont_13</td>
+					<td></td>
+					<td></td>
+                    <td></td>
+					<td class="id"></td>
+					<td class="url"><a href="cont_13.html" target="_blank"></a></td>
+					<td class="date"><ul class="marker_m"><li class=""></li></ul></td>
+					<td class="date"></td>
+					<td>cont_09.html 형식 동일</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<!-- //공통 -->
+
+	<!-- 회원 -->
+    <div class="cont on" data-id="an02">
+        <h2>회원</h2>
+        <table>
+            <caption></caption>
+            <colgroup>
+                <col span="4" style="width:190px;">
+                <col span="1" style="width:110px;">
+                <col span="1">
+                <col span="1" style="width:60px;">
+                <col span="1" style="width:70px;">
+                <col span="1" style="width:20%;">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th scope="col">1 Depth</th>
+                    <th scope="col">2 Depth</th>
+                    <th scope="col">3 Depth</th>
+                    <th scope="col">4 Depth</th>
+                    <th scope="col">화면ID</th>
+                    <th scope="col">URL</th>
+                    <th scope="col">상태</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">비고</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="">
+                    <td>로그인</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td class="id"></td>
+                    <td class="url"><a href="#" target="_blank"></a></td>
+                    <td class="date"><ul class="marker_m"><li class=""></li></ul></td>
+                    <td class="date"></td>
+                    <td></td>
+                </tr>
+				<tr class="">
+                    <td>회원가입</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td class="id"></td>
+                    <td class="url"><a href="#" target="_blank"></a></td>
+                    <td class="date"><ul class="marker_m"><li class=""></li></ul></td>
+                    <td class="date"></td>
+                    <td></td>
+                </tr>
+				<tr class="">
+                    <td>마이페이지</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td class="id"></td>
+                    <td class="url"><a href="#" target="_blank"></a></td>
+                    <td class="date"><ul class="marker_m"><li class=""></li></ul></td>
+                    <td class="date"></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- //회원  -->
+
+	<!-- 메인 -->
+	<div class="cont on" data-id="an03">
+        <h2>메인</h2>
+		<table>
+			<caption></caption>
+			<colgroup>
+				<col span="4" style="width:190px;">
+				<col span="1" style="width:110px;">
+				<col span="1">
+				<col span="1" style="width:60px;">
+				<col span="1" style="width:70px;">
+				<col span="1" style="width:20%;">
+			</colgroup>
+			<thead>
+				<tr>
+					<th scope="col">1 Depth</th>
+					<th scope="col">2 Depth</th>
+					<th scope="col">3 Depth</th>
+                    <th scope="col">4 Depth</th>
+					<th scope="col">화면ID</th>
+					<th scope="col">URL</th>
+					<th scope="col">상태</th>
+					<th scope="col">Date</th>
+					<th scope="col">비고</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class="">
+					<td>메인</td>
+					<td></td>
+					<td></td>
+                    <td></td>
+					<td class="id"></td>
+					<td class="url"><a href="main.html" target="_blank"></a></td>
+					<td class="date"><ul class="marker_m"><li class=""></li></ul></td>
+					<td class="date"></td>
+					<td><span class="ico m4">Tab</span></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<!-- //메인 -->
+
+
+    <!-- ODA 사업 -->
+    <div class="cont on" data-id="an04">
+        <h2>ODA 사업</h2>
+        <table>
+            <caption></caption>
+            <colgroup>
+                <col span="4" style="width:190px;">
+                <col span="1" style="width:110px;">
+                <col span="1">
+                <col span="1" style="width:60px;">
+                <col span="1" style="width:70px;">
+                <col span="1" style="width:20%;">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th scope="col">1 Depth</th>
+                    <th scope="col">2 Depth</th>
+                    <th scope="col">3 Depth</th>
+                    <th scope="col">4 Depth</th>
+                    <th scope="col">화면ID</th>
+                    <th scope="col">URL</th>
+                    <th scope="col">상태</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">비고</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="">
+                    <td>ODA 사업</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td class="id"></td>
+                    <td class="url"><a href="#" target="_blank"></a></td>
+                    <td class="date"><ul class="marker_m"><li class=""></li></ul></td>
+                    <td class="date"></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- //ODA 사업  -->
+</div>
+<!-- //wrap -->
+
+<script>
+
+    function viewProcessing(target) {
+        var targetConts = document.querySelectorAll('.cont');
+        var total = 0;
+        var current = 0;
+        var txtCurrentCount = document.getElementById('currentCount');
+        var txtTotalCount = document.getElementById('totalCount');
+		var txtPercentage = document.getElementById('percentage');
+
+        targetConts.forEach(function(targetCont){
+            if (target == 'an00') {
+                total += targetCont.querySelectorAll('tr').length - 1;//th row 제외
+                current += targetCont.querySelectorAll('tr.end').length;
+            } else {
+                var targetId = targetCont.getAttribute('data-id');
+                if (target == targetId) {
+                    total += targetCont.querySelectorAll('tr').length - 1;//th row 제외
+                    current += targetCont.querySelectorAll('tr.end').length;
+                }
+            }
+        });
+
+        txtCurrentCount.innerText = current;
+        txtTotalCount.innerText = total;
+		txtPercentage.innerText = '[' + Math.round((current / total) * 100) + '%]';
+    }
+
+    function activeCont(target) {
+        var anchors = document.querySelectorAll('.tit_anchor a');
+        var targetConts = document.querySelectorAll('.cont');
+
+        anchors.forEach(function(anchor){
+            var targetId = anchor.getAttribute('data-target');
+            anchor.classList.remove('on');
+            if (target == targetId) anchor.classList.add('on');
+        });
+
+        targetConts.forEach(function(targetCont){
+            if (target == 'an00') {
+                targetCont.classList.remove('on');
+                targetCont.classList.add('on');
+            } else {
+                var targetId = targetCont.getAttribute('data-id');
+                targetCont.classList.remove('on');
+                if (target == targetId) targetCont.classList.add('on');
+            }
+        });
+    }
+
+    document.addEventListener('DOMContentLoaded', function(){
+        var urls = document.querySelectorAll('td.url');
+        var anchors = document.querySelectorAll('.tit_anchor a');
+
+        urls.forEach(function(url){
+            var anchor = url.querySelector('a');
+            var href = anchor.getAttribute('href');
+            anchor.textContent = href ? href : '#';
+        });
+
+        anchors.forEach(function(anchor){
+            anchor.addEventListener('click', function(event){
+                event.preventDefault();
+                var target = this.getAttribute('data-target');
+                activeCont(target);
+                viewProcessing(target);
+            });
+        });
+
+        viewProcessing('an00');
+    });
+</script>
+</body>
+</html>
