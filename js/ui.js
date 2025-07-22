@@ -17,18 +17,27 @@ function init() {
             },
             onOpen: function (selectedDates, dateStr, instance) {
                 replaceYearWithSelect(instance);
+            },
+            onYearChange : function (selectedDates, dateStr, instance) {
+                var yearSelect = this.calendarContainer.querySelector('.flatpickr-yearDropdown-years');
+                if (yearSelect) {
+                    var options = yearSelect.querySelectorAll('option');
+                    options.forEach(function(option){
+                        option.selected = option.value == instance.currentYear;
+                    });
+                }
             }
         }
 
         if (mode == 'month') {
             options = {
                 locale: 'ko',
-                mode: "single",  // 단일 날짜 선택 모드
+                mode: "single", // 단일 날짜 선택 모드
                 plugins: [
                     new monthSelectPlugin({
                         shorthand: true,
-                        dateFormat: "Y-m",  // 선택된 날짜 형식 'YYYY-MM'
-                        altFormat: "F Y"  // 보여줄 형식 'January 2025'
+                        dateFormat: "Y-m", // 선택된 날짜 형식 'YYYY-MM'
+                        altFormat: "F Y", // 보여줄 형식 'January 2025'
                     })
                 ],
                 onReady: function (selectedDates, dateStr, instance) {
@@ -37,8 +46,14 @@ function init() {
                 onOpen: function (selectedDates, dateStr, instance) {
                     replaceYearWithSelect(instance);
                 },
-                onChange: function(selectedDates, dateStr, instance) {
-                    console.log("Selected month: " + dateStr);
+                onYearChange : function (selectedDates, dateStr, instance) {
+                    var yearSelect = this.calendarContainer.querySelector('.flatpickr-yearDropdown-years');
+                    if (yearSelect) {
+                        var options = yearSelect.querySelectorAll('option');
+                        options.forEach(function(option){
+                            option.selected = option.value == instance.currentYear;
+                        });
+                    }
                 }
             }
         }
@@ -159,7 +174,7 @@ function replaceYearWithSelect(instance) {
     if (!yearInputWrapper || yearInputWrapper.querySelector("select")) return;
 
     const input = yearInputWrapper.querySelector("input");
-    const currentYear = parseInt(input.value, 10);
+    const currentYear = instance.currentYear;
 
     // year Range
     const minYear = 1990;
@@ -170,6 +185,7 @@ function replaceYearWithSelect(instance) {
 
     // select[Transform]
     const yearSelect = document.createElement("select");
+    yearSelect.className = 'flatpickr-yearDropdown-years';
     for (let y = minYear; y <= maxYear; y++) {
         const opt = document.createElement("option");
         opt.value = y;
