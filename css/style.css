@@ -22,9 +22,9 @@ select {width: 100%; height: 30px; padding: 4px 30px 4px 9px; font-weight: 500; 
 
 /* tblBox - margin */
 .tblBox {width: 100%; overflow: auto clip;}
-:where(.tblBox, .pagination) + .titBox {margin-top: 40px;}
-:where(.tblBox, .pagination) + .tblBox {margin-top: 20px;}
-:where(.tblBox, .pagination) + .tblBox .tbl::before {background: #E2E6EA;}
+:where(.tblBox, .adBox, .pagination) + .titBox {margin-top: 40px;}
+:where(.tblBox, .adBox, .pagination) + .tblBox {margin-top: 20px;}
+:where(.tblBox, .adBox, .pagination) + .tblBox .tbl::before {background: #E2E6EA;}
 .toggleBox + :where(.titBox, .tblBox) {margin-top: 20px;}
 :where(.titBox, .tblBox, .pagination) + .toggleBox {margin-top: 40px;}
 .btn-wrap + :where(.titBox, .tblBox) {margin-top: 40px;}
@@ -107,30 +107,31 @@ input[type="text"] ~ .btn-ipt {position: absolute; top: 50%; right: 55px; displa
 /* file-upload */
 .file {display: flex; justify-content: space-between; align-items: center; gap: 6px;}
 .file .btn-wrap {flex: 1; flex-direction: column;}
-.file-upload {position: relative; display: flex; justify-content: center; align-items: center; width: calc(100% - 36px); min-height: 70px; border: 1px dashed #8A949E;}
+.file-upload {flex:1 0 auto; position: relative; display: flex; justify-content: center; align-items: center; width: calc(100% - 36px); min-height: 70px; border: 1px dashed #8A949E;}
 .file-upload ul {display: flex; flex-direction: column; gap: 6px; width: 100%; height: auto; max-height: 152px; padding: 10px; overflow-y: auto;}
 .file-upload ul li {display: flex; align-items: center; gap: 5px;}
-.file-upload ul li label {flex: 1; display: block; font-size: 14px; white-space: nowrap; text-overflow: ellipsis; overflow: hidden;}
-.file-upload ul li label::before {position: relative; top: 3px; margin-right: 33px;}
-.file-upload ul li label.hwp {background: url(../img/ico_file_hwp.svg) no-repeat left 25px center;}
-.file-upload ul li label.pdf {background: url(../img/ico_file_pdf.svg) no-repeat left 25px center;}
-.file-upload ul li label.xls {background: url(../img/ico_file_xls.svg) no-repeat left 25px center;}
-.file-upload ul li label.doc {background: url(../img/ico_file_doc.svg) no-repeat left 25px center;}
-.file-upload ul li label.txt {background: url(../img/ico_file_txt.svg) no-repeat left 25px center;}
-.file-upload ul li label.zip {background: url(../img/ico_file_zip.svg) no-repeat left 25px center;}
-.file-upload ul li label.ppt {background: url(../img/ico_file_ppt.svg) no-repeat left 25px center;}
-.file-upload ul li label.bmp {background: url(../img/ico_file_bmp.svg) no-repeat left 25px center;}
-.file-upload ul li label.gif {background: url(../img/ico_file_gif.svg) no-repeat left 25px center;}
-.file-upload ul li label.jpg {background: url(../img/ico_file_jpg.svg) no-repeat left 25px center;}
-.file-upload ul li label.png {background: url(../img/ico_file_png.svg) no-repeat left 25px center;}
-.file-upload ul li label.tif {background: url(../img/ico_file_tif.svg) no-repeat left 25px center;}
-.file-upload ul li label.xml {background: url(../img/ico_file_xml.svg) no-repeat left 25px center;}
-.file-upload ul li label.html {background: url(../img/ico_file_html.svg) no-repeat left 25px center;}
-.file-upload ul li label.exe {background: url(../img/ico_file_exe.svg) no-repeat left 25px center;}
-.file-upload ul li label.mpg {background: url(../img/ico_file_mpg.svg) no-repeat left 25px center;}
-.file-upload ul li label.mp4 {background: url(../img/ico_file_mp4.svg) no-repeat left 25px center;}
-.file-upload ul li label.avi {background: url(../img/ico_file_avi.svg) no-repeat left 25px center;}
-.file-upload ul li label.etc {background: url(../img/ico_file_etc.svg) no-repeat left 25px center;}
+.file-upload ul li label {flex: 1; display: block; font-size: 14px; white-space: nowrap; text-overflow: ellipsis; overflow: hidden; min-height:26px; line-height:26px; padding-left:28px; background-repeat:no-repeat; background-position:0 center; cursor:pointer;}
+.file-upload ul li :where(input[type="checkbox"], input[type="radio"]) + label {padding-left:0; background-position:25px center;}
+.file-upload ul li :where(input[type="checkbox"], input[type="radio"]) + label::before {position: relative; top: 3px; margin-right: 33px; vertical-align: top;}
+.file-upload ul li label.hwp {background-image: url(../img/ico_file_hwp.svg);}
+.file-upload ul li label.pdf {background-image: url(../img/ico_file_pdf.svg);}
+.file-upload ul li label.xls {background-image: url(../img/ico_file_xls.svg);}
+.file-upload ul li label.doc {background-image: url(../img/ico_file_doc.svg);}
+.file-upload ul li label.txt {background-image: url(../img/ico_file_txt.svg);}
+.file-upload ul li label.zip {background-image: url(../img/ico_file_zip.svg);}
+.file-upload ul li label.ppt {background-image: url(../img/ico_file_ppt.svg);}
+.file-upload ul li label.bmp {background-image: url(../img/ico_file_bmp.svg);}
+.file-upload ul li label.gif {background-image: url(../img/ico_file_gif.svg);}
+.file-upload ul li label.jpg {background-image: url(../img/ico_file_jpg.svg);}
+.file-upload ul li label.png {background-image: url(../img/ico_file_png.svg);}
+.file-upload ul li label.tif {background-image: url(../img/ico_file_tif.svg);}
+.file-upload ul li label.xml {background-image: url(../img/ico_file_xml.svg);}
+.file-upload ul li label.html {background-image: url(../img/ico_file_html.svg);}
+.file-upload ul li label.exe {background-image: url(../img/ico_file_exe.svg);}
+.file-upload ul li label.mpg {background-image: url(../img/ico_file_mpg.svg);}
+.file-upload ul li label.mp4 {background-image: url(../img/ico_file_mp4.svg);}
+.file-upload ul li label.avi {background-image: url(../img/ico_file_avi.svg);}
+.file-upload ul li label.etc {background-image: url(../img/ico_file_etc.svg);}
 .file-upload .btn {height: 24px;}
 .file-upload .txt-file {display: inline-flex; align-items: center; font-weight: 500; line-height: 1.5; color: #8A949E; cursor: default;}
 .file-upload .txt-file::before {content: ' '; display: block; width: 20px; height: 22px; margin-right: 7px; background: url(../img/ico_file.svg) no-repeat center center;}
@@ -157,6 +158,7 @@ input[type="text"] ~ .btn-ipt {position: absolute; top: 50%; right: 55px; displa
 .tab li button {position: relative; width: auto; min-width: 100px; height: 40px; padding: 5px 15px; text-align: center; font-size: 15px; font-weight: 400; color: #464C53; background: #fff; border: none; outline: 1px solid #D9E1F2;}
 .tab li button.active {font-weight: 600; color: #256EF4; background: #F2F6FE;}
 .tab li button.active::after {z-index: 1; position: absolute; bottom: -1px; left: -1px; content: ' '; width: calc(100% + 1px); height: 2px; background: #3B80FF;}
+.tab li button:disabled {background:#ACABAB;color:#868686;}
 
 /* tabCont */
 .tabCont > li {margin-top: 24px;}
@@ -239,8 +241,8 @@ input[type="text"] ~ .btn-ipt {position: absolute; top: 50%; right: 55px; displa
 
 /* searchFlt */
 .searchFlt {margin-top: 12px; font-size: 14px;}
-.searchFlt ul {display: flex; justify-content: space-between; align-items: center; gap: 10px; width: 100%;}
-.searchFlt ul li {flex: 1;}
+.searchFlt ul {display: flex; align-items: center; gap: 10px; width: 100%;}
+.searchFlt ul li {flex: 1; max-width: 260px;}
 .searchFlt ul + ul {margin-top: 5px;}
 
 /* schCol */
@@ -325,11 +327,12 @@ input[type="text"] ~ .btn-ipt {position: absolute; top: 50%; right: 55px; displa
 
 /* badge[badge Type02] */
 .badge {display: inline-block; width: auto; min-width: 35px; padding: 1px 4px; margin: auto; text-align: center; font-size: 12px; font-weight: 500; line-height: 1.5; color: #fff; background: #ACABAB; border: 0; border-radius: 4px;}
-.badge.lg {width: 50px; padding: 0; letter-spacing: 0;}
+.badge.lg {width: 60px; padding: 0; letter-spacing: 0;}
 .badge.pt {background: #4F9097;}
 .badge.gray {background: #868686;}
 .badge.orange {background: #DC984F;}
 .badge.blue {background: #5D8CB0;}
+.badge.lgray {background:#ACABAB}
 
 /* schList */
 .schList {margin-top: 24px;}
