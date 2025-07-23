@@ -177,7 +177,6 @@ input[type="text"] ~ .btn-ipt {position: absolute; top: 50%; right: 55px; displa
 .depth2Cont > li:not(.active) {display: none;}
 
 /* schBox tab */
-.tabBox.schBox {width: 100%; max-width: none; padding-top: 0;}
 .tabBox > .tab {margin-top: 0;}
 .tabBox .tabCont > li:not(.active) {display: none;}
 .tabBox .tabCont > li {display: flex; align-items: flex-start; flex-wrap: wrap; margin-top: 0;}
@@ -196,6 +195,8 @@ input[type="text"] ~ .btn-ipt {position: absolute; top: 50%; right: 55px; displa
 .tabBox .schBox.line {flex-direction: row; width: 100%; max-width: none; padding-top: 0; margin: 0;}
 .tabBox .schBox.line .btn-apply {position: relative; top: 3px;}
 .tabBox .schBox.line .searchFlt ul li {min-width: 256px;}
+
+.tabBox.schBox {width: 100%; max-width: none; padding-top: 0;}
 .tabBox.schBox .searchFlt ul li {min-width: 256px;}
 
 /* pagination */
@@ -242,7 +243,7 @@ input[type="text"] ~ .btn-ipt {position: absolute; top: 50%; right: 55px; displa
 /* searchFlt */
 .searchFlt {margin-top: 12px; font-size: 14px;}
 .searchFlt ul {display: flex; align-items: center; gap: 10px; width: 100%;}
-.searchFlt ul li {flex: 1; max-width: 260px;}
+.searchFlt ul li {flex: 1;}
 .searchFlt ul + ul {margin-top: 5px;}
 
 /* schCol */
@@ -266,6 +267,7 @@ input[type="text"] ~ .btn-ipt {position: absolute; top: 50%; right: 55px; displa
 .fltList:not(.on) ul:not(:first-child) {display: none;}
 .fltList button {position: relative; display: flex; align-items: center; width: 100%; height: 40px; padding: 8px 40px 8px 20px; font-size: inherit; font-weight: 600; line-height: 1.5; color: #1E2124; background: #F0F2F6; border: 1px solid #D1DAE2; border-radius: 12px;}
 .fltList button::after {position: absolute; top: 50%; right: 20px; content: ' '; display: block; width: 14px; height: 14px; background: url(../img/ico_select_arr.svg) no-repeat center center; transform: translateY(-50%); transition: 0.3s all;}
+.fltList li {max-width: 260px;}
 .fltList li.on button {background: #D9DFEA;}
 .fltList li.on button::after {transform: rotate(-180deg) translateY(50%); transition: 0.3s all;}
 
