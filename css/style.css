@@ -401,6 +401,9 @@ input[type="text"] ~ .btn-ipt {position: absolute; top: 50%; right: 55px; displa
 .popup .subBox .tooltip {margin-top: 10px; font-size: 13px; font-weight: 400; line-height: 1.5; color: #6D7882;}
 .popup .subBox .tooltip::before {width: 15px; height: 15px; background: url(../img/ico_tooltip.svg) no-repeat center center;}
 
+/* popup subBox : 안내 */
+.popup .subBox.noti {padding-top:58px;background:url(../img/ico_msg_noti.svg) no-repeat 50% top;}
+
 /* popup Content */
 .popup .schList {margin: 0;}
 .popup .tblBox .tbl {min-width: auto;}

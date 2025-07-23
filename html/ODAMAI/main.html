@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<title>ODA - 홈</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+	<meta http-equiv="Pragma" content="no-cache">
+	<meta http-equiv="Expires" content="0">
+
+	<link rel="stylesheet" href="./../../css/flatpickr.min.css">
+	<link rel="stylesheet" href="./../../css/reset.css">
+	<link rel="stylesheet" href="./../../css/layout.css">
+	<link rel="stylesheet" href="./../../css/style.css">
+
+	<script defer src="./../../js/jquery-3.7.1.min.js"></script>
+	<script defer src="./../../js/flatpickr.js"></script>
+	<script defer src="./../../js/ui.js"></script>
+</head>
+
+<body>
+	<!-- wrap -->
+	<div id="wrap" class="wrapper">
+		<!-- 헤더 영역 -->
+		<div id="header" class="header">
+			<div class="wrap">
+				<h1><a href="./../gate.html"><img src="./../../img/logo.svg"></a></h1>
+				<ul class="gnb">
+					<li><a href="javascript:;">ODA 사업</a></li>
+					<li><a href="javascript:;">평가</a></li>
+					<li><a href="javascript:;">위원회 관리</a></li>
+					<li><a href="javascript:;">통합 성과관리</a></li>
+					<li><a href="javascript:;">ODA 정보등록</a></li>
+					<li><a href="javascript:;">ODA 통계</a></li>
+					<li><a href="javascript:;">ODA 사업보고</a></li>
+				</ul>
+				<div class="userBox">
+					<button class="btnUser">운영관리자</button>
+					<ul class="dropDown">
+						<li><a href="javascript:;">쪽지</a></li>
+						<li><a href="javascript:;">마이페이지</a></li>
+						<li><a href="javascript:;">로그아웃</a></li>
+					</ul>
+				</div>
+				<div class="searchBox">
+					<input type="text" placeholder="통합검색">
+					<button class="btnSearch">검색</button>
+				</div>
+			</div>
+		</div>
+		<!-- //헤더 영역 -->
+
+		<!-- 컨테이너 영역 -->
+		<div id="container" class="container">
+
+			<!-- LNB 영역 -->
+			<div id="side" class="side">
+				<div class="side_menu">
+					<h2>ODA 사업 관리</h2>
+					<ul class="gnb">
+						<li>
+							<a href="javascript:;">사업목록</a>
+						</li>
+						<li class="hasChild active">
+							<a href="javascript:;">연수 사업 관리</a>
+							<ul>
+								<li><a href="javascript:;" class="on">연수 사업 목록</a></li>
+								<li><a href="javascript:;">연수 프로그램 관리</a></li>
+								<li><a href="javascript:;">연수생 관리</a></li>
+								<li><a href="javascript:;">체크리스트</a></li>
+							</ul>
+						</li>
+						<li class="hasChild">
+							<a href="javascript:;">장학 사업 관리</a>
+							<ul>
+								<li><a href="javascript:;">연수 사업 목록</a></li>
+								<li><a href="javascript:;">연수 프로그램 관리</a></li>
+								<li><a href="javascript:;">연수생 관리</a></li>
+								<li><a href="javascript:;">체크리스트</a></li>
+							</ul>
+						</li>
+						<li class="hasChild">
+							<a href="javascript:;">패키지 사업 관리</a>
+							<ul>
+								<li><a href="javascript:;">연수 사업 목록</a></li>
+								<li><a href="javascript:;">연수 프로그램 관리</a></li>
+								<li><a href="javascript:;">연수생 관리</a></li>
+								<li><a href="javascript:;">체크리스트</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<button class="btnSlide">slide</button>
+			</div>
+			<!-- //LNB 영역 -->
+
+			<!-- 컨텐츠 영역 -->
+			<div class="contents">
+				<!-- main -->
+				<div class="main">
+					<!-- tab -->
+					<div class="tab">
+						<ul>
+							<li><button type="button" class="active">ODA 사업관리</button></li>
+							<li><button type="button">시행계획 예산 기준(₩)</button></li>
+							<li><button type="button">통계(지원액) 기준($)</button></li>
+						</ul>
+					</div>
+					<!-- //tab -->
+
+					<!-- tabCont -->
+					<ul class="tabCont">
+						<li class="active">
+							<!-- mainSummary -->
+							<div class="mainSummary">
+								<ul class="listSummary tyList">
+									<li>
+										<p class="name">예비 사업</p>
+										<span class="count"><strong>100</strong>건</span>
+									</li>
+									<li>
+										<p class="name">진행 사업</p>
+										<span class="count"><strong>100</strong>건</span>
+									</li>
+									<li>
+										<p class="name">완료 사업</p>
+										<span class="count"><strong>100</strong>건</span>
+									</li>
+									<li class="total">
+										<p class="name">총 사업</p>
+										<span class="count"><strong>100</strong>건</span>
+									</li>
+								</ul>
+
+								<ul class="listSummary tyInfo">
+									<li>
+										<p class="name">모니터링 2회차 지출액</p>
+										<p class="summary"></p>
+									</li>
+									<li>
+										<p class="name">집행실적</p>
+
+										<ul class="descLi">
+											<li>
+												<span class="icoBt">정상 추진</span>
+												<span class="count"><strong>100</strong>건</span>
+											</li>
+											<li>
+												<span class="icoBt">집행 부진</span>
+												<span class="count"><strong>100</strong>건</span>
+											</li>
+										</ul>
+									</li>
+									<li>
+										<p class="name">통계 (잠정) 입력 기간</p>
+										<p class="summary tyDate"></p>
+									</li>
+								</ul>
+							</div>
+							<!-- //mainSummary -->
+
+							<!-- mainContents -->
+							<div class="mainContents">
+								<!-- mainContent -->
+								<div class="mainContent">
+									<!-- list_card -->
+									<ul class="list_card">
+										<li>
+											<div class="tit">
+												<span class="span"></span>
+												<strong></strong>
+												<ul class="status"></ul>
+											</div>
+
+											<ul class="info">
+												<li class="date"></li>
+												<li class="etc"></li>
+												<li class="etc"></li>
+												<li class="etc"></li>
+											</ul>
+											<button type="button" title="상세보기"></button><!-- 상세보기 -->
+										</li>
+									</ul>
+									<!-- //list_card -->
+
+									<button type="button">더보기</button>
+								</div>
+								<!-- //mainContent -->
+
+								<!-- mainContent -->
+								<div class="mainContent">
+									<!-- widgets -->
+									<ul class="widgets">
+										<li>
+											<div class="tit">
+												<strong>국무조정실 시행계획예산 / 통계(지원액) 추이</strong>
+											</div>
+										</li>
+										<li>
+											<div class="col_widget">
+												<div class="tit">
+													<strong></strong>
+													<a href="#">자세히보기</a>
+												</div>
+											</div>
+											<div class="col_widget">
+												<div class="tit">
+													<strong></strong>
+													<a href="#">자세히보기</a>
+												</div>
+											</div>
+										</li>
+										<li>
+											<div class="tit">
+												<strong>빠른 메뉴 바로가기</strong>
+											</div>
+
+											<ul class="list_quick">
+												<li><a href="#">지도로 보는 통계</a></li>
+												<li><a href="#">ODA 사업 목록</a></li>
+												<li><a href="#">모니터링</a></li>
+												<li><a href="#">공지사항</a></li>
+											</ul>
+										</li>
+									</ul>
+									<!-- //widgets -->
+								</div>
+								<!-- //mainContent -->
+							</div>
+							<!-- //mainContents -->
+						</li>
+
+						<li>
+							<!-- mainWorld -->
+							<div class="mainWorld">
+
+							</div>
+							<!-- //mainWorld -->
+						</li>
+
+						<li>
+
+						</li>
+					</ul>
+					<!-- //tabCont -->
+				</div>
+				<!-- //main -->
+			</div>
+			<!-- //컨텐츠 영역 -->
+		</div>
+		<!-- //컨테이너 영역 -->
+	</div>
+	<!-- //wrap -->
+</body>
+
+</html>

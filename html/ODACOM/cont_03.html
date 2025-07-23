@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<title>ODA</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+	<meta http-equiv="Pragma" content="no-cache">
+	<meta http-equiv="Expires" content="0">
+
+	<link rel="stylesheet" href="./../../css/flatpickr.min.css">
+	<link rel="stylesheet" href="./../../css/reset.css">
+	<link rel="stylesheet" href="./../../css/layout.css">
+	<link rel="stylesheet" href="./../../css/style.css">
+
+	<script defer src="./../../js/jquery-3.7.1.min.js"></script>
+	<script defer src="./../../js/flatpickr.js"></script>
+	<script defer src="./../../js/ui.js"></script>
+</head>
+
+<body>
+	<!-- wrap -->
+	<div id="wrap" class="wrapper">
+		<!-- 헤더 영역 -->
+		<div id="header" class="header">
+			<div class="wrap">
+				<h1><a href="./../gate.html"><img src="./../../img/logo.svg"></a></h1>
+				<ul class="gnb">
+					<li><a href="javascript:;">ODA 사업</a></li>
+					<li class="active"><a href="javascript:;">평가</a></li>
+					<li><a href="javascript:;">위원회 관리</a></li>
+					<li><a href="javascript:;">통합 성과관리</a></li>
+					<li><a href="javascript:;">ODA 정보등록</a></li>
+					<li><a href="javascript:;">ODA 통계</a></li>
+					<li><a href="javascript:;">ODA 사업보고</a></li>
+				</ul>
+				<div class="userBox">
+					<button class="btnUser">운영관리자</button>
+					<ul class="dropDown">
+						<li><a href="javascript:;">쪽지</a></li>
+						<li><a href="javascript:;">마이페이지</a></li>
+						<li><a href="javascript:;">로그아웃</a></li>
+					</ul>
+				</div>
+				<div class="searchBox">
+					<input type="text" placeholder="통합검색">
+					<button class="btnSearch">검색</button>
+				</div>
+			</div>
+		</div>
+		<!-- //헤더 영역 -->
+
+		<!-- 컨테이너 영역 -->
+		<div id="container" class="container">
+
+			<!-- LNB 영역 -->
+			<div id="side" class="side">
+				<div class="side_menu">
+					<h2>ODA 사업 관리</h2>
+					<ul class="gnb">
+						<li>
+							<a href="javascript:;">사업목록</a>
+						</li>
+						<li class="hasChild active">
+							<a href="javascript:;">연수 사업 관리</a>
+							<ul>
+								<li><a href="javascript:;" class="on">연수 사업 목록</a></li>
+								<li><a href="javascript:;">연수 프로그램 관리</a></li>
+								<li><a href="javascript:;">연수생 관리</a></li>
+								<li><a href="javascript:;">체크리스트</a></li>
+							</ul>
+						</li>
+						<li class="hasChild">
+							<a href="javascript:;">장학 사업 관리</a>
+							<ul>
+								<li><a href="javascript:;">연수 사업 목록</a></li>
+								<li><a href="javascript:;">연수 프로그램 관리</a></li>
+								<li><a href="javascript:;">연수생 관리</a></li>
+								<li><a href="javascript:;">체크리스트</a></li>
+							</ul>
+						</li>
+						<li class="hasChild">
+							<a href="javascript:;">패키지 사업 관리</a>
+							<ul>
+								<li><a href="javascript:;">연수 사업 목록</a></li>
+								<li><a href="javascript:;">연수 프로그램 관리</a></li>
+								<li><a href="javascript:;">연수생 관리</a></li>
+								<li><a href="javascript:;">체크리스트</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<button class="btnSlide">slide</button>
+			</div>
+			<!-- //LNB 영역 -->
+
+			<!-- 컨텐츠 영역 -->
+			<div class="contents">
+				<div class="pgtBox">
+					<div class="lt">
+						<h2>자체평가 평가계획 등록 </h2>
+					</div>
+
+					<ul class="breadcrumb">
+						<li class="home"><a href="javascript:;">홈</a></li>
+						<li><a href="javascript:;">평가</a></li>
+						<li><a href="javascript:;">자체평가</a></li>
+					</ul>
+
+					<div class="rt"></div>
+				</div>
+
+				<div class="titBox">
+					<div class="lt">
+						<h3>추가 증빙 서류 제출</h3>
+					</div>
+
+					<div class="rt">
+
+					</div>
+				</div>
+
+				<div class="tblBox">
+					<table class="tbl row">
+						<caption></caption>
+						<colgroup>
+							<col style="width: 152px;">
+							<col style="width: auto;">
+						</colgroup>
+
+						<tbody>
+							<tr>
+								<th scope="row">서류명</th>
+								<td>
+									<div class="fileLink">
+										<a href="#" target="_blank" class="hwp">추가 증빙 서류 제출.hwpx</a>
+										<button type="button" class="btn">미리보기</button>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+
+				<div class="titBox">
+					<div class="lt">
+						<h3>성과 지표 계획</h3>
+					</div>
+
+					<div class="rt">
+
+					</div>
+				</div>
+
+				<div class="tblBox">
+					<table class="tbl col">
+						<caption></caption>
+						<colgroup>
+							<col style="width: 5%;">
+							<col style="width: auto;">
+							<col style="width: auto;">
+							<col style="width: auto;">
+							<col style="width: auto;">
+							<col style="width: auto;">
+							<col style="width: auto;">
+							<col style="width: auto;">
+						</colgroup>
+						<thead>
+							<tr>
+								<th scope="col">
+									<div class="tblChk">
+										<input type="checkbox" id="chk01">
+										<label for="chk01"></label>
+									</div>
+								</th>
+								<th scope="col">성과 지표</th>
+								<th scope="col" colspan="3">목표치</th>
+								<th scope="col">목표치 산출 근거</th>
+								<th scope="col">측정 계산식</th>
+								<th scope="col">자료 수집 방법 / 자료 출처</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>
+									<div class="tblChk">
+										<input type="checkbox" id="chk02">
+										<label for="chk02"></label>
+									</div>
+								</td>
+								<td>등록된 내용</td>
+								<td>등록된 내용</td>
+								<td>등록된 내용</td>
+								<td>등록된 내용</td>
+								<td>등록된 내용</td>
+								<td>등록된 내용</td>
+								<td>등록된 내용</td>
+							</tr>
+							<tr>
+								<td>
+									<div class="tblChk">
+										<input type="checkbox" id="chk03">
+										<label for="chk03"></label>
+									</div>
+								</td>
+								<td>등록된 내용</td>
+								<td>등록된 내용</td>
+								<td>등록된 내용</td>
+								<td>등록된 내용</td>
+								<td>등록된 내용</td>
+								<td>등록된 내용</td>
+								<td>등록된 내용</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+
+				<div class="tblBox mT40">
+					<div class="tblBox">
+						<table class="tbl row">
+							<caption></caption>
+							<colgroup>
+								<col style="width: 152px;">
+								<col style="width: auto;">
+								<col style="width: 152px;">
+								<col style="width: auto;">
+							</colgroup>
+
+							<tbody>
+								<tr>
+									<th scope="row" class="need">평가 건 명</th>
+									<td>등록된 내용이 보여집니다.</td>
+									<th scope="row" class="need">소관부처</th>
+									<td>국무조정실</td>
+								</tr>
+								<tr>
+									<th scope="row">평가배경 및 목적</th>
+									<td colspan="3">
+										<textarea name="" id="txtbox01" cols="30" rows="10" placeholder="평가배경 및 목적을 입력해 주세요(2000자 이내)" disabled></textarea>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">평가대상 및 범위</th>
+									<td colspan="3">
+										<textarea name="" id="txtbox02" cols="30" rows="10" placeholder="평가배경 및 목적을 입력해 주세요(2000자 이내)" disabled></textarea>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">평가실시방법</th>
+									<td>
+										<div class="chkBox">
+											<input type="checkbox" id="chk01-1" value="내부평가">
+											<label for="chk01-1">내부평가</label>
+											<input type="checkbox" id="chk01-2" value="외부평가" disabled>
+											<label for="chk01-2">외부평가</label>
+											<input type="checkbox" id="chk01-3" value="공동평가" disabled>
+											<label for="chk01-3">공동평가</label>
+										</div>
+									</td>
+									<th scope="row">평가연도</th>
+									<td>2023</td>
+								</tr>
+								<tr>
+									<th scope="row">평가대상</th>
+									<td>
+										<div class="chkBox">
+											<input type="checkbox" id="chk02-1" value="프로젝트/프로그램 평가">
+											<label for="chk02-1">프로젝트/프로그램 평가</label>
+											<input type="checkbox" id="chk02-2" value="분야별 평가" disabled>
+											<label for="chk02-2">분야별 평가</label>
+											<input type="checkbox" id="chk02-3" value="형태별 평가" disabled>
+											<label for="chk02-3">형태별 평가</label>
+											<input type="checkbox" id="chk02-4" value="국별 평가" disabled>
+											<label for="chk02-4">국별 평가</label>
+											<input type="checkbox" id="chk02-5" value="다자협력사업 평가" disabled>
+											<label for="chk02-5">다자협력사업 평가</label>
+										</div>
+									</td>
+									<th scope="row">평가시기</th>
+									<td>
+										<div class="chkBox">
+											<input type="checkbox" id="chk03-1" value="사전평가">
+											<label for="chk03-1">사전평가</label>
+											<input type="checkbox" id="chk03-2" value="중간평가" disabled>
+											<label for="chk03-2">중간평가</label>
+											<input type="checkbox" id="chk03-3" value="종료평가" disabled>
+											<label for="chk03-3">종료평가</label>
+											<input type="checkbox" id="chk03-4" value="사후평가" disabled>
+											<label for="chk03-4">사후평가</label>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+				<div class="tblBox mT40">
+					<table class="tbl row">
+						<caption></caption>
+						<colgroup>
+							<col style="width: 152px;">
+							<col style="width: auto;">
+							<col style="width: 152px;">
+							<col style="width: auto;">
+						</colgroup>
+
+						<tbody>
+							<tr>
+								<th scope="row">평가 실시방법<br>세부설명</th>
+								<td colspan="3"></td>
+							</tr>
+							<tr>
+								<th scope="row">평가예산 편성 유무</th>
+								<td></td>
+								<th scope="row">평가예산(단위:백만원)</th>
+								<td></td>
+							</tr>
+							<tr>
+								<th scope="row">평가수행기간</th>
+								<td colspan="3">
+									<div class="pickrBox">
+										<input type="text" class="pickr flatpickr-input" placeholder="날짜를 선택하세요" readonly="readonly">
+										<p>~</p>
+										<input type="text" class="pickr flatpickr-input" placeholder="날짜를 선택하세요" readonly="readonly">
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">연간추진일정</th>
+								<td colspan="3">
+									<div class="inputForm">
+										<div class="pickrBox">
+											<input type="text" class="pickr flatpickr-input" placeholder="날짜를 선택하세요" readonly="readonly">
+											<p>~</p>
+											<input type="text" class="pickr flatpickr-input" placeholder="날짜를 선택하세요" readonly="readonly">
+										</div>
+										<input type="text" placeholder="일정 내용을 입력해 주세요">
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">OECD DAC<br>평가기준 적용여부</th>
+								<td colspan="3"></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+
+				<div class="tblBox">
+					<table class="tbl row">
+						<caption></caption>
+						<colgroup>
+							<col style="width: 152px;">
+							<col style="width: auto;">
+							<col style="width: 152px;">
+							<col style="width: auto;">
+						</colgroup>
+
+						<tbody>
+							<tr>
+								<th scope="row">평가 실시방법<br>세부설명</th>
+								<td colspan="3"></td>
+							</tr>
+							<tr>
+								<th scope="row">평가예산 편성 유무</th>
+								<td></td>
+								<th scope="row">평가예산(단위:백만원)</th>
+								<td></td>
+							</tr>
+							<tr>
+								<th scope="row">연간추진일정</th>
+								<td colspan="3">
+									<table class="cell">
+										<caption></caption>
+										<colgroup>
+											<col style="width: 315px">
+											<col style="width: 60px">
+											<col style="width: 60px">
+											<col style="width: 60px">
+											<col style="width: 60px">
+											<col style="width: 60px">
+											<col style="width: 60px">
+											<col style="width: 60px">
+											<col style="width: 60px">
+											<col style="width: 60px">
+											<col style="width: 60px">
+											<col style="width: 60px">
+											<col style="width: 60px">
+										</colgroup>
+										<thead>
+											<tr>
+												<th>주요일정</th>
+												<th>1월</th>
+												<th>2월</th>
+												<th>3월</th>
+												<th>4월</th>
+												<th>5월</th>
+												<th>6월</th>
+												<th>7월</th>
+												<th>8월</th>
+												<th>9월</th>
+												<th>10월</th>
+												<th>11월</th>
+												<th>12월</th>
+											</tr>
+										</thead>
+
+										<tbody>
+											<tr>
+												<th>평가 계획 수립</th>
+												<td><span class="cellColor"></span></td>
+												<td><span class="cellColor"></span></td>
+												<td></td>
+												<td></td>
+												<td></td>
+												<td></td>
+												<td></td>
+												<td></td>
+												<td></td>
+												<td></td>
+												<td></td>
+												<td></td>
+											</tr>
+											<tr>
+												<th>평가 공고 및 평가팀 선정</th>
+												<td></td>
+												<td></td>
+												<td><span class="cellColor"></span></td>
+												<td><span class="cellColor"></span></td>
+												<td><span class="cellColor"></span></td>
+												<td><span class="cellColor"></span></td>
+												<td><span class="cellColor"></span></td>
+												<td></td>
+												<td></td>
+												<td></td>
+												<td></td>
+												<td></td>
+											</tr>
+											<tr>
+												<th>평가수행</th>
+												<td></td>
+												<td></td>
+												<td></td>
+												<td></td>
+												<td></td>
+												<td></td>
+												<td><span class="cellColor"></span></td>
+												<td><span class="cellColor"></span></td>
+												<td><span class="cellColor"></span></td>
+												<td></td>
+												<td></td>
+												<td></td>
+											</tr>
+											<tr>
+												<th>현지 사전조사 및 평가</th>
+												<td></td>
+												<td></td>
+												<td></td>
+												<td></td>
+												<td></td>
+												<td></td>
+												<td></td>
+												<td></td>
+												<td><span class="cellColor"></span></td>
+												<td><span class="cellColor"></span></td>
+												<td></td>
+												<td></td>
+											</tr>
+											<tr>
+												<th>평가보고서 품질시사 확정</th>
+												<td></td>
+												<td></td>
+												<td></td>
+												<td></td>
+												<td></td>
+												<td></td>
+												<td></td>
+												<td></td>
+												<td></td>
+												<td></td>
+												<td><span class="cellColor"></span></td>
+												<td><span class="cellColor"></span></td>
+											</tr>
+										</tbody>
+									</table>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">OECD DAC<br>평가기준 적용여부</th>
+								<td colspan="3"></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<!-- //컨텐츠 영역 -->
+		</div>
+		<!-- //컨테이너 영역 -->
+	</div>
+	<!-- //wrap -->
+</body>
+
+</html>

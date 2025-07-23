@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<title>ODA</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+	<meta http-equiv="Pragma" content="no-cache">
+	<meta http-equiv="Expires" content="0">
+
+	<link rel="stylesheet" href="./../../css/flatpickr.min.css">
+	<link rel="stylesheet" href="./../../css/reset.css">
+	<link rel="stylesheet" href="./../../css/layout.css">
+	<link rel="stylesheet" href="./../../css/style.css">
+
+	<script defer src="./../../js/jquery-3.7.1.min.js"></script>
+	<script defer src="./../../js/flatpickr.js"></script>
+	<script defer src="./../../js/ui.js"></script>
+</head>
+
+<body>
+	<!-- wrap -->
+	<div id="wrap" class="wrapper">
+		<!-- 헤더 영역 -->
+		<div id="header" class="header">
+			<div class="wrap">
+				<h1><a href="./../gate.html"><img src="./../../img/logo.svg"></a></h1>
+				<ul class="gnb">
+					<li><a href="javascript:;">ODA 사업</a></li>
+					<li class="active"><a href="javascript:;">평가</a></li>
+					<li><a href="javascript:;">위원회 관리</a></li>
+					<li><a href="javascript:;">통합 성과관리</a></li>
+					<li><a href="javascript:;">ODA 정보등록</a></li>
+					<li><a href="javascript:;">ODA 통계</a></li>
+					<li><a href="javascript:;">ODA 사업보고</a></li>
+				</ul>
+				<div class="userBox">
+					<button class="btnUser">운영관리자</button>
+					<ul class="dropDown">
+						<li><a href="javascript:;">쪽지</a></li>
+						<li><a href="javascript:;">마이페이지</a></li>
+						<li><a href="javascript:;">로그아웃</a></li>
+					</ul>
+				</div>
+				<div class="searchBox">
+					<input type="text" placeholder="통합검색">
+					<button class="btnSearch">검색</button>
+				</div>
+			</div>
+		</div>
+		<!-- //헤더 영역 -->
+
+		<!-- 컨테이너 영역 -->
+		<div id="container" class="container">
+
+			<!-- LNB 영역 -->
+			<div id="side" class="side">
+				<div class="side_menu">
+					<h2>ODA 사업 관리</h2>
+					<ul class="gnb">
+						<li>
+							<a href="javascript:;">사업목록</a>
+						</li>
+						<li class="hasChild active">
+							<a href="javascript:;">연수 사업 관리</a>
+							<ul>
+								<li><a href="javascript:;" class="on">연수 사업 목록</a></li>
+								<li><a href="javascript:;">연수 프로그램 관리</a></li>
+								<li><a href="javascript:;">연수생 관리</a></li>
+								<li><a href="javascript:;">체크리스트</a></li>
+							</ul>
+						</li>
+						<li class="hasChild">
+							<a href="javascript:;">장학 사업 관리</a>
+							<ul>
+								<li><a href="javascript:;">연수 사업 목록</a></li>
+								<li><a href="javascript:;">연수 프로그램 관리</a></li>
+								<li><a href="javascript:;">연수생 관리</a></li>
+								<li><a href="javascript:;">체크리스트</a></li>
+							</ul>
+						</li>
+						<li class="hasChild">
+							<a href="javascript:;">패키지 사업 관리</a>
+							<ul>
+								<li><a href="javascript:;">연수 사업 목록</a></li>
+								<li><a href="javascript:;">연수 프로그램 관리</a></li>
+								<li><a href="javascript:;">연수생 관리</a></li>
+								<li><a href="javascript:;">체크리스트</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<button class="btnSlide">slide</button>
+			</div>
+			<!-- //LNB 영역 -->
+
+			<!-- 컨텐츠 영역 -->
+			<div class="contents">
+				<div class="pgtBox">
+					<div class="lt">
+						<h2>요청 중인 연계</h2>
+					</div>
+
+					<ul class="breadcrumb">
+						<li class="home"><a href="javascript:;">홈</a></li>
+						<li><a href="javascript:;">평가</a></li>
+						<li><a href="javascript:;">자체평가</a></li>
+					</ul>
+
+					<div class="rt"></div>
+				</div>
+
+				<div class="schBox col">
+
+					<div class="searchFlt">
+
+						<div class="schCol">
+							<ul>
+								<li>
+									<p>프로그램명</p>
+									<input type="text" placeholder="프로그램명을 입력하세요." class="w100">
+								</li>
+								<li>
+									<p>장소</p>
+									<input type="text" placeholder="장소를 입력하세요." class="w100">
+								</li>
+								<li>
+									<p>강사명</p>
+									<input type="text" placeholder="강사명을 입력하세요.">
+								</li>
+								<li>
+									<p>연수기간</p>
+									<div class="pickrBox">
+										<input type="text" class="pickr" placeholder="날짜를 선택하세요">
+										<p>~</p>
+										<input type="text" class="pickr" placeholder="날짜를 선택하세요">
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="btn-wrap">
+						<button type="button" class="btn-apply">조건검색</button>
+						<button type="reset" class="btn-reset"><span class="sr-only">초기화</span></button>
+					</div>
+				</div>
+
+				<div class="schList">
+					<div class="titBox">
+						<div class="lt">
+
+						</div>
+
+						<div class="rt">
+							<div class="btn-wrap">
+								<button type="button" class="btn excel">엑셀다운로드</button>
+								<button type="button" class="btn hwp">한글다운로드</button>
+								<button type="button" class="btn pdf">PDF다운로드</button>
+								<button type="button" class="btn biz">사업등록</button>
+							</div>
+						</div>
+					</div>
+
+					<div class="tblBox">
+						<table class="tbl col">
+							<caption></caption>
+							<colgroup>
+								<col style="width: 5%;">
+								<col style="width: 8%;">
+								<col style="width: 48%;">
+								<col style="width: 6%;">
+								<col style="width: 9%;">
+								<col style="width: 9%;">
+								<col style="width: 13%;">
+								<col style="width: 5%;">
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">
+										<div class="tblChk">
+											<input type="checkbox" id="chk01">
+											<label for="chk01"></label>
+										</div>
+									</th>
+									<th scope="col">사업번호</th>
+									<th scope="col">사업명</th>
+									<th scope="col">사업기간</th>
+									<th scope="col">시행기관</th>
+									<th scope="col">수원국</th>
+									<th scope="col">사업분야</th>
+									<th scope="col">사업상태</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>
+										<div class="tblChk">
+											<input type="checkbox" id="chk02">
+											<label for="chk02"></label>
+										</div>
+									</td>
+									<td class="tC">1092000_2023_006</td>
+									<td>
+										<a href="#">
+											<span class="span orange">패키지</span>
+											몽골 날라이흐구/바양주르흐구 지속가능한 '길(Trail)여행' 비즈니스 모델 고도화를 통한 주민 소득증대 사업 2단계('24-'26/1,244백만원)
+										</a>
+									</td>
+									<td class="tC">2023 ~2025</td>
+									<td>국무조정실</td>
+									<td>방글라데시</td>
+									<td>일반 공공행정 및 시민사회</td>
+									<td><span class="badge pt">확정</span></td>
+								</tr>
+								<tr>
+									<td>
+										<div class="tblChk">
+											<input type="checkbox" id="chk03">
+											<label for="chk03"></label>
+										</div>
+									</td>
+									<td class="tC">1092000_2023_006</td>
+									<td>
+										<a href="#">
+											<span class="span green">연수</span>
+											몽골 날라이흐구/바양주르흐구 지속가능한 '길(Trail)여행' 비즈니스 모델 고도화를 통한 주민 소득증대 사업 2단계('24-'26/1,244백만원)
+										</a>
+									</td>
+									<td class="tC">2023 ~2025</td>
+									<td>국무조정실</td>
+									<td>방글라데시</td>
+									<td>일반 공공행정 및 시민사회</td>
+									<td><span class="badge gray">완료</span></td>
+								</tr>
+								<tr>
+									<td>
+										<div class="tblChk">
+											<input type="checkbox" id="chk04">
+											<label for="chk04"></label>
+										</div>
+									</td>
+									<td class="tC">1092000_2023_006</td>
+									<td>
+										<a href="#">
+											<span class="span blue">장학</span>
+											몽골 날라이흐구/바양주르흐구 지속가능한 '길(Trail)여행' 비즈니스 모델 고도화를 통한 주민 소득증대 사업 2단계('24-'26/1,244백만원)
+										</a>
+									</td>
+									<td class="tC">2023 ~2025</td>
+									<td>국무조정실</td>
+									<td>방글라데시</td>
+									<td>일반 공공행정 및 시민사회</td>
+									<td><span class="badge orange">중단</span></td>
+								</tr>
+								<tr>
+									<td>
+										<div class="tblChk">
+											<input type="checkbox" id="chk05">
+											<label for="chk05"></label>
+										</div>
+									</td>
+									<td class="tC">1092000_2023_006</td>
+									<td>
+										<a href="#">
+											<span class="span cyan">연계</span>
+											몽골 날라이흐구/바양주르흐구 지속가능한 '길(Trail)여행' 비즈니스 모델 고도화를 통한 주민 소득증대 사업 2단계('24-'26/1,244백만원)
+										</a>
+									</td>
+									<td class="tC">2023 ~2025</td>
+									<td>국무조정실</td>
+									<td>방글라데시</td>
+									<td>일반 공공행정 및 시민사회</td>
+									<td><span class="badge">취소</span></td>
+								</tr>
+								<tr>
+									<td>
+										<div class="tblChk">
+											<input type="checkbox" id="chk06">
+											<label for="chk06"></label>
+										</div>
+									</td>
+									<td class="tC">1092000_2023_006</td>
+									<td>
+										<a href="#">
+											<span class="span cyan">연계</span>
+											<span class="span green">연수</span>
+											몽골 날라이흐구/바양주르흐구 지속가능한 '길(Trail)여행' 비즈니스 모델 고도화를 통한 주민 소득증대 사업 2단계('24-'26/1,244백만원)
+										</a>
+									</td>
+									<td class="tC">2023 ~2025</td>
+									<td>국무조정실</td>
+									<td>방글라데시</td>
+									<td>일반 공공행정 및 시민사회</td>
+									<td><span class="badge pt">확정</span></td>
+								</tr>
+								<tr>
+									<td>
+										<div class="tblChk">
+											<input type="checkbox" id="chk07">
+											<label for="chk07"></label>
+										</div>
+									</td>
+									<td class="tC">1092000_2023_006</td>
+									<td>
+										<a href="#">
+											<span class="span">프로젝트</span>
+											몽골 날라이흐구/바양주르흐구 지속가능한 '길(Trail)여행' 비즈니스 모델 고도화를 통한 주민 소득증대 사업 2단계('24-'26/1,244백만원)
+										</a>
+									</td>
+									<td class="tC">2023 ~2025</td>
+									<td>국무조정실</td>
+									<td>방글라데시</td>
+									<td>일반 공공행정 및 시민사회</td>
+									<td><span class="badge gray">완료</span></td>
+								</tr>
+								<tr>
+									<td>
+										<div class="tblChk">
+											<input type="checkbox" id="chk08">
+											<label for="chk08"></label>
+										</div>
+									</td>
+									<td class="tC">1092000_2023_006</td>
+									<td>
+										<a href="#">
+											<span class="span">프로젝트</span>
+											몽골 날라이흐구/바양주르흐구 지속가능한 '길(Trail)여행' 비즈니스 모델 고도화를 통한 주민 소득증대 사업 2단계('24-'26/1,244백만원)
+										</a>
+									</td>
+									<td class="tC">2023 ~2025</td>
+									<td>국무조정실</td>
+									<td>방글라데시</td>
+									<td>일반 공공행정 및 시민사회</td>
+									<td><span class="badge orange">중단</span></td>
+								</tr>
+								<tr>
+									<td>
+										<div class="tblChk">
+											<input type="checkbox" id="chk09">
+											<label for="chk09"></label>
+										</div>
+									</td>
+									<td class="tC">1092000_2023_006</td>
+									<td>
+										<a href="#">
+											<span class="span">프로젝트</span>
+											몽골 날라이흐구/바양주르흐구 지속가능한 '길(Trail)여행' 비즈니스 모델 고도화를 통한 주민 소득증대 사업 2단계('24-'26/1,244백만원)
+										</a>
+									</td>
+									<td class="tC">2023 ~2025</td>
+									<td>국무조정실</td>
+									<td>방글라데시</td>
+									<td>일반 공공행정 및 시민사회</td>
+									<td><span class="badge">취소</span></td>
+								</tr>
+								<tr>
+									<td>
+										<div class="tblChk">
+											<input type="checkbox" id="chk10">
+											<label for="chk10"></label>
+										</div>
+									</td>
+									<td class="tC">1092000_2023_006</td>
+									<td>
+										<a href="#">
+											<span class="span">프로젝트</span>
+											몽골 날라이흐구/바양주르흐구 지속가능한 '길(Trail)여행' 비즈니스 모델 고도화를 통한 주민 소득증대 사업 2단계('24-'26/1,244백만원)
+										</a>
+									</td>
+									<td class="tC">2023 ~2025</td>
+									<td>국무조정실</td>
+									<td>방글라데시</td>
+									<td>일반 공공행정 및 시민사회</td>
+									<td><span class="badge">취소</span></td>
+								</tr>
+								<tr>
+									<td>
+										<div class="tblChk">
+											<input type="checkbox" id="chk11">
+											<label for="chk11"></label>
+										</div>
+									</td>
+									<td class="tC">1092000_2023_006</td>
+									<td>
+										<a href="#">
+											<span class="span">프로젝트</span>
+											몽골 날라이흐구/바양주르흐구 지속가능한 '길(Trail)여행' 비즈니스 모델 고도화를 통한 주민 소득증대 사업 2단계('24-'26/1,244백만원)
+										</a>
+									</td>
+									<td class="tC">2023 ~2025</td>
+									<td>국무조정실</td>
+									<td>방글라데시</td>
+									<td>일반 공공행정 및 시민사회</td>
+									<td><span class="badge">취소</span></td>
+								</tr>
+								<tr>
+									<td>
+										<div class="tblChk">
+											<input type="checkbox" id="chk12">
+											<label for="chk12"></label>
+										</div>
+									</td>
+									<td class="tC">1092000_2023_006</td>
+									<td>
+										<a href="#">
+											<span class="span">프로젝트</span>
+											<span class="span orange">패키지</span>
+											<span class="span cyan">연계</span>
+											몽골 날라이흐구/바양주르흐구 지속가능한 '길(Trail)여행' 비즈니스 모델 고도화를 통한 주민 소득증대 사업 2단계('24-'26/1,244백만원)
+										</a>
+									</td>
+									<td class="tC">2023 ~2025</td>
+									<td>국무조정실</td>
+									<td>방글라데시</td>
+									<td>일반 공공행정 및 시민사회</td>
+									<td><span class="badge">취소</span></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+
+					<!-- pagination -->
+					<div class="pagination">
+						<button type="button" class="page-navi prev" disabled=""><span
+								class="sr-only">이전</span></button>
+						<div class="page-links">
+							<a class="page-link active" href="#"><span class="sr-only">현재페이지</span>1</a>
+							<a class="page-link" href="#">2</a>
+							<a class="page-link" href="#">3</a>
+							<a class="page-link" href="#">4</a>
+							<a class="page-link" href="#">5</a>
+						</div>
+						<button type="button" class="page-navi next"><span class="sr-only">다음</span></button>
+
+						<p>총 949건 (1/95)</p>
+						<select name="" id="select01">
+							<option value="">10</option>
+						</select>
+					</div>
+					<!-- //pagination -->
+				</div>
+
+			</div>
+			<!-- //컨텐츠 영역 -->
+		</div>
+		<!-- //컨테이너 영역 -->
+	</div>
+	<!-- //wrap -->
+</body>
+
+</html>
