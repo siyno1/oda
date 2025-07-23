@@ -374,12 +374,12 @@ input[type="text"] ~ .btn-ipt {position: absolute; top: 50%; right: 55px; displa
 /* popup */
 .popup {z-index: 4; position: fixed; top: 50%; left: 50%; display: none; width: 880px; background: #fff; border-radius: 12px; box-shadow: 1px 4px 8px 0px rgba(0, 0, 0, 0.25); transform: translateX(-50%) translateY(-50%);}
 .popup .tit {display: inline-flex; align-items: center; width: 100%; height: 42px; padding: 10px 27px; background: #256EF4; border-radius: 12px 12px 0 0;}
-.popup .tit p {font-size: 19px; font-weight: 700; line-height: 1.5; color: #fff;}
+.popup .tit p {padding-top:4px; font-size: 19px; font-weight: 700; line-height: 1.5; color: #fff;}
 .popup .cont {width: 100%; max-height: 500px; padding: 20px 27px 30px 27px; overflow-y: auto;}
 .popup .sch {display: flex; align-items: center; gap: 20px; width: 100%; height: 70px; padding: 20px 25px; background: #F0F2F6;}
 .popup .sch .selectBox {min-width: 180px;}
 .popup .sch > div {display: flex; align-items: center;}
-.popup .sch .btn-wrap {width: auto; margin-left: 5px;}
+.popup .sch .btn-wrap {width: auto; margin-left: auto;}
 .popup .sch p {margin-right: 10px; font-weight: 600; color: #464C53;}
 .popup > .btn-wrap {padding: 13px 28px 22px 27px; border-top: 1px solid #C6C6C6; border-radius: 0 0 12px 12px;}
 
@@ -498,6 +498,7 @@ input[type="text"] ~ .btn-ipt {position: absolute; top: 50%; right: 55px; displa
 .toggleBox.on .toggleOn {display: none;}
 .toggleBox:not(.on) .toggleOff {display: none;}
 
+/* 2025.07.22 ~ */
 /* 2025.07.22 keyword 연관 검색 */
 .inputDiv {position:relative;}
 .inputDiv .keywords {display:none;overflow-y:auto;box-sizing:border-box;position:absolute;top:100%;left:0;width:100%;max-height:300px;margin-top:4px;padding:4px;border:1px solid #b1b8be;border-radius:4px;background:#fff;z-index:1;}
@@ -506,3 +507,15 @@ input[type="text"] ~ .btn-ipt {position: absolute; top: 50%; right: 55px; displa
 .inputDiv .keywords button:focus {color:#256ef4;background:#f4f5f6;}
 .inputDiv .keywords .empty {display:none;padding:16px 4px;text-align:center;color:#b1b8be;}
 .inputDiv:focus-within .keywords {display:block;}
+
+
+/**** 평가 ****/
+
+/** 평가 - 평가계획등록 **/
+.inpCol {display:flex;flex-direction:column;gap:4px;}/* input 세로 배열 */
+.inpRow {display:flex;gap:4px;align-items:center;}
+
+.inpDblRow {height:66px;}/* inpCol 2개 높이 */
+
+.txtThYear {display:inline-block;margin-right:5px;font-weight:700;}
+.txtThYear:empty {display:none;}

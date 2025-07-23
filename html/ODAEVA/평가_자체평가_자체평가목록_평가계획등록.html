@@ -213,10 +213,10 @@
 					</div>
 
 					<div class="rt">
-						<div class="btn-wrap">
+						<div class="btn-wrap"><!-- @dev 25.07.25 버튼 영역 수정 -->
 							<button type="button" class="btn excel">엑셀 업로드</button>
-							<button type="button" class="btn-del txt">사업삭제</button>
 							<button type="button" class="btn-plus txt pop" data-target="pop01">사업추가</button>
+							<button type="button" class="btn-del" title="사업삭제"></button>
 						</div>
 					</div>
 				</div>
@@ -335,6 +335,20 @@
 								<th scope="row">평가예산(단위:백만원)</th>
 								<td><input type="text" class="w100" placeholder="평가예산(백만원)"></td>
 							</tr>
+							<!-- @dev 25.07.25 추가 -->
+							<tr>
+								<th scope="row">평가수행기간</th>
+								<td colspan="3">
+									<!-- pickrBox -->
+									<div class="pickrBox">
+										<input type="text" class="pickr flatpickr-input" placeholder="날짜를 선택하세요" readonly="readonly">
+										<p>~</p>
+										<input type="text" class="pickr flatpickr-input" placeholder="날짜를 선택하세요" readonly="readonly">
+									</div>
+									<!-- //pickrBox -->
+								</td>
+							</tr>
+							<!-- //@dev 25.07.25 추가 -->
 							<tr>
 								<th scope="row">연간추진일정</th>
 								<td colspan="3">
@@ -497,16 +511,17 @@
 				</div>
 
 
+				<!-- @dev 25.07.25 기존 '성과 지표 계획' 아래로 내용 변경 => '성과 지표 및 목표치' -->
 				<div class="titBox">
 					<div class="lt">
-						<h3>성과 지표 계획</h3>
+						<h3>성과 지표 및 목표치</h3>
 					</div>
 
 					<div class="rt">
-						<div class="btn-wrap">
+						<div class="btn-wrap"><!-- @dev 25.07.25 버튼 영역 수정 -->
 							<button type="button" class="btn">입력 방식 전환</button>
 							<button type="button" class="btn-plus txt">지표 추가</button>
-							<button type="button" class="btn-del txt">지표 삭제</button>
+							<button type="button" class="btn-del" title="지표 삭제"></button>
 						</div>
 					</div>
 				</div>
@@ -517,11 +532,11 @@
 						<colgroup>
 							<col style="width: 5%;">
 							<col style="width: 15%;">
-							<col style="width: 15%;">
-							<col style="width: 15%;">
-							<col style="width: 15%;">
-							<col style="width: 10%;">
-							<col style="width: 10%;">
+							<col style="width: auto;">
+							<col style="width: auto;">
+							<col style="width: auto;">
+							<col style="width: 12%;">
+							<col style="width: 12%;">
 							<col style="width: 15%;">
 						</colgroup>
 						<thead>
@@ -534,53 +549,56 @@
 								</th>
 								<th scope="col">성과 지표</th>
 								<th scope="col" colspan="3">목표치</th>
-								<th scope="col">목표치 산출 근거</th>
+								<th scope="col"><span id="t1" class="txtThYear"></span>목표치 산출 근거</th>
 								<th scope="col">측정 계산식</th>
 								<th scope="col">자료 수집 방법 / 자료 출처</th>
 							</tr>
 						</thead>
 						<tbody>
 							<tr>
-								<td rowspan="2">
+								<td>
 									<div class="tblChk">
 										<input type="checkbox" id="chk05">
 										<label for="chk05"></label>
 									</div>
 								</td>
-								<td rowspan="2"><input type="text" class="w100"></td>
+								<td><textarea class="inpDblRow" cols="30" rows="10"></textarea></td>
 								<td>
-									<div class="selectBox">
-										<select name="" id="select06">
-											<option value="" hidden>- 선택 -</option>
-										</select>
+									<div class="inpCol">
+										<div class="selectBox">
+											<select name="" id="select08">
+												<option value="" hidden>- 연도 선택 -</option>
+											</select>
+										</div>
+										<input type="text" class="w100">
 									</div>
 								</td>
 								<td>
-									<div class="selectBox">
-										<select name="" id="select07">
-											<option value="" hidden>- 선택 -</option>
-										</select>
+									<div class="inpCol">
+										<div class="selectBox">
+											<select name="" id="select08">
+												<option value="" hidden>- 연도 선택 -</option>
+											</select>
+										</div>
+										<input type="text" class="w100">
 									</div>
 								</td>
 								<td>
-									<div class="selectBox">
-										<select name="" id="select08">
-											<option value="" hidden>- 선택 -</option>
-										</select>
+									<div class="inpCol">
+										<div class="selectBox">
+											<select name="" id="select08" onchange="syncTextCombobox(this);">
+												<option value="" hidden>- 연도 선택 -</option>
+												<option value="2025">2025년</option>
+												<option value="2024">2024년</option>
+												<option value="2023">2023년</option>
+											</select>
+										</div>
+										<input type="text" class="w100">
 									</div>
 								</td>
-								<td rowspan="2">
-									<input type="text" class="w100">
-								</td>
-								<td rowspan="2">
-									<input type="text" class="w100">
-								</td>
-								<td rowspan="2"><input type="text" class="w100"></td>
-							</tr>
-							<tr>
-								<td><input type="text" class="w100"></td>
-								<td><input type="text" class="w100"></td>
-								<td><input type="text" class="w100"></td>
+								<td><textarea class="inpDblRow" cols="30" rows="10"></textarea></td>
+								<td><textarea class="inpDblRow" cols="30" rows="10"></textarea></td>
+								<td><textarea class="inpDblRow" cols="30" rows="10"></textarea></td>
 							</tr>
 						</tbody>
 					</table>
@@ -627,23 +645,17 @@
 						<colgroup>
 							<col style="width: 152px;">
 							<col style="width: auto;">
-							<col style="width: 152px;">
-							<col style="width: auto;">
 						</colgroup>
 
 						<tbody>
 							<tr>
 								<th scope="row">담당자</th>
 								<td>
-									<div class="selectBox">
-										<select name="" id="select10">
-											<option value="" hidden>- 선택 -</option>
-										</select>
+									<div class="inpRow">
+										<button type="button" class="btn sch pop" data-target="pop02"><span class="sr-only">찾기</span></button>
+										<input type="text" title="이름" placeholder="이름">
+										<input type="tel" title="전화번호" placeholder="전화번호">
 									</div>
-								</td>
-								<th scope="row">연락처</th>
-								<td>
-									<input type="tel">
 								</td>
 							</tr>
 						</tbody>
@@ -652,7 +664,7 @@
 
 				<div class="titBox">
 					<div class="lt">
-						<h3>추가 증빙 서류 제출</h3>
+						<h3>첨부파일</h3>
 					</div>
 
 					<div class="rt">
@@ -670,7 +682,7 @@
 
 						<tbody>
 							<tr>
-								<th scope="row">서류명</th>
+								<th scope="row">첨부파일</th>
 								<td>
 									<div class="file">
 										<div class="file-upload">
@@ -700,7 +712,7 @@
 
 						<tbody>
 							<tr>
-								<th scope="row">서류명</th>
+								<th scope="row">첨부파일</th>
 								<td>
 									<div class="file">
 										<div class="file-upload">
@@ -796,6 +808,153 @@
 		</div>
 	</div>
 	<!-- //popup : small -->
+
+	<!-- popup : 자체평가 담당자 정보 -->
+	<div class="popup" id="pop02">
+		<div class="tit">
+			<p>자체평가 담당자 정보</p>
+			<button type="button" class="btn-close"><span class="sr-only">팝업창 닫기</span></button>
+		</div>
+
+		<div class="sch">
+			<div class="flex1">
+				<p>성명</p>
+				<input type="text">
+				<div class="btn-wrap">
+					<button class="btn-reset"><span class="sr-only">초기화버튼</span></button>
+					<button type="button" class="btn-sch">조회</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="cont">
+			<div class="schList">
+				<div class="tblBox">
+					<table class="tbl col">
+						<caption></caption>
+						<colgroup>
+							<col style="width: 5%;">
+							<col style="width: 12%;">
+							<col style="width: auto;">
+							<col style="width: 20%;">
+							<col style="width: 20%;">
+						</colgroup>
+						<thead>
+							<tr>
+								<th scope="col">
+									<div class="tblChk">
+										<input type="checkbox" id="chk00"><label for="chk00"></label>
+									</div>
+								</th>
+								<th scope="col">성명</th>
+								<th scope="col">시행기관</th>
+								<th scope="col">부서</th>
+								<th scope="col">전화번호</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="tC">
+									<div class="tblChk">
+										<input type="checkbox" id="chk01">
+										<label for="chk01"></label>
+									</div>
+								</td>
+								<td class="tC">홍길동</td>
+								<td class="tC"></td>
+								<td class="tC"></td>
+								<td class="tC">010-0000-0000</td>
+							</tr>
+							<tr>
+								<td class="tC">
+									<div class="tblChk">
+										<input type="checkbox" id="chk02">
+										<label for="chk02"></label>
+									</div>
+								</td>
+								<td class="tC">홍길동</td>
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td class="tC">
+									<div class="tblChk">
+										<input type="checkbox" id="chk03">
+										<label for="chk03"></label>
+									</div>
+								</td>
+								<td class="tC">홍길동</td>
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td class="tC">
+									<div class="tblChk">
+										<input type="checkbox" id="chk04">
+										<label for="chk04"></label>
+									</div>
+								</td>
+								<td class="tC">홍길동</td>
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td class="tC">
+									<div class="tblChk">
+										<input type="checkbox" id="chk05">
+										<label for="chk05"></label>
+									</div>
+								</td>
+								<td class="tC">홍길동</td>
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+
+				<!-- pagination -->
+				<div class="pagination">
+					<button type="button" class="page-navi prev" disabled=""><span class="sr-only">이전</span></button>
+					<div class="page-links">
+						<a class="page-link active" href="#"><span class="sr-only">현재페이지</span>1</a>
+						<a class="page-link" href="#">2</a>
+						<a class="page-link" href="#">3</a>
+						<a class="page-link" href="#">4</a>
+						<a class="page-link" href="#">5</a>
+					</div>
+					<button type="button" class="page-navi next"><span class="sr-only">다음</span></button>
+
+					<p>총 949건 (1/95)</p>
+					<select name="" id="select01">
+						<option value="">5</option>
+					</select>
+				</div>
+				<!-- //pagination -->
+			</div>
+		</div>
+
+		<div class="btn-wrap">
+			<button type="button" class="btn close">취소</button>
+			<button type="button" class="btn navy">선택</button>
+		</div>
+	</div>
+	<!-- //popup -->
+
+
+
+	<script>
+		function syncTextCombobox(elem){
+			var valText = elem.value ? elem.value : '';
+			var targetElem = document.getElementById('t1');
+
+			targetElem.textContent = valText ? valText + '년도' : '';
+		}
+	</script>
 </body>
 
 </html>
