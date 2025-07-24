@@ -546,7 +546,7 @@
 												<td>
 													<div class="btn-wrap tC">
 														<button type="button" class="btn navy">과제 연결하기</button>
-														<button type="button" class="btn">이행과제 미채택</button>
+														<button type="button" class="btn pop" data-target="pop01">이행과제 미채택</button>
 													</div>
 												</td>
 											</tr>
@@ -755,6 +755,52 @@
 		<!-- //컨테이너 영역 -->
 	</div>
 	<!-- //wrap -->
+
+
+	<!-- dim -->
+	<div class="dim"></div>
+	<!-- //dim -->
+
+	<!-- popup : small -->
+	<div class="popup sm" id="pop01">
+		<div class="tit">
+			<p>이행점검 과제 미채택</p>
+			<button type="button" class="btn-close"><span class="sr-only">팝업창 닫기</span></button>
+		</div>
+
+		<div class="cont">
+			<div class="tblBox">
+				<table class="tbl row">
+					<caption></caption>
+					<colgroup>
+						<col style="width: 152px;">
+						<col style="width: auto;">
+					</colgroup>
+
+					<tbody>
+						<tr>
+							<th scope="row">이행점검 과제<br>미채택 사유</th>
+							<td>
+								<textarea name="" id="txtbox01" cols="30" rows="10" placeholder="평가배경 및 목적을 입력해 주세요(2000자 이내)"></textarea>
+							</td>
+						</tr>
+						<tr><!-- @dev 등록/수정 일시는 미채택 사유 조회에서만 보이는 row 같습니다. -->
+							<th scope="row">등록/수정 일시</th>
+							<td>
+								<p>YYYY.MM.DD HH:MM</p>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+
+		<div class="btn-wrap">
+			<button type="button" class="btn close">취소</button>
+			<button type="button" class="btn navy">저장</button>
+		</div>
+	</div>
+	<!-- //popup : small -->
 </body>
 
 </html>
