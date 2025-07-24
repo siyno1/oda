@@ -106,6 +106,7 @@ button[class^="btn-"].txt {width: auto;}
 .btn-sch::before {position: relative; top: 1px; content: ' '; display: block; width: 16px; height: 16px; background: url(../img/ico_sch.svg) no-repeat center center;}
 .btn-close[type="button"] {position: absolute; top: 11px; right: 12px; width: 20px; height: 20px; background: url(../img/ico_close.svg) no-repeat center center; border: none;}
 .btn.sch {min-width: 30px; background: #335682 url(../img/ico_sch.svg) no-repeat center center; border: 0;}
+.btn.file::before {content: ' '; display: inline-block; width: 18px; height: 14px; background: url(../img/ico_btn_file.svg) no-repeat center center;}
 
 button[class^="btn-control"] {width:28px;height:28px;border:0 none;background-color:#fff;background-repeat:no-repeat;background-position:center;background-size:contain;}
 .btn-control-add-all {background-image:url(../img/ico_arrR_dbl.svg);}
@@ -560,7 +561,10 @@ input[type="text"] ~ .btn-ipt {position: absolute; top: 50%; right: 55px; displa
 
 /* info box */
 .ibox {margin-top: 50px;}
+
+/* info box type1 */
 .ibox.tp1 {margin-top: 35px;}
+.ibox.tp1 .titBox {height: auto;}
 .ibox.tp1 .lt {display: inline-flex; align-items: center;}
 .ibox.tp1 .span {min-width: auto; padding: 1px 7px; font-size: 14px; font-weight: 400; color: #121212; border: 1px solid #A9A9A9;}
 .ibox.tp1 .span:first-of-type {margin: 0;}
@@ -578,6 +582,64 @@ input[type="text"] ~ .btn-ipt {position: absolute; top: 50%; right: 55px; displa
 .ibox.tp1 .tbl td {font-weight: 700;}
 .ibox.tp1 .tbl tbody tr:last-of-type {border: 0;}
 
+/* info box type2 */
+.ibox.tp2 {display: flex; gap: 45px;}
+.ibox.tp2 .lt {display: grid; gap: 20px; width: 1000px;}
+.ibox.tp2 .lt p {line-height: 1.5; color: #1E2124;}
+.ibox.tp2 .lt p:not([class]) {font-size: 16px; font-weight: 700;}
+.ibox.tp2 .lt p.tit {font-size: 20px; font-weight: 500;}
+.ibox.tp2 .lt p.sub {font-size: 15px; font-weight: 400; color: #6D7882;}
+.ibox.tp2 .rt {flex: 1; display: flex; align-items: flex-end; flex-direction: column; gap: 3px; padding-top: 50px;}
+.ibox.tp2 .rt span {display: inline-block; width: fit-content; padding: 1px 20px; font-size: 17px; font-weight: 700; line-height: 1.5; color: #fff; background: #AA57C5; border-radius: 2px;}
+
+/* info box type3 */
+.ibox.tp3 {display: flex; justify-content: space-between; align-items: center; padding: 30px 0 0 60px; border-top: 1px solid #E2E6EA;}
+.ibox.tp3 .total {display: flex; gap: 85px;}
+.ibox.tp3 .total :where(p, b, span) {line-height: 1.5; color: #1E2124;}
+.ibox.tp3 .total p {display: block; margin-bottom: 7px; font-size: 18px; font-weight: 700;}
+.ibox.tp3 .total b {display: block; font-size: 40px; font-weight: 700;}
+.ibox.tp3 .total span {margin-left: 5px; font-size: 23px; font-weight: 400;}
+.ibox.tp3 .chart {width: 550px; height: 230px;}
+
+/* info box type3 */
+.ibox.tp4 {border-top: 5px solid #383838;}
+.ibox.tp4 > div {display: flex; gap: 55px; padding: 40px 0; border-bottom: 1px solid #6A6A6A;}
+.ibox.tp4 .imgbox {width: 300px; height: 240px;}
+.ibox.tp4 .imgbox img {width: 100%; height: 100%;}
+.ibox.tp4 .biz {flex: 1;}
+.ibox.tp4 .biz p {font-size: 14px; font-weight: 700; line-height: 1.5; color: #1E2124;}
+.ibox.tp4 .biz a {display: block; max-width: 260px; margin-top: 11px; line-height: 1.5; white-space: nowrap; text-overflow: ellipsis; overflow: hidden;}
+.ibox.tp4 .biz a::before {position: relative; top: -2px; content: ' '; display: inline-block; width: 24px; height: 24px; margin-right: 10px; vertical-align: middle;}
+.ibox.tp4 .biz a.hwp::before {background-image: url(../img/ico_file_hwp.svg);}
+.ibox.tp4 .biz a.pdf::before {background-image: url(../img/ico_file_pdf.svg);}
+.ibox.tp4 .biz a.xls::before {background-image: url(../img/ico_file_xls.svg);}
+.ibox.tp4 .biz a.doc::before {background-image: url(../img/ico_file_doc.svg);}
+.ibox.tp4 .biz a.txt::before {background-image: url(../img/ico_file_txt.svg);}
+.ibox.tp4 .biz a.zip::before {background-image: url(../img/ico_file_zip.svg);}
+.ibox.tp4 .biz a.ppt::before {background-image: url(../img/ico_file_ppt.svg);}
+.ibox.tp4 .biz a.bmp::before {background-image: url(../img/ico_file_bmp.svg);}
+.ibox.tp4 .biz a.gif::before {background-image: url(../img/ico_file_gif.svg);}
+.ibox.tp4 .biz a.jpg::before {background-image: url(../img/ico_file_jpg.svg);}
+.ibox.tp4 .biz a.png::before {background-image: url(../img/ico_file_png.svg);}
+.ibox.tp4 .biz a.tif::before {background-image: url(../img/ico_file_tif.svg);}
+.ibox.tp4 .biz a.xml::before {background-image: url(../img/ico_file_xml.svg);}
+.ibox.tp4 .biz a.html::before {background-image: url(../img/ico_file_html.svg);}
+.ibox.tp4 .biz a.exe::before {background-image: url(../img/ico_file_exe.svg);}
+.ibox.tp4 .biz a.mpg::before {background-image: url(../img/ico_file_mpg.svg);}
+.ibox.tp4 .biz a.mp4::before {background-image: url(../img/ico_file_mp4.svg);}
+.ibox.tp4 .biz a.avi::before {background-image: url(../img/ico_file_avi.svg);}
+.ibox.tp4 .biz a.etc::before {background-image: url(../img/ico_file_etc.svg);}
+.ibox.tp4 .biz ul {display: flex; justify-content: center; gap: 65px; width: 100%;}
+.ibox.tp4 .biz ul:not([class]) {padding-right: 60px;}
+.ibox.tp4 .biz ul:not([class]) li {flex: 1;}
+.ibox.tp4 .biz-list {height: 102px; padding: 18px 52px 18px 45px; margin-top: 45px; background: #F5F5F5;}
+.ibox.tp4 .biz-list p {text-align: center; margin-bottom: 10px; font-weight: 500; line-height: 1;}
+.ibox.tp4 .biz-list li {position: relative;}
+.ibox.tp4 .biz-list li:not(:first-child)::before {position: absolute; bottom: 7px; left: -33px; content: ' '; display: block; width: 1px; height: 26px; background: #D9D9D9;}
+.ibox.tp4 .btn {height: auto; padding: 9px 20px; font-size: 14px; font-weight: 400; color: #1E2124; border-color: #D2D2D2; border-radius: 8px;}
+.ibox.tp4 .btn.file {padding: 9px 26px;}
+
+
 /* info btn-wrap */
-.btn-wrap {justify-content: center; margin-top: 50px;}
-.btn-wrap button.btn {min-width: 137px; height: 62px; padding: 10px; font-size: 18px; font-weight: 500; color: #fff; background: #212121; border: 0; border-radius: 6px;}
+.info .btn-wrap {justify-content: center; margin-top: 50px;}
+.info .btn-wrap button.btn {min-width: 137px; height: 62px; padding: 10px; font-size: 18px; font-weight: 500; color: #fff; background: #212121; border: 0; border-radius: 6px;}
