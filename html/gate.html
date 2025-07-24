@@ -1050,7 +1050,7 @@ table tbody .num {float:left;margin:0 1px 1px 0;}
 						<p><span class="ico m3">LP</span>이행점검 과제 미채택 (등록 / 수정 / 조회)</p>
 					</td>
 				</tr>
-				<tr class="">
+				<tr class="end">
 					<td></td>
 					<td></td>
 					<td></td>
@@ -1383,15 +1383,28 @@ table tbody .num {float:left;margin:0 1px 1px 0;}
 	}
 
 	document.addEventListener('DOMContentLoaded', function(){
-		var urls = document.querySelectorAll('td.url');
+		var trs = document.querySelectorAll('tr');
 		var anchors = document.querySelectorAll('.tit_anchor a');
 
-		urls.forEach(function(url){
-			var anchors = url.querySelectorAll('a');
-			anchors.forEach(function(anchor){
-				var href = anchor.getAttribute('href');
-				anchor.textContent = href ? (href == '#' ? '' : href) : '';
-			});
+		trs.forEach(function(tr){
+			var url = tr.querySelector('td.url');
+
+			if (url) {
+				var wp = tr.querySelector('.ico.m5');
+				var anchors = url.querySelectorAll('a');
+				anchors.forEach(function(anchor){
+					var href = anchor.getAttribute('href');
+					anchor.textContent = href ? (href == '#' ? '' : href) : '';
+
+					if (wp) {
+
+						anchor.addEventListener('click', function(event){
+							event.preventDefault();
+							window.open(href, '_blank',' width=1065, height=650, top=50, left=50, scrollbars=no');
+						});
+					}
+				});
+			}
 		});
 
 		anchors.forEach(function(anchor){
