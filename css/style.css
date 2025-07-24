@@ -164,6 +164,7 @@ input[type="text"] ~ .btn-ipt {position: absolute; top: 50%; right: 55px; displa
 .tabCont > li {margin-top: 24px;}
 .tabCont > li:not(.active) {display: none;}
 .tabCont .tblBox + .titBox {margin-top: 20px;}
+.tabCont.top {margin-bottom:24px;}/* 상단 검색 영역 */
 
 /* tabCont depth2 */
 .tabCont .depth {margin-top: 0;}
@@ -176,7 +177,7 @@ input[type="text"] ~ .btn-ipt {position: absolute; top: 50%; right: 55px; displa
 .depth2Cont {margin-top: 20px;}
 .depth2Cont > li:not(.active) {display: none;}
 
-/* schBox tab */
+/* tabBox */
 .tabBox > .tab {margin-top: 0;}
 .tabBox .tabCont > li:not(.active) {display: none;}
 .tabBox .tabCont > li {display: flex; align-items: flex-start; flex-wrap: wrap; margin-top: 0;}
