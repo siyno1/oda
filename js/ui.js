@@ -67,20 +67,23 @@ function init() {
         let $btn = $(this);
         let $li = $btn.parent();
         let index = $li.index();
-        let $tabItems = $('.tabCont').children().removeClass('active');
-        let $target = $tabItems.eq(index).addClass('active');
+        let $tabConts = $('.tabCont');
+        $tabConts.each(function(idx, $tabCont){
+            let $tabItems = $($tabCont).children().removeClass('active');
+            let $target = $tabItems.eq(index).addClass('active');
+
+            if ($target.hasClass('depth')) {
+                var $depth1 = $target.children().eq(0);
+                var $depth2 = $target.children().eq(1);
+
+                $depth1.children().removeClass('active').first().addClass('active');
+                $depth2.children().removeClass('active').first().addClass('active');
+            }
+        });
 
         $li.addClass('active').siblings().removeClass('active');
         $li.find('button').addClass('active');
         $li.siblings().find('button').removeClass('active');
-
-        if ($target.hasClass('depth')) {
-            var $depth1 = $target.children().eq(0);
-            var $depth2 = $target.children().eq(1);
-
-            $depth1.children().removeClass('active').first().addClass('active');
-            $depth2.children().removeClass('active').first().addClass('active');
-        }
     });
 
     // tab Event 2
@@ -112,17 +115,22 @@ function init() {
 
     // fltList btn Event
     $('.fltList button').on('click', function () {
-        let $li = $(this).parent();
+        let $btn = $(this);
+        let $li = $btn.parent();
         let ulIdx = $li.parent().index();
         let liIdx = $li.index();
 
+        let $fltList = $btn.closest('.fltList');
+        let $fltCont = $fltList.next('.fltCont');
+
         let isAlreadyOn = $li.hasClass('on');
 
-        $('.fltList li, .fltCont li').removeClass('on');
+        $fltList.find('li').removeClass('on');
+        $fltCont.find('li').removeClass('on');
 
         if (!isAlreadyOn) {
             $li.addClass('on');
-            $('.fltCont ul').eq(ulIdx).children().eq(liIdx).addClass('on');
+            $fltCont.find('ul').eq(ulIdx).children().eq(liIdx).addClass('on');
         }
     });
 

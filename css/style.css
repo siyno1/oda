@@ -183,21 +183,10 @@ input[type="text"] ~ .btn-ipt {position: absolute; top: 50%; right: 55px; displa
 .tabBox .tabCont > li > .btn-apply {position: relative; top: 3px; margin: 20px auto 0 auto;}
 .tabBox .tabCont > li .schList {width: 100%;}
 .tabBox .tabCont .tabCont > li {margin-top: 24px;}
-.tabBox .searchFlt {display: flex; flex-wrap: wrap; gap: 0 10px; width: calc(100% - 110px); margin-top: 18px;}
-.tabBox .fltList {order: 1;}
-.tabBox .fltOpt {order: 2; flex: 1; padding: 4px 18px 4px 20px;}
-.tabBox .fltCont {order: 3; width: 100%;}
-.tabBox.schBox .fltOpt {margin-top: 0;}
+
 .tabBox .schBox {margin: auto;}
 .tabBox .schBox:not(.line) .searchFlt {width: 100%;}
 .tabBox .schBox:not(.line) .fltList {width: 100%;}
-.tabBox .schBox.line .fltOpt {margin-top: 0;}
-.tabBox .schBox.line {flex-direction: row; width: 100%; max-width: none; padding-top: 0; margin: 0;}
-.tabBox .schBox.line .btn-apply {position: relative; top: 3px;}
-.tabBox .schBox.line .searchFlt ul li {min-width: 256px;}
-
-.tabBox.schBox {width: 100%; max-width: none; padding-top: 0;}
-.tabBox.schBox .searchFlt ul li {min-width: 256px;}
 
 /* pagination */
 .pagination {display: flex; justify-content: center; align-items: center; width: 100%; margin-top: 24px;}
@@ -218,12 +207,24 @@ input[type="text"] ~ .btn-ipt {position: absolute; top: 50%; right: 55px; displa
 /* txtBox */
 .txtBox {display: inline-block; width: 100%; max-height: 150px; line-height: 1.5; overflow-y: auto;}
 
-/* searchBox */
+/**
+ * searchBox
+ * type: 중앙(기본)
+ * class : col - 좌측 정렬 컬럼형태, line - 일렬 정렬 형태
+**/
 .schBox {position: relative; display: flex; justify-content: center; flex-direction: column; width: 100%; max-width: 1600px; padding: 20px 0 51px 0; margin: auto; font-size: 15px; font-weight: 700; line-height: 1.5; color: #1E2124;}
 .schBox.col {flex-direction: row; height: auto; margin: 0;}
 .schBox::after {position: absolute; bottom: 0; left: 50%; content: ' '; display: block; width: calc(100vw - 15px); height: 26px; background: #F4F5F6; border-top: 3px solid #E5E8EA; transform: translateX(-50%);}
 .schBox.col::after {left: -40px; transform: none;}
 .schBox .btn-apply {margin: 20px auto 0 auto;}
+
+.schBox.line {flex-direction: row; width: 100%; max-width: none; padding-top:18px;}
+.schBox.line .searchFlt {display: flex; flex-wrap: wrap; gap: 0 10px; width: calc(100% - 110px); margin-top: 0;}
+.schBox.line .btn-apply {margin-top:5px;}
+.schBox.line .fltList {order: 1;}
+.schBox.line .fltOpt {order: 2; flex: 1; padding: 4px 18px 4px 20px; margin-top: 0;}
+.schBox.line .fltCont {order: 3; width: 100%;}
+
 
 /* searchTxt */
 .searchTxt {display: flex; justify-content: center; align-items: center; gap: 14px; width: 100%; font-size: 14px;}
