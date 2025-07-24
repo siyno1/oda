@@ -1,0 +1,4 @@
+@charset "UTF-8";
+
+.tipDiv {display:inline-block;position:relative;}
+.tipDiv .tip {position:absolute;left:50%;top:100%;}

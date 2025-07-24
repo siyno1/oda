@@ -64,6 +64,7 @@
 
 .lt{}
 .rt{margin-left:auto;}
+.rt .txtInfo {text-align:right;}
 
 .pgtBox{display:flex;align-items:flex-end;margin-bottom:20px;}
 
@@ -90,6 +91,7 @@
 strong {font-weight:700;}
 .txtBt {position:relative;padding-left:12px;}
 .txtBt::after {content:'';display:block;position:absolute;top:5px;left:0;width:5px;height:5px;border-radius:50%;background:#6d4fff;}
+.txtInfo {padding-left:18px;font-size:14px;line-height:1.5;font-weight:500;color:#5A5A5B;word-break:keep-all;background:url(../img/ico_bullet.svg) no-repeat 0 4px;}
 /* 타이틀 형식 : disc */
 .titDisc {margin:0 0 6px 0;font-size:15px;line-height:1.5;}
 .titDisc.txtBt::after {top:9px;}
