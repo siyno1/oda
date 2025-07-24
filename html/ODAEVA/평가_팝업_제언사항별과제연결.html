@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<title>ODA</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+	<meta http-equiv="Pragma" content="no-cache">
+	<meta http-equiv="Expires" content="0">
+
+	<link rel="stylesheet" href="./../../css/flatpickr.min.css">
+	<link rel="stylesheet" href="./../../css/reset.css">
+	<link rel="stylesheet" href="./../../css/layout.css">
+	<link rel="stylesheet" href="./../../css/style.css">
+
+	<script defer src="./../../js/jquery-3.7.1.min.js"></script>
+	<script defer src="./../../js/flatpickr.js"></script>
+	<script defer src="./../../js/ui.js"></script>
+</head>
+
+<body>
+	<!-- modal : window Popup -->
+	<div class="modal">
+		<div class="tit">
+			<p>제언사항 별 과제 연결</p>
+		</div>
+
+		<div class="cont">
+            <p class="titDisc txtBt">제언사항 : <strong>제언사항1</strong></p>
+            <!-- layDbl -->
+            <div class="layDbl">
+                <!-- schList -->
+                <div class="schList">
+                    <!-- tblBox -->
+                    <div class="tblBox">
+                        <table class="tbl col tC">
+                            <caption></caption>
+                            <colgroup>
+                                <col style="width: 5%;">
+                                <col style="width: 30%;">
+                                <col style="width: auto;">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th scope="col">
+                                        <div class="tblChk">
+                                            <input type="checkbox" id="chk00"><label for="chk00"></label>
+                                        </div>
+                                    </th>
+                                    <th scope="col">과제명</th>
+                                    <th scope="col">연결된 제언 사항</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="tblChk">
+                                            <input type="checkbox" id="chk01"><label for="chk01"></label>
+                                        </div>
+                                    </td>
+                                    <td class="tL">
+                                        <a href="#">과제명</a>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="tblChk">
+                                            <input type="checkbox" id="chk02"><label for="chk02"></label>
+                                        </div>
+                                    </td>
+                                    <td class="tL">
+                                        <a href="#">과제명</a>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="tblChk">
+                                            <input type="checkbox" id="chk03"><label for="chk03"></label>
+                                        </div>
+                                    </td>
+                                    <td class="tL">
+                                        <a href="#">과제명</a>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="tblChk">
+                                            <input type="checkbox" id="chk04"><label for="chk04"></label>
+                                        </div>
+                                    </td>
+                                    <td class="tL">
+                                        <a href="#">과제명</a>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="tblChk">
+                                            <input type="checkbox" id="chk05"><label for="chk05"></label>
+                                        </div>
+                                    </td>
+                                    <td class="tL">
+                                        <a href="#">과제명</a>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- //tblBox -->
+                </div>
+                <!-- //schList -->
+
+                <div class="midControl">
+                    <button type="button" class="btn-control-add-all" title="전체 추가"></button>
+                    <button type="button" class="btn-control-add" title="추가"></button>
+                    <button type="button" class="btn-control-del" title="삭제"></button>
+                    <button type="button" class="btn-control-del-all" title="전체 삭제"></button>
+                </div>
+
+                <!-- schList -->
+                <div class="schList">
+                    <!-- tblBox -->
+                    <div class="tblBox">
+                        <table class="tbl col tC">
+                            <caption></caption>
+                            <colgroup>
+                                <col style="width: 5%;">
+                                <col style="width: 30%;">
+                                <col style="width: auto;">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th scope="col">
+                                        <div class="tblChk">
+                                            <input type="checkbox" id="chk00"><label for="chk00"></label>
+                                        </div>
+                                    </th>
+                                    <th scope="col">과제명</th>
+                                    <th scope="col">연결된 제언 사항</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="tblChk">
+                                            <input type="checkbox" id="chk01"><label for="chk01"></label>
+                                        </div>
+                                    </td>
+                                    <td class="tL">
+                                        <a href="#">과제명</a>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="tblChk">
+                                            <input type="checkbox" id="chk02"><label for="chk02"></label>
+                                        </div>
+                                    </td>
+                                    <td class="tL">
+                                        <a href="#">과제명</a>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="tblChk">
+                                            <input type="checkbox" id="chk03"><label for="chk03"></label>
+                                        </div>
+                                    </td>
+                                    <td class="tL">
+                                        <a href="#">과제명</a>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="tblChk">
+                                            <input type="checkbox" id="chk04"><label for="chk04"></label>
+                                        </div>
+                                    </td>
+                                    <td class="tL">
+                                        <a href="#">과제명</a>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="tblChk">
+                                            <input type="checkbox" id="chk05"><label for="chk05"></label>
+                                        </div>
+                                    </td>
+                                    <td class="tL">
+                                        <a href="#">과제명</a>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- //tblBox -->
+                </div>
+                <!-- //schList -->
+            </div>
+            <!-- //layDbl -->
+		</div>
+
+		<div class="btn-wrap">
+			<button type="button" class="btn close">취소</button>
+			<button type="button" class="btn navy">등록</button>
+		</div>
+	</div>
+	<!-- //modal : window Popup -->
+</body>
+
+</html>

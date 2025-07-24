@@ -102,6 +102,13 @@ button[class^="btn-"].txt {width: auto;}
 .btn-sch::before {position: relative; top: 1px; content: ' '; display: block; width: 16px; height: 16px; background: url(../img/ico_sch.svg) no-repeat center center;}
 .btn-close[type="button"] {position: absolute; top: 11px; right: 12px; width: 20px; height: 20px; background: url(../img/ico_close.svg) no-repeat center center; border: none;}
 .btn.sch {min-width: 30px; background: #335682 url(../img/ico_sch.svg) no-repeat center center; border: 0;}
+
+button[class^="btn-control"] {width:28px;height:28px;border:0 none;background-color:#fff;background-repeat:no-repeat;background-position:center;background-size:contain;}
+.btn-control-add-all {background-image:url(../img/ico_arrR_dbl.svg);}
+.btn-control-add {background-image:url(../img/ico_arrR.svg);}
+.btn-control-del {background-image:url(../img/ico_arrL.svg);}
+.btn-control-del-all {background-image:url(../img/ico_arrL_dbl.svg);}
+
 input[type="text"] ~ .btn-ipt {position: absolute; top: 50%; right: 55px; display: none; width: 16px; height: 16px; background: url(../img/ico_ipt_del.svg) no-repeat center center; border: 0; transform: translateY(-50%);}
 
 /* file-upload */
@@ -526,3 +533,8 @@ input[type="text"] ~ .btn-ipt {position: absolute; top: 50%; right: 55px; displa
 
 .txtThYear {display:inline-block;margin-right:5px;font-weight:700;}
 .txtThYear:empty {display:none;}
+
+/** layout 세팅 **/
+.layDbl {display:flex;align-items:center;gap:20px;}
+.layDbl .schList {margin-top:0;}
+.layDbl .midControl {flex:0 0 auto; display:flex; flex-direction:column; gap:5px; justify-content: center;}

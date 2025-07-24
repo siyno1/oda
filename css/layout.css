@@ -60,7 +60,7 @@
 .wrapper.showMenu .side{left:0;}
 .wrapper.showMenu .btnSlide::after{transform:rotate(0);}
 
-.contents{width:100%;} 
+.contents{width:100%;}
 
 .lt{}
 .rt{margin-left:auto;}
@@ -85,3 +85,11 @@
 .side .gnb > li > ul >  li.hasChild > a::after {content: ''; display: block; width: 14px; height: 14px; position: absolute; right: 0; top: 4px; background-image: url(../img/ico_select_arr.svg); transition: 0.4s all;}
 .side .gnb > li > ul >  li.hasChild.active > a::after {transform: rotate(-180deg); transition: 0.4s all;}
 .side .gnb > li > ul >  li.hasChild.active > ul {display:flex;}
+
+/* 25.07.24 txt style common */
+strong {font-weight:700;}
+.txtBt {position:relative;padding-left:12px;}
+.txtBt::after {content:'';display:block;position:absolute;top:5px;left:0;width:5px;height:5px;border-radius:50%;background:#6d4fff;}
+/* 타이틀 형식 : disc */
+.titDisc {margin:0 0 6px 0;font-size:15px;line-height:1.5;}
+.titDisc.txtBt::after {top:9px;}
