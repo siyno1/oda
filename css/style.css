@@ -545,3 +545,39 @@ input[type="text"] ~ .btn-ipt {position: absolute; top: 50%; right: 55px; displa
 .layDbl .midControl {flex:0 0 auto; display:flex; flex-direction:column; gap:5px; justify-content: center;}
 
 /* 25.07.24 사업관리-상세 */
+.info .tab {}
+.info .tab button {outline-color: #D9E1F2;}
+.info .tab button.active {color: #A957C5; background: #F7F2FE;}
+.info .tab li button.active::after {background: #A957C5;}
+.info .tabCont {width: 100%; max-width: 1280px; padding-top: 50px; margin: auto;}
+.info .tabCont > li > div {width: 100%;}
+
+/* info tit */
+.itit p:not([class]) {display: block; margin-bottom: 13px; font-size: 13px; font-weight: 400;line-height: 1.5; color: #464C53;}
+.itit p:not([class]) .span {height: 24px; font-size: 14px;}
+.itit p.title {display: flex; align-items: center; gap: 20px; width: 100%; padding: 11px 23px; font-size: 28px; font-weight: 700; line-height: 1.5; color: #fff; background: #A957C5; border-radius: 4px;}
+.itit p.title span {font-size: 14px; font-weight: 400;}
+
+/* info box */
+.ibox {margin-top: 50px;}
+.ibox.tp1 {margin-top: 35px;}
+.ibox.tp1 .lt {display: inline-flex; align-items: center;}
+.ibox.tp1 .span {min-width: auto; padding: 1px 7px; font-size: 14px; font-weight: 400; color: #121212; border: 1px solid #A9A9A9;}
+.ibox.tp1 .span:first-of-type {margin: 0;}
+.ibox.tp1 ul {display: inline-flex; gap: 48px; margin-left: 13px;}
+.ibox.tp1 ul li {position: relative; display: flex; align-items: center; gap: 9px; font-size: 16px; font-weight: 600; color: #464C53;}
+.ibox.tp1 ul li:not(:first-child)::before {position: absolute; top: 50%; left: -25px; content: ' '; display: block; width: 1px; height: 18px; background: #D9D9D9; transform: translateY(-50%);}
+.ibox.tp1 .rt {display: inline-flex; align-items: flex-end;}
+.ibox.tp1 .rt p {font-size: 14px; font-weight: 500; line-height: 1.5; color: #464C53;}
+.ibox.tp1 .rt b {margin: 0 15px 0 8px; font-size: 24px; font-weight: 400;}
+.ibox.tp1 .rt strong {display: block; font-size: 25px; font-weight: 700; color: #1E2124;}
+.ibox.tp1 .rt strong span {font-size: 20px; font-weight: 400;}
+.ibox.tp1 .tblBox {padding: 30px 0; border-bottom: 1px solid #6A6A6A;}
+.ibox.tp1 .tbl::before {top: -30px; height: 5px; background: #383838;}
+.ibox.tp1 .tbl :where(th, td) {padding: 10px 0; text-align: left; font-size: 16px; font-weight: 600; line-height: 1.5; color: #1E2124; background: transparent; border: 0;}
+.ibox.tp1 .tbl td {font-weight: 700;}
+.ibox.tp1 .tbl tbody tr:last-of-type {border: 0;}
+
+/* info btn-wrap */
+.btn-wrap {justify-content: center; margin-top: 50px;}
+.btn-wrap button.btn {min-width: 137px; height: 62px; padding: 10px; font-size: 18px; font-weight: 500; color: #fff; background: #212121; border: 0; border-radius: 6px;}
