@@ -543,3 +543,5 @@ input[type="text"] ~ .btn-ipt {position: absolute; top: 50%; right: 55px; displa
 .layDbl {display:flex;align-items:center;gap:20px;}
 .layDbl .schList {margin-top:0;}
 .layDbl .midControl {flex:0 0 auto; display:flex; flex-direction:column; gap:5px; justify-content: center;}
+
+/* 25.07.24 사업관리-상세 */
