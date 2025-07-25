@@ -142,11 +142,16 @@ table tbody .num {float:left;margin:0 1px 1px 0;}
 	<header>
 		<div class="cont_area">
 			<h1>ODA</h1>
-			<p class="info red">2025.07.21 Last update</p>
+			<p class="info red">2025.07.25 Last update</p>
 			<div class="proc_wrap"></div>
 			<p class="guide"></p>
 			<p class="prc">
-				진행률 <span id="currentCount">0</span> / <span id="totalCount">0</span> <span id="percentage">[0%]</span>
+				진행률(완료/수정/전체)
+				::::::::::::::::::::::::::::::::::
+				<span id="currentCount">0</span> / <span id="modCount">0</span> / <span id="totalCount">0</span>
+				::::::::::::::::::::::::::::::::::
+				<span id="percentage">0%</span>
+				:::::::::::::::::
 			</p>
 			<p class="comment">* 개발에 대한 코멘트는 소스상에 @dev 로 검색 하시면 됩니다.</p>
 
@@ -1792,27 +1797,33 @@ table tbody .num {float:left;margin:0 1px 1px 0;}
 	function viewProcessing(target) {
 		var targetConts = document.querySelectorAll('.cont');
 		var total = 0;
+		var mod = 0;
 		var current = 0;
 		var txtCurrentCount = document.getElementById('currentCount');
+		var txtModCount = document.getElementById('modCount');
 		var txtTotalCount = document.getElementById('totalCount');
 		var txtPercentage = document.getElementById('percentage');
+
 
 		targetConts.forEach(function(targetCont){
 			if (target == 'an00') {
 				total += targetCont.querySelectorAll('tr').length - 1;//th row 제외
+				mod += targetCont.querySelectorAll('tr.mod').length;
 				current += targetCont.querySelectorAll('tr.end').length;
 			} else {
 				var targetId = targetCont.getAttribute('data-id');
 				if (target == targetId) {
 					total += targetCont.querySelectorAll('tr').length - 1;//th row 제외
+					mod += targetCont.querySelectorAll('tr.mod').length;
 					current += targetCont.querySelectorAll('tr.end').length;
 				}
 			}
 		});
 
 		txtCurrentCount.innerText = current;
+		txtModCount.innerText = mod;
 		txtTotalCount.innerText = total;
-		txtPercentage.innerText = '[' + Math.round((current / total) * 100) + '%]';
+		txtPercentage.innerText = Math.round((current / total) * 100) + '%';
 	}
 
 	function activeCont(target) {
