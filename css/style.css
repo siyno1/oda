@@ -21,7 +21,7 @@ select {width: 100%; height: 30px; padding: 4px 30px 4px 9px; font-weight: 500; 
 .selectBox:focus-within::after {transform: rotate(180deg) translateY(50%); transition: 0.3s all;}
 
 /* tblBox - margin */
-.tblBox {width: 100%; overflow: auto clip;}
+.tblBox {width: 100%;}
 :where(.tblBox, .adBox, .pagination) + .titBox {margin-top: 40px;}
 :where(.tblBox, .adBox, .pagination) + .tblBox {margin-top: 20px;}
 :where(.tblBox, .adBox, .pagination) + .tblBox .tbl::before {background: #E2E6EA;}
@@ -652,7 +652,13 @@ button[class^=btnList] {display:inline-block;box-sizing:border-box;border:0 none
 
 /* tip */
 .tipDiv {display:inline-block;position:relative;}
-.tipDiv .tipCont {display:none;position:absolute;top:100%;left:-5px;margin-top:6px;padding:16px 14px 14px;border:1px solid #464C53;border-radius:4px;background:#fff;filter:drop-shadow(0 2px 8px rgba(0,0,0,0.25));z-index:1;}
+.tipDiv .tipCont {display:none;position:absolute;top:100%;left:-5px;margin:6px 0 0;padding:16px 14px 14px;border:1px solid #464C53;border-radius:4px;background:#fff;filter:drop-shadow(0 2px 8px rgba(0,0,0,0.25));z-index:1;}
 .tipDiv .tipCont::before {content:'';display:block;position:absolute;left:12px;bottom:100%;border:solid transparent;border-bottom-color:#464C53;border-width:0 5px 6px 5px;}
 .tipDiv .tipCont::after {content:'';display:block;position:absolute;left:13px;bottom:100%;border:solid transparent;border-bottom-color:#fff;border-width:0 4px 4px 4px;}
+.tipDiv.top .tipCont {top:auto;bottom:100%;margin:0 0 6px;}
+.tipDiv.top .tipCont::before {bottom:auto;top:100%;border-bottom-color:transparent;border-top-color:#464C53;border-width:6px 5px 0 5px;}
+.tipDiv.top .tipCont::after {bottom:auto;top:100%;border-bottom-color:transparent;border-top-color:#fff;border-width:4px 4px 0 4px;}
+.tipDiv.left .tipCont {left:auto;right:-5px;}
+.tipDiv.left .tipCont::before {left:auto;right:12px;}
+.tipDiv.left .tipCont::after {left:auto;right:13px;}
 .tipDiv:focus-within .tipCont {display:block;}
