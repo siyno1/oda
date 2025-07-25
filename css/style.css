@@ -360,6 +360,7 @@ input[type="text"] ~ .btn-ipt {position: absolute; top: 50%; right: 55px; displa
 .schList .tbl:not(.de) td {font-size: 13px; font-weight: 400; line-height: 1.5; letter-spacing: -1px; color: #6D7882;}
 .schList .tbl td {padding: 7px 15px; text-align: left;}
 .schList .tbl a {display: block; max-width: 100%; font-size: 14px; font-weight: 500; line-height: 1.5; color: #1E2124; letter-spacing: 0; white-space: nowrap; text-overflow: ellipsis; overflow: hidden;}
+.schList:has(.depth2) {margin-top:0;}
 
 /* tblDb[double table] */
 .tblDb {display: flex; justify-content: space-between; gap: 48px; margin: 60px 0 40px 0;}
@@ -648,11 +649,11 @@ input[type="text"] ~ .btn-ipt {position: absolute; top: 50%; right: 55px; displa
 
 /* 그리드 버튼 */
 button[class^=btnList] {display:inline-block;box-sizing:border-box;border:0 none;cursor:pointer;vertical-align:middle;}
-.btnListFile {width:24px;height:24px;background:url(../img/ico_list_file.svg) no-repeat center;}
+.btnListFile{width:24px;height:24px;background:url(../img/ico_list_file.svg) no-repeat center;}
 
 /* tip */
 .tipDiv {display:inline-block;position:relative;}
-.tipDiv .tipCont {display:none;position:absolute;top:100%;left:-5px;margin:6px 0 0;padding:16px 14px 14px;border:1px solid #464C53;border-radius:4px;background:#fff;filter:drop-shadow(0 2px 8px rgba(0,0,0,0.25));z-index:1;}
+.tipDiv .tipCont {display:none;position:absolute;top:100%;left:-5px;min-width:210px;margin:6px 0 0;padding:16px 14px 14px;border:1px solid #464C53;border-radius:4px;text-align:left;background:#fff;filter:drop-shadow(0 2px 8px rgba(0,0,0,0.25));z-index:1;}
 .tipDiv .tipCont::before {content:'';display:block;position:absolute;left:12px;bottom:100%;border:solid transparent;border-bottom-color:#464C53;border-width:0 5px 6px 5px;}
 .tipDiv .tipCont::after {content:'';display:block;position:absolute;left:13px;bottom:100%;border:solid transparent;border-bottom-color:#fff;border-width:0 4px 4px 4px;}
 .tipDiv.top .tipCont {top:auto;bottom:100%;margin:0 0 6px;}
@@ -662,3 +663,36 @@ button[class^=btnList] {display:inline-block;box-sizing:border-box;border:0 none
 .tipDiv.left .tipCont::before {left:auto;right:12px;}
 .tipDiv.left .tipCont::after {left:auto;right:13px;}
 .tipDiv:focus-within .tipCont {display:block;}
+
+.tipDiv .tipCont .txtLi li {margin-bottom:5px;font-size:14px;line-height:1.5;color:#464c53;white-space:nowrap;}
+.tipDiv .tipCont .txtLi li:last-child {margin-bottom:0;}
+
+/* file list */
+.fileList li + li {margin-top:4px;}
+.fileList a {display:inline-block;overflow:hidden;padding:2px 0 1px 28px;font-size:14px;font-weight:500;text-decoration:underline;text-underline-position:under;color:#464646;background-repeat:no-repeat;background-position:left top;white-space:nowrap;text-overflow:ellipsis;}
+.fileList .hwp {background-image:url(../img/ico_file_hwp.svg);}
+.fileList .pdf {background-image:url(../img/ico_file_pdf.svg);}
+.fileList .xls {background-image:url(../img/ico_file_xls.svg);}
+.fileList .doc {background-image:url(../img/ico_file_doc.svg);}
+.fileList .txt {background-image:url(../img/ico_file_txt.svg);}
+.fileList .zip {background-image:url(../img/ico_file_zip.svg);}
+.fileList .ppt {background-image:url(../img/ico_file_ppt.svg);}
+.fileList .bmp {background-image:url(../img/ico_file_bmp.svg);}
+.fileList .gif {background-image:url(../img/ico_file_gif.svg);}
+.fileList .jpg {background-image:url(../img/ico_file_jpg.svg);}
+.fileList .png {background-image:url(../img/ico_file_png.svg);}
+.fileList .tif {background-image:url(../img/ico_file_tif.svg);}
+.fileList .xml {background-image:url(../img/ico_file_xml.svg);}
+.fileList .html {background-image:url(../img/ico_file_html.svg);}
+.fileList .exe {background-image:url(../img/ico_file_exe.svg);}
+.fileList .mpg {background-image:url(../img/ico_file_mpg.svg);}
+.fileList .mp4 {background-image:url(../img/ico_file_mp4.svg);}
+.fileList .avi {background-image:url(../img/ico_file_avi.svg);}
+.fileList .etc {background-image:url(../img/ico_file_etc.svg);}
+
+/* 범례 */
+.legendLi {display:flex;gap:20px;}
+.legendLi li {position:relative;padding-left:25px;font-size:13px;line-height:18px;color:#484b51;}
+.legendLi li::before {content:'';display:block;position:absolute;left:0;top:0;width:19px;height:19px;border-radius:50%;background:#868686;}
+.legendLi li.pt::before {background-color:#4f9097;}
+:where(.rt) .legendLi {display:inline-flex;vertical-align:middle;}

@@ -755,17 +755,32 @@
 
 								<ul class="depth2Cont">
 									<li class="active">
+										<!-- titBox -->
 										<div class="titBox">
 											<div class="lt">
 												<h3>자체평가 목록</h3>
 											</div>
 
+											<!-- @dev 2025.07.25 범례 추가 -->
 											<div class="rt">
-												<div class="btn-wrap">
-													<button type="button" class="btn excel">엑셀다운로드</button>
+												<!-- horz -->
+												<div class="horz">
+													<!-- legendLi -->
+													<ul class="legendLi">
+														<li>완료</li>
+														<li class="pt">진행중</li>
+													</ul>
+													<!-- //legendLi -->
+
+													<div class="btn-wrap">
+														<button type="button" class="btn excel">엑셀다운로드</button>
+													</div>
 												</div>
+												<!-- //horz -->
 											</div>
+											<!-- //@dev 2025.07.25 범례 추가 -->
 										</div>
+										<!-- //titBox -->
 
 										<div class="tblBox">
 											<table class="tbl col tC">
@@ -796,8 +811,25 @@
 														<td>국무조정실</td>
 														<td></td>
 														<td></td>
-														<td>2024</td>
-														<td><a href="#">2023 외 1</a></td>
+														<td>
+															<button type="button" class="txtBtn txtPt">2024</button>
+														</td>
+														<td>
+															<!-- tipDiv : 위치에따라 class="tipDiv top left" 알맞게 사용 -->
+															<div class="tipDiv" tabindex="0">
+																<button type="button" class="txtBtn txtPt">2025 외 1</button>
+																<div class="tipCont">
+																	<ul class="txtLi">
+																		<li>※ 해당년도의 개요서, 평가결과보고서를<br>조회할 수 있습니다.</li>
+																		<li class="btn-wrap tL">
+																			<a href="#" class="txtLink txtPt">2022</a>
+																			<a href="#" class="txtLink txtPt">2023</a>
+																		</li>
+																	</ul>
+																</div>
+															</div>
+															<!-- //tipDiv : 위치에따라 class="tipDiv top left" 알맞게 사용 -->
+														</td>
 														<td></td>
 													</tr>
 													<tr>
@@ -867,9 +899,11 @@
 											</div>
 
 											<div class="rt">
+												<!-- btn-wrap -->
 												<div class="btn-wrap">
 													<button type="button" class="btn excel">엑셀다운로드</button>
 												</div>
+												<!-- //btn-wrap -->
 											</div>
 										</div>
 

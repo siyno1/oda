@@ -65,6 +65,7 @@
 .lt{}
 .rt{margin-left:auto;}
 .rt .txtInfo {text-align:right;}
+.horz {display:flex;align-items:center;gap:20px;}
 
 .pgtBox{display:flex;align-items:flex-end;margin-bottom:20px;}
 
@@ -90,35 +91,17 @@
 .side .gnb > li > ul >  li.hasChild.active > a::after {transform:rotate(-180deg); transition:0.4s all;}
 .side .gnb > li > ul >  li.hasChild.active > ul {display:flex;}
 
-/* 25.07.24 txt style common */
+/* 25.07.24 텍스트 common */
 strong {font-weight:700;}
-.txtBt {position:relative;padding-left:12px;}
+.txtBt {position:relative;padding-left:12px;}/* bullet */
 .txtBt::after {content:'';display:block;position:absolute;top:5px;left:0;width:5px;height:5px;border-radius:50%;background:#6d4fff;}
 .txtInfo {padding-left:18px;font-size:14px;line-height:1.5;font-weight:500;color:#5A5A5B;word-break:keep-all;background:url(../img/ico_bullet.svg) no-repeat 0 4px;}
-.txtLink {color:#4f9097;text-decoration:underline;text-underline-position:under;}
+.txtLink {font-weight:500;text-decoration:underline;text-underline-position:under;cursor:pointer;}
+.txtBtn {border:0 none;font-weight:500;text-decoration:underline;text-underline-position:under;background:none;cursor:pointer;}
+
+/* txt color definition */
+.txtPt {color:#4f9097 !important;}/* primary */
+
 /* 타이틀 형식 : disc */
 .titDisc {margin:0 0 6px 0;font-size:15px;line-height:1.5;}
 .titDisc.txtBt::after {top:9px;}
-
-/* file list */
-.fileList li + li {margin-top:4px;}
-.fileList a {display:inline-block;overflow:hidden;padding:2px 0 1px 28px;font-size:14px;font-weight:500;text-decoration:underline;text-underline-position:under;color:#464646;background-repeat:no-repeat;background-position:left top;white-space:nowrap;text-overflow:ellipsis;}
-.fileList .hwp {background-image:url(../img/ico_file_hwp.svg);}
-.fileList .pdf {background-image:url(../img/ico_file_pdf.svg);}
-.fileList .xls {background-image:url(../img/ico_file_xls.svg);}
-.fileList .doc {background-image:url(../img/ico_file_doc.svg);}
-.fileList .txt {background-image:url(../img/ico_file_txt.svg);}
-.fileList .zip {background-image:url(../img/ico_file_zip.svg);}
-.fileList .ppt {background-image:url(../img/ico_file_ppt.svg);}
-.fileList .bmp {background-image:url(../img/ico_file_bmp.svg);}
-.fileList .gif {background-image:url(../img/ico_file_gif.svg);}
-.fileList .jpg {background-image:url(../img/ico_file_jpg.svg);}
-.fileList .png {background-image:url(../img/ico_file_png.svg);}
-.fileList .tif {background-image:url(../img/ico_file_tif.svg);}
-.fileList .xml {background-image:url(../img/ico_file_xml.svg);}
-.fileList .html {background-image:url(../img/ico_file_html.svg);}
-.fileList .exe {background-image:url(../img/ico_file_exe.svg);}
-.fileList .mpg {background-image:url(../img/ico_file_mpg.svg);}
-.fileList .mp4 {background-image:url(../img/ico_file_mp4.svg);}
-.fileList .avi {background-image:url(../img/ico_file_avi.svg);}
-.fileList .etc {background-image:url(../img/ico_file_etc.svg);}
