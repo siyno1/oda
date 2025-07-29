@@ -196,14 +196,8 @@ input[type="text"] ~ .btn-ipt {position: absolute; top: 50%; right: 55px; displa
 .tabBox > .tab {margin-top: 0;}
 .tabBox .tabCont > li:not(.active) {display: none;}
 .tabBox .tabCont > li {display: flex; align-items: flex-start; flex-wrap: wrap; margin-top: 0;}
-.tabBox .tabCont > li > .btn-apply {position: relative; top: 3px; margin: 20px auto 0 auto;}
 .tabBox .tabCont > li .schList {width: 100%;}
 .tabBox .tabCont .tabCont > li {margin-top: 24px;}
-
-.tabBox .schBox {margin: auto;}
-.tabBox .schBox:not(.line) .searchFlt {width: 100%;}
-.tabBox .schBox:not(.line) .fltList {width: 100%;}
-:where(.schBox)+.tabBox {margin-top:60px;}
 
 /* pagination */
 .pagination {display: flex; justify-content: center; align-items: center; width: 100%; margin-top: 24px;}
@@ -229,68 +223,41 @@ input[type="text"] ~ .btn-ipt {position: absolute; top: 50%; right: 55px; displa
  * type: 중앙(기본)
  * class : col - 좌측 정렬 컬럼형태, line - 일렬 정렬 형태
 **/
-.schBox {position: relative; display: flex; justify-content: center; flex-direction: column; width: 100%; max-width: 1600px; padding: 20px 0 51px 0; margin: auto; font-size: 15px; font-weight: 700; line-height: 1.5; color: #1E2124;}
-.schBox.col {flex-direction: row; height: auto; margin: 0;}
+.schBox {position: relative; display: flex; justify-content: center; flex-direction: column; gap:12px; width: 100%; padding: 30px 250px 56px 0; margin: auto; font-size: 15px; font-weight: 700; line-height: 1.5; color: #1E2124;}
 .schBox::after {position: absolute; bottom: 0; left: 50%; content: ' '; display: block; width: calc(100vw - 15px); height: 26px; background: #F4F5F6; border-top: 3px solid #E5E8EA; transform: translateX(-50%);}
-.schBox.col::after {left: -40px; transform: none;}
-.schBox .btn-apply {margin: 20px auto 0 auto;}
 
-.schBox.line {flex-direction: row; width: 100%; max-width: none; padding-top:18px;}
-.schBox.line .searchFlt {display: flex; flex-wrap: wrap; gap: 0 10px; width: calc(100% - 110px); margin-top: 0;}
-.schBox.line .btn-apply {margin-top:5px;}
-.schBox.line .fltList {order: 1;}
-.schBox.line .fltOpt {order: 2; flex: 1; padding: 4px 18px 4px 20px; margin-top: 0;}
-.schBox.line .fltCont {order: 3; width: 100%;}
+/* schRow */
+.schRow {display:flex; align-items:center; gap:6px; flex-wrap:wrap; width:100%;}
 
 
-/* searchTxt */
-.searchTxt {display: flex; justify-content: center; align-items: center; gap: 14px; width: 100%; font-size: 14px;}
-.searchTxt p {font-size: 15px; font-weight: 700; color: inherit;}
-.searchTxt > div {position: relative;}
-.searchTxt input[type="text"] {width: 630px; height: 42px; padding: 10px 60px 10px 16px; font-size: inherit; font-weight: 700; line-height: 1.5; color: #131416; border: 2px solid #58616A; border-radius: 12px;}
-.searchTxt input[type="text"]::placeholder {font-size: inherit; color: #8A949E;}
-.searchTxt .btn-src {position: absolute; top: 50%; right: 0; width: 46px; height: 100%; text-align: center; font-size: inherit; font-weight: 500; line-height: 0.9; color: #fff; background: #58616A; border-color: #58616A; border-radius: 0 12px 12px 0; transform: translateY(-50%);}
-.searchTxt .btn-flt {display: inline-flex; align-items: center; gap: 9px; width: auto; height: auto; font-size: inherit; font-weight: 600; line-height: 1.5; color: #6D7882; background: transparent; border: none;}
-.searchTxt .btn-flt::before {content: ' '; display: block; width: 32px; height: 32px; background: url(../img/ico_filter.svg) no-repeat center center;}
-.searchTxt .btn-flt::after {content: ' '; display: block; width: 14px; height: 14px; background: url(../img/ico_select_arr.svg) no-repeat center center; transition: 0.3s all;}
-.searchTxt .btn-flt:hover {text-decoration: underline;}
-.searchTxt .btn-flt.on::after {transform: rotate(-180deg) translateY(0); transition: 0.3s all;}
-.searchTxt .btn-flt span {margin-left: -6px;}
-.searchTxt .btn-flt span.off {display: none;}
+/* schTxt */
+.schTxt {flex:1 0 auto;display: flex; align-items: center; gap: 14px; font-size: 14px;}
+.schTxt > div {flex:1;position: relative;}
+.schTxt input[type="text"] {width: 100%; height: 42px; padding: 10px 60px 10px 16px; font-size: inherit; font-weight: 700; line-height: 1.5; color: #131416; border: 2px solid #58616A; border-radius: 12px;}
+.schTxt input[type="text"]::placeholder {font-size: inherit; color: #8A949E;}
+.schTxt .btn-src {position: absolute; top: 50%; right: 0; width: 46px; height: 100%; text-align: center; font-size: inherit; font-weight: 500; line-height: 0.9; color: #fff; background: #58616A; border-color: #58616A; border-radius: 0 12px 12px 0; transform: translateY(-50%);}
+.schTxt .btn-flt {display: inline-flex; align-items: center; gap: 9px; width: auto; height: auto; font-size: inherit; font-weight: 600; line-height: 1.5; color: #6D7882; background: transparent; border: none;}
+.schTxt .btn-flt::before {content: ' '; display: block; width: 32px; height: 32px; background: url(../img/ico_filter.svg) no-repeat center center;}
+.schTxt .btn-flt::after {content: ' '; display: block; width: 14px; height: 14px; background: url(../img/ico_select_arr.svg) no-repeat center center; transition: 0.3s all;}
+.schTxt .btn-flt:hover {text-decoration: underline;}
+.schTxt .btn-flt.on::after {transform: rotate(-180deg) translateY(0); transition: 0.3s all;}
+.schTxt .btn-flt span {margin-left: -6px;}
+.schTxt .btn-flt span.off {display: none;}
 
-/* searchFlt */
-.searchFlt {margin-top: 12px; font-size: 14px;}
-.searchFlt ul {display: flex; align-items: center; gap: 10px; width: 100%;}
-.searchFlt ul li {flex: 1;}
-.searchFlt ul + ul {margin-top: 5px;}
-
-/* schCol */
-.schCol {width: 1075px; padding-right: 50px; border-right: 1px solid #CED6DD; box-sizing: content-box;}
-.schCol ul {display: grid; grid-template-columns: 640px 395px; gap: 6px 40px;}
-.schCol ul li {display: flex; align-items: center; gap: 14px;}
-.schCol ul li p {display: inline-flex; align-items: center; gap: 8px; min-width: 75px; font-size: inherit; font-weight: 700; line-height: 1.5; color: #1E2124;}
-.schCol ul li p::before {content: ' '; display: inline-block; width: 4px; height: 4px; background: #d9d9d9; border-radius: 50%;}
-.schCol ul li .pickrBox p {display: inline-block; min-width: auto; font-weight: 400; color: #464C53;}
-.schCol ul li .pickrBox p::before {content: none;}
-.schCol ul li select {min-width: 150px; height: 40px;}
-.schCol ul li > div:not([class]) {flex: 1; display: flex; align-items: center; gap: 14px;}
-.schCol input {height: 40px; border-radius: 6px;}
-.schCol input::placeholder {font-size: inherit;}
-.schCol .pickrBox {justify-content: space-between; width: 306px;}
-.schCol .pickrBox .pickr {width: 140px;}
-.schBox.col .btn-wrap {justify-content: flex-start; margin-left: 50px;}
-.schBox.col .btn-apply {margin: 0;}
 
 /* fltList */
-.fltList:not(.on) ul:not(:first-child) {display: none;}
+.fltList {flex:0 0 auto;display:flex;gap:6px;width:calc((100% - 30px) / 6);}
 .fltList button {position: relative; display: flex; align-items: center; width: 100%; height: 40px; padding: 8px 40px 8px 20px; font-size: inherit; font-weight: 600; line-height: 1.5; color: #1E2124; background: #F0F2F6; border: 1px solid #D1DAE2; border-radius: 12px;}
 .fltList button::after {position: absolute; top: 50%; right: 20px; content: ' '; display: block; width: 14px; height: 14px; background: url(../img/ico_select_arr.svg) no-repeat center center; transform: translateY(-50%); transition: 0.3s all;}
-.fltList li {max-width: 260px;}
+.fltList li {flex:1 0 auto;}
 .fltList li.on button {background: #D9DFEA;}
 .fltList li.on button::after {transform: rotate(-180deg) translateY(50%); transition: 0.3s all;}
+.fltList:has(li:nth-child(2)) {width:calc(((100% - 30px) / 6) * 2 + 6px);}
+.fltList:has(li:nth-child(3)) {width:100%;}
+.fltList:has(li:nth-child(3)) li {flex:0 1 auto; width:calc((100% - 30px) / 6);}
 
 /* fltCont */
-.fltCont {margin-top: 5px;}
+.fltCont {width:100%;margin-bottom:10px;}
 .fltCont li:not(.on) {display: none;}
 .fltCont li {display: flex; align-items: center; padding: 24px 20px 24px 20px; background: #fff; border: 1px solid #ddd; border-radius: 12px;}
 .fltCont li > p {position: relative; top: -22px; margin-right: 20px; font-size: inherit; font-weight: 600; line-height: 1.5; color: #1E2124;}
@@ -300,7 +267,7 @@ input[type="text"] ~ .btn-ipt {position: absolute; top: 50%; right: 55px; displa
 .fltCont .pickrBox input::placeholder {font-size: inherit;}
 
 /* fltOpt */
-.fltOpt {display: flex; justify-content: space-between; align-items: center; gap: 15px; width: 100%; padding: 6px 18px 6px 20px; margin-top: 10px; background: #fff; border: 1px solid #ddd; border-radius: 12px;}
+.fltOpt {flex:1 0 auto; display: flex; justify-content: space-between; align-items: center; gap: 15px; padding: 6px 18px 6px 20px; background: #fff; border: 1px solid #ddd; border-radius: 12px;}
 .fltOpt ul {flex: 1; display: inline-block;}
 .fltOpt ul li {display: inline-flex; align-items: center; gap: 3px; width: auto;}
 .fltOpt ul li:not(:last-child) {margin-right: 20px;}
@@ -308,6 +275,9 @@ input[type="text"] ~ .btn-ipt {position: absolute; top: 50%; right: 55px; displa
 .fltOpt > p {display: inline-flex; align-items: center; padding-left: 60px; margin: auto; text-align: center; font-size: 14px; font-weight: 500; line-height: 1.5; color: #8A949E;}
 .fltOpt > p::before {content: ' '; display: inline-block; width: 12px; height: 12px; margin-right: 6px; background: url(../img/ico_bullet.svg) no-repeat center center;}
 .fltOpt .btn-del {width: 16px; height: 16px; background: url(../img/ico_del_opt.svg) no-repeat center center; border-radius: 50%;}
+
+/* schBtn */
+.schBtn {display:flex;align-items:center;position:absolute;right:0;top:30px;bottom:56px;padding:0 40px 0 50px;border-left:1px solid #ddd;}
 
 /* iptBox */
 .iptBox {position: relative; display: flex; align-items: center; gap: 5px; width: 352px; height: 40px; padding: 4px 9px 4px 6px; background: #fff; border: 1px solid #B1B8BE; border-radius: 6px;}
@@ -375,9 +345,6 @@ input[type="text"] ~ .btn-ipt {position: absolute; top: 50%; right: 55px; displa
 .tbl tr.on {background: #F0F2F6; transition: 0.3s all;}
 .tbl tr.on :is(td, a) {color: #256EF4; transition: 0.3s all;}
 
-/* schBox.de */
-.schBox.de .fltCont li {display: flex;}
-.schBox.de:not(.on) :is(.searchFlt, .btn-apply) {display: none;}
 
 /* tooltip */
 .tooltipBox {display: flex; justify-content: center; align-items: center; width: 100%; background: #F4F5F6;}

@@ -99,39 +99,37 @@ function init() {
 
     // btn-flt Event
     $('.btn-flt').on('click', function () {
-        $(this).toggleClass('on');
-        $('.fltList').toggleClass('on');
+		var $this = $(this);
+		$this.toggleClass('on');
 
-        if (!$(this).hasClass('on')) {
-            $('.fltList li').removeClass('on');
-            $('.fltCont li').removeClass('on');
-        }
+		if ($this.hasClass('on')) {
+			$('.toggleFlt').css('display','');
+		} else {
+			$('.toggleFlt').css('display','none');
+		}
     });
 
-    $('.schBox.de .btn-flt').on('click', function () {
-        $(this).children('span').toggleClass('off');
-        $(this).parents('.schBox.de').toggleClass('on')
-    });
 
     // fltList btn Event
     $('.fltList button').on('click', function () {
-        let $btn = $(this);
-        let $li = $btn.parent();
-        let ulIdx = $li.parent().index();
-        let liIdx = $li.index();
+		var $this = $(this);
+        var $li = $this.parent();
+        var $row = $this.closest('.schRow');
+		var $allBtns = $('.fltList button');
+        var btnIndex = $allBtns.index(this);
+		var $toggleFltCont = $('.toggleFltCont');
+		var isAlreadyOn = $li.hasClass('on');
 
-        let $fltList = $btn.closest('.fltList');
-        let $fltCont = $fltList.next('.fltCont');
+		$('.fltList li').removeClass('on');
+		$toggleFltCont.find('li').removeClass('on');
 
-        let isAlreadyOn = $li.hasClass('on');
+		if (!isAlreadyOn) {
+			$li.addClass('on');
+			$toggleFltCont.find('ul').eq(0).children().eq(btnIndex).addClass('on');
+		}
 
-        $fltList.find('li').removeClass('on');
-        $fltCont.find('li').removeClass('on');
-
-        if (!isAlreadyOn) {
-            $li.addClass('on');
-            $fltCont.find('ul').eq(ulIdx).children().eq(liIdx).addClass('on');
-        }
+		var toggleFltContDisplay = $toggleFltCont.find('li.on').length ? '' : 'none';
+		$toggleFltCont.css('display',toggleFltContDisplay);
     });
 
     // tbl Chk event
