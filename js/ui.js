@@ -114,13 +114,13 @@ function init() {
     $('.fltList button').on('click', function () {
 		var $this = $(this);
         var $li = $this.parent();
-        var $row = $this.closest('.schRow');
-		var $allBtns = $('.fltList button');
+		var $schBox = $this.closest('.schBox');
+		var $allBtns = $schBox.find('.fltList button');
         var btnIndex = $allBtns.index(this);
-		var $toggleFltCont = $('.toggleFltCont');
+		var $toggleFltCont = $schBox.find('.toggleFltCont');
 		var isAlreadyOn = $li.hasClass('on');
 
-		$('.fltList li').removeClass('on');
+		$schBox.find('.fltList li').removeClass('on');
 		$toggleFltCont.find('li').removeClass('on');
 
 		if (!isAlreadyOn) {
