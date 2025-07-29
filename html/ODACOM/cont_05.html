@@ -109,41 +109,197 @@
 					<div class="rt"></div>
 				</div>
 
-				<div class="schBox col">
+				<!-- schBox 25.08.01 검색 수정 -->
+				<div class="schBox">
+					<div class="schRow">
+						<ul class="fltList">
+							<li><button type="button">사업기간</button></li>
+							<li><button type="button">시행기관</button></li>
+						</ul>
 
-					<div class="searchFlt">
+						<div class="schTxt">
+							<div class="schKeyword">
+								<input type="text" placeholder="사업명을 입력하세요.">
+								<button type="button" class="btn-src">검색</button>
+							</div>
+							<button type="button" class="btn-flt">검색 필터 열기</button>
+						</div>
+					</div>
 
-						<div class="schCol">
+					<div class="schRow toggleFlt" style="display:none;">
+						<ul class="fltList">
+							<li><button type="button">사업기간</button></li>
+							<li><button type="button">시행기관</button></li>
+							<li><button type="button">수원국</button></li>
+							<li><button type="button">사업분야</button></li>
+							<li><button type="button">진행상태</button></li>
+							<li><button type="button">원조유형</button></li>
+						</ul>
+					</div>
+
+					<div class="schRow toggleFlt" style="display:none;">
+						<ul class="fltList">
+							<li><button type="button">사업기간</button></li>
+							<li><button type="button">시행기관</button></li>
+							<li><button type="button">수원국</button></li>
+							<li><button type="button">사업분야</button></li>
+							<li><button type="button">진행상태</button></li>
+							<li><button type="button">원조유형</button></li>
+						</ul>
+					</div>
+
+					<div class="schRow toggleFltCont" style="display:none;">
+						<div class="fltCont">
 							<ul>
 								<li>
-									<p>프로그램명</p>
-									<input type="text" placeholder="프로그램명을 입력하세요." class="w100">
-								</li>
-								<li>
-									<p>장소</p>
-									<input type="text" placeholder="장소를 입력하세요." class="w100">
-								</li>
-								<li>
-									<p>강사명</p>
-									<input type="text" placeholder="강사명을 입력하세요.">
-								</li>
-								<li>
-									<p>연수기간</p>
+									<p>사업기간</p>
 									<div class="pickrBox">
 										<input type="text" class="pickr" placeholder="날짜를 선택하세요">
 										<p>~</p>
 										<input type="text" class="pickr" placeholder="날짜를 선택하세요">
 									</div>
 								</li>
+
+								<li>
+									<p>당해연도 시행계획 예산</p>
+									<div class="iptBox">
+										<input type="text" placeholder="금액을 입력하세요.">
+										<button type="button" class="btn cnf">확인</button>
+									</div>
+								</li>
+
+								<li class="contBox type01">
+									<p>수원국</p>
+									<div class="contList">
+										<div class="">
+											<p>대륙</p>
+											<ul>
+												<li><button type="button">아시아</button></li>
+												<li><button type="button">아프리카</button></li>
+												<li><button type="button">중남미</button></li>
+												<li><button type="button">중동 · CIS</button></li>
+												<li><button type="button">오세아니아 · 기타</button></li>
+												<li><button type="button">그외 지역</button></li>
+											</ul>
+										</div>
+
+										<div>
+											<p>상세국가</p>
+											<ul>
+												<li><button type="button">전체</button></li>
+												<li><button type="button">가나</button></li>
+												<li><button type="button">동티모르</button></li>
+												<li><button type="button">라오스</button></li>
+												<li><button type="button">네팔</button></li>
+												<li><button type="button">동티모르</button></li>
+												<li><button type="button">라오스</button></li>
+												<li><button type="button">네팔</button></li>
+												<li><button type="button">말레이시아</button></li>
+												<li><button type="button">네팔</button></li>
+												<li><button type="button">동티모르</button></li>
+												<li><button type="button">라오스</button></li>
+												<li><button type="button">네팔</button></li>
+												<li><button type="button">동티모르</button></li>
+												<li><button type="button">라오스</button></li>
+												<li><button type="button">네팔</button></li>
+												<li><button type="button">방글라데시</button></li>
+												<li><button type="button">네팔</button></li>
+												<li><button type="button">동티모르</button></li>
+												<li><button type="button">라오스</button></li>
+												<li><button type="button">네팔</button></li>
+												<li><button type="button">동티모르</button></li>
+												<li><button type="button">라오스</button></li>
+												<li><button type="button">네팔</button></li>
+												<li><button type="button">네팔</button></li>
+												<li><button type="button">방글라데시</button></li>
+												<li><button type="button">네팔</button></li>
+												<li><button type="button">동티모르</button></li>
+												<li><button type="button">라오스</button></li>
+												<li><button type="button">네팔</button></li>
+												<li><button type="button">동티모르</button></li>
+												<li><button type="button">라오스</button></li>
+												<li><button type="button">네팔</button></li>
+											</ul>
+										</div>
+									</div>
+								</li>
+
+								<li class="contBox type02">
+									<p>사업분야</p>
+									<div class="contList">
+										<div>
+											<ul>
+												<li><button type="button">교육</button></li>
+												<li><button type="button">보건</button></li>
+												<li><button type="button">인구정책/시책 및 생식보건</button></li>
+												<li><button type="button">식수 공급 및 위생</button></li>
+												<li><button type="button">공공행정 및 시민사회</button></li>
+												<li><button type="button">"기타 사회인프라 및 서비스"</button></li>
+												<li><button type="button">운송 및 창고</button></li>
+												<li><button type="button">통신</button></li>
+												<li><button type="button">에너지</button></li>
+												<li><button type="button">"금융 및 재무 서비스"</button></li>
+												<li><button type="button">"비즈니스 및 기타서비스"</button></li>
+												<li><button type="button">농업</button></li>
+											</ul>
+										</div>
+
+										<div>
+											<ul>
+												<li><button type="button">아시아</button></li>
+												<li><button type="button">아프리카</button></li>
+												<li><button type="button">중남미</button></li>
+												<li><button type="button">중동 · CIS</button></li>
+												<li><button type="button">오세아니아 · 기타</button></li>
+												<li><button type="button">그외 지역</button></li>
+											</ul>
+										</div>
+
+										<div>
+											<ul>
+												<li><button type="button">아시아</button></li>
+												<li><button type="button">아프리카</button></li>
+												<li><button type="button">중남미</button></li>
+												<li><button type="button">중동 · CIS</button></li>
+												<li><button type="button">오세아니아 · 기타· 기타</button></li>
+												<li><button type="button">그외 지역</button></li>
+											</ul>
+										</div>
+									</div>
+								</li>
 							</ul>
 						</div>
 					</div>
 
-					<div class="btn-wrap">
+					<div class="schRow">
+						<div class="fltOpt">
+							<ul>
+								<li>
+									<p>아시아 &gt; 네팔</p>
+									<button type="button" class="btn-del"><span class="sr-only">검색조건 삭제</span></button>
+								</li>
+								<li>
+									<p>아프리카 &gt; 가나</p>
+									<button type="button" class="btn-del"><span class="sr-only">검색조건 삭제</span></button>
+								</li>
+								<li>
+									<p>아프리카 &gt; 가나</p>
+									<button type="button" class="btn-del"><span class="sr-only">검색조건 삭제</span></button>
+								</li>
+								<li>
+									<p>아프리카 &gt; 가나</p>
+									<button type="button" class="btn-del"><span class="sr-only">검색조건 삭제</span></button>
+								</li>
+							</ul>
+							<button type="reset" class="btn-reset txt">초기화</button>
+						</div>
+					</div>
+
+					<div class="schBtn">
 						<button type="button" class="btn-apply">조건검색</button>
-						<button type="reset" class="btn-reset"><span class="sr-only">초기화</span></button>
 					</div>
 				</div>
+				<!-- schBox //25.08.01 검색 수정 -->
 
 				<div class="schList">
 					<div class="titBox">

@@ -198,6 +198,7 @@ input[type="text"] ~ .btn-ipt {position: absolute; top: 50%; right: 55px; displa
 .tabBox .tabCont > li {display: flex; align-items: flex-start; flex-wrap: wrap; margin-top: 0;}
 .tabBox .tabCont > li .schList {width: 100%;}
 .tabBox .tabCont .tabCont > li {margin-top: 24px;}
+:where(.schBox)+.tabBox {margin-top: 60px;}
 
 /* pagination */
 .pagination {display: flex; justify-content: center; align-items: center; width: 100%; margin-top: 24px;}
@@ -257,7 +258,7 @@ input[type="text"] ~ .btn-ipt {position: absolute; top: 50%; right: 55px; displa
 .fltList:has(li:nth-child(3)) li {flex:0 1 auto; width:calc((100% - 30px) / 6);}
 
 /* fltCont */
-.fltCont {width:100%;margin-bottom:10px;}
+.fltCont {width:100%;}
 .fltCont li:not(.on) {display: none;}
 .fltCont li {display: flex; align-items: center; padding: 24px 20px 24px 20px; background: #fff; border: 1px solid #ddd; border-radius: 12px;}
 .fltCont li > p {position: relative; top: -22px; margin-right: 20px; font-size: inherit; font-weight: 600; line-height: 1.5; color: #1E2124;}

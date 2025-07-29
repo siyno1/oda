@@ -111,38 +111,46 @@
 				</div>
 				<!-- //pgtBox -->
 
-				<!-- schBox -->
+				<!-- schBox 25.08.01 검색 수정 -->
 				<div class="schBox">
-					<div class="searchTxt">
-						<p>사업명</p>
-						<div>
-							<input type="text" placeholder="사업명을 입력하세요.">
-							<button type="button" class="btn-src">검색</button>
+					<div class="schRow">
+						<ul class="fltList">
+							<li><button type="button">사업기간</button></li>
+							<li><button type="button">시행기관</button></li>
+						</ul>
+
+						<div class="schTxt">
+							<div class="schKeyword">
+								<input type="text" placeholder="사업명을 입력하세요.">
+								<button type="button" class="btn-src">검색</button>
+							</div>
+							<button type="button" class="btn-flt">검색 필터 열기</button>
 						</div>
-						<button type="button" class="btn-flt">검색 필터 열기</button>
 					</div>
 
-					<div class="searchFlt">
-						<div class="fltList">
-							<ul>
-								<li><button type="button">사업기간</button></li>
-								<li><button type="button">시행기관</button></li>
-								<li><button type="button">수원국</button></li>
-								<li><button type="button">사업분야</button></li>
-								<li><button type="button">진행상태</button></li>
-								<li><button type="button">원조유형</button></li>
-							</ul>
+					<div class="schRow toggleFlt" style="display:none;">
+						<ul class="fltList">
+							<li><button type="button">사업기간</button></li>
+							<li><button type="button">시행기관</button></li>
+							<li><button type="button">수원국</button></li>
+							<li><button type="button">사업분야</button></li>
+							<li><button type="button">진행상태</button></li>
+							<li><button type="button">원조유형</button></li>
+						</ul>
+					</div>
 
-							<ul>
-								<li><button type="button">사업기간</button></li>
-								<li><button type="button">시행기관</button></li>
-								<li><button type="button">수원국</button></li>
-								<li><button type="button">사업분야</button></li>
-								<li><button type="button">진행상태</button></li>
-								<li><button type="button">원조유형</button></li>
-							</ul>
-						</div>
+					<div class="schRow toggleFlt" style="display:none;">
+						<ul class="fltList">
+							<li><button type="button">사업기간</button></li>
+							<li><button type="button">시행기관</button></li>
+							<li><button type="button">수원국</button></li>
+							<li><button type="button">사업분야</button></li>
+							<li><button type="button">진행상태</button></li>
+							<li><button type="button">원조유형</button></li>
+						</ul>
+					</div>
 
+					<div class="schRow toggleFltCont" style="display:none;">
 						<div class="fltCont">
 							<ul>
 								<li>
@@ -263,7 +271,9 @@
 								</li>
 							</ul>
 						</div>
+					</div>
 
+					<div class="schRow">
 						<div class="fltOpt">
 							<ul>
 								<li>
@@ -287,9 +297,11 @@
 						</div>
 					</div>
 
-					<button type="button" class="btn-apply">조건검색</button>
+					<div class="schBtn">
+						<button type="button" class="btn-apply">조건검색</button>
+					</div>
 				</div>
-				<!-- //schBox -->
+				<!-- schBox //25.08.01 검색 수정 -->
 
 				<!-- tabBox -->
 				<div class="tabBox">
