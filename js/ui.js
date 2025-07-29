@@ -93,7 +93,7 @@ function init() {
 
         $btn.addClass('active').siblings().removeClass('active');
 
-        var $depth2Cont = $btn.closest('.depth2').next('.depth2Cont');
+        var $depth2Cont = $btn.closest('li').find('.depth2Cont');
         $depth2Cont.children().removeClass('active').eq(index).addClass('active');
     });
 
