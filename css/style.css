@@ -82,7 +82,7 @@ input[type="radio"]:checked + label::before {background: #3B80FF url(../img/ico_
 .btn-wrap.tC {justify-content: center!important;}
 .btn-wrap.tL {justify-content: flex-start!important;}
 .btn-wrap.tR {justify-content: flex-end!important;}
-.tblBox + .btn-wrap {margin-top: 12px;}
+:where(.tblBox, .cont) + .btn-wrap {margin-top: 12px;}
 button[class^="btn-"] {width: 30px; height: 30px; font-weight: 500; border: 1px solid #B1B8BE; border-radius: 4px; box-sizing: border-box;}
 button[class^="btn-"].txt {width: auto;}
 .btn {display: inline-flex; justify-content: center; align-items: center; min-width: 60px; height: 30px; padding: 5px 10px; text-align: center; font-weight: 500; line-height: 1.5; color: #464C53; background: #fff; border: 1px solid #929AA2; border-radius: 4px;}
