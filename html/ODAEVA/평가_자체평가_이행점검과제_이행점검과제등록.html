@@ -458,7 +458,7 @@
 												<td class="tL"><a href="#">과제명 1</a></td>
 												<td>홍길동</td>
 												<td>2025.0613</td>
-												<td><button type="button" class="badge pt">과제 지연</button></td>
+												<td><button type="button" class="badge gray">이행완료</button></td>
 											</tr>
 											<tr>
 												<td class="tC">
@@ -469,7 +469,7 @@
 												<td></td>
 												<td></td>
 												<td></td>
-												<td><button type="button" class="badge orange">과제 진행중</button></td>
+												<td><button type="button" class="badge pt">정상추진</button></td>
 											</tr>
 											<tr>
 												<td class="tC">
@@ -480,7 +480,7 @@
 												<td></td>
 												<td></td>
 												<td></td>
-												<td><button type="button" class="badge gray">과제 미채택</button></td>
+												<td><button type="button" class="badge orange">지연</button></td>
 											</tr>
 											<tr>
 												<td class="tC">
@@ -491,7 +491,7 @@
 												<td></td>
 												<td></td>
 												<td></td>
-												<td></td>
+												<td><button type="button" class="badge">관리종결</button></td>
 											</tr>
 											<tr>
 												<td class="tC">
@@ -531,7 +531,218 @@
 						</li>
 
 						<li>
+							<!-- schList -->
+							<div class="schList">
+								<!-- titBox -->
+								<div class="titBox">
+									<div class="lt">
+										<h3> 이행점검 과제 목록</h3>
+									</div>
 
+									<div class="rt">
+										<div class="btn-wrap">
+											<button type="button" class="btn excel">엑셀다운로드</button>
+										</div>
+									</div>
+								</div>
+								<!-- //titBox -->
+
+								<!-- tblBox -->
+								<div class="tblBox">
+									<table class="tbl col tC">
+										<caption></caption>
+										<colgroup>
+											<col style="width: 5%;">
+											<col style="width: auto;">
+											<col style="width: 8%;">
+											<col style="width: auto;">
+											<col style="width: auto;">
+											<col style="width: 8%;">
+											<col style="width: 8%;">
+											<col style="width: 8%;">
+										</colgroup>
+										<thead>
+											<tr>
+												<th scope="col">
+													<div class="tblChk">
+														<input type="checkbox" id="chk_a1"><label for="chk_a1"></label>
+													</div>
+												</th>
+												<th scope="col">과제명</th>
+												<th scope="col">평가연도</th>
+												<th scope="col">자체평가 건 명</th>
+												<th scope="col">제언사항</th>
+												<th scope="col">담당부서(담당자)</th>
+												<th scope="col">기한</th>
+												<th scope="col">상태</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td class="tC">
+													<div class="tblChk">
+														<input type="checkbox" id="chk_a2"><label for="chk_a2"></label>
+													</div>
+												</td>
+												<td class="tL"><a href="#">과제명 1</a></td>
+												<td class="tC">2025</td>
+												<td class="tL"><a href="#">숲 프로젝트 1</a></td>
+												<td class="tL">제언사항 1</td>
+												<td>홍길동</td>
+												<td>2025.06.13</td>
+												<td><button type="button" class="badge gray">이행완료</button></td>
+											</tr>
+											<tr>
+												<td class="tC">
+													<div class="tblChk">
+														<input type="checkbox" id="chk_a3"><label for="chk_a3"></label>
+													</div>
+												</td>
+												<td class="tL"><a href="#">과제명 1</a></td>
+												<td class="tC">2025</td>
+												<td class="tL"><a href="#">숲 프로젝트 1</a></td>
+												<td class="tL">제언사항 1</td>
+												<td>홍길동</td>
+												<td>2025.06.13</td>
+												<td><button type="button" class="badge pt">정상추진</button></td>
+											</tr>
+											<tr>
+												<td class="tC">
+													<div class="tblChk">
+														<input type="checkbox" id="chk_a4"><label for="chk_a4"></label>
+													</div>
+												</td>
+												<td class="tL"><a href="#">과제명 1</a></td>
+												<td class="tC">2025</td>
+												<td class="tL"><a href="#">숲 프로젝트 1</a></td>
+												<td class="tL">제언사항 1</td>
+												<td>홍길동</td>
+												<td>2025.06.13</td>
+												<td><button type="button" class="badge orange">지연</button></td>
+											</tr>
+											<tr>
+												<td class="tC">
+													<div class="tblChk">
+														<input type="checkbox" id="chk_a5"><label for="chk_a5"></label>
+													</div>
+												</td>
+												<td class="tL"><a href="#">과제명 1</a></td>
+												<td class="tC">2025</td>
+												<td class="tL"><a href="#">숲 프로젝트 1</a></td>
+												<td class="tL">제언사항 1</td>
+												<td>홍길동</td>
+												<td>2025.06.13</td>
+												<td><button type="button" class="badge">관리종결</button></td>
+											</tr>
+											<tr>
+												<td class="tC">
+													<div class="tblChk">
+														<input type="checkbox" id="chk_a6"><label for="chk_a6"></label>
+													</div>
+												</td>
+												<td class="tL"><a href="#">과제명 1</a></td>
+												<td class="tC">2025</td>
+												<td class="tL"><a href="#">숲 프로젝트 1</a></td>
+												<td class="tL">제언사항 1</td>
+												<td>홍길동</td>
+												<td>2025.06.13</td>
+												<td><button type="button" class="badge">관리종결</button></td>
+											</tr>
+											<tr>
+												<td class="tC">
+													<div class="tblChk">
+														<input type="checkbox" id="chk_a7"><label for="chk_a7"></label>
+													</div>
+												</td>
+												<td class="tL"><a href="#">과제명 1</a></td>
+												<td class="tC">2025</td>
+												<td class="tL"><a href="#">숲 프로젝트 1</a></td>
+												<td class="tL">제언사항 1</td>
+												<td>홍길동</td>
+												<td>2025.06.13</td>
+												<td><button type="button" class="badge gray">이행완료</button></td>
+											</tr>
+											<tr>
+												<td class="tC">
+													<div class="tblChk">
+														<input type="checkbox" id="chk_a8"><label for="chk_a8"></label>
+													</div>
+												</td>
+												<td class="tL"><a href="#">과제명 1</a></td>
+												<td class="tC">2025</td>
+												<td class="tL"><a href="#">숲 프로젝트 1</a></td>
+												<td class="tL">제언사항 1</td>
+												<td>홍길동</td>
+												<td>2025.06.13</td>
+												<td><button type="button" class="badge pt">정상추진</button></td>
+											</tr>
+											<tr>
+												<td class="tC">
+													<div class="tblChk">
+														<input type="checkbox" id="chk_a9"><label for="chk_a9"></label>
+													</div>
+												</td>
+												<td class="tL"><a href="#">과제명 1</a></td>
+												<td class="tC">2025</td>
+												<td class="tL"><a href="#">숲 프로젝트 1</a></td>
+												<td class="tL">제언사항 1</td>
+												<td>홍길동</td>
+												<td>2025.06.13</td>
+												<td><button type="button" class="badge orange">지연</button></td>
+											</tr>
+											<tr>
+												<td class="tC">
+													<div class="tblChk">
+														<input type="checkbox" id="chk_a10"><label for="chk_a10"></label>
+													</div>
+												</td>
+												<td class="tL"><a href="#">과제명 1</a></td>
+												<td class="tC">2025</td>
+												<td class="tL"><a href="#">숲 프로젝트 1</a></td>
+												<td class="tL">제언사항 1</td>
+												<td>홍길동</td>
+												<td>2025.06.13</td>
+												<td><button type="button" class="badge">관리종결</button></td>
+											</tr>
+											<tr>
+												<td class="tC">
+													<div class="tblChk">
+														<input type="checkbox" id="chk_a11"><label for="chk_a11"></label>
+													</div>
+												</td>
+												<td class="tL"><a href="#">과제명 1</a></td>
+												<td class="tC">2025</td>
+												<td class="tL"><a href="#">숲 프로젝트 1</a></td>
+												<td class="tL">제언사항 1</td>
+												<td>홍길동</td>
+												<td>2025.06.13</td>
+												<td><button type="button" class="badge">관리종결</button></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<!-- //tblBox -->
+
+								<!-- pagination -->
+								<div class="pagination">
+									<button type="button" class="page-navi prev" disabled=""><span class="sr-only">이전</span></button>
+									<div class="page-links">
+										<a class="page-link active" href="#"><span class="sr-only">현재페이지</span>1</a>
+										<a class="page-link" href="#">2</a>
+										<a class="page-link" href="#">3</a>
+										<a class="page-link" href="#">4</a>
+										<a class="page-link" href="#">5</a>
+									</div>
+									<button type="button" class="page-navi next"><span class="sr-only">다음</span></button>
+
+									<p>총 949건 (1/95)</p>
+									<select name="" id="select02">
+										<option value="">10</option>
+									</select>
+								</div>
+								<!-- //pagination -->
+							</div>
+							<!-- //schList -->
 						</li>
 					</ul>
 				</div>
