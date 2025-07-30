@@ -98,14 +98,14 @@
 				<!-- pgtBox -->
 				<div class="pgtBox">
 					<div class="lt">
-						<h2>우수사례 신청 사업</h2>
+						<h2>우수사례 후보 사업</h2>
 					</div>
 
 					<ul class="breadcrumb">
 						<li class="home"><a href="javascript:;">홈</a></li>
 						<li><a href="javascript:;">평가</a></li>
 						<li><a href="javascript:;">우수사례</a></li>
-						<li><a href="javascript:;">우수사례 신청 사업</a></li>
+						<li><a href="javascript:;">우수사례 후보 사업</a></li>
 					</ul>
 
 					<div class="rt"></div>
@@ -121,9 +121,7 @@
 								<button type="button" class="btn-src">검색</button>
 							</div>
 						</div>
-					</div>
 
-					<div class="schRow">
 						<ul class="fltList">
 							<li><button type="button">연도</button></li>
 							<li><button type="button">시행기관</button></li>
@@ -267,14 +265,14 @@
 					<!-- titBox -->
 					<div class="titBox">
 						<div class="lt">
-							<h3>우수사례 신청 사업</h3>
+							<h3>우수사례 후보 사업</h3>
 						</div>
 
 						<div class="rt">
 							<!-- btn-wrap -->
 							<div class="btn-wrap">
-								<button type="button" class="btn hwp">한글 양식 다운로드</button>
-								<button type="button" class="btn biz">우수 사례 등록</button>
+								<button type="button" class="btn excel">엑셀 다운로드</button>
+								<button type="button" class="btn pt">후보 제외</button>
 							</div>
 							<!-- //btn-wrap -->
 						</div>
@@ -286,6 +284,7 @@
 						<table class="tbl col">
 							<caption></caption>
 							<colgroup>
+								<col style="width: 5%;">
 								<col style="width: auto;">
 								<col style="width: 6%;">
 								<col style="width: 10%;">
@@ -296,8 +295,13 @@
 							</colgroup>
 							<thead>
 								<tr>
+									<th scope="col">
+										<div class="tblChk">
+											<input type="checkbox" id="chk01"><label for="chk01"></label>
+										</div>
+									</th>
 									<th scope="col">우수사례 사업명</th>
-									<th scope="col">신청 연도</th>
+									<th scope="col">사업기간</th>
 									<th scope="col">시행기관</th>
 									<th scope="col">수원국</th>
 									<th scope="col">올해 기관역량<br>진단 대상 여부</th>
@@ -306,7 +310,12 @@
 								</tr>
 							</thead>
 							<tbody>
-								<tr>
+								<tr><td>
+										<div class="tblChk">
+											<input type="checkbox" id="chk02"><label for="chk02"></label>
+										</div>
+									</td>
+
 									<td class="tL"><a href="">과테말라 여성 직업 교육 활성화</a></td>
 									<td class="tC">2025</td>
 									<td class="tC">국토교통부</td>
@@ -330,6 +339,11 @@
 									</td>
 								</tr>
 								<tr>
+									<td>
+										<div class="tblChk">
+											<input type="checkbox" id="chk03"><label for="chk03"></label>
+										</div>
+									</td>
 									<td class="tL"><a href="">과테말라 여성 직업 교육 활성화</a></td>
 									<td class="tC">2025</td>
 									<td class="tC">국토교통부</td>
@@ -353,6 +367,11 @@
 									</td>
 								</tr>
 								<tr>
+									<td>
+										<div class="tblChk">
+											<input type="checkbox" id="chk04"><label for="chk04"></label>
+										</div>
+									</td>
 									<td class="tL"><a href="">과테말라 여성 직업 교육 활성화</a></td>
 									<td class="tC">2025</td>
 									<td class="tC">국토교통부</td>
@@ -376,6 +395,11 @@
 									</td>
 								</tr>
 								<tr>
+									<td>
+										<div class="tblChk">
+											<input type="checkbox" id="chk05"><label for="chk05"></label>
+										</div>
+									</td>
 									<td class="tL"><a href="">과테말라 여성 직업 교육 활성화</a></td>
 									<td class="tC">2025</td>
 									<td class="tC">국토교통부</td>
@@ -399,6 +423,11 @@
 									</td>
 								</tr>
 								<tr>
+									<td>
+										<div class="tblChk">
+											<input type="checkbox" id="chk06"><label for="chk06"></label>
+										</div>
+									</td>
 									<td class="tL"><a href="">과테말라 여성 직업 교육 활성화</a></td>
 									<td class="tC">2025</td>
 									<td class="tC">국토교통부</td>
@@ -422,6 +451,11 @@
 									</td>
 								</tr>
 								<tr>
+									<td>
+										<div class="tblChk">
+											<input type="checkbox" id="chk12"><label for="chk12"></label>
+										</div>
+									</td>
 									<td class="tL"><a href="">과테말라 여성 직업 교육 활성화</a></td>
 									<td class="tC">2025</td>
 									<td class="tC">국토교통부</td>
@@ -445,6 +479,11 @@
 									</td>
 								</tr>
 								<tr>
+									<td>
+										<div class="tblChk">
+											<input type="checkbox" id="chk13"><label for="chk13"></label>
+										</div>
+									</td>
 									<td class="tL"><a href="">과테말라 여성 직업 교육 활성화</a></td>
 									<td class="tC">2025</td>
 									<td class="tC">국토교통부</td>
@@ -468,6 +507,11 @@
 									</td>
 								</tr>
 								<tr>
+									<td>
+										<div class="tblChk">
+											<input type="checkbox" id="chk14"><label for="chk14"></label>
+										</div>
+									</td>
 									<td class="tL"><a href="">과테말라 여성 직업 교육 활성화</a></td>
 									<td class="tC">2025</td>
 									<td class="tC">국토교통부</td>
@@ -491,6 +535,11 @@
 									</td>
 								</tr>
 								<tr>
+									<td>
+										<div class="tblChk">
+											<input type="checkbox" id="chk15"><label for="chk15"></label>
+										</div>
+									</td>
 									<td class="tL"><a href="">과테말라 여성 직업 교육 활성화</a></td>
 									<td class="tC">2025</td>
 									<td class="tC">국토교통부</td>
@@ -514,6 +563,11 @@
 									</td>
 								</tr>
 								<tr>
+									<td>
+										<div class="tblChk">
+											<input type="checkbox" id="chk16"><label for="chk16"></label>
+										</div>
+									</td>
 									<td class="tL"><a href="">과테말라 여성 직업 교육 활성화</a></td>
 									<td class="tC">2025</td>
 									<td class="tC">국토교통부</td>

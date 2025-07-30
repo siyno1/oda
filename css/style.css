@@ -262,7 +262,7 @@ input[type="text"] ~ .btn-ipt {position: absolute; top: 50%; right: 55px; displa
 /* fltCont */
 .fltCont {width:100%;}
 .fltCont li:not(.on) {display: none;}
-.fltCont li {display: flex; align-items: center; gap:2px 20px; position: relative; padding: 24px 20px; background: #fff; border: 1px solid #ddd; border-radius: 12px;}
+.fltCont li {display: flex; gap:2px 20px; position: relative; padding: 24px 20px; background: #fff; border: 1px solid #ddd; border-radius: 12px;}
 .fltCont li > p { margin-top:-15px; font-size: inherit; font-weight: 600; line-height: 1.5; color: #1E2124;}
 .fltCont li input {width: 351px; height: 40px;}
 .fltCont .chkBox,
@@ -327,7 +327,6 @@ input[type="text"] ~ .btn-ipt {position: absolute; top: 50%; right: 55px; displa
 .badge.gray {background: #868686;}
 .badge.orange {background: #DC984F;}
 .badge.blue {background: #5D8CB0;}
-.badge.lgray {background:#ACABAB}
 
 /* schList */
 .schList {margin-top: 24px;}
