@@ -53,12 +53,16 @@ select {width: 100%; height: 30px; padding: 4px 30px 4px 9px; font-weight: 500; 
 .tbl.done.col tbody tr {border-bottom: 1px solid #E2E6EA;}
 .tbl span.red {color: #db4545;}
 
+/* tbl 내부 요소 */
+.tbl .txtBox {display:block;}
+.tbl.tC .btn-wrap {justify-content: center;}
+
 /* tblGrayColor */
 .tbl.themeGray thead th {background:#EAEEF1;}
 .tbl.themeGray tbody td {background:#F4F5F6;}
 
 /* checkBox / radioBox - gap */
-.chkBox, .rdoBox {display: flex; flex-wrap: wrap; gap: 8px 30px;}
+.chkBox, .rdoBox {display: flex; flex-wrap: wrap; align-items:center; gap: 8px 30px;}
 
 /* checkBox / radioBox */
 .tblChk {display: flex; justify-content: center; align-items: center; min-height: 25px;}
@@ -165,6 +169,7 @@ input[type="text"] ~ .btn-ipt {position: absolute; top: 50%; right: 55px; displa
 .inputForm .selectBox {min-width: 300px;}
 .inputForm .selectBox.sm {min-width: 200px;}
 .inputForm > p {min-width: 80px;}
+.inputForm > em {font-style:normal;}
 
 /* tab */
 .tab {position: relative; width: 100%; margin-top: 60px;}
@@ -257,12 +262,15 @@ input[type="text"] ~ .btn-ipt {position: absolute; top: 50%; right: 55px; displa
 /* fltCont */
 .fltCont {width:100%;}
 .fltCont li:not(.on) {display: none;}
-.fltCont li {display: flex; align-items: center; padding: 24px 20px 24px 20px; background: #fff; border: 1px solid #ddd; border-radius: 12px;}
-.fltCont li > p {position: relative; top: -22px; margin-right: 20px; font-size: inherit; font-weight: 600; line-height: 1.5; color: #1E2124;}
+.fltCont li {display: flex; align-items: center; gap:2px 20px; position: relative; padding: 24px 20px; background: #fff; border: 1px solid #ddd; border-radius: 12px;}
+.fltCont li > p { margin-top:-15px; font-size: inherit; font-weight: 600; line-height: 1.5; color: #1E2124;}
 .fltCont li input {width: 351px; height: 40px;}
+.fltCont .chkBox,
+.fltCont .rdoBox {min-height:40px;}
 .fltCont .pickrBox {gap: 8px; width: 320px; height: 40px;}
 .fltCont .pickrBox input {height: 100%; border-radius: 6px;}
 .fltCont .pickrBox input::placeholder {font-size: inherit;}
+.fltCont .selectBox select {display:block;height:38px;}
 
 /* fltOpt */
 .fltOpt {flex:1 0 auto; display: flex; justify-content: space-between; align-items: center; gap: 15px; padding: 6px 18px 6px 20px; background: #fff; border: 1px solid #ddd; border-radius: 12px;}
@@ -283,7 +291,6 @@ input[type="text"] ~ .btn-ipt {position: absolute; top: 50%; right: 55px; displa
 
 /* contBox */
 .contBox {flex-wrap: wrap;}
-.fltCont .contBox > p {top: -12px;}
 
 /* contList */
 .contList {position: relative; display: flex; justify-content: space-between; align-items: flex-start; width: 100%; gap: 100px;}
