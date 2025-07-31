@@ -682,20 +682,7 @@
 															<button type="button" class="txtBtn txtPt">2024</button>
 														</td>
 														<td>
-															<!-- tipDiv : 위치에따라 class="tipDiv top left" 알맞게 사용 -->
-															<div class="tipDiv" tabindex="0">
-																<button type="button" class="txtBtn txtPt">2025 외 1</button>
-																<div class="tipCont">
-																	<ul class="txtLi">
-																		<li>※ 해당년도의 개요서, 평가결과보고서를<br>조회할 수 있습니다.</li>
-																		<li class="btn-wrap tL">
-																			<a href="#" class="txtLink txtPt">2022</a>
-																			<a href="#" class="txtLink txtPt">2023</a>
-																		</li>
-																	</ul>
-																</div>
-															</div>
-															<!-- //tipDiv : 위치에따라 class="tipDiv top left" 알맞게 사용 -->
+															<button type="button" class="txtBtn txtPt" data-tt="1">2025 외 1</button>
 														</td>
 														<td></td>
 													</tr>
@@ -1541,6 +1528,18 @@
 				<!-- //tabBox -->
 			</div>
 			<!-- //컨텐츠 영역 -->
+
+			<!-- tipCont : 트리거 data-tt : 툴팁 data-ttc 이 동일하게 설정 되어야 합니다  -->
+			<div class="tipCont" data-ttc="1" tabindex="0">
+				<ul class="txtLi">
+					<li>※ 해당년도의 개요서, 평가결과보고서를<br>조회할 수 있습니다.</li>
+					<li class="btn-wrap tL">
+						<a href="#" class="txtLink txtPt">2022</a>
+						<a href="#" class="txtLink txtPt">2023</a>
+					</li>
+				</ul>
+			</div>
+			<!-- //tipCont : 트리거 data-tt : 툴팁 data-ttc 이 동일하게 설정 되어야 합니다  -->
 		</div>
 		<!-- //컨테이너 영역 -->
 	</div>

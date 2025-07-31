@@ -216,8 +216,82 @@ function init() {
                 });
             }
         });
-
     }
+
+	$('[data-tt]').on("click", function(event){
+		event.stopPropagation();
+
+		const $trigger = $(this);
+		const ttNum = $trigger.attr('data-tt');
+		const $tooltip = $('[data-ttc="' + ttNum + '"]');
+		const $container = $('.container');
+
+		$('[data-ttc]').hide();
+
+		// 기본 위치: 아래에 툴팁
+		let directionClass = []; // 꼬리는 위를 향함
+
+		const containerOffset = $container.offset();
+		const triggerOffset = $trigger.offset();
+		const scrollTop = $container.scrollTop();
+
+		const relativeTop = triggerOffset.top - containerOffset.top + scrollTop;
+		const relativeLeft = triggerOffset.left - containerOffset.left;
+
+		$tooltip.css({
+			display: 'block',
+			position: 'absolute',
+			visibility: 'hidden'
+		});
+		const tooltipWidth = $tooltip.outerWidth();
+		const tooltipHeight = $tooltip.outerHeight();
+		$tooltip.css({
+			visibility: 'visible'
+		});
+
+		const containerWidth = $container.innerWidth();
+		const containerHeight = $container.innerHeight();
+
+		// 기본 위치
+		let tooltipTop = relativeTop + $trigger.outerHeight() + 6;
+		let tooltipLeft = relativeLeft - 6;
+
+		// 반전 조건 확인
+		const spaceBelow = containerHeight - (relativeTop + $trigger.outerHeight());
+		const spaceAbove = relativeTop;
+		const spaceRight = containerWidth - (relativeLeft + tooltipWidth);
+		const spaceLeft = relativeLeft;
+
+		// 아래가 부족하고 위가 넉넉하면 → 위로 반전
+		if (spaceBelow < tooltipHeight && spaceAbove >= tooltipHeight + 6) {
+			tooltipTop = relativeTop - tooltipHeight - 6;
+			directionClass.push('top');
+		}
+
+		// 오른쪽 넘치면 왼쪽으로 반전
+		if (spaceRight < 0 && spaceLeft >= tooltipWidth) {
+			tooltipLeft = relativeLeft - tooltipWidth + $trigger.outerWidth() + 6;
+			directionClass.push('left');
+		}
+
+		// 방향 클래스 업데이트
+		if(directionClass.length) $tooltip.addClass(directionClass.join(' '));
+
+		// 위치 적용
+		$tooltip.css({
+			top: tooltipTop + 'px',
+			left: tooltipLeft + 'px',
+			display: 'block'
+		});
+
+		// 외부 클릭 시 닫기
+		$(document).off('click.tt-close').on('click.tt-close', function (e) {
+			if (!$(e.target).closest('[data-tt], [data-ttc]').length) {
+				$('[data-ttc]').hide();
+				$(document).off('click.tt-close');
+			}
+		});
+	});
 }
 
 // pickr year input => select[Transform]
