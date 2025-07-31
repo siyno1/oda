@@ -124,35 +124,123 @@
 	<div class="dim"></div>
 	<!-- //dim -->
 
-	<!-- popup : small -->
-	<div class="popup sm" id="pop01">
+	<!-- popup -->
+	<div class="popup" id="pop01">
 		<div class="tit">
-			<p>연도 선택</p>
+			<p>연구진 평가 결과</p>
 			<button type="button" class="btn-close"><span class="sr-only">팝업창 닫기</span></button>
 		</div>
 
 		<div class="cont">
-			<p class="tooltip">{우수사례 평가 결과}를 다운로드할 평가 연도를 선택하세요.</p>
+			<p class="titDisc txtBt">사업명 : <strong>마다가스카르 남부지역 기근 대응 사업</strong></p>
 
-			<div class="tblBox mT10">
-				<table class="tbl row">
+			<div class="tblBox">
+				<table class="tbl col">
 					<caption></caption>
 					<colgroup>
-						<col style="width: 160px;">
+						<col style="width: 40px;">
+						<col style="width: 80px;">
 						<col style="width: auto;">
+						<col style="width: 80px;">
+						<col style="width: 80px;">
+						<col style="width: 200px;">
 					</colgroup>
-
+					<thead>
+						<tr>
+							<th scope="col">NO</th>
+							<th scope="col">심사 지표</th>
+							<th scope="col">내용</th>
+							<th scope="col">배점</th>
+							<th scope="col">점수</th>
+							<th scope="col">검토의견</th>
+						</tr>
+					</thead>
 					<tbody>
 						<tr>
-							<th scope="row" class="need">평가연도</th>
-							<td>
-								<div class="selectBox">
-									<select>
-										<option hidden>- 연도 선택 -</option>
-										<option value="2025">2025년</option>
-									</select>
-								</div>
+							<td>1</td>
+							<td>적절성</td>
+							<td class="tL">
+								<div class="txtBox">수원국의 개발전략과 수혜자 수용에 부합하는지?<br>(예시) 부합(10), 상당 정도(8), 어느 정도(4), 아니요(2)</div>
 							</td>
+							<td class="tR">10 점</td>
+							<td class="tR">10점</td>
+							<td rowspan="3">
+								<div class="txtBox">등록한 DATA가 보여집니다.</div>
+							</td>
+						</tr>
+						<tr>
+							<td>2</td>
+							<td>적절성</td>
+							<td class="tL">
+								<div class="txtBox">수원국의 개발전략과 수혜자 수용에 부합하는지?<br>(예시) 부합(10), 상당 정도(8), 어느 정도(4), 아니요(2)</div>
+							</td>
+							<td class="tR">10 점</td>
+							<td class="tR">10점</td>
+						</tr>
+						<tr>
+							<td>3</td>
+							<td>적절성</td>
+							<td class="tL">
+								<div class="txtBox">수원국의 개발전략과 수혜자 수용에 부합하는지?<br>(예시) 부합(10), 상당 정도(8), 어느 정도(4), 아니요(2)</div>
+							</td>
+							<td class="tR">10 점</td>
+							<td class="tR">10점</td>
+						</tr>
+						<tr>
+							<td>4</td>
+							<td>효과성/영향력</td>
+							<td class="tL">
+								<div class="txtBox">수원국의 개발전략과 수혜자 수용에 부합하는지?<br>(예시) 부합(10), 상당 정도(8), 어느 정도(4), 아니요(2)</div>
+							</td>
+							<td class="tR">10 점</td>
+							<td class="tR">10점</td>
+							<td rowspan="2">
+								<div class="txtBox">등록한 DATA가 보여집니다.</div>
+							</td>
+						</tr>
+						<tr>
+							<td>5</td>
+							<td>효과성/영향력</td>
+							<td class="tL">
+								<div class="txtBox">수원국의 개발전략과 수혜자 수용에 부합하는지?<br>(예시) 부합(10), 상당 정도(8), 어느 정도(4), 아니요(2)</div>
+							</td>
+							<td class="tR">10 점</td>
+							<td class="tR">10점</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+			<div class="tblBox">
+				<table class="tbl col">
+					<caption></caption>
+					<colgroup>
+						<col style="width:auto;">
+						<col style="width:auto;">
+						<col style="width:auto;">
+						<col style="width:auto;">
+						<col style="width:auto;">
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col" class="tC">적절성</th>
+							<th scope="col" class="tC">효과성/영향력</th>
+							<th scope="col" class="tC">지속가능성</th>
+							<th scope="col" class="tC">적극성</th>
+							<th scope="col" class="tC">대표성</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="tC">10점</td>
+							<td class="tC">10점</td>
+							<td class="tC">10점</td>
+							<td class="tC">10점</td>
+							<td class="tC">10점</td>
+						</tr>
+						<tr>
+							<th scope="row" colspan="4" class="tC">총점</th>
+							<td class="tC">50점</td>
 						</tr>
 					</tbody>
 				</table>
@@ -160,11 +248,10 @@
 		</div>
 
 		<div class="btn-wrap">
-			<button type="button" class="btn close">취소</button>
-			<button type="button" class="btn pt">다운로드</button>
+			<button type="button" class="btn close">닫기</button>
 		</div>
 	</div>
-	<!-- //popup : small -->
+	<!-- //popup -->
 </body>
 
 </html>

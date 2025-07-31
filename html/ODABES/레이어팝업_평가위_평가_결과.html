@@ -124,35 +124,75 @@
 	<div class="dim"></div>
 	<!-- //dim -->
 
-	<!-- popup : small -->
-	<div class="popup sm" id="pop01">
+	<!-- popup -->
+	<div class="popup" id="pop01">
 		<div class="tit">
-			<p>연도 선택</p>
+			<p>평가전문위 평가 결과</p>
 			<button type="button" class="btn-close"><span class="sr-only">팝업창 닫기</span></button>
 		</div>
 
 		<div class="cont">
-			<p class="tooltip">{우수사례 평가 결과}를 다운로드할 평가 연도를 선택하세요.</p>
+			<p class="titDisc txtBt">사업명 : <strong>마다가스카르 남부지역 기근 대응 사업</strong></p>
 
-			<div class="tblBox mT10">
+			<div class="tblBox">
+				<table class="tbl col">
+					<caption></caption>
+					<colgroup>
+						<col style="width: 40px;">
+						<col style="width: 120px;">
+						<col style="width: auto;">
+						<col style="width: auto;">
+						<col style="width: auto;">
+						<col style="width: auto;">
+						<col style="width: auto;">
+						<col style="width: 80px;">
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col">NO</th>
+							<th scope="col">이름</th>
+							<th scope="col">적절성</th>
+							<th scope="col">효과성/영향력</th>
+							<th scope="col">지속가능성</th>
+							<th scope="col">적극성</th>
+							<th scope="col">대표성</th>
+							<th scope="col">총점</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>1</td>
+							<td class="tC">홍길동</td>
+							<td class="tC">10</td>
+							<td class="tC">10</td>
+							<td class="tC">10</td>
+							<td class="tC">10</td>
+							<td class="tC">10</td>
+							<td class="tC">100</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+			<div class="tblBox">
 				<table class="tbl row">
 					<caption></caption>
 					<colgroup>
-						<col style="width: 160px;">
+						<col style="width: 140px;">
 						<col style="width: auto;">
 					</colgroup>
-
 					<tbody>
 						<tr>
-							<th scope="row" class="need">평가연도</th>
-							<td>
-								<div class="selectBox">
-									<select>
-										<option hidden>- 연도 선택 -</option>
-										<option value="2025">2025년</option>
-									</select>
-								</div>
-							</td>
+							<th scope="row">평가위원 평균 점수</th>
+							<td></td>
+						</tr>
+						<tr>
+							<th scope="row">가감점</th>
+							<td></td>
+						</tr>
+						<tr>
+							<th scope="row">최종 순위</th>
+							<td></td>
 						</tr>
 					</tbody>
 				</table>
@@ -160,11 +200,10 @@
 		</div>
 
 		<div class="btn-wrap">
-			<button type="button" class="btn close">취소</button>
-			<button type="button" class="btn pt">다운로드</button>
+			<button type="button" class="btn close">닫기</button>
 		</div>
 	</div>
-	<!-- //popup : small -->
+	<!-- //popup -->
 </body>
 
 </html>
