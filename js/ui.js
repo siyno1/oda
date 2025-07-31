@@ -65,9 +65,11 @@ function init() {
     // tab Event 1
     $('.tab').on('click', 'button', function () {
         let $btn = $(this);
+		let $tabBox = $btn.closest('.tabBox');
         let $li = $btn.parent();
         let index = $li.index();
-        let $tabConts = $('.tabCont');
+        let $tabConts = $tabBox.children('.tabCont');
+
         $tabConts.each(function(idx, $tabCont){
             let $tabItems = $($tabCont).children().removeClass('active');
             let $target = $tabItems.eq(index).addClass('active');
@@ -218,6 +220,7 @@ function init() {
         });
     }
 
+	//툴팁
 	$('[data-tt]').on("click", function(event){
 		event.stopPropagation();
 
