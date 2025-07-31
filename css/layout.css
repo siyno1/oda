@@ -101,6 +101,7 @@ strong {font-weight:700;}
 
 /* txt color definition */
 .txtPt {color:#4f9097 !important;}/* primary */
+.txtGray {color:#8A949E !important;}
 
 /* 타이틀 형식 : disc */
 .titDisc {margin:0 0 6px 0;font-size:15px;line-height:1.5;}

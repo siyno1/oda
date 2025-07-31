@@ -58,6 +58,7 @@ button {cursor: pointer; transition: 0.3s all;}
 .bold{ font-weight:500;}
 .lh20{ line-height:20px;}
 .w100 {width:100%;}
+.h100 {height:100%;}
 .wA {width: auto!important;}
 .item-center {align-items: center!important;}
 .border-top {border-top: 1px solid var(--krds-gray-80);}

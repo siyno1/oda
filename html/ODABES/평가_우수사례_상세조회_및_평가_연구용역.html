@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<title>ODA</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+	<meta http-equiv="Pragma" content="no-cache">
+	<meta http-equiv="Expires" content="0">
+
+	<link rel="stylesheet" href="./../../css/flatpickr.min.css">
+	<link rel="stylesheet" href="./../../css/reset.css">
+	<link rel="stylesheet" href="./../../css/layout.css">
+	<link rel="stylesheet" href="./../../css/style.css">
+
+	<script defer src="./../../js/jquery-3.7.1.min.js"></script>
+	<script defer src="./../../js/flatpickr.js"></script>
+	<script defer src="./../../js/ui.js"></script>
+</head>
+
+<body>
+	<!-- wrap -->
+	<div id="wrap" class="wrapper">
+		<!-- 헤더 영역 -->
+		<div id="header" class="header">
+			<div class="wrap">
+				<h1><a href="./../gate.html"><img src="./../../img/logo.svg"></a></h1>
+				<ul class="gnb">
+					<li><a href="javascript:;">준비단계</a></li><!-- 활성화 시 li class="active" -->
+					<li><a href="javascript:;">진행단계</a></li>
+					<li><a href="javascript:;">완료단계</a></li>
+					<li><a href="javascript:;">정보마당</a></li>
+					<li><a href="javascript:;">운영관리</a></li>
+				</ul>
+				<div class="userBox">
+					<button class="btnUser">운영관리자</button>
+					<ul class="dropDown">
+						<li><a href="javascript:;">쪽지</a></li>
+						<li><a href="javascript:;">마이페이지</a></li>
+						<li><a href="javascript:;">로그아웃</a></li>
+					</ul>
+				</div>
+				<div class="searchBox">
+					<input type="text" placeholder="통합검색">
+					<button class="btnSearch">검색</button>
+				</div>
+			</div>
+		</div>
+		<!-- //헤더 영역 -->
+
+		<!-- 컨테이너 영역 -->
+		<div id="container" class="container">
+
+			<!-- LNB 영역 -->
+			<div id="side" class="side">
+				<div class="side_menu">
+					<h2>ODA 사업 관리</h2>
+					<ul class="gnb">
+						<li>
+							<a href="javascript:;">사업목록</a>
+						</li>
+						<li class="hasChild active">
+							<a href="javascript:;">연수 사업 관리</a>
+							<ul>
+								<li><a href="javascript:;" class="on">연수 사업 목록</a></li>
+								<li><a href="javascript:;">연수 프로그램 관리</a></li>
+								<li><a href="javascript:;">연수생 관리</a></li>
+								<li><a href="javascript:;">체크리스트</a></li>
+							</ul>
+						</li>
+						<li class="hasChild">
+							<a href="javascript:;">장학 사업 관리</a>
+							<ul>
+								<li><a href="javascript:;">연수 사업 목록</a></li>
+								<li><a href="javascript:;">연수 프로그램 관리</a></li>
+								<li><a href="javascript:;">연수생 관리</a></li>
+								<li><a href="javascript:;">체크리스트</a></li>
+							</ul>
+						</li>
+						<li class="hasChild">
+							<a href="javascript:;">패키지 사업 관리</a>
+							<ul>
+								<li><a href="javascript:;">연수 사업 목록</a></li>
+								<li><a href="javascript:;">연수 프로그램 관리</a></li>
+								<li><a href="javascript:;">연수생 관리</a></li>
+								<li><a href="javascript:;">체크리스트</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<button class="btnSlide">slide</button>
+			</div>
+			<!-- //LNB 영역 -->
+
+			<!-- 컨텐츠 영역 -->
+			<div class="contents">
+				<div class="pgtBox">
+					<div class="lt">
+						<h2>우수사례 평가</h2>
+					</div>
+
+					<ul class="breadcrumb">
+						<li class="home"><a href="javascript:;">홈</a></li>
+						<li><a href="javascript:;">평가</a></li>
+						<li><a href="javascript:;">우수사례</a></li>
+						<li><a href="javascript:;">우수사례 평가</a></li>
+					</ul>
+
+					<div class="rt"></div>
+				</div>
+
+				<!-- 기본정보 -->
+				<div class="titBox">
+					<div class="lt">
+						<h3>기본정보</h3>
+					</div>
+
+					<div class="rt">
+
+					</div>
+				</div>
+
+				<div class="tblBox">
+					<table class="tbl row">
+						<caption></caption>
+						<colgroup>
+							<col style="width: 160px;">
+							<col style="width: auto;">
+							<col style="width: 240px;">
+							<col style="width: auto;">
+						</colgroup>
+
+						<tbody>
+							<tr>
+								<th scope="row">우수사례 사업명</th>
+								<td colspan="3">
+									<div class="txtBox">등록한 DATA가 보여집니다.</div>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">사업분야</th>
+								<td>
+									<div class="txtBox">등록한 DATA가 보여집니다.</div>
+								</td>
+								<th scope="row">올해 기관역량 진단 대상 여부</th>
+								<td>
+									<div class="txtBox">등록한 DATA가 보여집니다.</div>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row" rowspan="2">수원국</th>
+								<td colspan="3">
+									<div class="txtBox">등록한 DATA가 보여집니다.</div>
+								</td>
+							</tr>
+							<tr>
+								<td colspan="3">
+									<div class="txtBox">등록한 DATA가 보여집니다.</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<!-- //기본정보 -->
+
+
+				<!-- 담당자 정보 -->
+				<div class="titBox">
+					<div class="lt">
+						<h3>담당자 정보</h3>
+					</div>
+
+					<div class="rt">
+
+					</div>
+				</div>
+
+				<div class="tblBox">
+					<table class="tbl row">
+						<caption></caption>
+						<colgroup>
+							<col style="width: 160px;">
+							<col style="width: auto;">
+						</colgroup>
+
+						<tbody>
+							<tr>
+								<th scope="row">담당자</th>
+								<td>
+									<div class="txtBox">홍길동 (010-0000-0000)</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<!-- //담당자 정보 -->
+
+				<!-- 첨부파일 -->
+				<div class="titBox">
+					<div class="lt">
+						<h3>첨부파일</h3>
+					</div>
+
+					<div class="rt">
+						<!-- btn-wrap -->
+						<div class="btn-wrap">
+							<button type="button" class="btn">전체 다운로드</button>
+						</div>
+						<!-- //btn-wrap -->
+					</div>
+				</div>
+
+				<div class="tblBox">
+					<table class="tbl row">
+						<caption></caption>
+						<colgroup>
+							<col style="width: 160px;">
+							<col style="width: auto;">
+						</colgroup>
+
+						<tbody>
+							<tr>
+								<th scope="row" class="need">우수사례 신청 보고서</th>
+								<td colspan="3">
+									<div class="file">
+										<div class="file-upload"><!-- @dev 2025.07.25 첨부파일 readonly 형식 추가 -->
+											<ul>
+												<li>
+													<button type="button" class="btn blue">미리보기</button>
+													<label for="file01-01" class="hwp">대기관리권역의 대기환경개선에 관한 특별법 시행규칙(규제영향분석서).hwpx</label>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row" class="need">사업 종료평가 보고서</th>
+								<td colspan="3">
+									<div class="file">
+										<div class="file-upload"><!-- @dev 2025.07.25 첨부파일 readonly 형식 추가 -->
+											<ul>
+												<li>
+													<button type="button" class="btn blue">미리보기</button>
+													<label for="file01-01" class="hwp">대기관리권역의 대기환경개선에 관한 특별법 시행규칙(규제영향분석서).hwpx</label>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">중간 평가 보고서</th>
+								<td colspan="3">
+									<div class="file">
+										<div class="file-upload"><!-- @dev 2025.07.25 첨부파일 readonly 형식 추가 -->
+											<ul>
+												<li>
+													<button type="button" class="btn blue">미리보기</button>
+													<label for="file01-01" class="hwp">대기관리권역의 대기환경개선에 관한 특별법 시행규칙(규제영향분석서).hwpx</label>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">추가 서류</th>
+								<td colspan="3">
+									<div class="file">
+										<div class="file-upload"><!-- @dev 2025.07.25 첨부파일 readonly 형식 추가 -->
+											<ul>
+												<li>
+													<button type="button" class="btn blue">미리보기</button>
+													<label for="file01-01" class="hwp">대기관리권역의 대기환경개선에 관한 특별법 시행규칙(규제영향분석서).hwpx</label>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<!-- //첨부파일 -->
+
+				<!-- 우수사례 평가 -->
+				<div class="titBox">
+					<div class="lt">
+						<h3>우수사례 평가</h3>
+					</div>
+
+					<div class="rt">
+					</div>
+				</div>
+
+				<div class="tblBox">
+					<table class="tbl col">
+						<caption></caption>
+						<colgroup>
+							<col style="width: 6%;">
+							<col style="width: 10%;">
+							<col style="width: auto;">
+							<col style="width: 6%;">
+							<col style="width: 10%;">
+							<col style="width: 20%;">
+						</colgroup>
+						<thead>
+							<tr>
+								<th scope="col">NO</th>
+								<th scope="col">심사 지표</th>
+								<th scope="col">내용</th>
+								<th scope="col">배점</th>
+								<th scope="col">점수</th>
+								<th scope="col">검토의견</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>1</td>
+								<td>적절성</td>
+								<td class="tL">
+									<div class="txtBox">수원국의 개발전략과 수혜자 수용에 부합하는지?<br>(예시) 부합(10), 상당 정도(8), 어느 정도(4), 아니요(2)</div>
+								</td>
+								<td class="tR">10 점</td>
+								<td>
+									<!-- inputUnit -->
+									<div class="inputUnit">
+										<input type="text" class="tR">
+										<span>점</span>
+									</div>
+									<!-- //inputUnit -->
+								</td>
+								<td rowspan="3">
+									<textarea class="h100"></textarea>
+								</td>
+							</tr>
+							<tr>
+								<td>2</td>
+								<td>적절성</td>
+								<td class="tL">
+									<div class="txtBox">수원국의 개발전략과 수혜자 수용에 부합하는지?<br>(예시) 부합(10), 상당 정도(8), 어느 정도(4), 아니요(2)</div>
+								</td>
+								<td class="tR">10 점</td>
+								<td>
+									<!-- inputUnit -->
+									<div class="inputUnit">
+										<input type="text" class="tR">
+										<span>점</span>
+									</div>
+									<!-- //inputUnit -->
+								</td>
+							</tr>
+							<tr>
+								<td>3</td>
+								<td>적절성</td>
+								<td class="tL">
+									<div class="txtBox">수원국의 개발전략과 수혜자 수용에 부합하는지?<br>(예시) 부합(10), 상당 정도(8), 어느 정도(4), 아니요(2)</div>
+								</td>
+								<td class="tR">10 점</td>
+								<td>
+									<!-- inputUnit -->
+									<div class="inputUnit">
+										<input type="text" class="tR">
+										<span>점</span>
+									</div>
+									<!-- //inputUnit -->
+								</td>
+							</tr>
+							<tr>
+								<td>4</td>
+								<td>효과성/영향력</td>
+								<td class="tL">
+									<div class="txtBox">수원국의 개발전략과 수혜자 수용에 부합하는지?<br>(예시) 부합(10), 상당 정도(8), 어느 정도(4), 아니요(2)</div>
+								</td>
+								<td class="tR">10 점</td>
+								<td>
+									<!-- inputUnit -->
+									<div class="inputUnit">
+										<input type="text" class="tR">
+										<span>점</span>
+									</div>
+									<!-- //inputUnit -->
+								</td>
+								<td rowspan="2">
+									<textarea class="h100"></textarea>
+								</td>
+							</tr>
+							<tr>
+								<td>5</td>
+								<td>효과성/영향력</td>
+								<td class="tL">
+									<div class="txtBox">수원국의 개발전략과 수혜자 수용에 부합하는지?<br>(예시) 부합(10), 상당 정도(8), 어느 정도(4), 아니요(2)</div>
+								</td>
+								<td class="tR">10 점</td>
+								<td>
+									<!-- inputUnit -->
+									<div class="inputUnit">
+										<input type="text" class="tR">
+										<span>점</span>
+									</div>
+									<!-- //inputUnit -->
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<!-- //우수사례 평가 -->
+
+				<div class="btn-wrap">
+					<button type="button" class="btn">취소</button>
+					<button type="button" class="btn pt">저장</button>
+				</div>
+
+			</div>
+			<!-- //컨텐츠 영역 -->
+		</div>
+		<!-- //컨테이너 영역 -->
+	</div>
+	<!-- //wrap -->
+</body>
+
+</html>
