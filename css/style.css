@@ -368,7 +368,7 @@ input[type="text"] ~ .btn-ipt {position: absolute; top: 50%; right: 55px; displa
 /* map */
 .mapBox {position: relative; border-top: 1px solid #ddd;}
 .map {width: 100%; height: calc(100vh - 150px);}
-.mapList {position: fixed; top: 130px; right: 0; width: 258px; height: 100%; padding: 10px 24px 24px 24px; box-shadow: -8px 0 12px rgba(0, 0, 0, 0.08); overflow-y: scroll;}
+.mapList {position: fixed; top: 130px; right: 0; bottom:0; width: 258px; padding: 10px 24px 24px 24px; box-shadow: -8px 0 12px rgba(0, 0, 0, 0.08); overflow-y: scroll;}
 .mapList a {position: relative; display: flex; align-items: center; width: 100%; padding: 14px 0; font-size: 16px; font-weight: 400; letter-spacing: -0.8px; color: #1E2124; border-bottom: 1px solid #ddd;}
 .mapList a::after {position: absolute; right: 9px; content: ' '; display: block; width: 20px; height: 20px; background: url(../img/ico_map_arr.svg) no-repeat center center; transition: 0.3s all;}
 .mapList a.on::after {transform: rotate(-180deg);}
@@ -429,7 +429,7 @@ input[type="text"] ~ .btn-ipt {position: absolute; top: 50%; right: 55px; displa
 .popup.mapPopup .tab {margin-top: 0;}
 .popup.mapPopup .tab ul {border-width: 1px 0 0 1px; border-style: solid; border-color: #D9E1F2;}
 .popup.mapPopup .tabCont {padding-bottom: 25px;}
-.popup.mapPopup .tabCont > li {display: flex; flex-direction: column; gap: 11px; max-height: 250px; padding: 0 10px; overflow-y: auto;}
+.popup.mapPopup .tabCont > li {display: flex; flex-direction: column; flex-wrap:nowrap; gap: 11px; max-height: 250px; padding: 24px 10px 0; overflow-y: auto;}
 .popup.mapPopup .tabCont > li:not(.active) {display: none;}
 .popup.mapPopup .tabCont p {font-size: 14px; font-weight: 400; line-height: 1.4; color: #1E2124;}
 .popup.mapPopup > .btn-wrap .btn {height: 34px; padding: 5px 14px; border-color: #B1B8BE;}
