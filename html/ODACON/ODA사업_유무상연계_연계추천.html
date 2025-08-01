@@ -111,35 +111,27 @@
 				</div>
 				<!-- //pgtBox -->
 
-				<!-- schBox -->
+				<!-- schBox @dev 25.08.01 검색 수정 -->
 				<div class="schBox">
-					<div class="searchTxt">
-						<p>사업명</p>
-						<div>
-							<input type="text" placeholder="사업명을 입력하세요.">
-							<button type="button" class="btn-src">검색</button>
+					<div class="schRow">
+						<ul class="fltList">
+							<li><button type="button">국가</button></li>
+							<li><button type="button">사업분야</button></li>
+						</ul>
+
+						<div class="schTxt">
+							<div>
+								<input type="text" placeholder="사업명을 입력하세요.">
+								<button type="button" class="btn-src">검색</button>
+							</div>
 						</div>
 					</div>
 
-					<div class="searchFlt">
-						<div class="fltList">
-							<ul>
-								<li><button type="button">사업 분야</button></li>
-							</ul>
-						</div>
-
+					<div class="schRow toggleFltCont" style="display:none;">
 						<div class="fltCont">
 							<ul>
-								<li>
-									<p>평가 건 명</p>
-									<div class="iptBox">
-										<input type="text" placeholder="평가 건 명을 입력해주세요.">
-										<button type="button" class="btn cnf">확인</button>
-									</div>
-								</li>
-
 								<li class="contBox type01">
-									<p>수원국</p>
+									<p>국가</p>
 									<div class="contList">
 										<div class="">
 											<p>대륙</p>
@@ -216,30 +208,44 @@
 
 										<div>
 											<ul>
-												<li><button type="button">아시아</button></li>
-												<li><button type="button">아프리카</button></li>
-												<li><button type="button">중남미</button></li>
-												<li><button type="button">중동 · CIS</button></li>
-												<li><button type="button">오세아니아 · 기타</button></li>
-												<li><button type="button">그외 지역</button></li>
+												<li><button type="button">교육</button></li>
+												<li><button type="button">보건</button></li>
+												<li><button type="button">인구정책/시책 및 생식보건</button></li>
+												<li><button type="button">식수 공급 및 위생</button></li>
+												<li><button type="button">공공행정 및 시민사회</button></li>
+												<li><button type="button">"기타 사회인프라 및 서비스"</button></li>
+												<li><button type="button">운송 및 창고</button></li>
+												<li><button type="button">통신</button></li>
+												<li><button type="button">에너지</button></li>
+												<li><button type="button">"금융 및 재무 서비스"</button></li>
+												<li><button type="button">"비즈니스 및 기타서비스"</button></li>
+												<li><button type="button">농업</button></li>
 											</ul>
 										</div>
 
 										<div>
 											<ul>
-												<li><button type="button">아시아</button></li>
-												<li><button type="button">아프리카</button></li>
-												<li><button type="button">중남미</button></li>
-												<li><button type="button">중동 · CIS</button></li>
-												<li><button type="button">오세아니아 · 기타· 기타</button></li>
-												<li><button type="button">그외 지역</button></li>
+												<li><button type="button">교육</button></li>
+												<li><button type="button">보건</button></li>
+												<li><button type="button">인구정책/시책 및 생식보건</button></li>
+												<li><button type="button">식수 공급 및 위생</button></li>
+												<li><button type="button">공공행정 및 시민사회</button></li>
+												<li><button type="button">"기타 사회인프라 및 서비스"</button></li>
+												<li><button type="button">운송 및 창고</button></li>
+												<li><button type="button">통신</button></li>
+												<li><button type="button">에너지</button></li>
+												<li><button type="button">"금융 및 재무 서비스"</button></li>
+												<li><button type="button">"비즈니스 및 기타서비스"</button></li>
+												<li><button type="button">농업</button></li>
 											</ul>
 										</div>
 									</div>
 								</li>
 							</ul>
 						</div>
+					</div>
 
+					<div class="schRow">
 						<div class="fltOpt">
 							<ul>
 								<li>
@@ -263,9 +269,11 @@
 						</div>
 					</div>
 
-					<button type="button" class="btn-apply">조건검색</button>
+					<div class="schBtn">
+						<button type="button" class="btn-apply">조건검색</button>
+					</div>
 				</div>
-				<!-- //schBox -->
+				<!-- schBox //@dev 25.08.01 검색 수정 -->
 
 				<!-- schList -->
 				<div class="schList">
