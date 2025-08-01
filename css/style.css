@@ -22,9 +22,9 @@ select {width: 100%; height: 30px; padding: 4px 30px 4px 9px; font-weight: 500; 
 
 /* tblBox - margin */
 .tblBox {width: 100%; overflow: auto clip;}
-:where(.tblBox, .adBox, .pagination) + .titBox {margin-top: 40px;}
-:where(.tblBox, .adBox, .pagination) + .tblBox {margin-top: 20px;}
-:where(.tblBox, .adBox, .pagination) + .tblBox .tbl::before {background: #E2E6EA;}
+:where(.cntBox, .tblBox, .adBox, .pagination) + .titBox {margin-top: 40px;}
+:where(.cntBox, .tblBox, .adBox, .pagination) + .tblBox {margin-top: 20px;}
+:where(.cntBox, .tblBox, .adBox, .pagination) + .tblBox .tbl::before {background: #E2E6EA;}
 .toggleBox + :where(.titBox, .tblBox) {margin-top: 20px;}
 :where(.titBox, .tblBox, .pagination) + .toggleBox {margin-top: 40px;}
 .btn-wrap + :where(.titBox, .tblBox) {margin-top: 40px;}

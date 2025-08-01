@@ -95,32 +95,23 @@
 
 			<!-- 컨텐츠 영역 -->
 			<div class="contents">
+				<!-- pgtBox -->
 				<div class="pgtBox">
 					<div class="lt">
-						<h2>우수사례 심사 기준 등록</h2>
+						<h2>진단항목관리</h2>
 					</div>
 
 					<ul class="breadcrumb">
 						<li class="home"><a href="javascript:;">홈</a></li>
-						<li><a href="javascript:;">평가</a></li>
-						<li><a href="javascript:;">우수사례</a></li>
-						<li><a href="javascript:;">우수사례 심사 기준 관리</a></li>
+						<li><a href="javascript:;">기관역량진단</a></li>
+						<li><a href="javascript:;">진단항목관리</a></li>
 					</ul>
 
 					<div class="rt"></div>
 				</div>
+				<!-- //pgtBox -->
 
-				<!-- 우수사례 심사 기준 등록 -->
-				<div class="titBox">
-					<div class="lt">
-						<h3>우수사례 심사 기준 등록</h3>
-					</div>
-
-					<div class="rt">
-
-					</div>
-				</div>
-
+				<!-- 진단 기본 정보 -->
 				<div class="tblBox">
 					<table class="tbl row">
 						<caption></caption>
@@ -133,53 +124,63 @@
 
 						<tbody>
 							<tr>
-								<th scope="row" class="need">심사 기준명</th>
+								<th scope="row">진단 항목 명</th>
 								<td colspan="3">
-									<input type="text" class="w100" placeholder="심사 기준명을 입력해 주세요">
+									<div class="txtBox">등록한 DATA가 보여집니다.</div>
 								</td>
 							</tr>
 							<tr>
 								<th scope="row">사용 연도</th>
 								<td>
-									<div class="selectBox">
-										<select name="" id="select01">
-											<option value="" hidden>- 연도 선택 -</option>
-											<option value="2025">2025년</option>
-											<option value="2024">2024년</option>
-											<option value="2023">2023년</option>
-										</select>
-									</div>
+									<div class="txtBox">등록한 DATA가 보여집니다.</div>
 								</td>
 								<th scope="row">사용 여부</th>
 								<td>
-									<div class="rdoBox">
-										<input type="radio" id="rdo01-1" value="예">
-										<label for="rdo01-1">예</label>
-										<input type="radio" id="rdo01-2" value="아니오">
-										<label for="rdo01-2">아니오</label>
-									</div>
+									<div class="txtBox">등록한 DATA가 보여집니다.</div>
 								</td>
 							</tr>
 							<tr>
-								<th scope="row">심사 기준 설명</th>
+								<th scope="row">부가 설명</th>
 								<td colspan="3">
-									<textarea name="" id="txtbox05" placeholder="심사 기준에 대한 부가 설명"></textarea>
+									<div class="txtBox">등록한 DATA가 보여집니다.</div>
 								</td>
 							</tr>
 						</tbody>
 					</table>
 				</div>
-				<!-- //우수사례 심사 기준 등록 -->
+				<!-- //진단 기본 정보 -->
 
-
-				<!-- 심사 기준 -->
+				<!-- 성과 관리 역량 진단 항목 -->
 				<div class="titBox">
 					<div class="lt">
-						<h3>심사 기준</h3>
+						<h3>성과 관리 역량 진단 항목</h3>
 					</div>
 
 					<div class="rt">
 
+					</div>
+				</div>
+
+				<div class="cntBox">
+					<div class="tblBox">
+						<table class="tbl row">
+							<caption></caption>
+							<colgroup>
+								<col style="width: auto;">
+								<col style="width: auto;">
+								<col style="width: 160px;">
+								<col style="width: auto;">
+							</colgroup>
+
+							<tbody>
+								<tr>
+									<th scope="row" class="tC">성과 관리 역량 진단 항목 배점</th>
+									<td class="tR">60 점</td>
+									<th scope="row" class="tC">비율</th>
+									<td class="tR">60 %</td>
+								</tr>
+							</tbody>
+						</table>
 					</div>
 				</div>
 
@@ -285,115 +286,19 @@
 						</table>
 					</div>
 				</div>
+				<!-- //성과 관리 역량 진단 항목 -->
 
-				<div class="cntBox">
-					<div class="tblBox">
-						<table class="tbl row">
-							<caption></caption>
-							<colgroup>
-								<col style="width: 160px;">
-								<col style="width: auto;">
-								<col style="width: 160px;">
-								<col style="width: auto;">
-							</colgroup>
-
-							<tbody>
-								<tr>
-									<th scope="row">지표명</th>
-									<td>효과성/영향력</td>
-									<th scope="row">총점</th>
-									<td>
-										<!-- inputUnit -->
-										<div class="inputUnit sm">
-											<input type="text" class="tR">
-											<span>점</span>
-											<span>/</span>
-											<span class="txtGray">30</span>
-										</div>
-										<!-- //inputUnit -->
-									</td>
-								</tr>
-							</tbody>
-						</table>
+				<!-- 평점 기준 가이드 -->
+				<div class="titBox">
+					<div class="lt">
+						<h3>평점 기준 가이드</h3>
 					</div>
 
-					<div class="tblBox">
-						<table class="tbl col">
-							<caption></caption>
-							<colgroup>
-								<col style="width: 6%;">
-								<col style="width: auto;">
-								<col style="width: 10%;">
-							</colgroup>
-							<thead>
-								<tr>
-									<th scope="col">NO</th>
-									<th scope="col">내용</th>
-									<th scope="col">배점</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td>1</td>
-									<td class="tL">
-										<div class="txtBox">
-											수원국의 개발전략과 수혜자 수용에 부합하는 지?<br>
-											(예시) 부합(10), 상당 정도(8), 어느 정도(4), 아니요(2)
-										</div>
-									</td>
-									<td class="tC">
-										<!-- inputUnit -->
-										<div class="inputUnit">
-											<input type="text" class="tR">
-											<span>점</span>
-										</div>
-										<!-- //inputUnit -->
-									</td>
-								</tr>
-								<tr>
-									<td>2</td>
-									<td class="tL">
-										<div class="txtBox">
-											수원국의 개발전략과 수혜자 수용에 부합하는 지?<br>
-											(예시) 부합(10), 상당 정도(8), 어느 정도(4), 아니요(2)
-										</div>
-									</td>
-									<td class="tC">
-										<!-- inputUnit -->
-										<div class="inputUnit">
-											<input type="text" class="tR">
-											<span>점</span>
-										</div>
-										<!-- //inputUnit -->
-									</td>
-								</tr>
-								<tr>
-									<td>3</td>
-									<td class="tL">
-										<div class="txtBox">
-											수원국의 개발전략과 수혜자 수용에 부합하는 지?<br>
-											(예시) 부합(10), 상당 정도(8), 어느 정도(4), 아니요(2)
-										</div>
-									</td>
-									<td class="tC">
-										<!-- inputUnit -->
-										<div class="inputUnit">
-											<input type="text" class="tR">
-											<span>점</span>
-										</div>
-										<!-- //inputUnit -->
-									</td>
-								</tr>
-							</tbody>
-						</table>
+					<div class="rt">
+
 					</div>
 				</div>
-				<!-- //심사 기준 -->
-
-				<div class="btn-wrap">
-					<button type="button" class="btn">취소</button>
-					<button type="button" class="btn pt">저장</button>
-				</div>
+				<!-- //평점 기준 가이드 -->
 			</div>
 			<!-- //컨텐츠 영역 -->
 		</div>

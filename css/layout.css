@@ -110,5 +110,4 @@ strong {font-weight:700;}
 .titDisc.txtBt::after {top:9px;}
 
 /* 그룹핑 */
-.cont + .cont {margin-top:60px;}
-.titBox + .cont {margin-top:0;}
+.cntBox + .cntBox {margin-top:60px;}
