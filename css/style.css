@@ -397,6 +397,9 @@ input[type="text"] ~ .btn-ipt {position: absolute; top: 50%; right: 55px; displa
 .popup.sm .cont {padding: 20px 12px;}
 .popup.sm > .btn-wrap {padding: 12px 13px;}
 
+/* popup large : large팝업 임시사이즈 추가 */
+.popup.lg {width: 1350px;}
+
 /* popup subBox */
 .popup .subBox {margin-top: 10px;}
 .popup .subBox > p {display: block; text-align: center; font-size: 19px; font-weight: 700; line-height: 1.5; color: #1E2124;}
