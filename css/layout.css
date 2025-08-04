@@ -67,8 +67,7 @@
 .rt .txtInfo {text-align:right;}
 .horz {display:flex;align-items:center;gap:20px;}
 
-.pgtBox{display:flex;align-items:flex-end;margin-bottom:20px;}
-
+.pgtBox {display:flex;align-items:flex-end;margin-bottom:20px;}
 .pgtBox h2{padding-left:20px;background:url(../img/tit_bull01.svg)no-repeat left center;font-size:19px;font-weight:700;}
 
 .breadcrumb{display:flex;align-items:center;height:19px;margin-left:20px;}

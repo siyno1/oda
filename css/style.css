@@ -207,13 +207,15 @@ input[type="text"] ~ .btn-ipt {position: absolute; top: 50%; right: 55px; displa
 .depth2Cont > li:not(.active) {display: none;}
 
 /* tabBox */
+.tabBox {margin-top:60px;}
 .tabBox > .tab {margin-top: 0;}
 .tabBox .tabCont > li:not(.active) {display: none;}
 .tabBox .tabCont > li {display: flex; align-items: flex-start; flex-wrap: wrap; margin-top: 0;}
 .tabBox .tabCont > li .schList {width: 100%;}
 .tabBox .tabCont .tabCont > li {margin-top: 24px;}
 .tabBox .tabCont > li .titBox:first-child {margin-top:20px;}
-:where(.schBox, .tblBox) + .tabBox {margin-top: 60px;}
+.tabBox:first-child {margin-top:0;}
+.pgtBox + .tabBox {margin-top:0;}
 
 /* pagination */
 .pagination {display: flex; justify-content: center; align-items: center; width: 100%; margin-top: 24px;}
