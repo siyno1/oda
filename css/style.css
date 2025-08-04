@@ -364,7 +364,9 @@ input[type="text"] ~ .btn-ipt {position: absolute; top: 50%; right: 55px; displa
 .tblDb > li {flex:0 1 auto;width:100%;}
 .tblDb .tbl td {font-size: inherit; font-weight: 500; line-height: 1.5; color: #464C53; letter-spacing: 0;}
 .tblDb .tbl td .btn {min-width: 40px; height: 24px;}
+/* 케이스 확인 필요(스타일 간섭 심함)
 .tblDb .tbl td p {display: block; max-height: 105px; padding-right: 10px; font-size: inherit; font-weight: inherit; line-height: inherit; color: inherit; word-break: break-all; overflow-y: auto;}
+*/
 
 /* tbl Chk */
 .tbl tr.on {background: #F0F2F6; transition: 0.3s all;}
