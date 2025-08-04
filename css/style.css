@@ -55,6 +55,14 @@ select {width: 100%; height: 30px; padding: 4px 30px 4px 9px; font-weight: 500; 
 
 .tblBox .tbl + .tbl {border-top:1px solid #E2E6EA;}
 
+/* 헤더 고정 */
+.tblBox.fix {overflow-y:auto;}
+.tblBox.fix .tbl {border-collapse: separate;}
+.tblBox.fix .tbl thead {position:sticky;top:0;z-index:1;}
+.tblBox.fix .tbl thead th {border-bottom:1px solid #E2E6EA;}
+.tblBox.fix .tbl tbody td {border-bottom:1px dashed #CDD1D5;}
+.tblBox.fix .tbl tbody tr:last-child td {border-bottom:0 none;}
+
 /* tbl 내부 요소 */
 .tbl .txtBox {display:block;}
 .tbl td > .btn-wrap {display:flex;}
