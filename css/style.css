@@ -53,7 +53,8 @@ select {width: 100%; height: 30px; padding: 4px 30px 4px 9px; font-weight: 500; 
 .tbl.done.col tbody tr {border-bottom: 1px solid #E2E6EA;}
 .tbl span.red {color: #db4545;}
 
-.tblBox .tbl + .tbl {border-top:1px solid #E2E6EA;}
+.tblBox .tbl + .tbl {margin-top:-1px;}
+.tblBox .tbl + .tbl:before {background:#E2E6EA;}
 
 /* 헤더 고정 */
 .tblBox.fix {overflow-y:auto;}
@@ -250,7 +251,7 @@ input[type="text"] ~ .btn-ipt {position: absolute; top: 50%; right: 55px; displa
  * schBox
 **/
 .schBox {position: relative; display: flex; justify-content: center; flex-direction: column; gap:12px; width: 100%; padding: 30px 250px 56px 0; margin: auto; font-size: 15px; font-weight: 700; line-height: 1.5; color: #1E2124;}
-.schBox::after {position: absolute; bottom: 0; left: 50%; content: ' '; display: block; width: calc(100vw - 15px); height: 26px; background: #F4F5F6; border-top: 3px solid #E5E8EA; transform: translateX(-50%);}
+.schBox::after {position: absolute; bottom: 0; left: 50%; content: ' '; display: block; width: calc(100% + 80px); height: 26px; background: #F4F5F6; border-top: 3px solid #E5E8EA; transform: translateX(-50%);}
 
 /* schRow */
 .schRow {display:flex; align-items:center; gap:6px; flex-wrap:wrap; width:100%;}
@@ -284,8 +285,8 @@ input[type="text"] ~ .btn-ipt {position: absolute; top: 50%; right: 55px; displa
 /* fltCont */
 .fltCont {width:100%;}
 .fltCont li:not(.on) {display: none;}
-.fltCont li {display: flex; gap:2px 20px; position: relative; padding: 24px 20px; background: #fff; border: 1px solid #ddd; border-radius: 12px;}
-.fltCont li > p { margin-top:-15px; font-size: inherit; font-weight: 600; line-height: 1.5; color: #1E2124;}
+.fltCont li {display: flex; gap:2px 20px; position: relative; padding: 32px 20px; background: #fff; border: 1px solid #ddd; border-radius: 12px;}
+.fltCont li > p { margin-top:-22px; font-size: inherit; font-weight: 600; line-height: 1.5; color: #1E2124;}
 .fltCont li input {width: 351px; height: 40px;}
 .fltCont .chkBox,
 .fltCont .rdoBox {min-height:40px;}
@@ -311,27 +312,28 @@ input[type="text"] ~ .btn-ipt {position: absolute; top: 50%; right: 55px; displa
 .iptBox {position: relative; display: flex; align-items: center; gap: 5px; width: 352px; height: 40px; padding: 4px 9px 4px 6px; background: #fff; border: 1px solid #B1B8BE; border-radius: 6px;}
 .iptBox input[type="text"] {height: auto; border: 0;}
 
-/* contBox */
-.contBox {flex-wrap: wrap;}
-
 /* contList */
-.contList {position: relative; display: flex; justify-content: space-between; align-items: flex-start; width: 100%; gap: 100px;}
-.contList > div {flex: 1; display: flex; align-items: flex-start;}
-.contList > div + div::before {position: absolute; content: ' '; display: inline-block; width: 1px; height: 100%; margin-left: -50px; background: #ddd;}
-.contList p {display: inline-flex; align-items: center; gap: 6px; margin-right: 17px; font-size: inherit; font-weight: 500; line-height: 1; color: #1E2124;}
-.contList p::before {content: ' '; display: inline-block; width: 4px; height: 4px; background: #d9d9d9; border-radius: 50%;}
-.contList ul {display: flex; justify-content: flex-start; align-items: stretch; flex-wrap: wrap; gap: 8px 6px; max-height: 106px; overflow-y: auto;}
-.contList button {width: 112px; height: 100%; min-height: 29px; padding: 4px 5px; font-size: 13px; font-weight: 400; line-height: 1.5; color: #1E2124; background: #fff; border: 1px solid #CDD1D5; border-radius: 12px;}
+.contList {position: relative; display: flex; justify-content: space-between; align-items: flex-start; width: 100%; gap:20px;}
+.contList > div {flex:1; display:flex; gap:15px; align-items:flex-start; position:relative;}
+.contList > div + div::before {content:''; display:block; position:absolute; width: 1px; height: 100%; margin-left: -20px; background: #ddd;}
+.contList > div > p {display: inline-flex; align-items: center; gap:6px; min-height:30px; font-size:inherit; font-weight:500; line-height:1; color: #1E2124;}
+.contList > div > p::before {content: ' '; display: inline-block; width: 4px; height: 4px; background: #d9d9d9; border-radius: 50%;}
+.contList ul {flex:1; display: grid; grid-template-columns:repeat(auto-fill, minmax(100px, 1fr)); gap: 8px 6px; max-height: 106px; padding:0 40px 0 0; overflow-y: auto;}
+.contList button {width: 100%; height: 100%; min-height: 29px; padding: 4px 5px; font-size: 13px; font-weight: 400; line-height: 1.5; color: #1E2124; background: #fff; border: 1px solid #CDD1D5; border-radius: 12px;}
 .contList button.on {color: #256EF4; border-color: #256EF4;}
 .contList button:focus-within {outline: none;}
 .fltCont .contList li {flex: none; display: block; padding: 0; border: none;}
 
-/* contList Type */
-.type01 .contList > div:first-child {flex: none; width: 420px; padding-right: 20px;}
-.contBox.type02  {align-items: flex-start; flex-wrap: nowrap;}
-.type02 .contList {gap: 60px;}
-.type02 .contList > div + div::before {margin-left: -30px;}
-.type02 .contList > div:last-child {flex: none; width: 380px;}
+
+/* 사업분야 선택 및 선택 영역 전부 */
+.fltCont li.contBox {column-gap:8px;}
+.fltCont li.contBox .contList ul {padding:0 20px 0 0;}
+
+/* 국가 선택 예외 케이스 (소타이틀이 있는 케이스) */
+.fltCont li.contBox.type01 {flex-wrap: wrap;}
+.fltCont li.contBox.type01 .contList > div:first-child {flex: 1;}
+.fltCont li.contBox.type01 .contList > div ~ div {flex: 2;}
+
 
 /* span[badge Type01] */
 .span {display: inline-block; width: auto; min-width: 51px; padding: 1px 4px; margin-left: 2px; text-align: center; font-size: 12px; font-weight: 400; line-height: 1.5; color: #464C53; background: #E8E8E8; border-radius: 4px;}
@@ -360,6 +362,7 @@ input[type="text"] ~ .btn-ipt {position: absolute; top: 50%; right: 55px; displa
 .schList .tbl:not(.de) td {font-size: 13px; font-weight: 400; line-height: 1.5; letter-spacing: -1px; color: #6D7882;}
 .schList .tbl td {padding: 7px 15px; text-align: left;}
 .schList .tbl a {display: block; max-width: 100%; font-size: 14px; font-weight: 500; line-height: 1.5; color: #1E2124; letter-spacing: 0; white-space: nowrap; text-overflow: ellipsis; overflow: hidden;}
+.schList .tblBox .tbl + .tbl {border-top: 1px solid #E2E6EA;}
 
 /* tblDb[double table] */
 .tblDb {display: flex; justify-content: space-between; gap: 48px; margin: 60px 0 40px 0;}
