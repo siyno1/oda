@@ -109,11 +109,118 @@
 					<div class="rt"></div>
 				</div>
 
-				<!-- schBox -->
+				<!-- schBox @dev 25.08.01 검색 수정 -->
 				<div class="schBox">
-					<p style="height:150px; line-height:150px;background:#ddd;color:#256EF4;font-size:18px;font-weight:600;text-align:center;">검색 TBD</p>
+					<div class="schRow">
+						<div class="schTxt">
+							<div class="schKeyword">
+								<input type="text" placeholder="회의명을 입력하세요.">
+								<button type="button" class="btn-src">검색</button>
+							</div>
+						</div>
+
+						<ul class="fltList">
+							<li><button type="button">연도</button></li>
+							<li><button type="button">위원회유형</button></li>
+							<li><button type="button">회의</button></li>
+							<li><button type="button">진행상태</button></li>
+						</ul>
+					</div>
+
+					<div class="schRow toggleFltCont" style="display:none;">
+						<div class="fltCont">
+							<ul>
+								<li>
+									<p>연도</p>
+									<div class="inputForm">
+										<div class="selectBox sm">
+											<select>
+												<option hidden>- 연도 선택 -</option>
+												<option value="2025">2025년</option>
+											</select>
+										</div>
+										<em>~</em>
+										<div class="selectBox sm">
+											<select>
+												<option hidden>- 연도 선택 -</option>
+												<option value="2025">2025년</option>
+											</select>
+										</div>
+									</div>
+								</li>
+
+								<li class="contBox">
+									<p>위원회유형</p>
+									<div class="contList">
+										<div>
+											<ul>
+												<li><button type="button">전체</button></li>
+												<li><button type="button">국제개발협력 위원회</button></li>
+												<li><button type="button">실무위원회</button></li>
+												<li><button type="button">평가위원회</button></li>
+											</ul>
+										</div>
+									</div>
+								</li>
+
+								<li class="contBox">
+									<p>회의유형</p>
+									<div class="contList">
+										<div>
+											<ul>
+												<li><button type="button">전체</button></li>
+												<li><button type="button">대면</button></li>
+												<li><button type="button">서면</button></li>
+											</ul>
+										</div>
+									</div>
+								</li>
+
+								<li class="contBox">
+									<p>진행상태</p>
+									<div class="contList">
+										<div>
+											<ul>
+												<li><button type="button">전체</button></li>
+												<li><button type="button">진행예정</button></li>
+												<li><button type="button">진행완료</button></li>
+											</ul>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="schRow">
+						<div class="fltOpt">
+							<ul>
+								<li>
+									<p>아시아 &gt; 네팔</p>
+									<button type="button" class="btn-del"><span class="sr-only">검색조건 삭제</span></button>
+								</li>
+								<li>
+									<p>아프리카 &gt; 가나</p>
+									<button type="button" class="btn-del"><span class="sr-only">검색조건 삭제</span></button>
+								</li>
+								<li>
+									<p>아프리카 &gt; 가나</p>
+									<button type="button" class="btn-del"><span class="sr-only">검색조건 삭제</span></button>
+								</li>
+								<li>
+									<p>아프리카 &gt; 가나</p>
+									<button type="button" class="btn-del"><span class="sr-only">검색조건 삭제</span></button>
+								</li>
+							</ul>
+							<button type="reset" class="btn-reset txt">초기화</button>
+						</div>
+					</div>
+
+					<div class="schBtn">
+						<button type="button" class="btn-apply">조건검색</button>
+					</div>
 				</div>
-				<!-- //schBox -->
+				<!-- schBox //@dev 25.08.01 검색 수정 -->
 
 				<!-- schList -->
 				<div class="schList">

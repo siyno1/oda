@@ -109,11 +109,65 @@
 					<div class="rt"></div>
 				</div>
 
-				<!-- schBox -->
+				<!-- schBox @dev 25.08.01 검색 수정 -->
 				<div class="schBox">
-					<p style="height:150px; line-height:150px;background:#ddd;color:#256EF4;font-size:18px;font-weight:600;text-align:center;">검색 TBD</p>
+					<div class="schRow">
+						<ul class="fltList">
+							<li><button type="button">등록일</button></li>
+						</ul>
+
+						<div class="schTxt">
+							<div class="schKeyword">
+								<input type="text" placeholder="패키지명을 입력하세요.">
+								<button type="button" class="btn-src">검색</button>
+							</div>
+						</div>
+					</div>
+
+					<div class="schRow toggleFltCont" style="display:none;">
+						<div class="fltCont">
+							<ul>
+								<li>
+									<p>등록일</p>
+									<div class="pickrBox">
+										<input type="text" class="pickr" placeholder="날짜를 선택하세요">
+										<em>~</em>
+										<input type="text" class="pickr" placeholder="날짜를 선택하세요">
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="schRow">
+						<div class="fltOpt">
+							<ul>
+								<li>
+									<p>아시아 &gt; 네팔</p>
+									<button type="button" class="btn-del"><span class="sr-only">검색조건 삭제</span></button>
+								</li>
+								<li>
+									<p>아프리카 &gt; 가나</p>
+									<button type="button" class="btn-del"><span class="sr-only">검색조건 삭제</span></button>
+								</li>
+								<li>
+									<p>아프리카 &gt; 가나</p>
+									<button type="button" class="btn-del"><span class="sr-only">검색조건 삭제</span></button>
+								</li>
+								<li>
+									<p>아프리카 &gt; 가나</p>
+									<button type="button" class="btn-del"><span class="sr-only">검색조건 삭제</span></button>
+								</li>
+							</ul>
+							<button type="reset" class="btn-reset txt">초기화</button>
+						</div>
+					</div>
+
+					<div class="schBtn">
+						<button type="button" class="btn-apply">조건검색</button>
+					</div>
 				</div>
-				<!-- //schBox -->
+				<!-- schBox //@dev 25.08.01 검색 수정 -->
 
 				<!-- schList -->
 				<div class="schList">
