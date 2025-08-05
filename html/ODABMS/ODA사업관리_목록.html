@@ -114,32 +114,15 @@
 				<!-- schBox @dev 25.08.01 검색 수정 -->
 				<div class="schBox">
 					<div class="schRow">
-						<ul class="fltList">
-							<li><button type="button">사업기간</button></li>
-							<li><button type="button">시행기관</button></li>
-						</ul>
-
 						<div class="schTxt">
 							<div class="schKeyword">
 								<input type="text" placeholder="사업명을 입력하세요.">
 								<button type="button" class="btn-src">검색</button>
 							</div>
-							<button type="button" class="btn-flt">검색 필터 열기</button>
 						</div>
 					</div>
 
-					<div class="schRow toggleFlt" style="display:none;">
-						<ul class="fltList">
-							<li><button type="button">사업기간</button></li>
-							<li><button type="button">시행기관</button></li>
-							<li><button type="button">수원국</button></li>
-							<li><button type="button">사업분야</button></li>
-							<li><button type="button">진행상태</button></li>
-							<li><button type="button">원조유형</button></li>
-						</ul>
-					</div>
-
-					<div class="schRow toggleFlt" style="display:none;">
+					<div class="schRow">
 						<ul class="fltList">
 							<li><button type="button">사업기간</button></li>
 							<li><button type="button">시행기관</button></li>
@@ -162,18 +145,22 @@
 									</div>
 								</li>
 
-								<li>
-									<p>당해연도 시행계획 예산</p>
-									<div class="iptBox">
-										<input type="text" placeholder="금액을 입력하세요.">
-										<button type="button" class="btn cnf">확인</button>
+								<li class="contBox">
+									<p>시행기관</p>
+									<div class="contList">
+										<div>
+											<ul>
+												<li><button type="button">전체</button></li>
+												<li><button type="button">국무조정실</button></li>
+											</ul>
+										</div>
 									</div>
 								</li>
 
 								<li class="contBox type01">
 									<p>수원국</p>
 									<div class="contList">
-										<div class="">
+										<div>
 											<p>대륙</p>
 											<ul>
 												<li><button type="button">아시아</button></li>
@@ -226,7 +213,7 @@
 									</div>
 								</li>
 
-								<li class="contBox type02">
+								<li class="contBox">
 									<p>사업분야</p>
 									<div class="contList">
 										<div>
@@ -265,6 +252,34 @@
 												<li><button type="button">중동 · CIS</button></li>
 												<li><button type="button">오세아니아 · 기타· 기타</button></li>
 												<li><button type="button">그외 지역</button></li>
+											</ul>
+										</div>
+									</div>
+								</li>
+
+								<li class="contBox">
+									<p>진행상태</p>
+									<div class="contList">
+										<div>
+											<ul>
+												<li><button type="button">전체</button></li>
+												<li><button type="button">확정</button></li>
+												<li><button type="button">완료</button></li>
+												<li><button type="button">중단</button></li>
+												<li><button type="button">취소</button></li>
+											</ul>
+										</div>
+									</div>
+								</li>
+
+								<li class="contBox">
+									<p>원조유형</p>
+									<div class="contList">
+										<div>
+											<ul>
+												<li><button type="button">전체</button></li>
+												<li><button type="button">유상</button></li>
+												<li><button type="button">무상</button></li>
 											</ul>
 										</div>
 									</div>
