@@ -667,9 +667,6 @@ button[class^=btnList] {display:inline-block;box-sizing:border-box;border:0 none
 .tipCont.left::before {left:auto;right:12px;}
 .tipCont.left::after {left:auto;right:13px;}
 
-.tipCont .txtLi li {margin-bottom:5px;font-size:14px;line-height:1.5;color:#464c53;white-space:nowrap;}
-.tipCont .txtLi li:last-child {margin-bottom:0;}
-
 /* file list */
 .fileList li + li {margin-top:4px;}
 .fileList a {display:inline-block;overflow:hidden;padding:2px 0 1px 28px;font-size:14px;font-weight:500;text-decoration:underline;text-underline-position:under;color:#464646;background-repeat:no-repeat;background-position:left top;white-space:nowrap;text-overflow:ellipsis;}

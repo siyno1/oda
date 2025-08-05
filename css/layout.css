@@ -94,20 +94,25 @@
 
 /* 25.07.24 텍스트 common */
 strong {font-weight:700;}
+
+/* txtLi */
+.txtLi {margin-top:10px;font-size:14px;line-height:1.5;color:#464c53;}
+.txtLi:first-child {margin-top:0;}
+.txtLi li {margin-bottom:2px;line-height:inherit;}
+.txtLi li:last-child {margin-bottom:0;}
+.txtLi li + li.btn-wrap {margin-top:5px;}
+
 .txtBt {position:relative;padding-left:12px;}/* bullet */
 .txtBt::after {content:'';display:block;position:absolute;top:5px;left:0;width:5px;height:5px;border-radius:50%;background:#6d4fff;}
-.txtInfo {padding-left:18px;font-size:14px;line-height:1.5;font-weight:500;color:#5A5A5B;word-break:keep-all;background:url(../img/ico_bullet.svg) no-repeat 0 4px;}
+.txtInfo {padding-left:18px;font-size:13px;line-height:1.5;font-weight:500;color:#5A5A5B;word-break:keep-all;background:url(../img/ico_bullet.svg) no-repeat 0 4px;}
+.txtInfo.txtRed {background-image:url(../img/ico_bullet_red.svg);}
 .txtLink {font-weight:500;text-decoration:underline;text-underline-position:under;cursor:pointer;}
 .txtBtn {border:0 none;font-weight:500;text-decoration:underline;text-underline-position:under;background:none;cursor:pointer;}
 
 /* txt color definition */
 .txtPt {color:#4f9097 !important;}/* primary */
 .txtGray {color:#8A949E !important;}
-.txtRed {color:#F00 !important;}
-
-/* 타이틀 형식 : disc */
-.titDisc {margin:0 0 6px 0;font-size:15px;line-height:1.5;}
-.titDisc.txtBt::after {top:9px;}
+.txtRed {color:#D63D4A !important;}
 
 /* 그룹핑 */
 .cntBox + .cntBox {margin-top:60px;}
