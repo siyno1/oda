@@ -188,7 +188,7 @@ input[type="text"] ~ .btn-ipt {position: absolute; top: 50%; right: 55px; displa
 .inputForm > em {font-style:normal;}
 
 /* inputUnit */
-.inputUnit {display:flex;align-items:center;gap:10px;line-height:1.5;}
+.inputUnit {display:flex;align-items:center;justify-content:center;gap:10px;line-height:1.5;}
 .inputUnit > * {flex:0 0 auto;}
 .inputUnit > input[type="text"] {flex:0 1 auto; width: 100%;}
 .inputUnit.sm > input[type="text"] {width:100px;}
