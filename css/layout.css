@@ -49,9 +49,10 @@
 .side .gnb > li > ul{display:none;flex-direction:column;gap:10px;-webkit-gap:10px;padding:15px 17px;background:#F4F5F6;}
 .side .gnb > li > ul > li > a{position:relative;display:block;padding-left:15px;font-size:14px;font-weight:400;line-height:20px;color:#464c53;}
 .side .gnb > li > ul > li > a::before{content:'-';display:block;position:absolute;left:0;top:0;}
-.side .gnb > li > ul > li > a:hover,
-.side .gnb > li > ul > li > a:focus,
-.side .gnb > li > ul > li > a.on{color:#256EF4;font-weight:600;}
+
+.side .gnb > li a:hover,
+.side .gnb > li a:focus,
+.side .gnb > li a.on{color:#256EF4 !important;font-weight:600;}
 
 .side .gnb > li.hasChild > a::after{content:'';display:block;width:15px;height:15px;position:absolute;right:0;top:4px;background:url(../img/ico_gnb_collapsed.svg)no-repeat center;}
 .side .gnb > li.hasChild.active > a::after{background-image:url(../img/ico_gnb_expanded.svg);}
@@ -85,10 +86,10 @@
 .titBox + .titDesc {margin-top:-8px;}
 
 /* 250718 */
-.side .gnb > li > ul > li > ul{display:none;flex-direction:column;gap:10px;-webkit-gap:10px;padding:15px 17px;background:#F4F5F6;}
+.side .gnb > li > ul > li > ul {display:none;flex-direction:column;gap:10px;-webkit-gap:10px;margin:8px -17px 0; padding:15px 34px;background:#E9ECEF;}
 .side .gnb > li > ul > li > ul > li > a {position:relative; font-size:14px; font-weight:400; line-height:1.5; color:#464C53;}
 .side .gnb > li > ul > li > ul > li > a::before {position:absolute; top:6px; left:-10px; content:' '; display:block; width:3px; height:3px; background:#BBBEC0; border-radius:50px;}
-.side .gnb > li > ul >  li.hasChild > a::after {content:''; display:block; width:14px; height:14px; position:absolute; right:0; top:4px; background-image:url(../img/ico_select_arr.svg); transition:0.4s all;}
+.side .gnb > li > ul >  li.hasChild > a::after {content:''; display:block; width:14px; height:14px; position:absolute; right:0; top:3px; background-image:url(../img/ico_select_arr.svg); transition:0.4s all;}
 .side .gnb > li > ul >  li.hasChild.active > a::after {transform:rotate(-180deg); transition:0.4s all;}
 .side .gnb > li > ul >  li.hasChild.active > ul {display:flex;}
 

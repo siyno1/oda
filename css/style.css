@@ -696,3 +696,17 @@ button[class^=btnList] {display:inline-block;box-sizing:border-box;border:0 none
 .legendLi li::before {content:'';display:block;position:absolute;left:0;top:0;width:19px;height:19px;border-radius:50%;background:#868686;}
 .legendLi li.pt::before {background-color:#4f9097;}
 :where(.rt) .legendLi {display:inline-flex;vertical-align:middle;}
+
+
+/* boxLi : 진단항목 / 심사기준관리 리스트 */
+.boxLi > li {padding:16px 20px 20px;border:1px solid #e2e6ea;border-radius:4px;background:#f4f5f6;}
+.boxLi > li + li {margin-top:40px;}
+.boxLi .boxTit {display:flex;align-items:center;justify-content:space-between;padding-bottom:8px;}
+.boxLi .boxTit .lt,
+.boxLi .boxTit .rt {display:flex;align-items:center;gap:10px;}
+.boxLi .boxTit .lt > *,
+.boxLi .boxTit .rt > * {flex:0 0 auto;}
+.boxLi .boxTit .rt {justify-content:flex-end;text-align:right;}
+
+/* 하위 boxLi */
+.boxLi .boxLi > li {padding:20px;background:#fff;}
