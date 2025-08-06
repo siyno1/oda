@@ -81,10 +81,10 @@
 
 /* 타이틀 그룹 */
 .titBox {display:flex;align-items:flex-end;width:100%;height:30px;margin-bottom:10px;}
-.titBox h3 {padding-left:20px;background:url(../img/tit_bull02.svg)no-repeat left center;font-size:15px;font-weight:700;line-height:32px;}
+.titBox h3 {padding-left:20px;background:url(../img/tit_bull02.svg) no-repeat left center;font-size:15px;font-weight:700;line-height:32px;}
 .titBox .lt {display:flex;gap:10px;align-items:center;}
-.titDesc {margin-bottom:4px;}
-.titBox + .titDesc {margin-top:-8px;}
+.titDisc  {margin-bottom:6px;line-height:1.5;}
+.titDisc.txtBt::after {top:8px;}
 
 /* 250718 */
 .side .gnb > li > ul > li > ul {display:none;flex-direction:column;gap:10px;-webkit-gap:10px;margin:8px -17px 0; padding:15px 34px;background:#E9ECEF;}
