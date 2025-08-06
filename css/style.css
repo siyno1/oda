@@ -22,9 +22,9 @@ select {width: 100%; height: 30px; padding: 4px 30px 4px 9px; font-weight: 500; 
 
 /* tblBox - margin */
 .tblBox {width: 100%; overflow: auto clip;}
-:where(.cntBox, .tblBox, .adBox, .pagination) + .titBox {margin-top: 40px;}
-:where(.cntBox, .tblBox, .adBox, .pagination) + .tblBox {margin-top: 20px;}
-:where(.cntBox, .tblBox, .adBox, .pagination) + .tblBox .tbl::before {background: #E2E6EA;}
+:where(.cntBox, .tblBox, .adBox, .boxLi, .pagination) + .titBox {margin-top: 40px;}
+:where(.cntBox, .tblBox, .adBox, .boxLi, .pagination) + .tblBox {margin-top: 20px;}
+:where(.cntBox, .tblBox, .adBox, .boxLi, .pagination) + .tblBox .tbl::before {background: #E2E6EA;}
 .toggleBox + :where(.titBox, .tblBox) {margin-top: 20px;}
 :where(.titBox, .tblBox, .pagination) + .toggleBox {margin-top: 40px;}
 .btn-wrap + :where(.titBox, .tblBox) {margin-top: 40px;}
@@ -709,11 +709,11 @@ button[class^=btnList] {display:inline-block;box-sizing:border-box;border:0 none
 .boxLi .boxTit .rt {justify-content:flex-end;text-align:right;padding-right:20px;}
 
 .boxLi .boxTit .label {font-weight:500;line-height:1.5;color:#464c53;}
-.boxLi .boxTit .tit strong {line-height:1.5;}
+.boxLi .boxTit .tit {line-height:1.5;}
 .boxLi .boxTit .total-wrap {display:flex;align-items:center;gap:10px;}
 .boxLi .boxTit .total-wrap .detail {display:flex;align-items:center;gap:8px;}
 .boxLi .boxTit .total-wrap .detail strong {line-height:1.5;}
-.boxLi .boxTit .total-wrap .detail .t1 {line-height:1.5;color:#8A949E;}
+.boxLi .boxTit .total-wrap .detail span {line-height:1.5;}
 
 /* 하위 boxLi */
 .boxLi .boxLi > li {padding:20px;background:#fff;}
@@ -724,3 +724,6 @@ button[class^=btnList] {display:inline-block;box-sizing:border-box;border:0 none
 .boxLi .tbl::before {display:none;}
 .boxLi .tbl thead th {background:none;}
 .boxLi .tbl tbody td {font-weight:500;}
+
+/* boxLi margin */
+:where(.tblBox) + .boxLi {margin-top:20px;}

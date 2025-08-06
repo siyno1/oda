@@ -95,25 +95,65 @@
 
 			<!-- 컨텐츠 영역 -->
 			<div class="contents">
+				<!-- pgtBox -->
 				<div class="pgtBox">
 					<div class="lt">
-						<h2>우수사례 심사 기준 등록</h2>
+						<h2>진단항목관리</h2>
 					</div>
 
 					<ul class="breadcrumb">
 						<li class="home"><a href="javascript:;">홈</a></li>
-						<li><a href="javascript:;">평가</a></li>
-						<li><a href="javascript:;">우수사례</a></li>
-						<li><a href="javascript:;">우수사례 심사 기준 관리</a></li>
+						<li><a href="javascript:;">기관역량진단</a></li>
+						<li><a href="javascript:;">진단항목관리</a></li>
 					</ul>
 
 					<div class="rt"></div>
 				</div>
+				<!-- //pgtBox -->
 
-				<!-- 우수사례 심사 기준 등록 -->
+				<!-- 진단 기본 정보 -->
+				<div class="tblBox">
+					<table class="tbl row">
+						<caption></caption>
+						<colgroup>
+							<col style="width: 160px;">
+							<col style="width: auto;">
+							<col style="width: 160px;">
+							<col style="width: auto;">
+						</colgroup>
+
+						<tbody>
+							<tr>
+								<th scope="row">진단 항목 명</th>
+								<td colspan="3">
+									<div class="txtBox">등록한 DATA가 보여집니다.</div>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">사용 연도</th>
+								<td>
+									<div class="txtBox">등록한 DATA가 보여집니다.</div>
+								</td>
+								<th scope="row">사용 여부</th>
+								<td>
+									<div class="txtBox">등록한 DATA가 보여집니다.</div>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">부가 설명</th>
+								<td colspan="3">
+									<div class="txtBox">등록한 DATA가 보여집니다.</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<!-- //진단 기본 정보 -->
+
+				<!-- 성과 관리 역량 진단 항목 -->
 				<div class="titBox">
 					<div class="lt">
-						<h3>우수사례 심사 기준 등록</h3>
+						<h3>성과 관리 역량 진단 항목</h3>
 					</div>
 
 					<div class="rt">
@@ -133,54 +173,13 @@
 
 						<tbody>
 							<tr>
-								<th scope="row" class="need">심사 기준명</th>
-								<td colspan="3">
-									<input type="text" class="w100" placeholder="심사 기준명을 입력해 주세요">
-								</td>
-							</tr>
-							<tr>
-								<th scope="row">사용 연도</th>
-								<td>
-									<div class="selectBox">
-										<select name="" id="select01">
-											<option value="" hidden>- 연도 선택 -</option>
-											<option value="2025">2025년</option>
-											<option value="2024">2024년</option>
-											<option value="2023">2023년</option>
-										</select>
-									</div>
-								</td>
-								<th scope="row">사용 여부</th>
-								<td>
-									<div class="rdoBox">
-										<input type="radio" id="rdo01-1" value="예">
-										<label for="rdo01-1">예</label>
-										<input type="radio" id="rdo01-2" value="아니오">
-										<label for="rdo01-2">아니오</label>
-									</div>
-								</td>
-							</tr>
-							<tr>
-								<th scope="row">심사 기준 설명</th>
-								<td colspan="3">
-									<textarea name="" id="txtbox05" placeholder="심사 기준에 대한 부가 설명"></textarea>
-								</td>
+								<th scope="row">성과 관리 역량 진단 항목 배점</th>
+								<td class="tR">60 점</td>
+								<th scope="row">비율</th>
+								<td class="tR">60 %</td>
 							</tr>
 						</tbody>
 					</table>
-				</div>
-				<!-- //우수사례 심사 기준 등록 -->
-
-
-				<!-- 심사 기준 -->
-				<div class="titBox">
-					<div class="lt">
-						<h3>심사 기준</h3>
-					</div>
-
-					<div class="rt">
-
-					</div>
 				</div>
 
 				<!-- boxLi -->
@@ -258,7 +257,14 @@
 										<tbody>
 											<tr>
 												<td class="tL">a. ODA 사업을 전담하는 조직 또는 인력을 보유하고, 업무 분담을 명확하게 구분하는가?</td>
-												<td>1 점</td>
+												<td>
+													<!-- inputUnit -->
+													<div class="inputUnit">
+														<input type="text" class="tR">
+														<span>점</span>
+													</div>
+													<!-- //inputUnit -->
+												</td>
 												<td>N</td>
 												<td>N</td>
 												<td>N</td>
@@ -266,7 +272,14 @@
 											</tr>
 											<tr>
 												<td class="tL">a. ODA 사업을 전담하는 조직 또는 인력을 보유하고, 업무 분담을 명확하게 구분하는가?</td>
-												<td>1 점</td>
+												<td>
+													<!-- inputUnit -->
+													<div class="inputUnit">
+														<input type="text" class="tR">
+														<span>점</span>
+													</div>
+													<!-- //inputUnit -->
+												</td>
 												<td>N</td>
 												<td>N</td>
 												<td>N</td>
@@ -283,7 +296,105 @@
 								<div class="boxTit">
 									<div class="lt">
 										<span class="label">진단항목명</span>
-										<strong class="tit">1. 업무 추진 체계의 적절성</strong>
+										<strong class="tit">2. 사업수행단계별 제도화 정도</strong>
+									</div>
+									<div class="rt">
+										<!-- total-wrap -->
+										<div class="total-wrap">
+											<span class="label">배점</span>
+											<div class="detail">
+												<strong>8 점</strong>
+												<strong>/</strong>
+												<span class="txtGray">8</span>
+											</div>
+										</div>
+										<!-- //total-wrap -->
+									</div>
+								</div>
+								<!-- //boxTit -->
+
+								<!-- tblBox -->
+								<div class="tblBox">
+									<table class="tbl col">
+										<caption></caption>
+										<colgroup>
+											<col style="width:auto;">
+											<col style="width:150px;">
+											<col style="width:150px;">
+											<col style="width:180px;">
+											<col style="width:180px;">
+											<col style="width:180px;">
+										</colgroup>
+
+										<thead>
+											<tr>
+												<th scope="col">세부 평정</th>
+												<th scope="col">배점</th>
+												<th scope="col">가감점</th>
+												<th scope="col">시행기관 자료 제출</th>
+												<th scope="col">연구진 / 평가위 평가</th>
+												<th scope="col">국무조정실 평가</th>
+											</tr>
+										</thead>
+
+										<tbody>
+											<tr>
+												<td class="tL">
+													a. 기획발굴 단계에 필요한 지침/절차들이 적절히 제도화 되어 있는가?<br>
+													- 사업계획의 수립/검토/심사, 평가지표의 설정, 기초선조사, 타당성 분석 등에 관한 사항
+												</td>
+												<td>
+													<!-- inputUnit -->
+													<div class="inputUnit">
+														<input type="text" class="tR">
+														<span>점</span>
+													</div>
+													<!-- //inputUnit -->
+												</td>
+												<td>N</td>
+												<td>N</td>
+												<td>N</td>
+												<td>N</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<!-- //tblBox -->
+							</li>
+						</ul>
+						<!-- //boxLi -->
+					</li>
+
+					<li>
+						<!-- boxTit -->
+						<div class="boxTit">
+							<div class="lt">
+								<span class="label">지표명</span>
+								<strong class="tit">나. 기획역량</strong>
+							</div>
+							<div class="rt">
+								<!-- total-wrap -->
+								<div class="total-wrap">
+									<span class="label">총점</span>
+									<div class="detail">
+										<strong>8 점</strong>
+										<strong>/</strong>
+										<span class="txtGray">8</span>
+									</div>
+								</div>
+								<!-- //total-wrap -->
+							</div>
+						</div>
+						<!-- //boxTit -->
+
+						<!-- boxLi -->
+						<ul class="boxLi">
+							<li>
+								<!-- boxTit -->
+								<div class="boxTit">
+									<div class="lt">
+										<span class="label">진단항목명</span>
+										<strong class="tit">3. 기획의 충실성</strong>
 									</div>
 									<div class="rt">
 										<!-- total-wrap -->
@@ -327,7 +438,29 @@
 										<tbody>
 											<tr>
 												<td class="tL">a. ODA 사업을 전담하는 조직 또는 인력을 보유하고, 업무 분담을 명확하게 구분하는가?</td>
-												<td>1 점</td>
+												<td>
+													<!-- inputUnit -->
+													<div class="inputUnit">
+														<input type="text" class="tR">
+														<span>점</span>
+													</div>
+													<!-- //inputUnit -->
+												</td>
+												<td>N</td>
+												<td>N</td>
+												<td>N</td>
+												<td>N</td>
+											</tr>
+											<tr>
+												<td class="tL">a. ODA 사업을 전담하는 조직 또는 인력을 보유하고, 업무 분담을 명확하게 구분하는가?</td>
+												<td>
+													<!-- inputUnit -->
+													<div class="inputUnit">
+														<input type="text" class="tR">
+														<span>점</span>
+													</div>
+													<!-- //inputUnit -->
+												</td>
 												<td>N</td>
 												<td>N</td>
 												<td>N</td>
@@ -341,12 +474,51 @@
 						</ul>
 						<!-- //boxLi -->
 					</li>
-
-					<li>
-
-					</li>
 				</ul>
 				<!-- //boxLi -->
+				<!-- //성과 관리 역량 진단 항목 -->
+
+				<!-- 평점 기준 가이드 -->
+				<div class="titBox">
+					<div class="lt">
+						<h3>평점 기준 가이드</h3>
+					</div>
+
+					<div class="rt">
+
+					</div>
+				</div>
+
+				<!-- tblBox -->
+				<div class="tblBox">
+					<table class="tbl row">
+						<caption></caption>
+						<colgroup>
+							<col style="width:160px;">
+							<col style="width:auto;">
+						</colgroup>
+						<tbody>
+							<tr>
+								<th scope="row">첨부파일</th>
+								<td>
+									<div class="file">
+										<div class="file-upload">
+											<p class="txt-file">첨부하실 파일을 마우스로 끌어오세요.</p>
+											<input type="file" name="myFile" id="fileu-upload" hidden="">
+										</div>
+
+										<div class="btn-wrap">
+											<button type="button" class="btn-plus"><span class="sr-only">추가</span></button>
+											<button type="button" class="btn-del"><span class="sr-only">삭제</span></button>
+										</div>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<!-- //tblBox -->
+				<!-- //평점 기준 가이드 -->
 
 				<div class="btn-wrap">
 					<button type="button" class="btn">취소</button>
