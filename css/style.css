@@ -753,10 +753,16 @@ button[class^=btnList] {display:inline-block;box-sizing:border-box;border:0 none
 .nodeLi .opened + .nodeLi {display:block;}
 
 .nodeLi .node {display:flex;align-items:flex-start;gap:5px;}
-.nodeLi .node > button {flex:0 0 auto;display:block;width:20px;height:20px;border:0 none;background:#f00;}
+.nodeLi .node > button {flex:0 0 auto;display:block;width:20px;height:20px;border:0 none;background:url(../img/ico_tree_arr.svg) no-repeat center;transition:all 0.3s;}
 .nodeLi .node > label {display:flex;align-items:flex-start;line-height:20px;word-break:break-all;}
 .nodeLi .node > label::before {flex:0 0 auto;}
+.nodeLi .node.opened > button {transform:rotate(90deg);}
 .nodeLi .node.opened > label {font-weight:500;color:#1E2124;}
+
+.nodeLi .node.folder > label {position:relative;padding-left:50px;background:url(../img/ico_tree_folder.svg) no-repeat 25px top;}
+.nodeLi .node.folder > label::before {position:absolute;left:0;top:0;}
+.nodeLi .node.person > label {position:relative;padding-left:50px;background:url(../img/ico_tree_person.svg) no-repeat 25px top;}
+.nodeLi .node.person > label::before {position:absolute;left:0;top:0;}
 .nodeLi li + li {margin-top:7px;}
 
 .nodeBoxTit {display:flex;justify-content:space-between;margin-bottom:18px;padding:10px 20px;border-bottom:1px solid #e2e6ea;}
