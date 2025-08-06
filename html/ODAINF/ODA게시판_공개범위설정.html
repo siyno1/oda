@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<title>ODA</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+	<meta http-equiv="Pragma" content="no-cache">
+	<meta http-equiv="Expires" content="0">
+
+	<link rel="stylesheet" href="./../../css/flatpickr.min.css">
+	<link rel="stylesheet" href="./../../css/reset.css">
+	<link rel="stylesheet" href="./../../css/layout.css">
+	<link rel="stylesheet" href="./../../css/style.css">
+
+	<script defer src="./../../js/jquery-3.7.1.min.js"></script>
+	<script defer src="./../../js/flatpickr.js"></script>
+	<script defer src="./../../js/ui.js"></script>
+</head>
+
+<body>
+	<!-- wrap -->
+	<div id="wrap" class="wrapper">
+		<!-- 헤더 영역 -->
+		<div id="header" class="header">
+			<div class="wrap">
+				<h1><a href="./../gate.html"><img src="./../../img/logo.svg"></a></h1>
+				<ul class="gnb">
+					<li><a href="javascript:;">준비단계</a></li><!-- 활성화 시 li class="active" -->
+					<li><a href="javascript:;">진행단계</a></li>
+					<li><a href="javascript:;">완료단계</a></li>
+					<li><a href="javascript:;">정보마당</a></li>
+					<li><a href="javascript:;">운영관리</a></li>
+				</ul>
+				<div class="userBox">
+					<button class="btnUser">운영관리자</button>
+					<ul class="dropDown">
+						<li><a href="javascript:;">쪽지</a></li>
+						<li><a href="javascript:;">마이페이지</a></li>
+						<li><a href="javascript:;">로그아웃</a></li>
+					</ul>
+				</div>
+				<div class="searchBox">
+					<input type="text" placeholder="통합검색">
+					<button class="btnSearch">검색</button>
+				</div>
+			</div>
+		</div>
+		<!-- //헤더 영역 -->
+
+		<!-- 컨테이너 영역 -->
+		<div id="container" class="container">
+
+			<!-- LNB 영역 -->
+			<div id="side" class="side">
+				<div class="side_menu">
+					<h2>ODA 사업 관리</h2>
+					<ul class="gnb">
+						<li>
+							<a href="javascript:;">사업목록</a>
+						</li>
+						<li class="hasChild active">
+							<a href="javascript:;">연수 사업 관리</a>
+							<ul>
+								<li><a href="javascript:;" class="on">연수 사업 목록</a></li>
+								<li><a href="javascript:;">연수 프로그램 관리</a></li>
+								<li><a href="javascript:;">연수생 관리</a></li>
+								<li><a href="javascript:;">체크리스트</a></li>
+							</ul>
+						</li>
+						<li class="hasChild">
+							<a href="javascript:;">장학 사업 관리</a>
+							<ul>
+								<li><a href="javascript:;">연수 사업 목록</a></li>
+								<li><a href="javascript:;">연수 프로그램 관리</a></li>
+								<li><a href="javascript:;">연수생 관리</a></li>
+								<li><a href="javascript:;">체크리스트</a></li>
+							</ul>
+						</li>
+						<li class="hasChild">
+							<a href="javascript:;">패키지 사업 관리</a>
+							<ul>
+								<li><a href="javascript:;">연수 사업 목록</a></li>
+								<li><a href="javascript:;">연수 프로그램 관리</a></li>
+								<li><a href="javascript:;">연수생 관리</a></li>
+								<li><a href="javascript:;">체크리스트</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<button class="btnSlide">slide</button>
+			</div>
+			<!-- //LNB 영역 -->
+
+			<!-- 컨텐츠 영역 -->
+			<div class="contents">
+				<div class="pgtBox">
+					<div class="lt">
+						<h2>ODA게시판</h2>
+					</div>
+
+					<ul class="breadcrumb">
+						<li class="home"><a href="javascript:;">홈</a></li>
+						<li><a href="javascript:;">평가</a></li>
+						<li><a href="javascript:;">ODA게시판</a></li>
+					</ul>
+
+					<div class="rt"></div>
+				</div>
+
+				<div class="btn-wrap">
+					<button type="button" class="btn pop" data-target="pop01">공개 범위 설정</button>
+				</div>
+			</div>
+			<!-- //컨텐츠 영역 -->
+		</div>
+		<!-- //컨테이너 영역 -->
+	</div>
+	<!-- //wrap -->
+
+
+	<!-- dim -->
+	<div class="dim"></div>
+	<!-- //dim -->
+
+	<!-- popup : node -->
+	<div class="popup node" id="pop01" style="display: block;">
+		<div class="tit">
+			<p>공개 범위 설정</p>
+			<button type="button" class="btn-close"><span class="sr-only">팝업창 닫기</span></button>
+		</div>
+
+		<div class="cont">
+			<!-- tabBox -->
+			<div class="tabBox">
+				<!-- tab -->
+				<div class="tab">
+					<ul>
+						<li><button type="button" class="active">기관</button></li>
+						<li><button type="button">그룹</button></li>
+					</ul>
+				</div>
+				<!-- //tab -->
+
+				<!-- tabCont -->
+				<ul class="tabCont">
+					<li class="active">
+						<!-- nodeWrap -->
+						<div class="nodeWrap">
+							<!-- nodeBox -->
+							<div class="nodeBox">
+								<!-- nodeSchBox -->
+								<div class="nodeSchBox">
+									<div class="inp isBtn">
+										<input type="text" placeholder="기관 또는 사용자명 검색">
+										<button type="button" title="검색"></button>
+									</div>
+								</div>
+								<!-- //nodeSchBox -->
+
+								<!-- nodeArea -->
+								<div class="nodeArea">
+									<!-- nodeLi -->
+									<ul class="nodeLi">
+										<li>
+											<div class="node folder opened"><!-- 폴더 아이콘 -->
+												<button type="button" title="펼침"></button>
+												<input type="checkbox" name="chk_a0" id="chk_a0">
+												<label for="chk_a0">기획재정부</label>
+											</div>
+											<ul class="nodeLi">
+												<li>
+													<div class="node person"><!-- 사람 아이콘 -->
+														<button type="button" title="펼침"></button>
+														<input type="checkbox" name="chk_a0">
+														<label>기획재정부</label>
+													</div>
+												</li>
+											</ul>
+										</li>
+										<li>
+											<div class="node folder opened"><!-- 폴더 아이콘 -->
+												<button type="button" title="펼침"></button>
+												<input type="checkbox" name="chk_a0" id="chk_a0">
+												<label for="chk_a0">기획재정부</label>
+											</div>
+											<ul class="nodeLi">
+												<li>
+													<div class="node folder opened"><!-- 폴더 아이콘 -->
+														<button type="button" title="펼침"></button>
+														<input type="checkbox" name="chk_a0" id="chk_a0">
+														<label for="chk_a0">기획재정부</label>
+													</div>
+													<ul class="nodeLi">
+														<li>
+															<div class="node person"><!-- 사람 아이콘 -->
+																<button type="button" title="펼침"></button>
+																<input type="checkbox" name="chk_a0">
+																<label>기획재정부</label>
+															</div>
+														</li>
+													</ul>
+												</li>
+												<li>
+													<div class="node person"><!-- 사람 아이콘 -->
+														<button type="button" title="펼침"></button>
+														<input type="checkbox" name="chk_a0">
+														<label>기획재정부</label>
+													</div>
+												</li>
+												<li>
+													<div class="node person"><!-- 사람 아이콘 -->
+														<button type="button" title="펼침"></button>
+														<input type="checkbox" name="chk_a0">
+														<label>기획재정부</label>
+													</div>
+												</li>
+												<li>
+													<div class="node person"><!-- 사람 아이콘 -->
+														<button type="button" title="펼침"></button>
+														<input type="checkbox" name="chk_a0">
+														<label>기획재정부</label>
+													</div>
+												</li>
+											</ul>
+										</li>
+										<li>
+											<div class="node folder opened"><!-- 폴더 아이콘 -->
+												<button type="button" title="펼침"></button>
+												<input type="checkbox" name="chk_a0" id="chk_a0">
+												<label for="chk_a0">기획재정부</label>
+											</div>
+											<ul class="nodeLi">
+												<li>
+													<div class="node folder opened"><!-- 폴더 아이콘 -->
+														<button type="button" title="펼침"></button>
+														<input type="checkbox" name="chk_a0" id="chk_a0">
+														<label for="chk_a0">기획재정부</label>
+													</div>
+													<ul class="nodeLi">
+														<li>
+															<div class="node person"><!-- 사람 아이콘 -->
+																<button type="button" title="펼침"></button>
+																<input type="checkbox" name="chk_a0">
+																<label>기획재정부</label>
+															</div>
+														</li>
+													</ul>
+												</li>
+												<li>
+													<div class="node person"><!-- 사람 아이콘 -->
+														<button type="button" title="펼침"></button>
+														<input type="checkbox" name="chk_a0">
+														<label>기획재정부</label>
+													</div>
+												</li>
+												<li>
+													<div class="node person"><!-- 사람 아이콘 -->
+														<button type="button" title="펼침"></button>
+														<input type="checkbox" name="chk_a0">
+														<label>기획재정부</label>
+													</div>
+												</li>
+												<li>
+													<div class="node person"><!-- 사람 아이콘 -->
+														<button type="button" title="펼침"></button>
+														<input type="checkbox" name="chk_a0">
+														<label>기획재정부</label>
+													</div>
+												</li>
+											</ul>
+										</li>
+										<li>
+											<div class="node folder opened"><!-- 폴더 아이콘 -->
+												<button type="button" title="펼침"></button>
+												<input type="checkbox" name="chk_a0" id="chk_a0">
+												<label for="chk_a0">기획재정부</label>
+											</div>
+											<ul class="nodeLi">
+												<li>
+													<div class="node folder opened"><!-- 폴더 아이콘 -->
+														<button type="button" title="펼침"></button>
+														<input type="checkbox" name="chk_a0" id="chk_a0">
+														<label for="chk_a0">기획재정부</label>
+													</div>
+													<ul class="nodeLi">
+														<li>
+															<div class="node person"><!-- 사람 아이콘 -->
+																<button type="button" title="펼침"></button>
+																<input type="checkbox" name="chk_a0">
+																<label>기획재정부</label>
+															</div>
+														</li>
+													</ul>
+												</li>
+												<li>
+													<div class="node person"><!-- 사람 아이콘 -->
+														<button type="button" title="펼침"></button>
+														<input type="checkbox" name="chk_a0">
+														<label>기획재정부</label>
+													</div>
+												</li>
+												<li>
+													<div class="node person"><!-- 사람 아이콘 -->
+														<button type="button" title="펼침"></button>
+														<input type="checkbox" name="chk_a0">
+														<label>기획재정부</label>
+													</div>
+												</li>
+												<li>
+													<div class="node person"><!-- 사람 아이콘 -->
+														<button type="button" title="펼침"></button>
+														<input type="checkbox" name="chk_a0">
+														<label>기획재정부</label>
+													</div>
+												</li>
+											</ul>
+										</li>
+									</ul>
+									<!-- //nodeLi -->
+								</div>
+								<!-- //nodeArea -->
+							</div>
+							<!-- //nodeBox -->
+
+							<!-- midControl -->
+							<div class="midControl">
+								<button type="button" class="btn-control-add-all" title="전체 추가"></button>
+								<button type="button" class="btn-control-add" title="추가"></button>
+								<button type="button" class="btn-control-del" title="삭제"></button>
+								<button type="button" class="btn-control-del-all" title="전체 삭제"></button>
+							</div>
+							<!-- //midControl -->
+
+							<!-- nodeBox : 배경색 -->
+							<div class="nodeBox bg">
+								<!-- nodeBoxTit -->
+								<div class="nodeBoxTit">
+									<strong>선택된 항목</strong>
+									<span class="summaryTxt">
+										<em>1</em>개부서
+										/
+										<em>2</em>명
+									</span>
+								</div>
+								<!-- //nodeBoxTit -->
+
+								<!-- nodeArea -->
+								<div class="nodeArea">
+									<!-- nodeLi -->
+									<ul class="nodeLi">
+										<li>
+											<div class="node folder opened"><!-- 폴더 아이콘 -->
+												<button type="button" title="펼침"></button>
+												<input type="checkbox" name="chk_a0" id="chk_a0">
+												<label for="chk_a0">기획재정부</label>
+											</div>
+											<ul class="nodeLi">
+												<li>
+													<div class="node person"><!-- 사람 아이콘 -->
+														<button type="button" title="펼침"></button>
+														<input type="checkbox" name="chk_a0">
+														<label>기획재정부</label>
+													</div>
+												</li>
+											</ul>
+										</li>
+										<li>
+											<div class="node folder opened"><!-- 폴더 아이콘 -->
+												<button type="button" title="펼침"></button>
+												<input type="checkbox" name="chk_a0" id="chk_a0">
+												<label for="chk_a0">기획재정부</label>
+											</div>
+											<ul class="nodeLi">
+												<li>
+													<div class="node folder opened"><!-- 폴더 아이콘 -->
+														<button type="button" title="펼침"></button>
+														<input type="checkbox" name="chk_a0" id="chk_a0">
+														<label for="chk_a0">기획재정부</label>
+													</div>
+													<ul class="nodeLi">
+														<li>
+															<div class="node person"><!-- 사람 아이콘 -->
+																<button type="button" title="펼침"></button>
+																<input type="checkbox" name="chk_a0">
+																<label>기획재정부</label>
+															</div>
+														</li>
+													</ul>
+												</li>
+												<li>
+													<div class="node person"><!-- 사람 아이콘 -->
+														<button type="button" title="펼침"></button>
+														<input type="checkbox" name="chk_a0">
+														<label>기획재정부</label>
+													</div>
+												</li>
+												<li>
+													<div class="node person"><!-- 사람 아이콘 -->
+														<button type="button" title="펼침"></button>
+														<input type="checkbox" name="chk_a0">
+														<label>기획재정부</label>
+													</div>
+												</li>
+												<li>
+													<div class="node person"><!-- 사람 아이콘 -->
+														<button type="button" title="펼침"></button>
+														<input type="checkbox" name="chk_a0">
+														<label>기획재정부</label>
+													</div>
+												</li>
+											</ul>
+										</li>
+										<li>
+											<div class="node folder opened"><!-- 폴더 아이콘 -->
+												<button type="button" title="펼침"></button>
+												<input type="checkbox" name="chk_a0" id="chk_a0">
+												<label for="chk_a0">기획재정부</label>
+											</div>
+											<ul class="nodeLi">
+												<li>
+													<div class="node folder opened"><!-- 폴더 아이콘 -->
+														<button type="button" title="펼침"></button>
+														<input type="checkbox" name="chk_a0" id="chk_a0">
+														<label for="chk_a0">기획재정부</label>
+													</div>
+													<ul class="nodeLi">
+														<li>
+															<div class="node person"><!-- 사람 아이콘 -->
+																<button type="button" title="펼침"></button>
+																<input type="checkbox" name="chk_a0">
+																<label>기획재정부</label>
+															</div>
+														</li>
+													</ul>
+												</li>
+												<li>
+													<div class="node person"><!-- 사람 아이콘 -->
+														<button type="button" title="펼침"></button>
+														<input type="checkbox" name="chk_a0">
+														<label>기획재정부</label>
+													</div>
+												</li>
+												<li>
+													<div class="node person"><!-- 사람 아이콘 -->
+														<button type="button" title="펼침"></button>
+														<input type="checkbox" name="chk_a0">
+														<label>기획재정부</label>
+													</div>
+												</li>
+												<li>
+													<div class="node person"><!-- 사람 아이콘 -->
+														<button type="button" title="펼침"></button>
+														<input type="checkbox" name="chk_a0">
+														<label>기획재정부</label>
+													</div>
+												</li>
+											</ul>
+										</li>
+										<li>
+											<div class="node folder opened"><!-- 폴더 아이콘 -->
+												<button type="button" title="펼침"></button>
+												<input type="checkbox" name="chk_a0" id="chk_a0">
+												<label for="chk_a0">기획재정부</label>
+											</div>
+											<ul class="nodeLi">
+												<li>
+													<div class="node folder opened"><!-- 폴더 아이콘 -->
+														<button type="button" title="펼침"></button>
+														<input type="checkbox" name="chk_a0" id="chk_a0">
+														<label for="chk_a0">기획재정부</label>
+													</div>
+													<ul class="nodeLi">
+														<li>
+															<div class="node person"><!-- 사람 아이콘 -->
+																<button type="button" title="펼침"></button>
+																<input type="checkbox" name="chk_a0">
+																<label>기획재정부</label>
+															</div>
+														</li>
+													</ul>
+												</li>
+												<li>
+													<div class="node person"><!-- 사람 아이콘 -->
+														<button type="button" title="펼침"></button>
+														<input type="checkbox" name="chk_a0">
+														<label>기획재정부</label>
+													</div>
+												</li>
+												<li>
+													<div class="node person"><!-- 사람 아이콘 -->
+														<button type="button" title="펼침"></button>
+														<input type="checkbox" name="chk_a0">
+														<label>기획재정부</label>
+													</div>
+												</li>
+												<li>
+													<div class="node person"><!-- 사람 아이콘 -->
+														<button type="button" title="펼침"></button>
+														<input type="checkbox" name="chk_a0">
+														<label>기획재정부</label>
+													</div>
+												</li>
+											</ul>
+										</li>
+									</ul>
+									<!-- //nodeLi -->
+								</div>
+								<!-- //nodeArea -->
+
+								<!-- nodeUtil -->
+								<div class="nodeUtil">
+									<p class="txtInfo">선택 목록을 새 그룹으로 저장</p>
+									<div class="inputForm fit sm">
+										<input type="text" placeholder="그룹명을 입력해주세요">
+										<div class="btn-wrap">
+											<button type="button" class="btn">그룹 저장</button>
+										</div>
+									</div>
+								</div>
+								<!-- //nodeUtil -->
+							</div>
+							<!-- //nodeBox : 배경색 -->
+						</div>
+						<!-- //nodeWrap -->
+					</li>
+
+					<li></li>
+				</ul>
+				<!-- //tabCont -->
+			</div>
+			<!-- //tabBox -->
+
+		</div>
+
+		<div class="btn-wrap">
+			<button type="button" class="btn close">취소</button>
+			<button type="button" class="btn navy">선택완료</button>
+		</div>
+	</div>
+	<!-- //popup : node -->
+</body>
+
+</html>

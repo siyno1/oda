@@ -187,14 +187,22 @@ input[type="text"] ~ .btn-ipt {position: absolute; top: 50%; right: 55px; displa
 .inputForm > p {min-width: 80px;}
 .inputForm > em {font-style:normal;}
 
+/* inputForm : small */
+.inputForm.fit > input[type="text"] {width:auto;flex:1 1 auto;}
+.inputForm.fit .btn-wrap {flex:0 0 auto;}
+
+/* inputForm : small */
+.inputForm.sm {gap:5px;}
+
 /* inputUnit */
 .inputUnit {display:flex;align-items:center;justify-content:center;gap:10px;line-height:1.5;}
 .inputUnit > * {flex:0 0 auto;}
-.inputUnit > input[type="text"] {flex:0 1 auto; width: 100%;}
+.inputUnit > input[type="text"] {flex:1 1 auto;}
 .inputUnit.sm > input[type="text"] {width:100px;}
 
 /* tab */
 .tab {position: relative; width: 100%; margin-top: 60px;}
+.tab:first-child {margin-top:0;}
 .tab::after {position: absolute; bottom: -1px; left: 0; content: ' '; width: 100%; height: 1px; background: #B1B8BE;}
 .tab ul {display: inline-flex;}
 .tab li button {position: relative; width: auto; min-width: 100px; height: 40px; padding: 5px 15px; text-align: center; font-size: 15px; font-weight: 400; color: #464C53; background: #fff; border: none; outline: 1px solid #D9E1F2;}
@@ -398,7 +406,7 @@ input[type="text"] ~ .btn-ipt {position: absolute; top: 50%; right: 55px; displa
 
 /* popup */
 .popup {z-index: 4; position: fixed; top: 50%; left: 50%; display: none; width: 880px; background: #fff; border-radius: 12px; box-shadow: 1px 4px 8px 0px rgba(0, 0, 0, 0.25); transform: translateX(-50%) translateY(-50%);}
-.popup .tit {display: inline-flex; align-items: center; width: 100%; height: 42px; padding: 10px 27px; background: #256EF4; border-radius: 12px 12px 0 0;}
+.popup .tit {display: inline-flex; align-items: center; width: 100%; height: 42px; padding: 10px 27px; background: #6D4FFF; border-radius: 12px 12px 0 0;}
 .popup .tit p {padding-top:4px; font-size: 19px; font-weight: 700; line-height: 1.5; color: #fff;}
 .popup .cont {width: 100%; max-height: 500px; padding: 20px 27px 30px 27px; overflow-y: auto;}
 .popup .sch {display: flex; align-items: center; gap: 20px; width: 100%; height: 70px; padding: 20px 25px; background: #F0F2F6;}
@@ -550,9 +558,9 @@ input[type="text"] ~ .btn-ipt {position: absolute; top: 50%; right: 55px; displa
 .txtThYear:empty {display:none;}
 
 /** layout 세팅 **/
-.layDbl {display:flex;align-items:center;gap:20px;}
+.layDbl {display:flex;align-items:center;gap:20px;width:100%;}
 .layDbl .schList {margin-top:0;}
-.layDbl .midControl {flex:0 0 auto; display:flex; flex-direction:column; gap:5px; justify-content: center;}
+.midControl {flex:0 0 auto; display:flex; flex-direction:column; gap:5px; justify-content: center;}
 
 /* 25.07.24 사업관리-상세 */
 .info .tab button {outline-color: #D9E1F2;}
@@ -729,3 +737,32 @@ button[class^=btnList] {display:inline-block;box-sizing:border-box;border:0 none
 
 /* boxLi margin */
 :where(.tblBox) + .boxLi {margin-top:20px;}
+
+/* nodeBox */
+.popup.node .cont {max-height:none;}
+.nodeWrap {display:flex;align-items:center;gap:20px;width:100%;padding-top:18px;}
+.nodeBox {display:flex;flex-direction:column;box-sizing:border-box;width:100%;height:578px;border:1px solid #e2e6ea;border-radius:6px;background:#fff;}
+.nodeBox.bg {background:#F4F5F6;}
+
+.nodeBox .nodeSchBox {padding:15px 20px;}
+.nodeBox .nodeArea {overflow:hidden;flex:1 1 auto;padding:5px 5px 15px 20px;}
+.nodeBox .nodeArea > .nodeLi {max-height:100%;overflow-y:auto;}
+
+.nodeLi {display:block;}
+.nodeLi .nodeLi {display:none;padding:12px 0 5px 50px;}
+.nodeLi .opened + .nodeLi {display:block;}
+
+.nodeLi .node {display:flex;align-items:flex-start;gap:5px;}
+.nodeLi .node > button {flex:0 0 auto;display:block;width:20px;height:20px;border:0 none;background:#f00;}
+.nodeLi .node > label {display:flex;align-items:flex-start;line-height:20px;word-break:break-all;}
+.nodeLi .node > label::before {flex:0 0 auto;}
+.nodeLi .node.opened > label {font-weight:500;color:#1E2124;}
+.nodeLi li + li {margin-top:7px;}
+
+.nodeBoxTit {display:flex;justify-content:space-between;margin-bottom:18px;padding:10px 20px;border-bottom:1px solid #e2e6ea;}
+.nodeBoxTit strong {line-height:1.5;font-weight:700;color:#1E2124;}
+.nodeBoxTit .summaryTxt {line-height:1.5;font-weight:400;color:#6f7f92;}
+.nodeBoxTit .summaryTxt em {font-style:normal;line-height:1.5;font-weight:500;color:#6d4fff;}
+
+.nodeUtil {padding:0 20px 20px;}
+.nodeUtil .txtInfo {margin-bottom:5px;}
