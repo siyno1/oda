@@ -125,6 +125,8 @@ button[class^="btn-"].txt {width: auto;}
 .btn-close[type="button"] {position: absolute; top: 11px; right: 12px; width: 20px; height: 20px; background: url(../img/ico_close.svg) no-repeat center center; border: none;}
 .btn.sch {min-width: 30px; background: #335682 url(../img/ico_sch.svg) no-repeat center center; border: 0;}
 .btn.file::before {content: ' '; display: inline-block; width: 18px; height: 14px; background: url(../img/ico_btn_file.svg) no-repeat center center;}
+.btn.down {gap:5px;}
+.btn.down::before {content: ' '; display: inline-block; width: 18px; height: 14px; background: url(../img/ico_down.svg) no-repeat center center;}
 /* 검색버튼 25.08.01 */
 button.btn-apply {display: inline-flex; justify-content: center; align-items: center; gap: 5px; min-width: 100px; height: 40px; padding: 10px; text-align: center; font-size: 14px; font-weight: 400; line-height: 1.5; color: #fff; background: #6D4FFF; border-color: #58616A!important; border-radius: 4px;}
 button.btn-apply::before {content: ' '; display: inline-block; width: 13px; height: 13px; background: url(../img/ico_apply.svg) no-repeat center center;}
