@@ -240,7 +240,7 @@
 										<ul class="biz-list">
 											<li>
 												<p>사업사진 등록</p>
-												<button type="button" class="btn file">첨부파일</button>
+												<button type="button" class="btn file pop" data-target="pop01">첨부파일</button>
 											</li>
 											<li>
 												<p>모니터링</p>
@@ -279,5 +279,51 @@
 		</div>
 		<!-- //컨테이너 영역 -->
 	</div>
+
+	<!-- dim -->
+	<div class="dim"></div>
+	<!-- //dim -->
+
+	<!-- popup : small -->
+	<div class="popup sm" id="pop01">
+		<div class="tit">
+			<p>첨부파일</p>
+			<button type="button" class="btn-close"><span class="sr-only">팝업창 닫기</span></button>
+		</div>
+
+		<div class="cont">
+			<p class="titDisc txtBt">사업사진 등록</p>
+
+			<div class="tblBox">
+				<table class="tbl row">
+					<caption></caption>
+					<colgroup></colgroup>
+					<tbody>
+						<tr>
+							<td>
+								<div class="file">
+									<div class="file-upload">
+										<p class="txt-file">첨부하실 파일을 마우스로 끌어오세요.</p>
+										<input type="file" name="myFile" id="fileu-upload" hidden="">
+									</div>
+
+									<div class="btn-wrap">
+										<button type="button" class="btn-plus"><span class="sr-only">추가</span></button>
+										<button type="button" class="btn-del"><span class="sr-only">삭제</span></button>
+									</div>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+
+		<div class="btn-wrap">
+			<button type="button" class="btn close">취소</button>
+			<button type="button" class="btn navy">등록</button>
+		</div>
+	</div>
+	<!-- //popup : small -->
 </body>
 </html>
