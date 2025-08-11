@@ -156,14 +156,15 @@ button[class^="btn-control"] {width:28px;height:28px;border:0 none;background-co
 input[type="text"] ~ .btn-ipt {position: absolute; top: 50%; right: 55px; display: none; width: 16px; height: 16px; background: url(../img/ico_ipt_del.svg) no-repeat center center; border: 0; transform: translateY(-50%);}
 
 /* file-upload */
-.file {display: flex; justify-content: space-between; align-items: center; gap: 6px;}
-.file .btn-wrap {flex: 1; flex-direction: column;}
-.file-upload {flex:1 0 auto; position: relative; display: flex; justify-content: center; align-items: center; width: calc(100% - 36px); min-height: 100px; border: 1px dashed #8A949E;}
+.file {display: flex; align-items: center; gap: 6px; width:100%;}
+.file .btn-wrap {flex:0 0 auto; flex-direction: column; width:auto;}
+.file-upload {flex:1 1 0; position: relative; display: flex; justify-content: center; align-items: center; min-width:0; min-height: 100px; border: 1px dashed #8A949E;}
 .file-upload ul {display: flex; flex-direction: column; gap: 6px; width: 100%; height: auto; max-height: 152px; padding: 10px; overflow-y: auto;}
 .file-upload ul li {display: flex; align-items: center; gap: 5px;}
-.file-upload ul li label {flex: 1; display: block; font-size: 16px; white-space: nowrap; text-overflow: ellipsis; overflow: hidden; min-height:26px; line-height:26px; padding-left:28px; background-repeat:no-repeat; background-position:0 center; cursor:pointer;}
-.file-upload ul li :where(input[type="checkbox"], input[type="radio"]) + label {padding-left:0; background-position:25px center;}
-.file-upload ul li :where(input[type="checkbox"], input[type="radio"]) + label::before {position: relative; top: 3px; margin-right: 33px; vertical-align: top;}
+.file-upload ul li label {flex: 1; display: flex; align-items:flex-start; font-size: 16px; white-space: nowrap; text-overflow: ellipsis; overflow: hidden; line-height:26px; padding-left:28px; background-repeat:no-repeat; background-position:0 center; cursor:pointer;}
+.file-upload ul li :where(input[type="checkbox"], input[type="radio"]) + label {padding-left:0; background-position:24px center;}
+.file-upload ul li :where(input[type="checkbox"], input[type="radio"]) + label::before {flex-shrink:0; display:block; margin:3px 28px 0 0;}
+.file-upload ul li label a {flex:1 1 auto;display:block;box-sizing:border-box;min-width:0;padding:4px 0 2px; color:inherit;line-height:18px;overflow:hidden;text-overflow:ellipsis;}
 .file-upload ul li label.hwp {background-image: url(../img/ico_file_hwp.svg);}
 .file-upload ul li label.pdf {background-image: url(../img/ico_file_pdf.svg);}
 .file-upload ul li label.xls {background-image: url(../img/ico_file_xls.svg);}
