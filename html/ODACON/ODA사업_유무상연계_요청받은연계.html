@@ -289,266 +289,284 @@
 				</div>
 				<!-- //schBox @dev 25.08.01 검색 수정 -->
 
-				<div class="schList">
-					<div class="titBox">
-						<div class="lt"></div>
+				<!-- cntBox -->
+				<div class="cntBox">
+					<!-- cntBox -->
+					<div class="cntBox">
+						<div class="titBox">
+							<div class="lt"></div>
 
-						<div class="rt">
-							<div class="btn-wrap">
-								<button type="button" class="btn biz pop" data-target="pop01">선택한 지도</button>
-								<button type="button" class="btn-del" title="삭제"></button>
+							<div class="rt">
+								<div class="btn-wrap">
+									<button type="button" class="btn biz pop" data-target="pop01">선택한 지도</button>
+									<button type="button" class="btn-del" title="삭제"></button>
+								</div>
 							</div>
 						</div>
-					</div>
 
-					<div class="tblBox">
-						<table class="tbl col tC">
-							<caption></caption>
-							<colgroup>
-								<col style="width: 5%;">
-								<col style="width: 5%;">
-								<col style="width: 20%;">
-								<col style="width: 10%;">
-								<col style="width: 10%;">
-								<col style="width: 10%;">
-								<col style="width: 10%;">
-								<col style="width: 10%;">
-							</colgroup>
-							<thead>
-								<tr>
-									<th scope="col">No</th>
-									<th scope="col"><input type="checkbox" id="chk01"><label for="chk01"></label></th>
-									<th scope="col">사업명</th>
-									<th scope="col">지도</th>
-									<th scope="col">사업분야</th>
-									<th scope="col">연계유형</th>
-									<th scope="col">연계사업명</th>
-									<th scope="col">연계부처명</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<th scope="row">1</th>
-									<td>
-										<div class="tblChk">
-											<input type="checkbox" id="chk02">
-											<label for="chk02"></label>
-										</div>
-									</td>
-									<td><a href="#">XXXXXXXXXX</a></td>
-									<td><button type="button" class="btn blue">지도</button></td>
-									<td></td>
-									<td></td>
-									<td><a href="#">AAAAAA,BBBBBBB</a></td>
-									<td>해양수산부, 국토부</td>
-								</tr>
-								<tr>
-									<th scope="row">2</th>
-									<td>
-										<div class="tblChk">
-											<input type="checkbox" id="chk03">
-											<label for="chk03"></label>
-										</div>
-									</td>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td></td>
-								</tr>
-								<tr>
-									<th scope="row">3</th>
-									<td>
-										<div class="tblChk">
-											<input type="checkbox" id="chk04">
-											<label for="chk04"></label>
-										</div>
-									</td>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td></td>
-								</tr>
-								<tr>
-									<th scope="row">4</th>
-									<td>
-										<div class="tblChk">
-											<input type="checkbox" id="chk05">
-											<label for="chk05"></label>
-										</div>
-									</td>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td></td>
-								</tr>
-								<tr>
-									<th scope="row">5</th>
-									<td>
-										<div class="tblChk">
-											<input type="checkbox" id="chk06">
-											<label for="chk06"></label>
-										</div>
-									</td>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td></td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-
-					<div class="tblBox">
-						<table class="tbl row">
-							<caption></caption>
-							<colgroup>
-								<col style="width: 160px;">
-								<col style="width: auto;">
-							</colgroup>
-
-							<tbody>
-								<tr>
-									<th scope="row">연계희망유형</th>
-									<td>
-										<div class="selectBox disabled">
-											<select name="" id="select01" disabled>
-												<option value="" hidden>- 선택 -</option>
-											</select>
-										</div>
-									</td>
-								</tr>
-								<tr>
-									<th scope="row">첨부파일</th>
-									<td>
-										<div class="file">
-											<div class="file-upload">
-												<ul>
-													<li>
-														<input type="checkbox" id="file01-01" disabled>
-														<label for="file01-01" class="hwp">대기관리권역의 대기환경개선에 관한 특별법 시행규칙(규제영향분석서).hwpx</label>
-													</li>
-												</ul>
-											</div>
-
-											<div class="btn-wrap">
-												<button type="button" class="btn-plus"><span class="sr-only">추가</span></button>
-												<button type="button" class="btn-del"><span class="sr-only">삭제</span></button>
-											</div>
-										</div>
-									</td>
-								</tr>
-								<tr>
-									<th scope="row">연계희망내용</th>
-									<td>
-										<textarea name="" id="" disabled></textarea>
-									</td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-
-					<div class="titBox">
-						<div class="lt">
-							<h3>연계검토의견</h3>
-						</div>
-
-						<div class="rt">
-							<div class="btn-wrap">
-								<button type="button" class="btn-plus txt">의견추가</button>
-								<button type="button" class="btn-del" title="삭제"></button>
+						<!-- schList : 그리드 -->
+						<div class="schList">
+							<div class="tblBox">
+								<table class="tbl col tC">
+									<caption></caption>
+									<colgroup>
+										<col style="width: 5%;">
+										<col style="width: 5%;">
+										<col style="width: 20%;">
+										<col style="width: 10%;">
+										<col style="width: 10%;">
+										<col style="width: 10%;">
+										<col style="width: 10%;">
+										<col style="width: 10%;">
+									</colgroup>
+									<thead>
+										<tr>
+											<th scope="col">No</th>
+											<th scope="col"><input type="checkbox" id="chk01"><label for="chk01"></label></th>
+											<th scope="col">사업명</th>
+											<th scope="col">지도</th>
+											<th scope="col">사업분야</th>
+											<th scope="col">연계유형</th>
+											<th scope="col">연계사업명</th>
+											<th scope="col">연계부처명</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<th scope="row">1</th>
+											<td>
+												<div class="tblChk">
+													<input type="checkbox" id="chk02">
+													<label for="chk02"></label>
+												</div>
+											</td>
+											<td><a href="#">XXXXXXXXXX</a></td>
+											<td><button type="button" class="btn blue">지도</button></td>
+											<td></td>
+											<td></td>
+											<td><a href="#">AAAAAA,BBBBBBB</a></td>
+											<td>해양수산부, 국토부</td>
+										</tr>
+										<tr>
+											<th scope="row">2</th>
+											<td>
+												<div class="tblChk">
+													<input type="checkbox" id="chk03">
+													<label for="chk03"></label>
+												</div>
+											</td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+										</tr>
+										<tr>
+											<th scope="row">3</th>
+											<td>
+												<div class="tblChk">
+													<input type="checkbox" id="chk04">
+													<label for="chk04"></label>
+												</div>
+											</td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+										</tr>
+										<tr>
+											<th scope="row">4</th>
+											<td>
+												<div class="tblChk">
+													<input type="checkbox" id="chk05">
+													<label for="chk05"></label>
+												</div>
+											</td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+										</tr>
+										<tr>
+											<th scope="row">5</th>
+											<td>
+												<div class="tblChk">
+													<input type="checkbox" id="chk06">
+													<label for="chk06"></label>
+												</div>
+											</td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+										</tr>
+									</tbody>
+								</table>
 							</div>
 						</div>
-					</div>
+						<!-- //schList : 그리드 -->
 
-					<div class="tblBox">
-						<table class="tbl col tC">
-							<caption></caption>
-							<colgroup>
-								<col style="width: 5%;">
-								<col style="width: 10%;">
-								<col style="width: 10%;">
-								<col style="width: 55%;">
-								<col style="width: 10%;">
-								<col style="width: 10%;">
-							</colgroup>
-							<thead>
-								<tr>
-									<th scope="col"><input type="checkbox" id="chk01"><label for="chk01"></label></th>
-									<th scope="col">부처</th>
-									<th scope="col">연계가능여부</th>
-									<th scope="col">검토의견</th>
-									<th scope="col">등록자</th>
-									<th scope="col">등록일시</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td>
-										<div class="tblChk">
-											<input type="checkbox" id="chk02">
-											<label for="chk02"></label>
-										</div>
-									</td>
-									<td>국토부</td>
-									<td>
-										<div class="rdoBox">
-											<input type="radio" id="radio01-1" name="rdo01">
-											<label for="radio01-1">Y</label>
-											<input type="radio" id="radio01-2" name="rdo01">
-											<label for="radio01-2">N</label>
-										</div>
-									</td>
-									<td>
-										<textarea name="" id="textarea1"></textarea>
-									</td>
-									<td>홍길동</td>
-									<td></td>
-								</tr>
-								<tr>
-									<td>
-										<div class="tblChk">
-											<input type="checkbox" id="chk03" disabled>
-											<label for="chk03"></label>
-										</div>
-									</td>
-									<td>해양수산부</td>
-									<td>Y</td>
-									<td>
-										<div class="txtBox">XXX<br>XXXXXX<br>XXXXX</div>
-									</td>
-									<td>OOO</td>
-									<td>2025-00-00 12:00</td>
-								</tr>
-								<tr>
-									<td>
-										<div class="tblChk">
-											<input type="checkbox" id="chk04">
-											<label for="chk04"></label>
-										</div>
-									</td>
-									<td>국토부</td>
-									<td>N</td>
-									<td><textarea name="" id="textarea2"></textarea></td>
-									<td>AAA</td>
-									<td>2025-00-00 12:00</td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
+						<!-- tblBox -->
+						<div class="tblBox">
+							<table class="tbl row">
+								<caption></caption>
+								<colgroup>
+									<col style="width: 152px;">
+									<col style="width: auto;">
+								</colgroup>
 
-					<div class="btn-wrap">
-						<button type="button" class="btn pt">검토의견 저장</button>
-					</div>
+								<tbody>
+									<tr>
+										<th scope="row">연계희망유형</th>
+										<td>
+											<div class="selectBox disabled">
+												<select name="" id="select01" disabled>
+													<option value="" hidden>- 선택 -</option>
+												</select>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">첨부파일</th>
+										<td>
+											<div class="file">
+												<div class="file-upload">
+													<ul>
+														<li>
+															<input type="checkbox" id="file01-01" disabled>
+															<label for="file01-01" class="hwp">대기관리권역의 대기환경개선에 관한 특별법 시행규칙(규제영향분석서).hwpx</label>
+														</li>
+													</ul>
+												</div>
 
+												<div class="btn-wrap">
+													<button type="button" class="btn-plus"><span class="sr-only">추가</span></button>
+													<button type="button" class="btn-del"><span class="sr-only">삭제</span></button>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">연계희망내용</th>
+										<td>
+											<textarea name="" id="" disabled></textarea>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<!-- //tblBox -->
+					</div>
+					<!-- //cntBox -->
+
+					<!-- cntBox -->
+					<div class="cntBox">
+						<div class="titBox">
+							<div class="lt">
+								<h3>연계검토의견</h3>
+							</div>
+
+							<div class="rt">
+								<div class="btn-wrap">
+									<button type="button" class="btn-plus txt">의견추가</button>
+									<button type="button" class="btn-del" title="삭제"></button>
+								</div>
+							</div>
+						</div>
+
+						<div class="schList">
+							<div class="tblBox">
+								<table class="tbl col tC">
+									<caption></caption>
+									<colgroup>
+										<col style="width: 5%;">
+										<col style="width: 10%;">
+										<col style="width: 10%;">
+										<col style="width: 55%;">
+										<col style="width: 10%;">
+										<col style="width: 10%;">
+									</colgroup>
+									<thead>
+										<tr>
+											<th scope="col"><input type="checkbox" id="chk01"><label for="chk01"></label></th>
+											<th scope="col">부처</th>
+											<th scope="col">연계가능여부</th>
+											<th scope="col">검토의견</th>
+											<th scope="col">등록자</th>
+											<th scope="col">등록일시</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>
+												<div class="tblChk">
+													<input type="checkbox" id="chk02">
+													<label for="chk02"></label>
+												</div>
+											</td>
+											<td>국토부</td>
+											<td>
+												<div class="rdoBox tC">
+													<input type="radio" id="radio01-1" name="rdo01">
+													<label for="radio01-1">Y</label>
+													<input type="radio" id="radio01-2" name="rdo01">
+													<label for="radio01-2">N</label>
+												</div>
+											</td>
+											<td>
+												<textarea name="" id="textarea1"></textarea>
+											</td>
+											<td>홍길동</td>
+											<td></td>
+										</tr>
+										<tr>
+											<td>
+												<div class="tblChk">
+													<input type="checkbox" id="chk03" disabled>
+													<label for="chk03"></label>
+												</div>
+											</td>
+											<td>해양수산부</td>
+											<td>Y</td>
+											<td>
+												<div class="txtBox">XXX<br>XXXXXX<br>XXXXX</div>
+											</td>
+											<td>OOO</td>
+											<td>2025-00-00 12:00</td>
+										</tr>
+										<tr>
+											<td>
+												<div class="tblChk">
+													<input type="checkbox" id="chk04">
+													<label for="chk04"></label>
+												</div>
+											</td>
+											<td>국토부</td>
+											<td>N</td>
+											<td><textarea name="" id="textarea2"></textarea></td>
+											<td>AAA</td>
+											<td>2025-00-00 12:00</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+
+						<div class="btn-wrap">
+							<button type="button" class="btn pt">검토의견 저장</button>
+						</div>
+					</div>
+					<!-- //cntBox -->
 				</div>
+				<!-- //cntBox -->
+
 			</div>
 			<!-- //컨텐츠 영역 -->
 		</div>
@@ -575,7 +593,7 @@
 				<table class="tbl row">
 					<caption></caption>
 					<colgroup>
-						<col style="width: 160px;">
+						<col style="width: 152px;">
 						<col style="width: auto;">
 					</colgroup>
 
@@ -628,7 +646,7 @@
 				<table class="tbl row">
 					<caption></caption>
 					<colgroup>
-						<col style="width: 160px;">
+						<col style="width: 152px;">
 						<col style="width: auto;">
 					</colgroup>
 

@@ -69,7 +69,7 @@ button {cursor: pointer; transition: 0.3s all;}
 
 /* font */
 .need {display: inline-flex; gap: 0.6rem;}
-.need::after {position: relative; top: -5px; left: 3px; content: '*'; display: inline-block; max-height: 2rem; font-size: 14px; font-weight: 700; line-height: 1; color: var(--krds-point);}
+.need::after {position: relative; top: -5px; left: 3px; content: '*'; display: inline-block; max-height: 2rem; font-size: 14px; font-weight: 700; line-height: 1; vertical-align: middle; color: #D63D4A;}
 .po-ab {position: absolute;}
 
 :root {

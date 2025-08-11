@@ -301,421 +301,442 @@
 				</div>
 				<!-- schBox //@dev 25.08.01 검색 수정 -->
 
-				<!-- schList -->
-				<div class="schList">
+				<!-- cntBox -->
+				<div class="cntBox">
+
+					<!-- tblDb : 가로분할 형태 레이아웃 -->
 					<ul class="tblDb">
 						<li>
-							<div class="titBox">
-								<div class="lt">
-									<h3>연계목록</h3>
-								</div>
+							<!-- cntBox -->
+							<div class="cntBox">
+								<div class="titBox">
+									<div class="lt">
+										<h3>연계목록</h3>
+									</div>
 
-								<div class="rt">
-									<div class="btn-wrap">
-										<button type="button" class="btn-plus txt">추가</button>
-										<button type="button" class="btn-del"><span class="sr-only">삭제</span></button>
+									<div class="rt">
+										<div class="btn-wrap">
+											<button type="button" class="btn-plus txt">추가</button>
+											<button type="button" class="btn-del"><span class="sr-only">삭제</span></button>
+										</div>
 									</div>
 								</div>
+
+								<!-- schList : 그리드 -->
+								<div class="schList">
+									<!-- tblBox -->
+									<div class="tblBox">
+										<table class="tbl col">
+											<caption></caption>
+											<colgroup>
+												<col style="width: 5%;">
+												<col style="width: 5%;">
+												<col style="width: 15%;">
+												<col style="width: 75%;">
+											</colgroup>
+											<thead>
+												<tr>
+													<th scope="col">No</th>
+													<th scope="col"><input type="checkbox" id="chk01"><label for="chk01"></label></th>
+													<th scope="col">사업분야</th>
+													<th scope="col">사업명</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<th scope="row">1</th>
+													<td>
+														<div class="tblChk">
+															<input type="checkbox" id="chk02"><label for="chk02"></label>
+														</div>
+													</td>
+													<td class="tC">세계식량계획</td>
+													<td><a href="#">인도네시아 탄소중립 전기 이륜차 전환을 위한 AI기반 녹색금융 접근성 향상사업</a></td>
+												</tr>
+												<tr>
+													<th scope="row">2</th>
+													<td>
+														<div class="tblChk">
+															<input type="checkbox" id="chk03"><label for="chk03"></label>
+														</div>
+													</td>
+													<td class="tC">유엔아동기금</td>
+													<td><a href="#">인도네시아 탄소중립 전기 이륜차 전환을 위한 AI기반 녹색금융 접근성 향상사업</a></td>
+												</tr>
+												<tr>
+													<th scope="row">3</th>
+													<td>
+														<div class="tblChk">
+															<input type="checkbox" id="chk04"><label for="chk04"></label>
+														</div>
+													</td>
+													<td class="tC">세계식량계획</td>
+													<td><a href="#">국제기구 협력사업 예비조사, 기획조사, 사후관리 사업</a></td>
+												</tr>
+												<tr>
+													<th scope="row">4</th>
+													<td>
+														<div class="tblChk">
+															<input type="checkbox" id="chk05"><label for="chk05"></label>
+														</div>
+													</td>
+													<td class="tC">유엔아동기금</td>
+													<td><a href="#">인도네시아 탄소중립 전기 이륜차 전환을 위한 AI기반 녹색금융 접근성 향상사업</a></td>
+												</tr>
+												<tr>
+													<th scope="row">5</th>
+													<td>
+														<div class="tblChk">
+															<input type="checkbox" id="chk06"><label for="chk06"></label>
+														</div>
+													</td>
+													<td class="tC">세계식량계획</td>
+													<td><a href="#">베트남 메콩델타지역의 소득 증대를 위한 친환경 초고밀도 새우양식기술 적용 시범 양식사업</a></td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<!-- //tblBox -->
+								</div>
+								<!-- //schList : 그리드 -->
+
+								<!-- pagination -->
+								<div class="pagination">
+									<button type="button" class="page-navi prev" disabled=""><span class="sr-only">이전</span></button>
+									<div class="page-links">
+										<a class="page-link active" href="#"><span class="sr-only">현재페이지</span>1</a>
+										<a class="page-link" href="#">2</a>
+										<a class="page-link" href="#">3</a>
+										<a class="page-link" href="#">4</a>
+										<a class="page-link" href="#">5</a>
+									</div>
+									<button type="button" class="page-navi next"><span class="sr-only">다음</span></button>
+								</div>
+								<!-- //pagination -->
+							</div>
+							<!-- //cntBox -->
+						</li>
+
+						<li>
+							<!-- cntBox -->
+							<div class="cntBox">
+								<div class="titBox">
+									<div class="lt">
+										<h3>연계상세</h3>
+									</div>
+
+									<div class="rt">
+
+									</div>
+								</div>
+
+								<!-- tblBox -->
+								<div class="tblBox">
+									<table class="tbl row">
+										<caption></caption>
+										<colgroup>
+											<col style="width: 15%;">
+											<col style="width: 85%;">
+										</colgroup>
+										<tbody>
+											<tr>
+												<th scope="row">연계 사업명</th>
+												<td>ODA 사업보고</td>
+											</tr>
+											<tr>
+												<th scope="row">연계 부처명</th>
+												<td>해양수산부, 국토부</td>
+											</tr>
+											<tr>
+												<th scope="row">지도</th>
+												<td><button type="button" class="btn blue">지도</button></td>
+											</tr>
+											<tr>
+												<th scope="row">연계희망유형</th>
+												<td>시범사업(무상) + 대규모사업(EDCF)</td>
+											</tr>
+											<tr>
+												<th scope="row">첨부파일</th>
+												<td>등록된 첨부파일명.hwp</td>
+											</tr>
+											<tr>
+												<th scope="row">연계희망내용</th>
+												<td>
+													<div class="txtBox">
+														EDCF 협력 워크숍은 수원국 공무원을 초청하여 △수원국과의 협력 기반을 조성하고 △EDCF 사업 현황 및 사업관리방안 협의
+														등을 통해 사업의 원활한 추진을 도모하기 위해 개최하는 행사*다.<br>이번 워크숍에서는 아프리카 중점지원국* 공무원
+														18명을 초청하여 개발재원 소요를 고려한 EDCF의 아프리카 지원비중 확대, ‘K-파이낸스 패키지’ 등을 통한
+														그린·디지털·공급망 분야 집중 지원 등 대(對) 아프리카 EDCF 지원방향과 개발전략을 논의했다. EDCF 협력 워크숍은
+														수원국 공무원을 초청하여 △수원국과의 협력 기반을 조성하고 △EDCF 사업 현황 및 사업관리방안 협의 등을 통해 사업의
+														원활한 추진을 도모하기 위해 개최하는 행사*다.<br>이번 워크숍에서는 아프리카 중점지원국* 공무원 18명을 초청하여
+														개발재원 소요를 고려한 EDCF의 아프리카 지원비중 확대, ‘K-파이낸스 패키지’ 등을 통한 그린·디지털·공급망 분야 집중
+														지원 등 대(對) 아프리카 EDCF 지원방향과 개발전략을 논의했다.
+													</div>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<!-- //tblBox -->
+							</div>
+							<!-- //cntBox -->
+						</li>
+					</ul>
+					<!-- //tblDb : 가로분할 형태 레이아웃 -->
+
+					<!-- cntBox -->
+					<div class="cntBox">
+						<div class="titBox">
+							<div class="lt">
+								<h3>연계목록</h3>
 							</div>
 
-							<!-- tblBox -->
+							<div class="rt">
+								<div class="btn-wrap">
+									<button type="button" class="btn-save txt">저장</button>
+									<button type="button" class="btn-plus txt">추가</button>
+									<button type="button" class="btn-del"><span class="sr-only">삭제</span></button>
+								</div>
+							</div>
+						</div>
+
+						<!-- schList -->
+						<div class="schList">
 							<div class="tblBox">
-								<table class="tbl col">
+								<table class="tbl col tC">
 									<caption></caption>
 									<colgroup>
 										<col style="width: 5%;">
-										<col style="width: 5%;">
-										<col style="width: 15%;">
-										<col style="width: 75%;">
+										<col style="width: 55%;">
+										<col style="width: 10%;">
+										<col style="width: 10%;">
+										<col style="width: 10%;">
+										<col style="width: 10%;">
 									</colgroup>
 									<thead>
 										<tr>
-											<th scope="col">No</th>
-											<th scope="col"><input type="checkbox" id="chk01"><label for="chk01"></label></th>
-											<th scope="col">사업분야</th>
-											<th scope="col">사업명</th>
+											<th scope="col">
+												<div class="tblChk">
+													<input type="checkbox" id="chk07"><label for="chk07"></label>
+												</div>
+											</th>
+											<th scope="col">검토의견</th>
+											<th scope="col">연계가능여부</th>
+											<th scope="col">부처</th>
+											<th scope="col">등록자</th>
+											<th scope="col">등록일시</th>
 										</tr>
 									</thead>
 									<tbody>
 										<tr>
-											<th scope="row">1</th>
 											<td>
 												<div class="tblChk">
-													<input type="checkbox" id="chk02"><label for="chk02"></label>
+													<input type="checkbox" id="chk08"><label for="chk08"></label>
 												</div>
 											</td>
-											<td class="tC">세계식량계획</td>
-											<td><a href="#">인도네시아 탄소중립 전기 이륜차 전환을 위한 AI기반 녹색금융 접근성 향상사업</a></td>
+											<td><input type="text" class="w100"></td>
+											<td>
+												<div class="selectBox">
+													<select name="" id="select01">
+														<option value="" hidden>- 선택 -</option>
+													</select>
+												</div>
+											</td>
+											<td>해양수산부</td>
+											<td>홍길동</td>
+											<td>2025-00-00 12:00</td>
 										</tr>
 										<tr>
-											<th scope="row">2</th>
 											<td>
 												<div class="tblChk">
-													<input type="checkbox" id="chk03"><label for="chk03"></label>
+													<input type="checkbox" id="chk09"><label for="chk09"></label>
 												</div>
 											</td>
-											<td class="tC">유엔아동기금</td>
-											<td><a href="#">인도네시아 탄소중립 전기 이륜차 전환을 위한 AI기반 녹색금융 접근성 향상사업</a></td>
+											<td><input type="text" class="w100"></td>
+											<td>
+												<div class="selectBox">
+													<select name="" id="select02">
+														<option value="" hidden>- 선택 -</option>
+													</select>
+												</div>
+											</td>
+											<td>해양수산부</td>
+											<td>홍길동</td>
+											<td>2025-00-00 12:00</td>
 										</tr>
 										<tr>
-											<th scope="row">3</th>
 											<td>
 												<div class="tblChk">
-													<input type="checkbox" id="chk04"><label for="chk04"></label>
+													<input type="checkbox" id="chk10"><label for="chk10"></label>
 												</div>
 											</td>
-											<td class="tC">세계식량계획</td>
-											<td><a href="#">국제기구 협력사업 예비조사, 기획조사, 사후관리 사업</a></td>
+											<td><input type="text" class="w100"></td>
+											<td>
+												<div class="selectBox">
+													<select name="" id="select03">
+														<option value="" hidden>- 선택 -</option>
+													</select>
+												</div>
+											</td>
+											<td>해양수산부</td>
+											<td>홍길동</td>
+											<td>2025-00-00 12:00</td>
 										</tr>
 										<tr>
-											<th scope="row">4</th>
 											<td>
 												<div class="tblChk">
-													<input type="checkbox" id="chk05"><label for="chk05"></label>
+													<input type="checkbox" id="chk11"><label for="chk11"></label>
 												</div>
 											</td>
-											<td class="tC">유엔아동기금</td>
-											<td><a href="#">인도네시아 탄소중립 전기 이륜차 전환을 위한 AI기반 녹색금융 접근성 향상사업</a></td>
+											<td><input type="text" class="w100"></td>
+											<td>
+												<div class="selectBox">
+													<select name="" id="select04">
+														<option value="" hidden>- 선택 -</option>
+													</select>
+												</div>
+											</td>
+											<td>해양수산부</td>
+											<td>홍길동</td>
+											<td>2025-00-00 12:00</td>
 										</tr>
 										<tr>
-											<th scope="row">5</th>
 											<td>
 												<div class="tblChk">
-													<input type="checkbox" id="chk06"><label for="chk06"></label>
+													<input type="checkbox" id="chk12"><label for="chk12"></label>
 												</div>
 											</td>
-											<td class="tC">세계식량계획</td>
-											<td><a href="#">베트남 메콩델타지역의 소득 증대를 위한 친환경 초고밀도 새우양식기술 적용 시범 양식사업</a></td>
+											<td><input type="text" class="w100"></td>
+											<td>
+												<div class="selectBox">
+													<select name="" id="select05">
+														<option value="" hidden>- 선택 -</option>
+													</select>
+												</div>
+											</td>
+											<td>해양수산부</td>
+											<td>홍길동</td>
+											<td>2025-00-00 12:00</td>
 										</tr>
+										<tr>
+											<td>
+												<div class="tblChk">
+													<input type="checkbox" id="chk13"><label for="chk13"></label>
+												</div>
+											</td>
+											<td><input type="text" class="w100"></td>
+											<td>
+												<div class="selectBox">
+													<select name="" id="select05">
+														<option value="" hidden>- 선택 -</option>
+													</select>
+												</div>
+											</td>
+											<td>해양수산부</td>
+											<td>홍길동</td>
+											<td>2025-00-00 12:00</td>
+										</tr>
+										<tr>
+											<td>
+												<div class="tblChk">
+													<input type="checkbox" id="chk14"><label for="chk14"></label>
+												</div>
+											</td>
+											<td><input type="text" class="w100"></td>
+											<td>
+												<div class="selectBox">
+													<select name="" id="select05">
+														<option value="" hidden>- 선택 -</option>
+													</select>
+												</div>
+											</td>
+											<td>해양수산부</td>
+											<td>홍길동</td>
+											<td>2025-00-00 12:00</td>
+										</tr>
+										<tr>
+											<td>
+												<div class="tblChk">
+													<input type="checkbox" id="chk15"><label for="chk15"></label>
+												</div>
+											</td>
+											<td><input type="text" class="w100"></td>
+											<td>
+												<div class="selectBox">
+													<select name="" id="select05">
+														<option value="" hidden>- 선택 -</option>
+													</select>
+												</div>
+											</td>
+											<td>해양수산부</td>
+											<td>홍길동</td>
+											<td>2025-00-00 12:00</td>
+										</tr>
+										<tr>
+											<td>
+												<div class="tblChk">
+													<input type="checkbox" id="chk16"><label for="chk16"></label>
+												</div>
+											</td>
+											<td><input type="text" class="w100"></td>
+											<td>
+												<div class="selectBox">
+													<select name="" id="select05">
+														<option value="" hidden>- 선택 -</option>
+													</select>
+												</div>
+											</td>
+											<td>해양수산부</td>
+											<td>홍길동</td>
+											<td>2025-00-00 12:00</td>
+										</tr>
+										<tr>
+											<td>
+												<div class="tblChk">
+													<input type="checkbox" id="chk17"><label for="chk17"></label>
+												</div>
+											</td>
+											<td><input type="text" class="w100"></td>
+											<td>
+												<div class="selectBox">
+													<select name="" id="select05">
+														<option value="" hidden>- 선택 -</option>
+													</select>
+												</div>
+											</td>
+											<td>해양수산부</td>
+											<td>홍길동</td>
+											<td>2025-00-00 12:00</td>
+										</tr>
+
 									</tbody>
 								</table>
 							</div>
-							<!-- //tblBox -->
-
-							<!-- pagination -->
-							<div class="pagination">
-								<button type="button" class="page-navi prev" disabled=""><span class="sr-only">이전</span></button>
-								<div class="page-links">
-									<a class="page-link active" href="#"><span class="sr-only">현재페이지</span>1</a>
-									<a class="page-link" href="#">2</a>
-									<a class="page-link" href="#">3</a>
-									<a class="page-link" href="#">4</a>
-									<a class="page-link" href="#">5</a>
-								</div>
-								<button type="button" class="page-navi next"><span class="sr-only">다음</span></button>
-							</div>
-							<!-- //pagination -->
-						</li>
-
-						<li>
-							<div class="titBox">
-								<div class="lt">
-									<h3>연계상세</h3>
-								</div>
-
-								<div class="rt">
-
-								</div>
-							</div>
-
-							<!-- tblBox -->
-							<div class="tblBox">
-								<table class="tbl row">
-									<caption></caption>
-									<colgroup>
-										<col style="width: 15%;">
-										<col style="width: 85%;">
-									</colgroup>
-									<tbody>
-										<tr>
-											<th scope="row">연계 사업명</th>
-											<td>ODA 사업보고</td>
-										</tr>
-										<tr>
-											<th scope="row">연계 부처명</th>
-											<td>해양수산부, 국토부</td>
-										</tr>
-										<tr>
-											<th scope="row">지도</th>
-											<td><button type="button" class="btn blue">지도</button></td>
-										</tr>
-										<tr>
-											<th scope="row">연계희망유형</th>
-											<td>시범사업(무상) + 대규모사업(EDCF)</td>
-										</tr>
-										<tr>
-											<th scope="row">첨부파일</th>
-											<td>등록된 첨부파일명.hwp</td>
-										</tr>
-										<tr>
-											<th scope="row">연계희망내용</th>
-											<td>
-												<div class="txtBox">
-													EDCF 협력 워크숍은 수원국 공무원을 초청하여 △수원국과의 협력 기반을 조성하고 △EDCF 사업 현황 및 사업관리방안 협의
-													등을 통해 사업의 원활한 추진을 도모하기 위해 개최하는 행사*다.<br>이번 워크숍에서는 아프리카 중점지원국* 공무원
-													18명을 초청하여 개발재원 소요를 고려한 EDCF의 아프리카 지원비중 확대, ‘K-파이낸스 패키지’ 등을 통한
-													그린·디지털·공급망 분야 집중 지원 등 대(對) 아프리카 EDCF 지원방향과 개발전략을 논의했다. EDCF 협력 워크숍은
-													수원국 공무원을 초청하여 △수원국과의 협력 기반을 조성하고 △EDCF 사업 현황 및 사업관리방안 협의 등을 통해 사업의
-													원활한 추진을 도모하기 위해 개최하는 행사*다.<br>이번 워크숍에서는 아프리카 중점지원국* 공무원 18명을 초청하여
-													개발재원 소요를 고려한 EDCF의 아프리카 지원비중 확대, ‘K-파이낸스 패키지’ 등을 통한 그린·디지털·공급망 분야 집중
-													지원 등 대(對) 아프리카 EDCF 지원방향과 개발전략을 논의했다.
-												</div>
-											</td>
-										</tr>
-									</tbody>
-								</table>
-							</div>
-							<!-- //tblBox -->
-						</li>
-					</ul>
-
-
-					<div class="titBox">
-						<div class="lt">
-							<h3>연계목록</h3>
 						</div>
+						<!-- //schList -->
 
-						<div class="rt">
-							<div class="btn-wrap">
-								<button type="button" class="btn-save txt">저장</button>
-								<button type="button" class="btn-plus txt">추가</button>
-								<button type="button" class="btn-del"><span class="sr-only">삭제</span></button>
+						<!-- pagination -->
+						<div class="pagination">
+							<button type="button" class="page-navi prev" disabled=""><span class="sr-only">이전</span></button>
+							<div class="page-links">
+								<a class="page-link active" href="#"><span class="sr-only">현재페이지</span>1</a>
+								<a class="page-link" href="#">2</a>
+								<a class="page-link" href="#">3</a>
+								<a class="page-link" href="#">4</a>
+								<a class="page-link" href="#">5</a>
 							</div>
+							<button type="button" class="page-navi next"><span class="sr-only">다음</span></button>
+
+							<p>총 949건 (1/95)</p>
+							<select name="" id="select01">
+								<option value="">10</option>
+							</select>
 						</div>
+						<!-- //pagination -->
 					</div>
-
-					<div class="tblBox">
-						<table class="tbl col tC">
-							<caption></caption>
-							<colgroup>
-								<col style="width: 5%;">
-								<col style="width: 55%;">
-								<col style="width: 10%;">
-								<col style="width: 10%;">
-								<col style="width: 10%;">
-								<col style="width: 10%;">
-							</colgroup>
-							<thead>
-								<tr>
-									<th scope="col">
-										<div class="tblChk">
-											<input type="checkbox" id="chk07"><label for="chk07"></label>
-										</div>
-									</th>
-									<th scope="col">검토의견</th>
-									<th scope="col">연계가능여부</th>
-									<th scope="col">부처</th>
-									<th scope="col">등록자</th>
-									<th scope="col">등록일시</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td>
-										<div class="tblChk">
-											<input type="checkbox" id="chk08"><label for="chk08"></label>
-										</div>
-									</td>
-									<td><input type="text" class="w100"></td>
-									<td>
-										<div class="selectBox">
-											<select name="" id="select01">
-												<option value="" hidden>- 선택 -</option>
-											</select>
-										</div>
-									</td>
-									<td>해양수산부</td>
-									<td>홍길동</td>
-									<td>2025-00-00 12:00</td>
-								</tr>
-								<tr>
-									<td>
-										<div class="tblChk">
-											<input type="checkbox" id="chk09"><label for="chk09"></label>
-										</div>
-									</td>
-									<td><input type="text" class="w100"></td>
-									<td>
-										<div class="selectBox">
-											<select name="" id="select02">
-												<option value="" hidden>- 선택 -</option>
-											</select>
-										</div>
-									</td>
-									<td>해양수산부</td>
-									<td>홍길동</td>
-									<td>2025-00-00 12:00</td>
-								</tr>
-								<tr>
-									<td>
-										<div class="tblChk">
-											<input type="checkbox" id="chk10"><label for="chk10"></label>
-										</div>
-									</td>
-									<td><input type="text" class="w100"></td>
-									<td>
-										<div class="selectBox">
-											<select name="" id="select03">
-												<option value="" hidden>- 선택 -</option>
-											</select>
-										</div>
-									</td>
-									<td>해양수산부</td>
-									<td>홍길동</td>
-									<td>2025-00-00 12:00</td>
-								</tr>
-								<tr>
-									<td>
-										<div class="tblChk">
-											<input type="checkbox" id="chk11"><label for="chk11"></label>
-										</div>
-									</td>
-									<td><input type="text" class="w100"></td>
-									<td>
-										<div class="selectBox">
-											<select name="" id="select04">
-												<option value="" hidden>- 선택 -</option>
-											</select>
-										</div>
-									</td>
-									<td>해양수산부</td>
-									<td>홍길동</td>
-									<td>2025-00-00 12:00</td>
-								</tr>
-								<tr>
-									<td>
-										<div class="tblChk">
-											<input type="checkbox" id="chk12"><label for="chk12"></label>
-										</div>
-									</td>
-									<td><input type="text" class="w100"></td>
-									<td>
-										<div class="selectBox">
-											<select name="" id="select05">
-												<option value="" hidden>- 선택 -</option>
-											</select>
-										</div>
-									</td>
-									<td>해양수산부</td>
-									<td>홍길동</td>
-									<td>2025-00-00 12:00</td>
-								</tr>
-								<tr>
-									<td>
-										<div class="tblChk">
-											<input type="checkbox" id="chk13"><label for="chk13"></label>
-										</div>
-									</td>
-									<td><input type="text" class="w100"></td>
-									<td>
-										<div class="selectBox">
-											<select name="" id="select05">
-												<option value="" hidden>- 선택 -</option>
-											</select>
-										</div>
-									</td>
-									<td>해양수산부</td>
-									<td>홍길동</td>
-									<td>2025-00-00 12:00</td>
-								</tr>
-								<tr>
-									<td>
-										<div class="tblChk">
-											<input type="checkbox" id="chk14"><label for="chk14"></label>
-										</div>
-									</td>
-									<td><input type="text" class="w100"></td>
-									<td>
-										<div class="selectBox">
-											<select name="" id="select05">
-												<option value="" hidden>- 선택 -</option>
-											</select>
-										</div>
-									</td>
-									<td>해양수산부</td>
-									<td>홍길동</td>
-									<td>2025-00-00 12:00</td>
-								</tr>
-								<tr>
-									<td>
-										<div class="tblChk">
-											<input type="checkbox" id="chk15"><label for="chk15"></label>
-										</div>
-									</td>
-									<td><input type="text" class="w100"></td>
-									<td>
-										<div class="selectBox">
-											<select name="" id="select05">
-												<option value="" hidden>- 선택 -</option>
-											</select>
-										</div>
-									</td>
-									<td>해양수산부</td>
-									<td>홍길동</td>
-									<td>2025-00-00 12:00</td>
-								</tr>
-								<tr>
-									<td>
-										<div class="tblChk">
-											<input type="checkbox" id="chk16"><label for="chk16"></label>
-										</div>
-									</td>
-									<td><input type="text" class="w100"></td>
-									<td>
-										<div class="selectBox">
-											<select name="" id="select05">
-												<option value="" hidden>- 선택 -</option>
-											</select>
-										</div>
-									</td>
-									<td>해양수산부</td>
-									<td>홍길동</td>
-									<td>2025-00-00 12:00</td>
-								</tr>
-								<tr>
-									<td>
-										<div class="tblChk">
-											<input type="checkbox" id="chk17"><label for="chk17"></label>
-										</div>
-									</td>
-									<td><input type="text" class="w100"></td>
-									<td>
-										<div class="selectBox">
-											<select name="" id="select05">
-												<option value="" hidden>- 선택 -</option>
-											</select>
-										</div>
-									</td>
-									<td>해양수산부</td>
-									<td>홍길동</td>
-									<td>2025-00-00 12:00</td>
-								</tr>
-
-							</tbody>
-						</table>
-					</div>
+					<!-- //cntBox -->
 				</div>
-				<!-- //schList -->
-
-				<!-- pagination -->
-				<div class="pagination">
-					<button type="button" class="page-navi prev" disabled=""><span class="sr-only">이전</span></button>
-					<div class="page-links">
-						<a class="page-link active" href="#"><span class="sr-only">현재페이지</span>1</a>
-						<a class="page-link" href="#">2</a>
-						<a class="page-link" href="#">3</a>
-						<a class="page-link" href="#">4</a>
-						<a class="page-link" href="#">5</a>
-					</div>
-					<button type="button" class="page-navi next"><span class="sr-only">다음</span></button>
-
-					<p>총 949건 (1/95)</p>
-					<select name="" id="select01">
-						<option value="">10</option>
-					</select>
-				</div>
-				<!-- //pagination -->
-
+				<!-- //cntBox -->
 			</div>
 			<!-- //컨텐츠 영역 -->
 		</div>

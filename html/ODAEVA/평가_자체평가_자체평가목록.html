@@ -260,11 +260,8 @@
 				</div>
 				<!-- schBox //@dev 25.08.01 검색 수정 -->
 
-				<div class="schList">
-
-					<!-- @dev 2025.07.25 자체평가 추진 계획안 삭제 -->
-
-
+				<!-- cntBox -->
+				<div class="cntBox">
 					<div class="titBox">
 						<div class="lt">
 							<h3>자체평가 목록</h3>
@@ -282,116 +279,120 @@
 						</div>
 					</div>
 
-					<div class="tblBox">
-						<table class="tbl col"><!-- @dev 2025.07.25 리스트 수정 -->
-							<caption></caption>
-							<colgroup>
-								<col style="width: 5%;">
-								<col style="width: 6%;">
-								<col style="width: auto;">
-								<col style="width: 10%;">
-								<col style="width: 10%;">
-								<col style="width: 10%;">
-								<col style="width: 10%;">
-								<col style="width: 10%;">
-								<col style="width: 6%;">
-							</colgroup>
-							<thead>
-								<tr>
-									<th scope="col">
-										<div class="tblChk">
-											<input type="checkbox" id="chk01"><label for="chk01"></label>
-										</div>
-									</th>
-									<th scope="col">평가연도</th>
-									<th scope="col">평가 건 명</th>
-									<th scope="col">시행기관</th>
-									<th scope="col">원조유형</th>
-									<th scope="col">실시방법</th>
-									<th scope="col">평가시기</th>
-									<th scope="col">평가대상</th>
-									<th scope="col">평가 진행상태</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td class="tC">
-										<div class="tblChk">
-											<input type="checkbox" id="chk02"><label for="chk02"></label>
-										</div>
-									</td>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td class="tC"><span class="badge lg blue">저장</span></td>
-								</tr>
-								<tr>
-									<td class="tC">
-										<div class="tblChk">
-											<input type="checkbox" id="chk02"><label for="chk02"></label>
-										</div>
-									</td>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td class="tC"><span class="badge lg gray">평가완료</span></td>
-								</tr>
-								<tr>
-									<td class="tC">
-										<div class="tblChk">
-											<input type="checkbox" id="chk02"><label for="chk02"></label>
-										</div>
-									</td>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td class="tC"><span class="badge lg orange">마감</span></td>
-								</tr>
-								<tr>
-									<td class="tC">
-										<div class="tblChk">
-											<input type="checkbox" id="chk02"><label for="chk02"></label>
-										</div>
-									</td>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td class="tC"><span class="badge lg pt">평가진행중</span></td>
-								</tr>
-								<tr>
-									<td class="tC">
-										<div class="tblChk">
-											<input type="checkbox" id="chk02"><label for="chk02"></label>
-										</div>
-									</td>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td class="tC"><span class="badge lg">수정가능</span></td>
-								</tr>
-							</tbody>
-						</table>
+					<!-- schList : 그리드 -->
+					<div class="schList">
+						<div class="tblBox">
+							<table class="tbl col"><!-- @dev 2025.07.25 리스트 수정 -->
+								<caption></caption>
+								<colgroup>
+									<col style="width: 5%;">
+									<col style="width: 6%;">
+									<col style="width: auto;">
+									<col style="width: 10%;">
+									<col style="width: 10%;">
+									<col style="width: 10%;">
+									<col style="width: 10%;">
+									<col style="width: 10%;">
+									<col style="width: 6%;">
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col">
+											<div class="tblChk">
+												<input type="checkbox" id="chk01"><label for="chk01"></label>
+											</div>
+										</th>
+										<th scope="col">평가연도</th>
+										<th scope="col">평가 건 명</th>
+										<th scope="col">시행기관</th>
+										<th scope="col">원조유형</th>
+										<th scope="col">실시방법</th>
+										<th scope="col">평가시기</th>
+										<th scope="col">평가대상</th>
+										<th scope="col">평가 진행상태</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="tC">
+											<div class="tblChk">
+												<input type="checkbox" id="chk02"><label for="chk02"></label>
+											</div>
+										</td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td class="tC"><span class="badge lg blue">저장</span></td>
+									</tr>
+									<tr>
+										<td class="tC">
+											<div class="tblChk">
+												<input type="checkbox" id="chk02"><label for="chk02"></label>
+											</div>
+										</td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td class="tC"><span class="badge lg gray">평가완료</span></td>
+									</tr>
+									<tr>
+										<td class="tC">
+											<div class="tblChk">
+												<input type="checkbox" id="chk02"><label for="chk02"></label>
+											</div>
+										</td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td class="tC"><span class="badge lg orange">마감</span></td>
+									</tr>
+									<tr>
+										<td class="tC">
+											<div class="tblChk">
+												<input type="checkbox" id="chk02"><label for="chk02"></label>
+											</div>
+										</td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td class="tC"><span class="badge lg pt">평가진행중</span></td>
+									</tr>
+									<tr>
+										<td class="tC">
+											<div class="tblChk">
+												<input type="checkbox" id="chk02"><label for="chk02"></label>
+											</div>
+										</td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td class="tC"><span class="badge lg">수정가능</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
 					</div>
+					<!-- //schList : 그리드 -->
 
 					<!-- pagination -->
 					<div class="pagination">
@@ -411,9 +412,9 @@
 						</select>
 					</div>
 					<!-- //pagination -->
-
-					<!-- @dev 2025.07.25 사업목록 삭제 -->
 				</div>
+				<!-- //cntBox -->
+
 			</div>
 			<!-- //컨텐츠 영역 -->
 		</div>
@@ -440,7 +441,7 @@
 				<table class="tbl row">
 					<caption></caption>
 					<colgroup>
-						<col style="width: 160px;">
+						<col style="width: 152px;">
 						<col style="width: auto;">
 					</colgroup>
 
@@ -493,7 +494,7 @@
 				<table class="tbl row">
 					<caption></caption>
 					<colgroup>
-						<col style="width: 160px;">
+						<col style="width: 152px;">
 						<col style="width: auto;">
 					</colgroup>
 
