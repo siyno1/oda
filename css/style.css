@@ -127,7 +127,7 @@ button[class^="btn-"].txt {width: auto; padding:2px 10px 0 30px;}
 .btn-plus.txt {background: #526980 url(../img/ico_plus_txt.svg) no-repeat center left 10px; border: none;}
 .btn-plus.txt:hover {background-color:#3E4F60;}
 .btn-del {background: #fff url(../img/ico_del.svg) no-repeat center center; border: 1px solid #B1B8BE;}
-.btn-del.txt {width: auto;  letter-spacing: -0.4px; color: #464C53; background-position: left 9px top 5px;}
+.btn-del.txt {width: auto;  letter-spacing: -0.4px; color: #464C53; background-position:10px center;}
 .btn:where(.excel, .hwp, .pdf)::before {content: ' '; display: inline-block; width: 13px; height: 13px; margin: 0 4px 1px 0;}
 .btn.excel::before {background: url(../img/ico_excel.svg) no-repeat center center;}
 .btn.hwp::before {background: url(../img/ico_hwp.svg) no-repeat center center;}
