@@ -100,7 +100,8 @@ input[type="radio"]:checked:disabled + label::before {background: #E6E8EA url(..
 :where(.tblBox, .schList, .tabBox, .boxLi, .cntBox) + .btn-wrap {margin-top: 12px;}
 button[class^="btn-"] {width: 36px; height: 36px; font-size:15px; font-weight: 500; border: 1px solid #B1B8BE; border-radius: 4px; box-sizing: border-box;}
 button[class^="btn-"].txt {width: auto; padding:1px 10px 0 30px;}
-.btn {display: inline-flex; justify-content: center; align-items: center; min-width: 60px; height: 36px; padding:1px 10px 0; text-align: center; font-weight: 500; font-size:15px; line-height: 1.5; color: #464C53; background: #fff; border: 1px solid #929AA2; border-radius: 4px;}
+.btn {display: inline-flex; justify-content: center; align-items: center; min-width: 60px; height: 36px; padding:1px 10px 0; text-align: center; font-weight: 500; font-size:15px; line-height: 1.5; color: #464c53; background: #fff; border: 1px solid #929AA2; border-radius: 4px;}
+.tbl .btn {color:#7d7d7d;}
 /* btn : pointcolor */
 .btn.pt {color: #fff; background: #3B80FF; border-color: #3B80FF;}
 .btn-save.txt {color: #fff; background: #3B80FF url(../img/ico_save.svg) no-repeat center left 9px; border-color: #3B80FF;}
@@ -264,19 +265,19 @@ input[type="text"] ~ .btn-ipt {position: absolute; top: 50%; right: 55px; displa
 
 /* pagination */
 .pagination {display: flex; justify-content: center; align-items: center; width: 100%; margin-top: 24px;}
-.page-navi {width: 28px; height: 28px; margin: 0 12px; background: #fff; background-repeat: no-repeat; border: 1px solid #CED6DD; border-radius: 4px;}
+.page-navi {width: 30px; height: 30px; background: #fff; background-repeat: no-repeat; border: 1px solid #CED6DD; border-radius: 4px;}
 .page-navi:disabled {cursor: default;}
-.page-navi.prev {background-image: url(../img/ico_prev.svg); background-position: center left 45%;}
+.page-navi.prev {margin-right:20px; background-image: url(../img/ico_prev.svg); background-position: center left 45%;}
 .page-navi.prev:disabled {background-image: url(../img/ico_prev_dis.svg);}
-.page-navi.next {background-image: url(../img/ico_next.svg); background-position: center right 45%;}
+.page-navi.next {margin-left:20px; background-image: url(../img/ico_next.svg); background-position: center right 45%;}
 .page-navi.next:disabled {background-image: url(../img/ico_next_dis.svg);}
 
-.page-links a {display: inline-block; padding: 4px 10px; color: #464C53; font-weight: 400; line-height: 1.5; border-radius: 4px;}
-.page-links a.active {font-weight: 700; color: #3B80FF; background: #ECF2FE;}
+.page-links {display:flex; align-items:center; gap:10px;}
+.page-links a {display:block; width:30px; height:30px; color: #464C53; font-weight: 400; font-size:16px; text-align:center; line-height: 30px; border-radius: 4px;}
+.page-links a.active {font-weight: 700; color: #256EF4; background: #ECF2FE;}
 .page-links a:hover {text-decoration: underline;}
-.pagination p {text-align: center; font-size: inherit; font-weight: 400; line-height: 1.5; color: #6F7F92;}
-.pagination p + select {margin-left: 16px;}
-.pagination select {width: auto; padding: 4px 34px 4px 12px; font-size: 13px; font-weight: 400; line-height: 1.5; color: #6F7F92; background: #fff url(../img/ico_select_arr.svg) no-repeat center right 12px; border: 1px solid #CED6DD; border-radius: 4px;}
+.pagination p {margin-left: 18px; text-align: center; font-size: 15px; font-weight: 400; line-height: 1.5; color: #6F7F92;}
+.pagination select {width: auto; margin-left: 18px; padding: 4px 34px 4px 12px; font-size: 15px; font-weight: 400; line-height: 1.5; color: #6F7F92; background: #fff url(../img/ico_select_arr.svg) no-repeat center right 12px; border: 1px solid #CED6DD; border-radius: 4px;}
 
 /* txtBox */
 .txtBox {display: inline-block; width: 100%; max-height: 150px; line-height: 1.5; overflow-y: auto;}
@@ -576,6 +577,8 @@ input[type="text"] ~ .btn-ipt {position: absolute; top: 50%; right: 55px; displa
 /** 평가 - 평가계획등록 **/
 .inpCol {display:flex;flex-direction:column;gap:4px;}/* input 세로 배열 */
 .inpRow {display:flex;gap:4px;align-items:center;}
+.inpRow input {flex-shrink: 1; min-width:0;}
+.inpRow button {flex-shrink: 0;}
 
 .inpDblRow {height:66px;}/* inpCol 2개 높이 */
 
