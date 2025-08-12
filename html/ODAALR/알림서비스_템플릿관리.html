@@ -140,9 +140,9 @@
 
 								<div class="rt">
 									<div class="btn-wrap">
-										<button type="button" class="btn-plus txt">행추가</button>
-										<button type="button" class="btn-del txt">행삭제</button>
-										<button type="button" class="btn">행복사</button>
+										<button type="button" class="btn-grid-plus">행추가</button>
+										<button type="button" class="btn-grid-minus">행삭제</button>
+										<button type="button" class="btn-grid-copy">행복사</button>
 									</div>
 								</div>
 							</div>
@@ -329,7 +329,7 @@
 											<td>
 												<div class="inpRow">
 													<input type="text" title="리소스명">
-													<button type="button" class="btn sch pop" data-target="pop01"><span class="sr-only">찾기</span></button>
+													<button type="button" class="btn sch"><span class="sr-only">찾기</span></button>
 												</div>
 											</td>
 										</tr>
@@ -381,115 +381,6 @@
 		<!-- //컨테이너 영역 -->
 	</div>
 	<!-- //wrap -->
-
-
-	<!-- dim -->
-	<div class="dim"></div>
-	<!-- //dim -->
-
-	<!-- popup -->
-	<div class="popup" id="pop01">
-		<div class="tit">
-			<p>리소스 조회</p>
-			<button type="button" class="btn-close"><span class="sr-only">팝업창 닫기</span></button>
-		</div>
-
-		<div class="sch">
-			<div>
-				<p>상위경로</p>
-				<div class="selectBox">
-					<select name="" id="select02">
-						<option value="" hidden>- 선택 -</option>
-					</select>
-				</div>
-			</div>
-
-			<div class="flex1">
-				<p>경로명</p>
-				<input type="text" class="w100">
-				<div class="btn-wrap">
-					<button class="btn-reset"><span class="sr-only">초기화버튼</span></button>
-					<button type="button" class="btn-sch">조회</button>
-				</div>
-			</div>
-		</div>
-
-		<div class="cont">
-
-			<div class="schList">
-				<div class="tblBox">
-					<table class="tbl col tC">
-						<caption></caption>
-						<colgroup>
-							<col style="width: 50px;">
-							<col style="width: 120px;">
-							<col style="width: auto;">
-							<col style="width: auto;">
-							<col style="width: 100px;">
-							<col style="width: 80px;">
-						</colgroup>
-						<thead>
-							<tr>
-								<th scope="col">NO</th>
-								<th scope="col">상위경로</th>
-								<th scope="col">경로</th>
-								<th scope="col">경로명</th>
-								<th scope="col">리소스구분</th>
-								<th scope="col">정렬순서</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>1</td>
-								<td>Oda</td>
-								<td class="tL">/plan/list</td>
-								<td class="tL">사업계획서 목록 조회</td>
-								<td>읽기</td>
-								<td>1</td>
-							</tr>
-							<tr>
-								<td>2</td>
-								<td>Oda</td>
-								<td class="tL">/plan/list</td>
-								<td class="tL">사업계획서 목록 조회</td>
-								<td>쓰기</td>
-								<td>2</td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
-			</div>
-
-			<!-- pagination -->
-			<div class="pagination">
-				<button type="button" class="page-navi prev" disabled=""><span class="sr-only">이전</span></button>
-				<div class="page-links">
-					<a class="page-link active" href="#"><span class="sr-only">현재페이지</span>1</a>
-					<a class="page-link" href="#">2</a>
-					<a class="page-link" href="#">3</a>
-					<a class="page-link" href="#">4</a>
-					<a class="page-link" href="#">5</a>
-				</div>
-				<button type="button" class="page-navi next"><span class="sr-only">다음</span></button>
-
-				<p>총 949건 (1/95)</p>
-				<select name="" id="select01">
-					<option value="5">5</option>
-					<option value="10" selected>10</option>
-					<option value="30">30</option>
-					<option value="50">50</option>
-					<option value="100">100</option>
-				</select>
-			</div>
-			<!-- //pagination -->
-		</div>
-
-		<div class="btn-wrap">
-			<button type="button" class="btn navy">추가</button>
-			<button type="button" class="btn close">닫기</button>
-		</div>
-	</div>
-	<!-- //popup -->
 </body>
 
 </html>
