@@ -150,14 +150,19 @@ button[class^="btn-"]:disabled {border-color:#c3c7cb;background-color:#F3F3F3;co
 .btn.sch:disabled {border-color:#C3C7CB;background-color:#F3F3F3;}
 .btn.sch:disabled::before {opacity:0.5;;}
 .btn.blue {color: #5A7BA6; background: #fff; border: 1px solid #AABED7; border-radius: 4px;}
-.btn-plus {line-height: 0.9; background: #fff url(../img/ico_plus.svg) no-repeat center center;color:#fff;}
-.btn-plus.txt {color: #fff; background:#526980 url(../img/ico_plus_txt.svg) no-repeat center left 10px; border: none;}
-.btn-plus.txt:hover {background-color:#3E4F60;}
-.btn-plus.txt:disabled {background-color:#777;color:#bbb;}
 
-.btn-del {display:flex;padding:0 9px;align-items:center;justify-content:center;background-color:#fff; border: 1px solid #B1B8BE;}
-.btn-del::before {content:'';display:block;width:16px;height:16px;background:url(../img/ico_del.svg) no-repeat center center;}
-.btn-del.txt {width: auto; padding:0 9px !important; gap:4px; letter-spacing: -0.4px; color: #464C53; background-position:10px center;}
+.btn-plus {display:flex;gap:4px;width:auto !important;padding:0 9px;align-items:center;justify-content:center;background-color:#fff; border: 1px solid #B1B8BE;background:#fff;}
+.btn-plus::before {content:'';display:block;width:16px;height:16px;background:url(../img/ico_plus.svg) no-repeat center;}
+
+.btn-plus.txt {padding:0 9px !important; color: #fff !important; background:#526980;border-color:#526980;}
+.btn-plus.txt::before {content:'';background-image:url(../img/ico_plus_txt.svg);}
+.btn-plus.txt:hover {background-color:#3E4F60;}
+.btn-plus.txt:disabled {border-color:#777;background-color:#777;color:#bbb !important;}
+.btn-plus.txt:disabled::before {opacity:0.5;}
+
+.btn-del {display:flex;gap:4px;padding:0 9px;align-items:center;justify-content:center;background-color:#fff; border: 1px solid #B1B8BE;}
+.btn-del::before {content:'';display:block;width:16px;height:16px;background:url(../img/ico_del.svg) no-repeat center;}
+.btn-del.txt {width: auto; padding:0 9px !important; letter-spacing: -0.4px; color: #464C53; background-position:10px center;}
 .btn-del:disabled::before {opacity:0.5;}
 
 .btn:where(.excel, .hwp, .pdf)::before {content: ' '; display: inline-block; width: 13px; height: 13px; margin: 0 4px 1px 0;}
