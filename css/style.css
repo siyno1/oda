@@ -168,8 +168,10 @@ button[class^="btn-"]:disabled {border-color:#c3c7cb;background-color:#F3F3F3;co
 
 .btn.cnf {width: 45px; height: 27px; font-size: 13px; font-weight: 400; color: #6D7882; background: rgba(177, 184, 190, 0.20); border-radius: 4px; border: 0;}
 
-.btn-preview {display: inline-flex; justify-content: center; align-items: center; gap: 5px; min-width: 100px; height: 30px; padding: 10px; text-align: center; font-size: 14px; font-weight: 400; line-height: 1.5; color: #fff; background: #58616A; border-color: #58616A!important; border-radius: 4px;}
+.btn-preview {display: inline-flex; justify-content: center; align-items: center; gap: 5px; min-width: 100px; height: 30px; padding: 10px; text-align: center; font-size: 14px; font-weight: 400; line-height: 1.5; color: #fff !important; background: #58616A; border-color: #58616A!important; border-radius: 4px;}
 .btn-preview::before {content: ' '; display: inline-block; width: 13px; height: 13px; background: url(../img/ico_apply.svg) no-repeat center center;}
+.btn-preview:disabled {background:#777 !important; border-color:#777 !important; color:#bbb !important;}
+.btn-preview:disabled::before {opacity:0.5;}
 
 .btn-reset {width: 36px; height: 36px; background: #fff url(../img/ico_reset.svg) no-repeat center center; padding:0 !important; border: 1px solid #B1B8BE;}
 .btn-reset.txt {display: inline-flex; align-items: center; gap: 6px; width: 60px; font-size:14px; font-weight: 600; line-height: 1.5; color: #6D7882; background: #fff; border: none;}
