@@ -645,8 +645,6 @@ button[class^="btn-grid"]:disabled::before {opacity:0.5;}
 .inpRow input {flex-shrink: 1; min-width:0;}
 .inpRow button {flex-shrink: 0;}
 
-.inpDblRow {height:66px;}/* inpCol 2개 높이 */
-
 .txtThYear {display:inline-block;margin-right:5px;font-weight:700;}
 .txtThYear:empty {display:none;}
 
