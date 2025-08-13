@@ -59,16 +59,16 @@
 					<!-- tab -->
 					<div class="tab">
 						<ul>
-							<li><button type="button" class="active">ODA 사업관리</button></li>
-							<li><button type="button">시행계획 예산 기준(₩)</button></li>
-							<li><button type="button">통계(지원액) 기준($)</button></li>
+							<li><button type="button" data-tabBtn="tab-cont1" class="active">ODA 사업관리</button></li>
+							<li><button type="button" data-tabBtn="tab-cont2">시행계획 예산 기준(₩)</button></li>
+							<li><button type="button" data-tabBtn="tab-cont3">통계(지원액) 기준($)</button></li>
 						</ul>
 					</div>
 					<!-- //tab -->
 
 					<!-- tabCont -->
 					<ul class="tabCont">
-						<li class="active">
+						<li class="active" data-tabCont="tab-cont1">
 							<!-- mainSummary -->
 							<div class="mainSummary">
 								<ul class="listSummary tyList">
@@ -188,7 +188,7 @@
 							<!-- //mainContents -->
 						</li>
 
-						<li>
+						<li data-tabCont="tab-cont2">
 							<!-- mainWorld -->
 							<div class="mainWorld">
 
@@ -196,7 +196,7 @@
 							<!-- //mainWorld -->
 						</li>
 
-						<li>
+						<li data-tabCont="tab-cont3">
 
 						</li>
 					</ul>

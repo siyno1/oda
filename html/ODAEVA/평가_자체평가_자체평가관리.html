@@ -117,14 +117,14 @@
 					<div class="tabBox">
 						<div class="tab">
 							<ul>
-								<li><button type="button" class="active">자체평가 관리</button></li>
-								<li><button type="button">자체평가 현황판</button></li>
-								<li><button type="button">이행점검 과제 관리</button></li>
+								<li><button type="button" data-tabBtn="tab1-cont1" class="active">자체평가 관리</button></li>
+								<li><button type="button" data-tabBtn="tab1-cont2">자체평가 현황판</button></li>
+								<li><button type="button" data-tabBtn="tab1-cont3">이행점검 과제 관리</button></li>
 							</ul>
 						</div>
 
 						<ul class="tabCont">
-							<li class="active">
+							<li class="active" data-tabCont="tab1-cont1">
 								<!-- schBox @dev 25.08.01 검색 수정 -->
 								<div class="schBox">
 									<div class="schRow">
@@ -408,13 +408,13 @@
 									<div class="tabBox">
 										<div class="tab">
 											<ul>
-												<li><button type="button" class="active">자체평가 건 별</button></li>
-												<li><button type="button">평가 대상 사업 별</button></li>
+												<li><button type="button" data-tabBtn="tab2-cont1" class="active">자체평가 건 별</button></li>
+												<li><button type="button" data-tabBtn="tab2-cont2">평가 대상 사업 별</button></li>
 											</ul>
 										</div>
 
 										<ul class="tabCont">
-											<li class="active">
+											<li class="active" data-tabCont="tab2-cont1">
 												<!-- schList : 그리드 -->
 												<div class="schList">
 													<div class="tblBox">
@@ -500,7 +500,7 @@
 												<!-- //schList : 그리드 -->
 											</li>
 
-											<li>
+											<li data-tabCont="tab2-cont2">
 												<!-- schList : 그리드 -->
 												<div class="schList">
 													<div class="tblBox">
@@ -606,7 +606,7 @@
 								<!-- //cntBox -->
 							</li>
 
-							<li>
+							<li data-tabCont="tab1-cont2">
 								<!-- schBox @dev 25.08.01 검색 수정 -->
 								<div class="schBox">
 									<div class="schRow">
@@ -760,15 +760,17 @@
 
 								<!-- cntBox -->
 								<div class="cntBox">
-									<div class="depth2">
-										<button type="button" class="active">실시방법</button>
-										<button type="button">시기별</button>
-										<button type="button">대상별</button>
-										<button type="button">기관별</button>
+									<div class="tab">
+										<ul>
+											<li><button type="button" data-tabBtn="tab3-cont1" class="active">실시방법</button></li>
+											<li><button type="button" data-tabBtn="tab3-cont2">시기별</button></li>
+											<li><button type="button" data-tabBtn="tab3-cont3">대상별</button></li>
+											<li><button type="button" data-tabBtn="tab3-cont4">기관별</button></li>
+										</ul>
 									</div>
 
-									<ul class="depth2Cont">
-										<li class="active">
+									<ul class="tabCont">
+										<li class="active" data-tabCont="tab3-cont1">
 											<!-- titBox -->
 											<div class="titBox">
 												<div class="lt">
@@ -901,7 +903,7 @@
 											<!-- //pagination -->
 										</li>
 
-										<li>
+										<li data-tabCont="tab3-cont2">
 											<div class="titBox">
 												<div class="lt">
 													<h3>자체평가 목록</h3>
@@ -1028,7 +1030,7 @@
 											<!-- //pagination -->
 										</li>
 
-										<li>
+										<li data-tabCont="tab3-cont3">
 											<div class="titBox">
 												<div class="lt">
 													<h3>자체평가 목록</h3>
@@ -1162,7 +1164,7 @@
 											<!-- //pagination -->
 										</li>
 
-										<li>
+										<li data-tabCont="tab3-cont4">
 											<div class="titBox">
 												<div class="lt">
 													<h3>자체평가 목록</h3>
@@ -1301,7 +1303,7 @@
 								<!-- //cntBox -->
 							</li>
 
-							<li>
+							<li data-tabCont="tab1-cont3">
 								<!-- schBox @dev 25.08.01 검색 수정 -->
 								<div class="schBox">
 									<div class="schRow">

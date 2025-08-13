@@ -62,42 +62,60 @@ function init() {
 
 
 
-    // tab Event 1
-    $('.tab').on('click', 'button', function () {
-        let $btn = $(this);
-		let $tabBox = $btn.closest('.tabBox');
-        let $li = $btn.parent();
-        let index = $li.index();
-        let $tabConts = $tabBox.children('.tabCont');
+    // // tab Event 1
+    // $('.tab').on('click', 'button', function () {
+	// 	console.log('aaaa');
+    //     let $btn = $(this);
+	// 	let $tabBox = $btn.closest('.tabBox');
+    //     let $li = $btn.parent();
+    //     let index = $li.index();
+    //     let $tabConts = $tabBox.children('.tabCont');
 
-        $tabConts.each(function(idx, $tabCont){
-            let $tabItems = $($tabCont).children().removeClass('active');
-            let $target = $tabItems.eq(index).addClass('active');
+    //     $tabConts.each(function(idx, $tabCont){
+    //         let $tabItems = $($tabCont).children().removeClass('active');
+    //         let $target = $tabItems.eq(index).addClass('active');
 
-            if ($target.hasClass('depth')) {
-                var $depth1 = $target.children().eq(0);
-                var $depth2 = $target.children().eq(1);
+    //         if ($target.hasClass('depth')) {
+    //             var $depth1 = $target.children().eq(0);
+    //             var $depth2 = $target.children().eq(1);
 
-                $depth1.children().removeClass('active').first().addClass('active');
-                $depth2.children().removeClass('active').first().addClass('active');
-            }
-        });
+    //             $depth1.children().removeClass('active').first().addClass('active');
+    //             $depth2.children().removeClass('active').first().addClass('active');
+    //         }
+    //     });
 
-        $li.addClass('active').siblings().removeClass('active');
-        $li.find('button').addClass('active');
-        $li.siblings().find('button').removeClass('active');
-    });
+    //     $li.addClass('active').siblings().removeClass('active');
+    //     $li.find('button').addClass('active');
+    //     $li.siblings().find('button').removeClass('active');
+    // });
 
-    // tab Event 2
-    $('.tabCont').on('click', '.depth2 button', function () {
-        var $btn = $(this);
-        var index = $btn.index();
+    // // tab Event 2
+    // $('.tabCont').on('click', '.depth2 button', function () {
+    //     var $btn = $(this);
+    //     var index = $btn.index();
 
-        $btn.addClass('active').siblings().removeClass('active');
+    //     $btn.addClass('active').siblings().removeClass('active');
 
-        var $depth2Cont = $btn.closest('li').find('.depth2Cont');
-        $depth2Cont.children().removeClass('active').eq(index).addClass('active');
-    });
+    //     var $depth2Cont = $btn.closest('li').find('.depth2Cont');
+    //     $depth2Cont.children().removeClass('active').eq(index).addClass('active');
+    // });
+
+	/**
+	 * 탭 관련 스크립트
+	 */
+	$('[data-tabBtn]').on('click', function(event){
+		var $button = $(this);
+		var tabBtn = $button.attr('data-tabBtn') ? $button.attr('data-tabBtn') : '';
+		var tabName = tabBtn.split('-')[0];
+
+		if (tabName) {
+			$('[data-tabBtn^='+tabName+'-]').removeClass('active');
+			$('[data-tabCont^='+tabName+'-]').removeClass('active');
+
+			$button.addClass('active');
+			$('[data-tabCont='+tabBtn+']').addClass('active');
+		}
+	});
 
     // btn-flt Event
     $('.btn-flt').on('click', function () {

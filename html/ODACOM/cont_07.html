@@ -602,26 +602,28 @@
 							<!-- tab -->
 							<div class="tab">
 								<ul>
-									<li><button type="button" class="active">의결사항</button></li>
-									<li><button type="button">참석자명단</button></li>
-									<li><button type="button">안건관리</button></li>
+									<li><button type="button" data-tabBtn="tab1-cont1" class="active">의결사항</button></li>
+									<li><button type="button" data-tabBtn="tab1-cont2">참석자명단</button></li>
+									<li><button type="button" data-tabBtn="tab1-cont3">안건관리</button></li>
 								</ul>
 							</div>
 							<!-- //tab -->
 
 							<!-- tabCont -->
 							<ul class="tabCont">
-								<li class="active depth">
-									<div class="depth2">
-										<button type="button" class="active">2020년</button>
-										<button type="button">2021년</button>
-										<button type="button">2022년</button>
-										<button type="button">2023년</button>
-										<button type="button">2024년</button>
-										<button type="button">2025년</button>
+								<li class="active" data-tabCont="tab1-cont1">
+									<div class="tab ty02">
+										<ul>
+											<li><button type="button" class="active">2020년</button></li>
+											<li><button type="button">2021년</button></li>
+											<li><button type="button">2022년</button></li>
+											<li><button type="button">2023년</button></li>
+											<li><button type="button">2024년</button></li>
+											<li><button type="button">2025년</button></li>
+										</ul>
 									</div>
 
-									<ul class="depth2Cont">
+									<ul class="tabCont">
 										<li class="active">
 											<!-- cntBox -->
 											<div class="cntBox">
@@ -771,7 +773,7 @@
 									</ul>
 								</li>
 
-								<li>
+								<li data-tabCont="tab1-cont2">
 									<!-- cntBox -->
 									<div class="cntBox">
 										<div class="titBox">
@@ -794,21 +796,22 @@
 									<!-- //cntBox -->
 								</li>
 
-								<!-- depth -->
-								<li class="depth">
-									<!-- depth2 -->
-									<div class="depth2">
-										<button type="button" class="active">2020년</button>
-										<button type="button">2021년</button>
-										<button type="button">2022년</button>
-										<button type="button">2023년</button>
-										<button type="button">2024년</button>
-										<button type="button">2025년</button>
+								<li data-tabCont="tab1-cont3">
+									<!-- tab -->
+									<div class="tab ty02">
+										<ul>
+											<li><button type="button" class="active">2020년</button></li>
+											<li><button type="button">2021년</button></li>
+											<li><button type="button">2022년</button></li>
+											<li><button type="button">2023년</button></li>
+											<li><button type="button">2024년</button></li>
+											<li><button type="button">2025년</button></li>
+										</ul>
 									</div>
-									<!-- //depth2 -->
+									<!-- //tab -->
 
-									<!-- depth2Cont -->
-									<ul class="depth2Cont">
+									<!-- tabCont -->
+									<ul class="tabCont">
 										<li class="active">
 											<!-- cntBox -->
 											<div class="cntBox">
@@ -956,7 +959,7 @@
 											<!-- //cntBox -->
 										</li>
 									</ul>
-									<!-- //depth2Cont -->
+									<!-- //tabCont -->
 								</li>
 								<!-- //depth -->
 							</ul>

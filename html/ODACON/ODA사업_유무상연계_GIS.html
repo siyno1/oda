@@ -264,14 +264,14 @@
 			<div class="tabBox">
 				<div class="tab">
 					<ul>
-						<li><button type="button" class="active">기본정보</button></li>
-						<li><button type="button">주변사업</button></li>
-						<li><button type="button">공간정보조회</button></li>
+						<li><button type="button" data-tabBtn="tab1-cont1" class="active">기본정보</button></li>
+						<li><button type="button" data-tabBtn="tab1-cont2">주변사업</button></li>
+						<li><button type="button" data-tabBtn="tab1-cont3">공간정보조회</button></li>
 					</ul>
 				</div>
 
 				<ul class="tabCont">
-					<li class="active">
+					<li class="active" data-tabCont="tab1-cont1">
 						<p><b>국가</b> : 미얀마1</p>
 						<p><b>지역</b> : 치앙마이</p>
 						<b>사업개요</b>
@@ -282,7 +282,7 @@
 						</p>
 					</li>
 
-					<li>
+					<li data-tabCont="tab1-cont2">
 						<!-- 주변사업 -->
 						<div class="tblBox">
 							<table class="tbl col">
@@ -342,7 +342,7 @@
 						<!-- //주변사업 -->
 					</li>
 
-					<li>
+					<li data-tabCont="tab1-cont3">
 						<div class="sch">
 							<div class="flex1">
 								<div class="selectBox">

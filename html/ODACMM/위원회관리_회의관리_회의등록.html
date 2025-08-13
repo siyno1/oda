@@ -277,14 +277,14 @@
 						<div class="tabBox">
 							<div class="tab">
 								<ul>
-									<li><button type="button" class="active">의결사항</button></li>
-									<li><button type="button">참석자명단</button></li>
-									<li><button type="button">안건관리</button></li>
+									<li><button type="button" data-tabBtn="tab1-cont1" class="active">의결사항</button></li>
+									<li><button type="button" data-tabBtn="tab1-cont2">참석자명단</button></li>
+									<li><button type="button" data-tabBtn="tab1-cont3">안건관리</button></li>
 								</ul>
 							</div>
 
 							<ul class="tabCont">
-								<li class="active">
+								<li class="active" data-tabCont="tab1-cont1">
 									<div class="titBox">
 										<div class="lt">
 											<h3>의결사항 등록</h3>
@@ -393,7 +393,7 @@
 									</div>
 								</li>
 
-								<li>
+								<li data-tabCont="tab1-cont2">
 									<!-- cntBox -->
 									<div class="cntBox">
 										<div class="titBox">
@@ -653,7 +653,7 @@
 
 								</li>
 
-								<li>
+								<li data-tabCont="tab1-cont3">
 									<div class="titBox">
 										<div class="lt">
 											<h3>안건 등록</h3>
