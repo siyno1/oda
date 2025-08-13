@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<title>ODA</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+	<meta http-equiv="Pragma" content="no-cache">
+	<meta http-equiv="Expires" content="0">
+
+	<link rel="stylesheet" href="./../../css/flatpickr.min.css">
+	<link rel="stylesheet" href="./../../css/reset.css">
+	<link rel="stylesheet" href="./../../css/layout.css">
+	<link rel="stylesheet" href="./../../css/style.css">
+
+	<script defer src="./../../js/jquery-3.7.1.min.js"></script>
+	<script defer src="./../../js/flatpickr.js"></script>
+	<script defer src="./../../js/ui.js"></script>
+</head>
+
+<body>
+	<!-- wrap -->
+	<div id="wrap" class="wrapper">
+		<!-- 헤더 영역 -->
+		<div id="header" class="header">
+			<div class="wrap">
+				<h1><a href="./../gate.html"><img src="./../../img/logo.svg"></a></h1>
+				<ul class="gnb">
+					<li><a href="javascript:;">준비단계</a></li><!-- 활성화 시 li class="active" -->
+					<li><a href="javascript:;">진행단계</a></li>
+					<li><a href="javascript:;">완료단계</a></li>
+					<li><a href="javascript:;">정보마당</a></li>
+					<li><a href="javascript:;">운영관리</a></li>
+				</ul>
+				<div class="userBox">
+					<button class="btnUser">운영관리자</button>
+					<ul class="dropDown">
+						<li><a href="javascript:;">쪽지</a></li>
+						<li><a href="javascript:;">마이페이지</a></li>
+						<li><a href="javascript:;">로그아웃</a></li>
+					</ul>
+				</div>
+				<div class="searchBox">
+					<input type="text" placeholder="통합검색">
+					<button class="btnSearch">검색</button>
+				</div>
+			</div>
+		</div>
+		<!-- //헤더 영역 -->
+
+		<!-- 컨테이너 영역 -->
+		<div id="container" class="container">
+
+			<!-- LNB 영역 -->
+			<div id="side" class="side">
+				<div class="side_menu">
+					<h2>ODA 사업 관리</h2>
+					<ul class="gnb">
+						<li>
+							<a href="javascript:;">사업목록</a>
+						</li>
+						<li class="hasChild active">
+							<a href="javascript:;">연수 사업 관리</a>
+							<ul>
+								<li><a href="javascript:;" class="on">연수 사업 목록</a></li>
+								<li><a href="javascript:;">연수 프로그램 관리</a></li>
+								<li><a href="javascript:;">연수생 관리</a></li>
+								<li><a href="javascript:;">체크리스트</a></li>
+							</ul>
+						</li>
+						<li class="hasChild">
+							<a href="javascript:;">장학 사업 관리</a>
+							<ul>
+								<li><a href="javascript:;">연수 사업 목록</a></li>
+								<li><a href="javascript:;">연수 프로그램 관리</a></li>
+								<li><a href="javascript:;">연수생 관리</a></li>
+								<li><a href="javascript:;">체크리스트</a></li>
+							</ul>
+						</li>
+						<li class="hasChild">
+							<a href="javascript:;">패키지 사업 관리</a>
+							<ul>
+								<li><a href="javascript:;">연수 사업 목록</a></li>
+								<li><a href="javascript:;">연수 프로그램 관리</a></li>
+								<li><a href="javascript:;">연수생 관리</a></li>
+								<li><a href="javascript:;">체크리스트</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<button class="btnSlide">slide</button>
+			</div>
+			<!-- //LNB 영역 -->
+
+			<!-- 컨텐츠 영역 -->
+			<div class="contents">
+				<div class="pgtBox">
+					<div class="lt">
+						<h2>리소스 관리</h2>
+					</div>
+
+					<ul class="breadcrumb">
+						<li class="home"><a href="javascript:;">홈</a></li>
+						<li><a href="javascript:;">운영관리</a></li>
+						<li><a href="javascript:;">사용자 권한 관리</a></li>
+						<li><a href="javascript:;">리소스 관리</a></li>
+					</ul>
+
+					<div class="rt"></div>
+				</div>
+
+				<!-- schBox @dev 25.08.01 검색 수정 -->
+				<div class="schBox">
+					<div class="schRow">
+						<div class="schTxt">
+							<div>
+								<input type="text" placeholder="경로명을 입력하세요.">
+								<!-- button type="button" class="btn-src">검색</button -->
+							</div>
+						</div>
+					</div>
+
+					<div class="schBtn">
+						<button type="button" class="btn-apply">조건검색</button>
+					</div>
+				</div>
+				<!-- schBox //@dev 25.08.01 검색 수정 -->
+
+				<!-- cntBox -->
+				<div class="cntBox">
+
+					<!-- tblDb -->
+					<ul class="tblDb col2-3">
+						<li>
+							<div class="titBox">
+								<div class="lt">
+									<h3>리소스</h3>
+								</div>
+
+								<div class="rt">
+									<div class="btn-wrap">
+										<button type="button" class="btn-plus txt">추가</button>
+										<button type="button" class="btn-del" title="삭제"></button>
+										<button type="button" class="btn-sort-down" title="아래로"></button>
+										<button type="button" class="btn-sort-up" title="위로"></button>
+									</div>
+								</div>
+							</div>
+
+							<!-- nodeBox -->
+							<div class="nodeBox">
+								<!-- nodeArea -->
+								<div class="nodeArea">
+									<!-- nodeLi -->
+									<ul class="nodeLi">
+										<li>
+											<div class="node folder opened"><!-- 폴더 아이콘 -->
+												<button type="button" title="펼침"></button>
+												<input type="checkbox" name="chk_c0" id="chk_c0">
+												<label for="chk_c0">ODA사업</label>
+											</div>
+											<ul class="nodeLi">
+												<li>
+													<div class="node"><!-- 기본 아이콘 -->
+														<input type="checkbox" name="chk_c1" id="chk_c1">
+														<label for="chk_c1">ODA사업</label>
+													</div>
+												</li>
+											</ul>
+										</li>
+										<li>
+											<div class="node folder opened"><!-- 폴더 아이콘 -->
+												<button type="button" title="펼침"></button>
+												<input type="checkbox" name="chk_c2" id="chk_c2">
+												<label for="chk_c2">ODA사업</label>
+											</div>
+											<ul class="nodeLi">
+												<li>
+													<div class="node folder opened"><!-- 폴더 아이콘 -->
+														<button type="button" title="펼침"></button>
+														<input type="checkbox" name="chk_c3" id="chk_c3">
+														<label for="chk_c3">ODA사업</label>
+													</div>
+													<ul class="nodeLi">
+														<li>
+															<div class="node"><!-- 기본 아이콘 -->
+																<input type="checkbox" name="chk_c4" id="chk_c4">
+																<label for="chk_c4">ODA사업</label>
+															</div>
+														</li>
+													</ul>
+												</li>
+												<li>
+													<div class="node"><!-- 기본 아이콘 -->
+														<input type="checkbox" name="chk_c5" id="chk_c5">
+														<label for="chk_c5">ODA사업</label>
+													</div>
+												</li>
+												<li>
+													<div class="node"><!-- 기본 아이콘 -->
+														<input type="checkbox" name="chk_c6" id="chk_c6">
+														<label for="chk_c6">ODA사업</label>
+													</div>
+												</li>
+												<li>
+													<div class="node"><!-- 기본 아이콘 -->
+														<input type="checkbox" name="chk_c7" id="chk_c7">
+														<label for="chk_c7">ODA사업</label>
+													</div>
+												</li>
+											</ul>
+										</li>
+										<li>
+											<div class="node folder opened"><!-- 폴더 아이콘 -->
+												<button type="button" title="펼침"></button>
+												<input type="checkbox" name="chk_c8" id="chk_c8">
+												<label for="chk_c8">ODA사업</label>
+											</div>
+											<ul class="nodeLi">
+												<li>
+													<div class="node folder opened"><!-- 폴더 아이콘 -->
+														<button type="button" title="펼침"></button>
+														<input type="checkbox" name="chk_c9" id="chk_c9">
+														<label for="chk_c9">ODA사업</label>
+													</div>
+													<ul class="nodeLi">
+														<li>
+															<div class="node"><!-- 기본 아이콘 -->
+																<input type="checkbox" name="chk_c10" id="chk_c10">
+																<label for="chk_c10">ODA사업</label>
+															</div>
+														</li>
+													</ul>
+												</li>
+												<li>
+													<div class="node"><!-- 기본 아이콘 -->
+														<input type="checkbox" name="chk_c11" id="chk_c11">
+														<label for="chk_c11">ODA사업</label>
+													</div>
+												</li>
+												<li>
+													<div class="node"><!-- 기본 아이콘 -->
+														<input type="checkbox" name="chk_c12" id="chk_c12">
+														<label for="chk_c12">ODA사업</label>
+													</div>
+												</li>
+												<li>
+													<div class="node"><!-- 기본 아이콘 -->
+														<input type="checkbox" name="chk_c13" id="chk_c13">
+														<label for="chk_c13">ODA사업</label>
+													</div>
+												</li>
+											</ul>
+										</li>
+										<li>
+											<div class="node folder opened"><!-- 폴더 아이콘 -->
+												<button type="button" title="펼침"></button>
+												<input type="checkbox" name="chk_c14" id="chk_c14">
+												<label for="chk_c14">ODA사업</label>
+											</div>
+											<ul class="nodeLi">
+												<li>
+													<div class="node folder opened"><!-- 폴더 아이콘 -->
+														<button type="button" title="펼침"></button>
+														<input type="checkbox" name="chk_c15" id="chk_c15">
+														<label for="chk_c15">ODA사업</label>
+													</div>
+													<ul class="nodeLi">
+														<li>
+															<div class="node"><!-- 기본 아이콘 -->
+																<input type="checkbox" name="chk_c16" id="chk_c16">
+																<label for="chk_c16">ODA사업</label>
+															</div>
+														</li>
+													</ul>
+												</li>
+												<li>
+													<div class="node"><!-- 기본 아이콘 -->
+														<input type="checkbox" name="chk_c17" id="chk_c17">
+														<label for="chk_c17">ODA사업</label>
+													</div>
+												</li>
+												<li>
+													<div class="node"><!-- 기본 아이콘 -->
+														<input type="checkbox" name="chk_c18" id="chk_c18">
+														<label for="chk_c18">ODA사업</label>
+													</div>
+												</li>
+												<li>
+													<div class="node"><!-- 기본 아이콘 -->
+														<input type="checkbox" name="chk_c19" id="chk_c19">
+														<label for="chk_c19">ODA사업</label>
+													</div>
+												</li>
+											</ul>
+										</li>
+									</ul>
+									<!-- //nodeLi -->
+								</div>
+								<!-- //nodeArea -->
+							</div>
+							<!-- //nodeBox -->
+						</li>
+
+						<li>
+							<div class="cntBox">
+								<div class="titBox">
+									<div class="lt">
+										<h3>리소스상세</h3>
+									</div>
+
+									<div class="rt">
+
+									</div>
+								</div>
+
+								<!-- tblBox -->
+								<div class="tblBox">
+									<table class="tbl row">
+										<caption></caption>
+										<colgroup>
+											<col style="width: 152px;">
+											<col style="width: auto;">
+										</colgroup>
+
+										<tbody>
+											<tr>
+												<th scope="row">상위경로명</th>
+												<td></td>
+											</tr>
+											<tr>
+												<th scope="row">상위경로</th>
+												<td></td>
+											</tr>
+											<tr>
+												<th scope="row" class="need">경로명</th>
+												<td></td>
+											</tr>
+											<tr>
+												<th scope="row" class="need">경로</th>
+												<td></td>
+											</tr>
+											<tr>
+												<th scope="row">정렬순서</th>
+												<td></td>
+											</tr>
+											<tr>
+												<th scope="row">리소스구분</th>
+												<td></td>
+											</tr>
+											<tr>
+												<th scope="row">리소스설명</th>
+												<td></td>
+											</tr>
+											<tr>
+												<th scope="row">비고</th>
+												<td></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<!-- //tblBox -->
+							</div>
+
+							<div class="cntBox">
+								<div class="titBox">
+									<div class="lt">
+										<h3>알림수신대상</h3>
+									</div>
+
+									<div class="rt">
+										<div class="btn-wrap">
+											<button type="button" class="btn-plus txt">수신그룹 추가</button>
+											<button type="button" class="btn-del" title="삭제"></button>
+										</div>
+									</div>
+								</div>
+
+								<!-- tblBox -->
+								<div class="tblBox">
+									<table class="tbl col tC">
+										<caption></caption>
+										<colgroup>
+											<col style="width: 50px;">
+											<col style="width: 46px;">
+											<col style="width: 200px;">
+											<col style="width: auto;">
+										</colgroup>
+										<thead>
+											<tr>
+												<th scope="col">NO</th>
+												<th scope="col">
+													<div class="tblChk">
+														<input type="checkbox" id="chk00"><label for="chk00"></label>
+													</div>
+												</th>
+												<th scope="col">그룹ID</th>
+												<th scope="col">그룹명</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>1</td>
+												<td>
+													<div class="tblChk">
+														<input type="checkbox" id="chk01"><label for="chk01"></label>
+													</div>
+												</td>
+												<td>A001</td>
+												<td>주관기관 사업담당자 권한</td>
+											</tr>
+											<tr>
+												<td>2</td>
+												<td>
+													<div class="tblChk">
+														<input type="checkbox" id="chk02"><label for="chk02"></label>
+													</div>
+												</td>
+												<td>A002</td>
+												<td>주관기관 사업담당자 권한</td>
+											</tr>
+											<tr>
+												<td>3</td>
+												<td>
+													<div class="tblChk">
+														<input type="checkbox" id="chk03"><label for="chk03"></label>
+													</div>
+												</td>
+												<td>A003</td>
+												<td>주관기관 사업담당자 권한</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<!-- //tblBox -->
+							</div>
+
+							<div class="btn-wrap">
+								<button type="button" class="btn pt">저장</button>
+							</div>
+						</li>
+					</ul>
+					<!-- //tblDb -->
+
+				</div>
+				<!-- //cntBox -->
+
+			</div>
+			<!-- //컨텐츠 영역 -->
+		</div>
+		<!-- //컨테이너 영역 -->
+	</div>
+	<!-- //wrap -->
+</body>
+
+</html>

@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<title>ODA</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+	<meta http-equiv="Pragma" content="no-cache">
+	<meta http-equiv="Expires" content="0">
+
+	<link rel="stylesheet" href="./../../css/flatpickr.min.css">
+	<link rel="stylesheet" href="./../../css/reset.css">
+	<link rel="stylesheet" href="./../../css/layout.css">
+	<link rel="stylesheet" href="./../../css/style.css">
+
+	<script defer src="./../../js/jquery-3.7.1.min.js"></script>
+	<script defer src="./../../js/flatpickr.js"></script>
+	<script defer src="./../../js/ui.js"></script>
+</head>
+
+<body>
+	<!-- wrap -->
+	<div id="wrap" class="wrapper">
+		<!-- 헤더 영역 -->
+		<div id="header" class="header">
+			<div class="wrap">
+				<h1><a href="./../gate.html"><img src="./../../img/logo.svg"></a></h1>
+				<ul class="gnb">
+					<li><a href="javascript:;">준비단계</a></li><!-- 활성화 시 li class="active" -->
+					<li><a href="javascript:;">진행단계</a></li>
+					<li><a href="javascript:;">완료단계</a></li>
+					<li><a href="javascript:;">정보마당</a></li>
+					<li><a href="javascript:;">운영관리</a></li>
+				</ul>
+				<div class="userBox">
+					<button class="btnUser">운영관리자</button>
+					<ul class="dropDown">
+						<li><a href="javascript:;">쪽지</a></li>
+						<li><a href="javascript:;">마이페이지</a></li>
+						<li><a href="javascript:;">로그아웃</a></li>
+					</ul>
+				</div>
+				<div class="searchBox">
+					<input type="text" placeholder="통합검색">
+					<button class="btnSearch">검색</button>
+				</div>
+			</div>
+		</div>
+		<!-- //헤더 영역 -->
+
+		<!-- 컨테이너 영역 -->
+		<div id="container" class="container">
+
+			<!-- LNB 영역 -->
+			<div id="side" class="side">
+				<div class="side_menu">
+					<h2>ODA 사업 관리</h2>
+					<ul class="gnb">
+						<li>
+							<a href="javascript:;">사업목록</a>
+						</li>
+						<li class="hasChild active">
+							<a href="javascript:;">연수 사업 관리</a>
+							<ul>
+								<li><a href="javascript:;" class="on">연수 사업 목록</a></li>
+								<li><a href="javascript:;">연수 프로그램 관리</a></li>
+								<li><a href="javascript:;">연수생 관리</a></li>
+								<li><a href="javascript:;">체크리스트</a></li>
+							</ul>
+						</li>
+						<li class="hasChild">
+							<a href="javascript:;">장학 사업 관리</a>
+							<ul>
+								<li><a href="javascript:;">연수 사업 목록</a></li>
+								<li><a href="javascript:;">연수 프로그램 관리</a></li>
+								<li><a href="javascript:;">연수생 관리</a></li>
+								<li><a href="javascript:;">체크리스트</a></li>
+							</ul>
+						</li>
+						<li class="hasChild">
+							<a href="javascript:;">패키지 사업 관리</a>
+							<ul>
+								<li><a href="javascript:;">연수 사업 목록</a></li>
+								<li><a href="javascript:;">연수 프로그램 관리</a></li>
+								<li><a href="javascript:;">연수생 관리</a></li>
+								<li><a href="javascript:;">체크리스트</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<button class="btnSlide">slide</button>
+			</div>
+			<!-- //LNB 영역 -->
+
+			<!-- 컨텐츠 영역 -->
+			<div class="contents">
+				<div class="pgtBox">
+					<div class="lt">
+						<h2>기능 그룹 관리</h2>
+					</div>
+
+					<ul class="breadcrumb">
+						<li class="home"><a href="javascript:;">홈</a></li>
+						<li><a href="javascript:;">운영관리</a></li>
+						<li><a href="javascript:;">사용자 권한 관리</a></li>
+						<li><a href="javascript:;">기능 그룹 관리</a></li>
+					</ul>
+
+					<div class="rt"></div>
+				</div>
+
+				<!-- schBox @dev 25.08.01 검색 수정 -->
+				<div class="schBox">
+					<div class="schRow">
+						<div class="schTxt">
+							<div>
+								<input type="text" placeholder="그룹명을 입력하세요.">
+								<!-- button type="button" class="btn-src">검색</button -->
+							</div>
+						</div>
+					</div>
+
+					<div class="schBtn">
+						<button type="button" class="btn-apply">조건검색</button>
+					</div>
+				</div>
+				<!-- schBox //@dev 25.08.01 검색 수정 -->
+
+				<!-- cntBox -->
+				<div class="cntBox">
+
+					<!-- tblDb -->
+					<ul class="tblDb col2-3">
+						<li>
+							<div class="titBox">
+								<div class="lt">
+									<h3>그룹</h3>
+								</div>
+
+								<div class="rt">
+									<div class="btn-wrap">
+										<button type="button" class="btn-plus txt">그룹추가</button>
+										<button type="button" class="btn-del" title="삭제"></button>
+									</div>
+								</div>
+							</div>
+
+							<!-- tblBox -->
+							<div class="tblBox">
+								<table class="tbl col tC">
+									<caption></caption>
+									<colgroup>
+										<col style="width: 50px;">
+										<col style="width: 46px;">
+										<col style="width: 200px;">
+										<col style="width: auto;">
+									</colgroup>
+									<thead>
+										<tr>
+											<th scope="col">NO</th>
+											<th scope="col">
+												<div class="tblChk">
+													<input type="checkbox" id="chk00"><label for="chk00"></label>
+												</div>
+											</th>
+											<th scope="col">그룹ID</th>
+											<th scope="col">그룹명</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>1</td>
+											<td>
+												<div class="tblChk">
+													<input type="checkbox" id="chk01"><label for="chk01"></label>
+												</div>
+											</td>
+											<td>A001</td>
+											<td>주관기관 사업담당자 권한</td>
+										</tr>
+										<tr>
+											<td>2</td>
+											<td>
+												<div class="tblChk">
+													<input type="checkbox" id="chk02"><label for="chk02"></label>
+												</div>
+											</td>
+											<td>A002</td>
+											<td>주관기관 사업담당자 권한</td>
+										</tr>
+										<tr>
+											<td>3</td>
+											<td>
+												<div class="tblChk">
+													<input type="checkbox" id="chk03"><label for="chk03"></label>
+												</div>
+											</td>
+											<td>A003</td>
+											<td>주관기관 사업담당자 권한</td>
+										</tr>
+										<tr>
+											<td>4</td>
+											<td>
+												<div class="tblChk">
+													<input type="checkbox" id="chk04"><label for="chk04"></label>
+												</div>
+											</td>
+											<td>A003</td>
+											<td>주관기관 사업담당자 권한</td>
+										</tr>
+										<tr>
+											<td>5</td>
+											<td>
+												<div class="tblChk">
+													<input type="checkbox" id="chk05"><label for="chk05"></label>
+												</div>
+											</td>
+											<td>A003</td>
+											<td>주관기관 사업담당자 권한</td>
+										</tr>
+										<tr>
+											<td>6</td>
+											<td>
+												<div class="tblChk">
+													<input type="checkbox" id="chk06"><label for="chk06"></label>
+												</div>
+											</td>
+											<td>A003</td>
+											<td>주관기관 사업담당자 권한</td>
+										</tr>
+										<tr>
+											<td>7</td>
+											<td>
+												<div class="tblChk">
+													<input type="checkbox" id="chk07"><label for="chk07"></label>
+												</div>
+											</td>
+											<td>A003</td>
+											<td>주관기관 사업담당자 권한</td>
+										</tr>
+										<tr>
+											<td>8</td>
+											<td>
+												<div class="tblChk">
+													<input type="checkbox" id="chk08"><label for="chk08"></label>
+												</div>
+											</td>
+											<td>A003</td>
+											<td>주관기관 사업담당자 권한</td>
+										</tr>
+										<tr>
+											<td>9</td>
+											<td>
+												<div class="tblChk">
+													<input type="checkbox" id="chk09"><label for="chk09"></label>
+												</div>
+											</td>
+											<td>A003</td>
+											<td>주관기관 사업담당자 권한</td>
+										</tr>
+										<tr>
+											<td>10</td>
+											<td>
+												<div class="tblChk">
+													<input type="checkbox" id="chk10"><label for="chk10"></label>
+												</div>
+											</td>
+											<td>A003</td>
+											<td>주관기관 사업담당자 권한</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<!-- //tblBox -->
+						</li>
+
+						<li>
+							<div class="cntBox">
+								<div class="titBox">
+									<div class="lt">
+										<h3>그룹 상세</h3>
+									</div>
+
+									<div class="rt">
+
+									</div>
+								</div>
+
+								<!-- tblBox -->
+								<div class="tblBox">
+									<table class="tbl row">
+										<caption></caption>
+										<colgroup>
+											<col style="width: 152px;">
+											<col style="width: auto;">
+											<col style="width: 152px;">
+											<col style="width: auto;">
+										</colgroup>
+
+										<tbody>
+											<tr>
+												<th scope="row" class="need">그룹ID</th>
+												<td></td>
+												<th scope="row" class="need">그룹명</th>
+												<td></td>
+											</tr>
+											<tr>
+												<th scope="row">설명</th>
+												<td colspan="3"></td>
+											</tr>
+											<tr>
+												<th scope="row">등록일자</th>
+												<td></td>
+												<th scope="row">등록자명</th>
+												<td></td>
+											</tr>
+											<tr>
+												<th scope="row">수정일자</th>
+												<td></td>
+												<th scope="row">수정자명</th>
+												<td></td>
+											</tr>
+											<tr>
+												<th scope="row">사용여부</th>
+												<td></td>
+												<th scope="row">정렬순서</th>
+												<td></td>
+											</tr>
+											<tr>
+												<th scope="row">비고</th>
+												<td colspan="3"></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<!-- //tblBox -->
+							</div>
+
+							<div class="btn-wrap">
+								<button type="button" class="btn pt">저장</button>
+							</div>
+						</li>
+					</ul>
+					<!-- //tblDb -->
+
+				</div>
+				<!-- //cntBox -->
+
+			</div>
+			<!-- //컨텐츠 영역 -->
+		</div>
+		<!-- //컨테이너 영역 -->
+	</div>
+	<!-- //wrap -->
+</body>
+
+</html>
