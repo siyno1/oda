@@ -153,9 +153,12 @@ function init() {
     });
 
     // tbl Chk event
-    $('.tbl .tblChk input[type="checkbox"]').on('change', function () {
-        $(this).closest('tr').toggleClass('on', this.checked);
-    });
+	/**
+	 * 2025.08.14 다른 CASE 많아서 주석처리함
+	 */
+    // $('.tbl .tblChk input[type="checkbox"]').on('change', function () {
+    //     $(this).closest('tr').toggleClass('on', this.checked);
+    // });
 
     // contList btn Event
     $('.contList button').on('click', function () {

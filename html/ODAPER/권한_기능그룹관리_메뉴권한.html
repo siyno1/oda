@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<title>ODA</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+	<meta http-equiv="Pragma" content="no-cache">
+	<meta http-equiv="Expires" content="0">
+
+	<link rel="stylesheet" href="./../../css/flatpickr.min.css">
+	<link rel="stylesheet" href="./../../css/reset.css">
+	<link rel="stylesheet" href="./../../css/layout.css">
+	<link rel="stylesheet" href="./../../css/style.css">
+
+	<script defer src="./../../js/jquery-3.7.1.min.js"></script>
+	<script defer src="./../../js/flatpickr.js"></script>
+	<script defer src="./../../js/ui.js"></script>
+</head>
+
+<body>
+	<!-- wrap -->
+	<div id="wrap" class="wrapper">
+		<!-- 헤더 영역 -->
+		<div id="header" class="header">
+			<div class="wrap">
+				<h1><a href="./../gate.html"><img src="./../../img/logo.svg"></a></h1>
+				<ul class="gnb">
+					<li><a href="javascript:;">준비단계</a></li><!-- 활성화 시 li class="active" -->
+					<li><a href="javascript:;">진행단계</a></li>
+					<li><a href="javascript:;">완료단계</a></li>
+					<li><a href="javascript:;">정보마당</a></li>
+					<li><a href="javascript:;">운영관리</a></li>
+				</ul>
+				<div class="userBox">
+					<button class="btnUser">운영관리자</button>
+					<ul class="dropDown">
+						<li><a href="javascript:;">쪽지</a></li>
+						<li><a href="javascript:;">마이페이지</a></li>
+						<li><a href="javascript:;">로그아웃</a></li>
+					</ul>
+				</div>
+				<div class="searchBox">
+					<input type="text" placeholder="통합검색">
+					<button class="btnSearch">검색</button>
+				</div>
+			</div>
+		</div>
+		<!-- //헤더 영역 -->
+
+		<!-- 컨테이너 영역 -->
+		<div id="container" class="container">
+
+			<!-- LNB 영역 -->
+			<div id="side" class="side">
+				<div class="side_menu">
+					<h2>ODA 사업 관리</h2>
+					<ul class="gnb">
+						<li>
+							<a href="javascript:;">사업목록</a>
+						</li>
+						<li class="hasChild active">
+							<a href="javascript:;">연수 사업 관리</a>
+							<ul>
+								<li><a href="javascript:;" class="on">연수 사업 목록</a></li>
+								<li><a href="javascript:;">연수 프로그램 관리</a></li>
+								<li><a href="javascript:;">연수생 관리</a></li>
+								<li><a href="javascript:;">체크리스트</a></li>
+							</ul>
+						</li>
+						<li class="hasChild">
+							<a href="javascript:;">장학 사업 관리</a>
+							<ul>
+								<li><a href="javascript:;">연수 사업 목록</a></li>
+								<li><a href="javascript:;">연수 프로그램 관리</a></li>
+								<li><a href="javascript:;">연수생 관리</a></li>
+								<li><a href="javascript:;">체크리스트</a></li>
+							</ul>
+						</li>
+						<li class="hasChild">
+							<a href="javascript:;">패키지 사업 관리</a>
+							<ul>
+								<li><a href="javascript:;">연수 사업 목록</a></li>
+								<li><a href="javascript:;">연수 프로그램 관리</a></li>
+								<li><a href="javascript:;">연수생 관리</a></li>
+								<li><a href="javascript:;">체크리스트</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<button class="btnSlide">slide</button>
+			</div>
+			<!-- //LNB 영역 -->
+
+			<!-- 컨텐츠 영역 -->
+			<div class="contents">
+				<div class="pgtBox">
+					<div class="lt">
+						<h2>기능 그룹 관리</h2>
+					</div>
+
+					<ul class="breadcrumb">
+						<li class="home"><a href="javascript:;">홈</a></li>
+						<li><a href="javascript:;">운영관리</a></li>
+						<li><a href="javascript:;">사용자 권한 관리</a></li>
+						<li><a href="javascript:;">기능 그룹 관리</a></li>
+					</ul>
+
+					<div class="rt"></div>
+				</div>
+
+				<!-- schBox @dev 25.08.01 검색 수정 -->
+				<div class="schBox">
+					<div class="schRow">
+						<div class="schTxt">
+							<div>
+								<input type="text" placeholder="그룹명을 입력하세요.">
+								<!-- button type="button" class="btn-src">검색</button -->
+							</div>
+						</div>
+					</div>
+
+					<div class="schBtn">
+						<button type="button" class="btn-apply">조건검색</button>
+					</div>
+				</div>
+				<!-- schBox //@dev 25.08.01 검색 수정 -->
+
+				<!-- cntBox -->
+				<div class="cntBox">
+
+					<!-- tblDb -->
+					<ul class="tblDb col2-3">
+						<li>
+							<div class="titBox">
+								<div class="lt">
+									<h3>그룹</h3>
+								</div>
+
+								<div class="rt">
+									<div class="btn-wrap">
+										<button type="button" class="btn-plus txt">그룹추가</button>
+										<button type="button" class="btn-del" title="삭제"></button>
+									</div>
+								</div>
+							</div>
+
+							<!-- schList -->
+							<div class="schList">
+								<!-- tblBox -->
+								<div class="tblBox">
+									<table class="tbl col tC">
+										<caption></caption>
+										<colgroup>
+											<col style="width: 50px;">
+											<col style="width: 46px;">
+											<col style="width: 200px;">
+											<col style="width: auto;">
+										</colgroup>
+										<thead>
+											<tr>
+												<th scope="col">NO</th>
+												<th scope="col">
+													<div class="tblChk">
+														<input type="checkbox" id="chk00"><label for="chk00"></label>
+													</div>
+												</th>
+												<th scope="col">그룹ID</th>
+												<th scope="col">그룹명</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>1</td>
+												<td>
+													<div class="tblChk">
+														<input type="checkbox" id="chk01"><label for="chk01"></label>
+													</div>
+												</td>
+												<td>A001</td>
+												<td>주관기관 사업담당자 권한</td>
+											</tr>
+											<tr>
+												<td>2</td>
+												<td>
+													<div class="tblChk">
+														<input type="checkbox" id="chk02"><label for="chk02"></label>
+													</div>
+												</td>
+												<td>A002</td>
+												<td>주관기관 사업담당자 권한</td>
+											</tr>
+											<tr>
+												<td>3</td>
+												<td>
+													<div class="tblChk">
+														<input type="checkbox" id="chk03"><label for="chk03"></label>
+													</div>
+												</td>
+												<td>A003</td>
+												<td>주관기관 사업담당자 권한</td>
+											</tr>
+											<tr>
+												<td>4</td>
+												<td>
+													<div class="tblChk">
+														<input type="checkbox" id="chk04"><label for="chk04"></label>
+													</div>
+												</td>
+												<td>A003</td>
+												<td>주관기관 사업담당자 권한</td>
+											</tr>
+											<tr>
+												<td>5</td>
+												<td>
+													<div class="tblChk">
+														<input type="checkbox" id="chk05"><label for="chk05"></label>
+													</div>
+												</td>
+												<td>A003</td>
+												<td>주관기관 사업담당자 권한</td>
+											</tr>
+											<tr>
+												<td>6</td>
+												<td>
+													<div class="tblChk">
+														<input type="checkbox" id="chk06"><label for="chk06"></label>
+													</div>
+												</td>
+												<td>A003</td>
+												<td>주관기관 사업담당자 권한</td>
+											</tr>
+											<tr>
+												<td>7</td>
+												<td>
+													<div class="tblChk">
+														<input type="checkbox" id="chk07"><label for="chk07"></label>
+													</div>
+												</td>
+												<td>A003</td>
+												<td>주관기관 사업담당자 권한</td>
+											</tr>
+											<tr>
+												<td>8</td>
+												<td>
+													<div class="tblChk">
+														<input type="checkbox" id="chk08"><label for="chk08"></label>
+													</div>
+												</td>
+												<td>A003</td>
+												<td>주관기관 사업담당자 권한</td>
+											</tr>
+											<tr>
+												<td>9</td>
+												<td>
+													<div class="tblChk">
+														<input type="checkbox" id="chk09"><label for="chk09"></label>
+													</div>
+												</td>
+												<td>A003</td>
+												<td>주관기관 사업담당자 권한</td>
+											</tr>
+											<tr>
+												<td>10</td>
+												<td>
+													<div class="tblChk">
+														<input type="checkbox" id="chk10"><label for="chk10"></label>
+													</div>
+												</td>
+												<td>A003</td>
+												<td>주관기관 사업담당자 권한</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<!-- //tblBox -->
+							</div>
+							<!-- //schList -->
+						</li>
+
+						<li>
+							<div class="cntBox">
+								<div class="titBox">
+									<div class="lt">
+										<h3>메뉴 권한</h3>
+									</div>
+
+									<div class="rt">
+									</div>
+								</div>
+
+								<!-- schList -->
+								<div class="schList">
+									<!-- tblBox -->
+									<div class="tblBox">
+										<table class="tbl col themeGray">
+											<caption></caption>
+											<colgroup>
+												<col style="width: auto;">
+												<col style="width: 200px;">
+												<col style="width: 140px;">
+												<col style="width: 100px;">
+												<col style="width: 100px;">
+												<col style="width: 100px;">
+											</colgroup>
+											<thead>
+												<tr>
+													<th scope="col">메뉴명</th>
+													<th scope="col">URL</th>
+													<th scope="col">리소스구분</th>
+													<th scope="col">문자</th>
+													<th scope="col">이메일</th>
+													<th scope="col">알림톡</th>
+												</tr>
+											</thead>
+
+											<tbody>
+												<tr>
+													<td>
+														<div class="tableNode">
+															<button type="button" class="btn-tblnode"><!-- checkbox 없는 경우 -->
+																<span class="sr-only">열기</span>
+																<span>ODA사업관리</span>
+															</button>
+														</div>
+													</td>
+													<td class="tC">URL</td>
+													<td class="tC">읽기</td>
+													<td>
+														<div class="tblChk">
+															<input type="checkbox" id="chk_a1"><label for="chk_a1"></label>
+														</div>
+													</td>
+													<td>
+														<div class="tblChk">
+															<input type="checkbox" id="chk_a2"><label for="chk_a2"></label>
+														</div>
+													</td>
+													<td>
+														<div class="tblChk">
+															<input type="checkbox" id="chk_a3"><label for="chk_a3"></label>
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<div class="tableNode">
+															<span class="space"></span><!-- depth 들여쓰기 -->
+															<span class="line"></span><!-- 하위 표시 아이콘 -->
+															<button type="button" class="btn-tblnode opened"><!-- checkbox 있는 경우 -->
+																<span class="sr-only">닫기</span>
+															</button>
+															<input type="checkbox" id="chk_a4">
+															<label for="chk_a4">예비사업</label>
+														</div>
+													</td>
+													<td class="tC">URL</td>
+													<td class="tC">읽기</td>
+													<td>
+														<div class="tblChk">
+															<input type="checkbox" id="chk_a5"><label for="chk_a5"></label>
+														</div>
+													</td>
+													<td>
+														<div class="tblChk">
+															<input type="checkbox" id="chk_a6"><label for="chk_a6"></label>
+														</div>
+													</td>
+													<td>
+														<div class="tblChk">
+															<input type="checkbox" id="chk_a7"><label for="chk_a7"></label>
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<div class="tableNode">
+															<span class="space"></span>
+															<span class="space"></span>
+															<span class="line"></span>
+															<button type="button" class="btn-tblnode opened"><!-- checkbox 없는 경우 -->
+																<span class="sr-only">닫기</span>
+																<span>예비사업</span>
+															</button>
+														</div>
+													</td>
+													<td class="tC">URL</td>
+													<td class="tC">읽기</td>
+													<td>
+														<div class="tblChk">
+															<input type="checkbox" id="chk_a8"><label for="chk_a8"></label>
+														</div>
+													</td>
+													<td>
+														<div class="tblChk">
+															<input type="checkbox" id="chk_a9"><label for="chk_a9"></label>
+														</div>
+													</td>
+													<td>
+														<div class="tblChk">
+															<input type="checkbox" id="chk_a10"><label for="chk_a10"></label>
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<div class="tableNode">
+															<span class="space"></span>
+															<span class="space"></span>
+															<span class="line"></span>
+															<input type="checkbox" id="chk_a11">
+															<label for="chk_a11">예비사업</label>
+														</div>
+													</td>
+													<td class="tC">URL</td>
+													<td class="tC">읽기</td>
+													<td>
+														<div class="tblChk">
+															<input type="checkbox" id="chk_a12"><label for="chk_a120"></label>
+														</div>
+													</td>
+													<td>
+														<div class="tblChk">
+															<input type="checkbox" id="chk_a13"><label for="chk_a131"></label>
+														</div>
+													</td>
+													<td>
+														<div class="tblChk">
+															<input type="checkbox" id="chk_a14"><label for="chk_a142"></label>
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<div class="tableNode">
+															<span class="space"></span>
+															<span class="space"></span>
+															<span class="line"></span>
+															<span>예비사업</span>
+														</div>
+													</td>
+													<td class="tC">URL</td>
+													<td class="tC">읽기</td>
+													<td>
+														<div class="tblChk">
+															<input type="checkbox" id="chk_a15"><label for="chk_a153"></label>
+														</div>
+													</td>
+													<td>
+														<div class="tblChk">
+															<input type="checkbox" id="chk_a16"><label for="chk_a164"></label>
+														</div>
+													</td>
+													<td>
+														<div class="tblChk">
+															<input type="checkbox" id="chk_a17"><label for="chk_a175"></label>
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<div class="tableNode">
+															<button type="button" class="btn-tblnode"><!-- checkbox 없는 경우 -->
+																<span class="sr-only">열기</span>
+																<span>ODA사업관리</span>
+															</button>
+														</div>
+													</td>
+													<td class="tC">URL</td>
+													<td class="tC">읽기</td>
+													<td>
+														<div class="tblChk">
+															<input type="checkbox" id="chk_a18"><label for="chk_a186"></label>
+														</div>
+													</td>
+													<td>
+														<div class="tblChk">
+															<input type="checkbox" id="chk_a19"><label for="chk_a197"></label>
+														</div>
+													</td>
+													<td>
+														<div class="tblChk">
+															<input type="checkbox" id="chk_a20"><label for="chk_a208"></label>
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<div class="tableNode">
+															<span class="space"></span><!-- depth 들여쓰기 -->
+															<span class="line"></span><!-- 하위 표시 아이콘 -->
+															<button type="button" class="btn-tblnode opened"><!-- checkbox 있는 경우 -->
+																<span class="sr-only">닫기</span>
+															</button>
+															<input type="checkbox" id="chk_a21">
+															<label for="chk_a21">예비사업</label>
+														</div>
+													</td>
+													<td class="tC">URL</td>
+													<td class="tC">읽기</td>
+													<td>
+														<div class="tblChk">
+															<input type="checkbox" id="chk_a22"><label for="chk_a229"></label>
+														</div>
+													</td>
+													<td>
+														<div class="tblChk">
+															<input type="checkbox" id="chk_a23"><label for="chk_a230"></label>
+														</div>
+													</td>
+													<td>
+														<div class="tblChk">
+															<input type="checkbox" id="chk_a24"><label for="chk_a241"></label>
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<div class="tableNode">
+															<span class="space"></span>
+															<span class="space"></span>
+															<span class="line"></span>
+															<button type="button" class="btn-tblnode opened"><!-- checkbox 없는 경우 -->
+																<span class="sr-only">닫기</span>
+																<span>예비사업</span>
+															</button>
+														</div>
+													</td>
+													<td class="tC">URL</td>
+													<td class="tC">읽기</td>
+													<td>
+														<div class="tblChk">
+															<input type="checkbox" id="chk_a25"><label for="chk_a252"></label>
+														</div>
+													</td>
+													<td>
+														<div class="tblChk">
+															<input type="checkbox" id="chk_a26"><label for="chk_a263"></label>
+														</div>
+													</td>
+													<td>
+														<div class="tblChk">
+															<input type="checkbox" id="chk_a27"><label for="chk_a274"></label>
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<div class="tableNode">
+															<span class="space"></span>
+															<span class="space"></span>
+															<span class="line"></span>
+															<input type="checkbox" id="chk_a28">
+															<label for="chk_a28">예비사업</label>
+														</div>
+													</td>
+													<td class="tC">URL</td>
+													<td class="tC">읽기</td>
+													<td>
+														<div class="tblChk">
+															<input type="checkbox" id="chk_a29"><label for="chk_a295"></label>
+														</div>
+													</td>
+													<td>
+														<div class="tblChk">
+															<input type="checkbox" id="chk_a30"><label for="chk_a306"></label>
+														</div>
+													</td>
+													<td>
+														<div class="tblChk">
+															<input type="checkbox" id="chk_a31"><label for="chk_a317"></label>
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<div class="tableNode">
+															<span class="space"></span>
+															<span class="space"></span>
+															<span class="line"></span>
+															<span>예비사업</span>
+														</div>
+													</td>
+													<td class="tC">URL</td>
+													<td class="tC">읽기</td>
+													<td>
+														<div class="tblChk">
+															<input type="checkbox" id="chk_a32"><label for="chk_a328"></label>
+														</div>
+													</td>
+													<td>
+														<div class="tblChk">
+															<input type="checkbox" id="chk_a33"><label for="chk_a339"></label>
+														</div>
+													</td>
+													<td>
+														<div class="tblChk">
+															<input type="checkbox" id="chk_a34"><label for="chk_a340"></label>
+														</div>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<!-- //tblBox -->
+								</div>
+								<!-- //schList -->
+							</div>
+
+							<div class="btn-wrap">
+								<button type="button" class="btn pt">저장</button>
+							</div>
+						</li>
+					</ul>
+					<!-- //tblDb -->
+
+				</div>
+				<!-- //cntBox -->
+
+			</div>
+			<!-- //컨텐츠 영역 -->
+		</div>
+		<!-- //컨테이너 영역 -->
+	</div>
+	<!-- //wrap -->
+</body>
+
+</html>

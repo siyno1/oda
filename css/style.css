@@ -232,6 +232,11 @@ button[class^="btn-comment"]::after {content:'';display:block;width:12px;height:
 button.btn-comment-del::after {background-image:url(../img/ico_comment_del.svg);}
 button.btn-comment-edit::after {background-image:url(../img/ico_comment_edit.svg);}
 
+button[class^="btn-tblnode"] {display:flex;align-items:center;gap:5px;width:auto;height:auto;font-size:inherit;color:#7d7d7d;border:0 none;background:none;}
+button[class^="btn-tblnode"]::before {content:'';display:block;width:20px;height:20px;background-repeat:no-repeat;background-position:center;}
+.btn-tblnode::before {background-image: url(../img/ico_tbl_plus.svg);}
+.btn-tblnode.opened::before {background-image: url(../img/ico_tbl_minus.svg);}
+
 /* file-upload */
 .file {display: flex; align-items: center; gap: 6px; width:100%;}
 .file .btn-wrap {flex:0 0 auto; flex-direction: column; width:auto;}
@@ -496,6 +501,8 @@ button.btn-comment-edit::after {background-image:url(../img/ico_comment_edit.svg
 /* tblDb[double table] */
 .tblDb {display: flex; justify-content: space-between; gap: 48px; margin-top:60px;}
 .tblDb > li {flex:0 1 auto;width:100%;}
+
+.cntBox + .cntBox .tblDb {margin-top:0;}
 
 /* 1:2, 2:3 레이아웃 추가 */
 .tblDb.col1-2 > li {flex:1 1 0;}
@@ -946,3 +953,10 @@ button[class^=btnList] {display:inline-block;box-sizing:border-box;border:0 none
 .commentLi .commentLi {margin:15px -14px 0;border-top:1px dashed #CDD1D5;}
 .commentLi .commentLi > li {padding-left:34px;background:url(../img/ico_reply.svg) no-repeat 14px 18px;}
 .commentLi .commentLi > li:last-child {padding-bottom:0;border-bottom:0 none;}
+
+/* 권한 처리 tableNode */
+.tableNode {display:flex;align-items:center;gap:5px;color:#1E2124;font-size:16px;line-height:1.5;}
+.tableNode .space {display:block;width:20px;height:20px;}
+.tableNode .line {display:block;width:20px;height:20px;background:url(../img/ico_tbl_depth.svg) no-repeat center;}
+.tableNode span,
+.tableNode label {font-weight:500 !important;color:#1E2124 !important;}

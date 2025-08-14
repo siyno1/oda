@@ -81,7 +81,7 @@
 
 /* 타이틀 그룹 */
 .titBox {display:flex;align-items:flex-end;width:100%;margin-bottom:10px;}
-.titBox h3 {padding-left:20px;background:url(../img/tit_bull02.svg) no-repeat left center;font-size:17px;font-weight:700;line-height:32px;}
+.titBox h3 {padding-left:20px;background:url(../img/tit_bull02.svg) no-repeat left center;font-size:17px;font-weight:700;line-height:36px;}
 .titBox .lt {display:flex;gap:10px;align-items:center;}
 .titDisc  {margin-bottom:6px;line-height:1.5;}
 .titDisc.txtBt::after {top:8px;}
