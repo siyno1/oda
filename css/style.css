@@ -919,3 +919,18 @@ button[class^=btnList] {display:inline-block;box-sizing:border-box;border:0 none
 .commentForm:focus-within {outline-offset: 0; outline: 1px solid rgba(36, 107, 235, 0.8);}
 
 .commentForm .commentBtn {padding:10px 15px;border-top:1px solid #b1b8be;}
+
+.commentLi {margin-top:40px;border-top:1px solid #82898F;}
+.commentLi > li {padding:14px;border-bottom:1px dashed #CDD1D5;}
+.commentLi > li.mine {background-color:#F0F2F6;}
+
+.commentLi .commentTit {display:flex;align-items:center;gap:10px;}
+.commentLi .userMsg {font-size:16px;}
+.commentLi .date {display:block;margin-left:auto;font-size:15px;color:#6D7882;}
+
+.commentLi .commentDetail {margin-top:8px;}
+.commentLi .commentDetail p {font-size:16px;line-height:1.5;}
+.commentLi .commentDetail .file {margin-top:10px;}
+
+.commentLi .commentToggle {margin-top:12px;}
+.commentLi .commentForm {display:none;margin-top:10px;}
