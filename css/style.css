@@ -103,7 +103,7 @@ input[type="radio"]:checked:disabled + label::before {background: #E6E8EA url(..
 .btn-wrap.tC {justify-content: center!important;}
 .btn-wrap.tL {justify-content: flex-start!important;}
 .btn-wrap.tR {justify-content: flex-end!important;}
-:where(.tblBox, .schList, .tabBox, .boxLi, .cntBox) + .btn-wrap {margin-top: 12px;}
+:where(.tblBox, .schList, .tabBox, .boxLi, .cntBox) + .btn-wrap {margin-top: 40px;}
 
 
 /* 버튼 공통 기본 : 25.08.12 기준 : 버튼 .btn 형식과 .btn- 형식 혼재하여, 버튼 상태에 따른 처리 각각 해줘야하는 불편함이 있음 : 개선 필요 */
@@ -607,11 +607,11 @@ button.btn-comment-edit::after {background-image:url(../img/ico_comment_edit.svg
 .tbl .cell tbody th {background: #F4F5F6;}
 .tbl .cell tbody td {padding: 5px 0; border-left: 1px solid #D4DADF;}
 
-.tbl .cell .cellColor {display: block; width: 100%; height: 16px; background: #3B80FF;}
+.tbl .cell .cellColor {display: block; width: 100%; height: 16px; background: #6D4FFF;}
 
 .cellCheck {display:flex;align-items:center;width:100%;height:40px;cursor:pointer;}
 .cellCheck input[type=checkbox] + span {display:block;width:100%;height:16px;}
-.cellCheck input[type=checkbox]:checked + span {background:#3B80FF;}
+.cellCheck input[type=checkbox]:checked + span {background:#6D4FFF;}
 
 /* adBox */
 .adBox {display: grid; gap: 20px; padding: 20px 30px 30px 30px; background: #F4F5F6; border: 1px solid #E2E6EA; border-radius: 4px;}
