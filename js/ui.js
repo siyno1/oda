@@ -313,7 +313,18 @@ function init() {
 			}
 		});
 	});
-}
+
+
+	//답글 입력창 열기
+	if ($('.commentToggle button').length) {
+		$('.commentToggle button').on('click', function(){
+			$commentLi = $(this).closest('li');
+			if ($commentLi.children('.commentForm').length) {
+				$commentLi.children('.commentForm').toggle();
+			}
+		});
+	}
+}// @@init
 
 // pickr year input => select[Transform]
 function replaceYearWithSelect(instance) {

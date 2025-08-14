@@ -227,6 +227,11 @@ button[class^="btn-sort"]:empty {width:36px;height:36px;}
 button[class^="btn-sort"]:disabled {color:#9da0a3;background-color:#F3F3F3;}
 button[class^="btn-sort"]:disabled::before {opacity:0.5;}
 
+button[class^="btn-comment"] {display:flex;align-items:center;gap:4px;width:auto;height:21px;font-size:14px;color:#7d7d7d;border:0 none;background:none;}
+button[class^="btn-comment"]::after {content:'';display:block;width:12px;height:12px;background-repeat:no-repeat;background-position:center;}
+button.btn-comment-del::after {background-image:url(../img/ico_comment_del.svg);}
+button.btn-comment-edit::after {background-image:url(../img/ico_comment_edit.svg);}
+
 /* file-upload */
 .file {display: flex; align-items: center; gap: 6px; width:100%;}
 .file .btn-wrap {flex:0 0 auto; flex-direction: column; width:auto;}
@@ -923,14 +928,18 @@ button[class^=btnList] {display:inline-block;box-sizing:border-box;border:0 none
 .commentLi {margin-top:40px;border-top:1px solid #82898F;}
 .commentLi > li {padding:14px;border-bottom:1px dashed #CDD1D5;}
 .commentLi > li.mine {background-color:#F0F2F6;}
-
 .commentLi .commentTit {display:flex;align-items:center;gap:10px;}
-.commentLi .userMsg {font-size:16px;}
+.commentLi .userMsg {font-size:16px;line-height:1.5;}
 .commentLi .date {display:block;margin-left:auto;font-size:15px;color:#6D7882;}
-
+.commentLi .commentUtil {display:flex;align-items:center;gap:17px;margin-left:10px;}
+.commentLi .commentUtil li {position:relative;}
+.commentLi .commentUtil li + li::before {content:'';display:block;position:absolute;top:4.5px;left:-9px;width:1px;height:12px;background-color:#cdd1d5;}
 .commentLi .commentDetail {margin-top:8px;}
 .commentLi .commentDetail p {font-size:16px;line-height:1.5;}
 .commentLi .commentDetail .file {margin-top:10px;}
-
 .commentLi .commentToggle {margin-top:12px;}
 .commentLi .commentForm {display:none;margin-top:10px;}
+
+/* 대댓글 */
+.commentLi .commentLi {margin:15px -14px 0;border-top:1px dashed #CDD1D5;}
+.commentLi .commentLi > li:last-child {padding-left:28px;padding-bottom:0;border-bottom:0 none;}
