@@ -235,7 +235,7 @@ button.btn-comment-edit::after {background-image:url(../img/ico_comment_edit.svg
 /* file-upload */
 .file {display: flex; align-items: center; gap: 6px; width:100%;}
 .file .btn-wrap {flex:0 0 auto; flex-direction: column; width:auto;}
-.file-upload {flex:1 1 0; position: relative; display: flex; justify-content: center; align-items: center; min-width:0; min-height: 100px; border: 1px dashed #8A949E;}
+.file-upload {flex:1 1 0; position: relative; display: flex; justify-content: center; align-items: center; min-width:0; min-height: 100px; border: 1px dashed #8A949E; background-color:#fff;}
 .file-upload ul {display: flex; flex-direction: column; gap: 6px; width: 100%; height: auto; max-height: 152px; padding: 10px; overflow-y: auto;}
 .file-upload ul li {display: flex; align-items: center; gap: 5px;}
 .file-upload ul li label {flex: 1; display: flex; align-items:flex-start; font-size: 16px; white-space: nowrap; text-overflow: ellipsis; overflow: hidden; line-height:26px; padding-left:28px; background-repeat:no-repeat; background-position:0 center; cursor:pointer;}
@@ -917,12 +917,9 @@ button[class^=btnList] {display:inline-block;box-sizing:border-box;border:0 none
 .nodeUtil .txtInfo {margin-bottom:5px;}
 
 /* 댓글 관련 컴포넌트 추가 08.13 */
-.commentForm {border:1px solid #b1b8be;border-radius:4px;background:#fff;}
+.commentForm {border:1px solid #b1b8be;border-radius:4px;background:#F4F5F6;}
 .commentForm .commentBox {padding:15px;}
-.commentForm .commentBox textarea {margin-bottom:15px;padding:0 4px;border:0 none;}
-.commentForm .commentBox textarea:focus {outline:0 none;}
-.commentForm:focus-within {outline-offset: 0; outline: 1px solid rgba(36, 107, 235, 0.8);}
-
+.commentForm .commentBox textarea {height:120px;margin-bottom:10px;}
 .commentForm .commentBtn {padding:10px 15px;border-top:1px solid #b1b8be;}
 
 .commentLi {margin-top:40px;border-top:1px solid #82898F;}
@@ -942,4 +939,5 @@ button[class^=btnList] {display:inline-block;box-sizing:border-box;border:0 none
 
 /* 대댓글 */
 .commentLi .commentLi {margin:15px -14px 0;border-top:1px dashed #CDD1D5;}
-.commentLi .commentLi > li:last-child {padding-left:28px;padding-bottom:0;border-bottom:0 none;}
+.commentLi .commentLi > li {padding-left:34px;background:url(../img/ico_reply.svg) no-repeat 14px 18px;}
+.commentLi .commentLi > li:last-child {padding-bottom:0;border-bottom:0 none;}
