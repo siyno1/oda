@@ -284,6 +284,7 @@ button[class^="btn-tblnode"]::before {content:'';display:block;width:20px;height
 
 /* library - flatpickr */
 .pickrBox {display: inline-flex; align-items: center; gap:2px; width: 400px; max-width:100%;}
+.pickrBox.sm {width:200px;}
 .pickrBox p {display: inline-block; margin: 0 1px; font-size: inherit; font-weight: 400; line-height: 1.5; color: #464C53;}
 
 /* inputForm */
@@ -297,6 +298,7 @@ button[class^="btn-tblnode"]::before {content:'';display:block;width:20px;height
 .inputForm .selectBox.sm {min-width: 200px;}
 .inputForm > p {min-width: 80px;}
 .inputForm > em {font-style:normal;}
+
 
 /* inputForm : small */
 .inputForm.fit > input[type="text"] {width:auto;flex:1 1 auto;}
@@ -551,7 +553,7 @@ button[class^="btn-tblnode"]::before {content:'';display:block;width:20px;height
 .mapList label {font-weight: 400;}
 
 /* popup */
-.popup {z-index: 4; position: fixed; top: 50%; left: 50%; display: none; width: 880px; background: #fff; border-radius: 12px; box-shadow: 1px 4px 8px 0px rgba(0, 0, 0, 0.25); transform: translateX(-50%) translateY(-50%);}
+.popup {z-index: 4; position: fixed; top: 50%; left: 50%; display: none; width: 880px; background: #fff; border-radius: 12px; box-shadow: 1px 4px 8px 0px rgba(0, 0, 0, 0.25); transform: translateX(-50%) translateY(-50%); transition:width 0.3s;}
 .popup .tit {display: inline-flex; align-items: center; width: 100%; height: 42px; padding: 10px 27px; background: #6D4FFF; border-radius: 12px 12px 0 0;}
 .popup .tit p {padding-top:4px; font-size: 19px; font-weight: 700; line-height: 1.5; color: #fff;}
 .popup .cont {width: 100%; max-height: 500px; padding: 20px 27px 30px 27px; overflow-y: auto;}

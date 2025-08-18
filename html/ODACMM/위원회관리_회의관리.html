@@ -122,7 +122,7 @@
 						<ul class="fltList">
 							<li><button type="button">연도</button></li>
 							<li><button type="button">위원회유형</button></li>
-							<li><button type="button">회의</button></li>
+							<li><button type="button">회의유형</button></li>
 							<li><button type="button">진행상태</button></li>
 						</ul>
 					</div>
@@ -419,255 +419,261 @@
 		</div>
 
 		<div class="cont">
-			<div class="titBox">
-				<div class="lt">
-					<h3>위원회 참석여부</h3>
-				</div>
+			<!-- cntBox -->
+			<div class="cntBox" id="popCnt01">
+				<div class="titBox">
+					<div class="lt">
+						<h3>위원회 참석여부</h3>
+					</div>
 
-				<div class="rt">
+					<div class="rt">
 
-				</div>
-			</div>
-
-			<div class="tblBox">
-				<table class="tbl row">
-					<caption></caption>
-					<colgroup>
-						<col style="width: 152px;">
-						<col style="width: auto;">
-					</colgroup>
-
-					<tbody>
-						<tr>
-							<th scope="row">참석여부</th>
-							<td>
-								<div class="selectBox"><!-- @dev '대참' 선택 시 팝업 화면 너비 조정 요청 class="popup" 에 class="popup lg" 적용 필요 -->
-									<select name="" id="select01">
-										<option value="" hidden>- 선택 -</option>
-										<option value="1">참석</option>
-										<option value="2">불참</option>
-										<option value="3">대참</option>
-									</select>
-								</div>
-							</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-
-			<div class="titBox">
-				<div class="lt">
-					<h3>청사 출입자 정보</h3>
-				</div>
-
-				<div class="rt">
-
-				</div>
-			</div>
-
-			<div class="tblBox">
-				<table class="tbl row">
-					<caption></caption>
-					<colgroup>
-						<col style="width: 152px;">
-						<col style="width: auto;">
-						<col style="width: 152px;">
-						<col style="width: auto;">
-					</colgroup>
-
-					<tbody>
-						<tr>
-							<th scope="row">성명</th>
-							<td>
-								<input type="text" class="w100">
-							</td>
-							<th scope="row">생년원일</th>
-							<td>
-								<input type="text" class="w100">
-							</td>
-						</tr>
-
-						<tr>
-							<th scope="row">소속</th>
-							<td>
-								<input type="text" class="w100">
-							</td>
-							<th scope="row">직위</th>
-							<td>
-								<input type="text" class="w100">
-							</td>
-						</tr>
-
-						<tr>
-							<th scope="row">전화번호</th>
-							<td>
-								<input type="text" class="w100">
-							</td>
-							<th scope="row">차량번호</th>
-							<td>
-								<input type="text" class="w100">
-							</td>
-						</tr>
-
-						<tr>
-							<th scope="row">성별</th>
-							<td>
-								<div class="rdoBox">
-									<input type="radio" id="radio01-1" name="rdo01">
-									<label for="radio01-1">남자</label>
-									<input type="radio" id="radio01-2" name="rdo01">
-									<label for="radio01-2">여자</label>
-								</div>
-							</td>
-							<th>국적</th>
-							<td>
-								<div class="selectBox">
-									<select name="" id="select05">
-										<option value="" hidden>- 선택 -</option>
-									</select>
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<th>불참 사유</th>
-							<td colspan="3">
-								<input type="text" class="w100" placeholder="사유를 입력하세요.">
-							</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-
-
-			<div class="titBox">
-				<div class="lt">
-					<h3>대참자 정보</h3>
-				</div>
-
-				<div class="rt">
-
-				</div>
-			</div>
-
-			<div class="tblBox">
-				<table class="tbl row">
-					<caption></caption>
-					<colgroup>
-						<col style="width: 152px;">
-						<col style="width: auto;">
-					</colgroup>
-
-					<tbody>
-						<tr>
-							<th scope="row">대참 사유</th>
-							<td><input type="text" class="w100" placeholder="사유를 입력하세요."></td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-
-			<div class="titBox">
-				<div class="lt"></div>
-
-				<div class="rt">
-					<div class="btn-wrap">
-						<button type="button" class="btn-plus txt">추가</button>
-						<button type="button" class="btn-del"><span class="sr-only">삭제</span></button>
 					</div>
 				</div>
-			</div>
 
-			<div class="tblBox">
-				<table class="tbl col data">
-					<caption></caption>
-					<colgroup>
-						<col style="width: 5%;">
-						<col style="width: 15%;">
-						<col style="width: 15%;">
-						<col style="width: 15%;">
-						<col style="width: 15%;">
-						<col style="width: 10%;">
-						<col style="width: 10%;">
-						<col style="width: 15%;">
-					</colgroup>
-					<thead>
-						<tr>
-							<th scope="col">
-								<div class="tblChk">
-									<input type="checkbox" id="chk04">
-									<label for="chk04"></label>
-								</div>
-							</th>
-							<th scope="col">성명</th>
-							<th scope="col">소속</th>
-							<th scope="col">직위</th>
-							<th scope="col">전화번호</th>
-							<th scope="col">차량번호</th>
-							<th scope="col">방문자 구분</th>
-							<th scope="col">국적</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td>
-								<div class="tblChk">
-									<input type="checkbox" id="chk05">
-									<label for="chk05"></label>
-								</div>
-							</td>
-							<td><input type="text" class="w100"></td>
-							<td><input type="text" class="w100"></td>
-							<td><input type="text" class="w100"></td>
-							<td><input type="text" class="w100"></td>
-							<td><input type="text" class="w100"></td>
-							<td>
-								<div class="selectBox">
-									<select name="" id="select07">
-										<option value="" hidden>- 선택 -</option>
-									</select>
-								</div>
-							</td>
-							<td><input type="text" class="w100" placeholder="사유를 입력하세요."></td>
-						</tr>
-						<tr>
-							<td>
-								<div class="tblChk">
-									<input type="checkbox" id="chk06">
-									<label for="chk06"></label>
-								</div>
-							</td>
-							<td><input type="text" class="w100"></td>
-							<td><input type="text" class="w100"></td>
-							<td><input type="text" class="w100"></td>
-							<td><input type="text" class="w100"></td>
-							<td><input type="text" class="w100"></td>
-							<td>
-								<div class="selectBox">
-									<select name="" id="select08">
-										<option value="" hidden>- 선택 -</option>
-									</select>
-								</div>
-							</td>
-							<td><input type="text" class="w100" placeholder="사유를 입력하세요."></td>
-						</tr>
-						<tr>
-							<td>
-								<div class="tblChk">
-									<input type="checkbox" id="chk07">
-									<label for="chk07"></label>
-								</div>
-							</td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-						</tr>
-					</tbody>
-				</table>
+				<div class="tblBox">
+					<table class="tbl row">
+						<caption></caption>
+						<colgroup>
+							<col style="width: 152px;">
+							<col style="width: auto;">
+						</colgroup>
+
+						<tbody>
+							<tr>
+								<th scope="row">참석여부</th>
+								<td>
+									<div class="selectBox"><!-- @dev '대참' 선택 시 팝업 화면 너비 조정 요청 class="popup" 에 class="popup lg" 적용 필요 -->
+										<select name="" id="select01" onchange="changePopupsize(this, this.value);">
+											<option value="" hidden>- 선택 -</option>
+											<option value="1">참석</option>
+											<option value="2">불참</option>
+											<option value="3">대참</option>
+										</select>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
 			</div>
+			<!-- //cntBox -->
+
+			<!-- cntBox -->
+			<div class="cntBox" id="popCnt02" style="display:none;">
+				<div class="titBox">
+					<div class="lt">
+						<h3>청사 출입자 정보</h3>
+					</div>
+
+					<div class="rt">
+
+					</div>
+				</div>
+
+				<div class="tblBox">
+					<table class="tbl row">
+						<caption></caption>
+						<colgroup>
+							<col style="width: 152px;">
+							<col style="width: auto;">
+							<col style="width: 152px;">
+							<col style="width: auto;">
+						</colgroup>
+
+						<tbody>
+							<tr>
+								<th scope="row">성명</th>
+								<td>
+									<input type="text" class="w100">
+								</td>
+								<th scope="row">생년원일</th>
+								<td>
+									<input type="text" class="w100">
+								</td>
+							</tr>
+
+							<tr>
+								<th scope="row">소속</th>
+								<td>
+									<input type="text" class="w100">
+								</td>
+								<th scope="row">직위</th>
+								<td>
+									<input type="text" class="w100">
+								</td>
+							</tr>
+
+							<tr>
+								<th scope="row">전화번호</th>
+								<td>
+									<input type="text" class="w100">
+								</td>
+								<th scope="row">차량번호</th>
+								<td>
+									<input type="text" class="w100">
+								</td>
+							</tr>
+
+							<tr>
+								<th scope="row">성별</th>
+								<td>
+									<div class="rdoBox">
+										<input type="radio" id="radio01-1" name="rdo01">
+										<label for="radio01-1">남자</label>
+										<input type="radio" id="radio01-2" name="rdo01">
+										<label for="radio01-2">여자</label>
+									</div>
+								</td>
+								<th>국적</th>
+								<td>
+									<div class="selectBox">
+										<select name="" id="select05">
+											<option value="" hidden>- 선택 -</option>
+										</select>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<!-- //cntBox -->
+
+			<!-- cntBox -->
+			<div class="cntBox" id="popCnt03" style="display:none;">
+				<div class="titBox">
+					<div class="lt">
+						<h3>대참자 정보</h3>
+					</div>
+
+					<div class="rt">
+
+					</div>
+				</div>
+
+				<div class="tblBox">
+					<table class="tbl row">
+						<caption></caption>
+						<colgroup>
+							<col style="width: 152px;">
+							<col style="width: auto;">
+						</colgroup>
+
+						<tbody>
+							<tr>
+								<th scope="row">대참 사유</th>
+								<td><input type="text" class="w100" placeholder="사유를 입력하세요."></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+
+				<div class="titBox">
+					<div class="lt"></div>
+
+					<div class="rt">
+						<div class="btn-wrap">
+							<button type="button" class="btn-plus txt">추가</button>
+							<button type="button" class="btn-del"><span class="sr-only">삭제</span></button>
+						</div>
+					</div>
+				</div>
+
+				<div class="tblBox">
+					<table class="tbl col data">
+						<caption></caption>
+						<colgroup>
+							<col style="width: 5%;">
+							<col style="width: 15%;">
+							<col style="width: 15%;">
+							<col style="width: 15%;">
+							<col style="width: 15%;">
+							<col style="width: 10%;">
+							<col style="width: 10%;">
+							<col style="width: 15%;">
+						</colgroup>
+						<thead>
+							<tr>
+								<th scope="col">
+									<div class="tblChk">
+										<input type="checkbox" id="chk04">
+										<label for="chk04"></label>
+									</div>
+								</th>
+								<th scope="col">성명</th>
+								<th scope="col">소속</th>
+								<th scope="col">직위</th>
+								<th scope="col">전화번호</th>
+								<th scope="col">차량번호</th>
+								<th scope="col">방문자 구분</th>
+								<th scope="col">국적</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>
+									<div class="tblChk">
+										<input type="checkbox" id="chk05">
+										<label for="chk05"></label>
+									</div>
+								</td>
+								<td><input type="text" class="w100"></td>
+								<td><input type="text" class="w100"></td>
+								<td><input type="text" class="w100"></td>
+								<td><input type="text" class="w100"></td>
+								<td><input type="text" class="w100"></td>
+								<td>
+									<div class="selectBox">
+										<select name="" id="select07">
+											<option value="" hidden>- 선택 -</option>
+										</select>
+									</div>
+								</td>
+								<td><input type="text" class="w100" placeholder="사유를 입력하세요."></td>
+							</tr>
+							<tr>
+								<td>
+									<div class="tblChk">
+										<input type="checkbox" id="chk06">
+										<label for="chk06"></label>
+									</div>
+								</td>
+								<td><input type="text" class="w100"></td>
+								<td><input type="text" class="w100"></td>
+								<td><input type="text" class="w100"></td>
+								<td><input type="text" class="w100"></td>
+								<td><input type="text" class="w100"></td>
+								<td>
+									<div class="selectBox">
+										<select name="" id="select08">
+											<option value="" hidden>- 선택 -</option>
+										</select>
+									</div>
+								</td>
+								<td><input type="text" class="w100" placeholder="사유를 입력하세요."></td>
+							</tr>
+							<tr>
+								<td>
+									<div class="tblChk">
+										<input type="checkbox" id="chk07">
+										<label for="chk07"></label>
+									</div>
+								</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<!-- //cntBox -->
+
 		</div>
 
 		<div class="btn-wrap">
@@ -676,6 +682,40 @@
 		</div>
 	</div>
 	<!-- //popup -->
+
+
+	<script>
+		//팝업 스크립트 예시
+		function changePopupsize(select, value) {
+			const popup = select.closest('.popup');
+			const popCnt02 = document.getElementById('popCnt02');
+			const popCnt03 = document.getElementById('popCnt03');
+			//popCnt02 : 청사 출입자 정보
+			//popCnt03 : 대참자 정보
+
+			switch (value) {
+				case '1'://참석
+					popup.className = 'popup';
+					popCnt02.style.display = '';
+					popCnt03.style.display = 'none';
+					break;
+
+				case '2':
+					popup.className = 'popup';
+					popCnt02.style.display = 'none';
+					popCnt03.style.display = 'none';
+					break;
+
+				case '3':
+					popup.className = 'popup lg';
+					popCnt02.style.display = 'none';
+					popCnt03.style.display = '';
+					break;
+				default:
+					break;
+			}
+		}
+	</script>
 </body>
 
 </html>

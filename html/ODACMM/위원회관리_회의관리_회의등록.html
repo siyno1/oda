@@ -142,9 +142,7 @@
 										<th scope="row">회의 일시</th>
 										<td>
 											<div class="inputForm">
-												<div class="pickrBox">
-													<input type="text" class="pickr" placeholder="날짜를 선택하세요" readonly="readonly">
-													<em>~</em>
+												<div class="pickrBox sm">
 													<input type="text" class="pickr" placeholder="날짜를 선택하세요" readonly="readonly">
 												</div>
 
@@ -179,10 +177,12 @@
 									<tr>
 										<th scope="row">위원회 유형</th>
 										<td>
-											<div class="selectBox">
-												<select name="" id="select08">
-													<option value="">선택</option>
-												</select>
+											<div class="inputForm">
+												<div class="selectBox">
+													<select name="" id="select08">
+														<option value="">선택</option>
+													</select>
+												</div>
 											</div>
 										</td>
 									</tr>
@@ -457,6 +457,9 @@
 															<div class="selectBox">
 																<select name="" id="select07">
 																	<option value="" hidden>- 선택 -</option>
+																	<option value="">참석</option>
+																	<option value="">불참</option>
+																	<option value="">대참</option>
 																</select>
 															</div>
 														</td>
@@ -478,6 +481,9 @@
 															<div class="selectBox">
 																<select name="" id="select08">
 																	<option value="" hidden>- 선택 -</option>
+																	<option value="">참석</option>
+																	<option value="">불참</option>
+																	<option value="">대참</option>
 																</select>
 															</div>
 														</td>
@@ -532,8 +538,8 @@
 
 											<div class="rt">
 												<div class="btn-wrap">
-													<button type="button" class="btn-del txt">사업삭제</button>
-													<button type="button" class="btn-plus txt pop" data-target="pop01">사업추가</button>
+													<button type="button" class="btn-plus txt pop" data-target="pop01">추가</button>
+													<button type="button" class="btn-del" title="삭제"></button>
 												</div>
 											</div>
 										</div>
@@ -585,6 +591,8 @@
 															<div class="selectBox">
 																<select name="" id="select07">
 																	<option value="" hidden>- 선택 -</option>
+																	<option value="">내국인</option>
+																	<option value="">외국인</option>
 																</select>
 															</div>
 														</td>
@@ -606,6 +614,8 @@
 															<div class="selectBox">
 																<select name="" id="select08">
 																	<option value="" hidden>- 선택 -</option>
+																	<option value="">내국인</option>
+																	<option value="">외국인</option>
 																</select>
 															</div>
 														</td>
