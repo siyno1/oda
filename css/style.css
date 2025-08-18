@@ -21,7 +21,7 @@ select {box-sizing:border-box; width: 100%; height: 34px; padding: 4px 30px 4px 
 .selectBox:focus-within::after {transform: rotate(180deg) translateY(50%); transition: 0.3s all;}
 
 /* tblBox - margin */
-.tblBox {width: 100%; overflow: auto clip;}
+.tblBox {width: 100%; overflow: auto;}
 :where(.cntBox, .tblBox, .adBox, .boxLi, .pagination) + .titBox {margin-top: 40px;}
 :where(.cntBox, .schList, .tblBox, .adBox, .boxLi, .pagination) + .tblBox {margin-top: 20px;}
 :where(.cntBox, .tblBox, .adBox, .boxLi, .pagination) + .tblBox .tbl::before {background: #E2E6EA;}
@@ -359,7 +359,6 @@ button[class^="btn-tblnode"]::before {content:'';display:block;width:20px;height
 
 .tabCont > li > .tab:first-child {margin-top:-20px;}
 .tabCont > li > .schBox:first-child {margin-top:-20px;}
-.popup .tabCont > li:has(.sch:first-child) {margin-top:-20px;}
 
 
 
@@ -614,7 +613,7 @@ button[class^="btn-tblnode"]::before {content:'';display:block;width:20px;height
 .popup.mapPopup .tab {margin-top:0; pointer-events:none;}
 .popup.mapPopup .tab ul {border-width:0; border-style: solid; border-color: #D9E1F2; pointer-events:all;}
 .popup.mapPopup .tabCont {padding-bottom: 25px;}
-.popup.mapPopup .tabCont > li {display: flex; flex-direction: column; flex-wrap:nowrap; gap: 11px; max-height: 250px; overflow-y: auto;}
+.popup.mapPopup .tabCont > li {display: flex; flex-direction: column; flex-wrap:nowrap; gap: 11px; overflow-y: auto;}
 .popup.mapPopup .tabCont > li:not(.active) {display: none;}
 .popup.mapPopup .tabCont p {font-size: 14px; font-weight: 400; line-height: 1.4; color: #1E2124;}
 .popup.mapPopup > .btn-wrap .btn {height: 34px; padding: 5px 14px; border-color: #B1B8BE;}
@@ -975,3 +974,9 @@ button[class^=btnList] {display:inline-block;box-sizing:border-box;border:0 none
 .tableNode .line {display:block;width:20px;height:20px;background:url(../img/ico_tbl_depth.svg) no-repeat center;}
 .tableNode span,
 .tableNode label {font-weight:500 !important;color:#1E2124 !important;}
+
+.optColumns {display:grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); overflow-y:auto; box-sizing:border-box; max-height:132px; border:1px solid #E2E6EA;border-radius:4px;}
+.optColumns > li {padding:20px;}
+.optColumns > li + li {border-left:1px solid #E2E6EA;}
+.optColumns > li .chkBox {margin-bottom:10px;}
+.optColumns > li .chkBox:last-child {margin-bottom:0;}
