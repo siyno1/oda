@@ -345,6 +345,7 @@ button[class^="btn-tblnode"]::before {content:'';display:block;width:20px;height
 
 .tabCont > li > .tab:first-child {margin-top:-20px;}
 .tabCont > li > .schBox:first-child {margin-top:-20px;}
+.popup .tabCont > li:has(.sch:first-child) {margin-top:-20px;}
 
 
 

@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<title>ODA</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+	<meta http-equiv="Pragma" content="no-cache">
+	<meta http-equiv="Expires" content="0">
+
+	<link rel="stylesheet" href="./../../css/flatpickr.min.css">
+	<link rel="stylesheet" href="./../../css/reset.css">
+	<link rel="stylesheet" href="./../../css/layout.css">
+	<link rel="stylesheet" href="./../../css/style.css">
+
+	<script defer src="./../../js/jquery-3.7.1.min.js"></script>
+	<script defer src="./../../js/flatpickr.js"></script>
+	<script defer src="./../../js/ui.js"></script>
+</head>
+
+<body>
+	<!-- wrap -->
+	<div id="wrap" class="wrapper">
+		<!-- 헤더 영역 -->
+		<div id="header" class="header">
+			<div class="wrap">
+				<h1><a href="./../gate.html"><img src="./../../img/logo.svg"></a></h1>
+				<ul class="gnb">
+					<li><a href="javascript:;">준비단계</a></li><!-- 활성화 시 li class="active" -->
+					<li><a href="javascript:;">진행단계</a></li>
+					<li><a href="javascript:;">완료단계</a></li>
+					<li><a href="javascript:;">정보마당</a></li>
+					<li><a href="javascript:;">운영관리</a></li>
+				</ul>
+				<div class="userBox">
+					<button class="btnUser">운영관리자</button>
+					<ul class="dropDown">
+						<li><a href="javascript:;">쪽지</a></li>
+						<li><a href="javascript:;">마이페이지</a></li>
+						<li><a href="javascript:;">로그아웃</a></li>
+					</ul>
+				</div>
+				<div class="searchBox">
+					<input type="text" placeholder="통합검색">
+					<button class="btnSearch">검색</button>
+				</div>
+			</div>
+		</div>
+		<!-- //헤더 영역 -->
+
+		<!-- 컨테이너 영역 -->
+		<div id="container" class="container">
+
+			<!-- LNB 영역 -->
+			<div id="side" class="side">
+				<div class="side_menu">
+					<h2>ODA 사업 관리</h2>
+					<ul class="gnb">
+						<li>
+							<a href="javascript:;">사업목록</a>
+						</li>
+						<li class="hasChild active">
+							<a href="javascript:;">연수 사업 관리</a>
+							<ul>
+								<li><a href="javascript:;" class="on">연수 사업 목록</a></li>
+								<li><a href="javascript:;">연수 프로그램 관리</a></li>
+								<li><a href="javascript:;">연수생 관리</a></li>
+								<li><a href="javascript:;">체크리스트</a></li>
+							</ul>
+						</li>
+						<li class="hasChild">
+							<a href="javascript:;">장학 사업 관리</a>
+							<ul>
+								<li><a href="javascript:;">연수 사업 목록</a></li>
+								<li><a href="javascript:;">연수 프로그램 관리</a></li>
+								<li><a href="javascript:;">연수생 관리</a></li>
+								<li><a href="javascript:;">체크리스트</a></li>
+							</ul>
+						</li>
+						<li class="hasChild">
+							<a href="javascript:;">패키지 사업 관리</a>
+							<ul>
+								<li><a href="javascript:;">연수 사업 목록</a></li>
+								<li><a href="javascript:;">연수 프로그램 관리</a></li>
+								<li><a href="javascript:;">연수생 관리</a></li>
+								<li><a href="javascript:;">체크리스트</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<button class="btnSlide">slide</button>
+			</div>
+			<!-- //LNB 영역 -->
+
+			<!-- 컨텐츠 영역 -->
+			<div class="contents">
+				<!-- pgtBox -->
+				<div class="pgtBox">
+					<div class="lt">
+						<h2>시행계획정보</h2>
+					</div>
+
+					<ul class="breadcrumb">
+						<li class="home"><a href="javascript:;">홈</a></li>
+						<li><a href="javascript:;">준비단계</a></li>
+						<li><a href="javascript:;">시행계획정보</a></li>
+					</ul>
+
+					<div class="rt"></div>
+				</div>
+				<!-- //pgtBox -->
+
+				<!-- cntBox -->
+				<div class="cntBox">
+					<!-- titBox -->
+					<div class="titBox">
+						<div class="lt">
+							<h3>기본정보</h3>
+						</div>
+
+						<div class="rt">
+						</div>
+					</div>
+					<!-- //titBox -->
+
+					<!-- tblBox -->
+					<div class="tblBox">
+						<table class="tbl row">
+							<caption></caption>
+							<colgroup>
+								<col style="width:152px;">
+								<col style="width:auto;">
+								<col style="width:152px;">
+								<col style="width:auto;">
+							</colgroup>
+
+							<tbody>
+								<tr>
+									<th scope="rowgroup" rowspan="2">내역 사업명</th>
+									<td colspan="3">개도국 방송환경 개선지원(라오스 국영TV HD방송 인프라 구축 및 운용 지원)</td>
+								</tr>
+								<tr>
+									<td colspan="3">Support the Improvement of the Broadcasting Environment(Laos, HD Broadcasting Infrastructure and Operation Capacity Building)</td>
+								</tr>
+								<tr>
+									<th scope="row">현재상태</th>
+									<td colspan="3">시행사업 이관</td>
+								</tr>
+								<tr>
+									<th scope="row">소관부처</th>
+									<td>과학기술정보통신부</td>
+									<th scope="row">원조구분</th>
+									<td>양자무상</td>
+								</tr>
+								<tr>
+									<th scope="row">국내담당기관</th>
+									<td>한국전파진흥협회</td>
+									<th scope="row">세부사업명[한글]</th>
+									<td>개도국정보통신방송개발협력지원</td>
+								</tr>
+								<tr>
+									<th scope="row">기관고유사업번호</th>
+									<td>1721000_2025_006</td>
+									<th scope="row">환경・사회 영향</th>
+									<td>C</td>
+								</tr>
+								<tr>
+									<th scope="row">사업유형</th>
+									<td>프로젝트</td>
+									<th scope="row">사업분야</th>
+									<td>통신</td>
+								</tr>
+								<tr>
+									<th scope="row">사업설명</th>
+									<td colspan="3">라오스 국영방송(LNTV) 대상 주조정실, 부조정실, 스튜디오 구축 지원 및 신규 시스템을 이용한 프로그램 제작 역량 강화 교육지원</td>
+								</tr>
+								<tr>
+									<th scope="row">사업구분</th>
+									<td>신규</td>
+									<th scope="row">총 사업기간</th>
+									<td>2025 ~ 2026</td>
+								</tr>
+								<tr>
+									<th scope="row">사업실시기관</th>
+									<td colspan="3"></td>
+								</tr>
+								<tr>
+									<th scope="row">사업실시기관명[한글]</th>
+									<td></td>
+									<th scope="row">사업실시기관명[영문]</th>
+									<td></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<!-- //tblBox -->
+				</div>
+				<!-- //cntBox -->
+
+				<!-- cntBox -->
+				<div class="cntBox">
+					<!-- titBox -->
+					<div class="titBox">
+						<div class="lt">
+							<h3>대상지역 및 국가</h3>
+						</div>
+
+						<div class="rt">
+						</div>
+					</div>
+					<!-- //titBox -->
+
+					<!-- tblBox -->
+					<div class="tblBox">
+						<table class="tbl row">
+							<caption></caption>
+							<colgroup>
+								<col style="width:152px;">
+								<col style="width:auto;">
+							</colgroup>
+
+							<tbody>
+								<tr>
+									<th scope="row">대륙명</th>
+									<td>아시아</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<!-- //tblBox -->
+
+					<!-- tblBox -->
+					<div class="tblBox">
+						<table class="tbl row">
+							<caption></caption>
+							<colgroup>
+								<col style="width:152px;">
+								<col style="width:auto;">
+								<col style="width:152px;">
+								<col style="width:auto;">
+							</colgroup>
+
+							<tbody>
+								<tr>
+									<th scope="row">국가명</th>
+									<td>라오스</td>
+									<th scope="row">대상국 내 지역 [영문]</th>
+									<td>비엔티안</td>
+								</tr>
+								<tr>
+									<th scope="row">중점협력국여부</th>
+									<td>아니오</td>
+									<th scope="row">중점/일반 협력국</th>
+									<td>중점</td>
+								</tr>
+								<tr>
+									<th scope="row">중점분야유무</th>
+									<td>예</td>
+									<th scope="row">중점분야</th>
+									<td>교육</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<!-- //tblBox -->
+				</div>
+				<!-- //cntBox -->
+
+				<!-- cntBox -->
+				<div class="cntBox">
+					<!-- titBox -->
+					<div class="titBox">
+						<div class="lt">
+							<h3>사업예산</h3>
+						</div>
+
+						<div class="rt">
+						</div>
+					</div>
+					<!-- //titBox -->
+
+					<!-- tblBox -->
+					<div class="tblBox">
+						<table class="tbl row">
+							<caption></caption>
+							<colgroup>
+								<col style="width:152px;">
+								<col style="width:auto;">
+								<col style="width:152px;">
+								<col style="width:auto;">
+							</colgroup>
+
+							<tbody>
+								<tr>
+									<th scope="row">[5자] 국개위 확정액</th>
+									<td class="tR">&#8361; 625 (백만원)</td>
+									<th scope="row">[5차] 국개위 확정액 (규모)</th>
+									<td class="tR">&#8361; 625 (백만원)</td>
+								</tr>
+								<tr>
+									<th scope="row">[4차] 국회확정액</th>
+									<td class="tR">&#8361; 625 (백만원)</td>
+									<th scope="row">[4차] 국회확정액 (규모)</th>
+									<td class="tR">&#8361; 625 (백만원)</td>
+								</tr>
+								<tr>
+									<th scope="row">[3차] 정부확정액</th>
+									<td class="tR">&#8361; 625 (백만원)</td>
+									<th scope="row">[3차] 정부확정액 (규모)</th>
+									<td class="tR">&#8361; 625 (백만원)</td>
+								</tr>
+								<tr>
+									<th scope="row">[2차] 국개위 요구액</th>
+									<td class="tR">&#8361; 625 (백만원)</td>
+									<th scope="row">[2차] 국개위 요구액 (규모)</th>
+									<td class="tR">&#8361; 625 (백만원)</td>
+								</tr>
+								<tr>
+									<th scope="row">[1차] 최초 제출액</th>
+									<td class="tR">&#8361; 625 (백만원)</td>
+									<th scope="row">[1차] 최초 제출액 (규모)</th>
+									<td class="tR">&#8361; 625 (백만원)</td>
+								</tr>
+								<tr>
+									<th scope="row">계상비율</th>
+									<td colspan="3">100.00 %</td>
+								</tr>
+								<tr>
+									<th scope="row">총 사업예산</th>
+									<td colspan="3">&#8361; 1,225 (백만원)</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<!-- //tblBox -->
+				</div>
+				<!-- //cntBox -->
+
+				<!-- cntBox -->
+				<div class="cntBox">
+					<!-- titBox -->
+					<div class="titBox">
+						<div class="lt">
+							<h3>정책 연계성</h3>
+						</div>
+
+						<div class="rt">
+						</div>
+					</div>
+					<!-- //titBox -->
+
+					<!-- tblBox -->
+					<div class="tblBox">
+						<table class="tbl row">
+							<caption></caption>
+							<colgroup>
+								<col style="width:152px;">
+								<col style="width:auto;">
+							</colgroup>
+
+							<tbody>
+								<tr>
+									<th scope="row">사전타당성 조사 실시여부</th>
+									<td>예</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<!-- //tblBox -->
+
+					<!-- tblBox -->
+					<div class="tblBox">
+						<table class="tbl row">
+							<caption></caption>
+							<colgroup>
+								<col style="width:152px;">
+								<col style="width:auto;">
+								<col style="width:152px;">
+								<col style="width:auto;">
+							</colgroup>
+
+							<tbody>
+								<tr>
+									<th scope="row">국정과제 해당여부</th>
+									<td>아니오</td>
+									<th scope="row">국정과제번호</th>
+									<td>-</td>
+								</tr>
+								<tr>
+									<th scope="row">일자리 창출 기여여부</th>
+									<td colspan="3">아니오</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<!-- //tblBox -->
+
+					<!-- tblBox -->
+					<div class="tblBox">
+						<table class="tbl row">
+							<caption></caption>
+							<colgroup>
+								<col style="width:152px;">
+								<col style="width:auto;">
+								<col style="width:152px;">
+								<col style="width:auto;">
+							</colgroup>
+
+							<tbody>
+								<tr>
+									<th scope="row">정상외교 후속조치 해당여부</th>
+									<td>아니오</td>
+									<th scope="row">후속조치 과제번호</th>
+									<td>-</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<!-- //tblBox -->
+
+					<!-- tblBox -->
+					<div class="tblBox">
+						<table class="tbl row">
+							<caption></caption>
+							<colgroup>
+								<col style="width:152px;">
+								<col style="width:auto;">
+								<col style="width:152px;">
+								<col style="width:auto;">
+							</colgroup>
+
+							<tbody>
+								<tr>
+									<th scope="row">신남방정책 관련 여부</th>
+									<td>아니오</td>
+									<th scope="row">신북방정책 관련 여부</th>
+									<td>아니오</td>
+								</tr>
+								<tr>
+									<th scope="row">기타 대외정책 관련 여부</th>
+									<td colspan="3">아니오</td>
+								</tr>
+								<tr>
+									<th scope="row">기타 대외정책 관련 내용</th>
+									<td colspan="3">‘24.1. 외교차관보 라오스 방문 협력 강화 논의, 한-아세안 연대구상(KASI)</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<!-- //tblBox -->
+				</div>
+				<!-- //cntBox -->
+
+				<!-- cntBox -->
+				<div class="cntBox">
+					<!-- titBox -->
+					<div class="titBox">
+						<div class="lt">
+							<h3>SDGs 연계</h3>
+						</div>
+
+						<div class="rt">
+						</div>
+					</div>
+					<!-- //titBox -->
+
+					<!-- tblBox -->
+					<div class="tblBox">
+						<table class="tbl row">
+							<caption></caption>
+							<colgroup>
+								<col style="width:152px;">
+								<col style="width:auto;">
+							</colgroup>
+
+							<tbody>
+								<tr>
+									<th scope="row">목표 (주제)</th>
+									<td>산업, 혁신, 인프라</td>
+								</tr>
+								<tr>
+									<th scope="row">목표 (주제)</th>
+									<td>교육</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<!-- //tblBox -->
+				</div>
+				<!-- //cntBox -->
+
+				<!-- cntBox -->
+				<div class="cntBox">
+					<!-- titBox -->
+					<div class="titBox">
+						<div class="lt">
+							<h3>연계 사업정보</h3>
+						</div>
+
+						<div class="rt">
+						</div>
+					</div>
+					<!-- //titBox -->
+
+					<!-- tblBox -->
+					<div class="tblBox">
+						<table class="tbl row">
+							<caption></caption>
+							<colgroup>
+								<col style="width:152px;">
+								<col style="width:auto;">
+							</colgroup>
+
+							<tbody>
+								<tr>
+									<th scope="row">연계 희망여부</th>
+									<td>아니오</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<!-- //tblBox -->
+				</div>
+				<!-- //cntBox -->
+
+				<!-- btn-wrap -->
+				<div class="btn-wrap">
+					<button type="button" class="btn">목록</button>
+				</div>
+				<!-- //btn-wrap -->
+			</div>
+			<!-- //컨텐츠 영역 -->
+		</div>
+		<!-- //컨테이너 영역 -->
+	</div>
+	<!-- //wrap -->
+</body>
+
+</html>
