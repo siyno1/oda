@@ -123,22 +123,19 @@ button[class^="btn-"]:hover {border-color:#6D7882;}
 .btn:disabled,
 button[class^="btn-"]:disabled {border-color:#c3c7cb;background-color:#F3F3F3;color:#bbb;}
 
+
 /* btn : pointcolor */
 .btn.pt {color: #fff; background: #3B80FF; border-color: #3B80FF;}
 .btn-save.txt {color: #fff; background: #3B80FF url(../img/ico_save.svg) no-repeat center left 9px; border-color: #3B80FF;}
 .btn.biz {color: #fff; background: #3B80FF; border-color: #3B80FF;}
 .btn.biz::before {content: ' '; display: inline-block; width: 16px; height: 16px; margin-right: 4px; background: url(../img/ico_biz.svg) no-repeat center center;}
 .btn.biz:disabled::before {opacity:0.5;}
-.btn-sch[type="button"] {display: inline-flex; justify-content: center; align-items: center; gap: 5px; width: 70px; font-size: 15px; font-weight: 600; line-height: 1.5; color: #fff; background: #3B80FF; border-color: #3B80FF;}
-.btn-sch::before {position: relative; top: 1px; content: ' '; display: block; width: 13px; height: 13px; background: url(../img/ico_apply.svg) no-repeat center center;}
 .btn.pt:hover,
 .btn.pt:focus,
 .btn-save.txt:hover,
 .btn-save.txt:focus,
 .btn.biz:hover,
-.btn.biz:focus,
-.btn-sch[type="button"]:hover,
-.btn-sch[type="button"]:focus {border-color:#3466C2;background-color:#3466C2;}
+.btn.biz:focus {border-color:#3466C2;background-color:#3466C2;}
 
 .btn.pt:disabled,
 .btn-save.txt:disabled,
@@ -201,6 +198,11 @@ button.btn-apply {display: inline-flex; justify-content: center; align-items: ce
 button.btn-apply::before {content: ' '; display: inline-block; width: 13px; height: 13px; background: url(../img/ico_apply.svg) no-repeat center center;}
 button.btn-apply:hover,
 button.btn-apply:focus {background-color:#524C91;}
+
+.btn-sch[type="button"] {display: inline-flex; justify-content: center; align-items: center; gap: 5px; width: 70px; font-size: 15px; font-weight: 600; line-height: 1.5; color: #fff; background: #6D4FFF; border-color: #6D4FFF;}
+.btn-sch::before {position: relative; top: 1px; content: ' '; display: block; width: 13px; height: 13px; background: url(../img/ico_apply.svg) no-repeat center center;}
+.btn-sch[type="button"]:hover,
+.btn-sch[type="button"]:focus {border-color:#524C91;background-color:#524C91;}
 
 button[class^="btn-control"] {width:30px;height:30px;border:0 none;background-color:#fff;background-repeat:no-repeat;background-position:center;background-size:contain;}
 .btn-control-add-all {background-image:url(../img/ico_arrR_dbl.svg);}
@@ -661,7 +663,7 @@ button[class^="btn-tblnode"]::before {content:'';display:block;width:20px;height
 
 /* modal */
 .modal {display:flex;flex-direction:column;box-sizing:border-box;height:100%;}
-.modal .tit {display: inline-flex; align-items: center; width: 100%; height: 42px; padding: 10px 27px; background: #256EF4;}
+.modal .tit {display: inline-flex; align-items: center; width: 100%; height: 42px; padding: 10px 27px; background: #6D4FFF;}
 .modal .tit p {font-size: 19px; font-weight: 700; line-height: 1.5; color: #fff;}
 .modal .cont {flex:1 1 auto; box-sizing:border-box; width: 100%; height: 100%; padding: 20px 27px 30px 27px; overflow-y: auto;}
 .modal .sch {display: flex; align-items: center; gap: 20px; width: 100%; height: 70px; padding: 20px 25px; background: #F0F2F6;}
