@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<title>ODA</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+	<meta http-equiv="Pragma" content="no-cache">
+	<meta http-equiv="Expires" content="0">
+
+	<link rel="stylesheet" href="./../../css/flatpickr.min.css">
+	<link rel="stylesheet" href="./../../css/reset.css">
+	<link rel="stylesheet" href="./../../css/layout.css">
+	<link rel="stylesheet" href="./../../css/style.css">
+
+	<script defer src="./../../js/jquery-3.7.1.min.js"></script>
+	<script defer src="./../../js/flatpickr.js"></script>
+	<script defer src="./../../js/ui.js"></script>
+</head>
+
+<body>
+	<!-- wrap -->
+	<div id="wrap" class="wrapper">
+		<!-- 헤더 영역 -->
+		<div id="header" class="header">
+			<div class="wrap">
+				<h1><a href="./../gate.html"><img src="./../../img/logo.svg"></a></h1>
+				<ul class="gnb">
+					<li><a href="javascript:;">준비단계</a></li><!-- 활성화 시 li class="active" -->
+					<li><a href="javascript:;">진행단계</a></li>
+					<li><a href="javascript:;">완료단계</a></li>
+					<li><a href="javascript:;">정보마당</a></li>
+					<li><a href="javascript:;">운영관리</a></li>
+				</ul>
+				<div class="userBox">
+					<button class="btnUser">운영관리자</button>
+					<ul class="dropDown">
+						<li><a href="javascript:;">쪽지</a></li>
+						<li><a href="javascript:;">마이페이지</a></li>
+						<li><a href="javascript:;">로그아웃</a></li>
+					</ul>
+				</div>
+				<div class="searchBox">
+					<input type="text" placeholder="통합검색">
+					<button class="btnSearch">검색</button>
+				</div>
+			</div>
+		</div>
+		<!-- //헤더 영역 -->
+
+		<!-- 컨테이너 영역 -->
+		<div id="container" class="container">
+
+			<!-- LNB 영역 -->
+			<div id="side" class="side">
+				<div class="side_menu">
+					<h2>ODA 사업 관리</h2>
+					<ul class="gnb">
+						<li>
+							<a href="javascript:;">사업목록</a>
+						</li>
+						<li class="hasChild active">
+							<a href="javascript:;">연수 사업 관리</a>
+							<ul>
+								<li><a href="javascript:;" class="on">연수 사업 목록</a></li>
+								<li><a href="javascript:;">연수 프로그램 관리</a></li>
+								<li><a href="javascript:;">연수생 관리</a></li>
+								<li><a href="javascript:;">체크리스트</a></li>
+							</ul>
+						</li>
+						<li class="hasChild">
+							<a href="javascript:;">장학 사업 관리</a>
+							<ul>
+								<li><a href="javascript:;">연수 사업 목록</a></li>
+								<li><a href="javascript:;">연수 프로그램 관리</a></li>
+								<li><a href="javascript:;">연수생 관리</a></li>
+								<li><a href="javascript:;">체크리스트</a></li>
+							</ul>
+						</li>
+						<li class="hasChild">
+							<a href="javascript:;">패키지 사업 관리</a>
+							<ul>
+								<li><a href="javascript:;">연수 사업 목록</a></li>
+								<li><a href="javascript:;">연수 프로그램 관리</a></li>
+								<li><a href="javascript:;">연수생 관리</a></li>
+								<li><a href="javascript:;">체크리스트</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<button class="btnSlide">slide</button>
+			</div>
+			<!-- //LNB 영역 -->
+
+			<!-- 컨텐츠 영역 -->
+			<div class="contents">
+				<div class="pgtBox">
+					<div class="lt">
+						<h2>간편통계</h2>
+					</div>
+
+					<ul class="breadcrumb">
+						<li class="home"><a href="javascript:;">홈</a></li>
+						<li><a href="javascript:;">정보마당</a></li>
+						<li><a href="javascript:;">간편통계</a></li>
+					</ul>
+
+					<div class="rt"></div>
+				</div>
+
+				<!-- schBox @dev 25.08.01 검색 수정 -->
+				<div class="schBox">
+					<div class="schRow">
+						<ul class="fltList">
+							<li><button type="button">기준연도</button></li>
+						</ul>
+
+						<div class="fltOpt">
+							<ul>
+								<li>
+									<p>아시아 &gt; 네팔</p>
+									<button type="button" class="btn-del"><span class="sr-only">검색조건 삭제</span></button>
+								</li>
+								<li>
+									<p>아프리카 &gt; 가나</p>
+									<button type="button" class="btn-del"><span class="sr-only">검색조건 삭제</span></button>
+								</li>
+								<li>
+									<p>아프리카 &gt; 가나</p>
+									<button type="button" class="btn-del"><span class="sr-only">검색조건 삭제</span></button>
+								</li>
+								<li>
+									<p>아프리카 &gt; 가나</p>
+									<button type="button" class="btn-del"><span class="sr-only">검색조건 삭제</span></button>
+								</li>
+							</ul>
+							<button type="reset" class="btn-reset txt">초기화</button>
+						</div>
+					</div>
+
+					<div class="schRow toggleFltCont" style="display:none;">
+						<div class="fltCont">
+							<ul>
+								<li>
+									<p>연도</p>
+									<div class="inputForm">
+										<div class="selectBox sm">
+											<select>
+												<option hidden>- 연도 선택 -</option>
+												<option value="2025">2025년</option>
+											</select>
+										</div>
+										<em>~</em>
+										<div class="selectBox sm">
+											<select>
+												<option hidden>- 연도 선택 -</option>
+												<option value="2025">2025년</option>
+											</select>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="schBtn">
+						<button type="button" class="btn-apply">조건검색</button>
+					</div>
+				</div>
+				<!-- schBox //@dev 25.08.01 검색 수정 -->
+
+				<!-- cntBox -->
+				<div class="cntBox">
+					<!-- tabBox -->
+					<div class="tabBox">
+						<div class="tab">
+							<ul>
+								<li><button type="button" data-tabBtn="tab1-cont1" class="active">시행기관별</button></li>
+								<li><button type="button" data-tabBtn="tab1-cont2">사업 분야별</button></li>
+								<li><button type="button" data-tabBtn="tab1-cont3">원조 형태별</button></li>
+							</ul>
+
+							<p class="txtInfo">증여등가액 기준(백만불)</p>
+						</div>
+
+						<ul class="tabCont">
+							<li class="active" data-tabCont="tab1-cont1">
+								<div class="tblBox"><!-- @dev 부처 적은 경우 예시 -->
+									<table class="tbl tC total">
+										<caption></caption>
+										<colgroup>
+											<col style="min-width:152px;">
+											<col style="min-width:152px;">
+											<col span="2" style="min-width:152px;"><!-- col span="부처 수" -->
+										</colgroup>
+
+										<thead>
+											<tr>
+												<th scope="col" rowspan="2">수원국</th>
+												<th scope="col" rowspan="2">총계</th>
+												<th scope="col" colspan="2">부처별</th>
+											</tr>
+											<tr>
+												<th scope="col">외교부</th>
+												<th scope="col">국무 조정실</th>
+											</tr>
+										</thead>
+
+										<tbody>
+											<tr class="totalRow">
+												<th scope="row">총계</th>
+												<td class="total">0.8</td>
+												<td>0.2</td>
+												<td>0.6</td>
+											</tr>
+											<tr>
+												<th scope="row">가나</th>
+												<td class="total">0.3</td>
+												<td>0.1</td>
+												<td>0.2</td>
+											</tr>
+											<tr>
+												<th scope="row">한국</th>
+												<td class="total">0.5</td>
+												<td>0.1</td>
+												<td>0.4</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+
+								<div class="tblBox"><!-- @dev 부처 많은 경우 예시 -->
+									<table class="tbl tC total">
+										<caption></caption>
+										<colgroup>
+											<col style="min-width:152px;">
+											<col style="min-width:152px;">
+											<col span="20" style="min-width:152px;"><!-- col span="부처 수" -->
+										</colgroup>
+
+										<thead>
+											<tr>
+												<th scope="col" rowspan="2">수원국</th>
+												<th scope="col" rowspan="2">총계</th>
+												<th scope="col" colspan="20">부처별</th>
+											</tr>
+											<tr>
+												<th scope="col">외교부</th>
+												<th scope="col">국무 조정실</th>
+												<th scope="col">국무 조정실</th>
+												<th scope="col">국무 조정실</th>
+												<th scope="col">국무 조정실</th>
+												<th scope="col">국무 조정실</th>
+												<th scope="col">국무 조정실</th>
+												<th scope="col">국무 조정실</th>
+												<th scope="col">국무 조정실</th>
+												<th scope="col">국무 조정실</th>
+												<th scope="col">국무 조정실</th>
+												<th scope="col">국무 조정실</th>
+												<th scope="col">국무 조정실</th>
+												<th scope="col">국무 조정실</th>
+												<th scope="col">국무 조정실</th>
+												<th scope="col">국무 조정실</th>
+												<th scope="col">국무 조정실</th>
+												<th scope="col">국무 조정실</th>
+												<th scope="col">국무 조정실</th>
+												<th scope="col">국무 조정실</th>
+											</tr>
+										</thead>
+
+										<tbody>
+											<tr class="totalRow">
+												<th scope="row">총계</th>
+												<td class="total">0.8</td>
+												<td>0.2</td>
+												<td>0.6</td>
+												<td>0.6</td>
+												<td>0.6</td>
+												<td>0.6</td>
+												<td>0.6</td>
+												<td>0.6</td>
+												<td>0.6</td>
+												<td>0.6</td>
+												<td>0.6</td>
+												<td>0.6</td>
+												<td>0.6</td>
+												<td>0.6</td>
+												<td>0.6</td>
+												<td>0.6</td>
+												<td>0.6</td>
+												<td>0.6</td>
+												<td>0.6</td>
+												<td>0.6</td>
+												<td>0.6</td>
+											</tr>
+											<tr>
+												<th scope="row">가나</th>
+												<td class="total">0.3</td>
+												<td>0.2</td>
+												<td>0.6</td>
+												<td>0.6</td>
+												<td>0.6</td>
+												<td>0.6</td>
+												<td>0.6</td>
+												<td>0.6</td>
+												<td>0.6</td>
+												<td>0.6</td>
+												<td>0.6</td>
+												<td>0.6</td>
+												<td>0.6</td>
+												<td>0.6</td>
+												<td>0.6</td>
+												<td>0.6</td>
+												<td>0.6</td>
+												<td>0.6</td>
+												<td>0.6</td>
+												<td>0.6</td>
+												<td>0.6</td>
+											</tr>
+											<tr>
+												<th scope="row">한국</th>
+												<td class="total">0.5</td>
+												<td>0.2</td>
+												<td>0.6</td>
+												<td>0.6</td>
+												<td>0.6</td>
+												<td>0.6</td>
+												<td>0.6</td>
+												<td>0.6</td>
+												<td>0.6</td>
+												<td>0.6</td>
+												<td>0.6</td>
+												<td>0.6</td>
+												<td>0.6</td>
+												<td>0.6</td>
+												<td>0.6</td>
+												<td>0.6</td>
+												<td>0.6</td>
+												<td>0.6</td>
+												<td>0.6</td>
+												<td>0.6</td>
+												<td>0.6</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</li>
+
+							<li data-tabCont="tab1-cont2">
+								<div class="tblBox">
+									<table class="tbl tC total">
+										<caption></caption>
+										<colgroup>
+											<col style="min-width:152px;">
+											<col style="min-width:152px;">
+											<col span="9" style="min-width:152px;"><!-- col span="사업 분야 수" -->
+										</colgroup>
+
+										<thead>
+											<tr>
+												<th scope="col" rowspan="2">수원국</th>
+												<th scope="col" rowspan="2">총계</th>
+												<th scope="col" colspan="9">사업 분야별</th>
+											</tr>
+											<tr>
+												<th scope="col">인도적 지원</th>
+												<th scope="col">교통</th>
+												<th scope="col">보건</th>
+												<th scope="col">공공행정</th>
+												<th scope="col">교육</th>
+												<th scope="col">에너지</th>
+												<th scope="col">농림수산</th>
+												<th scope="col">환경보호</th>
+												<th scope="col">통신</th>
+											</tr>
+										</thead>
+
+										<tbody>
+											<tr>
+												<th scope="row">가나</th>
+												<td class="total">0.3</td>
+												<td>0.2</td>
+												<td>0.6</td>
+												<td>0.6</td>
+												<td>0.6</td>
+												<td>0.6</td>
+												<td>0.6</td>
+												<td>0.6</td>
+												<td>0.6</td>
+												<td>0.6</td>
+											</tr>
+											<tr>
+												<th scope="row">한국</th>
+												<td class="total">0.5</td>
+												<td>0.2</td>
+												<td>0.6</td>
+												<td>0.6</td>
+												<td>0.6</td>
+												<td>0.6</td>
+												<td>0.6</td>
+												<td>0.6</td>
+												<td>0.6</td>
+												<td>0.6</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</li>
+
+							<li data-tabCont="tab1-cont3">
+								<div class="tblBox">
+									<table class="tbl tC total">
+										<caption></caption>
+										<colgroup>
+											<col style="min-width:152px;">
+											<col style="min-width:152px;">
+											<col span="8" style="min-width:152px;"><!-- col span="형태 수" -->
+										</colgroup>
+
+										<thead>
+											<tr>
+												<th scope="col" rowspan="2">수원국</th>
+												<th scope="col" rowspan="2">총계</th>
+												<th scope="col" colspan="8">형태별</th>
+											</tr>
+											<tr>
+												<th scope="col">프로젝트</th>
+												<th scope="col">프로그램</th>
+												<th scope="col">연수사업</th>
+												<th scope="col">봉사단 파견</th>
+												<th scope="col">개발 컨설팅</th>
+												<th scope="col">행정비용</th>
+												<th scope="col">기타 협력</th>
+												<th scope="col">기타</th>
+											</tr>
+										</thead>
+
+										<tbody>
+											<tr>
+												<th scope="row">가나</th>
+												<td class="total">0.3</td>
+												<td>0.2</td>
+												<td>0.6</td>
+												<td>0.6</td>
+												<td>0.6</td>
+												<td>0.6</td>
+												<td>0.6</td>
+												<td>0.6</td>
+												<td>0.6</td>
+											</tr>
+											<tr>
+												<th scope="row">한국</th>
+												<td class="total">0.5</td>
+												<td>0.2</td>
+												<td>0.6</td>
+												<td>0.6</td>
+												<td>0.6</td>
+												<td>0.6</td>
+												<td>0.6</td>
+												<td>0.6</td>
+												<td>0.6</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<!-- //tabBox -->
+				</div>
+				<!-- //cntBox -->
+
+			</div>
+			<!-- //컨텐츠 영역 -->
+		</div>
+		<!-- //컨테이너 영역 -->
+	</div>
+	<!-- //wrap -->
+</body>
+
+</html>
