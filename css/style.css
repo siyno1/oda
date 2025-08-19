@@ -179,6 +179,9 @@ button[class^="btn-"]:disabled {border-color:#c3c7cb;background-color:#F3F3F3;co
 .btn-del.txt {width: auto; padding:0 9px !important; letter-spacing: -0.4px; color: #464C53; background-position:10px center;}
 .btn-del:disabled::before {opacity:0.5;}
 
+button.btn-warn {display:inline-flex;gap:4px;width:24px;height:24px;padding:0;align-items:center;justify-content:center;background-color:#fff; border:0 none; vertical-align:middle;}
+button.btn-warn::before {content:'';flex-shrink:0;display:block;width:20px;height:20px;background:url(../img/ico_warn.svg) no-repeat center;}
+
 .btn:where(.excel, .hwp, .pdf)::before {content: ' '; display: inline-block; width: 13px; height: 13px; margin: 0 4px 1px 0;}
 .btn:where(.excel, .hwp, .pdf):disabled::before {opacity:0.5;}
 .btn.excel::before {background: url(../img/ico_excel.svg) no-repeat center center;}
@@ -839,7 +842,7 @@ button[class^=btnList] {display:inline-block;box-sizing:border-box;border:0 none
  * 기본 right bottom
  * left, top 사용 가능
 **/
-.tipCont {display:none;position:absolute;left:100px;top:100px;min-width:210px;padding:16px 14px 14px;border:1px solid #464C53;border-radius:4px;text-align:left;background:#fff;filter:drop-shadow(0 2px 8px rgba(0,0,0,0.25));z-index:1;}
+.tipCont {display:none;position:absolute;left:100px;top:100px;width:max-content;padding:16px 14px 14px;border:1px solid #464C53;border-radius:4px;text-align:left;background:#fff;filter:drop-shadow(0 2px 8px rgba(0,0,0,0.25));z-index:1;}
 .tipCont::before {content:'';display:block;position:absolute;left:12px;bottom:100%;border:solid transparent;border-bottom-color:#464C53;border-width:0 5px 6px 5px;}
 .tipCont::after {content:'';display:block;position:absolute;left:13px;bottom:100%;border:solid transparent;border-bottom-color:#fff;border-width:0 4px 4px 4px;}
 .tipCont.top::before {bottom:auto;top:100%;border-bottom-color:transparent;border-top-color:#464C53;border-width:6px 5px 0 5px;}
@@ -847,9 +850,11 @@ button[class^=btnList] {display:inline-block;box-sizing:border-box;border:0 none
 .tipCont.left::before {left:auto;right:12px;}
 .tipCont.left::after {left:auto;right:13px;}
 
+.tipCont .msg {font-size:15px;line-height:1.5;}
+
 /* file list */
 .fileList li + li {margin-top:4px;}
-.fileList a {display:inline-block;overflow:hidden;padding:2px 0 1px 28px;font-size:14px;font-weight:500;text-decoration:underline;text-underline-position:under;color:#464646;background-repeat:no-repeat;background-position:left top;white-space:nowrap;text-overflow:ellipsis;}
+.fileList a {display:inline-block;overflow:hidden;padding:2px 0 1px 28px;font-size:14px;line-height:1.5;font-weight:500;text-decoration:underline;text-underline-position:under;color:#464646;background-repeat:no-repeat;background-position:left top;white-space:nowrap;text-overflow:ellipsis;}
 .fileList .hwp {background-image:url(../img/ico_file_hwp.svg);}
 .fileList .pdf {background-image:url(../img/ico_file_pdf.svg);}
 .fileList .xls {background-image:url(../img/ico_file_xls.svg);}

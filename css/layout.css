@@ -110,6 +110,7 @@ strong {font-weight:700;}
 .txtInfo {padding-left:18px;font-size:13px;line-height:1.5;font-weight:500;color:#5A5A5B;word-break:keep-all;background:url(../img/ico_bullet.svg) no-repeat 0 4px;}
 .txtInfo.txtRed {background-image:url(../img/ico_bullet_red.svg);}
 .txtLink {font-weight:500;text-decoration:underline;text-underline-position:under;cursor:pointer;}
+.txtUnderline {display:inline-block !important;color:#6D7882 !important;text-decoration:underline;text-underline-position:under;cursor:pointer;vertical-align:middle;}
 
 /* 텍스트 형식 버튼 */
 .txtBtn {border:0 none;font-weight:500;text-decoration:underline;text-underline-position:under;background:none;cursor:pointer;}
