@@ -58,6 +58,9 @@ select {box-sizing:border-box; width: 100%; height: 34px; padding: 4px 30px 4px 
 .tblBox .tbl + .tbl {margin-top:-1px;}
 .tblBox .tbl + .tbl:before {background:#E2E6EA;}
 
+.tbl .ellipsis {max-width:100%;}
+.tbl .txtnBtn {display:flex;gap:2px;align-items:center;}
+
 /* 헤더 고정 */
 .tblBox.fix {overflow-y:auto;}
 .tblBox.fix .tbl {border-collapse: separate;}
@@ -181,7 +184,7 @@ button[class^="btn-"]:disabled {border-color:#c3c7cb;background-color:#F3F3F3;co
 .btn-del.txt {width: auto; padding:0 9px !important; letter-spacing: -0.4px; color: #464C53; background-position:10px center;}
 .btn-del:disabled::before {opacity:0.5;}
 
-button.btn-warn {display:inline-flex;gap:4px;width:24px;height:24px;padding:0;align-items:center;justify-content:center;background-color:#fff; border:0 none; vertical-align:middle;}
+button.btn-warn {flex-shrink:0;display:inline-flex;gap:4px;width:24px;height:24px;padding:0;align-items:center;justify-content:center;background-color:transparent; border:0 none; vertical-align:middle;}
 button.btn-warn::before {content:'';flex-shrink:0;display:block;width:20px;height:20px;background:url(../img/ico_warn.svg) no-repeat center;}
 
 .btn:where(.excel, .hwp, .pdf)::before {content: ' '; display: inline-block; width: 13px; height: 13px; margin: 0 4px 1px 0;}
