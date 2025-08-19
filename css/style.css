@@ -999,6 +999,11 @@ button[class^=btnList] {display:inline-block;box-sizing:border-box;border:0 none
 .optColumns > li .chkBox:last-child {margin-bottom:0;}
 
 /* 메인 */
+.main .container {padding:0;}
+.main .contents {display:flex;flex-direction:column;height:100%;}
+.main .contents .tab {margin-bottom:0;}
+.main .contents .tabCont {flex:1;}
+
 .tab.ty-main {padding:8px 30px 0;background-color:#B9BCC4;}
 .tab.ty-main ul {gap:3px;}
 .tab.ty-main::after {display:none;}
@@ -1008,3 +1013,12 @@ button[class^=btnList] {display:inline-block;box-sizing:border-box;border:0 none
 
 .tabEtc {align-self:flex-start;margin-left:auto;}
 .mainCombo {box-sizing:border-box;width:146px;height:34px;padding:4px 24px 4px 12px;border-radius:6px;background:#6D4FFF url(../img/ico_main_select.svg) no-repeat 120px center;font-size:17px;font-weight:600;line-height:1.5;color:#fff;}
+
+.mainBiz {box-sizing:border-box;display:flex;gap:24px;padding:30px 25px;}
+.mainBiz .mainSide {box-sizing:border-box;width:236px;padding:12px 8px;border-radius:6px;background-color:#D9D9D9;}
+.mainBiz .bizSummary {padding:30px 20px;border-radius:4px;background-color:#fff;}
+
+.mainBiz .bizMonitoring {margin-top:16px;padding:30px 20px;border-radius:4px;background-color:#fff;}
+
+
+.mainBiz .mainContents {flex:0 1 auto;width:100%;}
