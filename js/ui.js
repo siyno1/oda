@@ -299,7 +299,8 @@ function init() {
 		}
 
 		// 방향 클래스 업데이트
-		if(directionClass.length) $tooltip.addClass(directionClass.join(' '));
+		if (directionClass.length) $tooltip.addClass(directionClass.join(' '));
+		else $tooltip.removeClass('top left');
 
 		// 위치 적용
 		$tooltip.css({
