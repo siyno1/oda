@@ -52,6 +52,8 @@ select {box-sizing:border-box; width: 100%; height: 34px; padding: 4px 30px 4px 
 .tbl.done::before {content: none;}
 .tbl.done.col tbody tr {border-bottom: 1px solid #E2E6EA;}
 .tbl span.red {color: #db4545;}
+.tbl .empty {height:200px;text-align:center !important;vertical-align:middle;background-color:#f9f9f9;}
+.tbl .empty .txtInfo {display:inline-block;}
 
 .tblBox .tbl + .tbl {margin-top:-1px;}
 .tblBox .tbl + .tbl:before {background:#E2E6EA;}
@@ -1019,6 +1021,5 @@ button[class^=btnList] {display:inline-block;box-sizing:border-box;border:0 none
 .mainBiz .bizSummary {padding:30px 20px;border-radius:4px;background-color:#fff;}
 
 .mainBiz .bizMonitoring {margin-top:16px;padding:30px 20px;border-radius:4px;background-color:#fff;}
-
 
 .mainBiz .mainContents {flex:0 1 auto;width:100%;}
