@@ -33,6 +33,7 @@
 .header .searchBox .btnSearch{position:absolute;right:15px;top:50%;margin-top:-10px;display:block;width:20px;height:20px;border:0 none;background:url(../img/ico_h_sch.svg)no-repeat center;text-indent:-9999px;}
 
 .container{position:absolute;top:70px;left:0;right:0;bottom:0;max-height:calc(100vh - 70px);padding:20px 40px;background:#ffffff;overflow-y:scroll;transition:left .3s;}
+.container:has(.main) {padding:0;}
 
 .side{position:fixed;top:70px;left:-230px;bottom:0;width:230px;transition:left .3s;font-size:20px;font-weight:700;text-align:center;border-right:1px solid #B1B8BE;background:#fff;box-shadow:8px 0 12px rgba(0, 0, 0, 0.08);box-sizing:border-box;z-index:1000;}
 .btnSlide{display:block;width:12px;height:96px;position:absolute;right:0;top:380px;background-color:#526980;border:0 none;border-radius:0 8px 8px 0;text-indent:-999px;transform:translateX(100%);cursor:pointer}
