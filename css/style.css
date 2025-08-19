@@ -760,7 +760,7 @@ button[class^="btn-tblnode"]::before {content:'';display:block;width:20px;height
 .iStatusBox .scheduleLi .symbol {align-self:flex-end;font-size:26px;line-height:1;}
 
 .iSummaryBox {margin-top:70px;padding-bottom:50px;}
-.iSummaryBox .iSummaryLi {display:flex;align-items:flex-start;justify-content:space-around;gap:40px;}
+.iSummaryBox .iSummaryLi {display:flex;align-items:flex-start;justify-content:space-between;padding:0 70px;}
 .iSummaryBox .iSummaryLi > li {flex:0 1 auto;min-width:0;}
 .iSummaryBox .iSummaryLi > li:empty {flex:0 0 auto;align-self:stretch;width:1px;background-color:#E2E6EA;}
 .iSummaryBox .iSummaryLi p {margin-bottom:2px;font-size:16px;font-weight:400;color:#6D7882;}
@@ -817,7 +817,7 @@ button[class^="btn-tblnode"]::before {content:'';display:block;width:20px;height
 .iBox .biz a.avi::before {background-image: url(../img/ico_file_avi.svg);}
 .iBox .biz a.etc::before {background-image: url(../img/ico_file_etc.svg);}
 
-.iBox .biz-list {display:flex;align-items:center;justify-content:center;gap:50px;margin-top:30px;}
+.iBox .biz-list {display:flex;align-items:center;justify-content:space-between;margin-top:30px;padding:0 100px;}
 .iBox .biz-list li {display:flex;align-items:center;gap:10px;}
 .iBox .biz-list li:empty {flex:0 0 auto;width:1px;height:20px;background-color:#E2E6EA;}
 .iBox .biz-list p {flex-shrink:0;font-size:14px;font-weight:500;line-height:1.5;}
