@@ -822,8 +822,8 @@ button[class^="btn-tblnode"]::before {content:'';display:block;width:20px;height
 .iBox .biz-list li:empty {flex:0 0 auto;width:1px;height:20px;background-color:#E2E6EA;}
 .iBox .biz-list p {flex-shrink:0;font-size:14px;font-weight:500;line-height:1.5;}
 
-.iBox .btn {height: auto; padding: 9px 20px; font-size: 14px; font-weight: 400; color: #1E2124; border-color: #D2D2D2; border-radius: 8px;}
-.iBox .btn.file {padding: 9px 26px;}
+.iBox .btn {height: auto; padding: 8px 20px; font-size: 15px; line-height:22px; font-weight: 400; color: #1E2124; border-color: #D2D2D2; border-radius: 8px;}
+.iBox .btn.file {padding: 8px 26px;}
 
 
 /* info btn-wrap */
