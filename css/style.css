@@ -617,7 +617,7 @@ button.btn-tip {display:inline-block;width:20px;height:20px;border:0 none;backgr
 .popup .pagination {margin-top: 12px;}
 .popup .tooltip {font-size: 12px; font-weight: 600; color: #6D7882;}
 .popup .titBox h3 {display: inline-flex; align-items: center; gap: 8px; padding: 0; background: transparent;}
-.popup .titBox h3::before {content: ' '; display: inline-block; width: 5px; height: 5px; background: #256EF4; border-radius: 50%;}
+.popup .titBox h3::before {content: ' '; display: inline-block; width: 5px; height: 5px; background: #6d4fff; border-radius: 50%;}
 .popup .tblBox + .titBox {margin-top: 16px;}
 
 /* popup mapPopup */
@@ -837,8 +837,8 @@ button.btn-tip {display:inline-block;width:20px;height:20px;border:0 none;backgr
 
 
 /* info btn-wrap */
-.info .btn-wrap {justify-content: center; margin-top: 50px;}
-.info .btn-wrap button.btn {min-width: 137px; height: 56px; padding: 10px; font-size: 18px; font-weight: 500; color: #fff; background: #212121; border: 0; border-radius: 6px;}
+.info .btn-wrap {margin-top: 50px;}
+button.btn.info {min-width: 137px; height: 56px; margin:0 auto; padding: 10px; font-size: 18px; font-weight: 500; color: #fff; background: #212121; border: 0; border-radius: 6px;}
 
 
 /* 그리드 버튼 */
