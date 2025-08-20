@@ -178,14 +178,35 @@ function init() {
 
     // popup Open btn
     $('button.pop').on('click', e => {
-        $('#' + $(e.currentTarget).data('target')).fadeIn(300);
-        $('.dim').fadeIn(300);
+		var $target = $('#' + $(e.currentTarget).data('target'));
+
+		if ($target.hasClass('mapPopup')) {
+			$target.fadeIn(300);
+		} else {
+			var $dim = null;
+			if ($target.closest('.dim').length) {
+				$dim = $target.closest('.dim');
+			} else {
+				$dim = $('<div>');
+				$dim.addClass('dim');
+				$dim.insertBefore($target);
+				$dim.append($target);
+			}
+
+			$target.show();
+			$dim.fadeIn(300);
+		}
+
     });
 
     // popup Close btn
     $('.popup').on('click', '.btn-close, .close', e => {
-        $(e.currentTarget).closest('.popup').fadeOut(300);
-        $('.dim').fadeOut(300);
+		var $target = $(e.currentTarget).closest('.popup');
+		if ($target.hasClass('mapPopup')) {
+			$target.fadeOut(300);
+		} else {
+			$(e.currentTarget).closest('.dim').fadeOut(300);
+		}
     });
 
     // toggleBox btn

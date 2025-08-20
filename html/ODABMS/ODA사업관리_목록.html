@@ -344,7 +344,7 @@
 								<div class="rt">
 									<div class="btn-wrap">
 										<button type="button" class="btn excel">엑셀다운로드</button>
-										<button type="button" class="btn biz">사업일괄등록</button>
+										<button type="button" class="btn biz pop" data-target="pop01">사업일괄등록</button>
 										<button type="button" class="btn biz">사업등록</button>
 									</div>
 								</div>
@@ -1865,6 +1865,76 @@
 		<!-- //컨테이너 영역 -->
 	</div>
 	<!-- //wrap -->
+
+	<!-- dim -->
+	<div class="dim"></div>
+	<!-- //dim -->
+
+	<!-- popup : small -->
+	<div class="popup sm" id="pop01">
+		<div class="tit">
+			<p>안내</p>
+			<button type="button" class="btn-close"><span class="sr-only">팝업창 닫기</span></button>
+		</div>
+
+		<div class="cont">
+			<div class="subBox">
+				<p>사업 일괄 등록 방식을 선택해주세요.</p>
+				<ul>
+					<li>
+						<p>당해연도 시행계획 정보를 바탕으로 ODA 사업을 등록합니다.</p>
+						<button type="button" class="btn navy pop" data-target="pop02">시행계획 정보 불러오기</button>
+					</li>
+					<li>
+						<p>엑셀 양식 파일 다운로드 및 엑셀 업로드/검증을 통해 ODA 사업을 등록합니다.</p>
+						<button type="button" class="btn excel">엑셀업로드</button>
+					</li>
+				</ul>
+
+				<!--div>
+					<p class="tooltip">일괄 등록 후 각 사업 상세 정보를 확인해주세요.</p>
+				</div-->
+			</div>
+		</div>
+
+		<div class="btn-wrap">
+			<button type="button" class="btn close">취소</button>
+		</div>
+	</div>
+	<!-- //popup : small -->
+
+	<!-- popup : small -->
+	<div class="popup sm" id="pop02">
+		<div class="tit">
+			<p>안내</p>
+			<button type="button" class="btn-close"><span class="sr-only">팝업창 닫기</span></button>
+		</div>
+
+		<div class="cont">
+			<div class="subBox">
+				<p>시행계획 정보 불러오기를 선택하셨습니다.</p>
+				<ul>
+					<li>
+						<ul class="txtLi">
+							<li class="txtDark"><strong>신규 사업일 경우 당해연도 시행계획 정보를 바탕으로 ODA 사업을 등록합니다.</strong></li>
+							<li class="txtInfo">시행계획에서 여러 나라가 포함되어 있을 경우, 수원국 별로 각각의 ODA 사업이 등록됩니다.</li>
+							<li class="txtInfo">계속 사업일 경우 기관고유 사업번호를 바탕으로 기존의 ODA 사업에 시행계획 정보가 연결됩니다.</li>
+						</ul>
+					</li>
+				</ul>
+
+				<!--div>
+					<p class="tooltip">일괄 등록 후 각 사업 상세 정보를 확인해주세요.</p>
+				</div-->
+			</div>
+		</div>
+
+		<div class="btn-wrap">
+			<button type="button" class="btn close">취소</button>
+			<button type="button" class="btn navy">확인</button>
+		</div>
+	</div>
+	<!-- //popup : small -->
 </body>
 
 </html>
