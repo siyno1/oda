@@ -1020,9 +1020,49 @@ button[class^=btnList] {display:inline-block;box-sizing:border-box;border:0 none
 .mainCombo {box-sizing:border-box;width:146px;height:34px;padding:4px 24px 4px 12px;border-radius:6px;background:#6D4FFF url(../img/ico_main_select.svg) no-repeat 120px center;font-size:17px;font-weight:600;line-height:1.5;color:#fff;}
 
 .mainBiz {box-sizing:border-box;display:flex;gap:24px;padding:30px 25px;}
-.mainBiz .mainSide {box-sizing:border-box;width:236px;padding:12px 8px;border-radius:6px;background-color:#D9D9D9;}
-.mainBiz .bizSummary {padding:30px 20px;border-radius:4px;background-color:#fff;}
+.mainBiz .mainSide {flex-shrink:0;box-sizing:border-box;width:236px;padding:12px 8px;border-radius:6px;background-color:#D9D9D9;}
+
+.mainBiz .bizSummary {padding:14px 20px 8px;border-radius:4px;background-color:#fff;}
+.mainBiz .bizSummary > li {padding:16px 0;}
+.mainBiz .bizSummary > li + li {border-top:1px solid #D9D9D9;}
+.mainBiz .bizSummary .bizSum {display:flex;align-items:center;justify-content:space-between;position:relative;}
+.mainBiz .bizSummary .bizSum .name {padding-left:47px;font-size:14px;font-weight:500;line-height:35px;background-repeat:no-repeat;background-position:left top;}
+.mainBiz .bizSummary .bizSum .name.biz01 {background-image:url(../img/ico_main_biz01.svg);}
+.mainBiz .bizSummary .bizSum .name.biz02 {background-image:url(../img/ico_main_biz02.svg);}
+.mainBiz .bizSummary .bizSum .name.biz03 {background-image:url(../img/ico_main_biz03.svg);}
+.mainBiz .bizSummary .bizSum .count {font-size:14px;line-height:1.5;}
+.mainBiz .bizSummary .bizSum button {display:none;}
+
+.mainBiz .bizSummary .bizSumDetail {margin:4px 0 6px;}
+.mainBiz .bizSummary .bizSumDetail > li {display:flex;align-items:center;justify-content:space-between;position:relative;padding-top:14px;background:url(../img/ico_main_arr.svg) no-repeat 14px top;}
+.mainBiz .bizSummary .bizSumDetail .name {padding-left:35px;font-size:16px;font-weight:700;line-height:24px;background:url(../img/ico_main_prc.svg) no-repeat 10px center;}
+.mainBiz .bizSummary .bizSumDetail .count {font-size:16px;}
+
+.mainBiz .bizSummary .total .name {padding-left:0;}
+.mainBiz .bizSummary .total .count {font-size:17px;line-height:1.5;}
 
 .mainBiz .bizMonitoring {margin-top:16px;padding:30px 20px;border-radius:4px;background-color:#fff;}
+.mainBiz .bizMonitoring > li {padding:26px 0 20px;}
+.mainBiz .bizMonitoring > li + li {border-top:1px solid #d9d9d9;}
+.mainBiz .bizMonitoring .name {padding-left:37px;font-size:14px;font-weight:500;line-height:27px;background-repeat:no-repeat;background-position:left top;}
+.mainBiz .bizMonitoring .name.monitor01 {background-image:url(../img/ico_main_monitor.svg);}
+.mainBiz .bizMonitoring .name.monitor02 {background-image:url(../img/ico_main_performance.svg);}
+.mainBiz .bizMonitoring .name.monitor03 {background-image:url(../img/ico_main_chart.svg);}
+.mainBiz .bizMonitoring .summary {margin-top:10px;text-align:right;font-size:17px;line-height:1.5;font-weight:700;}
+.mainBiz .bizMonitoring .summary.tyDate {font-size:15px;}
+.mainBiz .bizMonitoring .descLi {margin-top:22px;}
+.mainBiz .bizMonitoring .descLi > li {display:flex;align-items:center;justify-content:space-between;position:relative;}
+.mainBiz .bizMonitoring .descLi > li span {font-size:14px;line-height:1.5;}
+.mainBiz .bizMonitoring .descLi > li span:first-child {position:relative;padding-left:16px;font-weight:500;}
+.mainBiz .bizMonitoring .descLi > li span:first-child::after {content:'';display:block;position:absolute;left:10px;top:8px;width:3px;height:3px;border-radius:50%;background-color:#1e2124;}
+.mainBiz .bizMonitoring .descLi > li span.count {font-size:16px;font-weight:400;}
+.mainBiz .bizMonitoring .descLi > li + li {margin-top:4px;}
 
 .mainBiz .mainContents {flex:0 1 auto;width:100%;}
+
+.list_card {display:grid;grid-template-columns:repeat(2,1fr);gap:8px;}
+.list_card > li {padding:30px 24px 20px;border:1px solid #C3C3C3;border-radius:6px;}
+.list_card > li .tit {display:flex;align-items:flex-start;position:relative;padding-right:180px;}
+.list_card > li .span {flex-shrink:0;margin:1px 10px 0 0;}
+.list_card > li strong {display:block;font-size:18px;line-height:1.5;}
+.list_card > li .extra {display:flex;align-items:center;position:absolute;right:24px;top:0;font-size:13px;}
