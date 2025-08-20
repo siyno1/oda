@@ -1100,8 +1100,10 @@ button[class^=btnList] {display:inline-block;box-sizing:border-box;border:0 none
 
 @keyframes loadingBarInner {
 	0%,30% {width:25%;transform:translateZ(0);}
-	45% {width:90%;transform:translateZ(0);}
-	50%,80% {width:80%;transform:translateZ(0);}
+	35% {width:20%;transform:translateZ(0);}
+	45% {width:85%;transform:translateZ(0);}
+	50%,80% {width:70%;transform:translateZ(0);}
+	85% {width:75%;transform:translateZ(0);}
 	95% {width:15%;transform:translateZ(0);}
 	100% {width:25%;transform:translateZ(0);}
 }
