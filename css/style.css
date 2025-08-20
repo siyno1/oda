@@ -52,8 +52,9 @@ select {box-sizing:border-box; width: 100%; height: 34px; padding: 4px 30px 4px 
 .tbl.done::before {content: none;}
 .tbl.done.col tbody tr {border-bottom: 1px solid #E2E6EA;}
 .tbl span.red {color: #db4545;}
-.tbl .empty {height:200px;text-align:center !important;vertical-align:middle;background-color:#f9f9f9;}
-.tbl .empty .txtInfo {display:inline-block;}
+.tbl .empty {height:250px;text-align:center !important;vertical-align:middle;}
+.tbl .empty > p {display:inline-block;font-size:16px;font-weight:500;}
+.tbl .empty > p::before {content:'';display:block;margin:0 auto 10px;width:32px;height:32px;background:url(../img/ico_nodata.svg) no-repeat center;}
 
 .tblBox .tbl + .tbl {margin-top:-1px;}
 .tblBox .tbl + .tbl:before {background:#E2E6EA;}
