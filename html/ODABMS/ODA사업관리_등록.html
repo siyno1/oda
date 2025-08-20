@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<title>ODA</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+	<meta http-equiv="Pragma" content="no-cache">
+	<meta http-equiv="Expires" content="0">
+
+	<link rel="stylesheet" href="./../../css/flatpickr.min.css">
+	<link rel="stylesheet" href="./../../css/reset.css">
+	<link rel="stylesheet" href="./../../css/layout.css">
+	<link rel="stylesheet" href="./../../css/style.css">
+
+	<script defer src="./../../js/jquery-3.7.1.min.js"></script>
+	<script defer src="./../../js/flatpickr.js"></script>
+	<script defer src="./../../js/ui.js"></script>
+</head>
+
+<body>
+	<!-- wrap -->
+	<div id="wrap" class="wrapper">
+		<!-- 헤더 영역 -->
+		<div id="header" class="header">
+			<div class="wrap">
+				<h1><a href="./../gate.html"><img src="./../../img/logo.svg"></a></h1>
+				<ul class="gnb">
+					<li><a href="javascript:;">준비단계</a></li><!-- 활성화 시 li class="active" -->
+					<li><a href="javascript:;">진행단계</a></li>
+					<li><a href="javascript:;">완료단계</a></li>
+					<li><a href="javascript:;">정보마당</a></li>
+					<li><a href="javascript:;">운영관리</a></li>
+				</ul>
+				<div class="userBox">
+					<button class="btnUser">운영관리자</button>
+					<ul class="dropDown">
+						<li><a href="javascript:;">쪽지</a></li>
+						<li><a href="javascript:;">마이페이지</a></li>
+						<li><a href="javascript:;">로그아웃</a></li>
+					</ul>
+				</div>
+				<div class="searchBox">
+					<input type="text" placeholder="통합검색">
+					<button class="btnSearch">검색</button>
+				</div>
+			</div>
+		</div>
+		<!-- //헤더 영역 -->
+
+		<!-- 컨테이너 영역 -->
+		<div id="container" class="container">
+
+			<!-- LNB 영역 -->
+			<div id="side" class="side">
+				<div class="side_menu">
+					<h2>ODA 사업 관리</h2>
+					<ul class="gnb">
+						<li>
+							<a href="javascript:;">사업목록</a>
+						</li>
+						<li class="hasChild active">
+							<a href="javascript:;">연수 사업 관리</a>
+							<ul>
+								<li><a href="javascript:;" class="on">연수 사업 목록</a></li>
+								<li><a href="javascript:;">연수 프로그램 관리</a></li>
+								<li><a href="javascript:;">연수생 관리</a></li>
+								<li><a href="javascript:;">체크리스트</a></li>
+							</ul>
+						</li>
+						<li class="hasChild">
+							<a href="javascript:;">장학 사업 관리</a>
+							<ul>
+								<li><a href="javascript:;">연수 사업 목록</a></li>
+								<li><a href="javascript:;">연수 프로그램 관리</a></li>
+								<li><a href="javascript:;">연수생 관리</a></li>
+								<li><a href="javascript:;">체크리스트</a></li>
+							</ul>
+						</li>
+						<li class="hasChild">
+							<a href="javascript:;">패키지 사업 관리</a>
+							<ul>
+								<li><a href="javascript:;">연수 사업 목록</a></li>
+								<li><a href="javascript:;">연수 프로그램 관리</a></li>
+								<li><a href="javascript:;">연수생 관리</a></li>
+								<li><a href="javascript:;">체크리스트</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<button class="btnSlide">slide</button>
+			</div>
+			<!-- //LNB 영역 -->
+
+			<!-- 컨텐츠 영역 -->
+			<div class="contents">
+				<div class="pgtBox">
+					<div class="lt">
+						<h2>ODA사업등록</h2>
+					</div>
+
+					<ul class="breadcrumb">
+						<li class="home"><a href="javascript:;">홈</a></li>
+						<li><a href="javascript:;">진행단계</a></li>
+						<li><a href="javascript:;">ODA사업등록</a></li>
+					</ul>
+
+					<div class="rt"></div>
+				</div>
+
+				<!-- cntBox -->
+				<div class="cntBox">
+					<!-- cntBox -->
+					<div class="cntBox">
+						<div class="titBox">
+							<div class="lt">
+								<h3>시행계획</h3>
+							</div>
+
+							<div class="rt">
+								<div class="btn-wrap">
+									<button type="button" class="btn">시행계획 불러오기</button>
+								</div>
+							</div>
+						</div>
+
+						<div class="tblBox">
+							<table class="tbl col">
+								<caption></caption>
+								<colgroup>
+									<col style="width: 100px;">
+									<col style="width: 180px;">
+									<col style="width: auto;">
+									<col style="width: 200px;">
+									<col style="width: 120px;">
+									<col style="width: 120px;">
+									<col style="width: 200px;">
+								</colgroup>
+
+								<thead>
+									<tr>
+										<th scope="col">연도</th>
+										<th scope="col">기관 고유사업번호</th>
+										<th scope="col">시행계획명</th>
+										<th scope="col">시행기관</th>
+										<th scope="col">사업분야</th>
+										<th scope="col">수원국</th>
+										<th scope="col">[5차] 국개위 확정액</th>
+									</tr>
+								</thead>
+
+								<tbody>
+									<tr>
+										<td>2025</td>
+										<td>1092000_2023_006</td>
+										<td class="tL">몽골 날라이흐구/바양주르흐구 지속가능한 '길(Trail)여행' 비즈니스 모델 고도화를 통한 주민 소득증대 사업 2단계('24-'26/1,244백만원)</td>
+										<td>기관</td>
+										<td>분야</td>
+										<td>우크라이나</td>
+										<td>3,789 백만원</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<!-- //cntBox -->
+
+					<!-- cntBox -->
+					<div class="cntBox">
+						<div class="titBox">
+							<div class="lt">
+								<h3>사업 기간 및 상태</h3>
+							</div>
+
+							<div class="rt">
+
+							</div>
+						</div>
+
+						<div class="tblBox">
+							<table class="tbl row">
+								<caption></caption>
+								<colgroup>
+									<col style="width: auto;">
+								</colgroup>
+
+								<tbody>
+									<tr>
+										<td>
+											<div class="inpRow">
+												<button type="button" class="btn sch pop" data-target="pop02"><span class="sr-only">찾기</span></button>
+												<input type="text" title="이름" placeholder="이름">
+												<input type="tel" title="전화번호" placeholder="전화번호">
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<!-- //cntBox -->
+				</div>
+				<!-- //cntBox -->
+
+				<div class="btn-wrap">
+					<button type="button" class="btn">취소</button>
+					<button type="button" class="btn pt">등록</button>
+				</div>
+			</div>
+			<!-- //컨텐츠 영역 -->
+		</div>
+		<!-- //컨테이너 영역 -->
+	</div>
+	<!-- //wrap -->
+
+	<!-- popup : 담당자 정보 -->
+	<div class="popup" id="pop02">
+		<div class="tit">
+			<p>담당자 정보</p>
+			<button type="button" class="btn-close"><span class="sr-only">팝업창 닫기</span></button>
+		</div>
+
+		<div class="sch">
+			<div class="flex1">
+				<p>성명</p>
+				<input type="text">
+				<div class="btn-wrap">
+					<button class="btn-reset"><span class="sr-only">초기화버튼</span></button>
+					<button type="button" class="btn-sch">조회</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="cont">
+			<div class="schList">
+				<div class="tblBox">
+					<table class="tbl col">
+						<caption></caption>
+						<colgroup>
+							<col style="width: 5%;">
+							<col style="width: 12%;">
+							<col style="width: auto;">
+							<col style="width: 20%;">
+							<col style="width: 20%;">
+						</colgroup>
+						<thead>
+							<tr>
+								<th scope="col">
+									<div class="tblChk">
+										<input type="checkbox" id="chk00"><label for="chk00"></label>
+									</div>
+								</th>
+								<th scope="col">성명</th>
+								<th scope="col">시행기관</th>
+								<th scope="col">부서</th>
+								<th scope="col">전화번호</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="tC">
+									<div class="tblChk">
+										<input type="checkbox" id="chk01">
+										<label for="chk01"></label>
+									</div>
+								</td>
+								<td class="tC">홍길동</td>
+								<td class="tC"></td>
+								<td class="tC"></td>
+								<td class="tC">010-0000-0000</td>
+							</tr>
+							<tr>
+								<td class="tC">
+									<div class="tblChk">
+										<input type="checkbox" id="chk02">
+										<label for="chk02"></label>
+									</div>
+								</td>
+								<td class="tC">홍길동</td>
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td class="tC">
+									<div class="tblChk">
+										<input type="checkbox" id="chk03">
+										<label for="chk03"></label>
+									</div>
+								</td>
+								<td class="tC">홍길동</td>
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td class="tC">
+									<div class="tblChk">
+										<input type="checkbox" id="chk04">
+										<label for="chk04"></label>
+									</div>
+								</td>
+								<td class="tC">홍길동</td>
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td class="tC">
+									<div class="tblChk">
+										<input type="checkbox" id="chk05">
+										<label for="chk05"></label>
+									</div>
+								</td>
+								<td class="tC">홍길동</td>
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+
+				<!-- pagination -->
+				<div class="pagination">
+					<button type="button" class="page-navi prev" disabled=""><span class="sr-only">이전</span></button>
+					<div class="page-links">
+						<a class="page-link active" href="#"><span class="sr-only">현재페이지</span>1</a>
+						<a class="page-link" href="#">2</a>
+						<a class="page-link" href="#">3</a>
+						<a class="page-link" href="#">4</a>
+						<a class="page-link" href="#">5</a>
+					</div>
+					<button type="button" class="page-navi next"><span class="sr-only">다음</span></button>
+
+					<p>총 949건 (1/95)</p>
+					<select name="" id="select01">
+						<option value="5">5</option>
+						<option value="10" selected>10</option>
+						<option value="30">30</option>
+						<option value="50">50</option>
+						<option value="100">100</option>
+					</select>
+				</div>
+				<!-- //pagination -->
+			</div>
+		</div>
+
+		<div class="btn-wrap">
+			<button type="button" class="btn close">취소</button>
+			<button type="button" class="btn navy">선택</button>
+		</div>
+	</div>
+	<!-- //popup : 담당자 정보 -->
+</body>
+
+</html>
