@@ -21,7 +21,7 @@ select {box-sizing:border-box; width: 100%; height: 34px; padding: 4px 30px 4px 
 .selectBox:focus-within::after {transform: rotate(180deg) translateY(50%); transition: 0.3s all;}
 
 /* tblBox - margin */
-.tblBox {width: 100%; overflow: auto;}
+.tblBox {width: 100%; overflow: auto; position:relative;}
 :where(.cntBox, .tblBox, .adBox, .boxLi, .pagination) + .titBox {margin-top: 40px;}
 :where(.cntBox, .schList, .tblBox, .adBox, .boxLi, .pagination) + .tblBox {margin-top: 20px;}
 :where(.cntBox, .tblBox, .adBox, .boxLi, .pagination) + .tblBox .tbl::before {background: #E2E6EA;}
