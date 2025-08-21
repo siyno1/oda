@@ -1069,7 +1069,7 @@ button[class^=btnList] {display:inline-block;box-sizing:border-box;border:0 none
 .mainBiz .mainContent:last-child {margin-bottom:0;}
 
 .list-card {display:grid;grid-template-columns:repeat(auto-fit,minmax(750px,1fr));gap:8px;}
-.list-card > li {box-sizing:border-box;max-width:100%;padding:30px 24px 20px;border:1px solid #C3C3C3;border-radius:6px;}
+.list-card > li {position:relative;box-sizing:border-box;max-width:100%;padding:30px 24px 20px;border:1px solid #C3C3C3;border-radius:6px;}
 .list-card > li .tit {display:flex;align-items:flex-start;position:relative;padding-right:186px;}
 .list-card > li .tit .span {flex-shrink:0;margin:1px 10px 0 0;}
 .list-card > li .tit strong {font-size:18px;line-height:1.5;}
@@ -1088,7 +1088,7 @@ button[class^=btnList] {display:inline-block;box-sizing:border-box;border:0 none
 .list-card > li .info span {font-size:15px;line-height:1.5;letter-spacing:-1px;white-space:nowrap;}
 .list-card > li .info .date {margin-right:auto;}
 .list-card > li .info .etc {text-align:center;}
-.list-card > li button {display:none;}
+.list-card > li button {position:absolute;left:0;top:0;width:100%;height:100%;border:0 none;background:none;}
 
 .widgets {display:flex;align-items:stretch;}
 .widgets > li {flex:0 1.5 auto;box-sizing:border-box;min-width:0;width:100%;padding:0 50px;}
