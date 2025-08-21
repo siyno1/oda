@@ -41,8 +41,8 @@ button {cursor: pointer; transition: 0.3s all;}
 
 /* common */
 .ellipsis {white-space:nowrap; overflow:hidden; word-break:break-all; text-overflow:ellipsis; -o-text-overflow: ellipsis; vertical-align:middle; display:inline-block;}
-.ellipsis_multiple2 {overflow:hidden; text-overflow:ellipsis; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; word-wrap:break-wrod;}
-.ellipsis_multiple3 {overflow:hidden; text-overflow:ellipsis; display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; word-wrap:break-wrod;}
+.ellipsis_multiple2 {overflow:hidden; text-overflow:ellipsis; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; word-wrap:break-word;}
+.ellipsis_multiple3 {overflow:hidden; text-overflow:ellipsis; display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; word-wrap:break-word;}
 .clearfix{zoom:1;}
 .clearfix:after{content:"";display:block; clear:both;}
 .hide {position: absolute; display: none !important; width: 0; height: 0; clip: rect(0 0 0 0); overflow: hidden; text-indent: -9999px;}
