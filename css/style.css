@@ -233,6 +233,8 @@ button.btn-apply {display: inline-flex; justify-content: center; align-items: ce
 button.btn-apply::before {content: ' '; display: inline-block; width: 13px; height: 13px; background: url(../img/ico_apply.svg) no-repeat center center;}
 button.btn-apply:hover,
 button.btn-apply:focus {background-color:#3215C1;}
+button.btn-apply:disabled {border-color:#777 !important;background-color:#777;color:#bbb;}
+button.btn-apply:disabled::before {opacity:0.5;}
 
 .btn-sch[type="button"] {display: inline-flex; justify-content: center; align-items: center; gap: 5px; width: 70px; font-size: 15px; font-weight: 600; line-height: 1.5; color: #fff; background: #6D4FFF; border-color: #6D4FFF;}
 .btn-sch::before {position: relative; top: 1px; content: ' '; display: block; width: 13px; height: 13px; background: url(../img/ico_apply.svg) no-repeat center center;}
