@@ -154,14 +154,15 @@ button[class^="btn-"]:disabled {border-color:#c3c7cb;background-color:#F3F3F3;co
 
 /* btn : pointcolor */
 .btn.pt {color: #fff; background: #3B80FF; border-color: #3B80FF;}
-.btn-save.txt {color: #fff; background: #3B80FF url(../img/ico_save.svg) no-repeat center left 9px; border-color: #3B80FF;}
+.btn-save.txt {color: #fff; background: #524C91 url(../img/ico_save.svg) no-repeat center left 9px; border-color: #524C91;}
+.btn-save.txt:hover,
+.btn-save.txt:focus {border-color:#434C89;background-color:#434C89;}
+
 .btn.biz {color: #fff; background: #3B80FF; border-color: #3B80FF;}
 .btn.biz::before {content: ' '; display: inline-block; width: 16px; height: 16px; margin-right: 4px; background: url(../img/ico_biz.svg) no-repeat center center;}
 .btn.biz:disabled::before {opacity:0.5;}
 .btn.pt:hover,
 .btn.pt:focus,
-.btn-save.txt:hover,
-.btn-save.txt:focus,
 .btn.biz:hover,
 .btn.biz:focus {border-color:#3466C2;background-color:#3466C2;}
 
