@@ -154,9 +154,11 @@ button[class^="btn-"]:disabled {border-color:#c3c7cb;background-color:#F3F3F3;co
 
 /* btn : pointcolor */
 .btn.pt {color: #fff; background: #524C91; border-color: #524C91;}
-.btn-save.txt {color: #fff; background: #524C91 url(../img/ico_save.svg) no-repeat center left 9px; border-color: #524C91;}
+.btn-save.txt {display:flex;gap:4px;padding:0 9px !important;align-items:center;justify-content:center;color: #fff; background: #524C91; border-color: #524C91;}
+.btn-save::before {content:'';display:block;width:16px;height:16px;background:url(../img/ico_save.svg) no-repeat center center;}
 .btn-save.txt:hover,
 .btn-save.txt:focus {border-color:#1D1666;background-color:#1D1666;}
+.btn-save.txt:disabled::before {opacity:0.5;}
 
 .btn.biz {color: #fff; background: #524C91; border-color: #524C91;}
 .btn.biz::before {content: ' '; display: inline-block; width: 16px; height: 16px; margin-right: 4px; background: url(../img/ico_biz.svg) no-repeat center center;}
