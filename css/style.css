@@ -1,14 +1,19 @@
 @charset "UTF-8";
 
 
-input:where([type="text"], [type="tel"]) {height: 36px; padding: 3px 8px; font-size: 16px; font-weight: 500; line-height: 1.5; color: #464C53; background: #fff; border: 1px solid #B1B8BE; border-radius: 4px;}
+input:where([type="text"], [type="tel"], [type="num"]) {height: 36px; padding: 3px 8px; font-size: 16px; font-weight: 500; line-height: 1.5; color: #464C53; background: #fff; border: 1px solid #B1B8BE; border-radius: 6px;}
 input::placeholder {font-size: 16px; color: #8A949E; text-align:left;}
 input[type="text"].pickr {width: 100%; padding-right: 28px; background: #fff url(../img/ico_pickr.svg) no-repeat center right 7px;}
 input[type="text"]:disabled {background: #E6E8EA;}
+
+
 textarea {display: block; box-sizing:border-box; width: 100%; height: 80px; padding: 4px 8px; font-family: "Pretendard GOV"; font-size: 16px; font-weight: 500; line-height: 1.5; color: #1E2124; border: 1px solid #B1B8BE; border-radius: 4px; resize: none;}
 textarea:disabled {background: #E6E8EA;}
 textarea::placeholder {color: #8A949E;}
 select {box-sizing:border-box; width: 100%; height: 34px; padding: 4px 30px 4px 8px; font-weight: 500; background: #fff; border: none; border-radius: 4px; font-size:16px; appearance: none; -webkit-appearance: none; -moz-appearance: none;}
+
+input:where([type="text"], [type="tel"], [type="num"]):focus,
+textarea:focus {outline:0 none;border-color:#434C89;}
 
 /* scrollbar */
 *::-webkit-scrollbar {width: 12px;}
@@ -107,9 +112,10 @@ li.chkBox .txtInfo {margin-left:-22px;}
 
 /* checkBox / radioBox */
 .tblChk {display: flex; justify-content: center; align-items: center; min-height: 25px;}
-:where(input[type="checkbox"], input[type="radio"]) {display: none;}
+:where(input[type="checkbox"], input[type="radio"]) {position: absolute !important; width: 1px !important; height: 1px !important; padding: 0 !important; margin: -1px !important; overflow: hidden !important; clip: rect(0, 0, 0, 0) !important; white-space: nowrap !important; border: 0 !important;}
 :where(input[type="checkbox"], input[type="radio"]) + label {display: inline-flex; align-items: center; gap: 5px; font-weight: 500; line-height: 1.5; color: #464C53; cursor: pointer;}
 :where(input[type="checkbox"], input[type="radio"]) + label::before {content: ' '; display: inline-block; width: 20px; height: 20px; background: #fff; border: 1px solid #B1B8BE; border-radius: 3px; box-sizing: border-box; transition: 0.3s all;}
+:where(input[type="checkbox"], input[type="radio"]):focus + label {outline: 1px solid #434C89;}
 :where(input[type="checkbox"], input[type="radio"]):checked + label::before {background: #6D4FFF url(../img/ico_chk_on.svg) no-repeat center center; border-color: #6D4FFF; transition: 0.3s all;}
 :where(input[type="checkbox"], input[type="radio"]):disabled + label {color: #B1B8BE;}
 :where(input[type="checkbox"], input[type="radio"]):disabled + label::before {background: #E6E8EA; border-color: #E6E8EA;}

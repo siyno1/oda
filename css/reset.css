@@ -31,7 +31,7 @@ legend {border: 0; padding: 0;}
 thead.sr-only {clip-path: inset(50%)!important;}
 button {cursor: pointer; transition: 0.3s all;}
 
-*:focus {outline-offset: 0; outline: 2px solid rgba(36, 107, 235, 0.8);}
+*:focus {outline-offset: 0; outline: 2px solid #434C89;}
 ::-moz-selection {background: var(--krds-secondary); color: var(--krds-white);}
 ::selection {background: #003675; color: var(--krds-white);}
 
