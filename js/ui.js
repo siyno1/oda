@@ -196,7 +196,6 @@ function init() {
 			$target.show();
 			$dim.fadeIn(300);
 		}
-
     });
 
     // popup Close btn

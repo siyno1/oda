@@ -95,28 +95,25 @@
 
 			<!-- 컨텐츠 영역 -->
 			<div class="contents">
+				<!-- pgtBox -->
 				<div class="pgtBox">
 					<div class="lt">
-						<h2>요청 중인 연계</h2>
+						<h2>모니터링 관리</h2>
 					</div>
 
 					<ul class="breadcrumb">
 						<li class="home"><a href="javascript:;">홈</a></li>
-						<li><a href="javascript:;">평가</a></li>
-						<li><a href="javascript:;">자체평가</a></li>
+						<li><a href="javascript:;">진행단계</a></li>
+						<li><a href="javascript:;">모니터링</a></li>
 					</ul>
 
 					<div class="rt"></div>
 				</div>
+				<!-- //pgtBox -->
 
 				<!-- schBox @dev 25.08.01 검색 수정 -->
 				<div class="schBox">
 					<div class="schRow">
-						<ul class="fltList">
-							<li><button type="button">사업기간</button></li>
-							<li><button type="button">시행기관</button></li>
-						</ul>
-
 						<div class="schTxt">
 							<div class="schKeyword">
 								<input type="text" placeholder="사업명을 입력하세요.">
@@ -124,17 +121,6 @@
 							</div>
 							<button type="button" class="btn-flt">검색 필터 열기</button>
 						</div>
-					</div>
-
-					<div class="schRow toggleFlt" style="display:none;">
-						<ul class="fltList">
-							<li><button type="button">사업기간</button></li>
-							<li><button type="button">시행기관</button></li>
-							<li><button type="button">수원국</button></li>
-							<li><button type="button">사업분야</button></li>
-							<li><button type="button">진행상태</button></li>
-							<li><button type="button">원조유형</button></li>
-						</ul>
 					</div>
 
 					<div class="schRow toggleFlt" style="display:none;">
@@ -160,18 +146,22 @@
 									</div>
 								</li>
 
-								<li>
-									<p>당해연도 시행계획 예산</p>
-									<div class="iptBox">
-										<input type="text" placeholder="금액을 입력하세요.">
-										<button type="button" class="btn cnf">확인</button>
+								<li class="contBox">
+									<p>시행기관</p>
+									<div class="contList">
+										<div>
+											<ul>
+												<li><button type="button">전체</button></li>
+												<li><button type="button">국무조정실</button></li>
+											</ul>
+										</div>
 									</div>
 								</li>
 
 								<li class="contBox type01">
 									<p>수원국</p>
 									<div class="contList">
-										<div class="">
+										<div>
 											<p>대륙</p>
 											<ul>
 												<li><button type="button">아시아</button></li>
@@ -267,6 +257,34 @@
 										</div>
 									</div>
 								</li>
+
+								<li class="contBox">
+									<p>진행상태</p>
+									<div class="contList">
+										<div>
+											<ul>
+												<li><button type="button">전체</button></li>
+												<li><button type="button">확정</button></li>
+												<li><button type="button">완료</button></li>
+												<li><button type="button">중단</button></li>
+												<li><button type="button">취소</button></li>
+											</ul>
+										</div>
+									</div>
+								</li>
+
+								<li class="contBox">
+									<p>원조유형</p>
+									<div class="contList">
+										<div>
+											<ul>
+												<li><button type="button">전체</button></li>
+												<li><button type="button">유상</button></li>
+												<li><button type="button">무상</button></li>
+											</ul>
+										</div>
+									</div>
+								</li>
 							</ul>
 						</div>
 					</div>
@@ -303,6 +321,7 @@
 
 				<!-- cntBox -->
 				<div class="cntBox">
+					<!-- titBox -->
 					<div class="titBox">
 						<div class="lt">
 
@@ -311,262 +330,185 @@
 						<div class="rt">
 							<div class="btn-wrap">
 								<button type="button" class="btn excel">엑셀다운로드</button>
-								<button type="button" class="btn hwp">한글다운로드</button>
-								<button type="button" class="btn pdf">PDF다운로드</button>
-								<button type="button" class="btn biz">사업등록</button>
+								<button type="button" class="btn excel">엑셀업로드</button>
+								<button type="button" class="btn pt pop" data-target="pop01">제출현황</button>
+								<button type="button" class="btn biz">모니터링 등록</button>
 							</div>
 						</div>
 					</div>
+					<!-- //titBox -->
 
-					<!-- schList : 그리드 -->
+					<!-- schList : 그리드 형태 리스트 -->
 					<div class="schList">
 						<div class="tblBox">
-							<table class="tbl col">
+							<table class="tbl col tC">
 								<caption></caption>
 								<colgroup>
-									<col style="width: 5%;">
-									<col style="width: 8%;">
-									<col style="width: 48%;">
-									<col style="width: 6%;">
-									<col style="width: 9%;">
-									<col style="width: 9%;">
-									<col style="width: 13%;">
-									<col style="width: 5%;">
+									<col style="width: 120px">
+									<col style="width: 190px;"><!-- 사업번호 -->
+									<col style="width: auto;">
+									<col style="width: 140px;">
+									<col style="width: 140px;">
+									<col style="width: 140px;">
+									<col style="width: 180px;">
+									<col style="width: 100px;">
+									<col style="width: 100px;">
+									<col style="width: 100px;">
 								</colgroup>
 								<thead>
 									<tr>
-										<th scope="col">
-											<div class="tblChk">
-												<input type="checkbox" id="chk01"><label for="chk01"></label>
-											</div>
-										</th>
+										<th scope="col">모니터링<br>연도</th>
 										<th scope="col">사업번호</th>
 										<th scope="col">사업명</th>
 										<th scope="col">사업기간</th>
 										<th scope="col">시행기관</th>
-										<th scope="col">수원국</th>
+										<th scope="col">국가</th>
 										<th scope="col">사업분야</th>
-										<th scope="col">사업상태</th>
+										<th scope="col">원조구분</th>
+										<th scope="col">…</th>
+										<th scope="col">제출 여부</th>
 									</tr>
 								</thead>
 								<tbody>
 									<tr>
-										<td class="tC">
-											<div class="tblChk">
-												<input type="checkbox" id="chk02"><label for="chk02"></label>
-											</div>
-										</td>
-										<td class="tC">1092000_2023_006</td>
-										<td>
-											<a href="#">
-												<span class="span orange">패키지</span>
-												몽골 날라이흐구/바양주르흐구 지속가능한 '길(Trail)여행' 비즈니스 모델 고도화를 통한 주민 소득증대 사업 2단계('24-'26/1,244백만원)
-											</a>
-										</td>
-										<td class="tC">2023 ~ 2025</td>
+										<td>2025</td>
+										<td>1092000_2025_002</td>
+										<td class="tL"><a href="#">(2)아·태지역 개도국 경쟁당국 공무원 및 경쟁법 판사 등을 대상으로한 OECD 선진 경쟁정책 및 모범사례 교육·연수</a></td>
+										<td>2023 ~ 2025</td>
 										<td>국무조정실</td>
-										<td>방글라데시</td>
-										<td>일반 공공행정 및 시민사회</td>
-										<td><span class="badge pt">확정</span></td>
+										<td>중국</td>
+										<td><p class="ellipsis">입법 및 사도제도 개발</p></td><!-- 말줄임 -->
+										<td>다자간</td>
+										<td>…</td>
+										<td><span class="badge pt">제출 완료</span></td>
 									</tr>
 									<tr>
-										<td class="tC">
-											<div class="tblChk">
-												<input type="checkbox" id="chk03"><label for="chk03"></label>
-											</div>
-										</td>
-										<td class="tC">1092000_2023_006</td>
-										<td>
-											<a href="#">
-												<span class="span green">연수</span>
-												몽골 날라이흐구/바양주르흐구 지속가능한 '길(Trail)여행' 비즈니스 모델 고도화를 통한 주민 소득증대 사업 2단계('24-'26/1,244백만원)
-											</a>
-										</td>
-										<td class="tC">2023 ~ 2025</td>
+										<td>2025</td>
+										<td>1092000_2025_002</td>
+										<td class="tL"><a href="#">(2)아·태지역 개도국 경쟁당국 공무원 및 경쟁법 판사 등을 대상으로한 OECD 선진 경쟁정책 및 모범사례 교육·연수</a></td>
+										<td>2023 ~ 2025</td>
 										<td>국무조정실</td>
-										<td>방글라데시</td>
-										<td>일반 공공행정 및 시민사회</td>
-										<td><span class="badge gray">완료</span></td>
+										<td>중국</td>
+										<td><p class="ellipsis">입법 및 사도제도 개발</p></td><!-- 말줄임 -->
+										<td>다자간</td>
+										<td>…</td>
+										<td><span class="badge blue">작성 중</span></td>
 									</tr>
 									<tr>
-										<td class="tC">
-											<div class="tblChk">
-												<input type="checkbox" id="chk04"><label for="chk04"></label>
-											</div>
-										</td>
-										<td class="tC">1092000_2023_006</td>
-										<td>
-											<a href="#">
-												<span class="span blue">장학</span>
-												몽골 날라이흐구/바양주르흐구 지속가능한 '길(Trail)여행' 비즈니스 모델 고도화를 통한 주민 소득증대 사업 2단계('24-'26/1,244백만원)
-											</a>
-										</td>
-										<td class="tC">2023 ~ 2025</td>
+										<td>2025</td>
+										<td>1092000_2025_002</td>
+										<td class="tL"><a href="#">(2)아·태지역 개도국 경쟁당국 공무원 및 경쟁법 판사 등을 대상으로한 OECD 선진 경쟁정책 및 모범사례 교육·연수</a></td>
+										<td>2023 ~ 2025</td>
 										<td>국무조정실</td>
-										<td>방글라데시</td>
-										<td>일반 공공행정 및 시민사회</td>
-										<td><span class="badge orange">중단</span></td>
+										<td>중국</td>
+										<td><p class="ellipsis">입법 및 사도제도 개발</p></td><!-- 말줄임 -->
+										<td>다자간</td>
+										<td>…</td>
+										<td><span class="badge blue">작성 중</span></td>
 									</tr>
 									<tr>
-										<td class="tC">
-											<div class="tblChk">
-												<input type="checkbox" id="chk05"><label for="chk05"></label>
-											</div>
-										</td>
-										<td class="tC">1092000_2023_006</td>
-										<td>
-											<a href="#">
-												<span class="span cyan">연계</span>
-												몽골 날라이흐구/바양주르흐구 지속가능한 '길(Trail)여행' 비즈니스 모델 고도화를 통한 주민 소득증대 사업 2단계('24-'26/1,244백만원)
-											</a>
-										</td>
-										<td class="tC">2023 ~ 2025</td>
+										<td>2025</td>
+										<td>1092000_2025_002</td>
+										<td class="tL"><a href="#">(2)아·태지역 개도국 경쟁당국 공무원 및 경쟁법 판사 등을 대상으로한 OECD 선진 경쟁정책 및 모범사례 교육·연수</a></td>
+										<td>2023 ~ 2025</td>
 										<td>국무조정실</td>
-										<td>방글라데시</td>
-										<td>일반 공공행정 및 시민사회</td>
-										<td><span class="badge">취소</span></td>
+										<td>중국</td>
+										<td><p class="ellipsis">입법 및 사도제도 개발</p></td><!-- 말줄임 -->
+										<td>다자간</td>
+										<td>…</td>
+										<td><span class="badge blue">작성 중</span></td>
 									</tr>
 									<tr>
-										<td class="tC">
-											<div class="tblChk">
-												<input type="checkbox" id="chk06"><label for="chk06"></label>
-											</div>
-										</td>
-										<td class="tC">1092000_2023_006</td>
-										<td>
-											<a href="#">
-												<span class="span cyan">연계</span>
-												<span class="span green">연수</span>
-												몽골 날라이흐구/바양주르흐구 지속가능한 '길(Trail)여행' 비즈니스 모델 고도화를 통한 주민 소득증대 사업 2단계('24-'26/1,244백만원)
-											</a>
-										</td>
-										<td class="tC">2023 ~ 2025</td>
+										<td>2025</td>
+										<td>1092000_2025_002</td>
+										<td class="tL"><a href="#">(2)아·태지역 개도국 경쟁당국 공무원 및 경쟁법 판사 등을 대상으로한 OECD 선진 경쟁정책 및 모범사례 교육·연수</a></td>
+										<td>2023 ~ 2025</td>
 										<td>국무조정실</td>
-										<td>방글라데시</td>
-										<td>일반 공공행정 및 시민사회</td>
-										<td><span class="badge pt">확정</span></td>
+										<td>중국</td>
+										<td><p class="ellipsis">입법 및 사도제도 개발</p></td><!-- 말줄임 -->
+										<td>다자간</td>
+										<td>…</td>
+										<td><span class="badge blue">작성 중</span></td>
 									</tr>
 									<tr>
-										<td class="tC">
-											<div class="tblChk">
-												<input type="checkbox" id="chk07"><label for="chk07"></label>
-											</div>
-										</td>
-										<td class="tC">1092000_2023_006</td>
-										<td>
-											<a href="#">
-												<span class="span">프로젝트</span>
-												몽골 날라이흐구/바양주르흐구 지속가능한 '길(Trail)여행' 비즈니스 모델 고도화를 통한 주민 소득증대 사업 2단계('24-'26/1,244백만원)
-											</a>
-										</td>
-										<td class="tC">2023 ~ 2025</td>
+										<td>2025</td>
+										<td>1092000_2025_002</td>
+										<td class="tL"><a href="#">(2)아·태지역 개도국 경쟁당국 공무원 및 경쟁법 판사 등을 대상으로한 OECD 선진 경쟁정책 및 모범사례 교육·연수</a></td>
+										<td>2023 ~ 2025</td>
 										<td>국무조정실</td>
-										<td>방글라데시</td>
-										<td>일반 공공행정 및 시민사회</td>
-										<td><span class="badge gray">완료</span></td>
+										<td>중국</td>
+										<td><p class="ellipsis">입법 및 사도제도 개발</p></td><!-- 말줄임 -->
+										<td>다자간</td>
+										<td>…</td>
+										<td><span class="badge pt">제출 완료</span></td>
 									</tr>
 									<tr>
-										<td class="tC">
-											<div class="tblChk">
-												<input type="checkbox" id="chk08"><label for="chk08"></label>
-											</div>
-										</td>
-										<td class="tC">1092000_2023_006</td>
-										<td>
-											<a href="#">
-												<span class="span">프로젝트</span>
-												몽골 날라이흐구/바양주르흐구 지속가능한 '길(Trail)여행' 비즈니스 모델 고도화를 통한 주민 소득증대 사업 2단계('24-'26/1,244백만원)
-											</a>
-										</td>
-										<td class="tC">2023 ~ 2025</td>
+										<td>2025</td>
+										<td>1092000_2025_002</td>
+										<td class="tL"><a href="#">(2)아·태지역 개도국 경쟁당국 공무원 및 경쟁법 판사 등을 대상으로한 OECD 선진 경쟁정책 및 모범사례 교육·연수</a></td>
+										<td>2023 ~ 2025</td>
 										<td>국무조정실</td>
-										<td>방글라데시</td>
-										<td>일반 공공행정 및 시민사회</td>
-										<td><span class="badge orange">중단</span></td>
+										<td>중국</td>
+										<td><p class="ellipsis">입법 및 사도제도 개발</p></td><!-- 말줄임 -->
+										<td>다자간</td>
+										<td>…</td>
+										<td><span class="badge blue">작성 중</span></td>
 									</tr>
 									<tr>
-										<td class="tC">
-											<div class="tblChk">
-												<input type="checkbox" id="chk09"><label for="chk09"></label>
-											</div>
-										</td>
-										<td class="tC">1092000_2023_006</td>
-										<td>
-											<a href="#">
-												<span class="span">프로젝트</span>
-												몽골 날라이흐구/바양주르흐구 지속가능한 '길(Trail)여행' 비즈니스 모델 고도화를 통한 주민 소득증대 사업 2단계('24-'26/1,244백만원)
-											</a>
-										</td>
-										<td class="tC">2023 ~ 2025</td>
+										<td>2025</td>
+										<td>1092000_2025_002</td>
+										<td class="tL"><a href="#">(2)아·태지역 개도국 경쟁당국 공무원 및 경쟁법 판사 등을 대상으로한 OECD 선진 경쟁정책 및 모범사례 교육·연수</a></td>
+										<td>2023 ~ 2025</td>
 										<td>국무조정실</td>
-										<td>방글라데시</td>
-										<td>일반 공공행정 및 시민사회</td>
-										<td><span class="badge">취소</span></td>
+										<td>중국</td>
+										<td><p class="ellipsis">입법 및 사도제도 개발</p></td><!-- 말줄임 -->
+										<td>다자간</td>
+										<td>…</td>
+										<td><span class="badge blue">작성 중</span></td>
 									</tr>
 									<tr>
-										<td class="tC">
-											<div class="tblChk">
-												<input type="checkbox" id="chk10"><label for="chk10"></label>
-											</div>
-										</td>
-										<td class="tC">1092000_2023_006</td>
-										<td>
-											<a href="#">
-												<span class="span">프로젝트</span>
-												몽골 날라이흐구/바양주르흐구 지속가능한 '길(Trail)여행' 비즈니스 모델 고도화를 통한 주민 소득증대 사업 2단계('24-'26/1,244백만원)
-											</a>
-										</td>
-										<td class="tC">2023 ~ 2025</td>
+										<td>2025</td>
+										<td>1092000_2025_002</td>
+										<td class="tL"><a href="#">(2)아·태지역 개도국 경쟁당국 공무원 및 경쟁법 판사 등을 대상으로한 OECD 선진 경쟁정책 및 모범사례 교육·연수</a></td>
+										<td>2023 ~ 2025</td>
 										<td>국무조정실</td>
-										<td>방글라데시</td>
-										<td>일반 공공행정 및 시민사회</td>
-										<td><span class="badge">취소</span></td>
+										<td>중국</td>
+										<td><p class="ellipsis">입법 및 사도제도 개발</p></td><!-- 말줄임 -->
+										<td>다자간</td>
+										<td>…</td>
+										<td><span class="badge blue">작성 중</span></td>
 									</tr>
 									<tr>
-										<td class="tC">
-											<div class="tblChk">
-												<input type="checkbox" id="chk11"><label for="chk11"></label>
-											</div>
-										</td>
-										<td class="tC">1092000_2023_006</td>
-										<td>
-											<a href="#">
-												<span class="span">프로젝트</span>
-												몽골 날라이흐구/바양주르흐구 지속가능한 '길(Trail)여행' 비즈니스 모델 고도화를 통한 주민 소득증대 사업 2단계('24-'26/1,244백만원)
-											</a>
-										</td>
-										<td class="tC">2023 ~ 2025</td>
+										<td>2025</td>
+										<td>1092000_2025_002</td>
+										<td class="tL"><a href="#">(2)아·태지역 개도국 경쟁당국 공무원 및 경쟁법 판사 등을 대상으로한 OECD 선진 경쟁정책 및 모범사례 교육·연수</a></td>
+										<td>2023 ~ 2025</td>
 										<td>국무조정실</td>
-										<td>방글라데시</td>
-										<td>일반 공공행정 및 시민사회</td>
-										<td><span class="badge">취소</span></td>
+										<td>중국</td>
+										<td><p class="ellipsis">입법 및 사도제도 개발</p></td><!-- 말줄임 -->
+										<td>다자간</td>
+										<td>…</td>
+										<td><span class="badge blue">작성 중</span></td>
 									</tr>
+
+									<!-- empty -->
 									<tr>
-										<td class="tC">
-											<div class="tblChk">
-												<input type="checkbox" id="chk12"><label for="chk12"></label>
-											</div>
+										<td class="empty" colspan="10">
+											<p>데이터가 없습니다.</p>
 										</td>
-										<td class="tC">1092000_2023_006</td>
-										<td>
-											<a href="#">
-												<span class="span">프로젝트</span>
-												<span class="span orange">패키지</span>
-												<span class="span cyan">연계</span>
-												몽골 날라이흐구/바양주르흐구 지속가능한 '길(Trail)여행' 비즈니스 모델 고도화를 통한 주민 소득증대 사업 2단계('24-'26/1,244백만원)
-											</a>
-										</td>
-										<td class="tC">2023 ~ 2025</td>
-										<td>국무조정실</td>
-										<td>방글라데시</td>
-										<td>일반 공공행정 및 시민사회</td>
-										<td><span class="badge">취소</span></td>
 									</tr>
+									<!-- //empty -->
 								</tbody>
 							</table>
 						</div>
 					</div>
-					<!-- //schList : 그리드 -->
+					<!-- //schList : 그리드 형태 리스트 -->
+
+					<!-- txtLi -->
+					<ul class="txtLi">
+						<li class="txtInfo">모니터링 2회 차 입력 기간 입니다. (2025.03.14 ~ 2025.04.05)</li>
+					</ul>
+					<!-- //txtLi -->
 
 					<!-- pagination -->
 					<div class="pagination">
@@ -592,12 +534,116 @@
 					<!-- //pagination -->
 				</div>
 				<!-- //cntBox -->
+
 			</div>
 			<!-- //컨텐츠 영역 -->
 		</div>
 		<!-- //컨테이너 영역 -->
 	</div>
 	<!-- //wrap -->
+
+	<!-- popup -->
+	<div class="popup" id="pop01">
+		<div class="tit">
+			<p>모니터링 정보 제출 현황</p>
+			<button type="button" class="btn-close"><span class="sr-only">팝업창 닫기</span></button>
+		</div>
+
+		<div class="cont">
+
+			<!-- schList -->
+			<div class="schList">
+				<div class="tblBox">
+					<table class="tbl col tC">
+						<caption></caption>
+						<colgroup>
+							<col style="width: auto;">
+							<col style="width: 100px;">
+							<col style="width: 100px;">
+							<col style="width: 100px;">
+							<col style="width: 100px;">
+						</colgroup>
+						<thead>
+							<tr>
+								<th scope="col">기관명</th>
+								<th scope="col">연도</th>
+								<th scope="col">전체</th>
+								<th scope="col">제출 완료</th>
+								<th scope="col">작성 중</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="tL">기관명</td>
+								<td>2025</td>
+								<td>100</td>
+								<td>99</td>
+								<td>1</td>
+							</tr>
+							<tr>
+								<td class="tL">기관명</td>
+								<td>2025</td>
+								<td>100</td>
+								<td>99</td>
+								<td>1</td>
+							</tr>
+							<tr>
+								<td class="tL">기관명</td>
+								<td>2025</td>
+								<td>100</td>
+								<td>99</td>
+								<td>1</td>
+							</tr>
+							<tr>
+								<td class="tL">기관명</td>
+								<td>2025</td>
+								<td>100</td>
+								<td>99</td>
+								<td>1</td>
+							</tr>
+							<tr>
+								<td class="tL">기관명</td>
+								<td>2025</td>
+								<td>100</td>
+								<td>99</td>
+								<td>1</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<!-- //schList -->
+
+			<!-- pagination -->
+			<div class="pagination">
+				<button type="button" class="page-navi prev" disabled=""><span class="sr-only">이전</span></button>
+				<div class="page-links">
+					<a class="page-link active" href="#"><span class="sr-only">현재페이지</span>1</a>
+					<a class="page-link" href="#">2</a>
+					<a class="page-link" href="#">3</a>
+					<a class="page-link" href="#">4</a>
+					<a class="page-link" href="#">5</a>
+				</div>
+				<button type="button" class="page-navi next"><span class="sr-only">다음</span></button>
+
+				<p>총 949건 (1/95)</p>
+				<select name="" id="select01">
+					<option value="5">5</option>
+					<option value="10" selected>10</option>
+					<option value="30">30</option>
+					<option value="50">50</option>
+					<option value="100">100</option>
+				</select>
+			</div>
+			<!-- //pagination -->
+
+		</div>
+
+		<div class="btn-wrap">
+			<button type="button" class="btn close">닫기</button>
+		</div>
+	</div>
+	<!-- //popup -->
 </body>
 
 </html>
