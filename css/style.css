@@ -70,9 +70,11 @@ textarea:focus {outline:0 none;border-color:#434C89;}
 
 .tbl .tbl.col {border-collapse:collapse;border-spacing:0;}
 .tbl .tbl.col:before {display:none;}
-.tbl .tbl.col tr {border:0 none !important;}
+.tbl .tbl.col tr {margin:0;padding:0;border:0 none !important;}
 .tbl .tbl.col td,
 .tbl .tbl.col th {border:1px solid #cdd1d5;}
+.tbl .tbl.col tbody tr:first-child td {border-top:0 none;}
+.tbl .tbl thead th:not(:first-child)::after {background-color:#cdd1d5;}
 
 /* tbl background - on : 체크 시 /  */
 .tbl tr.on {background: #F0F2F6; transition: 0.3s all;}
@@ -96,6 +98,8 @@ textarea:focus {outline:0 none;border-color:#434C89;}
 /* tblGrayColor */
 .tbl.themeGray thead th {background:#EAEEF1;}
 .tbl.themeGray tbody td {background:#F4F5F6;}
+
+.btn-wrap + .tbl {margin-top:10px;}
 
 /* 통계 테이블 */
 .tbl.total {min-width:100%;width:auto;border-collapse:separate;}

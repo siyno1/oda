@@ -119,9 +119,9 @@
 						<div class="tab">
 							<ul>
 								<li><button type="button" data-tabBtn="tab1-cont1" class="active">1회차</button></li>
-								<li><button type="button" data-tabBtn="tab1-cont2">2회차</button></li>
-								<li><button type="button" data-tabBtn="tab1-cont3">3회차</button></li>
-								<li><button type="button" data-tabBtn="tab1-cont3">4회차</button></li>
+								<li><button type="button" data-tabBtn="tab1-cont1">2회차</button></li>
+								<li><button type="button" data-tabBtn="tab1-cont1">3회차</button></li>
+								<li><button type="button" data-tabBtn="tab1-cont1">4회차</button></li>
 							</ul>
 						</div>
 
@@ -189,7 +189,7 @@
 											<caption></caption>
 
 											<colgroup>
-												<col style="width: 152px;">
+												<col style="width: 200px;">
 												<col style="width: auto;">
 											</colgroup>
 
@@ -199,7 +199,7 @@
 													<td>
 														<div class="inputForm">
 															<div class="selectBox">
-																<select name="select01">
+																<select name="select02">
 																	<option value="" hidden>- 미등록 사유 선택 -</option>
 																</select>
 															</div>
@@ -239,9 +239,9 @@
 											<caption></caption>
 
 											<colgroup>
-												<col style="width: 152px;">
+												<col style="width: 200px;">
 												<col style="width: auto;">
-												<col style="width: 152px;">
+												<col style="width: 200px;">
 												<col style="width: auto;">
 											</colgroup>
 
@@ -289,12 +289,12 @@
 													<td colspan="3">
 														<div class="inputForm">
 															<div class="selectBox">
-																<select name="select02">
+																<select name="select03">
 																	<option value="" hidden>- 자금형태 구분 -</option>
 																</select>
 															</div>
 															<div class="selectBox">
-																<select name="select03">
+																<select name="select04">
 																	<option value="" hidden>- 자금형태 선택 -</option>
 																</select>
 															</div>
@@ -329,7 +329,7 @@
 													<td colspan="3">
 														<div class="inputForm">
 															<div class="selectBox">
-																<select name="select04">
+																<select name="select05">
 																	<option value="" hidden>- 원조유형 구분 -</option>
 																</select>
 															</div>
@@ -359,7 +359,7 @@
 													<td colspan="3">
 														<div class="inputForm">
 															<div class="selectBox">
-																<select name="select05">
+																<select name="select06">
 																	<option value="" hidden>- 사업실시기관 대분류 -</option>
 																</select>
 															</div>
@@ -381,11 +381,11 @@
 												<tr>
 													<th scope="row" class="need">사업설명 <strong class="txtPt">[한글]</strong></th>
 													<td>
-														<textarea name="" id="txt01" class="w100" placeholder="사업 구성(구체적 산출물)과 사업 목적이 드러나도록 작성해주십시오.&#13;&#10;사업설명[한글]을 입력해주세요. (2000자 이내)"></textarea>
+														<textarea name="text04" id="text04" class="w100" placeholder="사업 구성(구체적 산출물)과 사업 목적이 드러나도록 작성해주십시오. 사업설명[한글]을 입력해주세요. (2000자 이내)"></textarea>
 													</td>
 													<th scope="row" class="need">사업설명 <strong class="txtPt">[영문]</strong></th>
 													<td>
-														<textarea name="" id="txt02" class="w100"></textarea>
+														<textarea name="text05" id="text05" class="w100"></textarea>
 													</td>
 												</tr>
 											</tbody>
@@ -415,9 +415,9 @@
 											<caption></caption>
 
 											<colgroup>
-												<col style="width: 152px;">
+												<col style="width: 200px;">
 												<col style="width: auto;">
-												<col style="width: 152px;">
+												<col style="width: 200px;">
 												<col style="width: auto;">
 											</colgroup>
 
@@ -443,7 +443,7 @@
 													<td>
 														<div class="inputForm">
 															<div class="selectBox">
-																<select name="" id="select06">
+																<select name="select07">
 																	<option value="" hidden>- 사업단계 선택 -</option>
 																	<option value="">시행계획 확정</option>
 																	<option value="">R/D 체결</option>
@@ -535,26 +535,28 @@
 											</colgroup>
 
 											<tbody>
-												<td>
-													<div class="rdoBox">
-														<input type="radio" id="radio03-1" name="rdo03">
-														<label for="radio03-1">예</label>
-														<input type="radio" id="radio03-2" name="rdo03">
-														<label for="radio03-2">아니오</label>
-													</div>
-												</td>
-												<td class="tL">
-													<p class="txtLi txtInfo">입찰을 통해 사업자를 선정하는 경우 “예”를 선택 (공모사업의 경우 “아니오”를 선택)</p>
-												</td>
+												<tr>
+													<td>
+														<div class="rdoBox">
+															<input type="radio" id="radio03-1" name="rdo03">
+															<label for="radio03-1">예</label>
+															<input type="radio" id="radio03-2" name="rdo03">
+															<label for="radio03-2">아니오</label>
+														</div>
+													</td>
+													<td class="tL">
+														<p class="txtLi txtInfo lg">입찰을 통해 사업자를 선정하는 경우 “예”를 선택 (공모사업의 경우 “아니오”를 선택)</p>
+													</td>
+												</tr>
 											</tbody>
 										</table>
 
 										<table class="tbl row">
 											<caption></caption>
 											<colgroup>
-												<col style="width: 152px;">
+												<col style="width: 200px;">
 												<col style="width: auto;">
-												<col style="width: 152px;">
+												<col style="width: 200px;">
 												<col style="width: auto;">
 											</colgroup>
 
@@ -569,7 +571,7 @@
 															<label for="radio04-2">아니오</label>
 														</div>
 
-														<p class="txtLi txtInfo">동 분기에 낙찰자와 계약 체결을 완료한 경우 “예”를 선택</p>
+														<p class="txtLi txtInfo lg">동 분기에 낙찰자와 계약 체결을 완료한 경우 “예”를 선택</p>
 													</td>
 													<th scope="row">국내입찰 여부</th>
 													<td>
@@ -582,26 +584,22 @@
 													</td>
 												</tr>
 												<tr>
-													<th scope="row" rowspan="2">입찰공고 번호</th>
-													<td>
-														<div class="inputForm">
-															<input type="text">
-															<div class="btn-wrap">
-																<button type="button" class="btn">조회</button>
-																<button type="button" class="btn">입찰정보검색</button>
-															</div>
+													<th scope="row">입찰공고 번호</th>
+													<td colspan="3">
+
+														<div class="btn-wrap">
+															<input type="text" placeholder="입찰공고 번호를 입력하세요">
+															<button type="button" class="btn">조회</button>
+															<button type="button" class="btn">입찰정보검색</button>
 														</div>
-													</td>
-												</tr>
-												<tr>
-													<td>
-														<table class="tbl col tC" cellspacing="0">
+
+														<table class="tbl col tC">
 															<caption></caption>
 															<colgroup>
-																<col style="width: 600px;">
-																<col style="width: 100px;">
-																<col style="width: 100px;">
-																<col style="width: 100px;">
+																<col style="width: auto;">
+																<col style="width: 240px;">
+																<col style="width: 200px;">
+																<col style="width: 200px;">
 															</colgroup>
 
 															<thead>
@@ -645,6 +643,88 @@
 										</div>
 									</div>
 									<!-- //titBox -->
+
+									<!-- tblBox -->
+									<div class="tblBox">
+										<table class="tbl row">
+											<caption></caption>
+
+											<colgroup>
+												<col style="width:auto;">
+											</colgroup>
+
+											<tbody>
+												<tr>
+													<td>
+														<div class="rdoBox">
+															<input type="radio" id="radio06-1" name="rdo06">
+															<label for="radio06-1">예</label>
+															<input type="radio" id="radio06-2" name="rdo06">
+															<label for="radio06-2">아니오</label>
+														</div>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+
+										<table class="tbl row">
+											<caption></caption>
+											<colgroup>
+												<col style="width: 200px;">
+												<col style="width: auto;">
+											</colgroup>
+
+											<tbody>
+												<tr>
+													<th scope="row" rowspan="2">연계기관</th>
+													<td>
+														<div class="inputForm">
+															<div class="selectBox">
+																<select name="select08">
+																	<option value="" hidden>- 연계기관 선택 -</option>
+																</select>
+															</div>
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<div class="btn-wrap">
+															<button type="button" class="btn">ODA 사업 검색</button>
+														</div>
+														<!-- tbl -->
+														<table class="tbl col tC">
+															<caption></caption>
+															<colgroup>
+																<col style="width: auto;">
+																<col style="width: 240px;">
+																<col style="width: 240px;">
+															</colgroup>
+
+															<thead>
+																<tr>
+																	<th scope="col">사업명</th>
+																	<th scope="col">시행기관</th>
+																	<th scope="col">사업상태</th>
+																</tr>
+															</thead>
+
+															<tbody>
+																<tr>
+																	<td></td>
+																	<td></td>
+																	<td></td>
+																</tr>
+															</tbody>
+														</table>
+														<!-- //tbl -->
+													</td>
+												</tr>
+											</tbody>
+
+										</table>
+									</div>
+									<!-- //tblBox -->
 								</div>
 								<!-- //cntBox -->
 
@@ -661,6 +741,58 @@
 										</div>
 									</div>
 									<!-- //titBox -->
+
+									<!-- tblBox -->
+									<div class="tblBox">
+										<table class="tbl row">
+											<caption></caption>
+											<colgroup>
+												<col style="width: 240px;">
+												<col style="width: auto;">
+												<col style="width: 200px;">
+												<col style="width: auto;">
+											</colgroup>
+
+											<tbody>
+												<tr>
+													<th scope="row">
+														기준통화
+														<strong class="block txtPt">(1달러 : 1,306.0107원)</strong>
+													</th>
+													<td colspan="3">
+														<div class="rdoBox">
+															<input type="radio" id="radio07-1" name="rdo07">
+															<label for="radio07-1">KRW</label>
+															<input type="radio" id="radio07-2" name="rdo07">
+															<label for="radio07-2">USD</label>
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<th scope="row">총 사업예산 <strong class="txtPt">[원화]</strong></th>
+													<td><input type="text" class="w100"></td>
+													<th scope="row">총 사업예산 <strong class="txtPt">[USD]</strong></th>
+													<td><input type="text" class="w100"></td>
+												</tr>
+												<tr>
+													<th scope="row">당해연도 시행계획 예산 <strong class="txtPt">[원화]</strong></th>
+													<td><input type="text" class="w100"></td>
+													<th scope="row">약정일</th>
+													<td>
+														<div class="pickrBox">
+															<input type="text" class="pickr" placeholder="날짜를 선택하세요">
+														</div>
+
+														<ul class="txtLi">
+															<li class="txtInfo lg">단년도 사업 : 당해 1월 1일</li>
+															<li class="txtInfo lg">다년도 사업 : RD체결 등 사업의 실제 약정일</li>
+														</ul>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<!-- //tblBox -->
 								</div>
 								<!-- //cntBox -->
 
@@ -677,6 +809,124 @@
 										</div>
 									</div>
 									<!-- //titBox -->
+
+									<!-- tblBox -->
+									<div class="tblBox">
+										<table class="tbl row">
+											<caption></caption>
+
+											<colgroup>
+												<col style="width:200px;">
+												<col style="width:auto;">
+												<col style="width:200px;">
+												<col style="width:auto;">
+											</colgroup>
+
+											<tbody>
+												<tr>
+													<th scope="row">대륙명</th>
+													<td>
+														<div class="inputForm fit">
+															<div class="selectBox">
+																<select name="select09">
+																	<option value="" hidden>국가 선택 시 자동 선택 됩니다.</option>
+																</select>
+															</div>
+														</div>
+													</td>
+													<th scope="row">국가명 <button type="button" class="btn-tip" data-tt="6" title="툴팁"></button></th>
+													<td>
+														<div class="inputForm fit">
+															<div class="selectBox">
+																<select name="select10">
+																	<option value="" hidden>- 국가(수원국) 선택 -</option>
+																</select>
+															</div>
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<th scope="row">대상국 내 지역 <strong class="txtPt">[영문]</strong></th>
+													<td colspan="3">
+														<div class="inputForm">
+															<input type="text">
+														</div>
+
+														<ul class="txtLi">
+															<li class="txtInfo lg">지역명이 애매한 경우 수원국 수도(영문명) 기입</li>
+															<li class="txtInfo lg">다자간 원조인 경우 ‘Unspecified’ 기입</li>
+														</ul>
+													</td>
+												</tr>
+												<tr>
+													<th scope="row">약정액(구속성) <strong class="txtPt">[원화]</strong></th>
+													<td>
+														<input type="text" class="w100">
+														<p class="txtLi txtInfo lg">구매 입찰 시 공여국(한국) 등 일부 국가로 참여가 제한된 금액 입력</p>
+													</td>
+													<th scope="row">약정액(구속성) <strong class="txtPt">[USD]</strong></th>
+													<td>
+														<input type="text" class="w100">
+													</td>
+												</tr>
+												<tr>
+													<th scope="row">약정액(비구속성) <strong class="txtPt">[원화]</strong></th>
+													<td>
+														<input type="text" class="w100">
+														<p class="txtLi txtInfo lg">구매 입찰 시 모든 국가가 제약 없이 참여 가능한 금액 입력</p>
+													</td>
+													<th scope="row">약정액(비구속성) <strong class="txtPt">[USD]</strong></th>
+													<td>
+														<input type="text" class="w100">
+													</td>
+												</tr>
+												<tr>
+													<th scope="row">약정액(부분 비구속성) <strong class="txtPt">[원화]</strong></th>
+													<td>
+														<input type="text" class="w100">
+														<p class="txtLi txtInfo lg">구매 입찰 시 공여국(한국)과 제한된 범위의 국가(단, 모든 수원국 포함)가 참여 가능한 금액 입력</p>
+													</td>
+													<th scope="row">약정액(부분 비구속성) <strong class="txtPt">[USD]</strong></th>
+													<td>
+														<input type="text" class="w100">
+													</td>
+												</tr>
+												<tr>
+													<th scope="row">약정액(합계) <strong class="txtPt">[원화]</strong></th>
+													<td>
+														<input type="text" class="w100">
+														<p class="txtLi txtInfo lg">해당 사업을 지원하기로 약정한 금약(다년도 사업의 경우, 총사업비를 첫해에 기재)</p>
+													</td>
+													<th scope="row">약정액(합계) <strong class="txtPt">[USD]</strong></th>
+													<td>
+														<input type="text" class="w100">
+													</td>
+												</tr>
+												<tr>
+													<th scope="row">지출액 <strong class="txtPt">[원화]</strong></th>
+													<td>
+														<input type="text" class="w100">
+
+														<ul class="txtLi">
+															<li class="txtInfo lg">당해연도 1월 1일부터 해당 분기말까지 누계 지출액</li>
+															<li class="txtInfo lg">수원국 현장 혹은 국제기구에 실제 지출된 금액(산하기관으로의 예산 교부액 아님)</li>
+															<li class="txtInfo lg">일부 다자기구 지원 등 ODA 인정비율이 100%가 아닌 사업의 경우, ODA 인정비율을 계산하여 입력</li>
+														</ul>
+													</td>
+													<th scope="row">지출액 <strong class="txtPt">[USD]</strong></th>
+													<td>
+														<input type="text" class="w100">
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<!-- //tblBox -->
+
+									<ul class="txtLi">
+										<li class="txtInfo txtRed">선택하신 사업실시기관(Council for the Development of Economic and Social Research in Africa)은 계상비율이 정해져 있습니다. 계상비율 : (100%)</li>
+										<li class="txtInfo txtRed">수원국은 1개만 선택할 수 있습니다. 수원국이 여러 개일 경우 모니터링 정보를 각각 등록해야 합니다. </li>
+									</ul>
 								</div>
 								<!-- //cntBox -->
 
@@ -689,10 +939,98 @@
 										</div>
 
 										<div class="rt">
-
+											<div class="btn-wrap">
+												<button type="button" class="btn-plus txt">사업분야 추가</button>
+											</div>
 										</div>
 									</div>
 									<!-- //titBox -->
+
+									<!-- tblBox -->
+									<div class="tblBox">
+										<table class="tbl col">
+											<caption></caption>
+
+											<colgroup>
+												<col style="width:auto;">
+												<col style="width:auto;">
+												<col style="width:auto;">
+												<col style="width:auto;">
+												<col style="width:auto;">
+												<col style="width:auto;">
+												<col style="width:100px;">
+											</colgroup>
+
+											<thead>
+												<tr>
+													<th scope="col">사업분야 1 [분류 원칙]</th>
+													<th scope="col">사업분야 2</th>
+													<th scope="col">사업분야 3</th>
+													<th scope="col">사업분야 4</th>
+													<th scope="col">사업분야 5</th>
+													<th scope="col">분야 비중(%)</th>
+													<th scope="col"><span class="sr-only">비고</span></th>
+												</tr>
+											</thead>
+
+											<tbody>
+												<tr>
+													<td>
+														<div class="inputForm fit">
+															<div class="selectBox">
+																<select name="select11">
+																	<option value="" hidden>- 선택 -</option>
+																</select>
+															</div>
+														</div>
+													</td>
+													<td>
+														<div class="inputForm fit">
+															<div class="selectBox">
+																<select name="select12">
+																	<option value="" hidden>- 선택 -</option>
+																</select>
+															</div>
+														</div>
+													</td>
+													<td>
+														<div class="inputForm fit">
+															<div class="selectBox">
+																<select name="select13">
+																	<option value="" hidden>- 선택 -</option>
+																</select>
+															</div>
+														</div>
+													</td>
+													<td>
+														<div class="inputForm fit">
+															<div class="selectBox">
+																<select name="select14">
+																	<option value="" hidden>- 선택 -</option>
+																</select>
+															</div>
+														</div>
+													</td>
+													<td>
+														<div class="inputForm fit">
+															<div class="selectBox">
+																<select name="select15">
+																	<option value="" hidden>- 선택 -</option>
+																</select>
+															</div>
+														</div>
+													</td>
+													<td><input type="text" class="w100 tR"></td>
+													<td>
+														<div class="btn-wrap tC">
+															<button type="button" class="btn-del" title="삭제"></button>
+														</div>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<!-- //tblBox -->
 								</div>
 								<!-- //cntBox -->
 
@@ -705,26 +1043,62 @@
 										</div>
 
 										<div class="rt">
-
+											<div class="btn-wrap">
+												<button type="button" class="btn-plus txt">SDGs 목표 추가</button>
+											</div>
 										</div>
 									</div>
 									<!-- //titBox -->
-								</div>
-								<!-- //cntBox -->
 
-								<!-- cntBox -->
-								<div class="cntBox">
-									<!-- titBox -->
-									<div class="titBox">
-										<div class="lt">
-											<h3>사업 분야</h3>
-										</div>
+									<!-- tblBox -->
+									<div class="tblBox">
+										<table class="tbl col">
+											<caption></caption>
 
-										<div class="rt">
+											<colgroup>
+												<col style="width:auto;">
+												<col style="width:auto;">
+												<col style="width:100px;">
+											</colgroup>
 
-										</div>
+											<thead>
+												<tr>
+													<th scope="col">목표(주제) <button type="button" class="btn-tip" data-tt="7" title="툴팁"></button></th>
+													<th scope="col">세부목표</th>
+													<th scope="col"><span class="sr-only">비고</span></th>
+												</tr>
+											</thead>
+
+											<tbody>
+												<tr>
+													<td>
+														<div class="inputForm fit">
+															<div class="selectBox">
+																<select name="select16">
+																	<option value="" hidden>- 주제 선택 -</option>
+																</select>
+															</div>
+														</div>
+													</td>
+													<td>
+														<div class="inputForm fit">
+															<div class="selectBox">
+																<select name="select17">
+																	<option value="" hidden>- 세부목표 선택 -</option>
+																</select>
+															</div>
+														</div>
+													</td>
+													<td>
+														<div class="btn-wrap tC">
+															<button type="button" class="btn-del" title="삭제"></button>
+														</div>
+													</td>
+												</tr>
+											</tbody>
+										</table>
 									</div>
-									<!-- //titBox -->
+									<!-- //tblBox -->
 								</div>
 								<!-- //cntBox -->
 
@@ -741,6 +1115,32 @@
 										</div>
 									</div>
 									<!-- //titBox -->
+
+									<!-- tblBox -->
+									<div class="tblBox">
+										<table class="tbl row">
+											<caption></caption>
+
+											<colgroup>
+												<col style="width:auto;">
+											</colgroup>
+
+											<tbody>
+												<tr>
+													<td>
+														<div class="inputForm">
+															<div class="selectBox">
+																<select name="select01">
+																	<option value="" hidden>- 선택 -</option>
+																</select>
+															</div>
+														</div>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<!-- //tblBox -->
 								</div>
 								<!-- //cntBox -->
 
@@ -757,6 +1157,137 @@
 										</div>
 									</div>
 									<!-- //titBox -->
+
+									<!-- tblBox -->
+									<div class="tblBox">
+										<table class="tbl row">
+											<caption></caption>
+
+											<colgroup>
+												<col style="width:200px;">
+												<col style="width:auto;">
+												<col style="width:200px;">
+												<col style="width:auto;">
+											</colgroup>
+
+											<tbody>
+												<tr>
+													<th scope="row">성 평등</th>
+													<td>
+														<div class="selectBox">
+															<select name="select18">
+																<option value="" hidden>- 선택 -</option>
+															</select>
+														</div>
+														<p class="txtLi txtInfo lg">사업분야 15170 (성평등 조직 및 제도), 15180 (여성폭력 근절)은 2점 표시</p>
+													</td>
+													<th scope="row">환경 지원</th>
+													<td>
+														<div class="selectBox">
+															<select name="select19">
+																<option value="" hidden>- 선택 -</option>
+															</select>
+														</div>
+														<p class="txtLi txtInfo lg">사업분야 41000 (중분류- 환경보호)은 2점 표시</p>
+													</td>
+												</tr>
+												<tr>
+													<th scope="row">민주적/포용적 서비스</th>
+													<td>
+														<div class="selectBox">
+															<select name="select20">
+																<option value="" hidden>- 선택 -</option>
+															</select>
+														</div>
+														<p class="txtLi txtInfo lg">사업분야 15111~15114, 15130, 15150~15153, 15160, 15180, 15210, 15220, 15230, 15240, 15261은 2점 표시 가능</p>
+													</td>
+													<th scope="row">모자보건증진</th>
+													<td>
+														<div class="selectBox">
+															<select name="select21">
+																<option value="" hidden>- 선택 -</option>
+															</select>
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<th scope="row">재난위험경감</th>
+													<td>
+														<div class="selectBox">
+															<select name="select22">
+																<option value="" hidden>- 선택 -</option>
+															</select>
+														</div>
+														<p class="txtLi txtInfo lg">사업분야 41000 (중분류- 환경보호)은 2점 표시</p>
+													</td>
+													<th scope="row">장애인 권리</th>
+													<td>
+														<div class="selectBox">
+															<select name="select23">
+																<option value="" hidden>- 선택 -</option>
+															</select>
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<th scope="row">영양</th>
+													<td>
+														<div class="selectBox">
+															<select name="select24">
+																<option value="" hidden>- 선택 -</option>
+															</select>
+														</div>
+														<p class="txtLi txtInfo lg">사업분야 12240 (기초 영양)은 2점 표시</p>
+													</td>
+													<th scope="row">생물 다양성 보존</th>
+													<td>
+														<div class="selectBox">
+															<select name="select25">
+																<option value="" hidden>- 선택 -</option>
+															</select>
+														</div>
+														<p class="txtLi txtInfo lg">사업분야 41030 (생물 다양성)은 2점 표시</p>
+													</td>
+												</tr>
+												<tr>
+													<th scope="row">기후 변화 완화</th>
+													<td>
+														<div class="selectBox">
+															<select name="select26">
+																<option value="" hidden>- 선택 -</option>
+															</select>
+														</div>
+													</td>
+													<th scope="row">기후 변화 적응</th>
+													<td>
+														<div class="selectBox">
+															<select name="select27">
+																<option value="" hidden>- 선택 -</option>
+															</select>
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<th scope="row">사막화 방지</th>
+													<td>
+														<div class="selectBox">
+															<select name="select28">
+																<option value="" hidden>- 선택 -</option>
+															</select>
+														</div>
+													</td>
+													<th scope="row"></th>
+													<td></td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<!-- //tblBox -->
+
+									<ul class="txtLi">
+										<li class="txtInfo">특정한 정책목표 달성을 위해 추진되는 원조사업을 파악하기 위해 연관성을 표시하는 항목(이용가이드 3부 46쪽 참조)</li>
+										<li class="txtInfo">정책마커(환경지원, 생명다양성 보존, 기후변화완화, 기후변화적응, 사막화방지) : 해당 정책마커 부여 시 그린 ODA로 자동 분류</li>
+									</ul>
 								</div>
 								<!-- //cntBox -->
 
@@ -773,16 +1304,80 @@
 										</div>
 									</div>
 									<!-- //titBox -->
+
+									<!-- tblBox -->
+									<div class="tblBox">
+										<table class="tbl row">
+											<caption></caption>
+
+											<colgroup>
+												<col style="width: 200px;">
+												<col style="width: auto;">
+												<col style="width: 200px;">
+												<col style="width: auto;">
+											</colgroup>
+
+											<tbody>
+												<tr>
+													<th scope="row">사업착수 계획년월</th>
+													<td>
+														<div class="pickrBox">
+															<input type="text" class="pickr" placeholder="날짜를 선택하세요">
+														</div>
+													</td>
+													<th scope="row">사업착수 실제일자</th>
+													<td>
+														<div class="pickrBox">
+															<input type="text" class="pickr" placeholder="날짜를 선택하세요">
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<th scope="row">사업자선정 실제일자</th>
+													<td>
+														<div class="pickrBox">
+															<input type="text" class="pickr" placeholder="날짜를 선택하세요">
+														</div>
+													</td>
+													<th scope="row">사업완료 실제일자</th>
+													<td>
+														<div class="pickrBox">
+															<input type="text" class="pickr" placeholder="날짜를 선택하세요">
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<th scope="row">사업평가 <strong class="txtPt">[종료평가]</strong> 실제일자</th>
+													<td>
+														<div class="pickrBox">
+															<input type="text" class="pickr" placeholder="날짜를 선택하세요">
+														</div>
+													</td>
+													<th scope="row">사업완료 실제일자</th>
+													<td>
+														<div class="pickrBox">
+															<input type="text" class="pickr" placeholder="날짜를 선택하세요">
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<th scope="row">산출물</th>
+													<td colspan="3">
+														<textarea name="text02" id="text02" class="w100" placeholder="산출물을 입력해주세요. (500자 이내)"></textarea>
+													</td>
+												</tr>
+												<tr>
+													<th scope="row">사막화 방지</th>
+													<td colspan="3">
+														<textarea name="text03" id="text03" class="w100" placeholder="기대효과 [단기]를 입력해주세요. (500자 이내)"></textarea>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<!-- //tblBox -->
 								</div>
 								<!-- //cntBox -->
-							</li>
-
-							<li data-tabCont="tab1-cont2">
-
-							</li>
-
-							<li data-tabCont="tab1-cont3">
-
 							</li>
 						</ul>
 					</div>
@@ -825,6 +1420,16 @@
 			<div class="tipCont" data-ttc="5" tabindex="0">
 				<ul class="txtLi">
 					<li>메세지5</li>
+				</ul>
+			</div>
+			<div class="tipCont" data-ttc="6" tabindex="0">
+				<ul class="txtLi">
+					<li>메세지6</li>
+				</ul>
+			</div>
+			<div class="tipCont" data-ttc="7" tabindex="0">
+				<ul class="txtLi">
+					<li>메세지7</li>
 				</ul>
 			</div>
 			<!-- //tipCont : 트리거 data-tt : 툴팁 data-ttc 이 동일하게 설정 되어야 합니다  -->

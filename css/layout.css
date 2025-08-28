@@ -104,6 +104,7 @@ strong {font-weight:700;}
 .txtLi li {margin-bottom:2px;line-height:inherit;}
 .txtLi li:last-child {margin-bottom:0;}
 .txtLi li + li.btn-wrap {margin-top:5px;}
+
 .txtLi .txtBt {padding-left:8px;}
 .txtLi .txtBt::after {width:3px;height:3px;top:8px;background-color:#A8B6C3;}
 .txtLi .txtInfo ~ .txtBt {padding-left:24px;}
@@ -111,7 +112,7 @@ strong {font-weight:700;}
 
 .txtBt {position:relative;padding-left:12px;}/* bullet */
 .txtBt::after {content:'';display:block;position:absolute;top:5px;left:0;width:5px;height:5px;border-radius:50%;background:#6d4fff;}
-.txtInfo {padding-left:18px;font-size:13px;line-height:1.5;font-weight:500;color:#5A5A5B;word-break:keep-all;background:url(../img/ico_bullet.svg) no-repeat 0 4px;}
+.txtInfo {padding-left:18px;font-size:13px;line-height:1.5;font-weight:500;color:#5A5A5B;word-break:keep-all;background:url(../img/ico_bullet.svg) no-repeat 0 3px;}
 .txtInfo.lg {font-size:15px;line-height:24px;background-position:0 6px;}
 .txtInfo.txtRed {background-image:url(../img/ico_bullet_red.svg);}
 .txtLink {font-weight:500;text-decoration:underline;text-underline-position:under;cursor:pointer;}
