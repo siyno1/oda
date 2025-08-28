@@ -1,0 +1,1134 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<title>ODA</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+	<meta http-equiv="Pragma" content="no-cache">
+	<meta http-equiv="Expires" content="0">
+
+	<link rel="stylesheet" href="./../../css/flatpickr.min.css">
+	<link rel="stylesheet" href="./../../css/reset.css">
+	<link rel="stylesheet" href="./../../css/layout.css">
+	<link rel="stylesheet" href="./../../css/style.css">
+
+	<script defer src="./../../js/jquery-3.7.1.min.js"></script>
+	<script defer src="./../../js/flatpickr.js"></script>
+	<script defer src="./../../js/ui.js"></script>
+</head>
+
+<body>
+	<!-- wrap -->
+	<div id="wrap" class="wrapper">
+		<!-- 헤더 영역 -->
+		<div id="header" class="header">
+			<div class="wrap">
+				<h1><a href="./../gate.html"><img src="./../../img/logo.svg"></a></h1>
+				<ul class="gnb">
+					<li><a href="javascript:;">준비단계</a></li><!-- 활성화 시 li class="active" -->
+					<li><a href="javascript:;">진행단계</a></li>
+					<li><a href="javascript:;">완료단계</a></li>
+					<li><a href="javascript:;">정보마당</a></li>
+					<li><a href="javascript:;">운영관리</a></li>
+				</ul>
+				<div class="userBox">
+					<button class="btnUser">운영관리자</button>
+					<ul class="dropDown">
+						<li><a href="javascript:;">쪽지</a></li>
+						<li><a href="javascript:;">마이페이지</a></li>
+						<li><a href="javascript:;">로그아웃</a></li>
+					</ul>
+				</div>
+				<div class="searchBox">
+					<input type="text" placeholder="통합검색">
+					<button class="btnSearch">검색</button>
+				</div>
+			</div>
+		</div>
+		<!-- //헤더 영역 -->
+
+		<!-- 컨테이너 영역 -->
+		<div id="container" class="container">
+
+			<!-- LNB 영역 -->
+			<div id="side" class="side">
+				<div class="side_menu">
+					<h2>ODA 사업 관리</h2>
+					<ul class="gnb">
+						<li>
+							<a href="javascript:;">사업목록</a>
+						</li>
+						<li class="hasChild active">
+							<a href="javascript:;">연수 사업 관리</a>
+							<ul>
+								<li><a href="javascript:;" class="on">연수 사업 목록</a></li>
+								<li><a href="javascript:;">연수 프로그램 관리</a></li>
+								<li><a href="javascript:;">연수생 관리</a></li>
+								<li><a href="javascript:;">체크리스트</a></li>
+							</ul>
+						</li>
+						<li class="hasChild">
+							<a href="javascript:;">장학 사업 관리</a>
+							<ul>
+								<li><a href="javascript:;">연수 사업 목록</a></li>
+								<li><a href="javascript:;">연수 프로그램 관리</a></li>
+								<li><a href="javascript:;">연수생 관리</a></li>
+								<li><a href="javascript:;">체크리스트</a></li>
+							</ul>
+						</li>
+						<li class="hasChild">
+							<a href="javascript:;">패키지 사업 관리</a>
+							<ul>
+								<li><a href="javascript:;">연수 사업 목록</a></li>
+								<li><a href="javascript:;">연수 프로그램 관리</a></li>
+								<li><a href="javascript:;">연수생 관리</a></li>
+								<li><a href="javascript:;">체크리스트</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<button class="btnSlide">slide</button>
+			</div>
+			<!-- //LNB 영역 -->
+
+			<!-- 컨텐츠 영역 -->
+			<div class="contents">
+				<!-- pgtBox -->
+				<div class="pgtBox">
+					<div class="lt">
+						<h2>모니터링 조회</h2>
+					</div>
+
+					<ul class="breadcrumb">
+						<li class="home"><a href="javascript:;">홈</a></li>
+						<li><a href="javascript:;">진행단계</a></li>
+						<li><a href="javascript:;">모니터링</a></li>
+					</ul>
+
+					<div class="rt"></div>
+				</div>
+				<!-- //pgtBox -->
+
+				<!-- cntBox -->
+				<div class="cntBox">
+					<!-- tabBox -->
+					<div class="tabBox">
+						<div class="tab">
+							<ul>
+								<li><button type="button" data-tabBtn="tab1-cont1" class="active">1회차</button></li>
+								<li><button type="button" data-tabBtn="tab1-cont1">2회차</button></li>
+								<li><button type="button" data-tabBtn="tab1-cont1">3회차</button></li>
+								<li><button type="button" data-tabBtn="tab1-cont1">4회차</button></li>
+							</ul>
+						</div>
+
+						<ul class="tabCont">
+							<li class="active" data-tabCont="tab1-cont1">
+								<!-- cntBox -->
+								<div class="cntBox">
+									<!-- titBox -->
+									<div class="titBox">
+										<div class="lt">
+											<h3>시행계획</h3>
+										</div>
+
+										<div class="rt">
+										</div>
+									</div>
+									<!-- //titBox -->
+
+									<!-- tblBox -->
+									<div class="tblBox">
+										<table class="tbl col tC">
+											<caption></caption>
+
+											<colgroup>
+												<col style="width:100px;">
+												<col style="width:200px;">
+												<col style="width:auto;">
+												<col style="width:240px;">
+												<col style="width:120px;">
+												<col style="width:200px;">
+											</colgroup>
+
+											<thead>
+												<tr>
+													<th scope="col">연도</th>
+													<th scope="col">기관 고유사업번호</th>
+													<th scope="col">시행계획명</th>
+													<th scope="col">원조기관</th>
+													<th scope="col">사업분야</th>
+													<th scope="col">[5차] 국개위 확정액</th>
+												</tr>
+											</thead>
+
+											<tbody>
+												<tr>
+													<td>2025</td>
+													<td>1721000_2025_006</td>
+													<td class="tL">개도국 방송환경 개선지원(라오스 국영TV HD방송 인프라 구축 및 운용 지원)</td>
+													<td>과학기술정보통신부</td>
+													<td>통신</td>
+													<td class="tR">&#8361; 625 (백만원)</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<!-- //tblBox -->
+
+									<!-- tblBox -->
+									<div class="tblBox">
+										<table class="tbl row">
+											<caption></caption>
+
+											<colgroup>
+												<col style="width: 200px;">
+												<col style="width: auto;">
+											</colgroup>
+
+											<tbody>
+												<tr>
+													<th scope="row">미등록 사유</th>
+													<td>
+														<div class="txtBox">등록한 DATA가 보여집니다.</div>
+													</td>
+												</tr>
+												<tr>
+													<th scope="row">내용</th>
+													<td>
+														<div class="txtBox">등록한 DATA가 보여집니다.</div>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<!-- //tblBox -->
+								</div>
+								<!-- //cntBox -->
+
+								<!-- cntBox -->
+								<div class="cntBox">
+									<!-- titBox -->
+									<div class="titBox">
+										<div class="lt">
+											<h3>사업정보</h3>
+										</div>
+
+										<div class="rt">
+
+										</div>
+									</div>
+									<!-- //titBox -->
+
+									<!-- tblBox -->
+									<div class="tblBox">
+										<table class="tbl row">
+											<caption></caption>
+
+											<colgroup>
+												<col style="width: 200px;">
+												<col style="width: auto;">
+												<col style="width: 200px;">
+												<col style="width: auto;">
+											</colgroup>
+
+											<tbody>
+												<tr>
+													<th scope="row">시행계획 사업번호</th>
+													<td><div class="txtBox">등록한 DATA가 보여집니다.</div></td>
+													<th scope="row">기관 고유사업번호</th>
+													<td><div class="txtBox">등록한 DATA가 보여집니다.</div></td>
+												</tr>
+												<tr>
+													<th scope="row">소관부처</th>
+													<td colspan="3">
+														<div class="txtBox">등록한 DATA가 보여집니다.</div>
+													</td>
+												</tr>
+												<tr>
+													<th scope="row">양자/다자 구분</th>
+													<td colspan="3">
+														<div class="txtBox">등록한 DATA가 보여집니다.</div>
+													</td>
+												</tr>
+												<tr>
+													<th scope="row">
+														자금형태
+														<button type="button" class="btn-tip" data-tt="1" title="툴팁"></button>
+													</th>
+													<td colspan="3">
+														<div class="txtBox">등록한 DATA가 보여집니다.</div>
+													</td>
+												</tr>
+												<tr>
+													<th scope="row">사업구분</th>
+													<td colspan="3">
+														<div class="txtBox">등록한 DATA가 보여집니다.</div>
+													</td>
+												</tr>
+												<tr>
+													<th scope="row">
+														원조유형
+														<strong class="txtPt">[구분]</strong>
+														<button type="button" class="btn-tip" data-tt="2" title="툴팁"></button>
+													</th>
+													<td colspan="3">
+														<div class="txtBox">등록한 DATA가 보여집니다.</div>
+													</td>
+												</tr>
+												<tr>
+													<th scope="row">
+														원조형태
+														<button type="button" class="btn-tip" data-tt="3" title="툴팁"></button>
+													</th>
+													<td colspan="3">
+														<div class="txtBox">등록한 DATA가 보여집니다.</div>
+													</td>
+												</tr>
+												<tr>
+													<th scope="row">사업실시기관</th>
+													<td colspan="3">
+														<div class="txtBox">등록한 DATA가 보여집니다.</div>
+													</td>
+												</tr>
+												<tr>
+													<th scope="row">사업실시기관명 <strong class="txtPt">[한글]</strong></th>
+													<td><div class="txtBox">등록한 DATA가 보여집니다.</div></td>
+													<th scope="row">사업실시기관명 <strong class="txtPt">[영문]</strong></th>
+													<td><div class="txtBox">등록한 DATA가 보여집니다.</div></td>
+												</tr>
+												<tr>
+													<th scope="row">사업명 <strong class="txtPt">[한글]</strong></th>
+													<td><div class="txtBox">등록한 DATA가 보여집니다.</div></td>
+													<th scope="row">사업명 <strong class="txtPt">[영문]</strong></th>
+													<td><div class="txtBox">등록한 DATA가 보여집니다.</div></td>
+												</tr>
+												<tr>
+													<th scope="row">사업설명 <strong class="txtPt">[한글]</strong></th>
+													<td>
+														<div class="txtBox">등록한 DATA가 보여집니다.</div>
+													</td>
+													<th scope="row">사업설명 <strong class="txtPt">[영문]</strong></th>
+													<td>
+														<div class="txtBox">등록한 DATA가 보여집니다.</div>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<!-- //tblBox -->
+								</div>
+								<!-- //cntBox -->
+
+								<!-- cntBox -->
+								<div class="cntBox">
+									<!-- titBox -->
+									<div class="titBox">
+										<div class="lt">
+											<h3>사업 기간 및 상태</h3>
+										</div>
+
+										<div class="rt">
+
+										</div>
+									</div>
+									<!-- //titBox -->
+
+									<!-- tblBox -->
+									<div class="tblBox">
+										<table class="tbl row">
+											<caption></caption>
+
+											<colgroup>
+												<col style="width: 200px;">
+												<col style="width: auto;">
+												<col style="width: 200px;">
+												<col style="width: auto;">
+											</colgroup>
+
+											<tbody>
+												<tr>
+													<th scope="row">사업개시(예정)일<button type="button" class="btn-tip" data-tt="4" title="툴팁"></button></th>
+													<td>
+														<div class="txtBox">등록한 DATA가 보여집니다.</div>
+													</td>
+													<th scope="row">사업완공(예정)일<button type="button" class="btn-tip" data-tt="5" title="툴팁"></button></th>
+													<td>
+														<div class="txtBox">등록한 DATA가 보여집니다.</div>
+													</td>
+												</tr>
+												<tr>
+													<th scope="row">사업기간</th>
+													<td>2023 ~ 2024</td>
+													<th scope="row">사업단계</th>
+													<td>
+														<div class="txtBox">등록한 DATA가 보여집니다.</div>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<!-- //tblBox -->
+
+								</div>
+								<!-- //cntBox -->
+
+								<!-- cntBox -->
+								<div class="cntBox">
+									<div class="titBox">
+										<div class="lt">
+											<h3>담당자 정보</h3>
+										</div>
+
+										<div class="rt">
+
+										</div>
+									</div>
+
+									<div class="tblBox">
+										<table class="tbl row">
+											<caption></caption>
+											<colgroup>
+												<col style="width: auto;">
+											</colgroup>
+
+											<tbody>
+												<tr>
+													<td>
+														<div class="txtBox">등록한 DATA가 보여집니다.</div>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+								<!-- //cntBox -->
+
+								<!-- cntBox -->
+								<div class="cntBox">
+									<!-- titBox -->
+									<div class="titBox">
+										<div class="lt">
+											<h3>입찰 여부</h3>
+										</div>
+
+										<div class="rt">
+
+										</div>
+									</div>
+									<!-- //titBox -->
+
+									<!-- tblBox -->
+									<div class="tblBox">
+										<table class="tbl row">
+											<caption></caption>
+
+											<colgroup>
+												<col style="width:auto;">
+											</colgroup>
+
+											<tbody>
+												<tr>
+													<td>
+														<div class="txtBox">등록한 DATA가 보여집니다.</div>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+
+										<table class="tbl row" id="tbl01">
+											<caption></caption>
+											<colgroup>
+												<col style="width: 200px;">
+												<col style="width: auto;">
+												<col style="width: 200px;">
+												<col style="width: auto;">
+											</colgroup>
+
+											<tbody>
+												<tr>
+													<th scope="row">계약완료 여부</th>
+													<td>
+														<div class="txtBox">등록한 DATA가 보여집니다.</div>
+													</td>
+													<th scope="row">국내입찰 여부</th>
+													<td>
+														<div class="txtBox">등록한 DATA가 보여집니다.</div>
+													</td>
+												</tr>
+												<tr>
+													<th scope="row">입찰공고 번호</th>
+													<td colspan="3">
+														<table class="tbl col tC">
+															<caption></caption>
+															<colgroup>
+																<col style="width: auto;">
+																<col style="width: 240px;">
+																<col style="width: 200px;">
+																<col style="width: 200px;">
+															</colgroup>
+
+															<thead>
+																<tr>
+																	<th scope="col">입찰 사업명</th>
+																	<th scope="col">입찰공고번호</th>
+																	<th scope="col">입찰등록일시</th>
+																	<th scope="col">입찰구분</th>
+																</tr>
+															</thead>
+
+															<tbody>
+																<tr>
+																	<td></td>
+																	<td></td>
+																	<td></td>
+																	<td></td>
+																</tr>
+															</tbody>
+														</table>
+													</td>
+												</tr>
+											</tbody>
+
+										</table>
+									</div>
+									<!-- //tblBox -->
+								</div>
+								<!-- //cntBox -->
+
+								<!-- cntBox -->
+								<div class="cntBox">
+									<!-- titBox -->
+									<div class="titBox">
+										<div class="lt">
+											<h3>연계 사업</h3>
+										</div>
+
+										<div class="rt">
+
+										</div>
+									</div>
+									<!-- //titBox -->
+
+									<!-- tblBox -->
+									<div class="tblBox">
+										<table class="tbl row">
+											<caption></caption>
+
+											<colgroup>
+												<col style="width:auto;">
+											</colgroup>
+
+											<tbody>
+												<tr>
+													<td>
+														<div class="txtBox">등록한 DATA가 보여집니다.</div>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+
+										<table class="tbl row" id="tbl02">
+											<caption></caption>
+											<colgroup>
+												<col style="width: 200px;">
+												<col style="width: auto;">
+											</colgroup>
+
+											<tbody>
+												<tr>
+													<th scope="row" rowspan="2">연계기관</th>
+													<td>
+														<div class="inputForm">
+															<div class="txtBox">등록한 DATA가 보여집니다.</div>
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<!-- tbl -->
+														<table class="tbl col tC">
+															<caption></caption>
+															<colgroup>
+																<col style="width: auto;">
+																<col style="width: 240px;">
+																<col style="width: 240px;">
+															</colgroup>
+
+															<thead>
+																<tr>
+																	<th scope="col">사업명</th>
+																	<th scope="col">시행기관</th>
+																	<th scope="col">사업상태</th>
+																</tr>
+															</thead>
+
+															<tbody>
+																<tr>
+																	<td></td>
+																	<td></td>
+																	<td></td>
+																</tr>
+															</tbody>
+														</table>
+														<!-- //tbl -->
+													</td>
+												</tr>
+											</tbody>
+
+										</table>
+									</div>
+									<!-- //tblBox -->
+								</div>
+								<!-- //cntBox -->
+
+								<!-- cntBox -->
+								<div class="cntBox">
+									<!-- titBox -->
+									<div class="titBox">
+										<div class="lt">
+											<h3>사업비 정보</h3>
+										</div>
+
+										<div class="rt">
+
+										</div>
+									</div>
+									<!-- //titBox -->
+
+									<!-- tblBox -->
+									<div class="tblBox">
+										<table class="tbl row">
+											<caption></caption>
+											<colgroup>
+												<col style="width: 240px;">
+												<col style="width: auto;">
+												<col style="width: 200px;">
+												<col style="width: auto;">
+											</colgroup>
+
+											<tbody>
+												<tr>
+													<th scope="row">
+														기준통화
+														<strong class="block txtPt">(1달러 : 1,306.0107원)</strong>
+													</th>
+													<td colspan="3">
+														<div class="txtBox">등록한 DATA가 보여집니다.</div>
+													</td>
+												</tr>
+												<tr>
+													<th scope="row">총 사업예산 <strong class="txtPt">[원화]</strong></th>
+													<td><div class="txtBox">등록한 DATA가 보여집니다.</div></td>
+													<th scope="row">총 사업예산 <strong class="txtPt">[USD]</strong></th>
+													<td><div class="txtBox">등록한 DATA가 보여집니다.</div></td>
+												</tr>
+												<tr>
+													<th scope="row">당해연도 시행계획 예산 <strong class="txtPt">[원화]</strong></th>
+													<td><div class="txtBox">등록한 DATA가 보여집니다.</div></td>
+													<th scope="row">약정일</th>
+													<td>
+														<div class="txtBox">등록한 DATA가 보여집니다.</div>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<!-- //tblBox -->
+								</div>
+								<!-- //cntBox -->
+
+								<!-- cntBox -->
+								<div class="cntBox">
+									<!-- titBox -->
+									<div class="titBox">
+										<div class="lt">
+											<h3>대상지역 및 국가 [구속성 구분]</h3>
+										</div>
+
+										<div class="rt">
+
+										</div>
+									</div>
+									<!-- //titBox -->
+
+									<!-- tblBox -->
+									<div class="tblBox">
+										<table class="tbl row">
+											<caption></caption>
+
+											<colgroup>
+												<col style="width:200px;">
+												<col style="width:auto;">
+												<col style="width:200px;">
+												<col style="width:auto;">
+											</colgroup>
+
+											<tbody>
+												<tr>
+													<th scope="row">대륙명</th>
+													<td>
+														<div class="txtBox">등록한 DATA가 보여집니다.</div>
+													</td>
+													<th scope="row">국가명 <button type="button" class="btn-tip" data-tt="6" title="툴팁"></button></th>
+													<td>
+														<div class="txtBox">등록한 DATA가 보여집니다.</div>
+													</td>
+												</tr>
+												<tr>
+													<th scope="row">대상국 내 지역 <strong class="txtPt">[영문]</strong></th>
+													<td colspan="3">
+														<div class="txtBox">등록한 DATA가 보여집니다.</div>
+													</td>
+												</tr>
+												<tr>
+													<th scope="row">약정액(구속성) <strong class="txtPt">[원화]</strong></th>
+													<td>
+														<div class="txtBox">등록한 DATA가 보여집니다.</div>
+													</td>
+													<th scope="row">약정액(구속성) <strong class="txtPt">[USD]</strong></th>
+													<td>
+														<div class="txtBox">등록한 DATA가 보여집니다.</div>
+													</td>
+												</tr>
+												<tr>
+													<th scope="row">약정액(비구속성) <strong class="txtPt">[원화]</strong></th>
+													<td>
+														<div class="txtBox">등록한 DATA가 보여집니다.</div>
+													</td>
+													<th scope="row">약정액(비구속성) <strong class="txtPt">[USD]</strong></th>
+													<td>
+														<div class="txtBox">등록한 DATA가 보여집니다.</div>
+													</td>
+												</tr>
+												<tr>
+													<th scope="row">약정액(부분 비구속성) <strong class="txtPt">[원화]</strong></th>
+													<td>
+														<div class="txtBox">등록한 DATA가 보여집니다.</div>
+													</td>
+													<th scope="row">약정액(부분 비구속성) <strong class="txtPt">[USD]</strong></th>
+													<td>
+														<div class="txtBox">등록한 DATA가 보여집니다.</div>
+													</td>
+												</tr>
+												<tr>
+													<th scope="row">약정액(합계) <strong class="txtPt">[원화]</strong></th>
+													<td>
+														<div class="txtBox">등록한 DATA가 보여집니다.</div>
+													</td>
+													<th scope="row">약정액(합계) <strong class="txtPt">[USD]</strong></th>
+													<td>
+														<div class="txtBox">등록한 DATA가 보여집니다.</div>
+													</td>
+												</tr>
+												<tr>
+													<th scope="row">지출액 <strong class="txtPt">[원화]</strong></th>
+													<td>
+														<div class="txtBox">등록한 DATA가 보여집니다.</div>
+													</td>
+													<th scope="row">지출액 <strong class="txtPt">[USD]</strong></th>
+													<td>
+														<div class="txtBox">등록한 DATA가 보여집니다.</div>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<!-- //tblBox -->
+
+									<ul class="txtLi">
+										<li class="txtInfo txtRed">선택하신 사업실시기관(Council for the Development of Economic and Social Research in Africa)은 계상비율이 정해져 있습니다. 계상비율 : (100%)</li>
+										<li class="txtInfo txtRed">수원국은 1개만 선택할 수 있습니다. 수원국이 여러 개일 경우 모니터링 정보를 각각 등록해야 합니다. </li>
+									</ul>
+								</div>
+								<!-- //cntBox -->
+
+								<!-- cntBox -->
+								<div class="cntBox">
+									<!-- titBox -->
+									<div class="titBox">
+										<div class="lt">
+											<h3>사업 분야</h3>
+										</div>
+
+										<div class="rt">
+											<div class="btn-wrap">
+												<button type="button" class="btn-plus txt">사업분야 추가</button>
+											</div>
+										</div>
+									</div>
+									<!-- //titBox -->
+
+									<!-- tblBox -->
+									<div class="tblBox">
+										<table class="tbl col">
+											<caption></caption>
+
+											<colgroup>
+												<col style="width:auto;">
+												<col style="width:auto;">
+												<col style="width:auto;">
+												<col style="width:auto;">
+												<col style="width:auto;">
+												<col style="width:auto;">
+											</colgroup>
+
+											<thead>
+												<tr>
+													<th scope="col">사업분야 1 [분류 원칙]</th>
+													<th scope="col">사업분야 2</th>
+													<th scope="col">사업분야 3</th>
+													<th scope="col">사업분야 4</th>
+													<th scope="col">사업분야 5</th>
+													<th scope="col">분야 비중(%)</th>
+												</tr>
+											</thead>
+
+											<tbody>
+												<tr>
+													<td>
+														<div class="txtBox">등록한 DATA가 보여집니다.</div>
+													</td>
+													<td>
+														<div class="txtBox">등록한 DATA가 보여집니다.</div>
+													</td>
+													<td>
+														<div class="txtBox">등록한 DATA가 보여집니다.</div>
+													</td>
+													<td>
+														<div class="txtBox">등록한 DATA가 보여집니다.</div>
+													</td>
+													<td>
+														<div class="txtBox">등록한 DATA가 보여집니다.</div>
+													</td>
+													<td>
+														<div class="txtBox">등록한 DATA가 보여집니다.</div>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<!-- //tblBox -->
+								</div>
+								<!-- //cntBox -->
+
+								<!-- cntBox -->
+								<div class="cntBox">
+									<!-- titBox -->
+									<div class="titBox">
+										<div class="lt">
+											<h3>SDGs 코드</h3>
+										</div>
+
+										<div class="rt">
+											<div class="btn-wrap">
+												<button type="button" class="btn-plus txt">SDGs 목표 추가</button>
+											</div>
+										</div>
+									</div>
+									<!-- //titBox -->
+
+									<!-- tblBox -->
+									<div class="tblBox">
+										<table class="tbl col">
+											<caption></caption>
+
+											<colgroup>
+												<col style="width:auto;">
+												<col style="width:auto;">
+											</colgroup>
+
+											<thead>
+												<tr>
+													<th scope="col">목표(주제) <button type="button" class="btn-tip" data-tt="7" title="툴팁"></button></th>
+													<th scope="col">세부목표</th>
+												</tr>
+											</thead>
+
+											<tbody>
+												<tr>
+													<td>
+														<div class="txtBox">등록한 DATA가 보여집니다.</div>
+													</td>
+													<td>
+														<div class="txtBox">등록한 DATA가 보여집니다.</div>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<!-- //tblBox -->
+								</div>
+								<!-- //cntBox -->
+
+								<!-- cntBox -->
+								<div class="cntBox">
+									<!-- titBox -->
+									<div class="titBox">
+										<div class="lt">
+											<h3>키워드</h3>
+										</div>
+
+										<div class="rt">
+
+										</div>
+									</div>
+									<!-- //titBox -->
+
+									<!-- tblBox -->
+									<div class="tblBox">
+										<table class="tbl row">
+											<caption></caption>
+
+											<colgroup>
+												<col style="width:auto;">
+											</colgroup>
+
+											<tbody>
+												<tr>
+													<td>
+														<div class="txtBox">등록한 DATA가 보여집니다.</div>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<!-- //tblBox -->
+								</div>
+								<!-- //cntBox -->
+
+								<!-- cntBox -->
+								<div class="cntBox">
+									<!-- titBox -->
+									<div class="titBox">
+										<div class="lt">
+											<h3>정책마커</h3>
+										</div>
+
+										<div class="rt">
+
+										</div>
+									</div>
+									<!-- //titBox -->
+
+									<!-- tblBox -->
+									<div class="tblBox">
+										<table class="tbl row">
+											<caption></caption>
+
+											<colgroup>
+												<col style="width:200px;">
+												<col style="width:auto;">
+												<col style="width:200px;">
+												<col style="width:auto;">
+											</colgroup>
+
+											<tbody>
+												<tr>
+													<th scope="row">성 평등</th>
+													<td>
+														<div class="txtBox">등록한 DATA가 보여집니다.</div>
+													</td>
+													<th scope="row">환경 지원</th>
+													<td>
+														<div class="txtBox">등록한 DATA가 보여집니다.</div>
+													</td>
+												</tr>
+												<tr>
+													<th scope="row">민주적/포용적 서비스</th>
+													<td>
+														<div class="txtBox">등록한 DATA가 보여집니다.</div>
+													</td>
+													<th scope="row">모자보건증진</th>
+													<td>
+														<div class="txtBox">등록한 DATA가 보여집니다.</div>
+													</td>
+												</tr>
+												<tr>
+													<th scope="row">재난위험경감</th>
+													<td>
+														<div class="txtBox">등록한 DATA가 보여집니다.</div>
+													</td>
+													<th scope="row">장애인 권리</th>
+													<td>
+														<div class="txtBox">등록한 DATA가 보여집니다.</div>
+													</td>
+												</tr>
+												<tr>
+													<th scope="row">영양</th>
+													<td>
+														<div class="txtBox">등록한 DATA가 보여집니다.</div>
+													</td>
+													<th scope="row">생물 다양성 보존</th>
+													<td>
+														<div class="txtBox">등록한 DATA가 보여집니다.</div>
+													</td>
+												</tr>
+												<tr>
+													<th scope="row">기후 변화 완화</th>
+													<td>
+														<div class="txtBox">등록한 DATA가 보여집니다.</div>
+													</td>
+													<th scope="row">기후 변화 적응</th>
+													<td>
+														<div class="txtBox">등록한 DATA가 보여집니다.</div>
+													</td>
+												</tr>
+												<tr>
+													<th scope="row">사막화 방지</th>
+													<td>
+														<div class="txtBox">등록한 DATA가 보여집니다.</div>
+													</td>
+													<th scope="row"></th>
+													<td></td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<!-- //tblBox -->
+
+									<ul class="txtLi">
+										<li class="txtInfo">특정한 정책목표 달성을 위해 추진되는 원조사업을 파악하기 위해 연관성을 표시하는 항목(이용가이드 3부 46쪽 참조)</li>
+										<li class="txtInfo">정책마커(환경지원, 생명다양성 보존, 기후변화완화, 기후변화적응, 사막화방지) : 해당 정책마커 부여 시 그린 ODA로 자동 분류</li>
+									</ul>
+								</div>
+								<!-- //cntBox -->
+
+								<!-- cntBox -->
+								<div class="cntBox">
+									<!-- titBox -->
+									<div class="titBox">
+										<div class="lt">
+											<h3>세부추진현황 및 성과관리</h3>
+										</div>
+
+										<div class="rt">
+
+										</div>
+									</div>
+									<!-- //titBox -->
+
+									<!-- tblBox -->
+									<div class="tblBox">
+										<table class="tbl row">
+											<caption></caption>
+
+											<colgroup>
+												<col style="width: 200px;">
+												<col style="width: auto;">
+												<col style="width: 200px;">
+												<col style="width: auto;">
+											</colgroup>
+
+											<tbody>
+												<tr>
+													<th scope="row">사업착수 계획년월</th>
+													<td>
+														<div class="txtBox">등록한 DATA가 보여집니다.</div>
+													</td>
+													<th scope="row">사업착수 실제일자</th>
+													<td>
+														<div class="txtBox">등록한 DATA가 보여집니다.</div>
+													</td>
+												</tr>
+												<tr>
+													<th scope="row">사업자선정 실제일자</th>
+													<td>
+														<div class="txtBox">등록한 DATA가 보여집니다.</div>
+													</td>
+													<th scope="row">사업완료 실제일자</th>
+													<td>
+														<div class="txtBox">등록한 DATA가 보여집니다.</div>
+													</td>
+												</tr>
+												<tr>
+													<th scope="row">사업평가 <strong class="txtPt">[종료평가]</strong> 실제일자</th>
+													<td>
+														<div class="txtBox">등록한 DATA가 보여집니다.</div>
+													</td>
+													<th scope="row">사업완료 실제일자</th>
+													<td>
+														<div class="txtBox">등록한 DATA가 보여집니다.</div>
+													</td>
+												</tr>
+												<tr>
+													<th scope="row">산출물</th>
+													<td colspan="3">
+														<div class="txtBox">등록한 DATA가 보여집니다.</div>
+													</td>
+												</tr>
+												<tr>
+													<th scope="row">사막화 방지</th>
+													<td colspan="3">
+														<div class="txtBox">등록한 DATA가 보여집니다.</div>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<!-- //tblBox -->
+								</div>
+								<!-- //cntBox -->
+							</li>
+						</ul>
+					</div>
+					<!-- //tabBox -->
+				</div>
+				<!-- //cntBox -->
+
+				<!-- btn-wrap -->
+				<div class="btn-wrap">
+					<button type="button" class="btn">목록</button>
+					<button type="button" class="btn pt">제출취소</button>
+				</div>
+				<!-- //btn-wrap -->
+
+			</div>
+			<!-- //컨텐츠 영역 -->
+
+			<!-- tipCont : 트리거 data-tt : 툴팁 data-ttc 이 동일하게 설정 되어야 합니다  -->
+			<div class="tipCont" data-ttc="1" tabindex="0">
+				<ul class="txtLi">
+					<li>메세지1</li>
+				</ul>
+			</div>
+			<div class="tipCont" data-ttc="2" tabindex="0">
+				<ul class="txtLi">
+					<li>메세지2</li>
+				</ul>
+			</div>
+			<div class="tipCont" data-ttc="3" tabindex="0">
+				<ul class="txtLi">
+					<li>메세지3</li>
+				</ul>
+			</div>
+			<div class="tipCont" data-ttc="4" tabindex="0">
+				<ul class="txtLi">
+					<li>메세지4</li>
+				</ul>
+			</div>
+			<div class="tipCont" data-ttc="5" tabindex="0">
+				<ul class="txtLi">
+					<li>메세지5</li>
+				</ul>
+			</div>
+			<div class="tipCont" data-ttc="6" tabindex="0">
+				<ul class="txtLi">
+					<li>메세지6</li>
+				</ul>
+			</div>
+			<div class="tipCont" data-ttc="7" tabindex="0">
+				<ul class="txtLi">
+					<li>메세지7</li>
+				</ul>
+			</div>
+			<!-- //tipCont : 트리거 data-tt : 툴팁 data-ttc 이 동일하게 설정 되어야 합니다  -->
+		</div>
+		<!-- //컨테이너 영역 -->
+	</div>
+	<!-- //wrap -->
+</body>
+
+</html>
