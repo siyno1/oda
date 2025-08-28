@@ -16,7 +16,7 @@ input:where([type="text"], [type="tel"], [type="num"]):focus,
 textarea:focus {outline:0 none;border-color:#434C89;}
 
 /* scrollbar */
-*::-webkit-scrollbar {width: 8px;}
+*::-webkit-scrollbar {width: 8px; height:8px;}
 *::-webkit-scrollbar-track {background-color: #E9E9E9;}
 *::-webkit-scrollbar-thumb {background-color: #8A949E; border-radius: 8px;}
 
