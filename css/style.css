@@ -36,7 +36,7 @@ textarea:focus {outline:0 none;border-color:#434C89;}
 
 /* tblBox > tbl */
 .tbl {position: relative; width: 100%; table-layout: fixed;}
-.tbl::before {position: absolute; top: 0; left: 0; content: ' '; display: block; width: 100%; height: 1px; background: #58616A;}
+.tbl::before {position: absolute; top: 0; left: 0; content: ' '; display: block; width: 100%; height: 1px; background: #58616A;z-index:1;}
 .tbl.col tbody tr {border-bottom: 1px dashed #CDD1D5;}
 .tbl.col.de tbody tr {border-bottom: 1px solid #CDD1D5;}
 .tbl.col :is(th, td) {text-align: center;}
