@@ -49,6 +49,7 @@ textarea:focus {outline:0 none;border-color:#434C89;}
 .tbl thead th:not(:first-child)::after {content:'';display:block;position:absolute;left:-1px;top:0;width:1px;height:100%;background:#E2E6EA;}
 .tbl tbody th {padding: 11px 15px 9px 15px; text-align: left; color: #8A949E;}
 .tbl.row th {color: #464C53; background: #f4f5f6;}
+.tbl.row td {color: #464C53;}
 .tbl.tL :is(th, td):not(.tC, .tR) {text-align: left;}
 .tbl.tR :is(th, td):not(.tL, .tC) {text-align: right;}
 .tbl.tC :is(th, td):not(.tL, .tR) {text-align: center;}
@@ -120,6 +121,10 @@ li.chkBox {margin-bottom:10px;}
 li.chkBox:last-child {margin-bottom:0;}
 li.chkBox button {margin-left:-22px;}
 li.chkBox .txtInfo {margin-left:-22px;}
+li.selectBox {width:300px;margin-bottom:10px;}
+li.selectBox:last-child {margin-bottom:0;}
+li.indent {margin:-5px 0 10px 25px;}
+li.indent:last-child {margin-bottom:0;}
 
 /* checkBox / radioBox */
 .tblChk {display: flex; justify-content: center; align-items: center; min-height: 25px;}
@@ -347,6 +352,7 @@ button.btn-expand.on {background-image:url(../img/ico_expand_on.svg);}
 .inputForm .selectBox.sm {min-width: 200px;}
 .inputForm > p {min-width: 80px;}
 .inputForm > em {font-style:normal;}
+.inputForm .txtLi {margin-top:0;}
 
 
 /* inputForm : small */
@@ -1221,3 +1227,25 @@ button[class^=btnList] {display:inline-block;box-sizing:border-box;border:0 none
 .checkFileBtn {margin-top:10px;}
 
 .validateMsg {margin-top:10px;padding:14px 20px;border-radius:4px;background-color:#FBECED;}
+
+/* 아코디언 */
+.accordionLi > li {margin-top:10px;border:1px solid #e5e6ea;border-radius:6px;background-color:#F4F5F6;transition:background 0.3s;}
+.accordionLi > li:first-child {margin-top:0;}
+.accordionLi .titArea {display:flex;align-items:center;justify-content:space-between;position:relative;padding:15px 60px 15px 20px;}
+.accordionLi .titArea > strong {font-size:17px;line-height:1.5;}
+
+.accordionLi .titArea .etcLi {display:flex;}
+.accordionLi .titArea .etcLi li {display:flex;align-items:center;gap:20px;position:relative;padding:0 10px;font-size:15px;line-height:1.5;font-weight:500;}
+.accordionLi .titArea .etcLi li + li::after {content:'';display:block;position:absolute;left:0;top:50%;width:1px;height:12px;margin-top:-6px;background-color:#B1B8BE;}
+.accordionLi .titArea .etcLi li:last-child {padding-right:0;}
+.accordionLi .titArea .etcLi span {white-space:nowrap;}
+.accordionLi .titArea .etcLi strong {font-weight:600;white-space:nowrap;}
+
+.accordionLi .titArea button {position:absolute;left:0;top:0;width:100%;height:100%;border:0 none;border-radius:6px;background:transparent url(../img/ico_accordion.svg) no-repeat top 50% right 20px;transition:none;}
+.accordionLi .cntArea {display:none;position:relative;padding:32px 20px;border-radius:6px;background-color:#fff;}
+.accordionLi .cntArea::after {content:'';display:block;position:absolute;top:0;left:20px;right:20px;height:1px;background-color:#E2E6EA;}
+
+.accordionLi > li.on {border-color:#B1B8BE;background-color:#fff;}
+.accordionLi > li.on .cntArea {display:block;}
+.accordionLi > li.on .titArea > strong {color:#5349C0;}
+.accordionLi > li.on .titArea button {background-image:url(../img/ico_accordion_on.svg);}

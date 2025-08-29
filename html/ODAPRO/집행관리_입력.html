@@ -1,0 +1,536 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<title>ODA</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+	<meta http-equiv="Pragma" content="no-cache">
+	<meta http-equiv="Expires" content="0">
+
+	<link rel="stylesheet" href="./../../css/flatpickr.min.css">
+	<link rel="stylesheet" href="./../../css/reset.css">
+	<link rel="stylesheet" href="./../../css/layout.css">
+	<link rel="stylesheet" href="./../../css/style.css">
+
+	<script defer src="./../../js/jquery-3.7.1.min.js"></script>
+	<script defer src="./../../js/flatpickr.js"></script>
+	<script defer src="./../../js/ui.js"></script>
+</head>
+
+<body>
+	<!-- wrap -->
+	<div id="wrap" class="wrapper">
+		<!-- 헤더 영역 -->
+		<div id="header" class="header">
+			<div class="wrap">
+				<h1><a href="./../gate.html"><img src="./../../img/logo.svg"></a></h1>
+				<ul class="gnb">
+					<li><a href="javascript:;">준비단계</a></li><!-- 활성화 시 li class="active" -->
+					<li><a href="javascript:;">진행단계</a></li>
+					<li><a href="javascript:;">완료단계</a></li>
+					<li><a href="javascript:;">정보마당</a></li>
+					<li><a href="javascript:;">운영관리</a></li>
+				</ul>
+				<div class="userBox">
+					<button class="btnUser">운영관리자</button>
+					<ul class="dropDown">
+						<li><a href="javascript:;">쪽지</a></li>
+						<li><a href="javascript:;">마이페이지</a></li>
+						<li><a href="javascript:;">로그아웃</a></li>
+					</ul>
+				</div>
+				<div class="searchBox">
+					<input type="text" placeholder="통합검색">
+					<button class="btnSearch">검색</button>
+				</div>
+			</div>
+		</div>
+		<!-- //헤더 영역 -->
+
+		<!-- 컨테이너 영역 -->
+		<div id="container" class="container">
+
+			<!-- LNB 영역 -->
+			<div id="side" class="side">
+				<div class="side_menu">
+					<h2>ODA 사업 관리</h2>
+					<ul class="gnb">
+						<li>
+							<a href="javascript:;">사업목록</a>
+						</li>
+						<li class="hasChild active">
+							<a href="javascript:;">연수 사업 관리</a>
+							<ul>
+								<li><a href="javascript:;" class="on">연수 사업 목록</a></li>
+								<li><a href="javascript:;">연수 프로그램 관리</a></li>
+								<li><a href="javascript:;">연수생 관리</a></li>
+								<li><a href="javascript:;">체크리스트</a></li>
+							</ul>
+						</li>
+						<li class="hasChild">
+							<a href="javascript:;">장학 사업 관리</a>
+							<ul>
+								<li><a href="javascript:;">연수 사업 목록</a></li>
+								<li><a href="javascript:;">연수 프로그램 관리</a></li>
+								<li><a href="javascript:;">연수생 관리</a></li>
+								<li><a href="javascript:;">체크리스트</a></li>
+							</ul>
+						</li>
+						<li class="hasChild">
+							<a href="javascript:;">패키지 사업 관리</a>
+							<ul>
+								<li><a href="javascript:;">연수 사업 목록</a></li>
+								<li><a href="javascript:;">연수 프로그램 관리</a></li>
+								<li><a href="javascript:;">연수생 관리</a></li>
+								<li><a href="javascript:;">체크리스트</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<button class="btnSlide">slide</button>
+			</div>
+			<!-- //LNB 영역 -->
+
+			<!-- 컨텐츠 영역 -->
+			<div class="contents">
+				<!-- pgtBox -->
+				<div class="pgtBox">
+					<div class="lt">
+						<h2>집행 관리 입력</h2>
+					</div>
+
+					<ul class="breadcrumb">
+						<li class="home"><a href="javascript:;">홈</a></li>
+						<li><a href="javascript:;">진행단계</a></li>
+						<li><a href="javascript:;">집행관리</a></li>
+					</ul>
+
+					<div class="rt"></div>
+				</div>
+				<!-- //pgtBox -->
+
+				<!-- cntBox -->
+				<div class="cntBox">
+					<!-- titBox -->
+					<div class="titBox">
+						<div class="lt">
+							<h3>사업 기본 정보</h3>
+						</div>
+
+						<div class="rt">
+						</div>
+					</div>
+					<!-- //titBox -->
+
+					<!-- tblBox -->
+					<div class="tblBox">
+						<table class="tbl row">
+							<caption></caption>
+
+							<colgroup>
+								<col style="width: 152px;">
+								<col style="width: auto;">
+								<col style="width: 152px;">
+								<col style="width: auto;">
+							</colgroup>
+
+							<tbody>
+								<tr>
+									<th scope="row">시행계획 사업명</th>
+									<td colspan="3">
+										<button type="button" class="txtPop">개도국 방송환경 개선지원_라오스</button>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">모니터링 사업명</th>
+									<td colspan="3">
+										<button type="button" class="txtPop">개도국 방송환경 개선지원(라오스 국영TV HD방송 인프라 구축 및 운용 지원)</button>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">(총) 사업비 예산</th>
+									<td class="tR">5,789 백만원</td>
+									<th scope="row">당해연도 시행계획 예산</th>
+									<td class="tR">5,789 백만원</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<!-- //tblBox -->
+				</div>
+				<!-- //cntBox -->
+
+				<!-- cntBox -->
+				<div class="cntBox">
+					<!-- titBox -->
+					<div class="titBox">
+						<div class="lt">
+							<h3>사업 기본 정보</h3>
+						</div>
+
+						<div class="rt">
+						</div>
+					</div>
+					<!-- //titBox -->
+
+					<!-- accordionLi -->
+					<ul class="accordionLi">
+						<li>
+							<div class="titArea">
+								<strong>1회 차</strong>
+								<ul class="etcLi">
+									<li>정상 추진</li>
+									<li>
+										<span>집행액</span>
+										<strong>&#8361; 625 (백만원)</strong>
+									</li>
+									<li>
+										<span>실집행액</span>
+										<strong>&#8361; 625 (백만원)</strong>
+									</li>
+								</ul>
+								<button type="button"><span class="sr-only">펼치기</span></button>
+							</div>
+							<div class="cntArea">
+								<!-- tblBox -->
+								<div class="tblBox">
+									<table class="tbl row">
+										<caption></caption>
+										<colgroup>
+											<col style="width: 152px;">
+											<col style="width: auto;">
+											<col style="width: 152px;">
+											<col style="width: auto;">
+										</colgroup>
+
+										<tbody>
+											<tr>
+												<th scope="row">집행액(교부액)</th>
+												<td colspan="3">
+													<div class="inputForm">
+														<input type="text" class="tR">
+														<ul class="txtLi">
+															<li class="txtInfo">시행계획 기준 시행기관 집행액(교부액) 입력</li>
+														</ul>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<th scope="row">실집행액</th>
+												<td colspan="3">
+													<div class="inputForm">
+														<input type="text" class="tR">
+														<ul class="txtLi">
+															<li class="txtInfo">수행기관 실집행액 입력</li>
+															<li class="txtInfo">수원국에 최종적으로 자금이 이체된 지출액 아님</li>
+														</ul>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<th scope="row">사업 추진계획</th>
+												<td colspan="3">
+													<textarea name="txt01" id="txt01" class="w100" placeholder="사업 추진계획을 입력하세요."></textarea>
+												</td>
+											</tr>
+											<tr>
+												<th scope="row">사업 추진실적</th>
+												<td colspan="3">
+													<textarea name="txt02" id="txt02" class="w100" placeholder="사업 추진실적을 입력하세요."></textarea>
+												</td>
+											</tr>
+											<tr>
+												<th scope="row">부진여부</th>
+												<td colspan="3">
+													<div class="rdoBox">
+														<input type="radio" id="radio01-1" name="rdo01">
+														<label for="radio01-1">예</label>
+														<input type="radio" id="radio01-2" name="rdo01">
+														<label for="radio01-2">아니오</label>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<th scope="row" rowspan="2">이슈사항</th>
+												<td rowspan="2">
+													<ul>
+														<li class="chkBox">
+															<input type="checkbox" id="chk01-1" value="1">
+															<label for="chk01-1">1. 국내 절차 지연</label>
+														</li>
+														<li class="chkBox">
+															<input type="checkbox" id="chk01-2" value="2" onchange="targetToggle(this.checked, 'select01');">
+															<label for="chk01-2">2. 수원국 행정절차 지연</label>
+														</li>
+														<li class="selectBox indent" id="select01" style="display:none;">
+															<select name="select01">
+																<option value="" hidden>- 수원국 행정절차 지연 사유 선택 -</option>
+															</select>
+														</li>
+														<li class="chkBox">
+															<input type="checkbox" id="chk01-3" value="3">
+															<label for="chk01-3">4. 사업 철회</label>
+														</li>
+														<li class="chkBox">
+															<input type="checkbox" id="chk01-4" value="4">
+															<label for="chk01-4">5. 수원국 정세 변화(내란, 전쟁 등)</label>
+														</li>
+														<li class="chkBox">
+															<input type="checkbox" id="chk01-5" value="5">
+															<label for="chk01-5">6. 불가항력적 사유(감염병, 자연재해 등)</label>
+														</li>
+														<li class="chkBox">
+															<input type="checkbox" id="chk01-6" value="6">
+															<label for="chk01-6">7. 기타</label>
+														</li>
+														<li class="chkBox">
+															<input type="checkbox" id="chk01-7" value="7">
+															<label for="chk01-7">8. 특이사항 없음</label>
+														</li>
+													</ul>
+												</td>
+												<th scope="row">이슈 상세 내용</th>
+												<td>
+													<textarea name="txt03" id="txt03" class="w100" placeholder="이슈사항(특이사항 없음 제외)에 대한 상세내용을 100자 이상 입력해주세요. 예) RND 사업내용 협의가 되지 않아 수원국 행정절차 지연으로 인한 이슈사항이 있습니다."></textarea>
+												</td>
+											</tr>
+											<tr>
+												<th scope="row">부진 대응 방안</th>
+												<td>
+													<textarea name="txt04" id="txt04" class="w100" placeholder="이슈사항에 대한 부진 대응 방안을 상세히 100자 이상 입력해주세요."></textarea>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<!-- //tblBox -->
+
+								<!-- titBox -->
+								<div class="titBox">
+									<div class="lt">
+										<h4>첨부파일</h4>
+									</div>
+								</div>
+								<!-- //titBox -->
+
+								<div class="file">
+									<div class="file-upload">
+										<p class="txt-file">첨부하실 파일을 마우스로 끌어오세요.</p>
+										<input type="file" name="myFile" id="fileu-upload" hidden="">
+									</div>
+
+									<div class="btn-wrap">
+										<button type="button" class="btn-plus"><span class="sr-only">추가</span></button>
+										<button type="button" class="btn-del"><span class="sr-only">삭제</span></button>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="titArea">
+								<strong>2회 차</strong>
+								<ul class="etcLi">
+									<li class="txtRed">집행 부진</li>
+									<li>
+										<span>집행액</span>
+										<strong>&#8361; 625 (백만원)</strong>
+									</li>
+									<li>
+										<span>실집행액</span>
+										<strong>&#8361; 625 (백만원)</strong>
+									</li>
+								</ul>
+								<button type="button"><span class="sr-only">펼치기</span></button>
+							</div>
+							<div class="cntArea">
+								<!-- tblBox -->
+								<div class="tblBox">
+									<table class="tbl row">
+										<caption></caption>
+										<colgroup>
+											<col style="width: 152px;">
+											<col style="width: auto;">
+											<col style="width: 152px;">
+											<col style="width: auto;">
+										</colgroup>
+
+										<tbody>
+											<tr>
+												<th scope="row">집행액(교부액)</th>
+												<td colspan="3">
+													<div class="inputForm">
+														<input type="text" class="tR">
+														<ul class="txtLi">
+															<li class="txtInfo">시행계획 기준 시행기관 집행액(교부액) 입력</li>
+														</ul>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<th scope="row">실집행액</th>
+												<td colspan="3">
+													<div class="inputForm">
+														<input type="text" class="tR">
+														<ul class="txtLi">
+															<li class="txtInfo">수행기관 실집행액 입력</li>
+															<li class="txtInfo">수원국에 최종적으로 자금이 이체된 지출액 아님</li>
+														</ul>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<th scope="row">사업 추진계획</th>
+												<td colspan="3">
+													<textarea name="txt05" id="txt05" class="w100" placeholder="사업 추진계획을 입력하세요."></textarea>
+												</td>
+											</tr>
+											<tr>
+												<th scope="row">사업 추진실적</th>
+												<td colspan="3">
+													<textarea name="txt06" id="txt06" class="w100" placeholder="사업 추진실적을 입력하세요."></textarea>
+												</td>
+											</tr>
+											<tr>
+												<th scope="row">부진여부</th>
+												<td colspan="3">
+													<div class="rdoBox">
+														<input type="radio" id="radio02-1" name="rdo02">
+														<label for="radio02-1">예</label>
+														<input type="radio" id="radio02-2" name="rdo02">
+														<label for="radio02-2">아니오</label>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<th scope="row" rowspan="2">이슈사항</th>
+												<td rowspan="2">
+													<ul>
+														<li class="chkBox">
+															<input type="checkbox" id="chk02-1" value="1">
+															<label for="chk02-1">1. 국내 절차 지연</label>
+														</li>
+														<li class="chkBox">
+															<input type="checkbox" id="chk02-2" value="2" onchange="targetToggle(this.checked, 'select02');">
+															<label for="chk02-2">2. 수원국 행정절차 지연</label>
+														</li>
+														<li class="selectBox indent" id="select02" style="display:none;">
+															<select name="select02">
+																<option value="" hidden>- 수원국 행정절차 지연 사유 선택 -</option>
+															</select>
+														</li>
+														<li class="chkBox">
+															<input type="checkbox" id="chk02-3" value="3">
+															<label for="chk02-3">4. 사업 철회</label>
+														</li>
+														<li class="chkBox">
+															<input type="checkbox" id="chk02-4" value="4">
+															<label for="chk02-4">5. 수원국 정세 변화(내란, 전쟁 등)</label>
+														</li>
+														<li class="chkBox">
+															<input type="checkbox" id="chk02-5" value="5">
+															<label for="chk02-5">6. 불가항력적 사유(감염병, 자연재해 등)</label>
+														</li>
+														<li class="chkBox">
+															<input type="checkbox" id="chk02-6" value="6">
+															<label for="chk02-6">7. 기타</label>
+														</li>
+														<li class="chkBox">
+															<input type="checkbox" id="chk02-7" value="7">
+															<label for="chk02-7">8. 특이사항 없음</label>
+														</li>
+													</ul>
+												</td>
+												<th scope="row">이슈 상세 내용</th>
+												<td>
+													<textarea name="txt07" id="txt07" class="w100" placeholder="이슈사항(특이사항 없음 제외)에 대한 상세내용을 100자 이상 입력해주세요. 예) RND 사업내용 협의가 되지 않아 수원국 행정절차 지연으로 인한 이슈사항이 있습니다."></textarea>
+												</td>
+											</tr>
+											<tr>
+												<th scope="row">부진 대응 방안</th>
+												<td>
+													<textarea name="txt08" id="txt08" class="w100" placeholder="이슈사항에 대한 부진 대응 방안을 상세히 100자 이상 입력해주세요."></textarea>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<!-- //tblBox -->
+
+								<!-- titBox -->
+								<div class="titBox">
+									<div class="lt">
+										<h4>첨부파일</h4>
+									</div>
+								</div>
+								<!-- //titBox -->
+
+								<div class="file">
+									<div class="file-upload">
+										<p class="txt-file">첨부하실 파일을 마우스로 끌어오세요.</p>
+										<input type="file" name="myFile" id="fileu-upload" hidden="">
+									</div>
+
+									<div class="btn-wrap">
+										<button type="button" class="btn-plus"><span class="sr-only">추가</span></button>
+										<button type="button" class="btn-del"><span class="sr-only">삭제</span></button>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+					<!-- //accordionLi -->
+				</div>
+				<!-- //cntBox -->
+
+				<!-- btn-wrap -->
+				<div class="btn-wrap">
+					<button type="button" class="btn">목록</button>
+					<button type="button" class="btn pt">저장</button>
+					<button type="button" class="btn pt">제출</button>
+				</div>
+				<!-- //btn-wrap -->
+			</div>
+			<!-- //컨텐츠 영역 -->
+		</div>
+		<!-- //컨테이너 영역 -->
+	</div>
+	<!-- //wrap -->
+
+	<script>
+		// selectBox 숨김/보임
+		let targetToggle;
+
+		// 아코디언 예시 스크립트
+		document.addEventListener("DOMContentLoaded", function () {
+			if ($('.accordionLi').length) {
+				$('.accordionLi').each(function(){
+					var $accordion = $(this);
+					var $btns = $accordion.find('.titArea button');
+
+					$btns.on('click', function(){
+						var $btn = $(this);
+						var $parent = $btn.closest('li');
+						var check = $parent.hasClass('on');
+
+						$accordion.children('.on').removeClass('on');
+						if (!check) $btn.closest('li').addClass('on');
+					});
+				});
+			}
+
+			// selectBox 숨김/보임
+			targetToggle = function(checked, targetId) {
+				const target = document.getElementById(targetId);
+
+				if (target) {
+					target.style.display = checked ? '' : 'none';
+				}
+			}
+		});
+	</script>
+</body>
+
+</html>

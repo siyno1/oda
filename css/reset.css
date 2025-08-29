@@ -31,7 +31,8 @@ legend {border: 0; padding: 0;}
 thead.sr-only {clip-path: inset(50%)!important;}
 button {cursor: pointer; transition: 0.3s all;}
 
-*:focus {outline-offset: 0; outline: 2px solid #434C89;}
+*:focus {outline:0 none;}
+*:focus-visible {outline-offset: 0; outline: 2px solid #434C89;}/* 키보드 접근시에만 표시 */
 ::-moz-selection {background: var(--krds-secondary); color: var(--krds-white);}
 ::selection {background: #003675; color: var(--krds-white);}
 
