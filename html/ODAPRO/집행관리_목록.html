@@ -790,19 +790,31 @@
 				var $tbl = $btn.closest('table');
 				var is_visible = $btn.hasClass('on');
 
-				var $hides = $tbl.find('.hid');
+				var $hidesCol = $tbl.find('col.hid');
+				var $hidesTh = $tbl.find('th.hid');
+				var $hidesTd = $tbl.find('tbody td.hid');
+
 				var $empty = $tbl.find('.empty');
 
-				if(is_visible) {
+				if (is_visible) {
 					$btn.removeClass('on');
-					$hides.hide();
+					$hidesCol.hide();
+					$hidesTh.hide();
+					$hidesTd.hide();
 				} else {
 					$btn.addClass('on');
-					$hides.show();
+					$hidesCol.show();
+					$hidesTh.show();
+					$hidesTd.show();
 				}
 
-				// empty 인 경우
-				if ($empty.length) $empty.attr('colspan',$tbl.find('th:visible').length);
+
+				if ($empty.length) {
+					const visibleCols = $tbl.find('thead th:visible').length;
+					$empty.attr('colspan', visibleCols);
+					$newEmpty = $empty.clone();
+					$empty.replaceWith($newEmpty);
+				}
 			}
 		});
 	</script>
