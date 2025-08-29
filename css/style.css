@@ -1243,7 +1243,7 @@ button[class^=btnList] {display:inline-block;box-sizing:border-box;border:0 none
 .accordionLi .titArea .etcLi span {line-height:1.5;white-space:nowrap;}
 .accordionLi .titArea .etcLi strong {line-height:1.5;font-weight:600;white-space:nowrap;}
 
-.accordionLi .titArea button {position:absolute;left:0;top:0;width:100%;height:100%;border:0 none;border-radius:6px;background:transparent url(../img/ico_accordion.svg) no-repeat top 50% right 20px;transition:none;}
+.accordionLi .titArea button {position:absolute;left:0;top:0;width:100%;height:100%;border:0 none;border-radius:6px;background:transparent url(../img/ico_accordion.svg) no-repeat top 50% right 20px;transition:none;z-index:1;}
 .accordionLi .cntArea {display:none;position:relative;padding:32px 20px;border-radius:6px;background-color:#fff;}
 .accordionLi .cntArea::after {content:'';display:block;position:absolute;top:0;left:20px;right:20px;height:1px;background-color:#E2E6EA;}
 
