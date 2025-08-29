@@ -1,0 +1,811 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<title>ODA</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+	<meta http-equiv="Pragma" content="no-cache">
+	<meta http-equiv="Expires" content="0">
+
+	<link rel="stylesheet" href="./../../css/flatpickr.min.css">
+	<link rel="stylesheet" href="./../../css/reset.css">
+	<link rel="stylesheet" href="./../../css/layout.css">
+	<link rel="stylesheet" href="./../../css/style.css">
+
+	<script defer src="./../../js/jquery-3.7.1.min.js"></script>
+	<script defer src="./../../js/flatpickr.js"></script>
+	<script defer src="./../../js/ui.js"></script>
+</head>
+
+<body>
+	<!-- wrap -->
+	<div id="wrap" class="wrapper">
+		<!-- 헤더 영역 -->
+		<div id="header" class="header">
+			<div class="wrap">
+				<h1><a href="./../gate.html"><img src="./../../img/logo.svg"></a></h1>
+				<ul class="gnb">
+					<li><a href="javascript:;">준비단계</a></li><!-- 활성화 시 li class="active" -->
+					<li><a href="javascript:;">진행단계</a></li>
+					<li><a href="javascript:;">완료단계</a></li>
+					<li><a href="javascript:;">정보마당</a></li>
+					<li><a href="javascript:;">운영관리</a></li>
+				</ul>
+				<div class="userBox">
+					<button class="btnUser">운영관리자</button>
+					<ul class="dropDown">
+						<li><a href="javascript:;">쪽지</a></li>
+						<li><a href="javascript:;">마이페이지</a></li>
+						<li><a href="javascript:;">로그아웃</a></li>
+					</ul>
+				</div>
+				<div class="searchBox">
+					<input type="text" placeholder="통합검색">
+					<button class="btnSearch">검색</button>
+				</div>
+			</div>
+		</div>
+		<!-- //헤더 영역 -->
+
+		<!-- 컨테이너 영역 -->
+		<div id="container" class="container">
+
+			<!-- LNB 영역 -->
+			<div id="side" class="side">
+				<div class="side_menu">
+					<h2>ODA 사업 관리</h2>
+					<ul class="gnb">
+						<li>
+							<a href="javascript:;">사업목록</a>
+						</li>
+						<li class="hasChild active">
+							<a href="javascript:;">연수 사업 관리</a>
+							<ul>
+								<li><a href="javascript:;" class="on">연수 사업 목록</a></li>
+								<li><a href="javascript:;">연수 프로그램 관리</a></li>
+								<li><a href="javascript:;">연수생 관리</a></li>
+								<li><a href="javascript:;">체크리스트</a></li>
+							</ul>
+						</li>
+						<li class="hasChild">
+							<a href="javascript:;">장학 사업 관리</a>
+							<ul>
+								<li><a href="javascript:;">연수 사업 목록</a></li>
+								<li><a href="javascript:;">연수 프로그램 관리</a></li>
+								<li><a href="javascript:;">연수생 관리</a></li>
+								<li><a href="javascript:;">체크리스트</a></li>
+							</ul>
+						</li>
+						<li class="hasChild">
+							<a href="javascript:;">패키지 사업 관리</a>
+							<ul>
+								<li><a href="javascript:;">연수 사업 목록</a></li>
+								<li><a href="javascript:;">연수 프로그램 관리</a></li>
+								<li><a href="javascript:;">연수생 관리</a></li>
+								<li><a href="javascript:;">체크리스트</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<button class="btnSlide">slide</button>
+			</div>
+			<!-- //LNB 영역 -->
+
+			<!-- 컨텐츠 영역 -->
+			<div class="contents">
+				<!-- pgtBox -->
+				<div class="pgtBox">
+					<div class="lt">
+						<h2>집행 관리</h2>
+					</div>
+
+					<ul class="breadcrumb">
+						<li class="home"><a href="javascript:;">홈</a></li>
+						<li><a href="javascript:;">진행단계</a></li>
+						<li><a href="javascript:;">집행관리</a></li>
+					</ul>
+
+					<div class="rt"></div>
+				</div>
+				<!-- //pgtBox -->
+
+				<!-- schBox @dev 25.08.01 검색 수정 -->
+				<div class="schBox">
+					<div class="schRow">
+						<div class="schTxt">
+							<div class="schKeyword">
+								<input type="text" placeholder="사업번호를 입력하세요.">
+								<!-- button type="button" class="btn-src">검색</button -->
+							</div>
+						</div>
+						<div class="schTxt">
+							<div class="schKeyword">
+								<input type="text" placeholder="집행관리 대상 사업명을 입력하세요.">
+								<!-- button type="button" class="btn-src">검색</button -->
+							</div>
+							<button type="button" class="btn-flt">검색 필터 열기</button>
+						</div>
+					</div>
+
+					<div class="schRow toggleFlt" style="display:none;">
+						<ul class="fltList">
+							<li><button type="button">시행계획 연도</button></li>
+							<li><button type="button">시행기관</button></li>
+							<li><button type="button">수원국</button></li>
+							<li><button type="button">부진여부</button></li>
+							<li><button type="button">이슈사항</button></li>
+							<li><button type="button">상태</button></li>
+						</ul>
+					</div>
+
+					<div class="schRow toggleFltCont" style="display:none;">
+						<div class="fltCont">
+							<ul>
+								<li>
+									<p>시행계획 연도</p>
+									<div class="pickrBox">
+										<input type="text" class="pickr" placeholder="날짜를 선택하세요">
+										<em>~</em>
+										<input type="text" class="pickr" placeholder="날짜를 선택하세요">
+									</div>
+								</li>
+
+								<li class="contBox">
+									<p>시행기관</p>
+									<div class="contList">
+										<div>
+											<ul>
+												<li><button type="button">전체</button></li>
+												<li><button type="button">국무조정실</button></li>
+											</ul>
+										</div>
+									</div>
+								</li>
+
+								<li class="contBox type01">
+									<p>수원국</p>
+									<div class="contList">
+										<div>
+											<p>대륙</p>
+											<ul>
+												<li><button type="button">아시아</button></li>
+												<li><button type="button">아프리카</button></li>
+												<li><button type="button">중남미</button></li>
+												<li><button type="button">중동 · CIS</button></li>
+												<li><button type="button">오세아니아 · 기타</button></li>
+												<li><button type="button">그외 지역</button></li>
+											</ul>
+										</div>
+
+										<div>
+											<p>상세국가</p>
+											<ul>
+												<li><button type="button">전체</button></li>
+												<li><button type="button">가나</button></li>
+												<li><button type="button">동티모르</button></li>
+												<li><button type="button">라오스</button></li>
+												<li><button type="button">네팔</button></li>
+												<li><button type="button">동티모르</button></li>
+												<li><button type="button">라오스</button></li>
+												<li><button type="button">네팔</button></li>
+												<li><button type="button">말레이시아</button></li>
+												<li><button type="button">네팔</button></li>
+												<li><button type="button">동티모르</button></li>
+												<li><button type="button">라오스</button></li>
+												<li><button type="button">네팔</button></li>
+												<li><button type="button">동티모르</button></li>
+												<li><button type="button">라오스</button></li>
+												<li><button type="button">네팔</button></li>
+												<li><button type="button">방글라데시</button></li>
+												<li><button type="button">네팔</button></li>
+												<li><button type="button">동티모르</button></li>
+												<li><button type="button">라오스</button></li>
+												<li><button type="button">네팔</button></li>
+												<li><button type="button">동티모르</button></li>
+												<li><button type="button">라오스</button></li>
+												<li><button type="button">네팔</button></li>
+												<li><button type="button">네팔</button></li>
+												<li><button type="button">방글라데시</button></li>
+												<li><button type="button">네팔</button></li>
+												<li><button type="button">동티모르</button></li>
+												<li><button type="button">라오스</button></li>
+												<li><button type="button">네팔</button></li>
+												<li><button type="button">동티모르</button></li>
+												<li><button type="button">라오스</button></li>
+												<li><button type="button">네팔</button></li>
+											</ul>
+										</div>
+									</div>
+								</li>
+
+								<li class="contBox">
+									<p>부진여부</p>
+									<div class="contList">
+										<div>
+											<ul>
+												<li><button type="button">교육</button></li>
+												<li><button type="button">보건</button></li>
+												<li><button type="button">인구정책/시책 및 생식보건</button></li>
+												<li><button type="button">식수 공급 및 위생</button></li>
+												<li><button type="button">공공행정 및 시민사회</button></li>
+												<li><button type="button">"기타 사회인프라 및 서비스"</button></li>
+												<li><button type="button">운송 및 창고</button></li>
+												<li><button type="button">통신</button></li>
+												<li><button type="button">에너지</button></li>
+												<li><button type="button">"금융 및 재무 서비스"</button></li>
+												<li><button type="button">"비즈니스 및 기타서비스"</button></li>
+												<li><button type="button">농업</button></li>
+											</ul>
+										</div>
+
+										<div>
+											<ul>
+												<li><button type="button">아시아</button></li>
+												<li><button type="button">아프리카</button></li>
+												<li><button type="button">중남미</button></li>
+												<li><button type="button">중동 · CIS</button></li>
+												<li><button type="button">오세아니아 · 기타</button></li>
+												<li><button type="button">그외 지역</button></li>
+											</ul>
+										</div>
+
+										<div>
+											<ul>
+												<li><button type="button">아시아</button></li>
+												<li><button type="button">아프리카</button></li>
+												<li><button type="button">중남미</button></li>
+												<li><button type="button">중동 · CIS</button></li>
+												<li><button type="button">오세아니아 · 기타· 기타</button></li>
+												<li><button type="button">그외 지역</button></li>
+											</ul>
+										</div>
+									</div>
+								</li>
+
+								<li class="contBox">
+									<p>이슈사항</p>
+									<div class="contList">
+										<div>
+											<ul>
+												<li><button type="button">전체</button></li>
+												<li><button type="button">확정</button></li>
+												<li><button type="button">완료</button></li>
+												<li><button type="button">중단</button></li>
+												<li><button type="button">취소</button></li>
+											</ul>
+										</div>
+									</div>
+								</li>
+
+								<li class="contBox">
+									<p>상태</p>
+									<div class="contList">
+										<div>
+											<ul>
+												<li><button type="button">전체</button></li>
+												<li><button type="button">유상</button></li>
+												<li><button type="button">무상</button></li>
+											</ul>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="schRow">
+						<div class="fltOpt">
+							<ul>
+								<li>
+									<p>아시아 &gt; 네팔</p>
+									<button type="button" class="btn-del"><span class="sr-only">검색조건 삭제</span></button>
+								</li>
+								<li>
+									<p>아프리카 &gt; 가나</p>
+									<button type="button" class="btn-del"><span class="sr-only">검색조건 삭제</span></button>
+								</li>
+								<li>
+									<p>아프리카 &gt; 가나</p>
+									<button type="button" class="btn-del"><span class="sr-only">검색조건 삭제</span></button>
+								</li>
+								<li>
+									<p>아프리카 &gt; 가나</p>
+									<button type="button" class="btn-del"><span class="sr-only">검색조건 삭제</span></button>
+								</li>
+							</ul>
+							<button type="reset" class="btn-reset txt">초기화</button>
+						</div>
+					</div>
+
+					<div class="schBtn">
+						<button type="button" class="btn-apply">조건검색</button>
+					</div>
+				</div>
+				<!-- schBox //@dev 25.08.01 검색 수정 -->
+
+				<!-- cntBox -->
+				<div class="cntBox">
+					<!-- titBox -->
+					<div class="titBox">
+						<div class="lt">
+
+						</div>
+
+						<div class="rt">
+							<div class="btn-wrap">
+								<button type="button" class="btn excel">엑셀다운로드</button>
+								<button type="button" class="btn excel">추진실적 업로드</button>
+								<button type="button" class="btn pt pop" data-target="pop01">제출현황</button>
+							</div>
+						</div>
+					</div>
+					<!-- //titBox -->
+
+					<!-- schList : 그리드 형태 리스트 -->
+					<div class="schList">
+						<div class="tblBox">
+							<table class="tbl col tC">
+								<caption></caption>
+								<colgroup>
+									<col style="width: 46px;">
+									<col style="width: 120px;"><!-- 시행계획 연도 -->
+									<col style="width: 190px;"><!-- 사업번호 -->
+									<col style="min-width: 600px;"><!-- 사업명 -->
+									<col style="width: 140px;"><!-- 사업기간 -->
+									<col style="width: 140px;"><!-- 시행기관 -->
+									<col style="width: 140px;"><!-- 수원국 -->
+									<col style="width: 180px;"><!-- 사업구분 -->
+									<col style="width: 120px;"><!-- 부진여부 -->
+									<col class="hid" style="display:none; width: 120px;"><!-- 1회차 -->
+									<col class="hid" style="display:none; width: 120px;"><!-- 2회차 -->
+									<col class="hid" style="display:none; width: 120px;"><!-- 3회차 -->
+									<col style="width: 150px;"><!-- 이슈사항 -->
+									<col style="width: 150px;"><!-- 상세내용 -->
+									<col style="width: 150px;"><!-- 예산액 -->
+									<col style="width: 150px;"><!-- 집행액(교부액) -->
+									<col style="width: 100px;"><!-- 제출여부 -->
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col">
+											<div class="tblChk">
+												<input type="checkbox" id="chk01"><label for="chk01"></label>
+											</div>
+										</th>
+										<th scope="col">시행계획 연도</th>
+										<th scope="col">사업번호</th>
+										<th scope="col">사업명</th>
+										<th scope="col">사업기간</th>
+										<th scope="col">시행기관</th>
+										<th scope="col">수원국</th>
+										<th scope="col">사업구분</th>
+										<th scope="col">부진여부<button type="button" class="btn-expand" title="펼침" onclick="tableExpand(this);"></button></th>
+										<th scope="col" class="hid" style="display:none;">1회차</th>
+										<th scope="col" class="hid" style="display:none;">2회차</th>
+										<th scope="col" class="hid" style="display:none;">3회차</th>
+										<th scope="col">이슈사항</th>
+										<th scope="col">상세내용</th>
+										<th scope="col">예산액</th>
+										<th scope="col">집행액(교부액)</th>
+										<th scope="col">제출여부</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>
+											<div class="tblChk">
+												<input type="checkbox" id="chk02"><label for="chk02"></label>
+											</div>
+										</td>
+										<td>2025</td>
+										<td>1092000_2025_002</td>
+										<td class="tL"><a href="#">(2)아·태지역 개도국 경쟁당국 공무원 및 경쟁법 판사 등을 대상으로한 OECD 선진 경쟁정책 및 모범사례 교육·연수</a></td>
+										<td>2023 ~ 2025</td>
+										<td>국무조정실</td>
+										<td><a href="#" class="txtUnderline">중국</a></td>
+										<td></td>
+										<td><a href="#" class="txtUnderline">정상추진</a></td>
+										<td class="hid" style="display:none;"><a href="#" class="txtUnderline">집행부진</a></td>
+										<td class="hid" style="display:none;"><a href="#" class="txtUnderline">집행부진</a></td>
+										<td class="hid" style="display:none;"><a href="#" class="txtUnderline">집행부진</a></td>
+										<td></td>
+										<td></td>
+										<td class="tR"></td>
+										<td class="tR"></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>
+											<div class="tblChk">
+												<input type="checkbox" id="chk03"><label for="chk03"></label>
+											</div>
+										</td>
+										<td>2025</td>
+										<td>1092000_2025_002</td>
+										<td class="tL"><a href="#">(2)아·태지역 개도국 경쟁당국 공무원 및 경쟁법 판사 등을 대상으로한 OECD 선진 경쟁정책 및 모범사례 교육·연수</a></td>
+										<td>2023 ~ 2025</td>
+										<td>국무조정실</td>
+										<td><a href="#" class="txtUnderline">중국</a></td>
+										<td></td>
+										<td><a href="#" class="txtUnderline">정상추진</a></td>
+										<td class="hid" style="display:none;"><a href="#" class="txtUnderline">집행부진</a></td>
+										<td class="hid" style="display:none;"><a href="#" class="txtUnderline">집행부진</a></td>
+										<td class="hid" style="display:none;"><a href="#" class="txtUnderline">집행부진</a></td>
+										<td></td>
+										<td></td>
+										<td class="tR"></td>
+										<td class="tR"></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>
+											<div class="tblChk">
+												<input type="checkbox" id="chk04"><label for="chk04"></label>
+											</div>
+										</td>
+										<td>2025</td>
+										<td>1092000_2025_002</td>
+										<td class="tL"><a href="#">(2)아·태지역 개도국 경쟁당국 공무원 및 경쟁법 판사 등을 대상으로한 OECD 선진 경쟁정책 및 모범사례 교육·연수</a></td>
+										<td>2023 ~ 2025</td>
+										<td>국무조정실</td>
+										<td><a href="#" class="txtUnderline">중국</a></td>
+										<td></td>
+										<td><a href="#" class="txtUnderline">정상추진</a></td>
+										<td class="hid" style="display:none;"><a href="#" class="txtUnderline">집행부진</a></td>
+										<td class="hid" style="display:none;"><a href="#" class="txtUnderline">집행부진</a></td>
+										<td class="hid" style="display:none;"><a href="#" class="txtUnderline">집행부진</a></td>
+										<td></td>
+										<td></td>
+										<td class="tR"></td>
+										<td class="tR"></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>
+											<div class="tblChk">
+												<input type="checkbox" id="chk05"><label for="chk05"></label>
+											</div>
+										</td>
+										<td>2025</td>
+										<td>1092000_2025_002</td>
+										<td class="tL"><a href="#">(2)아·태지역 개도국 경쟁당국 공무원 및 경쟁법 판사 등을 대상으로한 OECD 선진 경쟁정책 및 모범사례 교육·연수</a></td>
+										<td>2023 ~ 2025</td>
+										<td>국무조정실</td>
+										<td><a href="#" class="txtUnderline">중국</a></td>
+										<td></td>
+										<td><a href="#" class="txtUnderline">정상추진</a></td>
+										<td class="hid" style="display:none;"><a href="#" class="txtUnderline">집행부진</a></td>
+										<td class="hid" style="display:none;"><a href="#" class="txtUnderline">집행부진</a></td>
+										<td class="hid" style="display:none;"><a href="#" class="txtUnderline">집행부진</a></td>
+										<td></td>
+										<td></td>
+										<td class="tR"></td>
+										<td class="tR"></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>
+											<div class="tblChk">
+												<input type="checkbox" id="chk06"><label for="chk06"></label>
+											</div>
+										</td>
+										<td>2025</td>
+										<td>1092000_2025_002</td>
+										<td class="tL"><a href="#">(2)아·태지역 개도국 경쟁당국 공무원 및 경쟁법 판사 등을 대상으로한 OECD 선진 경쟁정책 및 모범사례 교육·연수</a></td>
+										<td>2023 ~ 2025</td>
+										<td>국무조정실</td>
+										<td><a href="#" class="txtUnderline">중국</a></td>
+										<td></td>
+										<td><a href="#" class="txtUnderline">정상추진</a></td>
+										<td class="hid" style="display:none;"><a href="#" class="txtUnderline">집행부진</a></td>
+										<td class="hid" style="display:none;"><a href="#" class="txtUnderline">집행부진</a></td>
+										<td class="hid" style="display:none;"><a href="#" class="txtUnderline">집행부진</a></td>
+										<td></td>
+										<td></td>
+										<td class="tR"></td>
+										<td class="tR"></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>
+											<div class="tblChk">
+												<input type="checkbox" id="chk07"><label for="chk07"></label>
+											</div>
+										</td>
+										<td>2025</td>
+										<td>1092000_2025_002</td>
+										<td class="tL"><a href="#">(2)아·태지역 개도국 경쟁당국 공무원 및 경쟁법 판사 등을 대상으로한 OECD 선진 경쟁정책 및 모범사례 교육·연수</a></td>
+										<td>2023 ~ 2025</td>
+										<td>국무조정실</td>
+										<td><a href="#" class="txtUnderline">중국</a></td>
+										<td></td>
+										<td><a href="#" class="txtUnderline">정상추진</a></td>
+										<td class="hid" style="display:none;"><a href="#" class="txtUnderline">집행부진</a></td>
+										<td class="hid" style="display:none;"><a href="#" class="txtUnderline">집행부진</a></td>
+										<td class="hid" style="display:none;"><a href="#" class="txtUnderline">집행부진</a></td>
+										<td></td>
+										<td></td>
+										<td class="tR"></td>
+										<td class="tR"></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>
+											<div class="tblChk">
+												<input type="checkbox" id="chk08"><label for="chk08"></label>
+											</div>
+										</td>
+										<td>2025</td>
+										<td>1092000_2025_002</td>
+										<td class="tL"><a href="#">(2)아·태지역 개도국 경쟁당국 공무원 및 경쟁법 판사 등을 대상으로한 OECD 선진 경쟁정책 및 모범사례 교육·연수</a></td>
+										<td>2023 ~ 2025</td>
+										<td>국무조정실</td>
+										<td><a href="#" class="txtUnderline">중국</a></td>
+										<td></td>
+										<td><a href="#" class="txtUnderline">정상추진</a></td>
+										<td class="hid" style="display:none;"><a href="#" class="txtUnderline">집행부진</a></td>
+										<td class="hid" style="display:none;"><a href="#" class="txtUnderline">집행부진</a></td>
+										<td class="hid" style="display:none;"><a href="#" class="txtUnderline">집행부진</a></td>
+										<td></td>
+										<td></td>
+										<td class="tR"></td>
+										<td class="tR"></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>
+											<div class="tblChk">
+												<input type="checkbox" id="chk09"><label for="chk09"></label>
+											</div>
+										</td>
+										<td>2025</td>
+										<td>1092000_2025_002</td>
+										<td class="tL"><a href="#">(2)아·태지역 개도국 경쟁당국 공무원 및 경쟁법 판사 등을 대상으로한 OECD 선진 경쟁정책 및 모범사례 교육·연수</a></td>
+										<td>2023 ~ 2025</td>
+										<td>국무조정실</td>
+										<td><a href="#" class="txtUnderline">중국</a></td>
+										<td></td>
+										<td><a href="#" class="txtUnderline">정상추진</a></td>
+										<td class="hid" style="display:none;"><a href="#" class="txtUnderline">집행부진</a></td>
+										<td class="hid" style="display:none;"><a href="#" class="txtUnderline">집행부진</a></td>
+										<td class="hid" style="display:none;"><a href="#" class="txtUnderline">집행부진</a></td>
+										<td></td>
+										<td></td>
+										<td class="tR"></td>
+										<td class="tR"></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>
+											<div class="tblChk">
+												<input type="checkbox" id="chk10"><label for="chk10"></label>
+											</div>
+										</td>
+										<td>2025</td>
+										<td>1092000_2025_002</td>
+										<td class="tL"><a href="#">(2)아·태지역 개도국 경쟁당국 공무원 및 경쟁법 판사 등을 대상으로한 OECD 선진 경쟁정책 및 모범사례 교육·연수</a></td>
+										<td>2023 ~ 2025</td>
+										<td>국무조정실</td>
+										<td><a href="#" class="txtUnderline">중국</a></td>
+										<td></td>
+										<td><a href="#" class="txtUnderline">정상추진</a></td>
+										<td class="hid" style="display:none;"><a href="#" class="txtUnderline">집행부진</a></td>
+										<td class="hid" style="display:none;"><a href="#" class="txtUnderline">집행부진</a></td>
+										<td class="hid" style="display:none;"><a href="#" class="txtUnderline">집행부진</a></td>
+										<td></td>
+										<td></td>
+										<td class="tR"></td>
+										<td class="tR"></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>
+											<div class="tblChk">
+												<input type="checkbox" id="chk11"><label for="chk11"></label>
+											</div>
+										</td>
+										<td>2025</td>
+										<td>1092000_2025_002</td>
+										<td class="tL"><a href="#">(2)아·태지역 개도국 경쟁당국 공무원 및 경쟁법 판사 등을 대상으로한 OECD 선진 경쟁정책 및 모범사례 교육·연수</a></td>
+										<td>2023 ~ 2025</td>
+										<td>국무조정실</td>
+										<td><a href="#" class="txtUnderline">중국</a></td>
+										<td></td>
+										<td><a href="#" class="txtUnderline">정상추진</a></td>
+										<td class="hid" style="display:none;"><a href="#" class="txtUnderline">집행부진</a></td>
+										<td class="hid" style="display:none;"><a href="#" class="txtUnderline">집행부진</a></td>
+										<td class="hid" style="display:none;"><a href="#" class="txtUnderline">집행부진</a></td>
+										<td></td>
+										<td></td>
+										<td class="tR"></td>
+										<td class="tR"></td>
+										<td></td>
+									</tr>
+
+									<!-- empty -->
+									<tr>
+										<td class="empty" colspan="14">
+											<p>데이터가 없습니다.</p>
+										</td>
+									</tr>
+									<!-- //empty -->
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<!-- //schList : 그리드 형태 리스트 -->
+
+					<!-- txtLi -->
+					<ul class="txtLi">
+						<li class="txtInfo">집행관리 2회 차 입력 기간 입니다. (2025.03.14 ~ 2025.04.05)</li>
+					</ul>
+					<!-- //txtLi -->
+
+					<!-- pagination -->
+					<div class="pagination">
+						<button type="button" class="page-navi prev" disabled=""><span class="sr-only">이전</span></button>
+						<div class="page-links">
+							<a class="page-link active" href="#"><span class="sr-only">현재페이지</span>1</a>
+							<a class="page-link" href="#">2</a>
+							<a class="page-link" href="#">3</a>
+							<a class="page-link" href="#">4</a>
+							<a class="page-link" href="#">5</a>
+						</div>
+						<button type="button" class="page-navi next"><span class="sr-only">다음</span></button>
+
+						<p>총 949건 (1/95)</p>
+						<select name="" id="select01">
+							<option value="5">5</option>
+							<option value="10" selected>10</option>
+							<option value="30">30</option>
+							<option value="50">50</option>
+							<option value="100">100</option>
+						</select>
+					</div>
+					<!-- //pagination -->
+				</div>
+				<!-- //cntBox -->
+
+			</div>
+			<!-- //컨텐츠 영역 -->
+		</div>
+		<!-- //컨테이너 영역 -->
+	</div>
+	<!-- //wrap -->
+
+	<!-- popup -->
+	<div class="popup" id="pop01">
+		<div class="tit">
+			<p>집행관리 제출 현황</p>
+			<button type="button" class="btn-close"><span class="sr-only">팝업창 닫기</span></button>
+		</div>
+
+		<div class="cont">
+
+			<!-- schList -->
+			<div class="schList">
+				<div class="tblBox">
+					<table class="tbl col tC">
+						<caption></caption>
+						<colgroup>
+							<col style="width: auto;">
+							<col style="width: 100px;">
+							<col style="width: 100px;">
+							<col style="width: 100px;">
+							<col style="width: 100px;">
+						</colgroup>
+						<thead>
+							<tr>
+								<th scope="col">기관명</th>
+								<th scope="col">연도</th>
+								<th scope="col">전체</th>
+								<th scope="col">제출 완료</th>
+								<th scope="col">작성 중</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="tL">기관명</td>
+								<td>2025</td>
+								<td>100</td>
+								<td>99</td>
+								<td>1</td>
+							</tr>
+							<tr>
+								<td class="tL">기관명</td>
+								<td>2025</td>
+								<td>100</td>
+								<td>99</td>
+								<td>1</td>
+							</tr>
+							<tr>
+								<td class="tL">기관명</td>
+								<td>2025</td>
+								<td>100</td>
+								<td>99</td>
+								<td>1</td>
+							</tr>
+							<tr>
+								<td class="tL">기관명</td>
+								<td>2025</td>
+								<td>100</td>
+								<td>99</td>
+								<td>1</td>
+							</tr>
+							<tr>
+								<td class="tL">기관명</td>
+								<td>2025</td>
+								<td>100</td>
+								<td>99</td>
+								<td>1</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<!-- //schList -->
+
+			<!-- pagination -->
+			<div class="pagination">
+				<button type="button" class="page-navi prev" disabled=""><span class="sr-only">이전</span></button>
+				<div class="page-links">
+					<a class="page-link active" href="#"><span class="sr-only">현재페이지</span>1</a>
+					<a class="page-link" href="#">2</a>
+					<a class="page-link" href="#">3</a>
+					<a class="page-link" href="#">4</a>
+					<a class="page-link" href="#">5</a>
+				</div>
+				<button type="button" class="page-navi next"><span class="sr-only">다음</span></button>
+
+				<p>총 949건 (1/95)</p>
+				<select name="" id="select01">
+					<option value="5">5</option>
+					<option value="10" selected>10</option>
+					<option value="30">30</option>
+					<option value="50">50</option>
+					<option value="100">100</option>
+				</select>
+			</div>
+			<!-- //pagination -->
+
+		</div>
+
+		<div class="btn-wrap">
+			<button type="button" class="btn close">닫기</button>
+		</div>
+	</div>
+	<!-- //popup -->
+
+
+	<script>
+		// 테이블 셀 숨김/보임 예시 스크립트
+		let tableExpand;
+
+		document.addEventListener("DOMContentLoaded", function () {
+			tableExpand = function(button) {
+				var $btn = $(button);
+				var $tbl = $btn.closest('table');
+				var is_visible = $btn.hasClass('on');
+
+				var $hides = $tbl.find('.hid');
+				var $empty = $tbl.find('.empty');
+
+				if(is_visible) {
+					$btn.removeClass('on');
+					$hides.hide();
+				} else {
+					$btn.addClass('on');
+					$hides.show();
+				}
+
+				// empty 인 경우
+				if ($empty.length) $empty.attr('colspan',$tbl.find('th:visible').length);
+			}
+		});
+	</script>
+</body>
+
+</html>
