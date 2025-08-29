@@ -1240,8 +1240,8 @@ button[class^=btnList] {display:inline-block;box-sizing:border-box;border:0 none
 .accordionLi .titArea .etcLi li {display:flex;align-items:center;gap:20px;position:relative;padding:0 10px;font-size:15px;line-height:1.5;font-weight:500;}
 .accordionLi .titArea .etcLi li + li::after {content:'';display:block;position:absolute;left:0;top:50%;width:1px;height:12px;margin-top:-6px;background-color:#B1B8BE;}
 .accordionLi .titArea .etcLi li:last-child {padding-right:0;}
-.accordionLi .titArea .etcLi span {white-space:nowrap;}
-.accordionLi .titArea .etcLi strong {font-weight:600;white-space:nowrap;}
+.accordionLi .titArea .etcLi span {line-height:1.5;white-space:nowrap;}
+.accordionLi .titArea .etcLi strong {line-height:1.5;font-weight:600;white-space:nowrap;}
 
 .accordionLi .titArea button {position:absolute;left:0;top:0;width:100%;height:100%;border:0 none;border-radius:6px;background:transparent url(../img/ico_accordion.svg) no-repeat top 50% right 20px;transition:none;}
 .accordionLi .cntArea {display:none;position:relative;padding:32px 20px;border-radius:6px;background-color:#fff;}
