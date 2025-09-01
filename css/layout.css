@@ -120,7 +120,7 @@ strong {font-weight:700;}
 .txtUnderline {display:inline-block !important;color:#6D7882 !important;text-decoration:underline;text-underline-position:under;cursor:pointer;vertical-align:middle;}
 
 /* 텍스트 형식 버튼 */
-.txtBtn {border:0 none;font-weight:500;text-decoration:underline;text-underline-position:under;background:none;cursor:pointer;}
+.txtBtn {border:0 none;font-size:inherit;font-weight:500;text-decoration:underline;text-underline-position:under;background:none;cursor:pointer;}
 .txtPop {border:0 none;font-size:inherit;line-height:inherit;color:#464C53;background:none;}
 .txtPop::after {content:'';display:inline-block;width:20px;height:20px;margin-left:4px;background:url(../img/ico_pop.svg) no-repeat center;vertical-align:-4px;}
 

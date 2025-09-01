@@ -1,0 +1,507 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<title>ODA</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+	<meta http-equiv="Pragma" content="no-cache">
+	<meta http-equiv="Expires" content="0">
+
+	<link rel="stylesheet" href="./../../css/flatpickr.min.css">
+	<link rel="stylesheet" href="./../../css/reset.css">
+	<link rel="stylesheet" href="./../../css/layout.css">
+	<link rel="stylesheet" href="./../../css/style.css">
+
+	<script defer src="./../../js/jquery-3.7.1.min.js"></script>
+	<script defer src="./../../js/flatpickr.js"></script>
+	<script defer src="./../../js/ui.js"></script>
+</head>
+
+<body>
+	<!-- wrap -->
+	<div id="wrap" class="wrapper">
+		<!-- 헤더 영역 -->
+		<div id="header" class="header">
+			<div class="wrap">
+				<h1><a href="./../gate.html"><img src="./../../img/logo.svg"></a></h1>
+				<ul class="gnb">
+					<li><a href="javascript:;">준비단계</a></li><!-- 활성화 시 li class="active" -->
+					<li><a href="javascript:;">진행단계</a></li>
+					<li><a href="javascript:;">완료단계</a></li>
+					<li><a href="javascript:;">정보마당</a></li>
+					<li><a href="javascript:;">운영관리</a></li>
+				</ul>
+				<div class="userBox">
+					<button class="btnUser">운영관리자</button>
+					<ul class="dropDown">
+						<li><a href="javascript:;">쪽지</a></li>
+						<li><a href="javascript:;">마이페이지</a></li>
+						<li><a href="javascript:;">로그아웃</a></li>
+					</ul>
+				</div>
+				<div class="searchBox">
+					<input type="text" placeholder="통합검색">
+					<button class="btnSearch">검색</button>
+				</div>
+			</div>
+		</div>
+		<!-- //헤더 영역 -->
+
+		<!-- 컨테이너 영역 -->
+		<div id="container" class="container">
+
+			<!-- LNB 영역 -->
+			<div id="side" class="side">
+				<div class="side_menu">
+					<h2>ODA 사업 관리</h2>
+					<ul class="gnb">
+						<li>
+							<a href="javascript:;">사업목록</a>
+						</li>
+						<li class="hasChild active">
+							<a href="javascript:;">연수 사업 관리</a>
+							<ul>
+								<li><a href="javascript:;" class="on">연수 사업 목록</a></li>
+								<li><a href="javascript:;">연수 프로그램 관리</a></li>
+								<li><a href="javascript:;">연수생 관리</a></li>
+								<li><a href="javascript:;">체크리스트</a></li>
+							</ul>
+						</li>
+						<li class="hasChild">
+							<a href="javascript:;">장학 사업 관리</a>
+							<ul>
+								<li><a href="javascript:;">연수 사업 목록</a></li>
+								<li><a href="javascript:;">연수 프로그램 관리</a></li>
+								<li><a href="javascript:;">연수생 관리</a></li>
+								<li><a href="javascript:;">체크리스트</a></li>
+							</ul>
+						</li>
+						<li class="hasChild">
+							<a href="javascript:;">패키지 사업 관리</a>
+							<ul>
+								<li><a href="javascript:;">연수 사업 목록</a></li>
+								<li><a href="javascript:;">연수 프로그램 관리</a></li>
+								<li><a href="javascript:;">연수생 관리</a></li>
+								<li><a href="javascript:;">체크리스트</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<button class="btnSlide">slide</button>
+			</div>
+			<!-- //LNB 영역 -->
+
+			<!-- 컨텐츠 영역 -->
+			<div class="contents">
+				<!-- pgtBox -->
+				<div class="pgtBox">
+					<div class="lt">
+						<h2>사업품질점검</h2>
+					</div>
+
+					<ul class="breadcrumb">
+						<li class="home"><a href="javascript:;">홈</a></li>
+						<li><a href="javascript:;">완료단계</a></li>
+						<li><a href="javascript:;">사업품질점검</a></li>
+					</ul>
+
+					<div class="rt"></div>
+				</div>
+				<!-- //pgtBox -->
+
+				<!-- cntBox -->
+				<div class="cntBox">
+					<!-- tblBox -->
+					<div class="tblBox">
+						<table class="tbl col total tL w100">
+							<caption></caption>
+
+							<colgroup>
+								<col style="width:160px;">
+								<col style="width:auto;">
+								<col style="width:auto;">
+								<col style="width:auto;">
+								<col style="width:auto;">
+							</colgroup>
+
+							<thead>
+								<tr>
+									<th scope="col" class="tC">항목명</th>
+									<th scope="col" class="tC">ODA 기본정보</th>
+									<th scope="col" class="tC bgQua">시행계획 (2024.03.02)</th>
+									<th scope="col" class="tC bgSec">모니터링 (2025.02.05 기준)</th>
+									<th scope="col" class="tC bgTer">통계정보 (2025.04.16 기준)</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th scope="row">사업명</th>
+									<td>
+										<ul class="txtLi">
+											<li>개도국 방송환경 개선지원(라오스)<br><br>Support the Improvement of the Broadcasting Environment</li>
+										</ul>
+									</td>
+									<td>
+										<ul class="txtLi">
+											<li>개도국 방송환경 개선지원(라오스)<br><br>Support the Improvement of the Broadcasting Environment</li>
+										</ul>
+									</td>
+									<td>
+										<ul class="txtLi">
+											<li>개도국 방송환경 개선지원<br>(라오스 국영TV HD방송 인프라 구축 및 운용 지원)<br><br>Support the Improvement of the Broadcasting  Environment(Laos, HD Broadcasting Infrastructure  and Operation Capacity Building)</li>
+										</ul>
+									</td>
+									<td>
+										<ul class="txtLi">
+											<li>개도국 방송환경 개선지원<br>(라오스 국영TV HD방송 인프라 구축 및 운용 지원_625백만원)<br><br>Support the Improvement of the Broadcasting Environment(Laos, HD Broadcasting Infrastructure and Operation Capacity Building)</li>
+										</ul>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">사업개시(예정)일</th>
+									<td>
+										<div class="rdoBox">
+											<input type="radio" id="radio01-1" name="rdo01">
+											<label for="radio01-1">2024-02-05</label>
+										</div>
+									</td>
+									<td>-</td>
+									<td>
+										<div class="rdoBox">
+											<input type="radio" id="radio01-2" name="rdo01">
+											<label for="radio01-2">2024-03-05</label>
+										</div>
+									</td>
+									<td>
+										<div class="rdoBox">
+											<input type="radio" id="radio01-3" name="rdo01">
+											<label for="radio01-3">2024-03-05</label>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">사업완공(예정)일</th>
+									<td>
+										<div class="rdoBox">
+											<input type="radio" id="radio02-1" name="rdo02">
+											<label for="radio02-1">2025-02-05</label>
+										</div>
+									</td>
+									<td>
+										<div class="rdoBox">
+											<input type="radio" id="radio02-2" name="rdo02">
+											<label for="radio02-2">2024-03-05</label>
+										</div>
+									</td>
+									<td>-</td>
+									<td>
+										<div class="rdoBox">
+											<input type="radio" id="radio02-3" name="rdo02">
+											<label for="radio02-3">2024-03-05</label>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">사업기간</th>
+									<td>2024 ~ 2025</td>
+									<td>-</td>
+									<td>-</td>
+									<td>2024 ~ 2024</td>
+								</tr>
+								<tr>
+									<th scope="row">사업 단계</th>
+									<td>
+										<div class="rdoBox">
+											<input type="radio" id="radio03-1" name="rdo03">
+											<label for="radio03-1">2025-02-05</label>
+										</div>
+									</td>
+									<td>-</td>
+									<td>
+										<div class="rdoBox">
+											<input type="radio" id="radio03-3" name="rdo03">
+											<label for="radio03-3">2024-03-05</label>
+										</div>
+									</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<th scope="row">사업 상태</th>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<th scope="row">기관고유 사업번호</th>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<th scope="row">원조 구분</th>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<th scope="row">사업 유형</th>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<th scope="row">사업 분야</th>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<th scope="row">사업 구분</th>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<th scope="row">사업실시기관명</th>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<th scope="row">사업설명</th>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<th scope="row">총 사업비 예산</th>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<th scope="row">시행계획 예산</th>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<th scope="row">국가명</th>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<th scope="row">대상국 내 지역</th>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<th scope="row">담당자정보</th>
+									<td>
+										<div class="rdoBox">
+											<input type="radio" id="radio04-1" name="rdo04">
+											<label for="radio04-1">홍길동<br>(환경부, 045-111-2222, hong@korea.go.kr)</label>
+										</div>
+									</td>
+									<td>-</td>
+									<td>
+										<div class="rdoBox">
+											<input type="radio" id="radio04-2" name="rdo04">
+											<label for="radio04-2">홍길동<br>(환경부, 045-111-2222, hong@korea.go.kr)</label>
+										</div>
+									</td>
+									<td>
+										<div class="rdoBox">
+											<input type="radio" id="radio04-3" name="rdo04">
+											<label for="radio04-3">홍길동<br>(환경부, 045-111-2222, hong@korea.go.kr)</label>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<!-- //tblBox -->
+
+					<ul class="txtLi">
+						<li class="txtInfo">선택한 정보로 “ODA 기본정보”가 업데이트 됩니다.</li>
+						<li class="txtInfo">모니터링 정보와 통계정보는 수정되지 않습니다.</li>
+					</ul>
+				</div>
+				<!-- //cntBox -->
+
+				<!-- cntBox -->
+				<div class="cntBox">
+					<!-- titBox -->
+					<div class="titBox">
+						<div class="lt">
+							<h3>업데이트 예외 처리</h3>
+						</div>
+
+						<div class="rt">
+						</div>
+					</div>
+					<!-- //titBox -->
+
+					<!-- tblBox -->
+					<div class="tblBox">
+						<table class="tbl row">
+							<caption></caption>
+
+							<colgroup>
+								<col style="width:auto;">
+							</colgroup>
+
+							<tbody>
+								<tr>
+									<td>
+										<div class="chkBox">
+											<input type="checkbox" id="chk01-1" value="Y">
+											<label for="chk01-1">예</label>
+											<input type="text" style="width:400px;" placeholder="예외처리 사유를 20자 이내로 작성">
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<!-- //tblBox -->
+
+					<ul class="txtLi">
+						<li class="txtInfo">ODA 사업 정보를 업데이트 하지 않을 경우 “예”를 선택해주세요.</li>
+					</ul>
+				</div>
+				<!-- //cntBox -->
+
+				<div class="btn-wrap">
+					<button type="button" class="btn">목록</button>
+					<button type="button" class="btn pt">저장</button>
+				</div>
+			</div>
+			<!-- //컨텐츠 영역 -->
+		</div>
+		<!-- //컨테이너 영역 -->
+	</div>
+	<!-- //wrap -->
+
+	<!-- popup -->
+	<div class="popup" id="pop01">
+		<div class="tit">
+			<p>통계정보 제출 현황</p>
+			<button type="button" class="btn-close"><span class="sr-only">팝업창 닫기</span></button>
+		</div>
+
+		<div class="cont">
+
+			<!-- schList -->
+			<div class="schList">
+				<div class="tblBox">
+					<table class="tbl col tC">
+						<caption></caption>
+						<colgroup>
+							<col style="width: auto;">
+							<col style="width: 100px;">
+							<col style="width: 100px;">
+							<col style="width: 100px;">
+							<col style="width: 100px;">
+						</colgroup>
+						<thead>
+							<tr>
+								<th scope="col">기관명</th>
+								<th scope="col">연도</th>
+								<th scope="col">전체</th>
+								<th scope="col">제출 완료</th>
+								<th scope="col">작성 중</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="tL">기관명</td>
+								<td>2025</td>
+								<td>100</td>
+								<td>99</td>
+								<td>1</td>
+							</tr>
+							<tr>
+								<td class="tL">기관명</td>
+								<td>2025</td>
+								<td>100</td>
+								<td>99</td>
+								<td>1</td>
+							</tr>
+							<tr>
+								<td class="tL">기관명</td>
+								<td>2025</td>
+								<td>100</td>
+								<td>99</td>
+								<td>1</td>
+							</tr>
+							<tr>
+								<td class="tL">기관명</td>
+								<td>2025</td>
+								<td>100</td>
+								<td>99</td>
+								<td>1</td>
+							</tr>
+							<tr>
+								<td class="tL">기관명</td>
+								<td>2025</td>
+								<td>100</td>
+								<td>99</td>
+								<td>1</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<!-- //schList -->
+
+			<!-- pagination -->
+			<div class="pagination">
+				<button type="button" class="page-navi prev" disabled=""><span class="sr-only">이전</span></button>
+				<div class="page-links">
+					<a class="page-link active" href="#"><span class="sr-only">현재페이지</span>1</a>
+					<a class="page-link" href="#">2</a>
+					<a class="page-link" href="#">3</a>
+					<a class="page-link" href="#">4</a>
+					<a class="page-link" href="#">5</a>
+				</div>
+				<button type="button" class="page-navi next"><span class="sr-only">다음</span></button>
+
+				<p>총 949건 (1/95)</p>
+				<select name="" id="select01">
+					<option value="5">5</option>
+					<option value="10" selected>10</option>
+					<option value="30">30</option>
+					<option value="50">50</option>
+					<option value="100">100</option>
+				</select>
+			</div>
+			<!-- //pagination -->
+
+		</div>
+
+		<div class="btn-wrap">
+			<button type="button" class="btn close">닫기</button>
+		</div>
+	</div>
+	<!-- //popup -->
+</body>
+
+</html>

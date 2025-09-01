@@ -63,6 +63,10 @@ textarea:focus {outline:0 none;border-color:#434C89;}
 .tbl .empty > p {display:inline-block;font-size:16px;font-weight:500;}
 .tbl .empty > p::before {content:'';display:block;margin:0 auto 10px;width:32px;height:32px;background:url(../img/ico_nodata.svg) no-repeat center;}
 
+.tbl .bgSec {background-color:#EBF2FC !important;}
+.tbl .bgTer {background-color:#EBF7F1 !important;}
+.tbl .bgQua {background-color:#F1F0F9 !important;}
+
 .tblBox .tbl + .tbl {margin-top:-1px;}
 .tblBox .tbl + .tbl:before {background:#E2E6EA;}
 
@@ -129,9 +133,9 @@ li.indent:last-child {margin-bottom:0;}
 /* checkBox / radioBox */
 .tblChk {display: flex; justify-content: center; align-items: center; min-height: 25px;}
 :where(input[type="checkbox"], input[type="radio"]) {position: absolute !important; width: 1px !important; height: 1px !important; padding: 0 !important; margin: -1px !important; overflow: hidden !important; clip: rect(0, 0, 0, 0) !important; white-space: nowrap !important; border: 0 !important;}
-:where(input[type="checkbox"], input[type="radio"]) + label {display: inline-flex; align-items: center; gap: 5px; font-weight: 500; line-height: 1.5; color: #464C53; cursor: pointer;}
-:where(input[type="checkbox"], input[type="radio"]) + label::before {content:''; display: inline-block; width: 20px; height: 20px; background: #fff; border: 1px solid #B1B8BE; border-radius: 3px; box-sizing: border-box; transition: 0.3s all;}
-:where(input[type="checkbox"], input[type="radio"]):focus + label {outline: 1px solid #434C89;}
+:where(input[type="checkbox"], input[type="radio"]) + label {display: inline-flex; align-items: flex-start; gap: 5px; font-weight: 500; line-height: 1.5; color: #464C53; cursor: pointer;}
+:where(input[type="checkbox"], input[type="radio"]) + label::before {content:''; display: inline-block; width: 20px; height: 20px; margin-top: 1px; background: #fff; border: 1px solid #B1B8BE; border-radius: 3px; box-sizing: border-box; transition: 0.3s all;}
+:where(input[type="checkbox"], input[type="radio"]):focus-visible + label {outline: 1px solid #434C89;}
 :where(input[type="checkbox"], input[type="radio"]):checked + label::before {background: #6D4FFF url(../img/ico_chk_on.svg) no-repeat center center; border-color: #6D4FFF; transition: 0.3s all;}
 :where(input[type="checkbox"], input[type="radio"]):disabled + label {color: #B1B8BE;}
 :where(input[type="checkbox"], input[type="radio"]):disabled + label::before {background: #E6E8EA; border-color: #E6E8EA;}
