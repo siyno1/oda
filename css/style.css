@@ -705,7 +705,7 @@ button.btn-expand.on {background-image:url(../img/ico_expand_on.svg);}
 .popup.mapPopup > .btn-wrap .btn.link::after {position: relative; right: -3px; content:''; display: inline-block; width: 7px; height: 10px; margin-left: 3px; background: url(../img/ico_map_btn.svg) no-repeat center center;}
 
 /* dim */
-.dim {z-index: 4; position: fixed; top: 0; left: 0; display: none; width: 100vw; height: 100vh; background: rgba(0,0,0,0.2);}
+.dim {z-index: 1001; position: fixed; top: 0; left: 0; display: none; width: 100vw; height: 100vh; background: rgba(0,0,0,0.2);}
 
 /* table Cell */
 .tbl .cell {width: auto; border: 1px solid #D4DADF;}
