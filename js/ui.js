@@ -176,26 +176,52 @@ function init() {
         $(this).toggleClass('on');
     });
 
+	//popup Init
+	//동적 생성 팝업에 대해서는 따로 고려 필요
+	if ($('.popup').length) {
+		$('.popup').each(function(){
+			$popup = $(this);
+
+			//map 팝업이 아닌 경우 dim을 감싸는 작업
+			if ($popup.hasClass('mapPopup') === false) {
+				var $dim = $popup.closest('.dim');
+				if ($dim.length === 0) {
+					$dim = $('<div>');
+					$dim.addClass('dim');
+					$dim.insertBefore($popup);
+					$dim.append($popup);
+				}
+			}
+
+			$popup.hide();
+			$popup.css('visibility','visible');
+		});
+	}
+
     // popup Open btn
     $('button.pop').on('click', e => {
 		var $target = $('#' + $(e.currentTarget).data('target'));
+		var $originTarget = $target;
 
-		if ($target.hasClass('mapPopup')) {
-			$target.fadeIn(300);
-		} else {
+		if ($target.hasClass('mapPopup') === false) {
 			var $dim = null;
 			if ($target.closest('.dim').length) {
 				$dim = $target.closest('.dim');
+				$target.show();
+				$target = $dim;
 			} else {
 				$dim = $('<div>');
 				$dim.addClass('dim');
 				$dim.insertBefore($target);
 				$dim.append($target);
-			}
 
-			$target.show();
-			$dim.fadeIn(300);
+				$target.show();
+				$target = $dim;
+			}
 		}
+
+		$target.fadeIn(300);
+		$originTarget.triggerHandler('showPopup');
     });
 
     // popup Close btn
@@ -206,6 +232,8 @@ function init() {
 		} else {
 			$(e.currentTarget).closest('.dim').fadeOut(300);
 		}
+
+		$target.triggerHandler('closePopup');
     });
 
     // toggleBox btn

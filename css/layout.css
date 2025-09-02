@@ -105,6 +105,7 @@ strong {font-weight:700;}
 .txtLi li {margin-bottom:2px;line-height:inherit;}
 .txtLi li:last-child {margin-bottom:0;}
 .txtLi li + li.btn-wrap {margin-top:5px;}
+.txtLi + .txtLi {margin-top:10px;}
 
 .txtLi .txtBt {padding-left:8px;}
 .txtLi .txtBt::after {width:3px;height:3px;top:8px;background-color:#A8B6C3;}
@@ -118,6 +119,8 @@ strong {font-weight:700;}
 .txtInfo.txtRed {background-image:url(../img/ico_bullet_red.svg);}
 .txtLink {font-weight:500;text-decoration:underline;text-underline-position:under;cursor:pointer;}
 .txtUnderline {display:inline-block !important;color:#6D7882 !important;text-decoration:underline;text-underline-position:under;cursor:pointer;vertical-align:middle;}
+
+.txtLg {font-size:16px;}
 
 /* 텍스트 형식 버튼 */
 .txtBtn {border:0 none;font-size:inherit;font-weight:500;text-decoration:underline;text-underline-position:under;background:none;cursor:pointer;}
