@@ -271,6 +271,10 @@ button.btn-warning {display:flex;align-items:center;justify-content:center;width
 button.btn-warning img {display:block;width:100%;object-fit:contain;}
 button.btn-warning:hover {z-index:1;}
 
+button.btn-back {display:flex;align-items:center;gap:4px;margin:40px auto 0;width:auto;height:40px;padding:8px 10px;font-size:15px;font-weight:500;line-height:1;background:#fff;transition:none;border-color:#929AA2;}
+button.btn-back span {display:block;padding-top:2px;}
+button.btn-back::after {content:'';display:block;width:9px;height:9px;background:url(../img/ico_btn_link.svg) no-repeat center;}
+
 /* 검색버튼 25.08.01 */
 button.btn-apply {display: inline-flex; justify-content: center; align-items: center; gap: 5px; min-width: 100px; height: 40px; padding: 10px; text-align: center; font-size: 15px; font-weight: 400; line-height: 1.5; color: #fff; background: #6D4FFF; border-color: #58616A!important; border-radius: 4px;}
 button.btn-apply::before {content:''; display: inline-block; width: 13px; height: 13px; background: url(../img/ico_apply.svg) no-repeat center center;}
@@ -1291,3 +1295,10 @@ button[class^=btnList] {display:inline-block;box-sizing:border-box;border:0 none
 .accordionLi > li.on .cntArea {display:block;}
 .accordionLi > li.on .titArea > strong {color:#5349C0;}
 .accordionLi > li.on .titArea button {background-image:url(../img/ico_accordion_on.svg);}
+
+.errorCont h1 {box-sizing:border-box;width:100%;height:100%;padding:15px 30px;}
+.errorMsgCont {position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);text-align:center;}
+.errorMsgCont .img {display:block;position:relative;width:200px;height:120px;margin:0 auto;background:url(../img/ico_err_monitor.svg) no-repeat 50% 27px;}
+.errorMsgCont .code {display:block;position:absolute;top:10px;right:15px;width:52px;height:32px;background:url(../img/ico_err_tooltip.svg) no-repeat center;text-align:center;font-size:15px;font-weight:900;line-height:24px;color:#fff;}
+.errorMsgCont .t1 {margin-top:24px;font-size:28px;line-height:1.5;font-weight:700;color:#1e2124;}
+.errorMsgCont .t2 {margin-top:8px;font-size:16px;line-height:1.6;color:#464c53;}
