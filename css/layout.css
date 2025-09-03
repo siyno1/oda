@@ -121,6 +121,7 @@ strong {font-weight:700;}
 .txtUnderline {display:inline-block !important;color:#6D7882 !important;text-decoration:underline;text-underline-position:under;cursor:pointer;vertical-align:middle;}
 
 .txtLg {font-size:16px;}
+.txtInfo.txtLg {background-position:0 6px;}
 
 /* 텍스트 형식 버튼 */
 .txtBtn {border:0 none;font-size:inherit;font-weight:500;text-decoration:underline;text-underline-position:under;background:none;cursor:pointer;}
