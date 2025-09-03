@@ -261,6 +261,10 @@ button.btn-pin {display:block;width:26px;height:40px;position:absolute;left:0;to
 button.btn-vw-world {display:none;width:auto;position:absolute;right:14px;top:16px;height:40px;padding:0 24px 0 10px;border:0 none;font-size:15px;line-height:1;color:#fff;background:#6D4FFF;transition:none;}
 button.btn-vw-world::after {content:'';display:block;position:absolute;right:10px;top:15px;width:9px;height:9px;background:url(../img/ico_view.svg) no-repeat center;transition:transform 0.3s;transform-origin:center;}
 button.btn-vw-world.on::after {transform:rotate(90deg);}
+button.btn-vw-warning {width:auto;position:absolute;right:14px;top:16px;height:40px;padding:0 24px 0 10px;border:0 none;font-size:15px;line-height:1;color:#fff;background:#256EF4;transition:none;}
+button.btn-vw-warning::after {content:'';display:block;position:absolute;right:10px;top:15px;width:9px;height:9px;background:url(../img/ico_view.svg) no-repeat center;transition:transform 0.3s;transform-origin:center;}
+button.btn-warning {display:flex;align-items:center;justify-content:center;width:40px;height:50px;position:absolute;left:0;top:0;border:0 none;background:none;}
+button.btn-warning img {display:block;width:100%;object-fit:contain;}
 
 /* 검색버튼 25.08.01 */
 button.btn-apply {display: inline-flex; justify-content: center; align-items: center; gap: 5px; min-width: 100px; height: 40px; padding: 10px; text-align: center; font-size: 15px; font-weight: 400; line-height: 1.5; color: #fff; background: #6D4FFF; border-color: #58616A!important; border-radius: 4px;}
@@ -926,6 +930,10 @@ button[class^=btnList] {display:inline-block;box-sizing:border-box;border:0 none
 .tipCont.left::after {left:auto;right:13px;}
 
 .tipCont .msg {font-size:15px;line-height:1.5;}
+
+.tipCont .tabBox {margin-top:10px;}
+.tipCont .tabBox:first-child {margin-top:0;}
+.tipCont .tabBox .tab {margin-bottom:12px;}
 
 /* file list */
 .fileList li + li {margin-top:4px;}
