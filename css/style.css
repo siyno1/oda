@@ -271,7 +271,7 @@ button.btn-warning {display:flex;align-items:center;justify-content:center;width
 button.btn-warning img {display:block;width:100%;object-fit:contain;}
 button.btn-warning:hover {z-index:1;}
 
-button.btn-back {display:flex;align-items:center;gap:4px;margin:40px auto 0;width:auto;height:40px;padding:8px 10px;font-size:15px;font-weight:500;line-height:1;background:#fff;transition:none;border-color:#929AA2;}
+button.btn-back {display:flex;align-items:center;gap:4px;margin:40px auto 0;width:auto;height:40px;padding:8px 10px;font-size:15px;font-weight:500;line-height:1;background:#fff;transition:none;}
 button.btn-back span {display:block;padding-top:2px;}
 button.btn-back::after {content:'';display:block;width:9px;height:9px;background:url(../img/ico_btn_link.svg) no-repeat center;}
 
