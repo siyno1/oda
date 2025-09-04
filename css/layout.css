@@ -125,6 +125,8 @@ strong {font-weight:700;}
 .txtLg {font-size:16px;}
 .txtInfo.txtLg {background-position:0 6px;}
 
+.txtHeading {margin-bottom:12px;font-size:19px;text-align:center;line-height:1.5;font-weight:700;}
+
 /* 텍스트 형식 버튼 */
 .txtBtn {border:0 none;font-size:inherit;font-weight:500;text-decoration:underline;text-underline-position:under;background:none;cursor:pointer;}
 .txtPop {border:0 none;font-size:inherit;line-height:inherit;color:#464C53;background:none;}
