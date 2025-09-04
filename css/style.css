@@ -408,7 +408,7 @@ button.btn-expand.on {background-image:url(../img/ico_expand_on.svg);}
 .tab::after {position: absolute; bottom: 0; left: 0; content:''; width: 100%; height: 1px; background: #B1B8BE;}
 .tab ul {display: inline-flex;}
 .tab li + li {margin-left:-1px;}
-.tab li button {display:block; position: relative; width: auto; min-width: 100px; height: 42px; padding: 5px 15px; border:solid #B1B8BE; border-width:1px 1px 0 1px; text-align: center; font-size: 16px; font-weight: 400; color: #464C53; background: #fff; outline:0 none;}
+.tab li button {display:block; position: relative; width: auto; height: 42px; padding: 5px 15px; border:solid #B1B8BE; border-width:1px 1px 0 1px; text-align: center; font-size: 16px; font-weight: 400; color: #464C53; background: #fff; outline:0 none;}
 .tab li button:hover,
 .tab li button:focus {background:#EEEEF4}
 .tab li:first-child button {border-radius:6px 0 0 0;}
@@ -420,7 +420,7 @@ button.btn-expand.on {background-image:url(../img/ico_expand_on.svg);}
 /* tab intab */
 .tab.ty02 {background-color:#F2F4FE;}
 .tab.ty02::after {background-color:#D9E1F2;}
-.tab.ty02 ul {gap:60px;}
+.tab.ty02 ul {gap:30px;}
 .tab.ty02 li {margin:0;}
 .tab.ty02 li button {border:0 none;font-size:15px;font-weight:400;background:none;}
 .tab.ty02 li button:hover,
@@ -626,7 +626,7 @@ button.btn-expand.on {background-image:url(../img/ico_expand_on.svg);}
 
 /* tooltip */
 .tooltipBox {display: flex; justify-content: center; align-items: center; width: 100%; background: #F4F5F6;}
-.tooltip {display: inline-flex; align-items: center; gap: 5px; font-size: 14px; font-weight: 500; line-height: 1.5; color: #8A949E;}
+.tooltip {display: inline-flex; align-items: center; gap: 5px; font-size: 15px; font-weight: 500; line-height: 1.5; color: #8A949E;}
 .tooltip::before {content:''; display: inline-block; width: 12px; min-width: 12px; height: 12px; background: url(../img/ico_bullet.svg) no-repeat center;}
 
 /* map */
@@ -700,12 +700,10 @@ button.btn-expand.on {background-image:url(../img/ico_expand_on.svg);}
 /* popup Content */
 .popup .schList {margin: 0;}
 .popup .tblBox .tbl {min-width: auto;}
-.popup .tblBox .tbl td {font-size: 14px;}
-.popup .pagination {margin-top: 12px;}
 .popup .tooltip {font-size: 12px; font-weight: 600; color: #6D7882;}
+.popup .titBox {margin-bottom:4px;}
 .popup .titBox h3 {display: inline-flex; align-items: center; gap: 8px; padding: 0; background: transparent;}
 .popup .titBox h3::before {content:''; display: inline-block; width: 5px; height: 5px; background: #6d4fff; border-radius: 50%;}
-.popup .tblBox + .titBox {margin-top: 16px;}
 
 /* popup mapPopup */
 .popup.mapPopup {top:160px;left:30px;width: 690px; padding: 25px 25px 20px 25px; border-radius:6px;transform:none;transition:left 0.3s;}/* 상단 여백 130px + 30px */
@@ -720,8 +718,9 @@ button.btn-expand.on {background-image:url(../img/ico_expand_on.svg);}
 .popup.mapPopup .tabCont {padding-bottom: 25px;}
 .popup.mapPopup .tabCont > li {display: flex; flex-direction: column; flex-wrap:nowrap; gap: 11px; overflow-y: auto;}
 .popup.mapPopup .tabCont > li:not(.active) {display: none;}
-.popup.mapPopup .tabCont p {font-size: 14px; font-weight: 400; line-height: 1.4; color: #1E2124;}
-.popup.mapPopup > .btn-wrap .btn {height: 34px; padding: 5px 14px; border-color: #B1B8BE;}
+.popup.mapPopup .tabCont p {font-size: 16px; font-weight: 400; line-height: 1.4; color: #464c53;}
+.popup.mapPopup .tabCont b {color:#1e2124;}
+.popup.mapPopup > .btn-wrap .btn {height: 36px; padding: 5px 14px; border-color: #B1B8BE;}
 .popup.mapPopup > .btn-wrap .btn.link::after {position: relative; right: -3px; content:''; display: inline-block; width: 7px; height: 10px; margin-left: 3px; background: url(../img/ico_map_btn.svg) no-repeat center;}
 
 /* dim */
@@ -753,16 +752,17 @@ button.btn-expand.on {background-image:url(../img/ico_expand_on.svg);}
 .adBox td .btn-wrap {justify-content: flex-start; width: 65px; padding-left: 30px; box-sizing: content-box;}
 .adBox td .btn-wrap button {flex-shrink: 0;}
 .adBox > .title {display: flex; align-items: center;}
-.adBox > .title .chk {margin-right: 9px;}
+.adBox > .title .chk {margin-right: 10px;}
 .adBox > .title .chk label {font-weight: 400;}
 .adBox > ul > li {display: flex; align-items: center; padding: 10px 30px 10px 20px;}
 .adBox .txt {flex: 1; display: flex; align-items: flex-start; flex-direction: column; gap: 0; width: 100%; height: 100%; min-height: 70px; max-height: 100px; padding: 10px; background: #fff; border: 1px solid #B1B8BE; border-radius: 4px; overflow-y: auto;}
-.adBox .txt p {font-size: 14px; font-weight: 500; line-height: 1.8; color: #1E2124;}
+.adBox .txt p {font-size: 14px; font-weight: 500; line-height: 1.8; color: #464C53;}
 .adBox .num {display: block; padding: 20px; font-size: 14px; font-weight: 500; line-height: 1.5; color: #464C53;}
 .adBox :where(.total, .use) {display: flex; align-items: center; padding-left: 30px;}
+.adBox :where(.total, .use) label {font-weight:500;}
 .adBox :where(.total, .use) :where(input, .selectBox) {width: 120px; margin-left: 12px;}
 .adBox .total input {text-align: right;}
-.adBox .total p {display: block; margin-left: 7px; font-size: 14px; font-weight: 400; line-height: 1.5; line-height: 150%; color: #464C53;}
+.adBox .total p {display: block; margin-left: 7px; font-size: 16px; font-weight: 700; line-height: 1.5; line-height: 150%; color: #8a949e;}
 .adBox .total p span {color: #D63D4A;}
 .adBox .txtBox {flex: 1;}
 .adBox .txtBox input {width: 100%;}
@@ -990,7 +990,8 @@ button[class^=btnList] {display:inline-block;box-sizing:border-box;border:0 none
 /* boxLi : 진단항목 / 심사기준관리 리스트 */
 .boxLi > li {padding:16px 20px 20px;border:1px solid #e2e6ea;border-radius:4px;background:#f4f5f6;}
 .boxLi > li + li {margin-top:40px;}
-.boxLi .boxTit {display:flex;align-items:center;justify-content:space-between;padding-bottom:8px;}
+.boxLi > li > .boxTit {padding-bottom:12px;}
+.boxLi .boxTit {display:flex;align-items:center;justify-content:space-between;padding-bottom:10px;}
 .boxLi .boxTit .lt,
 .boxLi .boxTit .rt {display:flex;align-items:center;gap:10px;}
 .boxLi .boxTit .lt > *,
@@ -1012,7 +1013,7 @@ button[class^=btnList] {display:inline-block;box-sizing:border-box;border:0 none
 .boxLi .tbl {border:1px solid #E2E6EA;}
 .boxLi .tbl::before {display:none;}
 .boxLi .tbl thead th {background:none;}
-.boxLi .tbl tbody td {font-weight:500;}
+.boxLi .tbl tbody td {color:#464c53;font-weight:500;}
 
 /* boxLi margin */
 :where(.tblBox) + .boxLi {margin-top:20px;}
