@@ -519,8 +519,8 @@ button.btn-expand.on {background-image:url(../img/ico_expand_on.svg);}
 /* fltCont */
 .fltCont {width:100%;}
 .fltCont li:not(.on) {display: none;}
-.fltCont li {display: flex; gap:2px 20px; position: relative; padding: 32px 20px; background: #fff; border: 1px solid #ddd; border-radius: 12px;}
-.fltCont li > p { flex-shrink:0; margin-top:-22px; font-size: inherit; font-weight: 600; line-height: 1.5; color: #1E2124;}
+.fltCont li {position: relative; padding: 20px; background: #fff; border: 1px solid #ddd; border-radius: 12px;}
+.fltCont li > p {margin-bottom:12px; font-size: inherit; font-weight: 600; line-height: 1.5; color: #1E2124;}
 .fltCont li input {width: 351px; height: 40px;}
 .fltCont .chkBox,
 .fltCont .rdoBox {min-height:40px;}
@@ -551,11 +551,11 @@ button.btn-expand.on {background-image:url(../img/ico_expand_on.svg);}
 .contList {position: relative; display: flex; justify-content: space-between; align-items: flex-start; width: 100%; gap:20px;}
 .contList > div {flex:1; display:flex; gap:15px; align-items:flex-start; position:relative;}
 .contList > div + div::before {content:''; display:block; position:absolute; width: 1px; height: 100%; margin-left: -20px; background: #ddd;}
-.contList > div > p {display: inline-flex; align-items: center; gap:6px; min-height:30px; font-size:inherit; font-weight:500; line-height:1; color: #1E2124;}
+.contList > div > p {display: inline-flex; align-items: center; gap:6px; min-height:30px; font-size:15px; font-weight:500; line-height:1; color: #1E2124;}
 .contList > div > p::before {content:''; display: inline-block; width: 4px; height: 4px; background: #d9d9d9; border-radius: 50%;}
 .contList ul {flex:1; display: grid; grid-template-columns:repeat(auto-fill, minmax(100px, 1fr)); gap: 8px 6px; max-height: 106px; padding:0 40px 0 0; overflow-y: auto;}
-.contList button {width: 100%; height: 100%; min-height: 29px; padding: 4px 5px; font-size: 14px; font-weight: 400; line-height: 1.5; color: #1E2124; background: #fff; border: 1px solid #CDD1D5; border-radius: 12px;}
-.contList button.on {color: #256EF4; border-color: #256EF4;}
+.contList button {width: 100%; height: 100%; min-height:30px; padding: 4px 5px; font-size: 14px; font-weight: 400; line-height: 1.2; color: #464c53; background: #fff; border: 1px solid #CDD1D5; border-radius: 12px;}
+.contList button.on {color: #5349c0; border-color: #5349c0;}
 .contList button:focus-within {outline: none;}
 .fltCont .contList li {flex: none; display: block; padding: 0; border: none;}
 
@@ -571,14 +571,13 @@ button.btn-expand.on {background-image:url(../img/ico_expand_on.svg);}
 
 
 /* span[badge Type01] */
-.span {display: inline-block; width: auto; min-width: 70px; padding: 4px 16px; margin-left: 2px; text-align: center; font-size: 14px; font-weight: 400; line-height: 18px; color: #464C53; background: #E8E8E8; border-radius: 4px;}
+.span {display: inline-block; width: auto; min-width: 70px; padding: 4px 16px; text-align: center; font-size: 14px; font-weight: 500; line-height: 18px; color: #464C53; background: #E8E8E8; border-radius: 4px;}
 .span.orange {color: #895919; background: #F8EFDF;}
 .span.blue {color: #2459A2; background: #E6F0FD;}
 .span.green {color: #6D7B10; background: #F1F8DF;}
 .span.cyan {color: #36795A; background: #E2F3F2;}
 .span.red {color:#D63D4A; background: #FBECED;}
-.span + .span {margin-left: 2px;}
-.span:last-child {margin-right: 8px;}
+.span:last-child {margin-right: 4px;}
 
 /* badge[badge Type02] */
 .badge {display: inline-block; width: auto; min-width: 46px; padding:3px 4px 2px; margin: auto; text-align: center; font-size: 15px; font-weight: 500; line-height: 21px; color: #fff; background: #ACABAB; border: 0; border-radius: 4px;}
@@ -600,7 +599,7 @@ button.btn-expand.on {background-image:url(../img/ico_expand_on.svg);}
 .schList .tbl::before {content:none;}
 /* .schList .tbl:not(.de)::before {height: 100%; background: transparent; border: 1px solid #CED6DD; border-radius: 6px; box-sizing: border-box; pointer-events: none;} */
 .schList .tbl tbody tr:last-child {border: none;}
-.schList .tbl:not(.de) thead th {font-size: 16px; font-weight: 600; line-height: 1.5; color: #1E2124;}
+.schList .tbl:not(.de) thead th {font-size: 15px; font-weight: 500; line-height: 1.5; color: #1E2124;}
 .schList .tbl:not(.de) td {font-size: 16px; font-weight: 400; line-height: 1.5; letter-spacing: -1px; color: #6D7882;}
 .schList .tbl td {padding: 7px 15px; text-align: left;}
 .schList .tbl a {display: block; max-width: 100%; font-size: inherit; font-weight: 500; line-height: 1.5; color: #1E2124; letter-spacing: 0; white-space: nowrap; text-overflow: ellipsis; overflow: hidden;}
