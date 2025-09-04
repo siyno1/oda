@@ -150,32 +150,6 @@
 										<input type="text" class="pickr" placeholder="날짜를 선택하세요">
 									</div>
 								</li>
-
-								<li class="contBox">
-									<p>강사명</p>
-									<div class="contList">
-										<div>
-											<ul>
-												<li><button type="button">전체</button></li>
-												<li><button type="button">국무조정실</button></li>
-											</ul>
-										</div>
-									</div>
-								</li>
-
-								<li class="contBox">
-									<p>장소</p>
-									<div class="contList">
-										<div>
-											<ul>
-												<li><button type="button">전체</button></li>
-												<li><button type="button">예비</button></li>
-												<li><button type="button">진행</button></li>
-												<li><button type="button">종료</button></li>
-											</ul>
-										</div>
-									</div>
-								</li>
 							</ul>
 						</div>
 					</div>
@@ -563,7 +537,7 @@
 		//jquery defer 때문에 아래처럼 사용하였습니다.
 		document.addEventListener("DOMContentLoaded", function () {
 			openListDetail = function(id){
-				$('#' + id).toggleClass('on');
+				$('#' + id).addClass('on');
 			}
 
 			closeListDetail = function(id){
