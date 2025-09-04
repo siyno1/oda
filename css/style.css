@@ -1313,3 +1313,10 @@ button[class^=btnList] {display:inline-block;box-sizing:border-box;border:0 none
 .errorMsgCont .code {display:block;position:absolute;top:10px;right:15px;width:52px;height:32px;background:url(../img/ico_err_tooltip.svg) no-repeat center;text-align:center;font-size:15px;font-weight:900;line-height:24px;color:#fff;}
 .errorMsgCont .t1 {margin-top:24px;font-size:28px;line-height:1.5;font-weight:700;color:#1e2124;}
 .errorMsgCont .t2 {margin-top:8px;font-size:16px;line-height:1.6;color:#464c53;}
+
+/* toggleListDetail */
+.toggleListDetail {display:flex;align-items:flex-start;}
+.toggleListDetail > .list {flex:1 1 auto;}
+.toggleListDetail > .detail {flex:0 0 auto;width:0;overflow:hidden;transition:width 0.3s ease-in-out, margin 0.3s ease-in-out;}
+.toggleListDetail > .detail > .tblBox {width:820px;}
+.toggleListDetail.on > .detail {margin-left:48px;box-sizing:border-box;width:820px;}

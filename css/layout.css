@@ -84,6 +84,8 @@
 .titBox h3,
 .titBox h4 {padding-left:20px;background:url(../img/tit_bull02.svg) no-repeat left center;font-size:17px;font-weight:700;line-height:36px;}
 .titBox .lt {display:flex;gap:10px;align-items:center;}
+
+.botBox {display:flex;align-items:flex-start;width:100%;padding-top:10px;}
 .titDisc  {margin-bottom:6px;line-height:1.5;}
 .titDisc.txtBt::after {top:8px;}
 
