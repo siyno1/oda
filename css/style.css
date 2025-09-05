@@ -471,7 +471,7 @@ button.btn-expand.on {background-image:url(../img/ico_expand_on.svg);}
 .page-navi.next:disabled {background-image: url(../img/ico_next_dis.svg);}
 
 .page-links {display:flex; align-items:center; gap:10px;}
-.page-links a {display:block; width:30px; height:30px; color: #464C53; font-weight: 400; font-size:16px; text-align:center; line-height: 30px; border-radius: 4px;}
+.page-links a {display:block; box-sizing:border-box; min-width:30px; height:30px; padding:0 6px; color: #464C53; font-weight: 400; font-size:16px; text-align:center; line-height: 30px; border-radius: 4px;}
 .page-links a.active {font-weight: 700; color: #5349C0; background: #F2F4FE;}
 .page-links a:hover {text-decoration: underline;}
 .pagination p {margin-left: 18px; text-align: center; font-size: 15px; font-weight: 400; line-height: 1.5; color: #6F7F92;}
@@ -612,11 +612,11 @@ button.btn-expand.on {background-image:url(../img/ico_expand_on.svg);}
 
 .cntBox + .cntBox .tblDb {margin-top:0;}
 
-/* 1:2, 2:3 레이아웃 추가 */
+/* 1:2, 2:3 레이아웃 추가 show / hide 고려 수정 */
 .tblDb.col1-2 > li {flex:1 1 0;}
-.tblDb.col1-2 > li:last-child {flex:2 1 0;}
+.tblDb.col1-2 > li ~ li {flex:2 1 0;}
 .tblDb.col2-3 > li {flex:2 1 0;}
-.tblDb.col2-3 > li:last-child {flex:3 1 0;}
+.tblDb.col2-3 > li ~ li {flex:3 1 0;}
 
 .tblDb .tbl td {font-weight: 500; line-height: 1.5; color: #464C53; letter-spacing: 0;}
 /* 케이스 확인 필요(스타일 간섭 심함)
