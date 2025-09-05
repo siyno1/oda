@@ -551,10 +551,11 @@
 
 
 	<script>
-		//우측 상세 열고 닫기
+		//우측 상세 열고 닫기 샘플
 		var openListDetail, closeListDetail;
 
-		//jquery defer 때문에 아래처럼 사용하였습니다.
+		//jquery defer 때문에 아래처럼 DOMContentLoaded 사용하였습니다.
+		//내부망에서 개발 시에는 DOMContentLoaded 구분 필요 없을 것 같습니다.
 		document.addEventListener("DOMContentLoaded", function () {
 			openListDetail = function(id){
 				$('#' + id).addClass('on');
