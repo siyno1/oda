@@ -335,8 +335,8 @@ button.btn-expand {display:inline-block;width:20px;height:20px;margin-left:2px;b
 button.btn-expand.on {background-image:url(../img/ico_expand_on.svg);}
 
 /* file-upload */
-.file {display: flex; align-items: center; gap: 6px; width:100%;}
-.file .btn-wrap {flex:0 0 auto; flex-direction: column; width:auto;}
+.file {display: flex; flex-direction: column; gap: 6px; width:100%;}
+.file .btn-wrap {flex:0 0 auto; width:auto;}
 .file-upload {flex:1 1 0; overflow:hidden; position: relative; display: flex; justify-content: center; align-items: center; min-width:0; min-height: 100px; border: 1px dashed #8A949E; background-color:#fff;}
 .file-upload ul {display: flex; flex-direction: column; gap: 6px; width: 100%; height: auto; max-height: 152px; padding: 10px; overflow-y: auto;}
 .file-upload ul li {display: flex; align-items: center; gap: 5px;}
@@ -655,6 +655,7 @@ button.btn-expand.on {background-image:url(../img/ico_expand_on.svg);}
 
 
 /* popup */
+.popupWrapDiv {position:relative;z-index:1001;}
 .popup {display:flex; flex-direction:column; box-sizing:border-box; position: fixed; top: 50%; left: 50%; width: 880px; max-width:calc(100% - 32px); max-height:calc(100% - 80px); background: #fff; border-radius: 12px; box-shadow: 1px 4px 8px 0px rgba(0, 0, 0, 0.25); transform: translateX(-50%) translateY(-50%); visibility:hidden; transition:width 0.3s; z-index:4;}
 .popup .tit {display: inline-flex; align-items: center; width: 100%; height: 42px; padding: 10px 27px; background: #6D4FFF; border-radius: 12px 12px 0 0;}
 .popup .tit p {padding-top:4px; font-size: 19px; font-weight: 700; line-height: 1.5; color: #fff;}
@@ -1313,6 +1314,18 @@ button[class^=btnList] {display:inline-block;box-sizing:border-box;border:0 none
 .errorMsgCont .code {display:block;position:absolute;top:10px;right:15px;width:52px;height:32px;background:url(../img/ico_err_tooltip.svg) no-repeat center;text-align:center;font-size:15px;font-weight:900;line-height:24px;color:#fff;}
 .errorMsgCont .t1 {margin-top:24px;font-size:28px;line-height:1.5;font-weight:700;color:#1e2124;}
 .errorMsgCont .t2 {margin-top:8px;font-size:16px;line-height:1.6;color:#464c53;}
+
+/* errorPopupCont */
+.errorPopupCont .top {padding-top:68px;background:url(../img/ico_error.svg) no-repeat center 10px;}
+.errorPopupCont .t1 {text-align:center;font-size:18px;line-height:1.5;font-weight:700;}
+.errorPopupCont .summary {margin-top:24px;padding:20px;border-top:1px dashed #CDD1D5;background-color:#F4F5F6;}
+.errorPopupCont .summary > li {display:flex;gap:12px;}
+.errorPopupCont .summary > li + li {margin-top:8px;}
+.errorPopupCont .summary > li > strong {flex-shrink:0;display:block;box-sizing:border-box;position:relative;width:74px;padding-left:13px;font-size:16px;font-weight:700;line-height:1.5;color:#464c53;}
+.errorPopupCont .summary > li > strong::after {content:'';display:block;position:absolute;left:0;top:9px;width:5px;height:5px;border-radius:50%;background-color:#D5D5D5;}
+.errorPopupCont .summary > li > div {flex:1 1 auto;font-size:16px;font-weight:400;line-height:1.5;color:#464c53;word-break:break-all;}
+.errorPopupCont .summary > li.column {align-items: flex-start;}
+.errorPopupCont .summary > li.column textarea {height:100px;}
 
 /* toggleListDetail */
 .toggleListDetail {display:flex;align-items:flex-start;}
