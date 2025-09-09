@@ -1326,6 +1326,7 @@ button[class^=btnList] {display:inline-block;box-sizing:border-box;border:0 none
 .errorPopupCont .summary > li > div {flex:1 1 auto;font-size:16px;font-weight:400;line-height:1.5;color:#464c53;word-break:break-all;}
 .errorPopupCont .summary > li.column {align-items: flex-start;}
 .errorPopupCont .summary > li.column textarea {height:100px;}
+.errorPopupCont .summary textarea {resize:vertical;}
 
 /* toggleListDetail */
 .toggleListDetail {display:flex;align-items:flex-start;}
