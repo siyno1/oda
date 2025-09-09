@@ -27,23 +27,31 @@
 			<div class="wrap">
 				<h1><a href="./../gate.html"><img src="./../../img/logo.svg"></a></h1>
 				<ul class="gnb">
-					<li><a href="javascript:;">준비단계</a></li><!-- 활성화 시 li class="active" -->
+					<li class="tit">사업관리</li>
+					<li class="active"><a href="javascript:;">준비단계</a></li><!-- 활성화 시 li class="active" -->
 					<li><a href="javascript:;">진행단계</a></li>
 					<li><a href="javascript:;">완료단계</a></li>
+				</ul>
+
+				<ul class="subGnb">
+					<li><a href="javascript:;">위원회관리</a></li>
 					<li><a href="javascript:;">정보마당</a></li>
 					<li><a href="javascript:;">운영관리</a></li>
 				</ul>
-				<div class="userBox">
-					<button class="btnUser">운영관리자</button>
-					<ul class="dropDown">
-						<li><a href="javascript:;">쪽지</a></li>
-						<li><a href="javascript:;">마이페이지</a></li>
-						<li><a href="javascript:;">로그아웃</a></li>
-					</ul>
-				</div>
-				<div class="searchBox">
-					<input type="text" placeholder="통합검색">
-					<button class="btnSearch">검색</button>
+
+				<div class="userMenu">
+					<div class="userBox">
+						<button class="btnUser">운영관리자</button>
+						<ul class="dropDown">
+							<li><a href="javascript:;">쪽지</a></li>
+							<li><a href="javascript:;">마이페이지</a></li>
+							<li><a href="javascript:;">로그아웃</a></li>
+						</ul>
+					</div>
+					<div class="searchBox">
+						<input type="text" placeholder="통합검색">
+						<button class="btnSearch">검색</button>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -51,6 +59,73 @@
 
 		<!-- 컨테이너 영역 -->
 		<div id="container" class="container">
+			<!-- LNB 영역 -->
+			<div id="side" class="side">
+				<div class="side_menu">
+					<h2>ODA 사업 관리</h2>
+
+					<!-- pinBox:메뉴고정 -->
+					<div class="pinBox">
+						<label class="pinBar">
+							<input type="checkbox" name="pinned">
+							<span></span>
+						</label>
+					</div>
+					<!-- //pinBox:메뉴고정 -->
+
+					<!-- gnb -->
+					<ul class="gnb">
+						<li>
+							<a href="javascript:;">사업목록</a>
+						</li>
+						<li class="hasChild active">
+							<a href="javascript:;">연수 사업 관리</a>
+							<ul>
+								<li class="hasChild active"><!-- 하위메뉴 있는 경우 li class="hasCild", 열림 li class="hasCild active" -->
+									<a href="javascript:;">연수 사업 목록</a>
+									<ul>
+										<li><a href="javascript:;" class="on">연수 사업 목록</a></li><!-- depth와 관계 없이 활성화 메뉴 a class="on" -->
+										<li><a href="javascript:;">연수 프로그램 관리</a></li>
+										<li><a href="javascript:;">연수생 관리</a></li>
+										<li><a href="javascript:;">체크리스트</a></li>
+									</ul>
+								</li>
+								<li><a href="javascript:;" class="on">연수 프로그램 관리</a></li>
+								<li><a href="javascript:;">연수생 관리</a></li>
+								<li><a href="javascript:;">체크리스트</a></li>
+							</ul>
+						</li>
+						<li class="hasChild">
+							<a href="javascript:;">장학 사업 관리</a>
+							<ul>
+								<li><a href="javascript:;">연수 사업 목록</a></li>
+								<li><a href="javascript:;">연수 프로그램 관리</a></li>
+								<li><a href="javascript:;">연수생 관리</a></li>
+								<li><a href="javascript:;">체크리스트</a></li>
+							</ul>
+						</li>
+						<li class="hasChild">
+							<a href="javascript:;">패키지 사업 관리</a>
+							<ul>
+								<li><a href="javascript:;">연수 사업 목록</a></li>
+								<li><a href="javascript:;">연수 프로그램 관리</a></li>
+								<li><a href="javascript:;">연수생 관리</a></li>
+								<li><a href="javascript:;">체크리스트</a></li>
+							</ul>
+						</li>
+					</ul>
+					<!-- //gnb -->
+
+					<ul class="side-quick">
+						<li><a class="site-reg" href="#">일괄등록</a></li>
+						<li><a class="site-help" href="#">헬프데스크</a></li>
+						<li><a class="site-mng" href="#">부처별 ODA 담당자</a></li>
+						<li><a class="site-stats" href="#">ODA 통계</a></li>
+					</ul>
+				</div>
+				<button class="btnSlide">slide</button>
+			</div>
+			<!-- //LNB 영역 -->
 
 			<!-- 컨텐츠 영역 -->
 			<div class="contents">
@@ -66,6 +141,9 @@
 						<div class="mainFlt">
 							<select name="" class="mainCombo">
 								<option value="">2025년도</option>
+								<option value="">2026년도</option>
+								<option value="">2027년도</option>
+								<option value="">2028년도</option>
 							</select>
 						</div>
 					</div>
@@ -81,40 +159,29 @@
 							<div class="mainSide">
 								<ul class="bizSummary">
 									<li>
-										<div class="bizSum">
-											<p class="name biz01">예비 사업</p>
+										<div class="bizSum biz01">
+											<p class="name">예비 사업</p>
 											<span class="count"><strong>100</strong> 건</span>
 											<button type="button" title="바로가기"></button>
 										</div>
 									</li>
 									<li>
-										<div class="bizSum">
-											<p class="name biz02">진행 사업</p>
+										<div class="bizSum biz02">
+											<p class="name">계획 사업</p>
 											<span class="count"><strong>100</strong> 건</span>
 											<button type="button" title="바로가기"></button>
 										</div>
-										<ul class="bizSumDetail">
-											<li>
-												<p class="name">준비단계</p>
-												<span class="count"><strong>100</strong> 건</span>
-											</li>
-											<li>
-												<p class="name">계약단계</p>
-												<span class="count"><strong>100</strong> 건</span>
-											</li>
-											<li>
-												<p class="name">착수단계</p>
-												<span class="count"><strong>100</strong> 건</span>
-											</li>
-											<li>
-												<p class="name">진행단계</p>
-												<span class="count"><strong>100</strong> 건</span>
-											</li>
-										</ul>
 									</li>
 									<li>
-										<div class="bizSum">
-											<p class="name biz03">완료 사업</p>
+										<div class="bizSum biz03">
+											<p class="name">진행 사업</p>
+											<span class="count"><strong>100</strong> 건</span>
+											<button type="button" title="바로가기"></button>
+										</div>
+									</li>
+									<li>
+										<div class="bizSum biz04">
+											<p class="name">완료 사업</p>
 											<span class="count"><strong>100</strong> 건</span>
 											<button type="button" title="바로가기"></button>
 										</div>
@@ -154,7 +221,7 @@
 									<li>
 										<div class="inner">
 											<p class="name monitor03">통계 (잠정) 입력 기간</p>
-											<p class="summary tyDate"></p>
+											<p class="summary tyDate">2025.07.01 ~ 07.01</p>
 										</div>
 									</li>
 								</ul>
