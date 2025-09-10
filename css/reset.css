@@ -3,7 +3,7 @@
 /* reset */
 * {-webkit-text-size-adjust:none; margin:0; padding:0; font-family: inherit; line-height: 1; box-sizing: border-box;}
 html {font-size: 62.5%;}
-body {font-size: 1.6rem; overflow-x: hidden;}
+body {font-size: 1.6rem;}
 html, body {position: relative; width: 100%; height: 100%; font-family: "Pretendard GOV", sans-serif; color: #1E2124; font-weight: 400; line-height: 1.5; word-break: keep-all; word-wrap: break-word; -webkit-tap-highlight-color: transparent; scroll-behavior: smooth;}
 h1, h2, h3, h4, h5, h6 {font-size: 100%; line-height: 100%;}
 table {border-collapse:collapse; border-spacing:0; border:0; width:100%;}

@@ -1171,7 +1171,7 @@ button[class^=btnList] {display:inline-block;box-sizing:border-box;border:0 none
 .mainBiz .mainContent {margin-bottom:50px;}
 .mainBiz .mainContent:last-child {margin-bottom:0;}
 
-.list-card {display:grid;grid-template-columns:repeat(auto-fit,minmax(750px,1fr));gap:8px;}
+.list-card {display:grid;grid-template-columns:repeat(2,1fr);gap:8px;}
 .list-card > li {position:relative;box-sizing:border-box;max-width:100%;padding:30px 24px 20px;border:1px solid #C3C3C3;border-radius:6px;}
 .list-card > li .tit {display:flex;align-items:flex-start;position:relative;padding-right:186px;}
 .list-card > li .tit .span {flex-shrink:0;margin:1px 10px 0 0;}
