@@ -1077,6 +1077,7 @@ button[class^=btnList] {display:inline-block;box-sizing:border-box;border:0 none
 .commentForm .commentBtn {padding:10px 15px;border-top:1px solid #b1b8be;}
 
 .commentLi {margin-top:40px;border-top:1px solid #82898F;}
+.commentLi:first-child {margin-top:0;}
 .commentLi > li {padding:14px;border-bottom:1px dashed #CDD1D5;}
 .commentLi > li.mine {background-color:#F0F2F6;}
 .commentLi .commentTit {display:flex;align-items:center;gap:10px;}
@@ -1090,6 +1091,8 @@ button[class^=btnList] {display:inline-block;box-sizing:border-box;border:0 none
 .commentLi .commentDetail .file {margin-top:10px;}
 .commentLi .commentToggle {margin-top:12px;}
 .commentLi .commentForm {display:none;margin-top:10px;}
+
+.titBox + .commentLi {margin-top:0;}
 
 /* 대댓글 */
 .commentLi .commentLi {margin:15px -14px 0;border-top:1px dashed #CDD1D5;}
