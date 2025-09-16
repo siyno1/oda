@@ -135,7 +135,7 @@
 				<!-- pgtBox -->
 				<div class="pgtBox">
 					<div class="lt">
-						<h2>체크리스트 항목</h2>
+						<h2>체크리스트</h2>
 					</div>
 
 					<ul class="breadcrumb">
@@ -224,11 +224,13 @@
 					<!-- titBox -->
 					<div class="titBox">
 						<div class="lt">
-							<h3>체크리스트 항목 목록</h3>
+							<h3>체크리스트 목록</h3>
 						</div>
 
 						<div class="rt">
-
+							<div class="btn-wrap">
+								<button type="button" class="btn biz">체크리스트 등록</button>
+							</div>
 						</div>
 					</div>
 					<!-- //titBox -->
@@ -240,79 +242,79 @@
 							<table class="tbl col tC">
 								<caption></caption>
 								<colgroup>
+									<col style="width: 50px;">
 									<col style="width: 160px;">
 									<col style="width: auto;">
-									<col style="width: 160px;">
 									<col style="width: 160px;">
 								</colgroup>
 								<thead>
 									<tr>
+										<th scope="col">NO</th>
 										<th scope="col">사용 연도</th>
 										<th scope="col">체크리스트</th>
-										<th scope="col">등록일</th>
-										<th scope="col">수정일</th>
+										<th scope="col">첨부파일</th>
 									</tr>
 								</thead>
 								<tbody>
 									<tr>
+										<td>10</td>
 										<td>2024</td>
 										<td class="tL"><a href="#">2024년 체크리스트 항목</a></td>
-										<td>2025.07.01</td>
-										<td>2025.07.01</td>
+										<td><button type="button" class="btnListFile" data-tt="1" title="첨부파일"></button></td>
 									</tr>
 									<tr>
+										<td>9</td>
 										<td>2024</td>
 										<td class="tL"><a href="#">2024년 체크리스트 항목</a></td>
-										<td>2025.07.01</td>
-										<td>2025.07.01</td>
+										<td><button type="button" class="btnListFile" data-tt="1" title="첨부파일"></button></td>
 									</tr>
 									<tr>
+										<td>8</td>
 										<td>2024</td>
 										<td class="tL"><a href="#">2024년 체크리스트 항목</a></td>
-										<td>2025.07.01</td>
-										<td>2025.07.01</td>
+										<td><button type="button" class="btnListFile" data-tt="1" title="첨부파일"></button></td>
 									</tr>
 									<tr>
+										<td>7</td>
 										<td>2024</td>
 										<td class="tL"><a href="#">2024년 체크리스트 항목</a></td>
-										<td>2025.07.01</td>
-										<td>2025.07.01</td>
+										<td><button type="button" class="btnListFile" data-tt="1" title="첨부파일"></button></td>
 									</tr>
 									<tr>
+										<td>6</td>
 										<td>2024</td>
 										<td class="tL"><a href="#">2024년 체크리스트 항목</a></td>
-										<td>2025.07.01</td>
-										<td>2025.07.01</td>
+										<td><button type="button" class="btnListFile" data-tt="1" title="첨부파일"></button></td>
 									</tr>
 									<tr>
+										<td>5</td>
 										<td>2024</td>
 										<td class="tL"><a href="#">2024년 체크리스트 항목</a></td>
-										<td>2025.07.01</td>
-										<td>2025.07.01</td>
+										<td><button type="button" class="btnListFile" data-tt="1" title="첨부파일"></button></td>
 									</tr>
 									<tr>
+										<td>4</td>
 										<td>2024</td>
 										<td class="tL"><a href="#">2024년 체크리스트 항목</a></td>
-										<td>2025.07.01</td>
-										<td>2025.07.01</td>
+										<td><button type="button" class="btnListFile" data-tt="1" title="첨부파일"></button></td>
 									</tr>
 									<tr>
+										<td>3</td>
 										<td>2024</td>
 										<td class="tL"><a href="#">2024년 체크리스트 항목</a></td>
-										<td>2025.07.01</td>
-										<td>2025.07.01</td>
+										<td><button type="button" class="btnListFile" data-tt="1" title="첨부파일"></button></td>
 									</tr>
 									<tr>
+										<td>2</td>
 										<td>2024</td>
 										<td class="tL"><a href="#">2024년 체크리스트 항목</a></td>
-										<td>2025.07.01</td>
-										<td>2025.07.01</td>
+										<td><button type="button" class="btnListFile" data-tt="1" title="첨부파일"></button></td>
 									</tr>
 									<tr>
+										<td>1</td>
 										<td>2024</td>
 										<td class="tL"><a href="#">2024년 체크리스트 항목</a></td>
-										<td>2025.07.01</td>
-										<td>2025.07.01</td>
+										<td><button type="button" class="btnListFile" data-tt="1" title="첨부파일"></button></td>
 									</tr>
 								</tbody>
 							</table>
@@ -320,13 +322,6 @@
 						<!-- //tblBox -->
 					</div>
 					<!-- //schList : 그리드 -->
-
-					<!-- txtLi -->
-					<ul class="txtLi">
-						<li class="txtInfo">체크리스트 항목은 기술지원팀을 통해서 등록됩니다.</li>
-						<li class="txtInfo">기술지원 helpdesk (02-000-0000)</li>
-					</ul>
-					<!-- txtLi -->
 
 					<!-- pagination -->
 					<div class="pagination">
@@ -354,6 +349,17 @@
 				<!-- //cntBox -->
 			</div>
 			<!-- //컨텐츠 영역 -->
+
+			<!-- tipCont : 트리거 data-tt : 툴팁 data-ttc 이 동일하게 설정 되어야 합니다  -->
+			<div class="tipCont" data-ttc="1" tabindex="0">
+				<ul class="fileList">
+					<li><a href="#" class="hwp" download>국토교통부 추가자료.hwp</a></li>
+					<li><a href="#" class="hwp" download>국토교통부 추가자료.hwp</a></li>
+					<li><a href="#" class="hwp" download>국토교통부 추가자료.hwp</a></li>
+					<li><a href="#" class="hwp" download>국토교통부 추가자료.hwp</a></li>
+				</ul>
+			</div>
+			<!-- //tipCont : 트리거 data-tt : 툴팁 data-ttc 이 동일하게 설정 되어야 합니다  -->
 		</div>
 		<!-- //컨테이너 영역 -->
 	</div>

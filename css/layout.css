@@ -152,6 +152,8 @@ strong {font-weight:700;}
 
 .txtLg {font-size:16px;}
 .txtInfo.txtLg {background-position:0 6px;}
+.txtLg.txtBt::after,
+.txtLg > .txtBt::after {top:10px;}
 
 .txtHeading {margin-bottom:12px;font-size:19px;text-align:center;line-height:1.5;font-weight:700;}
 

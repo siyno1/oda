@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<title>ODA</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+	<meta http-equiv="Pragma" content="no-cache">
+	<meta http-equiv="Expires" content="0">
+
+	<link rel="stylesheet" href="./../../css/flatpickr.min.css">
+	<link rel="stylesheet" href="./../../css/reset.css">
+	<link rel="stylesheet" href="./../../css/layout.css">
+	<link rel="stylesheet" href="./../../css/style.css">
+
+	<script defer src="./../../js/jquery-3.7.1.min.js"></script>
+	<script defer src="./../../js/flatpickr.js"></script>
+	<script defer src="./../../js/ui.js"></script>
+</head>
+
+<body>
+	<!-- wrap -->
+	<div id="wrap" class="wrapper">
+		<!-- 헤더 영역 -->
+		<div id="header" class="header">
+			<div class="wrap">
+				<h1><a href="./../gate.html"><img src="./../../img/logo.svg"></a></h1>
+				<ul class="gnb">
+					<li class="tit">사업관리</li>
+					<li class="active"><a href="javascript:;">준비단계</a></li><!-- 활성화 시 li class="active" -->
+					<li><a href="javascript:;">진행단계</a></li>
+					<li><a href="javascript:;">완료단계</a></li>
+				</ul>
+
+				<ul class="subGnb">
+					<li><a href="javascript:;">위원회관리</a></li>
+					<li><a href="javascript:;">정보마당</a></li>
+					<li><a href="javascript:;">운영관리</a></li>
+				</ul>
+
+				<div class="userMenu">
+					<div class="userBox">
+						<button class="btnUser">운영관리자</button>
+						<ul class="dropDown">
+							<li><a href="javascript:;">쪽지</a></li>
+							<li><a href="javascript:;">마이페이지</a></li>
+							<li><a href="javascript:;">로그아웃</a></li>
+						</ul>
+					</div>
+					<div class="searchBox">
+						<input type="text" placeholder="통합검색">
+						<button class="btnSearch">검색</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- //헤더 영역 -->
+
+		<!-- 컨테이너 영역 -->
+		<div id="container" class="container">
+
+			<!-- LNB 영역 -->
+			<div id="side" class="side">
+				<div class="side_menu">
+					<button class="btnSlide" title="사이드메뉴 열고 닫기"></button>
+
+					<h2>ODA 사업 관리</h2>
+
+					<!-- pinBox:메뉴고정 -->
+					<div class="pinBox">
+						<label class="pinBar">
+							<span class="name">메뉴고정</span>
+							<input type="checkbox" name="pinned">
+							<span class="switch"></span>
+						</label>
+					</div>
+					<!-- //pinBox:메뉴고정 -->
+
+					<!-- gnb -->
+					<ul class="gnb">
+						<li>
+							<a href="javascript:;">사업목록</a>
+						</li>
+						<li class="hasChild active">
+							<a href="javascript:;">연수 사업 관리</a>
+							<ul>
+								<li class="hasChild active"><!-- 하위메뉴 있는 경우 li class="hasCild", 열림 li class="hasCild active" -->
+									<a href="javascript:;">연수 사업 목록</a>
+									<ul>
+										<li><a href="javascript:;" class="on">연수 사업 목록</a></li><!-- depth와 관계 없이 활성화 메뉴 a class="on" -->
+										<li><a href="javascript:;">연수 프로그램 관리</a></li>
+										<li><a href="javascript:;">연수생 관리</a></li>
+										<li><a href="javascript:;">체크리스트</a></li>
+									</ul>
+								</li>
+								<li><a href="javascript:;" class="on">연수 프로그램 관리</a></li>
+								<li><a href="javascript:;">연수생 관리</a></li>
+								<li><a href="javascript:;">체크리스트</a></li>
+							</ul>
+						</li>
+						<li class="hasChild">
+							<a href="javascript:;">장학 사업 관리</a>
+							<ul>
+								<li><a href="javascript:;">연수 사업 목록</a></li>
+								<li><a href="javascript:;">연수 프로그램 관리</a></li>
+								<li><a href="javascript:;">연수생 관리</a></li>
+								<li><a href="javascript:;">체크리스트</a></li>
+							</ul>
+						</li>
+						<li class="hasChild">
+							<a href="javascript:;">패키지 사업 관리</a>
+							<ul>
+								<li><a href="javascript:;">연수 사업 목록</a></li>
+								<li><a href="javascript:;">연수 프로그램 관리</a></li>
+								<li><a href="javascript:;">연수생 관리</a></li>
+								<li><a href="javascript:;">체크리스트</a></li>
+							</ul>
+						</li>
+					</ul>
+					<!-- //gnb -->
+
+					<ul class="side-quick">
+						<li><a class="site-reg" href="#">일괄등록</a></li>
+						<li><a class="site-help" href="#">헬프데스크</a></li>
+						<li><a class="site-mng" href="#">부처별 ODA 담당자</a></li>
+						<li><a class="site-stats" href="#">ODA 통계</a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- //LNB 영역 -->
+
+			<!-- 컨텐츠 영역 -->
+			<div class="contents">
+				<!-- pgtBox -->
+				<div class="pgtBox">
+					<div class="lt">
+						<h2>체크리스트 항목</h2>
+					</div>
+
+					<ul class="breadcrumb">
+						<li class="home"><a href="javascript:;">홈</a></li>
+						<li><a href="javascript:;">진행단계</a></li>
+						<li><a href="javascript:;">연수사업관리</a></li>
+						<li><a href="javascript:;">체크리스트</a></li>
+					</ul>
+
+					<div class="rt"></div>
+				</div>
+				<!-- //pgtBox -->
+
+				<!-- cntBox -->
+				<div class="cntBox">
+					<div class="tblBox">
+						<table class="tbl row">
+							<caption></caption>
+							<colgroup>
+								<col style="width:152px;">
+								<col style="width:auto;">
+							</colgroup>
+
+							<tbody>
+								<tr>
+									<th scope="row">체크리스트 명</th>
+									<td>
+										<div class="txtBox">2025년 체크리스트 항목</div>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">사용 연도</th>
+									<td>
+										<div class="txtBox">2025</div>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">부가 설명</th>
+									<td>
+										<div class="txtBox">체크리스트 항목은 기술지원 팀(위탁 운영)에서 직접 등록 시킵니다.</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<!-- //cntBox -->
+
+				<!-- cntBox -->
+				<div class="cntBox">
+					<!-- titBox -->
+					<div class="titBox">
+						<div class="lt">
+							<h3>체크리스트 항목</h3>
+						</div>
+
+						<div class="rt">
+
+						</div>
+					</div>
+					<!-- //titBox -->
+
+					<!-- tblBox -->
+					<div class="tblBox">
+						<table class="tbl col">
+							<caption></caption>
+							<colgroup>
+								<col style="width:120px;">
+								<col style="width:auto;">
+								<col style="width:160px;">
+								<col style="width:300px;">
+								<col style="width:300px;">
+							</colgroup>
+
+							<thead>
+								<tr>
+									<th scope="col">구분</th>
+									<th scope="col">항목명</th>
+									<th scope="col">입력방식</th>
+									<th scope="col">관리주체</th>
+									<th scope="col">착안사항</th>
+								</tr>
+							</thead>
+
+							<tbody>
+								<tr>
+									<td>사전</td>
+									<td class="tL">ODA 기본 계획과 부합하는가?</td>
+									<td>(Y/N)</td>
+									<td class="tL">
+										<ul class="txtLi txtLg">
+											<li class="txtBt">부처 등 소관 기관</li>
+										</ul>
+									</td>
+									<td rowspan="4" class="tL">
+										<ul class="txtLi txtLg">
+											<li class="txtBt">KOICA는 연간 연수사업 수요를 현지사무소를 통해 조사하고, 이를 개별 부처에 제공하고 있으므로, 해당 목록이라도 확인하는 것이 필요</li>
+											<li class="txtBt">정상적 근거 간략히 기술</li>
+										</ul>
+									</td>
+								</tr>
+								<tr>
+									<td>사전</td>
+									<td class="tL">(중점협력국) CPS와 부합하는가?</td>
+									<td>(Y/N)</td>
+									<td class="tL">
+										<ul class="txtLi txtLg">
+											<li class="txtBt">부처 등 소관 기관</li>
+										</ul>
+									</td>
+								</tr>
+								<tr>
+									<td>사전</td>
+									<td class="tL">(비중점협력국) 해당 국가의 수요를 확인하였는가?</td>
+									<td>(Y/N)</td>
+									<td class="tL">
+										<ul class="txtLi txtLg">
+											<li class="txtBt">부처 등 소관 기관</li>
+										</ul>
+									</td>
+								</tr>
+								<tr>
+									<td>사전</td>
+									<td class="tL">수원기관과 연수내용에 대한 협의는 이루어졌는가?</td>
+									<td>(Y/N)</td>
+									<td class="tL">
+										<ul class="txtLi txtLg">
+											<li class="txtBt">부처 등 소관 기관</li>
+										</ul>
+									</td>
+								</tr>
+								<tr>
+									<td>투입</td>
+									<td class="tL">연수기관, 또는 장소 등은 연수생의 편의 등을 고려하고 있는가?</td>
+									<td>(첨부파일)</td>
+									<td class="tL">
+										<ul class="txtLi txtLg">
+											<li class="txtBt">담당기관, 또는 사업 수행 기관 (수탁자)</li>
+										</ul>
+									</td>
+									<td class="tL">
+										<ul class="txtLi txtLg">
+											<li class="txtBt">수행 기관 보고서 등 증빙</li>
+										</ul>
+									</td>
+								</tr>
+								<tr>
+									<td>투입</td>
+									<td class="tL">연수기관, 또는 장소 등은 연수생의 편의 등을 고려하고 있는가?</td>
+									<td>(첨부파일)</td>
+									<td class="tL">
+										<ul class="txtLi txtLg">
+											<li class="txtBt">부처 등 소관기관(관리)</li>
+											<li class="txtBt">담당기관, 또는 사업 수행 기관 (수탁자)</li>
+										</ul>
+									</td>
+									<td class="tL">
+										<ul class="txtLi txtLg">
+											<li class="txtBt">수행 기관 보고서 등 증빙</li>
+										</ul>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<!-- //tblBox -->
+				</div>
+				<!-- //cntBox -->
+
+				<div class="btn-wrap">
+					<button type="button" class="btn">목록</button>
+					<button type="button" class="btn pt">수정</button>
+				</div>
+			</div>
+			<!-- //컨텐츠 영역 -->
+		</div>
+		<!-- //컨테이너 영역 -->
+	</div>
+	<!-- //wrap -->
+</body>
+
+</html>
