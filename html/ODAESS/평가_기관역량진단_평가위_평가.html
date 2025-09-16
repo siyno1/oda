@@ -63,7 +63,21 @@
 			<!-- LNB 영역 -->
 			<div id="side" class="side">
 				<div class="side_menu">
+					<button class="btnSlide" title="사이드메뉴 열고 닫기"></button>
+
 					<h2>ODA 사업 관리</h2>
+
+					<!-- pinBox:메뉴고정 -->
+					<div class="pinBox">
+						<label class="pinBar">
+							<span class="name">메뉴고정</span>
+							<input type="checkbox" name="pinned">
+							<span class="switch"></span>
+						</label>
+					</div>
+					<!-- //pinBox:메뉴고정 -->
+
+					<!-- gnb -->
 					<ul class="gnb">
 						<li>
 							<a href="javascript:;">사업목록</a>
@@ -71,8 +85,16 @@
 						<li class="hasChild active">
 							<a href="javascript:;">연수 사업 관리</a>
 							<ul>
-								<li><a href="javascript:;" class="on">연수 사업 목록</a></li>
-								<li><a href="javascript:;">연수 프로그램 관리</a></li>
+								<li class="hasChild active"><!-- 하위메뉴 있는 경우 li class="hasCild", 열림 li class="hasCild active" -->
+									<a href="javascript:;">연수 사업 목록</a>
+									<ul>
+										<li><a href="javascript:;" class="on">연수 사업 목록</a></li><!-- depth와 관계 없이 활성화 메뉴 a class="on" -->
+										<li><a href="javascript:;">연수 프로그램 관리</a></li>
+										<li><a href="javascript:;">연수생 관리</a></li>
+										<li><a href="javascript:;">체크리스트</a></li>
+									</ul>
+								</li>
+								<li><a href="javascript:;" class="on">연수 프로그램 관리</a></li>
 								<li><a href="javascript:;">연수생 관리</a></li>
 								<li><a href="javascript:;">체크리스트</a></li>
 							</ul>
@@ -96,8 +118,15 @@
 							</ul>
 						</li>
 					</ul>
+					<!-- //gnb -->
+
+					<ul class="side-quick">
+						<li><a class="site-reg" href="#">일괄등록</a></li>
+						<li><a class="site-help" href="#">헬프데스크</a></li>
+						<li><a class="site-mng" href="#">부처별 ODA 담당자</a></li>
+						<li><a class="site-stats" href="#">ODA 통계</a></li>
+					</ul>
 				</div>
-				<button class="btnSlide">slide</button>
 			</div>
 			<!-- //LNB 영역 -->
 
