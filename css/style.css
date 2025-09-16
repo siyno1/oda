@@ -1234,9 +1234,40 @@ button[class^=btnList] {display:inline-block;box-sizing:border-box;border:0 none
 /* 메인 - 두번째 탭 */
 .mainWorld {display:flex;flex-direction:column;height:100%;padding:32px 26px 0;}
 .mainWorld .graphArea {display:flex;align-items:center;justify-content:center;position:relative;min-height:728px;padding:30px 836px 30px 30px;border-radius:6px;background:#CFCFCF;}
-.mainWorld .imgArea {position:relative;width:90%;max-width:1200px;}
+.mainWorld .imgWrap {position:relative;width:90%;max-width:1200px;}
+.mainWorld .imgWrap .imgArea {position:relative;}
 .mainWorld .imgArea img {width:100%;}
-.mainWorld .infoArea {position:absolute;right:30px;top:30px;width:776px;height:668px;border-radius:6px;background-color:#fff;}
+
+/* 하단 중앙 기준으로 위치 잡음 */
+.mainWorld .imgArea .mapTip {display:flex;align-items:center;gap:8px;position:absolute;left:100px;top:100px;padding:16px;transform:translate(-50%, -100%);border-radius:8px;border:0 none;background:#fff;filter:drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));}
+.mainWorld .imgArea .mapTip::after {content:'';display:block;position:absolute;top:calc(100% - 6px);left:50%;margin-left:-12px;border:solid transparent;border-width:12px 12px 0 12px;border-top-color:#fff;}
+.mainWorld .imgArea .mapTip .continent {display:block;padding:4px 8px;border-radius:4px;font-size:13px;font-weight:900;color:#fff;}
+.mainWorld .imgArea .mapTip .budget {display:block;padding-top:2px;font-size:15px;line-height:normal;font-weight:700;color:#1E2124;white-space:nowrap;}
+
+.mainWorld .imgArea .mapTip.asia {left:80%;top:28%;}
+.mainWorld .imgArea .mapTip.asia .continent {background-color:#77BA25;}
+.mainWorld .imgArea .mapTip.cis {left:59%;top:46%;}
+.mainWorld .imgArea .mapTip.cis .continent {background-color:#AE6CFE;}
+.mainWorld .imgArea .mapTip.am {left:30%;top:65%;}
+.mainWorld .imgArea .mapTip.am .continent {background-color:#72BEBB;}
+.mainWorld .imgArea .mapTip.afc {left:53%;top:65%;}
+.mainWorld .imgArea .mapTip.afc .continent {background-color:#7295BE;}
+.mainWorld .imgArea .mapTip.oce {left:83%;top:73%;}
+.mainWorld .imgArea .mapTip.oce .continent {background-color:#E68026;}
+.mainWorld .summaryBudgets {width:max-content;margin:0 auto;padding:25px 30px;border-radius:6px;background:#fff; transform: translate(10px, -20px);}
+.mainWorld .summaryBudgets .tit {margin-bottom:6px;}
+.mainWorld .summaryBudgets .tit strong {font-size:18px;line-height:1.5;font-weight:700;}
+.mainWorld .summaryBudgets .tit span {margin-left:14px;font-size:14px;line-height:1.4;}
+.mainWorld .summaryBudgets .t1 {font-size:22px;line-height:1.4;font-weight:700;color:#1E2124;}
+
+
+.mainWorld .infoArea {overflow:hidden;position:absolute;right:30px;top:30px;width:776px;height:668px;border-radius:6px;background-color:#fff;}
+.mainWorld .infoGrid {display:grid;height:100%;grid-template-columns:1fr 1fr;grid-template-rows:1fr 0.1fr 1.1fr;}
+.mainWorld .infoGrid > li {padding:24px;border:0px solid #d9d9d9;}
+.mainWorld .infoGrid > li:nth-child(1) {grid-row:1/3;}
+.mainWorld .infoGrid > li:nth-child(2) {border-width:0 0 0 1px;grid-row:1/2;}
+.mainWorld .infoGrid > li:nth-child(3) {border-width:1px 0 0 0;grid-row:3/4;}
+.mainWorld .infoGrid > li:nth-child(4) {border-width:1px 0 0 1px;grid-row:2/4;}
 
 .mainWorld .widgets {flex:1;}
 .mainWorld .widgets > li {width:25%;padding:30px 40px 50px;}
