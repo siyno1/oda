@@ -374,7 +374,7 @@ button.btn-expand.on {background-image:url(../img/ico_expand_on.svg);}
 /* inputForm */
 .inputForm {display: flex; align-items: center; gap: 10px; line-height: 1.5;}
 .inputForm .btn-wrap {justify-content: flex-start; gap: 4px; width: auto;}
-.inputForm > input[type="text"] {width: 700px;}
+.inputForm > input[type="text"] {flex:0 1 auto;width: 700px;min-width:0;}
 .inputForm > input[type="text"].sm {width: 200px;}
 .inputForm + textarea {margin-top: 10px;}
 .inputForm + .inputForm {margin-top: 5px;}
@@ -824,7 +824,7 @@ button.btn-expand.on {background-image:url(../img/ico_expand_on.svg);}
 
 /** 평가 - 평가계획등록 **/
 .inpCol {display:flex;flex-direction:column;gap:4px;}/* input 세로 배열 */
-.inpRow {display:flex;gap:4px;align-items:center;}
+.inpRow {display:flex;gap:10px;align-items:center;}
 .inpRow input {flex-shrink: 1; min-width:0;}
 .inpRow button {flex-shrink: 0;}
 
@@ -1233,7 +1233,9 @@ button[class^=btnList] {display:inline-block;box-sizing:border-box;border:0 none
 
 /* 메인 - 두번째 탭 */
 .mainWorld {display:flex;flex-direction:column;height:100%;padding:32px 26px 0;}
-.mainWorld .graphArea {position:relative;height:728px;border-radius:6px;background:#CFCFCF;}
+.mainWorld .graphArea {display:flex;align-items:center;justify-content:center;position:relative;min-height:728px;padding:30px 836px 30px 30px;border-radius:6px;background:#CFCFCF;}
+.mainWorld .imgArea {position:relative;width:90%;max-width:1200px;}
+.mainWorld .imgArea img {width:100%;}
 .mainWorld .infoArea {position:absolute;right:30px;top:30px;width:776px;height:668px;border-radius:6px;background-color:#fff;}
 
 .mainWorld .widgets {flex:1;}
