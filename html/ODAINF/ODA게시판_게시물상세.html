@@ -134,14 +134,14 @@
 			<div class="contents">
 				<div class="pgtBox">
 					<div class="lt">
-						<h2>게시물 상세</h2>
+						<h2>게시물 조회</h2>
 					</div>
 
 					<ul class="breadcrumb">
 						<li class="home"><a href="javascript:;">홈</a></li>
 						<li><a href="javascript:;">정보마당</a></li>
 						<li><a href="javascript:;">ODA게시판</a></li>
-						<li><a href="javascript:;">게시물 상세</a></li>
+						<li><a href="javascript:;">게시물 조회</a></li>
 					</ul>
 
 					<div class="rt"></div>
@@ -152,7 +152,7 @@
 					<!-- titBox -->
 					<div class="titBox">
 						<div class="lt">
-							<h3>게시물 상세</h3>
+							<h3>게시물 조회</h3>
 						</div>
 
 						<div class="rt">
@@ -217,7 +217,7 @@
 								</tr>
 								<tr>
 									<th scope="row">조회수</th>
-									<td><button type="button" class="txtBtn">0</button></td>
+									<td><button type="button" class="txtBtn pop" data-target="pop01">0</button></td>
 								</tr>
 							</tbody>
 						</table>
@@ -226,8 +226,7 @@
 				</div>
 				<!-- //cntBox -->
 
-				<div class="cntBox">
-					<!-- titBox -->
+				<!-- div class="cntBox">
 					<div class="titBox">
 						<div class="lt">
 							<h3>조회수 (<span>4</span>)</h3>
@@ -236,9 +235,7 @@
 						<div class="rt">
 						</div>
 					</div>
-					<!-- //titBox -->
 
-					<!-- commentLi -->
 					<ul class="commentLi">
 						<li>
 							<div class="commentTit">
@@ -280,8 +277,8 @@
 							</div>
 						</li>
 					</ul>
-					<!-- //commentLi -->
-				</div>
+
+				</div -->
 
 				<!-- cntBox -->
 				<div class="cntBox">
@@ -633,6 +630,93 @@
 		<!-- //컨테이너 영역 -->
 	</div>
 	<!-- //wrap -->
+
+
+	<!-- popup -->
+	<div class="popup" id="pop01">
+		<div class="tit">
+			<p>조회한 사용자 기록</p>
+			<button type="button" class="btn-close"><span class="sr-only">팝업창 닫기</span></button>
+		</div>
+
+		<div class="cont">
+
+			<div class="schList">
+				<div class="tblBox">
+					<table class="tbl col tC">
+						<caption></caption>
+						<colgroup>
+							<col style="width: 200px;">
+							<col style="width: auto;">
+							<col style="width: auto;">
+						</colgroup>
+						<thead>
+							<tr>
+								<th scope="col">소속</th>
+								<th scope="col">이름</th>
+								<th scope="col">조회 일시</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>소속</td>
+								<td>홍길동</td>
+								<td>2025.07.01 00:00:00</td>
+							</tr>
+							<tr>
+								<td>소속</td>
+								<td>홍길동</td>
+								<td>2025.07.01 00:00:00</td>
+							</tr>
+							<tr>
+								<td>소속</td>
+								<td>홍길동</td>
+								<td>2025.07.01 00:00:00</td>
+							</tr>
+							<tr>
+								<td>소속</td>
+								<td>홍길동</td>
+								<td>2025.07.01 00:00:00</td>
+							</tr>
+							<tr>
+								<td>소속</td>
+								<td>홍길동</td>
+								<td>2025.07.01 00:00:00</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+
+			<!-- pagination -->
+			<div class="pagination">
+				<button type="button" class="page-navi prev" disabled=""><span class="sr-only">이전</span></button>
+				<div class="page-links">
+					<a class="page-link active" href="#"><span class="sr-only">현재페이지</span>1</a>
+					<a class="page-link" href="#">2</a>
+					<a class="page-link" href="#">3</a>
+					<a class="page-link" href="#">4</a>
+					<a class="page-link" href="#">5</a>
+				</div>
+				<button type="button" class="page-navi next"><span class="sr-only">다음</span></button>
+
+				<p>총 949건 (1/95)</p>
+				<select name="" id="select01">
+					<option value="5">5</option>
+					<option value="10" selected>10</option>
+					<option value="30">30</option>
+					<option value="50">50</option>
+					<option value="100">100</option>
+				</select>
+			</div>
+			<!-- //pagination -->
+		</div>
+
+		<div class="btn-wrap">
+			<button type="button" class="btn close">닫기</button>
+		</div>
+	</div>
+	<!-- //popup -->
 </body>
 
 </html>

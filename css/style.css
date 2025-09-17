@@ -610,6 +610,10 @@ button.btn-expand.on {background-image:url(../img/ico_expand_on.svg);}
 .schList .tbl tbody tr.on td {background-color:#F2F4FE;color:#5349C0;}
 .schList .tbl tbody tr.on a {color:#5349C0;}
 
+.schList .tbl tbody tr.notice td {font-weight:500;background-color:#FEFDF1;}
+
+.ico-notice {display:block;width:20px;height:20px;margin:0 auto;background:url(../img/ico_notice.svg) no-repeat center;}
+
 /* tblDb[double table] */
 .tblDb {display: flex; justify-content: space-between; gap: 48px; margin-top:60px;}
 .tblDb > li {flex:0 1 auto;width:100%;}
