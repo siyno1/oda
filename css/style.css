@@ -365,6 +365,8 @@ button.btn-expand.on {background-image:url(../img/ico_expand_on.svg);}
 .file-upload .txt-file {display: inline-flex; align-items: center; font-weight: 500; line-height: 1.5; color: #8A949E; cursor: default;}
 .file-upload .txt-file::before {content:''; display: block; width: 20px; height: 22px; margin-right: 7px; background: url(../img/ico_file.svg) no-repeat center;}
 
+.file.bpr {flex-direction:row-reverse;}
+
 /* library - flatpickr */
 .pickrBox {display: inline-flex; align-items: center; gap:4px; width: 400px; max-width:100%;}
 .pickrBox.sm {width:200px;}
