@@ -333,7 +333,7 @@ button.btn-expand {display:inline-block;width:20px;height:20px;margin-left:2px;b
 button.btn-expand.on {background-image:url(../img/ico_expand_on.svg);}
 
 /* file-upload */
-.file {display: flex; flex-direction: column; gap: 6px; width:100%;}
+.file {display: flex; flex-direction: column; gap: 6px; position:relative; width:100%;}
 .file .btn-wrap {flex:0 0 auto; width:auto;}
 .file-upload {flex:1 1 auto; overflow:hidden; position: relative; display: flex; justify-content: center; min-width:0; min-height:46px; border: 1px dashed #8A949E; background-color:#fff;}
 .file-upload ul {display: flex; flex-direction: column; gap: 6px; width: 100%; height: auto; max-height: 152px; padding: 10px; overflow-y: auto;}
@@ -1309,7 +1309,7 @@ button[class^=btnList] {display:inline-block;box-sizing:border-box;border:0 none
 .mainWorld .widgets .quick-btns > li {flex:1 0 180px;}
 
 /* 로딩 */
-.loading {z-index:1001;position:absolute;left:0;top:0;width:100%;height:100%;background-color:rgba(0,0,0,0.2);}
+.loading {z-index:1001;position:absolute;left:0;top:0;width:100%;height:100%;background-color:rgba(255,255,255,0.4);}
 .loading .characters {position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);}
 .loading .characters .txt {width:110px;margin-bottom:5px;font-size:0;text-align:center;color:#1E2124;}
 .loading .characters .txt > span {display:inline-block;font-size:18px;line-height:1.5;font-weight:700;line-height:1.5;animation:loadingTxt 1.76s ease-in-out infinite; will-change:transform;}
@@ -1321,6 +1321,11 @@ button[class^=btnList] {display:inline-block;box-sizing:border-box;border:0 none
 .loading .characters .txt > span:nth-child(7) {animation-delay:0.24s;}
 .loading .characters .bar {display:block;box-sizing:border-box;height:26px;padding:2px;border:2px solid #1E2124;border-radius:20px;background-color:#fff;animation:loadingBar 3s infinite; will-change:transform;}
 .loading .characters .bar > .inner {display:block;width:100%;height:100%;border-radius:18px 4px 4px 18px;background-color:#5A46B9; animation:loadingBarInner 3s infinite; will-change:width;}
+
+.loading .progress {display:flex;gap:4px;align-items:center;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);}
+.loading .progress .bar {flex-shrink:0;display:block;box-sizing:border-box;width:80px;height:15px;padding:2px;border:2px solid #1e2124;border-radius:30px;}
+.loading .progress .bar > .inner {display:block;border-radius:30px;height:100%;width:0;background:#5A46B9;}
+.loading .progress .percentage {flex-shrink:0;font-size:12px;font-weight:900;line-height:1.5;color:#1e2124;}
 
 @keyframes loadingTxt {
     0%, 20%, 100% {transform:translateY(0) translateZ(0);}
