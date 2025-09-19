@@ -1041,8 +1041,8 @@ button[class^=btnList] {display:inline-block;box-sizing:border-box;border:0 none
 
 /* 버튼이 포함된 형태의 inp */
 .inp-btn {display:flex;align-items:center;gap:4px;border:1px solid #B1B8BE;border-radius:4px;background:#fff;}
-.inp-btn input[type="text"] {flex:1;height:28px;border:0 none;}
-.inp-btn button {flex-shrink:0;width:28px;height:28px;border:0 none;background:url(../img/ico_sch_inp.svg) no-repeat center;}
+.inp-btn input[type="text"] {flex:1;height:34px;border:0 none;}
+.inp-btn button {flex-shrink:0;width:34px;height:34px;border:0 none;background:url(../img/ico_sch_inp.svg) no-repeat center;}
 
 .nodeBox .nodeArea {overflow:hidden;flex:1 1 auto;padding:20px 5px 15px 20px;}
 .nodeBox .nodeArea > .nodeLi {max-height:100%;overflow-y:auto;}
