@@ -212,7 +212,7 @@ button[class^="btn-"]:disabled {border-color:#c3c7cb;background-color:#F3F3F3;co
 .btn.sch {min-width: 36px; padding:0; background-color:#fff;}
 .btn.sch::before {content:'';display:block;width:16px;height:16px;background:url(../img/ico_sch.svg) no-repeat center;}
 .btn.sch:disabled {border-color:#C3C7CB;background-color:#F3F3F3;}
-.btn.sch:disabled::before {opacity:0.5;;}
+.btn.sch:disabled::before {opacity:0.5;}
 .btn.blue {color: #5A7BA6; background: #fff; border: 1px solid #AABED7; border-radius: 4px;}
 
 .btn-plus {display:flex;gap:4px;width:auto !important;padding:0 9px;align-items:center;justify-content:center;background-color:#fff; border: 1px solid #B1B8BE;background:#fff;}
@@ -1132,9 +1132,17 @@ button[class^=btnList] {display:inline-block;box-sizing:border-box;border:0 none
 .tab.ty-main li button::after {display:none;}
 .tab.ty-main li button.active {background-color:#fff;}
 
-.tabEtc {align-self:flex-start;margin-left:auto;}
+.tabEtc {align-self:flex-start;display:flex;align-items:center;gap:4px;margin-left:auto;}
 .mainCombo {box-sizing:border-box;width:146px;height:34px;padding:4px 24px 4px 12px;border-radius:6px;background:#6D4FFF url(../img/ico_main_select.svg) no-repeat 120px center;font-size:17px;font-weight:600;line-height:1.5;color:#fff;}
 .mainCombo option {color:#464c53;background-color:#fff;}
+
+.mainRdo {display:flex;align-items:center;gap:4px;}
+.mainRdo label {position:relative;cursor:pointer;}
+.mainRdo input {position: absolute !important; width: 1px !important; height: 1px !important; padding: 0 !important; margin: -1px !important; overflow: hidden !important; clip: rect(0, 0, 0, 0) !important; white-space: nowrap !important; border: 0 !important;}
+.mainRdo span {display:flex;align-items:center;justify-content:center;gap:4px;padding:10px 14px;border-radius:6px;font-size:14px;font-weight:500;line-height:1;background:#D3D6DE;}
+.mainRdo span::before {content:'';display:block;width:12px;height:12px;background:url(../img/ico_main_rdo.svg) no-repeat center;}
+.mainRdo input:checked + span {font-weight:700;background-color:#fff;}
+.mainRdo input:checked + span::before {background-image:url(../img/ico_main_rdo_c.svg);}
 
 .mainBiz {box-sizing:border-box;display:flex;gap:24px;padding:30px 25px;}
 .mainBiz .mainSide {flex-shrink:0;align-self:flex-start;box-sizing:border-box;width:236px;padding:12px 8px;border-radius:6px;background-color:#D9D9D9;}
