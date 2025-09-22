@@ -10,11 +10,12 @@
 .header h1 a{display:block;width:158px;}
 .header h1 img{display:block;max-width:100%}
 
-.header .gnb {display:flex;box-sizing:border-box;height:50px;margin-left:90px;padding:3px 3px 3px 34px;border-radius:4px;background-color:#513EAD;}
-.header .gnb > li {position:relative;height:100%;margin-right:44px;}
+.header .gnb {flex:1;display:flex;box-sizing:border-box;max-width:750px;height:50px;margin-left:90px;padding:3px 3px 3px 34px;border-radius:4px;background-color:#513EAD;}
+.header .gnb > li {flex:1;position:relative;height:100%;margin-right:44px;}
 .header .gnb > li:last-child {margin-right:0;}
-.header .gnb > li.tit {display:flex;align-items:center;margin-right:35px;padding-top:2px;font-size:15px;font-weight:500;color:rgba(255,255,255,0.5);}
-.header .gnb > li > a {position:relative;display:flex;align-items:center;padding:0 48px;border-radius:2px;height:100%;font-size:22px;font-weight:800;text-align:center;color:rgba(255,255,255,0.5);transition:color 0.3s,background 0.3s;}
+.header .gnb > li.tit {flex:0 0 auto;display:flex;align-items:center;margin-right:35px;padding-top:2px;font-size:15px;font-weight:500;color:rgba(255,255,255,0.5);}
+
+.header .gnb > li > a {position:relative;display:flex;align-items:center;justify-content:center;border-radius:2px;height:100%;font-size:22px;font-weight:800;text-align:center;color:rgba(255,255,255,0.5);transition:color 0.3s,background 0.3s;}
 .header .gnb > li > a:hover,
 .header .gnb > li > a:focus {color:rgba(255,255,255,1);}
 .header .gnb > li.active > a {color:rgba(255,255,255,1);background-color:#6D4FFF;}

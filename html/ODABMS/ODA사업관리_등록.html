@@ -544,9 +544,89 @@
 							</table>
 						</div>
 
-						<ul class="txtLi">
-							<li class="txtInfo">ODA 사업 당 수원국은 1개만 선택할 수 있습니다. 수원국이 여러 개일 경우 사업을 각각 등록해야 합니다.</li>
-						</ul>
+						<!-- 수원국 추가 시 -->
+						<div class="titBox">
+							<div class="lt">
+							</div>
+
+							<div class="rt">
+								<div class="btn-wrap">
+									<button type="button" class="btn-del" title="삭제"></button>
+								</div>
+							</div>
+						</div>
+
+						<div class="tblBox">
+							<table class="tbl row">
+								<caption></caption>
+								<colgroup>
+									<col style="width: 152px;">
+									<col style="width: auto;">
+									<col style="width: 152px;">
+									<col style="width: auto;">
+								</colgroup>
+
+								<tbody>
+									<tr>
+										<th scope="row">대륙명</th>
+										<td>
+											<div class="inputForm">
+												<div class="selectBox">
+													<select name="" id="" disabled="">
+														<option value="" hidden="">국가 선택 시 자동 선택됩니다.</option>
+													</select>
+												</div>
+											</div>
+										</td>
+										<th scope="row" class="need">국가명</th>
+										<td>
+											<div class="inputForm">
+												<div class="selectBox">
+													<select name="" id="">
+														<option value="" hidden="">- 국가(수원국) 선택 -</option>
+													</select>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">대상국 내 지역 <strong class="txtPt">[영문]</strong></th>
+										<td>
+											<div class="inputForm">
+												<input type="text">
+											</div>
+
+											<ul class="txtLi">
+												<li class="txtInfo">지역명이 애매한 경우 수원국 수도(영문명) 기입</li>
+												<li class="txtInfo">다자간 원조인 경우 ‘Unspecified’ 기입</li>
+											</ul>
+										</td>
+										<th scope="row">지역 좌표</th>
+										<td>
+											<div class="inputForm">
+												<input type="text">
+											</div>
+
+											<ul class="txtLi">
+												<li class="txtInfo">대상국 내 지역의 좌표가 자동으로 입력</li>
+												<li class="txtInfo">입력되지 않거나 수정이 필요한 경우 직접 입력 가능.</li>
+											</ul>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<!-- //수원국 추가 시 -->
+
+						<!-- botBox : 수원국 추가 시, 마지막 수원국 tblBox 하단에 위치 -->
+						<div class="botBox">
+							<div class="rt">
+								<div class="btn-wrap">
+									<button type="button" class="btn-plus txt">수원국 추가</button>
+								</div>
+							</div>
+						</div>
+						<!-- //botBox : 수원국 추가 시, 마지막 수원국 tblBox 하단에 위치 -->
 					</div>
 					<!-- //cntBox -->
 
@@ -675,6 +755,98 @@
 					</div>
 					<!-- //cntBox -->
 
+
+					<!-- cntBox -->
+					<div class="cntBox">
+						<div class="titBox">
+							<div class="lt">
+								<h3>ODA 사업 기록</h3>
+							</div>
+
+							<div class="rt">
+
+							</div>
+						</div>
+
+						<div class="historyRegBox">
+							<ul class="historyLi">
+								<li>
+									<span class="dateTime">
+										<span class="date">2025.07.01</span>
+										<span class="time">00:00</span>
+									</span>
+									<div class="cnt">
+										<strong class="name">기재부 홍길동</strong>
+										<p class="txt">캄보디아 정치 정세가 좋지 않아서 현장 답사 갑니다.</p>
+									</div>
+								</li>
+								<li>
+									<span class="dateTime">
+										<span class="date">2025.07.01</span>
+										<span class="time">00:00</span>
+									</span>
+									<div class="cnt">
+										<strong class="name">기재부 홍길동</strong>
+										<p class="txt">라오스 방송국 PD 담당자 바뀜, 연락처는 메일로 공유함<br>라오스 방송국 PD 담당자 바뀜, 연락처는 메일로 공유함</p>
+									</div>
+								</li>
+								<li>
+									<span class="dateTime">
+										<span class="date">2025.07.01</span>
+										<span class="time">00:00</span>
+									</span>
+									<div class="cnt">
+										<strong class="name">기재부 홍길동</strong>
+										<p class="txt">캄보디아 정치 정세가 좋지 않아서 현장 답사 갑니다.</p>
+									</div>
+								</li>
+							</ul>
+
+							<!-- 사업기록 3개 초과 시, 더보기 버튼 노출 : 기본 3개노출 -->
+							<div class="historyBtn">
+								<button type="button" class="btn-history-more">더보기</button><!-- 더보기 / 닫기 -->
+								<!-- button type="button" class="btn-history-more on">닫기</button-->
+							</div>
+							<!-- //사업기록 3개 초과 시, 더보기 버튼 노출 : 기본 3개노출 -->
+
+							<div class="historyRegForm">
+								<input type="text" placeholder="기록할 내용을 입력하세요.">
+								<button type="button" class="btn purple">저장</button>
+							</div>
+						</div>
+
+						<div class="tblBox">
+							<table class="tbl row">
+								<caption></caption>
+								<colgroup>
+									<col style="width: 230px;">
+									<col style="width: auto;">
+								</colgroup>
+
+								<tbody>
+									<tr>
+										<th scope="row">ODA 사업 기본 정보 공개 범위</th>
+										<td>
+											<div class="inputForm">
+												<div class="rdoBox">
+													<input type="radio" id="radio06-1" name="rdo06">
+													<label for="radio06-1">우리 부처</label>
+													<input type="radio" id="radio06-2" name="rdo06">
+													<label for="radio06-2">정부 내부</label>
+													<input type="radio" id="radio06-3" name="rdo06">
+													<label for="radio06-3">대국민</label>
+												</div>
+												<button type="button" class="btn">첨부파일 공개 여부 설정하기</button>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<!-- //cntBox -->
+
+
 					<!-- cntBox -->
 					<div class="cntBox">
 						<!-- 첨부파일 -->
@@ -693,7 +865,6 @@
 								<caption></caption>
 								<colgroup>
 									<col style="width: auto;">
-									<col style="width: 20%;">
 								</colgroup>
 
 								<tbody>
@@ -708,17 +879,6 @@
 												<div class="file-upload">
 													<p class="txt-file">첨부하실 파일을 마우스로 끌어오세요.</p>
 													<input type="file" name="myFile" id="fileu-upload" hidden="">
-												</div>
-											</div>
-										</td>
-										<td>
-											<div class="inputForm">
-												<p>ODA KOREA 홈페이지</p>
-												<div class="rdoBox">
-													<input type="radio" id="radio05-1" name="rdo05">
-													<label for="radio05-1">공개</label>
-													<input type="radio" id="radio05-2" name="rdo05">
-													<label for="radio05-2">비공개</label>
 												</div>
 											</div>
 										</td>
