@@ -1298,15 +1298,16 @@ button[class^=btnList] {display:inline-block;box-sizing:border-box;border:0 none
 .mainWorld .infoGrid .chartLi .name {display:block;font-size:14px;color:#484b51;}
 .mainWorld .infoGrid .chartLi .bar {display:block;position:relative;height:10px;margin-top:5px;}
 .mainWorld .infoGrid .chartLi .bar .fill {display:block;width:50%;height:100%;background:#D9D9D9;transition:background 0.3s;animation:chartAni 0.5s reverse both ease-in-out;}
-.mainWorld .infoGrid .chartLi .bar:hover .fill {background-color:#AE6CFE;}
+.mainWorld .infoGrid .chartLi .bar:focus {outline: 0 none;}
+.mainWorld .infoGrid .chartLi .bar:hover .fill,
+.mainWorld .infoGrid .chartLi .bar:focus .fill {background-color:#AE6CFE;}
 .mainWorld .infoGrid .chartLi .bar .chartTip {display:none;position:absolute;top:0;left:100%;margin-top:-8px;padding:4px 8px;border-radius:4px;font-size:14px;font-weight:500;color:#484b51;background:#fff;filter:drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));transform:translate(-50%,-100%);animation:chartTooltipAni 0.3s both ease-in-out;}
 .mainWorld .infoGrid .chartLi .bar .chartTip::after {content:'';display:block;position:absolute;left:50%;top:calc(100% - 4px);margin-left:-6px;border:solid transparent;border-width:12px 6px 0 6px;border-top-color:#fff;}
-.mainWorld .infoGrid .chartLi .bar:hover .chartTip {display:block;}
+.mainWorld .infoGrid .chartLi .bar:hover .chartTip,
+.mainWorld .infoGrid .chartLi .bar:focus .chartTip {display:block;}
 
-.mainWorld .infoGrid .chartLi.ty02 .bar:hover .fill {background-color:#77BA24;}
-
-
-
+.mainWorld .infoGrid .chartLi.ty02 .bar:hover .fill,
+.mainWorld .infoGrid .chartLi.ty02 .bar:focus .fill {background-color:#77BA24;}
 
 @keyframes chartAni { 100% {width:0;} }
 @keyframes chartTooltipAni {
@@ -1319,12 +1320,15 @@ button[class^=btnList] {display:inline-block;box-sizing:border-box;border:0 none
 .mainWorld .infoGrid .columnChartLi > li {flex:0 1 auto;display:flex;flex-direction:column;width:100%;text-align:center;}
 .mainWorld .infoGrid .columnChartLi .bar {display:flex;align-items:flex-end;position:relative;height:140px;padding:0 16px;border-bottom:1px solid #D9D9D9;}
 .mainWorld .infoGrid .columnChartLi .fill {display:block;width:100%;background:#D9D9D9;transition:background 0.3s;animation:columnChartAni 0.5s reverse both ease-in-out;}
-.mainWorld .infoGrid .columnChartLi .bar:hover .fill {background-color:#FF8213;}
+.mainWorld .infoGrid .columnChartLi .bar:focus {outline: 0 none;}
+.mainWorld .infoGrid .columnChartLi .bar:hover .fill,
+.mainWorld .infoGrid .columnChartLi .bar:focus .fill {background-color:#FF8213;}
 .mainWorld .infoGrid .columnChartLi .name {display:block;margin-top:8px;padding:0 8px;font-size:14px;font-weight:500;line-height:1.2;color:#484b51;word-break:keep-all;}
 
 .mainWorld .infoGrid .columnChartLi .chartTip {display:none;position:absolute;bottom:0;left:50%;padding:4px 8px;border-radius:4px;font-size:14px;font-weight:500;color:#484b51;background:#fff;filter:drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));transform:translate(-50%,-30%);animation:columnChartTooltipAni 0.3s both ease-in-out;}
 .mainWorld .infoGrid .columnChartLi .chartTip::after {content:'';display:block;position:absolute;left:50%;top:calc(100% - 4px);margin-left:-6px;border:solid transparent;border-width:12px 6px 0 6px;border-top-color:#fff;}
-.mainWorld .infoGrid .columnChartLi .bar:hover .chartTip {display:block;}
+.mainWorld .infoGrid .columnChartLi .bar:hover .chartTip,
+.mainWorld .infoGrid .columnChartLi .bar:focus .chartTip {display:block;}
 
 @keyframes columnChartAni { 100% {height:0;} }
 @keyframes columnChartTooltipAni {
