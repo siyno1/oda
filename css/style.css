@@ -1494,7 +1494,9 @@ button[class^=btnList] {display:inline-block;box-sizing:border-box;border:0 none
 .historyLi .dateTime .time {display:block;}
 .historyLi .cnt {font-size:16px;line-height:1.5;color:#464c53;}
 .historyLi .cnt .name {display:block;font-weight:700;font-size:inherit;line-height:inherit;}
-.historyLi .cnt .txt {margin-top:8px;padding:6px 10px;border-radius:8px;font-size:inherit;line-height:inherit;background-color:#D9DBE0;}
+.historyLi .cnt .txtWrap {display:flex;align-items:flex-start;gap:4px;margin-top:8px;font-size:inherit;line-height:inherit;}
+.historyLi .cnt .txtWrap button {flex-shrink:0;}
+.historyLi .cnt .txt {flex:1 1 auto;padding:6px 10px;border-radius:8px;font-size:inherit;line-height:inherit;background-color:#D9DBE0;}
 
 .historyRegBox .historyBtn {display:flex;align-items:center;justify-content:center;gap:12px;margin-top:20px;}
 .historyRegBox .historyRegForm {display:flex;gap:5px;margin-top:40px;}

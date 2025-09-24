@@ -246,8 +246,8 @@
 										<th scope="row">사업단계</th>
 										<td>
 											<div class="inputForm">
-												<div class="selectBox">
-													<select name="" id="select01">
+												<div class="selectBox" id="select02opt1">
+													<select name="select01" id="select01">
 														<option value="" hidden>- 사업단계 선택 -</option>
 														<option value="">시행계획 확정</option>
 														<option value="">R/D 체결</option>
@@ -266,6 +266,16 @@
 														<option value="">지연</option>
 													</select>
 												</div>
+
+												<div class="selectBox" id="select02opt2" style="display:none;">
+													<select name="select03" id="select03">
+														<option value="" hidden>- 사업단계 선택 -</option>
+														<option value="">계획저장</option>
+														<option value="">계획취소</option>
+														<option value="">임시저장</option>
+														<option value="">계획보류</option>
+													</select>
+												</div>
 											</div>
 										</td>
 									</tr>
@@ -274,16 +284,16 @@
 										<td colspan="3">
 											<div class="inputForm">
 												<div class="selectBox">
-													<select name="" id="select02">
+													<select name="select02" id="select02">
 														<option value="" hidden>- 사업상태 선택 -</option>
-														<option value="">예비</option>
-														<option value="">진행</option>
-														<option value="">종료</option>
-														<option value="">기타</option>
+														<option value="1">예비</option>
+														<option value="2">진행</option>
+														<option value="3">종료</option>
+														<option value="4">기타</option>
 													</select>
 												</div>
 
-												<input type="text">
+												<input type="text" id="select02input" style="display:none;">
 											</div>
 										</td>
 									</tr>
@@ -294,7 +304,7 @@
 					<!-- //cntBox -->
 
 					<!-- cntBox -->
-					<div class="cntBox">
+					<div class="cntBox" id="select02table1">
 						<div class="titBox">
 							<div class="lt">
 								<h3>사업정보</h3>
@@ -427,6 +437,117 @@
 										<th scope="row" class="need">사업설명 <strong class="txtPt">[영문]</strong></th>
 										<td>
 											<textarea name="" id="txt02" class="w100"></textarea>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<!-- //cntBox -->
+
+					<!-- cntBox -->
+					<div class="cntBox" id="select02table2" style="display:none;">
+						<div class="titBox">
+							<div class="lt">
+								<h3>사업정보</h3>
+							</div>
+
+							<div class="rt">
+
+							</div>
+						</div>
+
+						<div class="tblBox">
+							<table class="tbl row">
+								<caption></caption>
+								<colgroup>
+									<col style="width: 152px;">
+									<col style="width: auto;">
+									<col style="width: 152px;">
+									<col style="width: auto;">
+								</colgroup>
+
+								<tbody>
+									<tr>
+										<th scope="row">소관부처</th>
+										<td>
+											<input type="text" class="w100">
+										</td>
+										<th scope="row">기관 고유사업번호 </th>
+										<td>
+											<input type="text" class="w100">
+										</td>
+									</tr>
+									<tr>
+										<th scope="row" class="need">원조구분</th>
+										<td colspan="3">
+											<div class="rdoBox">
+												<input type="radio" id="radio11-1" name="rdo11">
+												<label for="radio11-1">양자간(NGO 지원 제외)</label>
+												<input type="radio" id="radio11-2" name="rdo11">
+												<label for="radio11-2">양자간(NGO 지원)</label>
+												<input type="radio" id="radio11-3" name="rdo11">
+												<label for="radio11-3">다자간</label>
+												<input type="radio" id="radio11-4" name="rdo11">
+												<label for="radio11-4">양자간(삼각협력)</label>
+												<input type="radio" id="radio11-5" name="rdo11">
+												<label for="radio11-5">다자성양자</label>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row" class="need">내역 사업명 <strong class="txtPt">[한글]</strong></th>
+										<td><input type="text" class="w100" placeholder="내역 사업명(한글)을 입력하여 주세요."></td>
+										<th scope="row" class="need">내역 사업명 <strong class="txtPt">[영문]</strong></th>
+										<td><input type="text" class="w100" placeholder="내역 사업명(영문)을 입력하여 주세요."></td>
+									</tr>
+									<tr>
+										<th scope="row" class="need">사업유형</th>
+										<td colspan="3">
+											<div class="inputForm">
+												<div class="selectBox">
+													<select name="" id="select03">
+														<option value="" hidden>- 사업유형 선택 -</option>
+													</select>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row" class="need">사업분야</th>
+										<td colspan="3">
+											<div class="rdoBox">
+												<input type="radio" id="radio12-1" name="rdo12">
+												<label for="radio12-1">교통</label>
+												<input type="radio" id="radio12-2" name="rdo12">
+												<label for="radio12-2">수자원 및 위생</label>
+												<input type="radio" id="radio12-3" name="rdo12">
+												<label for="radio12-3">교육</label>
+												<input type="radio" id="radio12-4" name="rdo12">
+												<label for="radio12-4">보건</label>
+												<input type="radio" id="radio12-5" name="rdo12">
+												<label for="radio12-5">에너지</label>
+												<input type="radio" id="radio12-6" name="rdo12">
+												<label for="radio12-6">공공행정</label>
+												<input type="radio" id="radio12-7" name="rdo12">
+												<label for="radio12-7">농림수산</label>
+												<input type="radio" id="radio12-8" name="rdo12">
+												<label for="radio12-8">통신</label>
+												<input type="radio" id="radio12-9" name="rdo12">
+												<label for="radio12-9">인도적지원</label>
+												<input type="radio" id="radio12-10" name="rdo12">
+												<label for="radio12-10">산업</label>
+												<input type="radio" id="radio12-11" name="rdo12">
+												<label for="radio12-11">환경보호</label>
+												<input type="radio" id="radio12-12" name="rdo12">
+												<label for="radio12-12">기타</label>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row" class="need">사업설명 <strong class="txtPt">[한글]</strong></th>
+										<td colspan="3">
+											<textarea name="" id="txt01" class="w100" placeholder="사업 구성(구체적 산출물)과 사업 목적이 드러나도록 작성해주십시오. 사업설명[한글]을 입력해주세요. (2000자 이내)"></textarea>
 										</td>
 									</tr>
 								</tbody>
@@ -634,45 +755,158 @@
 					<div class="cntBox">
 						<div class="titBox">
 							<div class="lt">
-								<h3>연계 사업</h3>
+								<h3>세부구성 정보</h3>
+								<p class="txtInfo">세부구성 추가를 눌러 사업 세부구성을 입력하실 수 있습니다.</p>
+							</div>
+
+							<div class="rt">
+								<div class="btn-wrap">
+									<button type="button" class="btn-plus txt">세부구성 추가</button>
+									<button type="button" class="btn-del" title="삭제"></button>
+								</div>
+							</div>
+						</div>
+
+						<!-- tblBox -->
+						<div class="tblBox">
+							<table class="tbl row">
+								<caption></caption>
+								<colgroup>
+									<col style="width:152px;">
+									<col style="width:auto;">
+									<col style="width:152px;">
+									<col style="width:auto;">
+								</colgroup>
+
+								<tbody>
+									<tr>
+										<th scope="row">구분</th>
+										<td><input type="text" class="w100"></td>
+										<th scope="row">총 소요 예산 <strong class="txtPt">[미화]</strong></th>
+										<td><input type="text" class="w100"></td>
+									</tr>
+									<tr>
+										<th scope="row">내용</th>
+										<td colspan="3">
+											<textarea></textarea>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<!-- //tblBox -->
+					</div>
+					<!-- //cntBox -->
+
+					<!-- cntBox -->
+					<div class="cntBox">
+						<div class="titBox">
+							<div class="lt">
+								<h3>연계 사업정보</h3>
 							</div>
 
 							<div class="rt">
 							</div>
 						</div>
 
+						<!-- tblBox -->
 						<div class="tblBox">
-							<table class="tbl col">
+							<table class="tbl row" id="table02">
 								<caption></caption>
 								<colgroup>
-									<col style="width: auto;">
-									<col style="width: 200px;">
-									<col style="width: 200px;">
-									<col style="width: 200px;">
-									<col style="width: 200px;">
+									<col style="width:152px;">
+									<col style="width:auto;">
 								</colgroup>
-
-								<thead>
-									<tr>
-										<th scope="col">사업명</th>
-										<th scope="col">기관명</th>
-										<th scope="col">수원국</th>
-										<th scope="col">사업분야</th>
-										<th scope="col">사업상태</th>
-									</tr>
-								</thead>
 
 								<tbody>
 									<tr>
-										<td></td>
-										<td></td>
-										<td></td>
-										<td></td>
-										<td></td>
+										<th scope="row">연계 희망여부</th>
+										<td>
+											<div class="rdoBox">
+												<input type="radio" id="radio20-1" name="rdo20" value="Y">
+												<label for="radio20-1">예</label>
+												<input type="radio" id="radio20-2" name="rdo20" value="N">
+												<label for="radio20-2">아니오</label>
+											</div>
+										</td>
+									</tr>
+									<tr class="hid" style="display:none;">
+										<th scope="row">연계희망기관</th>
+										<td>
+											<div class="inputForm">
+												<div class="selectBox">
+													<select name="" id="">
+														<option value="" hidden>- 연계기관 선택 -</option>
+													</select>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr class="hid" style="display:none;">
+										<th scope="row">연계희망유형</th>
+										<td>
+											<div class="inputForm">
+												<div class="selectBox">
+													<select name="" id="">
+														<option value="" hidden>- 연계희망유형 선택 -</option>
+													</select>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr class="hid" style="display:none;">
+										<th scope="row">연계희망내용</th>
+										<td>
+											<input type="text" class="w100">
+										</td>
+									</tr>
+									<tr class="hid" style="display:none;">
+										<th scope="row">연계희망사업</th>
+										<td>
+											<div class="btn-wrap">
+												<button type="button" class="btn">연계 사업 검색</button>
+											</div>
+
+											<table class="tbl col tC">
+												<caption></caption>
+												<colgroup>
+													<col style="width: auto;">
+													<col style="width: 200px;">
+													<col style="width: 200px;">
+												</colgroup>
+
+												<thead>
+													<tr>
+														<th scope="col">사업명</th>
+														<th scope="col">시행기관</th>
+														<th scope="col">사업상태</th>
+													</tr>
+												</thead>
+
+												<tbody>
+													<tr>
+														<td class="tL"></td>
+														<td></td>
+														<td></td>
+													</tr>
+													<tr>
+														<td class="tL"></td>
+														<td></td>
+														<td></td>
+													</tr>
+													<tr>
+														<td class="tL"></td>
+														<td></td>
+														<td></td>
+													</tr>
+												</tbody>
+											</table>
+										</td>
 									</tr>
 								</tbody>
 							</table>
 						</div>
+						<!-- //tblBox -->
 					</div>
 					<!-- //cntBox -->
 
@@ -777,7 +1011,9 @@
 									</span>
 									<div class="cnt">
 										<strong class="name">기재부 홍길동</strong>
-										<p class="txt">캄보디아 정치 정세가 좋지 않아서 현장 답사 갑니다.</p>
+										<div class="txtWrap">
+											<p class="txt">캄보디아 정치 정세가 좋지 않아서 현장 답사 갑니다.</p>
+										</div>
 									</div>
 								</li>
 								<li>
@@ -787,7 +1023,9 @@
 									</span>
 									<div class="cnt">
 										<strong class="name">기재부 홍길동</strong>
-										<p class="txt">라오스 방송국 PD 담당자 바뀜, 연락처는 메일로 공유함<br>라오스 방송국 PD 담당자 바뀜, 연락처는 메일로 공유함</p>
+										<div class="txtWrap">
+											<p class="txt">라오스 방송국 PD 담당자 바뀜, 연락처는 메일로 공유함<br>라오스 방송국 PD 담당자 바뀜, 연락처는 메일로 공유함</p>
+										</div>
 									</div>
 								</li>
 								<li>
@@ -797,7 +1035,10 @@
 									</span>
 									<div class="cnt">
 										<strong class="name">기재부 홍길동</strong>
-										<p class="txt">캄보디아 정치 정세가 좋지 않아서 현장 답사 갑니다.</p>
+										<div class="txtWrap">
+											<p class="txt">캄보디아 정치 정세가 좋지 않아서 현장 답사 갑니다.</p>
+											<button type="button" class="btn">삭제</button>
+										</div>
 									</div>
 								</li>
 							</ul>
@@ -893,7 +1134,8 @@
 				<!-- //cntBox -->
 
 				<div class="btn-wrap">
-					<button type="button" class="btn">취소</button>
+					<button type="button" class="btn">목록</button>
+					<button type="button" class="btn pt">임시저장</button>
 					<button type="button" class="btn pt">등록</button>
 				</div>
 			</div>
@@ -1202,6 +1444,49 @@
 		</div>
 	</div>
 	<!-- //popup : 시행계획 조회 및 선택 -->
+
+	<script>
+		document.addEventListener('DOMContentLoaded', function(){
+
+			$('select[name=select02]').on('change',function(){
+				var $this = $(this);
+				var $selected = $this.find("option:selected");
+				var val = $selected.val();
+
+				if (val == '1') {
+					//예비사업 선택 시 select 교체 및 비활성
+					$('#select02opt1').hide();
+					$('#select02opt1').find('select').prop('disabled',true);
+					$('#select02opt2').show();
+					$('#select02opt2').find('select').prop('disabled',false);
+
+					$('#select02table1').hide();
+					$('#select02table2').show();
+				} else {
+					//예비사업 선택 시 select 교체 및 비활성
+					$('#select02opt1').show();
+					$('#select02opt1').find('select').prop('disabled',false);;
+					$('#select02opt2').hide();
+					$('#select02opt2').find('select').prop('disabled',true);;
+
+					$('#select02table1').show();
+					$('#select02table2').hide();
+				}
+
+				if (val == '4') $('#select02input').show();
+				else $('#select02input').hide();
+			});
+
+			//연계희망여부 선택 시
+			$('input[name=rdo20]').on('change', function(){
+				if ($('input[name=rdo20]:checked').val() == 'Y') {
+					$('#table02').find('.hid').show();
+				} else {
+					$('#table02').find('.hid').hide();
+				}
+			});
+		});
+	</script>
 </body>
 
 </html>
