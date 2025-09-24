@@ -999,6 +999,9 @@ button[class^=btnList] {display:inline-block;box-sizing:border-box;border:0 none
 .legendLi li {position:relative;padding-left:25px;font-size:13px;line-height:18px;color:#484b51;}
 .legendLi li::before {content:'';display:block;position:absolute;left:0;top:0;width:19px;height:19px;border-radius:50%;background:#868686;}
 .legendLi li.pt::before {background-color:#4f9097;}
+.legendLi li.orange::before {background-color:#DC984F;}
+.legendLi li.blue::before {background-color:#2459A2;}
+.legendLi li.black::before {background-color:#1E2124;}
 :where(.rt) .legendLi {display:inline-flex;vertical-align:middle;}
 
 
