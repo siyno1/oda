@@ -1000,9 +1000,12 @@ button[class^=btnList] {display:inline-block;box-sizing:border-box;border:0 none
 .legendLi li::before {content:'';display:block;position:absolute;left:0;top:0;width:19px;height:19px;border-radius:50%;background:#868686;}
 .legendLi li.pt::before {background-color:#4f9097;}
 .legendLi li.orange::before {background-color:#DC984F;}
-.legendLi li.blue::before {background-color:#2459A2;}
-.legendLi li.black::before {background-color:#1E2124;}
+.legendLi li.blue::before {background-color:#5D8CB0;}
+.legendLi li.black::before {background-color:#868686;}
 :where(.rt) .legendLi {display:inline-flex;vertical-align:middle;}
+.legendOrange {color:#C27F38 !important;}
+.legendBlue {color:#5D8CB0 !important;}
+.legendBlack {color:#868686 !important;}
 
 
 /* boxLi : 진단항목 / 심사기준관리 리스트 */
