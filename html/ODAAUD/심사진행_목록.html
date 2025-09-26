@@ -151,6 +151,21 @@
 				<div class="schBox">
 					<div class="schRow">
 						<ul class="fltList">
+							<li>
+								<div class="selectBtnSt">
+									<select name="year">
+										<option value="2025">2025년도</option>
+									</select>
+								</div>
+							</li>
+						</ul>
+						<div class="schTxt">
+							<button type="button" class="btn-flt">검색 필터 열기</button>
+						</div>
+					</div>
+
+					<div class="schRow toggleFlt" style="display:none;">
+						<ul class="fltList">
 							<li><button type="button">수원국</button></li>
 							<li><button type="button">원조구분</button></li>
 						</ul>
@@ -269,6 +284,22 @@
 
 				<!-- cntBox -->
 				<div class="cntBox">
+					<!-- subSchBox -->
+					<div class="subSchBox">
+						<div class="lt">
+							<div class="selectBox">
+								<select name="">
+									<option hidden>- 전략 부합성 심사 지표 선택 -</option>
+								</select>
+							</div>
+
+							<button type="button" class="btn purple">적용</button>
+							<button type="button" class="btn upload">심사 대상 사업 업로드</button>
+							<button type="button" class="btn biz">심사 대상 사업 등록</button>
+						</div>
+					</div>
+					<!-- //subSchBox -->
+
 					<!-- titBox -->
 					<div class="titBox">
 						<div class="lt">
@@ -278,21 +309,10 @@
 						<div class="rt">
 							<!-- btn-wrap -->
 							<div class="btn-wrap">
-								<div class="selectBox">
-									<select name="year">
-										<option value="2025">2025년도</option>
-									</select>
-								</div>
-								<div class="selectBox">
-									<select name="select02">
-										<option value="" hidden>- 전략 부합성 심사 지표 선택 -</option>
-									</select>
-								</div>
-								<button type="button" class="btn purple">적용</button>
 								<button type="button" class="btn excel">엑셀 다운로드</button>
-								<button type="button" class="btn">초기화</button>
-								<button type="button" class="btn pt">저장</button>
-								<button type="button" class="btn pt">마감</button>
+								<button type="button" class="btn-reset-txt">초기화</button>
+								<button type="button" class="btn">마감</button>
+								<button type="button" class="btn-save txt">저장</button>
 							</div>
 							<!-- //btn-wrap -->
 						</div>

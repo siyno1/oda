@@ -87,7 +87,7 @@ textarea:focus {outline:0 none;border-color:#434C89;}
 
 
 /* 헤더 고정 */
-.tblBox.fix {overflow-y:auto;}
+.tblBox.fix {overflow-y:auto;height:584px;}
 .tblBox.fix .tbl {border-collapse: separate;}
 .tblBox.fix .tbl thead {position:sticky;top:0;z-index:1;}
 .tblBox.fix .tbl thead th {border-bottom:1px solid #E2E6EA;}
@@ -502,7 +502,7 @@ button.btn-expand.on {background-image:url(../img/ico_expand_on.svg);}
 .schTxt input[type="text"] {width: 100%; height: 44px; padding: 10px 60px 10px 16px; font-size: 16px; font-weight:500; line-height: 1.5; color: #131416; border: 2px solid #58616A; border-radius: 12px;}
 .schTxt input[type="text"]::placeholder {font-size: inherit; color: #8A949E;}
 .schTxt .btn-src {position: absolute; top: 50%; right: 0; width: 46px; height: 100%; text-align: center; font-size: inherit; font-weight: 500; line-height: 0.9; color: #fff; background: #58616A; border-color: #58616A; border-radius: 0 12px 12px 0; transform: translateY(-50%);}
-.schTxt .btn-flt {display: inline-flex; align-items: center; gap: 9px; width: auto; height: auto; font-size: inherit; font-weight: 600; line-height: 1.5; color: #6D7882; background: transparent; border: none;}
+.schTxt .btn-flt {display: inline-flex; align-items: center; gap: 9px; width: auto; height: auto; margin-left:auto; font-size: inherit; font-weight: 600; line-height: 1.5; color: #6D7882; background: transparent; border: none;}
 .schTxt .btn-flt::before {content:''; display: block; width: 32px; height: 32px; background: url(../img/ico_filter.svg) no-repeat center;}
 .schTxt .btn-flt::after {content:''; display: block; width: 14px; height: 14px; background: url(../img/ico_select_arr.svg) no-repeat center; transition: 0.3s all;}
 .schTxt .btn-flt:hover {text-decoration: underline;}
@@ -515,7 +515,7 @@ button.btn-expand.on {background-image:url(../img/ico_expand_on.svg);}
 .fltList {flex:0 0 auto;display:flex;gap:6px;width:calc((100% - 30px) / 6);}
 .fltList button {position: relative; display: flex; align-items: center; width: 100%; height: 40px; padding: 8px 40px 8px 20px; font-size: inherit; font-weight: 600; line-height: 1.5; color: #1E2124; background: #F0F2F6; border: 1px solid #D1DAE2; border-radius: 12px;}
 .fltList button::after {position: absolute; top: 50%; right: 20px; content:''; display: block; width: 14px; height: 14px; background: url(../img/ico_select_arr.svg) no-repeat center; transform: translateY(-50%); transition: 0.3s all;}
-.fltList li {flex:1 0 auto;}
+.fltList li {flex:1 0 0;}
 .fltList li.on button {background: #D9DFEA;}
 .fltList li.on button::after {transform: rotate(-180deg) translateY(50%); transition: 0.3s all;}
 .fltList:has(li:nth-child(2)) {width:calc(((100% - 30px) / 6) * 2 + 6px);}
@@ -1515,3 +1515,10 @@ button[class^=btnList] {display:inline-block;box-sizing:border-box;border:0 none
 button.btn-history-more {display:flex;align-items:center;justify-content:center;gap:4px;box-sizing:border-box;width:120px;height:36px;border:1px solid #929aa2;border-radius:50px;background:#fff;font-size:15px;font-weight:500;line-height:1.5;color:#464C53;}
 button.btn-history-more::after {content:'';display:block;width:14px;height:14px;background:url(../img/ico_history.svg) no-repeat center;}
 button.btn-history-more.on::after {transform:rotate(180deg);}
+
+
+/* 심사 */
+.subSchBox {display:flex;margin-bottom:40px;padding:20px;border-radius:8px;background-color:#F0F2F6;}
+.subSchBox .lt {display:flex;align-items:center;gap:5px;}
+.subSchBox .rt {display:flex;align-items:center;gap:5px;margin-left:auto;}
+.subSchBox .selectBox {max-width:300px;}
