@@ -45,7 +45,7 @@ textarea:focus {outline:0 none;border-color:#434C89;}
 .tbl tr td {padding: 8px 15px; font-size:16px; color: #1E2124;}
 .tbl thead th {position:relative;padding: 8px 5px 6px 5px; text-align: center; color: #464C53; background: #f4f5f6;}
 .tbl thead th:not(:last-child) {border-right: 1px solid #E2E6EA;}
-.tbl thead th:not(:first-child)::after {content:'';display:block;position:absolute;left:-1px;top:0;width:1px;height:100%;background:#E2E6EA;}
+.tbl thead th:not(:first-child)::before {content:'';display:block;position:absolute;left:-1px;top:0;width:1px;height:100%;background:#E2E6EA;}
 .tbl tbody th {padding: 11px 15px 9px 15px; text-align: left; color: #8A949E;}
 .tbl.row th {color: #464C53; background: #f4f5f6;}
 .tbl.row td {color: #464C53;}
@@ -78,7 +78,7 @@ textarea:focus {outline:0 none;border-color:#434C89;}
 .tbl .tbl.col td,
 .tbl .tbl.col th {border:1px solid #cdd1d5;}
 .tbl .tbl.col tbody tr:first-child td {border-top:0 none;}
-.tbl .tbl thead th:not(:first-child)::after {background-color:#cdd1d5;}
+.tbl .tbl thead th:not(:first-child)::before {background-color:#cdd1d5;}
 
 /* tbl background - on : 체크 시 /  */
 .tbl tr.on {background: #F0F2F6; transition: 0.3s all;}
@@ -747,7 +747,7 @@ button.btn-expand.on {background-image:url(../img/ico_expand_on.svg);}
 .tbl .cell {width: auto; border: 1px solid #D4DADF;}
 .tbl .cell th,
 .tbl .cell td {border:1px solid #D4DADF;}
-.tbl .cell th::after {display:none !important;}
+.tbl .cell th::before {display:none !important;}
 .tbl .cell th {text-align:center; background:#E7E9EB;}
 .tbl .cell tbody th {text-align:left; background:#F4F5F6;}
 .tbl .cell tbody td {padding: 5px 0; border-left: 1px solid #D4DADF;}
