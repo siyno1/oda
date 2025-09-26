@@ -116,6 +116,7 @@
 .titBox .rt {display:flex;gap:10px;align-items:center;}
 .titBox .selectBox {flex-shrink:0;}
 .titBox .rdoBox {flex-wrap:nowrap;column-gap:10px;}
+.titBox.ty02 {margin-top:10px;}
 
 .botBox {display:flex;align-items:flex-start;width:100%;padding-top:10px;}
 .titDisc  {margin-bottom:6px;line-height:1.5;}
@@ -178,3 +179,4 @@ strong {font-weight:700;}
 .cntBox:first-child {margin-top:0;}
 .pgtBox + .cntBox {margin-top:0;}
 .schBox + .cntBox {margin-top:24px;}
+.titBox + .cntBox {margin-top:0;}

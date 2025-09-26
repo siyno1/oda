@@ -105,6 +105,8 @@ textarea:focus {outline:0 none;border-color:#434C89;}
 
 .btn-wrap + .tbl {margin-top:10px;}
 
+.tbl.bt0::before {background-color:#CDD1D5;}
+
 /* 통계 테이블 */
 .tbl.total {min-width:100%;width:auto;border-collapse:separate;}
 .tbl.total tr {border-bottom:0 none;}

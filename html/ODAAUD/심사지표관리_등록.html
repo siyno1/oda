@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<title>ODA</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+	<meta http-equiv="Pragma" content="no-cache">
+	<meta http-equiv="Expires" content="0">
+
+	<link rel="stylesheet" href="./../../css/flatpickr.min.css">
+	<link rel="stylesheet" href="./../../css/reset.css">
+	<link rel="stylesheet" href="./../../css/layout.css">
+	<link rel="stylesheet" href="./../../css/style.css">
+
+	<script defer src="./../../js/jquery-3.7.1.min.js"></script>
+	<script defer src="./../../js/flatpickr.js"></script>
+	<script defer src="./../../js/ui.js"></script>
+</head>
+
+<body>
+	<!-- wrap -->
+	<div id="wrap" class="wrapper">
+		<!-- 헤더 영역 -->
+		<div id="header" class="header">
+			<div class="wrap">
+				<h1><a href="./../gate.html"><img src="./../../img/logo.svg"></a></h1>
+				<ul class="gnb">
+					<li class="tit">사업관리</li>
+					<li class="active"><a href="javascript:;">준비단계</a></li><!-- 활성화 시 li class="active" -->
+					<li><a href="javascript:;">진행단계</a></li>
+					<li><a href="javascript:;">완료단계</a></li>
+				</ul>
+
+				<ul class="subGnb">
+					<li><a href="javascript:;">위원회관리</a></li>
+					<li><a href="javascript:;">정보마당</a></li>
+					<li><a href="javascript:;">운영관리</a></li>
+				</ul>
+
+				<div class="userMenu">
+					<div class="userBox">
+						<button class="btnUser">운영관리자</button>
+						<ul class="dropDown">
+							<li><a href="javascript:;">쪽지</a></li>
+							<li><a href="javascript:;">마이페이지</a></li>
+							<li><a href="javascript:;">로그아웃</a></li>
+						</ul>
+					</div>
+					<div class="searchBox">
+						<input type="text" placeholder="통합검색">
+						<button class="btnSearch">검색</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- //헤더 영역 -->
+
+		<!-- 컨테이너 영역 -->
+		<div id="container" class="container">
+
+			<!-- LNB 영역 -->
+			<div id="side" class="side">
+				<div class="side_menu">
+					<button class="btnSlide" title="사이드메뉴 열고 닫기"></button>
+
+					<h2>ODA 사업 관리</h2>
+
+					<!-- pinBox:메뉴고정 -->
+					<div class="pinBox">
+						<label class="pinBar">
+							<span class="name">메뉴고정</span>
+							<input type="checkbox" name="pinned">
+							<span class="switch"></span>
+						</label>
+					</div>
+					<!-- //pinBox:메뉴고정 -->
+
+					<!-- gnb -->
+					<ul class="gnb">
+						<li>
+							<a href="javascript:;">사업목록</a>
+						</li>
+						<li class="hasChild active">
+							<a href="javascript:;">연수 사업 관리</a>
+							<ul>
+								<li class="hasChild active"><!-- 하위메뉴 있는 경우 li class="hasCild", 열림 li class="hasCild active" -->
+									<a href="javascript:;">연수 사업 목록</a>
+									<ul>
+										<li><a href="javascript:;" class="on">연수 사업 목록</a></li><!-- depth와 관계 없이 활성화 메뉴 a class="on" -->
+										<li><a href="javascript:;">연수 프로그램 관리</a></li>
+										<li><a href="javascript:;">연수생 관리</a></li>
+										<li><a href="javascript:;">체크리스트</a></li>
+									</ul>
+								</li>
+								<li><a href="javascript:;" class="on">연수 프로그램 관리</a></li>
+								<li><a href="javascript:;">연수생 관리</a></li>
+								<li><a href="javascript:;">체크리스트</a></li>
+							</ul>
+						</li>
+						<li class="hasChild">
+							<a href="javascript:;">장학 사업 관리</a>
+							<ul>
+								<li><a href="javascript:;">연수 사업 목록</a></li>
+								<li><a href="javascript:;">연수 프로그램 관리</a></li>
+								<li><a href="javascript:;">연수생 관리</a></li>
+								<li><a href="javascript:;">체크리스트</a></li>
+							</ul>
+						</li>
+						<li class="hasChild">
+							<a href="javascript:;">패키지 사업 관리</a>
+							<ul>
+								<li><a href="javascript:;">연수 사업 목록</a></li>
+								<li><a href="javascript:;">연수 프로그램 관리</a></li>
+								<li><a href="javascript:;">연수생 관리</a></li>
+								<li><a href="javascript:;">체크리스트</a></li>
+							</ul>
+						</li>
+					</ul>
+					<!-- //gnb -->
+
+					<ul class="side-quick">
+						<li><a class="site-reg" href="#">일괄등록</a></li>
+						<li><a class="site-help" href="#">헬프데스크</a></li>
+						<li><a class="site-mng" href="#">부처별 ODA 담당자</a></li>
+						<li><a class="site-stats" href="#">ODA 통계</a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- //LNB 영역 -->
+
+			<!-- 컨텐츠 영역 -->
+			<div class="contents">
+				<div class="pgtBox">
+					<div class="lt">
+						<h2>심사 지표 관리</h2>
+					</div>
+
+					<ul class="breadcrumb">
+						<li class="home"><a href="javascript:;">홈</a></li>
+						<li><a href="javascript:;">준비 단계</a></li>
+						<li><a href="javascript:;">전략 부합성 심사</a></li>
+						<li><a href="javascript:;">심사 지표 관리</a></li>
+					</ul>
+
+					<div class="rt"></div>
+				</div>
+
+				<!-- cntBox -->
+				<div class="cntBox">
+					<!-- titBox -->
+					<div class="titBox">
+						<div class="lt">
+							<h3>기본정보</h3>
+						</div>
+
+						<div class="rt">
+						</div>
+					</div>
+					<!-- //titBox -->
+
+					<!-- tblBox -->
+					<div class="tblBox">
+						<table class="tbl row">
+							<caption></caption>
+
+							<colgroup>
+								<col style="width: 152px;">
+								<col style="width: auto;">
+								<col style="width: 152px;">
+								<col style="width: auto;">
+							</colgroup>
+
+							<tbody>
+								<tr>
+									<th scope="row" class="need">연도</th>
+									<td>
+										<div class="selectBox">
+											<select>
+												<option hidden>- 선택 -</option>
+											</select>
+										</div>
+									</td>
+									<th scope="row" class="need">지표명</th>
+									<td>
+										<input type="text" class="w100">
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">원조구분</th>
+									<td colspan="3">
+										<div class="rdoBox">
+											<input type="radio" id="radio01-1" name="rdo01">
+											<label for="radio01-1">양자유상</label>
+											<input type="radio" id="radio01-2" name="rdo01">
+											<label for="radio01-2">양자무상</label>
+											<input type="radio" id="radio01-2" name="rdo01">
+											<label for="radio01-2">다자성양자</label>
+											<input type="radio" id="radio01-2" name="rdo01">
+											<label for="radio01-2">다자성양자(무상)</label>
+											<input type="radio" id="radio01-2" name="rdo01">
+											<label for="radio01-2">다자성양자(유상)</label>
+											<input type="radio" id="radio01-2" name="rdo01">
+											<label for="radio01-2">다자</label>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">상세내용</th>
+									<td colspan="3">
+										<textarea></textarea>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<!-- //tblBox -->
+				</div>
+				<!-- //cntBox -->
+
+				<!-- cntBox -->
+				<div class="cntBox">
+					<!-- titBox -->
+					<div class="titBox">
+						<div class="lt">
+							<h3>전략부합성 심사 항목</h3>
+						</div>
+
+						<div class="rt">
+						</div>
+					</div>
+					<!-- //titBox -->
+
+					<!-- cntBox -->
+					<div class="cntBox">
+						<!-- tblBox -->
+						<div class="tblBox">
+							<table class="tbl row">
+								<caption></caption>
+								<colgroup>
+									<col style="width: 152px;">
+									<col style="width: auto;">
+								</colgroup>
+
+								<tbody>
+									<tr>
+										<th scope="row">구분명</th>
+										<td>국가</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<!-- //tblBox -->
+
+						<!-- titBox -->
+						<div class="titBox ty02">
+							<div class="lt">
+							</div>
+
+							<div class="rt">
+								<div class="btn-wrap">
+									<button type="button" class="btn excel">국가별 심사 기준 엑셀 업로드</button>
+									<button type="button" class="btn-plus txt">항목추가</button>
+									<button type="button" class="btn-del" title="항목 삭제"></button>
+								</div>
+							</div>
+						</div>
+						<!-- //titBox -->
+
+						<!-- tblBox -->
+						<div class="tblBox">
+							<table class="tbl col tC bt0">
+								<caption></caption>
+								<colgroup>
+									<col style="width: 50px;">
+									<col style="width: 46px;">
+									<col style="width: 200px;">
+									<col style="width: 400px;">
+									<col style="width: auto;">
+									<col style="width: 200px;">
+								</colgroup>
+
+								<thead>
+									<tr>
+										<th scope="col">NO</th>
+										<th scope="col">
+											<div class="tblChk">
+												<input type="checkbox" id="chk00"><label for="chk00"></label>
+											</div>
+										</th>
+										<th scope="col">구분</th>
+										<th scope="col">항목</th>
+										<th scope="col">해당 요건</th>
+										<th scope="col" class="need">배점</th>
+									</tr>
+								</thead>
+
+								<tbody>
+									<tr>
+										<td>1</td>
+										<td>
+											<div class="tblChk">
+												<input type="checkbox" id="chk01"><label for="chk01"></label>
+											</div>
+										</td>
+										<td>국가</td>
+										<td>
+											<div class="inputForm fit">
+												<input type="text">
+											</div>
+										</td>
+										<td>
+											<div class="inputForm fit">
+												<input type="text">
+											</div>
+										</td>
+										<td>
+											<div class="inputForm fit">
+												<input type="text">
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>2</td>
+										<td>
+											<div class="tblChk">
+												<input type="checkbox" id="chk01"><label for="chk01"></label>
+											</div>
+										</td>
+										<td>국가</td>
+										<td>
+											<div class="inputForm fit">
+												<input type="text">
+											</div>
+										</td>
+										<td>
+											<div class="inputForm fit">
+												<input type="text">
+											</div>
+										</td>
+										<td>
+											<div class="inputForm fit">
+												<input type="text">
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>3</td>
+										<td>
+											<div class="tblChk">
+												<input type="checkbox" id="chk01"><label for="chk01"></label>
+											</div>
+										</td>
+										<td>국가</td>
+										<td>
+											<div class="inputForm fit">
+												<input type="text">
+											</div>
+										</td>
+										<td>
+											<div class="inputForm fit">
+												<input type="text">
+											</div>
+										</td>
+										<td>
+											<div class="inputForm fit">
+												<input type="text">
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<!-- //tblBox -->
+					</div>
+					<!-- //cntBox -->
+
+					<!-- cntBox -->
+					<div class="cntBox">
+						<!-- tblBox -->
+						<div class="tblBox">
+							<table class="tbl row">
+								<caption></caption>
+								<colgroup>
+									<col style="width: 152px;">
+									<col style="width: auto;">
+								</colgroup>
+
+								<tbody>
+									<tr>
+										<th scope="row">구분명</th>
+										<td>분야</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<!-- //tblBox -->
+
+						<!-- titBox -->
+						<div class="titBox ty02">
+							<div class="lt">
+							</div>
+
+							<div class="rt">
+								<div class="btn-wrap">
+									<button type="button" class="btn-plus txt">항목추가</button>
+									<button type="button" class="btn-del" title="항목 삭제"></button>
+								</div>
+							</div>
+						</div>
+						<!-- //titBox -->
+
+						<!-- tblBox -->
+						<div class="tblBox">
+							<table class="tbl col tC bt0">
+								<caption></caption>
+								<colgroup>
+									<col style="width: 50px;">
+									<col style="width: 46px;">
+									<col style="width: 200px;">
+									<col style="width: 400px;">
+									<col style="width: auto;">
+									<col style="width: 200px;">
+								</colgroup>
+
+								<thead>
+									<tr>
+										<th scope="col">NO</th>
+										<th scope="col">
+											<div class="tblChk">
+												<input type="checkbox" id="chk00"><label for="chk00"></label>
+											</div>
+										</th>
+										<th scope="col">구분</th>
+										<th scope="col">항목</th>
+										<th scope="col">해당 요건</th>
+										<th scope="col" class="need">배점</th>
+									</tr>
+								</thead>
+
+								<tbody>
+									<tr>
+										<td>1</td>
+										<td>
+											<div class="tblChk">
+												<input type="checkbox" id="chk01"><label for="chk01"></label>
+											</div>
+										</td>
+										<td>분야</td>
+										<td>
+											<div class="inputForm fit">
+												<input type="text">
+											</div>
+										</td>
+										<td>
+											<div class="inputForm fit">
+												<input type="text">
+											</div>
+										</td>
+										<td>
+											<div class="inputForm fit">
+												<input type="text">
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>2</td>
+										<td>
+											<div class="tblChk">
+												<input type="checkbox" id="chk01"><label for="chk01"></label>
+											</div>
+										</td>
+										<td>분야</td>
+										<td>
+											<div class="inputForm fit">
+												<input type="text">
+											</div>
+										</td>
+										<td>
+											<div class="inputForm fit">
+												<input type="text">
+											</div>
+										</td>
+										<td>
+											<div class="inputForm fit">
+												<input type="text">
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>3</td>
+										<td>
+											<div class="tblChk">
+												<input type="checkbox" id="chk01"><label for="chk01"></label>
+											</div>
+										</td>
+										<td>분야</td>
+										<td>
+											<div class="inputForm fit">
+												<input type="text">
+											</div>
+										</td>
+										<td>
+											<div class="inputForm fit">
+												<input type="text">
+											</div>
+										</td>
+										<td>
+											<div class="inputForm fit">
+												<input type="text">
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<!-- //tblBox -->
+					</div>
+					<!-- //cntBox -->
+
+
+					<!-- cntBox -->
+					<div class="cntBox">
+						<!-- tblBox -->
+						<div class="tblBox">
+							<table class="tbl row">
+								<caption></caption>
+								<colgroup>
+									<col style="width: 152px;">
+									<col style="width: auto;">
+								</colgroup>
+
+								<tbody>
+									<tr>
+										<th scope="row">구분명</th>
+										<td>사업 성격</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<!-- //tblBox -->
+
+						<!-- titBox -->
+						<div class="titBox ty02">
+							<div class="lt">
+							</div>
+
+							<div class="rt">
+								<div class="btn-wrap">
+									<button type="button" class="btn-plus txt">항목추가</button>
+									<button type="button" class="btn-del" title="항목 삭제"></button>
+								</div>
+							</div>
+						</div>
+						<!-- //titBox -->
+
+						<!-- tblBox -->
+						<div class="tblBox">
+							<table class="tbl col tC bt0">
+								<caption></caption>
+								<colgroup>
+									<col style="width: 50px;">
+									<col style="width: 46px;">
+									<col style="width: 200px;">
+									<col style="width: 400px;">
+									<col style="width: auto;">
+									<col style="width: 200px;">
+								</colgroup>
+
+								<thead>
+									<tr>
+										<th scope="col">NO</th>
+										<th scope="col">
+											<div class="tblChk">
+												<input type="checkbox" id="chk00"><label for="chk00"></label>
+											</div>
+										</th>
+										<th scope="col">구분</th>
+										<th scope="col">항목</th>
+										<th scope="col">해당 요건</th>
+										<th scope="col" class="need">배점</th>
+									</tr>
+								</thead>
+
+								<tbody>
+									<tr>
+										<td>1</td>
+										<td>
+											<div class="tblChk">
+												<input type="checkbox" id="chk01"><label for="chk01"></label>
+											</div>
+										</td>
+										<td>사업 성격</td>
+										<td>
+											<div class="inputForm fit">
+												<input type="text">
+											</div>
+										</td>
+										<td>
+											<div class="inputForm fit">
+												<input type="text">
+											</div>
+										</td>
+										<td>
+											<div class="inputForm fit">
+												<input type="text">
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>2</td>
+										<td>
+											<div class="tblChk">
+												<input type="checkbox" id="chk01"><label for="chk01"></label>
+											</div>
+										</td>
+										<td>사업 성격</td>
+										<td>
+											<div class="inputForm fit">
+												<input type="text">
+											</div>
+										</td>
+										<td>
+											<div class="inputForm fit">
+												<input type="text">
+											</div>
+										</td>
+										<td>
+											<div class="inputForm fit">
+												<input type="text">
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>3</td>
+										<td>
+											<div class="tblChk">
+												<input type="checkbox" id="chk01"><label for="chk01"></label>
+											</div>
+										</td>
+										<td>사업 성격</td>
+										<td>
+											<div class="inputForm fit">
+												<input type="text">
+											</div>
+										</td>
+										<td>
+											<div class="inputForm fit">
+												<input type="text">
+											</div>
+										</td>
+										<td>
+											<div class="inputForm fit">
+												<input type="text">
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<!-- //tblBox -->
+					</div>
+					<!-- //cntBox -->
+				</div>
+				<!-- //cntBox -->
+
+				<div class="btn-wrap">
+					<button type="button" class="btn">목록</button>
+					<button type="button" class="btn pt">등록</button>
+				</div>
+			</div>
+			<!-- //컨텐츠 영역 -->
+		</div>
+		<!-- //컨테이너 영역 -->
+	</div>
+	<!-- //wrap -->
+</body>
+
+</html>
