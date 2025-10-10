@@ -187,7 +187,7 @@
 										<td>010-0000-0000</td>
 									</tr>
 									<tr>
-										<th scope="row">기관명</th>
+										<th scope="row">소속</th>
 										<td>국무조정실</td>
 										<th scope="row">부서명</th>
 										<td>연계조정과</td>
@@ -195,6 +195,21 @@
 										<td>차장(4급)</td>
 										<th scope="row">Email</th>
 										<td>testemail@test.com</td>
+									</tr>
+									<tr>
+										<th scope="row">사용자 유형</th>
+										<td>용역 사용자</td>
+										<th scope="row">알림 수신 동의</th>
+										<td colspan="5">
+											<div class="rdoBox">
+												<input type="checkbox" id="chk01-1" name="chk01" checked disabled>
+												<label for="chk01-1">문자</label>
+												<input type="checkbox" id="chk01-2" name="chk01" checked disabled>
+												<label for="chk01-2">알림톡</label>
+												<input type="checkbox" id="chk01-3" name="chk01" disabled>
+												<label for="chk01-3">이메일</label>
+											</div>
+										</td>
 									</tr>
 								</tbody>
 							</table>
@@ -205,235 +220,465 @@
 
 					<!-- cntBox -->
 					<div class="cntBox">
-						<ul class="tblDb">
-							<li>
-								<div class="titBox">
-									<div class="lt">
-										<h3>부여된 권한 목록</h3>
-									</div>
+						<div class="emptyMsgBox">
+							<div class="lt">
+								<ul class="txtLi">
+									<li class="txtInfo">해당 기관의 권한이 없습니다.</li>
+									<li class="txtInfo"><strong>[권한 추가]</strong>를 클릭하여 권한을 부여해주세요.</li>
+								</ul>
+							</div>
+							<div class="rt">
+								<div class="btn-wrap">
+									<button type="button" class="btn-plus txt">권한 추가</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- //cntBox -->
 
-									<div class="rt">
-										<div class="btn-wrap">
-											<button type="button" class="btn-plus txt">그룹권한추가</button>
-											<button type="button" class="btn-plus txt">개인권한추가</button>
-											<button type="button" class="btn-del" title="삭제"></button>
+					<!-- cntBox -->
+					<div class="cntBox">
+						<!-- tabBox -->
+						<div class="tabBox">
+							<div class="tab">
+								<ul>
+									<li><button type="button" data-tabBtn="tab1-cont1" class="active">국가유산청</button></li>
+									<li><button type="button" data-tabBtn="tab1-cont2">환경부</button></li>
+								</ul>
+							</div>
+
+							<!-- tabCont -->
+							<ul class="tabCont">
+								<li class="active" data-tabCont="tab1-cont1">
+									<!-- cntBox -->
+									<div class="cntBox">
+										<!-- tblDb -->
+										<ul class="tblDb sm">
+											<li>
+												<div class="titBox">
+													<div class="lt">
+														<h3>부여할 수 있는 권한 목록</h3>
+													</div>
+
+													<div class="rt">
+													</div>
+												</div>
+
+												<!-- schList -->
+												<div class="schList">
+													<!-- tblBox -->
+													<div class="tblBox">
+														<table class="tbl col tC">
+															<caption></caption>
+															<colgroup>
+																<col style="width: 46px;">
+																<col style="width: auto;">
+																<col style="width: auto;">
+															</colgroup>
+															<thead>
+																<tr>
+																	<th scope="col">
+																		<div class="tblChk">
+																			<input type="checkbox" id="chk12"><label for="chk12"></label>
+																		</div>
+																	</th>
+																	<th scope="col">권한 그룹명</th>
+																	<th scope="col">접근 가능 메뉴</th>
+																</tr>
+															</thead>
+															<tbody>
+																<tr>
+																	<td>
+																		<div class="tblChk">
+																			<input type="checkbox" id="chk13"><label for="chk13"></label>
+																		</div>
+																	</td>
+																	<td>시행기관 담당</td>
+																	<td>ALL</td>
+																</tr>
+																<tr>
+																	<td>
+																		<div class="tblChk">
+																			<input type="checkbox" id="chk14"><label for="chk14"></label>
+																		</div>
+																	</td>
+																	<td>시행기관 담당</td>
+																	<td>ALL</td>
+																</tr>
+																<tr>
+																	<td>
+																		<div class="tblChk">
+																			<input type="checkbox" id="chk15"><label for="chk15"></label>
+																		</div>
+																	</td>
+																	<td>시행기관 담당</td>
+																	<td>ALL</td>
+																</tr>
+																<tr>
+																	<td>
+																		<div class="tblChk">
+																			<input type="checkbox" id="chk16"><label for="chk16"></label>
+																		</div>
+																	</td>
+																	<td>시행기관 담당</td>
+																	<td>ALL</td>
+																</tr>
+																<tr>
+																	<td>
+																		<div class="tblChk">
+																			<input type="checkbox" id="chk17"><label for="chk17"></label>
+																		</div>
+																	</td>
+																	<td>시행기관 담당</td>
+																	<td>ALL</td>
+																</tr>
+																<tr>
+																	<td>
+																		<div class="tblChk">
+																			<input type="checkbox" id="chk18"><label for="chk18"></label>
+																		</div>
+																	</td>
+																	<td>시행기관 담당</td>
+																	<td>ALL</td>
+																</tr>
+																<tr>
+																	<td>
+																		<div class="tblChk">
+																			<input type="checkbox" id="chk19"><label for="chk19"></label>
+																		</div>
+																	</td>
+																	<td>시행기관 담당</td>
+																	<td>ALL</td>
+																</tr>
+																<tr>
+																	<td>
+																		<div class="tblChk">
+																			<input type="checkbox" id="chk20"><label for="chk20"></label>
+																		</div>
+																	</td>
+																	<td>시행기관 담당</td>
+																	<td>ALL</td>
+																</tr>
+																<tr>
+																	<td>
+																		<div class="tblChk">
+																			<input type="checkbox" id="chk21"><label for="chk21"></label>
+																		</div>
+																	</td>
+																	<td>시행기관 담당</td>
+																	<td>ALL</td>
+																</tr>
+																<tr>
+																	<td>
+																		<div class="tblChk">
+																			<input type="checkbox" id="chk22"><label for="chk22"></label>
+																		</div>
+																	</td>
+																	<td>시행기관 담당</td>
+																	<td>ALL</td>
+																</tr>
+															</tbody>
+														</table>
+													</div>
+													<!-- //tblBox -->
+												</div>
+												<!-- //schList -->
+											</li>
+
+											<li class="midControl">
+												<!-- <button type="button" class="btn-control-add-all" title="전체 추가"></button> -->
+												<button type="button" class="btn-control-add" title="추가"></button>
+												<button type="button" class="btn-control-del" title="삭제"></button>
+												<!-- <button type="button" class="btn-control-del-all" title="전체 삭제"></button> -->
+											</li>
+
+											<li>
+												<div class="cntBox">
+													<div class="titBox">
+														<div class="lt">
+															<h3>부여된 권한 목록</h3>
+														</div>
+
+														<div class="rt">
+														</div>
+													</div>
+
+													<!-- schList -->
+													<div class="schList">
+														<!-- tblBox -->
+														<div class="tblBox">
+															<table class="tbl col tC themeGray">
+																<caption></caption>
+																<colgroup>
+																	<col style="width: 46px;">
+																	<col style="width: auto;">
+																	<col style="width: auto;">
+																</colgroup>
+																<thead>
+																	<tr>
+																		<th scope="col">
+																			<div class="tblChk">
+																				<input type="checkbox" id="chk01"><label for="chk01"></label>
+																			</div>
+																		</th>
+																		<th scope="col">권한 그룹명</th>
+																		<th scope="col">접근 가능 메뉴</th>
+																	</tr>
+																</thead>
+																<tbody>
+																	<tr>
+																		<td>
+																			<div class="tblChk">
+																				<input type="checkbox" id="chk02"><label for="chk02"></label>
+																			</div>
+																		</td>
+																		<td>시행기관 담당</td>
+																		<td>ALL</td>
+																	</tr>
+																	<tr>
+																		<td>
+																			<div class="tblChk">
+																				<input type="checkbox" id="chk03"><label for="chk03"></label>
+																			</div>
+																		</td>
+																		<td>시행기관 담당</td>
+																		<td>ALL</td>
+																	</tr>
+																	<tr>
+																		<td>
+																			<div class="tblChk">
+																				<input type="checkbox" id="chk04"><label for="chk04"></label>
+																			</div>
+																		</td>
+																		<td>시행기관 담당</td>
+																		<td>ALL</td>
+																	</tr>
+																	<tr>
+																		<td>
+																			<div class="tblChk">
+																				<input type="checkbox" id="chk05"><label for="chk05"></label>
+																			</div>
+																		</td>
+																		<td>시행기관 담당</td>
+																		<td>ALL</td>
+																	</tr>
+																	<tr>
+																		<td>
+																			<div class="tblChk">
+																				<input type="checkbox" id="chk06"><label for="chk06"></label>
+																			</div>
+																		</td>
+																		<td>시행기관 담당</td>
+																		<td>ALL</td>
+																	</tr>
+																	<tr>
+																		<td>
+																			<div class="tblChk">
+																				<input type="checkbox" id="chk07"><label for="chk07"></label>
+																			</div>
+																		</td>
+																		<td>시행기관 담당</td>
+																		<td>ALL</td>
+																	</tr>
+																	<tr>
+																		<td>
+																			<div class="tblChk">
+																				<input type="checkbox" id="chk08"><label for="chk08"></label>
+																			</div>
+																		</td>
+																		<td>시행기관 담당</td>
+																		<td>ALL</td>
+																	</tr>
+																	<tr>
+																		<td>
+																			<div class="tblChk">
+																				<input type="checkbox" id="chk09"><label for="chk09"></label>
+																			</div>
+																		</td>
+																		<td>시행기관 담당</td>
+																		<td>ALL</td>
+																	</tr>
+																	<tr>
+																		<td>
+																			<div class="tblChk">
+																				<input type="checkbox" id="chk10"><label for="chk10"></label>
+																			</div>
+																		</td>
+																		<td>시행기관 담당</td>
+																		<td>ALL</td>
+																	</tr>
+																	<tr>
+																		<td>
+																			<div class="tblChk">
+																				<input type="checkbox" id="chk11"><label for="chk11"></label>
+																			</div>
+																		</td>
+																		<td>시행기관 담당</td>
+																		<td>ALL</td>
+																	</tr>
+																</tbody>
+															</table>
+														</div>
+														<!-- //tblBox -->
+													</div>
+													<!-- //schList -->
+												</div>
+											</li>
+										</ul>
+										<!-- //tblDb -->
+									</div>
+									<!-- //cntBox -->
+
+									<!-- cntBox -->
+									<div class="cntBox">
+										<div class="titBox">
+											<div class="lt">
+												<h3>접근 가능한 ODA 사업 목록</h3>
+											</div>
+
+											<div class="rt">
+												<div class="btn-wrap">
+													<button type="button" class="btn">삭제</button>
+													<button type="button" class="btn">반려</button>
+													<button type="button" class="btn-plus txt">추가</button>
+													<button type="button" class="btn-save txt">승인</button>
+												</div>
+											</div>
 										</div>
-									</div>
-								</div>
 
-								<!-- tblBox -->
-								<div class="tblBox">
-									<table class="tbl col">
-										<caption></caption>
-										<colgroup>
-											<col style="width: 140px;">
-											<col style="width: 100px;">
-											<col style="width: auto;">
-											<col style="width: 80px;">
-											<col style="width: 100px;">
-											<col style="width: 100px;">
-											<col style="width: 100px;">
-										</colgroup>
+										<!-- schList -->
+										<div class="schList">
+											<!-- tblBox -->
+											<div class="tblBox">
+												<table class="tbl col tC">
+													<caption></caption>
+													<colgroup>
+														<col style="width: 46px;">
+														<col style="width: auto;">
+														<col style="width: 200px;">
+														<col style="width: 200px;">
+														<col style="width: 100px;">
+														<col style="width: 120px;">
+													</colgroup>
 
-										<thead>
-											<tr>
-												<th scope="col">그룹ID</th>
-												<th scope="col">그룹명</th>
-												<th scope="col">메뉴명</th>
-												<th scope="col">구분</th>
-												<th scope="col">문자</th>
-												<th scope="col">이메일</th>
-												<th scope="col">알림톡</th>
-											</tr>
-										</thead>
+													<thead>
+														<tr>
+															<th scope="col">
+																<div class="tblChk">
+																	<input type="checkbox" id="chk_a0"><label for="chk_a0"></label>
+																</div>
+															</th>
+															<th scope="col">사업명</th>
+															<th scope="col">수원국</th>
+															<th scope="col">사업 기간</th>
+															<th scope="col">사업 상태</th>
+															<th scope="col">승인 상태</th>
+														</tr>
+													</thead>
 
-										<tbody>
-											<tr>
-												<td class="tC">
-													<div class="tblChk">
-														<input type="checkbox" id="chk_a1"><label for="chk_a1">그룹ID</label>
-													</div>
-												</td>
-												<td>그룹명</td>
-												<td>
-													<div class="tableNode">
-														<button type="button" class="btn-tblnode opened"><!-- checkbox 없는 경우 -->
-															<span class="sr-only">열기</span>
-															<span>ODA사업관리</span>
-														</button>
-													</div>
-												</td>
-												<td class="tC">조회</td>
-												<td>
-													<div class="tblChk">
-														<input type="checkbox" id="chk_a2"><label for="chk_a2"></label>
-													</div>
-												</td>
-												<td>
-													<div class="tblChk">
-														<input type="checkbox" id="chk_a3"><label for="chk_a3"></label>
-													</div>
-												</td>
-												<td>
-													<div class="tblChk">
-														<input type="checkbox" id="chk_a4"><label for="chk_a4"></label>
-													</div>
-												</td>
-											</tr>
-											<tr>
-												<td class="tC">
-													<div class="tblChk">
-														<input type="checkbox" id="chk_a5"><label for="chk_a5">그룹ID</label>
-													</div>
-												</td>
-												<td>그룹명</td>
-												<td>
-													<div class="tableNode">
-														<span class="space"></span><!-- depth 들여쓰기 -->
-														<span class="line"></span><!-- 하위 표시 아이콘 -->
-														<button type="button" class="btn-tblnode opened">
-															<span class="sr-only">닫기</span>
-															<span>예비사업</span>
-														</button>
-													</div>
-												</td>
-												<td class="tC">등록</td>
-												<td>
-													<div class="tblChk">
-														<input type="checkbox" id="chk_a7"><label for="chk_a7"></label>
-													</div>
-												</td>
-												<td>
-													<div class="tblChk">
-														<input type="checkbox" id="chk_a8"><label for="chk_a8"></label>
-													</div>
-												</td>
-												<td>
-													<div class="tblChk">
-														<input type="checkbox" id="chk_a9"><label for="chk_a9"></label>
-													</div>
-												</td>
-											</tr>
-											<tr>
-												<td class="tC">
-													<div class="tblChk">
-														<input type="checkbox" id="chk_a10"><label for="chk_a10">그룹ID</label>
-													</div>
-												</td>
-												<td>그룹명</td>
-												<td>
-													<div class="tableNode">
-														<span class="space"></span>
-														<span class="space"></span>
-														<span class="line"></span>
-														<button type="button" class="btn-tblnode opened"><!-- checkbox 없는 경우 -->
-															<span class="sr-only">닫기</span>
-															<span>예비사업</span>
-														</button>
-													</div>
-												</td>
-												<td class="tC">조회</td>
-												<td>
-													<div class="tblChk">
-														<input type="checkbox" id="chk_a11"><label for="chk_a11"></label>
-													</div>
-												</td>
-												<td>
-													<div class="tblChk">
-														<input type="checkbox" id="chk_a12"><label for="chk_a12"></label>
-													</div>
-												</td>
-												<td>
-													<div class="tblChk">
-														<input type="checkbox" id="chk_a13"><label for="chk_a13"></label>
-													</div>
-												</td>
-											</tr>
-										</tbody>
-									</table>
-								</div>
-								<!-- //tblBox -->
-							</li>
-							<li>
-								<div class="titBox">
-									<div class="lt">
-										<h3>기관조회권한</h3>
-									</div>
-
-									<div class="rt">
-										<div class="btn-wrap">
-											<button type="button" class="btn-plus txt">기관정보추가</button>
-											<button type="button" class="btn-del" title="삭제"></button>
+													<tbody>
+														<tr>
+															<td>
+																<div class="tblChk">
+																	<input type="checkbox" id="chk_a1"><label for="chk_a1"></label>
+																</div>
+															</td>
+															<td class="tL">사업명</td>
+															<td>수원국명</td>
+															<td>2025.07.01 ~ 2025.07.01</td>
+															<td><span class="badge orange">예비</span></td>
+															<td><span class="badge lg orange">승인대기</span></td>
+														</tr>
+														<tr>
+															<td>
+																<div class="tblChk">
+																	<input type="checkbox" id="chk_a2"><label for="chk_a2"></label>
+																</div>
+															</td>
+															<td class="tL">사업명</td>
+															<td>수원국명</td>
+															<td>2025.07.01 ~ 2025.07.01</td>
+															<td><span class="badge pt">진행</span></td>
+															<td><span class="badge lg gray">승인완료</span></td>
+														</tr>
+														<tr>
+															<td>
+																<div class="tblChk">
+																	<input type="checkbox" id="chk_a3"><label for="chk_a3"></label>
+																</div>
+															</td>
+															<td class="tL">사업명</td>
+															<td>수원국명</td>
+															<td>2025.07.01 ~ 2025.07.01</td>
+															<td><span class="badge">취소</span></td>
+															<td><span class="badge lg">승인반려</span></td>
+														</tr>
+														<tr>
+															<td>
+																<div class="tblChk">
+																	<input type="checkbox" id="chk_a4"><label for="chk_a4"></label>
+																</div>
+															</td>
+															<td class="tL">사업명</td>
+															<td>수원국명</td>
+															<td>2025.07.01 ~ 2025.07.01</td>
+															<td><span class="badge gray">완료</span></td>
+															<td><span class="badge lg">승인반려</span></td>
+														</tr>
+														<tr>
+															<td>
+																<div class="tblChk">
+																	<input type="checkbox" id="chk_a5"><label for="chk_a5"></label>
+																</div>
+															</td>
+															<td class="tL">사업명</td>
+															<td>수원국명</td>
+															<td>2025.07.01 ~ 2025.07.01</td>
+															<td><span class="badge purple">기타</span></td>
+															<td><span class="badge lg">승인반려</span></td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+											<!-- //tblBox -->
 										</div>
+										<!-- //schList -->
+
+										<!-- pagination -->
+										<div class="pagination">
+											<button type="button" class="page-navi prev" disabled=""><span class="sr-only">이전</span></button>
+											<div class="page-links">
+												<a class="page-link active" href="#"><span class="sr-only">현재페이지</span>1</a>
+												<a class="page-link" href="#">2</a>
+												<a class="page-link" href="#">3</a>
+												<a class="page-link" href="#">4</a>
+												<a class="page-link" href="#">5</a>
+											</div>
+											<button type="button" class="page-navi next"><span class="sr-only">다음</span></button>
+
+											<p>총 949건 (1/95)</p>
+											<select name="" id="select01">
+												<option value="5">5</option>
+												<option value="10" selected>10</option>
+												<option value="30">30</option>
+												<option value="50">50</option>
+												<option value="100">100</option>
+											</select>
+										</div>
+										<!-- //pagination -->
+
 									</div>
-								</div>
+									<!-- //cntBox -->
+								</li>
 
-								<!-- tblBox -->
-								<div class="tblBox">
-									<table class="tbl col">
-										<caption></caption>
-										<colgroup>
-											<col style="width: 46px;">
-											<col style="width: auto;">
-											<col style="width: auto;">
-											<col style="width: auto;">
-											<col style="width: auto;">
-										</colgroup>
+								<li data-tabCont="tab1-cont2">
+								</li>
+							</ul>
+							<!-- //tabCont -->
+						</div>
+						<!-- //tabBox -->
 
-										<thead>
-											<tr>
-												<th scope="col">
-													<div class="tblChk">
-														<input type="checkbox" id="chk_b00"><label for="chk_b00"></label>
-													</div>
-												</th>
-												<th scope="col">기관코드</th>
-												<th scope="col">기관명</th>
-												<th scope="col">승인상태</th>
-												<th scope="col">조회 유효일자</th>
-											</tr>
-										</thead>
 
-										<tbody>
-											<tr>
-												<td>
-													<div class="tblChk">
-														<input type="checkbox" id="chk_b00"><label for="chk_b00"></label>
-													</div>
-												</td>
-												<td>00</td>
-												<td class="tL">국가유산청</td>
-												<td>승인완료</td>
-												<td>2025.07.01</td>
-											</tr>
-											<tr>
-												<td>
-													<div class="tblChk">
-														<input type="checkbox" id="chk_b00"><label for="chk_b00"></label>
-													</div>
-												</td>
-												<td>00</td>
-												<td class="tL">국가유산청</td>
-												<td>승인대기</td>
-												<td>2025.07.01</td>
-											</tr>
-											<tr>
-												<td>
-													<div class="tblChk">
-														<input type="checkbox" id="chk_b00"><label for="chk_b00"></label>
-													</div>
-												</td>
-												<td>00</td>
-												<td class="tL">국가유산청</td>
-												<td>승인대기</td>
-												<td>2025.07.01</td>
-											</tr>
-										</tbody>
-									</table>
-								</div>
-								<!-- //tblBox -->
-							</li>
-						</ul>
 					</div>
 					<!-- //cntBox -->
 
@@ -441,7 +686,7 @@
 					<div class="cntBox">
 						<div class="titBox">
 							<div class="lt">
-								<h3>사용자 권한변경이력</h3>
+								<h3>사용자 정보 변경 이력</h3>
 							</div>
 
 							<div class="rt">
@@ -516,8 +761,10 @@
 				<!-- //cntBox -->
 
 				<div class="btn-wrap">
+					<button type="button" class="btn">목록</button>
+					<button type="button" class="btn">권한삭제</button>
+					<button type="button" class="btn pt">수정</button>
 					<button type="button" class="btn pt">저장</button>
-					<button type="button" class="btn">회원탈퇴</button>
 				</div>
 			</div>
 			<!-- //컨텐츠 영역 -->

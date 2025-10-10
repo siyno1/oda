@@ -418,8 +418,8 @@ button.btn-expand.on {background-image:url(../img/ico_expand_on.svg);}
 .tab li button {display:block; position: relative; width: auto; height: 42px; padding: 5px 15px; border:solid #B1B8BE; border-width:1px 1px 0 1px; text-align: center; font-size: 16px; font-weight: 400; color: #464C53; background: #fff; outline:0 none;}
 .tab li button:hover,
 .tab li button:focus {background:#EEEEF4}
-.tab li:first-child button {border-radius:6px 0 0 0;}
-.tab li:last-child button {border-radius:0 6px 0 0;}
+.tab li:first-child button {border-top-left-radius:6px;}
+.tab li:last-child button {border-top-right-radius:6px;}
 .tab li button.active {font-weight: 600; color: #fff; border-color:#524C91; background: #524C91;z-index:1;}
 .tab li button.active::after {z-index: 1; position: absolute; bottom: 0; left:-1px; content:''; width:calc(100% + 2px); height:1px; background: #524C91;}
 .tab li button:disabled {background:#ACABAB;color:#868686;}
@@ -593,6 +593,7 @@ button.btn-expand.on {background-image:url(../img/ico_expand_on.svg);}
 .badge.gray {background: #868686;}
 .badge.orange {background: #DC984F;}
 .badge.blue {background: #5D8CB0;}
+.badge.purple {background: #7D74AA;}
 
 /* sBadge[badge Type03] */
 .sBadge {display:flex;align-items:center;justify-content:center;height:36px;padding:0 9px;border-radius:4px;font-size:16px;line-height:1.5;font-weight:600;color:#fff;text-align:center;background-color:#ACABAB;}
@@ -626,6 +627,7 @@ button.btn-expand.on {background-image:url(../img/ico_expand_on.svg);}
 /* tblDb[double table] */
 .tblDb {display: flex; justify-content: space-between; gap: 48px; margin-top:60px;}
 .tblDb > li {flex:0 1 auto;width:100%;}
+.tblDb.sm {gap:20px;}
 
 .cntBox + .cntBox .tblDb {margin-top:0;}
 
@@ -643,8 +645,8 @@ button.btn-expand.on {background-image:url(../img/ico_expand_on.svg);}
 
 /* tooltip */
 .tooltipBox {display: flex; justify-content: center; align-items: center; width: 100%; background: #F4F5F6;}
-.tooltip {display: inline-flex; align-items: center; gap: 5px; font-size: 15px; font-weight: 500; line-height: 1.5; color: #8A949E;}
-.tooltip::before {content:''; display: inline-block; width: 12px; min-width: 12px; height: 12px; background: url(../img/ico_bullet.svg) no-repeat center;}
+.tooltip {display: inline-flex; align-items: flex-start; gap: 5px; font-size: 15px; font-weight: 500; line-height: 1.5; color: #8A949E;}
+.tooltip::before {content:''; display: inline-block; width: 12px; min-width: 12px; height: 22px; background: url(../img/ico_bullet.svg) no-repeat center;}
 
 /* map */
 .mapBox {box-sizing:border-box;position:absolute;top:60px;left:0;right:0;bottom:0;}
@@ -847,7 +849,7 @@ button.btn-expand.on {background-image:url(../img/ico_expand_on.svg);}
 /** layout 세팅 **/
 .layDbl {display:flex;align-items:center;gap:20px;width:100%;}
 .layDbl .schList {margin-top:0;}
-.midControl {flex:0 0 auto; display:flex; flex-direction:column; gap:5px; justify-content: center;}
+.midControl {flex:0 0 auto; display:flex; flex-direction:column; gap:5px; justify-content: center; width:auto !important;}
 
 /* 25.07.24 사업관리-상세 */
 .info .tab {margin-bottom:60px;}
@@ -1524,3 +1526,6 @@ button.btn-history-more.on::after {transform:rotate(180deg);}
 .subSchBox .lt {display:flex;align-items:center;gap:5px;}
 .subSchBox .rt {display:flex;align-items:center;gap:5px;margin-left:auto;}
 .subSchBox .selectBox {max-width:300px;}
+
+/* emptyMsgBox */
+.emptyMsgBox {display:flex;padding:20px;border-radius:6px;border:1px solid #e2e6ea;background-color:#f4f5f6;}
