@@ -1485,7 +1485,7 @@ button[class^=btnList] {display:inline-block;box-sizing:border-box;border:0 none
 .toggleListDetail {display:flex;align-items:flex-start;}
 .toggleListDetail > .list {flex:1 1 auto;}
 .toggleListDetail > .detail {flex:0 0 auto;width:0;overflow:hidden;transition:width 0.3s ease-in-out, margin 0.3s ease-in-out;}
-.toggleListDetail > .detail > .tblBox {width:820px;}
+.toggleListDetail > .detail > .tblinputFormBox {width:820px;}
 .toggleListDetail.on > .detail {margin-left:48px;box-sizing:border-box;width:820px;}
 
 /* 사업등록 */

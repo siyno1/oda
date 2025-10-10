@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<title>ODA</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+	<meta http-equiv="Pragma" content="no-cache">
+	<meta http-equiv="Expires" content="0">
+
+	<link rel="stylesheet" href="./../../css/flatpickr.min.css">
+	<link rel="stylesheet" href="./../../css/reset.css">
+	<link rel="stylesheet" href="./../../css/layout.css">
+	<link rel="stylesheet" href="./../../css/style.css">
+
+	<script defer src="./../../js/jquery-3.7.1.min.js"></script>
+	<script defer src="./../../js/flatpickr.js"></script>
+	<script defer src="./../../js/ui.js"></script>
+</head>
+
+<body>
+	<!-- wrap -->
+	<div id="wrap" class="wrapper">
+		<!-- 헤더 영역 -->
+		<div id="header" class="header">
+			<div class="wrap">
+				<h1><a href="./../gate.html"><img src="./../../img/logo.svg"></a></h1>
+				<ul class="gnb">
+					<li class="tit">사업관리</li>
+					<li class="active"><a href="javascript:;">준비단계</a></li><!-- 활성화 시 li class="active" -->
+					<li><a href="javascript:;">진행단계</a></li>
+					<li><a href="javascript:;">완료단계</a></li>
+				</ul>
+
+				<ul class="subGnb">
+					<li><a href="javascript:;">위원회관리</a></li>
+					<li><a href="javascript:;">정보마당</a></li>
+					<li><a href="javascript:;">운영관리</a></li>
+				</ul>
+
+				<div class="userMenu">
+					<div class="userBox">
+						<button class="btnUser">운영관리자</button>
+						<ul class="dropDown">
+							<li><a href="javascript:;">쪽지</a></li>
+							<li><a href="javascript:;">마이페이지</a></li>
+							<li><a href="javascript:;">로그아웃</a></li>
+						</ul>
+					</div>
+					<div class="searchBox">
+						<input type="text" placeholder="통합검색">
+						<button class="btnSearch">검색</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- //헤더 영역 -->
+
+		<!-- 컨테이너 영역 -->
+		<div id="container" class="container">
+
+			<!-- LNB 영역 -->
+			<div id="side" class="side">
+				<div class="side_menu">
+					<button class="btnSlide" title="사이드메뉴 열고 닫기"></button>
+
+					<h2>ODA 사업 관리</h2>
+
+					<!-- pinBox:메뉴고정 -->
+					<div class="pinBox">
+						<label class="pinBar">
+							<span class="name">메뉴고정</span>
+							<input type="checkbox" name="pinned">
+							<span class="switch"></span>
+						</label>
+					</div>
+					<!-- //pinBox:메뉴고정 -->
+
+					<!-- gnb -->
+					<ul class="gnb">
+						<li>
+							<a href="javascript:;">사업목록</a>
+						</li>
+						<li class="hasChild active">
+							<a href="javascript:;">연수 사업 관리</a>
+							<ul>
+								<li class="hasChild active"><!-- 하위메뉴 있는 경우 li class="hasCild", 열림 li class="hasCild active" -->
+									<a href="javascript:;">연수 사업 목록</a>
+									<ul>
+										<li><a href="javascript:;" class="on">연수 사업 목록</a></li><!-- depth와 관계 없이 활성화 메뉴 a class="on" -->
+										<li><a href="javascript:;">연수 프로그램 관리</a></li>
+										<li><a href="javascript:;">연수생 관리</a></li>
+										<li><a href="javascript:;">체크리스트</a></li>
+									</ul>
+								</li>
+								<li><a href="javascript:;" class="on">연수 프로그램 관리</a></li>
+								<li><a href="javascript:;">연수생 관리</a></li>
+								<li><a href="javascript:;">체크리스트</a></li>
+							</ul>
+						</li>
+						<li class="hasChild">
+							<a href="javascript:;">장학 사업 관리</a>
+							<ul>
+								<li><a href="javascript:;">연수 사업 목록</a></li>
+								<li><a href="javascript:;">연수 프로그램 관리</a></li>
+								<li><a href="javascript:;">연수생 관리</a></li>
+								<li><a href="javascript:;">체크리스트</a></li>
+							</ul>
+						</li>
+						<li class="hasChild">
+							<a href="javascript:;">패키지 사업 관리</a>
+							<ul>
+								<li><a href="javascript:;">연수 사업 목록</a></li>
+								<li><a href="javascript:;">연수 프로그램 관리</a></li>
+								<li><a href="javascript:;">연수생 관리</a></li>
+								<li><a href="javascript:;">체크리스트</a></li>
+							</ul>
+						</li>
+					</ul>
+					<!-- //gnb -->
+
+					<ul class="side-quick">
+						<li><a class="site-reg" href="#">일괄등록</a></li>
+						<li><a class="site-help" href="#">헬프데스크</a></li>
+						<li><a class="site-mng" href="#">부처별 ODA 담당자</a></li>
+						<li><a class="site-stats" href="#">ODA 통계</a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- //LNB 영역 -->
+
+			<!-- 컨텐츠 영역 -->
+			<div class="contents">
+				<div class="pgtBox">
+					<div class="lt">
+						<h2>전략 부합성 심사 진행</h2>
+					</div>
+
+					<ul class="breadcrumb">
+						<li class="home"><a href="javascript:;">홈</a></li>
+						<li><a href="javascript:;">준비 단계</a></li>
+						<li><a href="javascript:;">전략 부합성 심사</a></li>
+						<li><a href="javascript:;">전략 부합성 심사 진행</a></li>
+					</ul>
+
+					<div class="rt"></div>
+				</div>
+
+				<!-- cntBox -->
+				<div class="cntBox">
+
+					<!-- tblBox -->
+					<div class="tblBox">
+						<table class="tbl row">
+							<caption></caption>
+
+							<colgroup>
+								<col style="width:120px;">
+								<col style="width:106px;">
+								<col style="width:auto;">
+								<col style="width:226px;">
+								<col style="width:auto;">
+							</colgroup>
+
+							<tbody>
+								<tr>
+									<th scope="row" colspan="2">사업코드</th>
+									<td colspan="3">
+										<div class="inputForm">
+											<input type="text">
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row" colspan="2">소관 부처 (기관)</th>
+									<td>
+										<div class="inputForm">
+											<div class="selectBox">
+												<select name="select01">
+													<option value="" hidden>- 선택 -</option>
+												</select>
+											</div>
+										</div>
+									</td>
+									<th scope="row">국내 담당기관</th>
+									<td><input type="text" class="w100"></td>
+								</tr>
+								<tr>
+									<th scope="row" colspan="2">원조 구분</th>
+									<td colspan="3">
+										<div class="rdoBox">
+											<input type="radio" id="radio01-1" name="rdo01">
+											<label for="radio01-1">양자유상</label>
+											<input type="radio" id="radio01-2" name="rdo01">
+											<label for="radio01-2">양자무상</label>
+											<input type="radio" id="radio01-3" name="rdo01">
+											<label for="radio01-3">다자성양자</label>
+											<input type="radio" id="radio01-4" name="rdo01">
+											<label for="radio01-4">다자성양자(무상)</label>
+											<input type="radio" id="radio01-5" name="rdo01">
+											<label for="radio01-5">다자성양자(유상)</label>
+											<input type="radio" id="radio01-6" name="rdo01">
+											<label for="radio01-6">다자</label>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row" colspan="2">세부사업명 <strong class="txtPt">[한글]</strong></th>
+									<td colspan="3"><input type="text" class="w100"></td>
+								</tr>
+								<tr>
+									<th scope="row" colspan="2">내부사업명 <strong class="txtPt">[한글]</strong></th>
+									<td colspan="3"><input type="text" class="w100"></td>
+								</tr>
+								<tr>
+									<th scope="row" colspan="2">사업 구분 (신규/계속)</th>
+									<td colspan="3">
+										<div class="rdoBox">
+											<input type="radio" id="radio02-1" name="rdo02">
+											<label for="radio02-1">신규</label>
+											<input type="radio" id="radio02-2" name="rdo02">
+											<label for="radio02-2">계속</label>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th scope="rowgroup" rowspan="2">총 사업 예산 및 기간</th>
+									<th scope="row">시작 연도</th>
+									<td>
+										<div class="inputForm">
+											<input type="text" class="sm">
+										</div>
+									</td>
+									<th scope="row" rowspan="2">총 사업 예산 (총액 <strong class="txtPt">[백만원]</strong>)</th>
+									<td rowspan="2"><input type="text" class="w100"></td>
+								</tr>
+								<tr>
+									<th scope="row">종료 연도</th>
+									<td>
+										<div class="inputForm">
+											<input type="text" class="sm">
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th scope="rowgroup" rowspan="2">시행계획 예산 최초 지출액</th>
+									<th scope="row">예산 (안)</th>
+									<td>
+										<div class="inputUnit">
+											<input type="text">
+											<span>백만원</span>
+										</div>
+									</td>
+									<th scope="row" rowspan="2">ODA 규모</th>
+									<td rowspan="2">
+										<div class="inputUnit">
+											<input type="text">
+											<span>억 원</span>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">계상 비율</th>
+									<td>
+										<div class="inputUnit">
+											<input type="text">
+											<span>%</span>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row" colspan="2">ODA 규모 [억 원]</th>
+									<td colspan="3">
+										<div class="inputForm">
+											<input type="text">
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row" colspan="2">지역(대륙)</th>
+									<td>
+										<div class="inputForm">
+											<div class="selectBox">
+												<select name="select02" id="select02" disabled>
+													<option value="" hidden>- 국가 선택 시 자동 선택됩니다.</option>
+												</select>
+											</div>
+										</div>
+									</td>
+									<th scope="row">개별국가유무</th>
+									<td>
+										<div class="rdoBox">
+											<input type="radio" id="radio03-1" name="rdo03">
+											<label for="radio03-1">O</label>
+											<input type="radio" id="radio03-2" name="rdo03">
+											<label for="radio03-2">X</label>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row" colspan="2">국가명 [기타 국가 입력 가능]</th>
+									<td>
+										<div class="inputForm">
+											<div class="selectBox">
+												<select name="select03" id="select03">
+													<option value="" hidden>- 선택 -</option>
+												</select>
+											</div>
+										</div>
+									</td>
+									<th scope="row">대상국 내 지역</th>
+									<td><input type="text" class="w100"></td>
+								</tr>
+								<tr>
+									<th scope="row" colspan="2">중점/일반 협력국</th>
+									<td colspan="3">
+										<div class="rdoBox">
+											<input type="radio" id="radio04-1" name="rdo04">
+											<label for="radio04-1">중점</label>
+											<input type="radio" id="radio04-2" name="rdo04">
+											<label for="radio04-2">일반</label>
+											<input type="radio" id="radio04-3" name="rdo04">
+											<label for="radio04-3">기타</label>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">중점협력국 중점분야<br>(중점협력국만)</th>
+									<th scope="row">중점분야 유무</th>
+									<td>
+										<div class="rdoBox">
+											<input type="radio" id="radio05-1" name="rdo05">
+											<label for="radio05-1">O</label>
+											<input type="radio" id="radio05-2" name="rdo05">
+											<label for="radio05-2">X</label>
+										</div>
+									</td>
+									<th scope="row">중점분야</th>
+									<td><input type="text" class="w100"></td>
+								</tr>
+								<tr>
+									<th scope="row" colspan="2">사업유형</th>
+									<td><input type="text" class="w100"></td>
+									<th scope="row">사업분야</th>
+									<td><input type="text" class="w100"></td>
+								</tr>
+								<tr>
+									<th scope="row" colspan="2">사업 설명</th>
+									<td colspan="3">
+										<textarea name="text01"></textarea>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<!-- //tblBox -->
+				</div>
+				<!-- //cntBox -->
+
+				<!-- cntBox -->
+				<div class="cntBox">
+					<!-- 첨부파일 -->
+					<div class="titBox">
+						<div class="lt">
+							<h3>첨부파일</h3>
+						</div>
+
+						<div class="rt">
+
+						</div>
+					</div>
+
+					<div class="tblBox">
+						<table class="tbl row">
+							<caption></caption>
+							<colgroup>
+								<col style="width: auto;">
+							</colgroup>
+
+							<tbody>
+								<tr>
+									<td>
+										<div class="file">
+											<div class="btn-wrap">
+												<button type="button" class="btn-plus"><span class="sr-only">추가</span></button>
+												<button type="button" class="btn-del"><span class="sr-only">삭제</span></button>
+											</div>
+
+											<div class="file-upload">
+												<p class="txt-file">첨부하실 파일을 마우스로 끌어오세요.</p>
+												<input type="file" name="myFile" id="fileu-upload" hidden="">
+											</div>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<!-- //첨부파일 -->
+				</div>
+				<!-- //cntBox -->
+
+				<div class="btn-wrap">
+					<button type="button" class="btn">목록</button>
+					<button type="button" class="btn pt">저장</button>
+				</div>
+			</div>
+			<!-- //컨텐츠 영역 -->
+		</div>
+		<!-- //컨테이너 영역 -->
+	</div>
+	<!-- //wrap -->
+</body>
+
+</html>
