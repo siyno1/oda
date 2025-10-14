@@ -134,13 +134,14 @@
 			<div class="contents">
 				<div class="pgtBox">
 					<div class="lt">
-						<h2>위원 관리</h2>
+						<h2>알림 이력 관리</h2>
 					</div>
 
 					<ul class="breadcrumb">
 						<li class="home"><a href="javascript:;">홈</a></li>
-						<li><a href="javascript:;">평가</a></li>
-						<li><a href="javascript:;">자체평가</a></li>
+						<li><a href="javascript:;">운영관리</a></li>
+						<li><a href="javascript:;">알림 관리</a></li>
+						<li><a href="javascript:;">알림 이력 관리</a></li>
 					</ul>
 
 					<div class="rt"></div>
@@ -150,12 +151,12 @@
 				<div class="schBox">
 					<div class="schRow">
 						<ul class="fltList">
-							<li><button type="button">위원회유형</button></li>
+							<li><button type="button">발송 연도</button></li>
 						</ul>
 
 						<div class="schTxt">
 							<div class="schKeyword">
-								<input type="text" placeholder="성명을 입력하세요.">
+								<input type="text" placeholder="발송/수신자 이름을 입력해주세요.">
 								<!-- button type="button" class="btn-src">검색</button -->
 							</div>
 						</div>
@@ -165,15 +166,13 @@
 						<div class="fltCont">
 							<ul>
 								<li class="contBox">
-									<p>위원회유형</p>
-									<div class="contList">
-										<div>
-											<ul>
-												<li><button type="button">전체</button></li>
-												<li><button type="button">국제개발협력 위원회</button></li>
-												<li><button type="button">실무위원회</button></li>
-												<li><button type="button">평가위원회</button></li>
-											</ul>
+									<p>발송 연도</p>
+									<div class="inputForm">
+										<div class="selectBox sm">
+											<select>
+												<option hidden>- 연도 선택 -</option>
+												<option value="2025">2025년</option>
+											</select>
 										</div>
 									</div>
 								</li>
@@ -215,14 +214,12 @@
 				<div class="cntBox">
 					<div class="titBox">
 						<div class="lt">
-
+							<h3>발송 이력</h3>
 						</div>
 
 						<div class="rt">
 							<div class="btn-wrap">
 								<button type="button" class="btn excel">엑셀다운로드</button>
-								<button type="button" class="btn biz">위원 등록</button>
-								<button type="button" class="btn-del" title="삭제"></button>
 							</div>
 						</div>
 					</div>
@@ -243,15 +240,9 @@
 								</colgroup>
 								<thead>
 									<tr>
-										<th scope="col">
-											<div class="tblChk">
-												<input type="checkbox" id="chk01">
-												<label for="chk01"></label>
-											</div>
-										</th>
-										<th scope="col">순번</th>
-										<th scope="col">성명</th>
-										<th scope="col">소속</th>
+										<th scope="col">NO</th>
+										<th scope="col">발송 일시</th>
+										<th scope="col">발송 방법</th>
 										<th scope="col">직위</th>
 										<th scope="col">위원회 유형</th>
 										<th scope="col">위원 구분</th>
@@ -260,12 +251,6 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>
-											<div class="tblChk">
-												<input type="checkbox" id="chk02">
-												<label for="chk02"></label>
-											</div>
-										</td>
 										<td>1</td>
 										<td>홍길동</td>
 										<td>교육부</td>
