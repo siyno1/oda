@@ -1534,7 +1534,7 @@ button.btn-history-more.on::after {transform:rotate(180deg);}
 .subSchBox {display:flex;margin-bottom:40px;padding:20px;border-radius:8px;background-color:#F0F2F6;}
 .subSchBox .lt {display:flex;align-items:center;gap:5px;}
 .subSchBox .rt {display:flex;align-items:center;gap:5px;margin-left:auto;}
-.subSchBox .selectBox {max-width:300px;}
+.subSchBox .selectBox {width:700px;max-width:100%;}
 
 /* emptyMsgBox */
 .emptyMsgBox {display:flex;padding:20px;border-radius:6px;border:1px solid #e2e6ea;background-color:#f4f5f6;}
@@ -1572,3 +1572,7 @@ button.btn-history-more.on::after {transform:rotate(180deg);}
 .txt-edit-btn {display:flex;align-items:flex-start;gap:4px;margin-top:4px;}
 .txt-edit-btn .current {font-size:15px;line-height:36px;color:#6f7f92;}
 .txt-edit-btn > button {margin-left:auto;}
+
+
+/* login */
+.login {background:#E4E8F7 url(../img/bg_login.jpg) no-repeat center;}
