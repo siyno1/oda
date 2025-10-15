@@ -1624,7 +1624,7 @@ button.btn-history-more.on::after {transform:rotate(180deg);}
 .login-box.case3 .btn-login.gpki::before {content:'';display:block;width:20px;height:20px;background:url(../img/ico_gpki.svg) no-repeat center;}
 
 
-.footer {padding:32px 12px;background:#fff;}
+.footer {padding:32px 12px;border-top:1px solid #E2E6EA;background:#fff;}
 .footer .ln {display:block;width:1px;height:12px;margin:0 12px;background-color:#cdd1d5;}
 .footer .footer-wrap {display:flex;gap:30px;align-items:flex-start;flex-wrap:wrap;max-width:1200px;margin:0 auto;}
 .footer .footer-logo {width:140px;margin-top:10px;}
