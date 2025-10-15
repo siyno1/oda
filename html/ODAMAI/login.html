@@ -2,7 +2,7 @@
 <html lang="ko">
 
 <head>
-	<title>ODA - 홈</title>
+	<title>ODA - 로그인</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
@@ -23,67 +23,109 @@
 	<!-- wrap -->
 	<div id="wrap" class="wrapper login">
 		<div class="login-comp">
-			<h1 class="login-logo"><img src="../../img/logo_login.svg" alt="ODA통합정보포털"></h1>
-			<p class="login-msg">ODA 통합정보포털 시스템은 대한민국 ODA 사업 전반에 대한 정보를 총괄 관리하고,<br>사업 추진의 효율성과 성과 향상을 종합적으로 지원합니다</p>
+			<h1 class="login-logo"><img src="../../img/logo_login.svg" alt="ODA 통합정보포털"></h1>
+			<p class="login-msg">ODA 통합정보포털 시스템은 <strong>대한민국 ODA 사업 전반에 대한 정보를 총괄 관리</strong>하고,<br><strong>사업 추진의 효율성과 성과 향상을 종합적으로 지원</strong>합니다</p>
 
-			<!-- login-tab -->
-			<div class="login-tab">
-				<!-- tab -->
-				<div class="tab">
-					<ul>
-						<li><button type="button" data-tabBtn="tab1-cont1" class="active">아이디 로그인</button></li>
-						<li><button type="button" data-tabBtn="tab1-cont2">인증서 로그인</button></li>
-					</ul>
-				</div>
-				<!-- //tab -->
+			<div class="login-comp-inner">
+				<!-- login-tab -->
+				<div class="login-tab">
+					<!-- tab -->
+					<div class="tab">
+						<ul>
+							<li><button type="button" data-tabBtn="tab1-cont1" class="active">아이디 로그인</button></li>
+							<li><button type="button" data-tabBtn="tab1-cont2">id step2</button></li>
+							<li><button type="button" data-tabBtn="tab1-cont3">인증서 로그인</button></li>
+						</ul>
+					</div>
+					<!-- //tab -->
 
 
-				<!-- tabCont -->
-				<ul class="tabCont">
-					<li class="active" data-tabCont="tab1-cont1">
-						<div class="login-form">
-							<div class="login-box">
-								<div class="login-inp">
-									<input type="text" class="inp-id" name="id" placeholder="아이디">
+					<!-- tabCont -->
+					<ul class="tabCont">
+						<li class="active" data-tabCont="tab1-cont1">
+							<div class="login-form">
+								<div class="login-box">
+									<div class="login-inp">
+										<input type="text" class="inp-id" name="id" placeholder="아이디">
+									</div>
+									<div class="login-inp">
+										<input type="password" class="inp-pw" name="pw" placeholder="비밀번호">
+									</div>
+									<div class="login-chk">
+										<label>
+											<input type="checkbox">
+											<span>아이디 저장</span>
+										</label>
+									</div>
+
+									<button type="button" class="btn-login">로그인</button>
 								</div>
-								<div class="login-inp">
-									<input type="password" class="inp-pw" name="pw" placeholder="비밀번호">
-								</div>
-								<div class="login-chk">
-									<label>
-										<input type="checkbox">
-										<span>아이디 저장</span>
-									</label>
-								</div>
 
-								<button type="button" class="btn-login">로그인</button>
+
+
+								<ul class="login-link">
+									<li><a href="#">회원가입</a></li>
+									<li><a href="#">아이디 찾기</a></li>
+									<li><a href="#">비밀번호 초기화</a></li>
+								</ul>
 							</div>
-							<ul class="login-link">
-								<li><a href="#">회원가입</a></li>
-								<li><a href="#">아이디 찾기</a></li>
-								<li><a href="#">비밀번호 초기화</a></li>
-							</ul>
-						</div>
-					</li>
+						</li>
 
-					<li data-tabCont="tab1-cont2">
-						<div class="login-form">
-							<ul class="login-link">
-								<li><a href="#">회원가입</a></li>
-								<li><a href="#">아이디 찾기</a></li>
-								<li><a href="#">비밀번호 초기화</a></li>
-								<li><a href="#">인증서 등록 갱신</a></li>
-							</ul>
-						</div>
-					</li>
-				</ul>
-				<!-- //tabCont -->
+						<li data-tabCont="tab1-cont2">
+							<div class="login-form">
+								<div class="login-box case2">
+									<div class="login-inp">
+										<input type="text" name="verify" placeholder="숫자 6자리 입력">
+									</div>
+
+									<button type="button" class="btn-login">인증 확인</button>
+								</div>
+							</div>
+						</li>
+
+						<li data-tabCont="tab1-cont3">
+							<div class="login-form">
+								<div class="login-box case3">
+									<button type="button" class="btn-login gpki">인증서 로그인 (GPKI)</button>
+								</div>
+
+								<ul class="login-link">
+									<li><a href="#">회원가입</a></li>
+									<li><a href="#">아이디 찾기</a></li>
+									<li><a href="#">비밀번호 초기화</a></li>
+									<li><a href="#">인증서 등록 갱신</a></li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+					<!-- //tabCont -->
+				</div>
+				<!-- //login-tab -->
 			</div>
-			<!-- //login-tab -->
 		</div>
 
-		<footer class="login-footer">
-
+		<footer class="footer">
+			<div class="footer-wrap">
+				<div class="footer-logo">
+					<img src="../../img/logo_sub.svg" alt="ODA 통합정보포털">
+				</div>
+				<div class="info">
+					<div class="contact">
+						<address>세종특별자치시 다솜로 261 정부세종청사 1동 426호 국무조정실 국제개발협력본부</address>
+						<span class="ln"></span>
+						<p class="tel">
+							<span>대표전화</span>
+							<a href="tel:+044-200-2165">044-200-2165</a>
+						</p>
+					</div>
+					<p class="copy">Copyright &copy;ODA Korea, All rights reserved</p>
+				</div>
+				<div class="rel">
+					<a href="#" class="emph">개인정보처리방침</a>
+					<span class="ln"></span>
+					<a href="#">공개자료실</a>
+				</div>
+			</div>
 		</footer>
 	</div>
 	<!-- //wrap -->
