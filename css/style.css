@@ -1576,7 +1576,7 @@ button.btn-history-more.on::after {transform:rotate(180deg);}
 
 /* login */
 #wrap.login {display:flex;flex-direction:column;min-width:auto;}
-.login-comp {flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:32px 16px;background:#E4E8F7 url(../img/bg_login.jpg) no-repeat center;}
+.login-comp {flex:1 0 auto;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:32px 16px;background:#E4E8F7 url(../img/bg_login.jpg) no-repeat center;}
 .login-comp-inner {width:100%;max-width:560px;}
 
 .login-logo img {display:block;margin:0 auto 8px;}
@@ -1623,7 +1623,6 @@ button.btn-history-more.on::after {transform:rotate(180deg);}
 .login-box.case3 .btn-login.gpki {display:flex;gap:4px;align-items:center;justify-content:center;}
 .login-box.case3 .btn-login.gpki::before {content:'';display:block;width:20px;height:20px;background:url(../img/ico_gpki.svg) no-repeat center;}
 
-
 .footer {padding:32px 12px;border-top:1px solid #E2E6EA;background:#fff;}
 .footer .ln {display:block;width:1px;height:12px;margin:0 12px;background-color:#cdd1d5;}
 .footer .footer-wrap {display:flex;gap:30px;align-items:flex-start;flex-wrap:wrap;max-width:1200px;margin:0 auto;}
@@ -1640,3 +1639,19 @@ button.btn-history-more.on::after {transform:rotate(180deg);}
 .footer .rel {display:flex;align-items:center;}
 .footer .rel a {line-height:1.5;}
 .footer .rel a.emph {font-weight:700;color:#5B51BE;}
+
+/* guest */
+#wrap.guest {display:flex;flex-direction:column;}
+
+.guest-header {height:200px;padding:32px 12px 0;background:#E4E8F7 url(../img/bg_guest.jpg) no-repeat center}
+.guest-header-top {display:flex;align-items:center;justify-content:space-between;width:100%;max-width:1200px;margin:0 auto 8px;}
+.guest-header .guest-tit {width:100%;max-width:1200px;margin:0 auto;padding:0 12px;text-align:center;font-size:36px;font-weight:800;line-height:1.5;color:#524c91;}
+.guest-header .guest-btns {display:flex;}
+.guest-header .guest-btns button {width:72px;height:32px;border:1px solid #9B9AC3;background:none;font-size:15px;line-height:1.5;font-weight:500;color:#524c91;}
+.guest-header .guest-btns button:hover {background:#524c91;color:#fff;}
+.guest-header .guest-btns li + li {margin-left:-1px;}
+.guest-header .guest-btns li:first-child button {border-radius:4px 0 0 4px;}
+.guest-header .guest-btns li:last-child button {border-radius:0 4px 4px 0;}
+
+.guest-content {flex:1 0 auto;padding:60px 12px 100px;}
+.guest-content-inner {width:100%;max-width:1200px;margin:0 auto;}
