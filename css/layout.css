@@ -112,6 +112,7 @@
 .titBox {display:flex;align-items:flex-end;width:100%;margin-bottom:10px;}
 .titBox h3,
 .titBox h4 {padding-left:20px;background:url(../img/tit_bull02.svg) no-repeat left center;font-size:17px;font-weight:700;line-height:36px;}
+.titBox .required::after {content:'*';margin-left:4px;font-weight:400;color:#D63D4A;}
 .titBox .lt,
 .titBox .rt {display:flex;gap:10px;align-items:center;}
 .titBox .selectBox {flex-shrink:0;}
@@ -153,7 +154,10 @@ strong {font-weight:700;}
 .txtInfo.lg {font-size:15px;line-height:24px;background-position:0 6px;}
 .txtInfo.txtRed {background-image:url(../img/ico_bullet_red.svg);}
 .txtLink {font-weight:500;text-decoration:underline;text-underline-position:under;cursor:pointer;}
+/* 텍스트컬러 변경 필요한 경우 */
 .txtUnderline {display:inline-block !important;color:#6D7882 !important;text-decoration:underline;text-underline-position:under;cursor:pointer;vertical-align:middle;}
+/* 라인만 필요한경우 */
+.txtLine {display:inline-block !important;color:inherit;text-decoration:underline;text-underline-position:under;cursor:pointer;vertical-align:middle;}
 
 .txtLg {font-size:16px;}
 .txtInfo.txtLg {background-position:0 6px;}

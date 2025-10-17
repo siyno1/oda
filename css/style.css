@@ -26,7 +26,7 @@ textarea:focus {outline:0 none;border-color:#434C89;}
 /* tblBox - margin */
 .tblBox {width: 100%; overflow: auto; position:relative;}
 :where(.cntBox, .tblBox, .adBox, .boxLi, .pagination) + .titBox {margin-top: 40px;}
-:where(.cntBox, .schList, .tblBox, .adBox, .boxLi, .pagination) + .tblBox {margin-top: 20px;}
+:where(.cntBox, .schList, .tblBox, .adBox, .boxLi, .pagination, .txtLi) + .tblBox {margin-top: 20px;}
 :where(.cntBox, .tblBox, .adBox, .boxLi, .pagination) + .tblBox .tbl::before {background: #E2E6EA;}
 .toggleBox + :where(.titBox, .tblBox) {margin-top: 20px;}
 :where(.titBox, .tblBox, .pagination) + .toggleBox {margin-top: 40px;}
@@ -1655,3 +1655,9 @@ button.btn-history-more.on::after {transform:rotate(180deg);}
 
 .guest-content {flex:1 0 auto;padding:60px 12px 100px;}
 .guest-content-inner {width:100%;max-width:1200px;margin:0 auto;}
+
+/* join-cont */
+.join-cont {width:100%;max-width:1200px;margin:0 auto;}
+.join-cont .step-comp {justify-content:center;}
+
+.chkFinal {display:flex;justify-content:center;padding:16px;border:1px solid #e2e6ea;border-radius:6px;background:#f4f5f6;}
