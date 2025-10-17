@@ -1070,35 +1070,6 @@
 								<button type="button" class="btn purple">저장</button>
 							</div>
 						</div>
-
-						<div class="tblBox">
-							<table class="tbl row">
-								<caption></caption>
-								<colgroup>
-									<col style="width: 230px;">
-									<col style="width: auto;">
-								</colgroup>
-
-								<tbody>
-									<tr>
-										<th scope="row">ODA 사업 기본 정보 공개 범위</th>
-										<td>
-											<div class="inputForm">
-												<div class="rdoBox">
-													<input type="radio" id="radio06-1" name="rdo06">
-													<label for="radio06-1">우리 부처</label>
-													<input type="radio" id="radio06-2" name="rdo06">
-													<label for="radio06-2">정부 내부</label>
-													<input type="radio" id="radio06-3" name="rdo06">
-													<label for="radio06-3">대국민</label>
-												</div>
-												<button type="button" class="btn">첨부파일 공개 여부 설정하기</button>
-											</div>
-										</td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
 					</div>
 					<!-- //cntBox -->
 
@@ -1145,6 +1116,77 @@
 						<!-- //첨부파일 -->
 					</div>
 					<!-- //cntBox -->
+				</div>
+				<!-- //cntBox -->
+
+				<!-- cntBox -->
+				<div class="cntBox">
+					<!-- toggle-opt -->
+					<div class="toggle-opt">
+						<div class="top">
+							<strong>ODA 사업 기본 정보 공개 범위</strong>
+							<div class="rdoBox">
+								<input type="radio" id="rdo_a01" name="rdo_a">
+								<label for="rdo_a01">우리 부처</label>
+								<input type="radio" id="rdo_a02" name="rdo_a">
+								<label for="rdo_a02">정부 내부</label>
+								<input type="radio" id="rdo_a03" name="rdo_a">
+								<label for="rdo_a03">대국민</label>
+							</div>
+						</div>
+						<div class="btns">
+							<button type="button" class="btn-toggle-opt"><span>첨부파일 공개 범위 설정</span></button>
+						</div>
+						<div class="toggle-opt-detail">
+							<ul>
+								<li>
+									<a href="#" class="file-link hwp">16300_2025_054_과기부_개도국 방송환경 개선지원_사업개요서.hwp</a>
+									<div class="rdoBox">
+										<input type="radio" id="rdo_b01" name="rdo_b">
+										<label for="rdo_b01">우리 부처</label>
+										<input type="radio" id="rdo_b02" name="rdo_b">
+										<label for="rdo_b02">정부 내부</label>
+										<input type="radio" id="rdo_b03" name="rdo_b">
+										<label for="rdo_b03">대국민</label>
+									</div>
+								</li>
+								<li>
+									<a href="#" class="file-link hwp">16300_2025_054_과기부_개도국 방송환경 개선지원_사업개요서.hwp</a>
+									<div class="rdoBox">
+										<input type="radio" id="rdo_c01" name="rdo_c">
+										<label for="rdo_c01">우리 부처</label>
+										<input type="radio" id="rdo_c02" name="rdo_c">
+										<label for="rdo_c02">정부 내부</label>
+										<input type="radio" id="rdo_c03" name="rdo_c">
+										<label for="rdo_c03">대국민</label>
+									</div>
+								</li>
+								<li>
+									<a href="#" class="file-link hwp">16300_2025_054_과기부_개도국 방송환경 개선지원_사업개요서.hwp</a>
+									<div class="rdoBox">
+										<input type="radio" id="rdo_d01" name="rdo_d">
+										<label for="rdo_d01">우리 부처</label>
+										<input type="radio" id="rdo_d02" name="rdo_d">
+										<label for="rdo_d02">정부 내부</label>
+										<input type="radio" id="rdo_d03" name="rdo_d">
+										<label for="rdo_d03">대국민</label>
+									</div>
+								</li>
+								<li>
+									<a href="#" class="file-link hwp">16300_2025_054_과기부_개도국 방송환경 개선지원_사업개요서.hwp</a>
+									<div class="rdoBox">
+										<input type="radio" id="rdo_e01" name="rdo_e">
+										<label for="rdo_e01">우리 부처</label>
+										<input type="radio" id="rdo_e02" name="rdo_e">
+										<label for="rdo_e02">정부 내부</label>
+										<input type="radio" id="rdo_e03" name="rdo_e">
+										<label for="rdo_e03">대국민</label>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<!-- //toggle-opt -->
 				</div>
 				<!-- //cntBox -->
 
@@ -1462,6 +1504,18 @@
 
 	<script>
 		document.addEventListener('DOMContentLoaded', function(){
+
+			$('.btn-toggle-opt').on('click', function(){
+				var $toggleOpt = $(this).closest('.toggle-opt');
+
+				if ($toggleOpt.hasClass('on')) {
+					$toggleOpt.removeClass('on');
+					$toggleOpt.find('.toggle-opt-detail').slideUp(300);
+				} else {
+					$toggleOpt.addClass('on');
+					$toggleOpt.find('.toggle-opt-detail').slideDown(300);
+				}
+			});
 
 			$('select[name=select02]').on('change',function(){
 				var $this = $(this);
