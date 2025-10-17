@@ -1706,8 +1706,8 @@ button.btn-history-more.on::after {transform:rotate(180deg);}
 .file-link.avi::before {background-image: url(../img/ico_file_avi.svg);}
 .file-link.etc::before {background-image: url(../img/ico_file_etc.svg);}
 
-.toggle-opt {border:1px solid #e2e6ea;background:#f4f5f6;}
-.toggle-opt .top {display:flex;align-items:center;justify-content:center;gap:40px;padding:12px;}
+.toggle-opt {border:1px solid #e2e6ea;}
+.toggle-opt .top {display:flex;align-items:center;justify-content:space-between;gap:40px;max-width:1400px;margin:0 auto;padding:12px;}
 .toggle-opt .btns {padding:0 12px 12px;}
 .toggle-opt .toggle-opt-detail {display:none;overflow:hidden;max-width:1400px;margin:0 auto;}
 .toggle-opt .toggle-opt-detail > ul {padding:0 12px 24px;}
