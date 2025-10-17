@@ -341,6 +341,8 @@ button.btn-more::after {content:'';display:block;width:12px;height:7px;backgroun
 button.btn-expand {display:inline-block;width:20px;height:20px;margin-left:2px;border:0 none;background:url(../img/ico_expand.svg) no-repeat center;vertical-align:-4px;}
 button.btn-expand.on {background-image:url(../img/ico_expand_on.svg);}
 
+button.btn.arr::after {content:'';display:block;width:12px;height:12px;margin-left:6px;background:url(../img/ico_link.svg) no-repeat center;}
+
 /* file-upload */
 .file {display: flex; flex-direction: column; gap: 6px; position:relative; width:100%;}
 .file .btn-wrap {flex:0 0 auto; width:auto;}
@@ -928,6 +930,7 @@ button.btn-expand.on {background-image:url(../img/ico_expand_on.svg);}
 .iBox .biz .tbl tbody td {height:auto;padding:23px 4px;vertical-align:middle;}
 
 .iBox .biz a {display:block; max-width:100%; font-size:15px; line-height: 1.5; white-space: nowrap; text-overflow: ellipsis; overflow: hidden;}
+.iBox .biz a + a {margin-top:4px;}
 .iBox .biz a::before {position: relative; top: -2px; content:''; display: inline-block; width: 24px; height: 24px; margin-right: 10px; vertical-align: middle;}
 .iBox .biz a.hwp::before {background-image: url(../img/ico_file_hwp.svg);}
 .iBox .biz a.pdf::before {background-image: url(../img/ico_file_pdf.svg);}
@@ -954,8 +957,15 @@ button.btn-expand.on {background-image:url(../img/ico_expand_on.svg);}
 .iBox .biz-list li:empty {flex:0 0 auto;width:1px;height:20px;background-color:#E2E6EA;}
 .iBox .biz-list p {flex-shrink:0;font-size:14px;font-weight:500;line-height:1.5;}
 
+.iBox .biz .tbl.total {width:100%;}
+.iBox .biz .tbl.total tbody td {padding:20px;vertical-align:top;}
+.iBox .biz .t1 {text-align:left;margin-bottom:12px;}
+.iBox .biz .btn {width:100%;}
+.iBox .biz .btn + .t1 {margin-top:20px;}
+.iBox .biz .btn + .btn {margin-top:4px;}
+
 .iBox .btn {height: auto; padding: 8px 20px; font-size: 15px; line-height:22px; font-weight: 400; color: #1E2124; border-color: #D2D2D2; border-radius: 8px;}
-.iBox .btn.file {padding: 8px 26px;}
+.iBox .btn.file {flex-direction:row;padding: 8px 26px;}
 
 
 /* info btn-wrap */
