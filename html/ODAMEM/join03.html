@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<title>ODA</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+	<meta http-equiv="Pragma" content="no-cache">
+	<meta http-equiv="Expires" content="0">
+
+	<link rel="stylesheet" href="./../../css/flatpickr.min.css">
+	<link rel="stylesheet" href="./../../css/reset.css">
+	<link rel="stylesheet" href="./../../css/layout.css">
+	<link rel="stylesheet" href="./../../css/style.css">
+
+	<script defer src="./../../js/jquery-3.7.1.min.js"></script>
+	<script defer src="./../../js/flatpickr.js"></script>
+	<script defer src="./../../js/ui.js"></script>
+</head>
+
+<body>
+	<!-- wrap -->
+	<div id="wrap" class="wrapper">
+		<!-- 헤더 영역 -->
+		<div id="header" class="header">
+			<div class="wrap">
+				<h1><a href="./../gate.html"><img src="./../../img/logo.svg"></a></h1>
+			</div>
+		</div>
+		<!-- //헤더 영역 -->
+
+		<!-- 컨테이너 영역 -->
+		<div id="container" class="container">
+
+			<!-- 컨텐츠 영역 -->
+			<div class="contents">
+				<div class="pgtBox">
+					<div class="lt">
+						<h2>회원가입</h2>
+					</div>
+
+					<ul class="breadcrumb">
+						<li class="home"><a href="javascript:;">홈</a></li>
+						<li><a href="javascript:;">회원가입</a></li>
+					</ul>
+
+					<div class="rt"></div>
+				</div>
+
+				<!-- cntBox -->
+				<div class="cntBox">
+					<!-- cntBox -->
+					<div class="cntBox">
+						<!-- join-cont -->
+						<div class="join-cont">
+							<!-- step-comp -->
+							<ul class="step-comp">
+								<li>
+									<span class="num">1</span>
+									<span class="name">약관동의</span>
+								</li>
+								<li>
+									<span class="num">2</span>
+									<span class="name">사용자유형 선택</span>
+								</li>
+								<li class="on" title="현재 단계">
+									<span class="num">3</span>
+									<span class="name">회원정보 입력</span>
+								</li>
+								<li>
+									<span class="num">4</span>
+									<span class="name">회원가입 완료</span>
+								</li>
+							</ul>
+							<!-- //step-comp -->
+						</div>
+						<!-- //join-cont -->
+					</div>
+					<!-- //cntBox -->
+
+					<!-- cntBox -->
+					<div class="cntBox">
+						<!-- join-cont -->
+						<div class="join-cont">
+							<!-- tblBox -->
+							<div class="tblBox">
+								<table class="tbl row">
+									<caption></caption>
+
+									<colgroup>
+										<col style="width: 180px;">
+										<col style="width: auto;">
+									</colgroup>
+
+									<tbody>
+										<tr>
+											<th scope="row">상위 시행기관</th>
+											<td>선택한 시행기관 명</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<!-- //tblBox -->
+						</div>
+						<!-- //join-cont -->
+					</div>
+					<!-- //cntBox -->
+
+					<!-- cntBox -->
+					<div class="cntBox">
+						<!-- join-cont -->
+						<div class="join-cont">
+							<!-- titBox -->
+							<div class="titBox">
+								<div class="lt">
+									<h3>회원정보 입력</h3>
+								</div>
+
+								<div class="rt">
+									<!-- btn-wrap -->
+									<div class="btn-wrap">
+										<button type="button" class="btn">행정전자서명(GPKI)인증하기</button>
+										<button type="button" class="btn">휴대폰 본인 인증하기</button>
+									</div>
+									<!-- //btn-wrap -->
+								</div>
+							</div>
+							<!-- //titBox -->
+
+							<!-- tblBox -->
+							<div class="tblBox">
+								<table class="tbl row">
+									<caption></caption>
+
+									<colgroup>
+										<col style="width: 180px;">
+										<col style="width: auto;">
+										<col style="width: 180px;">
+										<col style="width: auto;">
+									</colgroup>
+
+									<tbody>
+										<tr>
+											<th scope="row" class="need">아이디</th>
+											<td colspan="3">
+												<div class="inputForm ipt1">
+													<input type="text" placeholder="영문(소문자), 숫자를 조합하여 3자 이상">
+													<button type="button" class="btn">ID중복확인</button>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th scope="row" class="need">비밀번호</th>
+											<td colspan="3">
+												<div class="inputForm ipt1">
+													<div class="inputPw">
+														<input type="password" placeholder="영문(대소문자), 숫자, 특수문자를 조합하여 8 ~ 12자">
+														<button type="button" class="btn-eye" title="입력보기"></button>
+													</div>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th scope="row" class="need">이름</th>
+											<td>
+												<div class="inputForm ipt2">
+													<input type="text">
+												</div>
+											</td>
+											<th scope="row" class="need">소속</th>
+											<td>
+												<div class="inputForm ipt2">
+													<input type="text">
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th scope="row">직위(급)</th>
+											<td>
+												<div class="inputForm ipt2">
+													<input type="text">
+												</div>
+											</td>
+											<th scope="row">부서명</th>
+											<td>
+												<div class="inputForm ipt2">
+													<input type="text">
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th scope="row" class="need">전화번호</th>
+											<td>
+												<div class="inputForm ipt2">
+													<input type="text">
+												</div>
+											</td>
+											<th scope="row" class="need">휴대폰 번호</th>
+											<td>
+												<div class="inputForm ipt2">
+													<input type="text">
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th scope="row" class="need">이메일</th>
+											<td>
+												<div class="inputForm ipt2">
+													<input type="text">
+												</div>
+											</td>
+											<th scope="row">알림 수신 동의</th>
+											<td>
+												<div class="chkBox">
+													<input type="checkbox" id="chk_a01" value="1">
+													<label for="chk_a01">SMS</label>
+													<input type="checkbox" id="chk_a02" value="2">
+													<label for="chk_a02">알림톡</label>
+													<input type="checkbox" id="chk_a03" value="3">
+													<label for="chk_a03">이메일</label>
+												</div>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<!-- //tblBox -->
+						</div>
+						<!-- //join-cont -->
+					</div>
+					<!-- //cntBox -->
+
+					<div class="btn-wrap tC">
+						<button type="button" class="btn">이전</button>
+						<button type="button" class="btn navy">가입신청</button>
+						<button type="button" class="btn">취소</button>
+					</div>
+				</div>
+				<!-- //cntBox -->
+
+			</div>
+			<!-- //컨텐츠 영역 -->
+		</div>
+		<!-- //컨테이너 영역 -->
+	</div>
+	<!-- //wrap -->
+</body>
+
+</html>

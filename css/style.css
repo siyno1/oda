@@ -1661,3 +1661,13 @@ button.btn-history-more.on::after {transform:rotate(180deg);}
 .join-cont .step-comp {justify-content:center;}
 
 .chkFinal {display:flex;justify-content:center;padding:16px;border:1px solid #e2e6ea;border-radius:6px;background:#f4f5f6;}
+
+.join-cont .box-inp > label > span {align-items:center;padding:28px 20px;}
+.join-cont .box-inp > label > span > strong {display:block;line-height:1.5;color:#1e2124;}
+.join-cont .box-inp > label > span > span {display:block;margin-left:12px;font-size:14px;font-weight:400;line-height:1.5;color:#464C53;}
+
+.inputForm.ipt1 input {flex:0 1 auto;width:380px;}
+.inputForm.ipt1 .inputPw {flex:0 1 auto;width:380px;position:relative;}
+.inputForm.ipt1 .inputPw input {padding-right:32px;}
+.inputForm.ipt1 .inputPw .btn-eye {position:absolute;right:8px;top:50%;width:16px;height:16px;margin-top:-8px;padding:0;border:0 none;background:url(../img/ico_eye.svg) no-repeat center;}
+.inputForm.ipt2 input {flex:0 1 auto;width:280px;}
