@@ -1465,7 +1465,9 @@ button[class^=btnList] {display:inline-block;box-sizing:border-box;border:0 none
 .accordionLi > li {margin-top:10px;border:1px solid #e5e6ea;border-radius:6px;background-color:#F4F5F6;transition:background 0.3s;}
 .accordionLi > li:first-child {margin-top:0;}
 .accordionLi .titArea {display:flex;align-items:center;justify-content:space-between;position:relative;padding:15px 60px 15px 20px;}
-.accordionLi .titArea > strong {font-size:17px;line-height:1.5;}
+.accordionLi .titArea > strong {display:flex;gap:8px;align-items:center;font-size:17px;line-height:1.5;}
+.accordionLi .titArea > strong::before {content:'';display:block;width:20px;height:20px;background:url(../img/ico_accordion_plus.svg);}
+.accordionLi > li.on .titArea > strong::before {background-image:url(../img/ico_accordion_minus.svg);}
 
 .accordionLi .titArea .etcLi {display:flex;}
 .accordionLi .titArea .etcLi li {display:flex;align-items:center;gap:20px;position:relative;padding:0 10px;font-size:15px;line-height:1.5;font-weight:500;}
