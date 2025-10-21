@@ -1339,6 +1339,10 @@ button[class^=btnList] {display:inline-block;box-sizing:border-box;border:0 none
 .mainWorld .infoGrid .chartLi.ty02 .bar:hover .fill,
 .mainWorld .infoGrid .chartLi.ty02 .bar:focus .fill {background-color:#77BA24;}
 
+.mainWorld .infoGrid.ty02 > li:nth-child(1) {grid-row:1/4;}
+.mainWorld .infoGrid.ty02 > li:nth-child(2) {border-width:0 0 0 1px;grid-row:1/2;}
+.mainWorld .infoGrid.ty02 > li:nth-child(3) {border-width:1px 0 0 1px;grid-row:2/4;}
+
 @keyframes chartAni { 100% {width:0;} }
 @keyframes chartTooltipAni {
 	0% {transform:translate(-50%,-105%);opacity:0;}
