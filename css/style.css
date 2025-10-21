@@ -1683,6 +1683,7 @@ button.btn-history-more.on::after {transform:rotate(180deg);}
 .inputForm.ipt1 .inputPw input {padding-right:32px;}
 .inputForm.ipt1 .inputPw .btn-eye {position:absolute;right:8px;top:50%;width:16px;height:16px;margin-top:-8px;padding:0;border:0 none;background:url(../img/ico_eye.svg) no-repeat center;}
 .inputForm.ipt2 input {flex:0 1 auto;width:280px;}
+.inputForm.ipt3 input {flex:0 a auto;width:234px;}
 
 /* 사업등록 */
 .file-link {display:block; max-width:100%; font-size:15px; line-height: 1.5; white-space: nowrap; text-overflow: ellipsis; overflow: hidden;}
