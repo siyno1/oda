@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<title>ODA</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+	<meta http-equiv="Pragma" content="no-cache">
+	<meta http-equiv="Expires" content="0">
+
+	<link rel="stylesheet" href="./../../css/flatpickr.min.css">
+	<link rel="stylesheet" href="./../../css/reset.css">
+	<link rel="stylesheet" href="./../../css/layout.css">
+	<link rel="stylesheet" href="./../../css/style.css">
+
+	<script defer src="./../../js/jquery-3.7.1.min.js"></script>
+	<script defer src="./../../js/flatpickr.js"></script>
+	<script defer src="./../../js/ui.js"></script>
+</head>
+
+<body>
+	<!-- wrap -->
+	<div id="wrap" class="wrapper">
+		<!-- 헤더 영역 -->
+		<div id="header" class="header">
+			<div class="wrap">
+				<h1><a href="./../gate.html"><img src="./../../img/logo.svg" alt="대한민국 ODA 통합정보포털"></a></h1>
+				<ul class="gnb">
+					<li class="tit">사업관리</li>
+					<li class="active"><a href="javascript:;">준비단계</a></li><!-- 활성화 시 li class="active" -->
+					<li><a href="javascript:;">진행단계</a></li>
+					<li><a href="javascript:;">완료단계</a></li>
+				</ul>
+
+				<ul class="subGnb">
+					<li><a href="javascript:;">위원회관리</a></li>
+					<li><a href="javascript:;">정보마당</a></li>
+					<li><a href="javascript:;">운영관리</a></li>
+				</ul>
+
+				<div class="userMenu">
+					<div class="userBox">
+						<button class="btnUser">운영관리자</button>
+						<ul class="dropDown">
+							<li><a href="javascript:;">쪽지</a></li>
+							<li><a href="javascript:;">마이페이지</a></li>
+							<li><a href="javascript:;">로그아웃</a></li>
+						</ul>
+					</div>
+					<div class="searchBox">
+						<input type="text" placeholder="통합검색">
+						<button class="btnSearch">검색</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- //헤더 영역 -->
+
+		<!-- 컨테이너 영역 -->
+		<div id="container" class="container">
+
+			<!-- LNB 영역 -->
+			<div id="side" class="side">
+				<div class="side_menu">
+					<h2>ODA 사업 관리</h2>
+					<ul class="gnb">
+						<li>
+							<a href="javascript:;">사업목록</a>
+						</li>
+						<li class="hasChild active">
+							<a href="javascript:;">연수 사업 관리</a>
+							<ul>
+								<li><a href="javascript:;" class="on">연수 사업 목록</a></li>
+								<li><a href="javascript:;">연수 프로그램 관리</a></li>
+								<li><a href="javascript:;">연수생 관리</a></li>
+								<li><a href="javascript:;">체크리스트</a></li>
+							</ul>
+						</li>
+						<li class="hasChild">
+							<a href="javascript:;">장학 사업 관리</a>
+							<ul>
+								<li><a href="javascript:;">연수 사업 목록</a></li>
+								<li><a href="javascript:;">연수 프로그램 관리</a></li>
+								<li><a href="javascript:;">연수생 관리</a></li>
+								<li><a href="javascript:;">체크리스트</a></li>
+							</ul>
+						</li>
+						<li class="hasChild">
+							<a href="javascript:;">패키지 사업 관리</a>
+							<ul>
+								<li><a href="javascript:;">연수 사업 목록</a></li>
+								<li><a href="javascript:;">연수 프로그램 관리</a></li>
+								<li><a href="javascript:;">연수생 관리</a></li>
+								<li><a href="javascript:;">체크리스트</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<button class="btnSlide">slide</button>
+			</div>
+			<!-- //LNB 영역 -->
+
+			<!-- 컨텐츠 영역 -->
+			<div class="contents">
+				<div class="pgtBox">
+					<div class="lt">
+						<h2>파일찾기</h2>
+					</div>
+
+					<ul class="breadcrumb">
+						<li class="home"><a href="javascript:;">홈</a></li>
+						<li><a href="javascript:;">운영관리</a></li>
+						<li><a href="javascript:;">파일찾기</a></li>
+					</ul>
+
+					<div class="rt"></div>
+				</div>
+
+				<!-- cntBox -->
+				<div class="cntBox">
+					<!-- tblDb -->
+					<ul class="tblDb col2-3">
+						<li>
+							<!-- nodeBox -->
+							<div class="nodeBox"><!-- 높이 제한 및 scroll 필요 시, style="height: 500px;"-->
+								<!-- nodeSchBox -->
+								<div class="nodeSchBox">
+									<div class="inp-btn">
+										<input type="text" placeholder="파일명 검색">
+										<button type="button" title="검색"></button>
+									</div>
+								</div>
+								<!-- //nodeSchBox -->
+
+								<!-- nodeArea -->
+								<div class="nodeArea">
+									<!-- nodeLi -->
+									<ul class="nodeLi">
+										<li>
+											<div class="node folder opened"><!-- 폴더 아이콘 -->
+												<button type="button" title="펼침"></button>
+												<span>국무조정실</span>
+											</div>
+											<ul class="nodeLi">
+												<li>
+													<div class="node file pdf">
+														<a href="#">1450000_2025_023_양자무상_신규_아시아_라오스_프로젝트_에너지_사업개요서.pdf</a>
+													</div>
+												</li>
+											</ul>
+										</li>
+										<li>
+											<div class="node folder opened"><!-- 폴더 아이콘 -->
+												<button type="button" title="펼침"></button>
+												<span>국토교통부</span>
+											</div>
+											<ul class="nodeLi">
+												<li>
+													<div class="node folder opened"><!-- 폴더 아이콘 -->
+														<button type="button" title="펼침"></button>
+														<span>2025</span>
+													</div>
+													<ul class="nodeLi">
+														<li>
+															<div class="node file pdf">
+																<a href="#">1450000_2025_023_양자무상_신규_아시아_라오스_프로젝트_에너지_사업개요서.pdf</a>
+															</div>
+														</li>
+													</ul>
+												</li>
+												<li>
+													<div class="node file pdf">
+														<a href="#">1450000_2025_023_양자무상_신규_아시아_라오스_프로젝트_에너지_사업개요서.pdf</a>
+													</div>
+												</li>
+												<li>
+													<div class="node file pdf">
+														<a href="#">1450000_2025_023_양자무상_신규_아시아_라오스_프로젝트_에너지_사업개요서.pdf</a>
+													</div>
+												</li>
+												<li>
+													<div class="node file pdf">
+														<a href="#">1450000_2025_023_양자무상_신규_아시아_라오스_프로젝트_에너지_사업개요서.pdf</a>
+													</div>
+												</li>
+											</ul>
+										</li>
+										<li>
+											<div class="node folder opened"><!-- 폴더 아이콘 -->
+												<button type="button" title="펼침"></button>
+												<span>우수사례</span>
+											</div>
+											<ul class="nodeLi">
+												<li>
+													<div class="node folder opened"><!-- 폴더 아이콘 -->
+														<button type="button" title="펼침"></button>
+														<span>2025</span>
+													</div>
+													<ul class="nodeLi">
+														<li>
+															<div class="node file pdf">
+																<a href="#">1450000_2025_023_양자무상_신규_아시아_라오스_프로젝트_에너지_사업개요서.pdf</a>
+															</div>
+														</li>
+													</ul>
+												</li>
+												<li>
+													<div class="node file pdf">
+														<a href="#">1450000_2025_023_양자무상_신규_아시아_라오스_프로젝트_에너지_사업개요서.pdf</a>
+													</div>
+												</li>
+												<li>
+													<div class="node file pdf">
+														<a href="#">1450000_2025_023_양자무상_신규_아시아_라오스_프로젝트_에너지_사업개요서.pdf</a>
+													</div>
+												</li>
+												<li>
+													<div class="node file pdf">
+														<a href="#">1450000_2025_023_양자무상_신규_아시아_라오스_프로젝트_에너지_사업개요서.pdf</a>
+													</div>
+												</li>
+											</ul>
+										</li>
+										<li>
+											<div class="node folder opened"><!-- 폴더 아이콘 -->
+												<button type="button" title="펼침"></button>
+												<span>기관역량진단</span>
+											</div>
+											<ul class="nodeLi">
+												<li>
+													<div class="node folder opened"><!-- 폴더 아이콘 -->
+														<button type="button" title="펼침"></button>
+														<span>2024</span>
+													</div>
+													<ul class="nodeLi">
+														<li>
+															<div class="node file pdf">
+																<a href="#">1450000_2025_023_양자무상_신규_아시아_라오스_프로젝트_에너지_사업개요서.pdf</a>
+															</div>
+														</li>
+													</ul>
+												</li>
+												<li>
+													<div class="node file pdf">
+														<a href="#">1450000_2025_023_양자무상_신규_아시아_라오스_프로젝트_에너지_사업개요서.pdf</a>
+													</div>
+												</li>
+												<li>
+													<div class="node file pdf">
+														<a href="#">1450000_2025_023_양자무상_신규_아시아_라오스_프로젝트_에너지_사업개요서.pdf</a>
+													</div>
+												</li>
+												<li>
+													<div class="node file pdf">
+														<a href="#">1450000_2025_023_양자무상_신규_아시아_라오스_프로젝트_에너지_사업개요서.pdf</a>
+													</div>
+												</li>
+											</ul>
+										</li>
+									</ul>
+									<!-- //nodeLi -->
+								</div>
+								<!-- //nodeArea -->
+							</div>
+							<!-- //nodeBox -->
+						</li>
+
+						<li>
+							<!-- cntBox -->
+							<div class="cntBox">
+								<!-- tblBox -->
+								<div class="tblBox">
+									<table class="tbl row">
+										<caption></caption>
+										<colgroup>
+											<col style="width: 152px;">
+											<col style="width: auto;">
+										</colgroup>
+
+										<tbody>
+											<tr>
+												<th scope="row">폴더명</th>
+												<td>145000_2025_022_(사업명)</td>
+											</tr>
+											<tr>
+												<th scope="row">등록된 파일 개수</th>
+												<td>8 개</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<!-- //tblBox -->
+
+								<div class="btn-wrap">
+									<button type="button" class="btn down">전체 다운로드</button>
+								</div>
+							</div>
+							<!-- //cntBox -->
+
+							<!-- cntBox -->
+							<div class="cntBox">
+								<!-- tblBox -->
+								<div class="tblBox">
+									<table class="tbl row">
+										<caption></caption>
+										<colgroup>
+											<col style="width: 152px;">
+											<col style="width: auto;">
+										</colgroup>
+
+										<tbody>
+											<tr>
+												<th scope="row">파일명</th>
+												<td>1450000_2025_023_양자무상_신규_아시아_라오스_프로젝트_에너지_사업개요서.pdf</td>
+											</tr>
+											<tr>
+												<th scope="row">최근 수정(등록) 일시</th>
+												<td>2025.07.01 00:00:00</td>
+											</tr>
+											<tr>
+												<th scope="row">최근 수정(등록)자</th>
+												<td>홍길동</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<!-- //tblBox -->
+
+								<!-- docViewer : 임시 -->
+								<div class="docViewer" style="height:800px;margin-top:20px;border:1px solid #ddd;border-radius:8px;background:#efefef;">
+									<span style="display:flex;width:100%;height:100%;align-items:center;justify-content:center;font-size:20px;font-weight:700;">VIEWER</span>
+								</div>
+								<!-- //docViewer : 임시 -->
+
+								<div class="btn-wrap">
+									<button type="button" class="btn down">다운로드</button>
+								</div>
+							</div>
+							<!-- //cntBox -->
+						</li>
+					</ul>
+					<!-- //tblDb -->
+
+				</div>
+				<!-- //cntBox -->
+
+			</div>
+			<!-- //컨텐츠 영역 -->
+		</div>
+		<!-- //컨테이너 영역 -->
+	</div>
+	<!-- //wrap -->
+</body>
+
+</html>

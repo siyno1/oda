@@ -157,7 +157,7 @@ input[type="radio"]:checked:disabled + label::before {background: #E6E8EA url(..
 .btn-wrap.tC {justify-content: center!important;}
 .btn-wrap.tL {justify-content: flex-start!important;}
 .btn-wrap.tR {justify-content: flex-end!important;}
-:where(.tblBox, .schList, .tabBox, .boxLi, .cntBox) + .btn-wrap {margin-top: 40px;}
+:where(.tblBox, .schList, .tabBox, .boxLi, .cntBox, .docViewer) + .btn-wrap {margin-top: 40px;}
 
 .btn-wrap > .lt {display:flex;margin-right:auto;gap:5px;}
 .btn-wrap > .rt {display:flex;margin-left:auto;gap:5px;}
@@ -635,7 +635,7 @@ button.btn.arr::after {content:'';display:block;width:12px;height:12px;margin-le
 /* tblDb[double table] */
 .tblDb {display: flex; justify-content: space-between; gap: 48px; margin-top:60px;}
 .tblDb:first-child {margin-top:0;}
-.tblDb > li {flex:0 1 auto;width:100%;}
+.tblDb > li {flex:0 1 auto;width:100%;min-width:0;}
 .tblDb.sm {gap:20px;}
 
 .cntBox + .cntBox .tblDb {margin-top:0;}
@@ -1069,7 +1069,7 @@ button[class^=btnList] {display:inline-block;box-sizing:border-box;border:0 none
 .popup.node .nodeBox {height:578px;}
 
 .nodeWrap {display:flex;align-items:center;gap:20px;width:100%;padding-top:18px;}
-.nodeBox {display:flex;flex-direction:column;box-sizing:border-box;width:100%;border:1px solid #e2e6ea;border-radius:6px;background:#fff;}
+.nodeBox {display:flex;flex-direction:column;box-sizing:border-box;width:100%;min-width:0;border:1px solid #e2e6ea;border-radius:6px;background:#fff;}
 .nodeBox.bg {background:#F4F5F6;}
 .nodeBox .nodeSchBox {padding:20px 15px 0;}
 
@@ -1079,7 +1079,7 @@ button[class^=btnList] {display:inline-block;box-sizing:border-box;border:0 none
 .inp-btn input[type="text"] {flex:1;height:34px;border:0 none;}
 .inp-btn button {flex-shrink:0;width:34px;height:34px;border:0 none;background:url(../img/ico_sch_inp.svg) no-repeat center;}
 
-.nodeBox .nodeArea {overflow:hidden;flex:1 1 auto;padding:20px 5px 15px 20px;}
+.nodeBox .nodeArea {overflow:hidden;flex:1 1 auto;padding:20px 8px 15px 20px;}
 .nodeBox .nodeArea > .nodeLi {max-height:100%;overflow-y:auto;}
 
 .nodeLi {display:block;position:relative;}
@@ -1090,10 +1090,14 @@ button[class^=btnList] {display:inline-block;box-sizing:border-box;border:0 none
 
 .nodeLi .node {display:flex;align-items:flex-start;gap:5px;}
 .nodeLi .node > button {flex:0 0 auto;display:block;width:20px;height:20px;border:0 none;background:url(../img/ico_tree_arr.svg) no-repeat center;transition:all 0.3s;}
-.nodeLi .node > label {display:flex;align-items:flex-start;line-height:20px;word-break:break-all;}
+.nodeLi .node > label,
+.nodeLi .node > a,
+.nodeLi .node > span {display:block;min-width:0;line-height:20px;word-break:break-all;}
 .nodeLi .node > label::before {flex:0 0 auto;}
 .nodeLi .node.opened > button {transform:rotate(90deg);}
-.nodeLi .node.opened > label {font-weight:500;color:#1E2124;}
+.nodeLi .node.opened > label,
+.nodeLi .node.opened > a,
+.nodeLi .node.opened > span {font-weight:500;color:#1E2124;}
 
 .nodeLi .node > label {position:relative;padding-left:50px;background:url(../img/ico_tree_node.svg) no-repeat 25px top;}
 .nodeLi .node > label::before {position:absolute;left:0;top:0;}
@@ -1102,6 +1106,50 @@ button[class^=btnList] {display:inline-block;box-sizing:border-box;border:0 none
 .nodeLi .node.person > label {position:relative;padding-left:50px;background:url(../img/ico_tree_person.svg) no-repeat 25px top;}
 .nodeLi .node.person > label::before {position:absolute;left:0;top:0;}
 .nodeLi li + li {margin-top:7px;}
+
+.nodeLi .node > a,
+.nodeLi .node > span {overflow:hidden;position:relative;padding-left:25px;background:url(../img/ico_tree_node.svg) no-repeat left top;cursor:pointer;white-space:nowrap;text-overflow:ellipsis;}
+.nodeLi .node.folder > span,
+.nodeLi .node.folder > a {position:relative;padding-left:25px;background:url(../img/ico_tree_folder.svg) no-repeat left top;}
+.nodeLi .node.file {flex-direction:row;}
+.nodeLi .node.file > span,
+.nodeLi .node.file > a {padding:2px 0 2px 25px;background-image:url(../img/ico_file_etc.svg);}
+.nodeLi .node.file.hwp > span,
+.nodeLi .node.file.hwp > a {background-image: url(../img/ico_file_hwp.svg);}
+.nodeLi .node.file.pdf > span,
+.nodeLi .node.file.pdf > a {background-image: url(../img/ico_file_pdf.svg);}
+.nodeLi .node.file.xls > span,
+.nodeLi .node.file.xls > a {background-image: url(../img/ico_file_xls.svg);}
+.nodeLi .node.file.doc > span,
+.nodeLi .node.file.doc > a {background-image: url(../img/ico_file_doc.svg);}
+.nodeLi .node.file.txt > span,
+.nodeLi .node.file.txt > a {background-image: url(../img/ico_file_txt.svg);}
+.nodeLi .node.file.zip > span,
+.nodeLi .node.file.zip > a {background-image: url(../img/ico_file_zip.svg);}
+.nodeLi .node.file.ppt > span,
+.nodeLi .node.file.ppt > a {background-image: url(../img/ico_file_ppt.svg);}
+.nodeLi .node.file.bmp > span,
+.nodeLi .node.file.bmp > a {background-image: url(../img/ico_file_bmp.svg);}
+.nodeLi .node.file.gif > span,
+.nodeLi .node.file.gif > a {background-image: url(../img/ico_file_gif.svg);}
+.nodeLi .node.file.jpg > span,
+.nodeLi .node.file.jpg > a {background-image: url(../img/ico_file_jpg.svg);}
+.nodeLi .node.file.png > span,
+.nodeLi .node.file.png > a {background-image: url(../img/ico_file_png.svg);}
+.nodeLi .node.file.tif > span,
+.nodeLi .node.file.tif > a {background-image: url(../img/ico_file_tif.svg);}
+.nodeLi .node.file.xml > span,
+.nodeLi .node.file.xml > a {background-image: url(../img/ico_file_xml.svg);}
+.nodeLi .node.file.html > span,
+.nodeLi .node.file.html > a {background-image: url(../img/ico_file_html.svg);}
+.nodeLi .node.file.exe > span,
+.nodeLi .node.file.exe > a {background-image: url(../img/ico_file_exe.svg);}
+.nodeLi .node.file.mpg > span,
+.nodeLi .node.file.mpg > a {background-image: url(../img/ico_file_mpg.svg);}
+.nodeLi .node.file.mp4 > span,
+.nodeLi .node.file.mp4 > a {background-image: url(../img/ico_file_mp4.svg);}
+.nodeLi .node.file.avi > span,
+.nodeLi .node.file.avi > a {background-image: url(../img/ico_file_avi.svg);}
 
 .nodeBoxTit {display:flex;justify-content:space-between;padding:10px 20px;border-bottom:1px solid #e2e6ea;}
 .nodeBoxTit strong {line-height:1.5;font-weight:700;color:#1E2124;}
