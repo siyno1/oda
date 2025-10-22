@@ -399,7 +399,8 @@ button.btn.arr::after {content:'';display:block;width:12px;height:12px;margin-le
 
 
 /* inputForm : small */
-.inputForm.fit > input[type="text"] {width:auto;flex:1 1 auto;}
+.inputForm.fit > input[type="text"],
+.inputForm.fit > input[type="time"] {width:auto;flex:1 1 auto;}
 .inputForm.fit > .selectBox {min-width:auto;width:100%;flex:0 1 auto;}
 .inputForm.fit > .selectBox > select {width:100%;}
 .inputForm.fit .btn-wrap {flex:0 0 auto;}
