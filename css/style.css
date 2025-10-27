@@ -1833,6 +1833,8 @@ div.srch-theme .cnt > ul > li > div {font-size:16px;font-weight:400;line-height:
 div.srch-theme .txtBar {font-size:16px;font-weight:400;color:#1E2124;}
 div.srch-theme .txtBar > li {position:relative;padding-left:12px;line-height:1.5;}
 div.srch-theme .txtBar > li::after {content:'';display:block;width:4px;height:1px;position:absolute;left:0;top:11px;background-color:#1E2124;}
+div.srch-theme .txtBar > li > a {font-weight:500;line-height:inherit;}
+div.srch-theme .txtBar > li > a:hover {color:#513EAD;text-decoration:underline;text-underline-position:under;}
 
 .srch-result .tit {display:flex;align-items:center;gap:12px;margin-bottom:20px;}
 .srch-result .tit > p {font-size:19px;font-weight:700;line-height:1.5;}
