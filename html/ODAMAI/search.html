@@ -380,7 +380,6 @@
 	<script>
 		document.addEventListener("DOMContentLoaded", function () {
 
-
 			$('.srchIpt').on('focusin',function(){
 				this.placeholder = '검색어를 입력하세요.';
 			});
@@ -388,7 +387,26 @@
 			$('.srchIpt').on('focusout',function(){
 				this.placeholder = '통합검색';
 			});
+
+			//.srch-ipt input 입력 시, 버튼 노출
+			$('.srch-ipt input').on('input',function(){
+				var len = $(this).val().length;
+				srchResetButton(len);
+			});
+
+			//btn-srch-reset 클릭시 value 초기화
+			$('.btn-srch-reset').on('click',function(){
+				$('.srch-ipt input').val('');
+				$('.srch-ipt input').trigger('input');
+			});
+
 		});
+
+		//input value length 에 따라 삭제버튼 노출/숨김 처리
+		function srchResetButton(length) {
+			if (length) $('.btn-srch-reset').show();
+			else $('.btn-srch-reset').hide();
+		}
 	</script>
 </body>
 </html>
