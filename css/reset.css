@@ -15,7 +15,7 @@ img {max-width: 100%; vertical-align:middle;}
 hr{-moz-box-sizing: content-box; box-sizing: content-box; height: 0; display:none;}
 legend{width:0; height:0; line-height:0; position:absolute; top:-10000px; left:-10000px; overflow:hidden; visibility:hidden;}
 object {outline:none;}
-mark {background: lightskyblue; color: #111;}
+mark {background: #E9EDFF !important; color: #513EAD !important;}
 code, kbd, pre, samp {font-family:inherit; font-size: 1em;}
 pre {white-space: pre-wrap;}
 q {quotes: "\201C" "\201D" "\2018" "\2019";}
