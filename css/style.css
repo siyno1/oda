@@ -638,6 +638,7 @@ button.btn.arr::after {content:'';display:block;width:12px;height:12px;margin-le
 .tblDb {display: flex; justify-content: space-between; gap: 48px; margin-top:60px;}
 .tblDb:first-child {margin-top:0;}
 .tblDb > li {flex:0 1 auto;width:100%;min-width:0;}
+.tblDb > li.midControl {flex:0 0 auto;}
 .tblDb.sm {gap:20px;}
 
 .cntBox + .cntBox .tblDb {margin-top:0;}
