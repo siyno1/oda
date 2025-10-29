@@ -39,6 +39,8 @@
 					<li><a href="javascript:;">운영관리</a></li>
 				</ul>
 
+				<button type="button" class="btn-sitemap" onclick="openSitemap();"><span class="sr-only">사이트맵</span></button>
+
 				<div class="userMenu">
 					<div class="userBox">
 						<button class="btnUser">운영관리자</button>
@@ -1159,6 +1161,210 @@
 	</div>
 	<!-- //wrap -->
 
+	<!-- sitemap -->
+	<div class="sitemap">
+		<div class="dim">
+			<div class="sitemap-inner">
+				<h3>전체메뉴</h3>
+
+				<button type="button" class="btn-close-menu" onclick="closeSitemap();"><span class="sr-only">전체메뉴 닫기</span></button>
+
+				<ul class="sitemap-li">
+					<li>
+						<a href="#">준비 단계</a>
+						<ul>
+							<li>
+								<a href="#">전략 부합성 심사</a>
+								<ul>
+									<li><a href="#">심사 지표 관리</a></li>
+									<li><a href="#">심사 대상 사업 관리</a></li>
+									<li><a href="#">전략 부합성 심사 진행</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">시행계획 정보</a>
+							</li>
+							<li>
+								<a href="#">사업 연계 추천</a>
+								<ul>
+									<li><a href="#">연계 추천</a></li>
+									<li><a href="#">요청 중인 연계</a></li>
+									<li><a href="#">연계 결과 관리</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">진행 단계</a>
+						<ul>
+							<li>
+								<a href="#">사업 목록</a>
+							</li>
+							<li>
+								<a href="#">연수 사업 관리</a>
+								<ul>
+									<li><a href="#">연수 사업</a></li>
+									<li><a href="#">연수 프로그램 조회</a></li>
+									<li><a href="#">연수 프로그램 관리</a></li>
+									<li><a href="#">체크리스트</a></li>
+									<li><a href="#">연수생 조회</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">장학 사업 관리</a>
+								<ul>
+									<li><a href="#">장학 사업</a></li>
+									<li><a href="#">장학 프로그램 조회</a></li>
+									<li><a href="#">장학 프로그램 관리</a></li>
+									<li><a href="#">장학생 조회</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">패키지 사업 관리</a>
+								<ul>
+									<li><a href="#">패키지 관리</a></li>
+									<li><a href="#">패키지 사업</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">분기별 사업 보고</a>
+								<ul>
+									<li><a href="#">전체 사업 정보 (모니터링)</a></li>
+									<li><a href="#">집행관리 대상 사업</a></li>
+									<li><a href="#">시행계획 미등록 사업</a></li>
+									<li><a href="#">집행관리 간편 통계</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">IATI</a>
+								<ul>
+									<li><a href="#">사업정보 IATI 이관</a></li>
+									<li><a href="#">기관정보 관리</a></li>
+									<li><a href="#">사업정보 관리</a></li>
+									<li><a href="#">XML 파일 관리</a></li>
+									<li><a href="#">공개항목 관리</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">재외공관 모니터링</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">완료 단계</a>
+						<ul>
+							<li>
+								<a href="#">통계정보</a>
+								<ul>
+									<li><a href="#">사업정보 통계이관</a></li>
+									<li><a href="#">통계 관리</a></li>
+									<li><a href="#">OECD 제출용 조회</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">평가</a>
+								<ul>
+									<li><a href="#">자체평가</a></li>
+									<li><a href="#">우수사례</a></li>
+									<li><a href="#">기관역량진단</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">통합적 성과</a>
+								<ul>
+									<li><a href="#">성과 지표 관리</a></li>
+									<li><a href="#">성과 지표 결과 조회</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">정보 마당</a>
+						<ul>
+							<li>
+								<a href="#">ODA 게시판</a>
+								<ul>
+									<li><a href="#">게시판</a></li>
+									<li><a href="#">게시판 관리</a></li>
+								</ul>
+							</li>
+							<li><a href="#">파일 등록</a></li>
+							<li>
+								<a href="#">ODA 통계</a>
+								<ul>
+									<li><a href="#">간편 통계</a></li>
+									<li><a href="#">지도 통계</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">운영 관리</a>
+						<ul>
+							<li>
+								<a href="#">위원회 관리</a>
+								<ul>
+									<li><a href="#">회의 관리</a></li>
+									<li><a href="#">과제 관리</a></li>
+									<li><a href="#">위원 관리</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">파일 찾기</a>
+							</li>
+							<li>
+								<a href="#">이력 관리</a>
+								<ul>
+									<li><a href="#">개인정보 접속이력</a></li>
+									<li><a href="#">개인정보 변경이력</a></li>
+									<li><a href="#">메뉴별 접속이력</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">헬프 데스크</a>
+							</li>
+							<li>
+								<a href="#">CSR 게시판</a>
+							</li>
+							<li>
+								<a href="#">입력마감 기간관리</a>
+								<ul>
+									<li><a href="#">모니터링 마감 관리</a></li>
+									<li><a href="#">자체평가 마감 관리</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">ODA 코드 관리</a>
+							</li>
+							<li>
+								<a href="#">수원국 정보 관리</a>
+							</li>
+							<li>
+								<a href="#">사용자 권한 관리</a>
+								<ul>
+									<li><a href="#">사용자 권한 승인</a></li>
+									<li><a href="#">사용자 관리</a></li>
+									<li><a href="#">부처별 ODA 업무 담당자</a></li>
+									<li><a href="#">리소스 관리</a></li>
+									<li><a href="#">메뉴 관리</a></li>
+									<li><a href="#">기능 그룹 관리</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">알림 관리</a>
+								<ul>
+									<li><a href="#">알림 발송</a></li>
+									<li><a href="#">알림 이력 관리</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- //sitemap -->
+
 
 	<script>
 		document.addEventListener("DOMContentLoaded", function () {
@@ -1172,6 +1378,13 @@
 				this.placeholder = '통합검색';
 			});
 		});
+
+		const openSitemap = function(){
+			$('.sitemap').fadeIn(300);
+		}
+		const closeSitemap = function(){
+			$('.sitemap').fadeOut(300);
+		}
 	</script>
 </body>
 </html>

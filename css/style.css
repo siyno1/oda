@@ -261,6 +261,7 @@ button.btn-reset-txt::before {content:''; display: block; width: 14px; height: 1
 .btn-close[type="button"] {position: absolute; top: 11px; right: 12px; width: 20px; height: 20px; background: url(../img/ico_close.svg) no-repeat center; border: none;}
 .btn.close {width:24px;min-width:auto;height:24px;padding:0;border:0 none;background:url(../img/ico_close_layer.svg) no-repeat center;}
 
+
 .btn.file::before {content:''; display: inline-block; width: 18px; height: 14px; background: url(../img/ico_btn_file.svg) no-repeat center;}
 
 .btn.down {gap:5px;}
@@ -345,6 +346,9 @@ button.btn-expand {display:inline-block;width:20px;height:20px;margin-left:2px;b
 button.btn-expand.on {background-image:url(../img/ico_expand_on.svg);}
 
 button.btn.arr::after {content:'';display:block;width:12px;height:12px;margin-left:6px;background:url(../img/ico_link.svg) no-repeat center;}
+
+button.btn-sitemap {width:24px;height:24px;min-width:auto;border:0 none;background:url(../img/ico_menu.svg) no-repeat center;}
+button.btn-close-menu {width:40px;height:40px;border:0 none;background:url(../img/ico_close_menu.svg) no-repeat center;}
 
 /* file-upload */
 .file {display: flex; flex-direction: column; gap: 6px; position:relative; width:100%;}
