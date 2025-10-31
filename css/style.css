@@ -259,7 +259,7 @@ button.btn-reset-txt::before {content:''; display: block; width: 14px; height: 1
 
 
 .btn-close[type="button"] {position: absolute; top: 11px; right: 12px; width: 20px; height: 20px; background: url(../img/ico_close.svg) no-repeat center; border: none;}
-.btn.close {width:24px;min-width:auto;height:24px;padding:0;border:0 none;background:url(../img/ico_close_layer.svg) no-repeat center;}
+.btn.close-layer {width:24px;min-width:auto;height:24px;padding:0;border:0 none;background:url(../img/ico_close_layer.svg) no-repeat center;}
 
 
 .btn.file::before {content:''; display: inline-block; width: 18px; height: 14px; background: url(../img/ico_btn_file.svg) no-repeat center;}
