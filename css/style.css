@@ -49,6 +49,7 @@ textarea:focus {outline:0 none;border-color:#434C89;}
 .tbl tbody th {padding: 11px 15px 9px 15px; text-align: left; color: #8A949E;}
 .tbl.row th {color: #464C53; background: #f4f5f6;}
 .tbl.row td {color: #464C53;}
+.tbl.row th[rowspan]:first-child {border-right:1px solid #E2E6EA;}
 .tbl.tL :is(th, td):not(.tC, .tR) {text-align: left;}
 .tbl.tR :is(th, td):not(.tL, .tC) {text-align: right;}
 .tbl.tC :is(th, td):not(.tL, .tR) {text-align: center;}

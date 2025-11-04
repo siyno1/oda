@@ -166,13 +166,13 @@
 							<table class="tbl col">
 								<caption></caption>
 								<colgroup>
-									<col style="width: 100px;">
-									<col style="width: 180px;">
-									<col style="width: auto;">
-									<col style="width: 200px;">
-									<col style="width: 120px;">
-									<col style="width: 120px;">
-									<col style="width: 200px;">
+									<col style="width:100px;">
+									<col style="width:180px;">
+									<col style="width:auto;">
+									<col style="width:200px;">
+									<col style="width:120px;">
+									<col style="width:120px;">
+									<col style="width:200px;">
 								</colgroup>
 
 								<thead>
@@ -219,10 +219,10 @@
 							<table class="tbl row">
 								<caption></caption>
 								<colgroup>
-									<col style="width: 152px;">
-									<col style="width: auto;">
-									<col style="width: 152px;">
-									<col style="width: auto;">
+									<col style="width:152px;">
+									<col style="width:auto;">
+									<col style="width:152px;">
+									<col style="width:auto;">
 								</colgroup>
 
 								<tbody>
@@ -319,10 +319,10 @@
 							<table class="tbl row">
 								<caption></caption>
 								<colgroup>
-									<col style="width: 152px;">
-									<col style="width: auto;">
-									<col style="width: 152px;">
-									<col style="width: auto;">
+									<col style="width:152px;">
+									<col style="width:auto;">
+									<col style="width:152px;">
+									<col style="width:auto;">
 								</colgroup>
 
 								<tbody>
@@ -461,10 +461,10 @@
 							<table class="tbl row">
 								<caption></caption>
 								<colgroup>
-									<col style="width: 152px;">
-									<col style="width: auto;">
-									<col style="width: 152px;">
-									<col style="width: auto;">
+									<col style="width:152px;">
+									<col style="width:auto;">
+									<col style="width:152px;">
+									<col style="width:auto;">
 								</colgroup>
 
 								<tbody>
@@ -574,10 +574,10 @@
 							<table class="tbl row">
 								<caption></caption>
 								<colgroup>
-									<col style="width: 152px;">
-									<col style="width: auto;">
-									<col style="width: 152px;">
-									<col style="width: auto;">
+									<col style="width:152px;">
+									<col style="width:auto;">
+									<col style="width:152px;">
+									<col style="width:auto;">
 								</colgroup>
 
 								<tbody>
@@ -601,6 +601,10 @@
 							</div>
 
 							<div class="rt">
+								<div class="btn-wrap">
+									<button type="button" class="btn-plus txt">수원국 추가</button>
+									<button type="button" class="btn-del" title="삭제"></button>
+								</div>
 							</div>
 						</div>
 
@@ -608,14 +612,20 @@
 							<table class="tbl row">
 								<caption></caption>
 								<colgroup>
-									<col style="width: 152px;">
-									<col style="width: auto;">
-									<col style="width: 152px;">
-									<col style="width: auto;">
+									<col style="width:50px;">
+									<col style="width:152px;">
+									<col style="width:auto;">
+									<col style="width:152px;">
+									<col style="width:auto;">
 								</colgroup>
 
 								<tbody>
 									<tr>
+										<th scope="rowgroup" rowspan="2">
+											<div class="tblChk">
+												<input type="checkbox" id="chk00"><label for="chk00"></label>
+											</div>
+										</th>
 										<th scope="row">대륙명</th>
 										<td>
 											<div class="inputForm">
@@ -666,29 +676,24 @@
 						</div>
 
 						<!-- 수원국 추가 시 -->
-						<div class="titBox">
-							<div class="lt">
-							</div>
-
-							<div class="rt">
-								<div class="btn-wrap">
-									<button type="button" class="btn-del" title="삭제"></button>
-								</div>
-							</div>
-						</div>
-
 						<div class="tblBox">
 							<table class="tbl row">
 								<caption></caption>
 								<colgroup>
-									<col style="width: 152px;">
-									<col style="width: auto;">
-									<col style="width: 152px;">
-									<col style="width: auto;">
+									<col style="width:50px;">
+									<col style="width:152px;">
+									<col style="width:auto;">
+									<col style="width:152px;">
+									<col style="width:auto;">
 								</colgroup>
 
 								<tbody>
 									<tr>
+										<th scope="rowgroup" rowspan="2">
+											<div class="tblChk">
+												<input type="checkbox" id="chk01"><label for="chk01"></label>
+											</div>
+										</th>
 										<th scope="row">대륙명</th>
 										<td>
 											<div class="inputForm">
@@ -738,16 +743,6 @@
 							</table>
 						</div>
 						<!-- //수원국 추가 시 -->
-
-						<!-- botBox : 수원국 추가 시, 마지막 수원국 tblBox 하단에 위치 -->
-						<div class="botBox">
-							<div class="rt">
-								<div class="btn-wrap">
-									<button type="button" class="btn-plus txt">수원국 추가</button>
-								</div>
-							</div>
-						</div>
-						<!-- //botBox : 수원국 추가 시, 마지막 수원국 tblBox 하단에 위치 -->
 					</div>
 					<!-- //cntBox -->
 
@@ -772,6 +767,7 @@
 							<table class="tbl row">
 								<caption></caption>
 								<colgroup>
+									<col style="width:50px;">
 									<col style="width:152px;">
 									<col style="width:auto;">
 									<col style="width:152px;">
@@ -780,6 +776,46 @@
 
 								<tbody>
 									<tr>
+										<th scope="rowgroup" rowspan="2">
+											<div class="tblChk">
+												<input type="checkbox" id="chk02"><label for="chk02"></label>
+											</div>
+										</th>
+										<th scope="row">구분</th>
+										<td><input type="text" class="w100"></td>
+										<th scope="row">총 소요 예산 <strong class="txtPt">[미화]</strong></th>
+										<td><input type="text" class="w100"></td>
+									</tr>
+									<tr>
+										<th scope="row">내용</th>
+										<td colspan="3">
+											<textarea></textarea>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<!-- //tblBox -->
+
+						<!-- tblBox -->
+						<div class="tblBox">
+							<table class="tbl row">
+								<caption></caption>
+								<colgroup>
+									<col style="width:50px;">
+									<col style="width:152px;">
+									<col style="width:auto;">
+									<col style="width:152px;">
+									<col style="width:auto;">
+								</colgroup>
+
+								<tbody>
+									<tr>
+										<th scope="rowgroup" rowspan="2">
+											<div class="tblChk">
+												<input type="checkbox" id="chk03"><label for="chk03"></label>
+											</div>
+										</th>
 										<th scope="row">구분</th>
 										<td><input type="text" class="w100"></td>
 										<th scope="row">총 소요 예산 <strong class="txtPt">[미화]</strong></th>
@@ -870,9 +906,9 @@
 											<table class="tbl col tC">
 												<caption></caption>
 												<colgroup>
-													<col style="width: auto;">
-													<col style="width: 200px;">
-													<col style="width: 200px;">
+													<col style="width:auto;">
+													<col style="width:200px;">
+													<col style="width:200px;">
 												</colgroup>
 
 												<thead>
@@ -925,7 +961,7 @@
 							<table class="tbl row">
 								<caption></caption>
 								<colgroup>
-									<col style="width: auto;">
+									<col style="width:auto;">
 								</colgroup>
 
 								<tbody>
@@ -968,7 +1004,7 @@
 							<table class="tbl row">
 								<caption></caption>
 								<colgroup>
-									<col style="width: auto;">
+									<col style="width:auto;">
 								</colgroup>
 
 								<tbody>
@@ -1091,7 +1127,7 @@
 							<table class="tbl row">
 								<caption></caption>
 								<colgroup>
-									<col style="width: auto;">
+									<col style="width:auto;">
 								</colgroup>
 
 								<tbody>
@@ -1226,11 +1262,11 @@
 					<table class="tbl col">
 						<caption></caption>
 						<colgroup>
-							<col style="width: 5%;">
-							<col style="width: 12%;">
-							<col style="width: auto;">
-							<col style="width: 20%;">
-							<col style="width: 20%;">
+							<col style="width:5%;">
+							<col style="width:12%;">
+							<col style="width:auto;">
+							<col style="width:20%;">
+							<col style="width:20%;">
 						</colgroup>
 						<thead>
 							<tr>
@@ -1372,13 +1408,13 @@
 					<table class="tbl col tC">
 						<caption></caption>
 						<colgroup>
-							<col style="width: 46px;">
-							<col style="width: 100px;">
-							<col style="width: auto;">
-							<col style="width: 120px;">
-							<col style="width: 120px;">
-							<col style="width: 120px;">
-							<col style="width: 180px;">
+							<col style="width:46px;">
+							<col style="width:100px;">
+							<col style="width:auto;">
+							<col style="width:120px;">
+							<col style="width:120px;">
+							<col style="width:120px;">
+							<col style="width:180px;">
 						</colgroup>
 						<thead>
 							<tr>
