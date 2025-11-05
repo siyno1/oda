@@ -1319,8 +1319,10 @@ button[class^=btnList] {display:inline-block;box-sizing:border-box;border:0 none
 .widgets .tit {display:flex;align-items:center;justify-content:space-between;}
 .widgets .tit strong {font-size:18px;line-height:1.5;white-space:nowrap;}
 .widgets .tit a {padding-right:12px;background:url(../img/ico_widget_link.svg) no-repeat right center;font-size:14px;line-height:1.5;}
-.widgets .chart-li {display:flex;align-items:center;justify-content:space-around;flex-wrap:wrap;gap:50px;flex-wrap:wrap;}
-.widgets .chart-li > li {flex:0 0 auto;width:340px;}
+.widgets .chart-li {flex:1 0 auto;display:flex;align-items:center;margin-top:20px;justify-content:space-around;gap:40px;}
+.widgets .chart-li > li {flex:1 1 auto;height:100%;}
+
+.widgets .chart-one {flex:1 1 auto;height:100%;margin-top:20px;}
 
 .list-quick {margin-top:34px;}
 .list-quick li + li {margin-top:6px;}
@@ -1444,8 +1446,8 @@ button[class^=btnList] {display:inline-block;box-sizing:border-box;border:0 none
 
 .mainWorld .widgets {flex:1;}
 .mainWorld .widgets > li {width:25%;padding:30px 40px 50px;}
-.mainWorld .widgets > li.kr {width:40%;}
-.mainWorld .widgets > li.years {width:35%;}
+.mainWorld .widgets > li.kr {display:flex;flex-direction:column;width:40%;padding:30px 40px;}
+.mainWorld .widgets > li.years {display:flex;flex-direction:column;width:35%;padding:30px 40px;}
 .mainWorld .widgets .quick-btns > li {flex:1 0 180px;}
 
 /* 로딩 */
