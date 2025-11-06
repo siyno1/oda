@@ -1303,7 +1303,7 @@ button[class^=btnList] {display:inline-block;box-sizing:border-box;border:0 none
 .list-card > li .summary > li {display:flex;align-items:center;gap:6px;position:relative;padding-left:10px;}
 .list-card > li .summary > li::after {content:'';display:block;position:absolute;left:0;top:10px;width:4px;height:4px;border-radius:50%;background-color:#1e2124;}
 .list-card > li .summary > li > span {display:block;font-size:13px;line-height:1.5;color:#5A5A5B;}
-.list-card > li .summary > li > strong {display:block;padding-top:2px;font-size:15px;font-weight:500;line-height:1.5;color:31e2124;}
+.list-card > li .summary > li > strong {display:block;padding-top:2px;font-size:15px;font-weight:500;line-height:1.5;color:#1e2124;}
 .list-card > li .info {display:flex;align-items:center;gap:60px;margin-top:30px;padding-top:15px;border-top:1px solid #e5e1e1;}
 .list-card > li .info p {font-size:13px;line-height:1.5;color:#5a5a5a;letter-spacing:-1px;white-space:nowrap;}
 .list-card > li .info span {font-size:15px;line-height:1.5;letter-spacing:-1px;white-space:nowrap;}
