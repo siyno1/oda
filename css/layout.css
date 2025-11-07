@@ -33,8 +33,8 @@
 .header .subGnb > li > a:focus::after {width:100%;}
 
 
-.header .btn-sitemap {margin-left:auto;}
-.header .userMenu {display:flex;margin-left:20px;}
+.header .btn-sitemap {margin-right:20px;}
+.header .userMenu {display:flex;align-items:center;margin-left:auto;}
 .header .userBox{position:relative;}
 .header .userBox .btnUser{display:block;position:relative;border:0 none;padding-left:22px;padding-right:26px;background:url(../img/ico_user.svg)no-repeat left center;font-size:14px;font-weight:500;line-height:30px;cursor:pointer;}
 .header .userBox .btnUser::after{content:'';display:block;width:20px;height:20px;background:url(../img/ico_user_arr.svg)no-repeat;position:absolute;right:0;top:50%;margin-top:-10px;}
