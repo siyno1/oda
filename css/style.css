@@ -1278,7 +1278,7 @@ button[class^=btnList] {display:inline-block;box-sizing:border-box;border:0 none
 .mainBiz .bizMonitoring .descLi > li + li {margin-top:4px;}
 
 .mainBiz .mainContents {flex:0 1 auto;width:100%;}
-.mainBiz .mainContent {margin-bottom:50px;}
+.mainBiz .mainContent {margin-bottom:25px;}
 .mainBiz .mainContent:last-child {margin-bottom:0;}
 
 .list-card {display:grid;grid-template-columns:repeat(2,1fr);gap:8px;}
