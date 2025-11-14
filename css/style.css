@@ -1864,3 +1864,13 @@ div.srch-theme .txtBar > li > a:hover {color:#513EAD;text-decoration:underline;t
 
 .srch-result .tab {margin-bottom:0;}
 .srch-result .tabCont .srch-list {border-top:0 none;}
+
+
+/* 검색 결과 */
+.tbl.srchTy tbody tr {border-bottom:0 none;}
+.tbl.srchTy tbody td {padding:20px 0;border-bottom:1px solid #E2E6EA;background:#fff !important;}
+.tbl.srchTy a {font-size:16px;font-weight:700;color:#1e2124;line-height:1.5;}
+.tbl.srchTy .meta-li {display:flex;align-items:center;margin-top:8px;gap:6px;}
+.tbl.srchTy .meta-li > li {font-size:15px;line-height:1.5;font-weight:500;color:#6D7882;}
+.tbl.srchTy .meta-li > li + li {position:relative;padding-left:6px;}
+.tbl.srchTy .meta-li > li + li::after {content:'';display:block;position:absolute;left:0;top:4px;width:1px;height:14px;background-color:#6D7882;}
