@@ -1324,6 +1324,8 @@ button[class^=btnList] {display:inline-block;box-sizing:border-box;border:0 none
 
 .widgets .chart-one {flex:1 1 auto;height:100%;margin-top:20px;}
 
+.graphArea + .widgets {padding:0;border:0 none;background:none;}
+
 .list-quick {margin-top:34px;}
 .list-quick li + li {margin-top:6px;}
 .list-quick li > a {display:block;position:relative;overflow:hidden;padding-left:12px;font-size:15px;line-height:1.5;font-weight:500;color:#1E2124;text-overflow:ellipsis;white-space:nowrap;}
