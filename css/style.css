@@ -1324,8 +1324,8 @@ button[class^=btnList] {display:inline-block;box-sizing:border-box;border:0 none
 .widgets .tit {display:flex;align-items:center;justify-content:space-between;}
 .widgets .tit strong {font-size:18px;line-height:1.5;white-space:nowrap;}
 .widgets .tit a {padding-right:12px;background:url(../img/ico_widget_link.svg) no-repeat right center;font-size:14px;line-height:1.5;}
-.widgets .chart-li {flex:1 0 auto;display:flex;align-items:center;margin-top:20px;justify-content:space-around;gap:40px;}
-.widgets .chart-li > li {flex:1 1 auto;height:100%;}
+.widgets .chart-li {flex:1 0 auto;display:flex;align-items:center;flex-wrap:wrap;margin-top:20px;justify-content:space-around;gap:10px 40px;}
+.widgets .chart-li > li {flex:1 1 400px;height:280px;}
 
 .widgets .chart-one {flex:1 1 auto;height:100%;margin-top:20px;}
 
@@ -1358,8 +1358,8 @@ button[class^=btnList] {display:inline-block;box-sizing:border-box;border:0 none
 /* 하단 중앙 기준으로 위치 잡음 */
 .mainWorld .imgArea .mapTip {display:flex;align-items:center;gap:8px;position:absolute;left:100px;top:100px;padding:16px;transform:translate(-50%, -100%);border-radius:8px;border:0 none;background:#fff;filter:drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));}
 .mainWorld .imgArea .mapTip::after {content:'';display:block;position:absolute;top:calc(100% - 6px);left:50%;margin-left:-12px;border:solid transparent;border-width:12px 12px 0 12px;border-top-color:#fff;}
-.mainWorld .imgArea .mapTip .continent {display:block;padding:4px 8px;border-radius:4px;font-size:13px;font-weight:900;color:#fff;}
-.mainWorld .imgArea .mapTip .budget {display:block;padding-top:2px;font-size:15px;line-height:normal;font-weight:700;color:#1E2124;white-space:nowrap;}
+.mainWorld .imgArea .mapTip .continent {display:block;padding:4px 8px;border-radius:4px;font-size:14px;font-weight:900;color:#fff;}
+.mainWorld .imgArea .mapTip .budget {display:block;padding-top:2px;font-size:16px;line-height:normal;font-weight:700;color:#1E2124;white-space:nowrap;}
 
 .mainWorld .imgArea .mapTip.asia {left:80%;top:28%;}
 .mainWorld .imgArea .mapTip.asia .continent {background-color:#77BA25;}
