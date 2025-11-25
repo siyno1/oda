@@ -109,7 +109,7 @@
 .breadcrumb > li + li{display:flex;align-items:center;}
 .breadcrumb > li + li::before{content:'/';display:block;margin:0 6px;color:#B1B8BE;}
 .breadcrumb > li > a,
-.breadcrumb > li > span {display:block;font-size:14px;color:#6D7882;}
+.breadcrumb > li > span {display:block;font-size:14px;color:#6D7882;cursor:default;}
 .breadcrumb > li.home > a,
 .breadcrumb > li.home > span {width:20px;height:20px; background:url(../img/ico_home.svg) no-repeat center; text-indent:-9999px;}
 
