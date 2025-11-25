@@ -25,7 +25,7 @@ textarea:focus {outline:0 none;border-color:#434C89;}
 
 /* tblBox - margin */
 .tblBox {width: 100%; overflow: auto; position:relative;}
-:where(.cntBox, .tblBox, .adBox, .boxLi, .pagination) + .titBox {margin-top: 40px;}
+:where(.cntBox, .tblBox, .adBox, .boxLi, .pagination, .tblDb) + .titBox {margin-top: 40px;}
 :where(.cntBox, .schList, .tblBox, .adBox, .boxLi, .pagination, .txtLi) + .tblBox {margin-top: 20px;}
 :where(.cntBox, .tblBox, .adBox, .boxLi, .pagination) + .tblBox .tbl::before {background: #E2E6EA;}
 .toggleBox + :where(.titBox, .tblBox) {margin-top: 20px;}
@@ -482,6 +482,7 @@ button.btn-close-menu {width:40px;height:40px;border:0 none;background:url(../im
 
 .tabBox .tabCont .tabCont > li {margin-top: 24px;}
 .tabBox .tabCont > li .titBox:first-child {margin-top:20px;}
+.titBox + .tabBox {margin-top:0;}
 
 
 /* pagination */
