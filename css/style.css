@@ -754,7 +754,7 @@ button.btn-close-menu {width:40px;height:40px;border:0 none;background:url(../im
 
 /* popup mapPopup */
 .popup.mapPopup {top:160px;left:30px;width: 690px; padding: 25px 25px 20px 25px; border-radius:6px;transform:none;transition:left 0.3s;}/* 상단 여백 130px + 30px */
-.showMenu + .popup.mapPopup {left:260px;}
+.showMenu .popup.mapPopup {left:260px;}
 .popup.mapPopup .tit {display:block; height: 0; background: transparent; border-radius: 6px 6px 0 0;}
 .popup.mapPopup > * {padding: 0;}
 .popup.mapPopup > .btn-wrap {padding: 11px 0 0 0; border-radius: 0 0 6px 6px;}
