@@ -108,8 +108,10 @@
 .breadcrumb{display:flex;align-items:center;height:19px;margin-left:20px;}
 .breadcrumb > li + li{display:flex;align-items:center;}
 .breadcrumb > li + li::before{content:'/';display:block;margin:0 6px;color:#B1B8BE;}
-.breadcrumb > li > a{display:block;font-size:14px;color:#6D7882;}
-.breadcrumb > li.home > a{width:20px;height:20px; background:url(../img/ico_home.svg) no-repeat center; text-indent:-9999px;}
+.breadcrumb > li > a,
+.breadcrumb > li > span {display:block;font-size:14px;color:#6D7882;}
+.breadcrumb > li.home > a,
+.breadcrumb > li.home > span {width:20px;height:20px; background:url(../img/ico_home.svg) no-repeat center; text-indent:-9999px;}
 
 /* 타이틀 그룹 */
 .titBox {display:flex;align-items:flex-end;width:100%;margin-bottom:10px;}
