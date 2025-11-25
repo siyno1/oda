@@ -1365,11 +1365,11 @@ button[class^=btnList] {display:inline-block;box-sizing:border-box;border:0 none
 .mainWorld .imgArea .mapTip.asia .continent {background-color:#77BA25;}
 .mainWorld .imgArea .mapTip.cis {left:59%;top:46%;}
 .mainWorld .imgArea .mapTip.cis .continent {background-color:#AE6CFE;}
-.mainWorld .imgArea .mapTip.am {left:30%;top:65%;}
+.mainWorld .imgArea .mapTip.am {left:30%;top:80%;}
 .mainWorld .imgArea .mapTip.am .continent {background-color:#72BEBB;}
 .mainWorld .imgArea .mapTip.afc {left:53%;top:65%;}
 .mainWorld .imgArea .mapTip.afc .continent {background-color:#7295BE;}
-.mainWorld .imgArea .mapTip.oce {left:83%;top:73%;}
+.mainWorld .imgArea .mapTip.oce {left:86%;top:80%;}
 .mainWorld .imgArea .mapTip.oce .continent {background-color:#E68026;}
 .mainWorld .summaryBudgets {width:max-content;margin:0 auto;padding:25px 30px;border-radius:6px;background:#fff; transform: translate(10px, -20px);}
 .mainWorld .summaryBudgets .tit {margin-bottom:6px;}
