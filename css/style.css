@@ -430,7 +430,7 @@ button.btn-close-menu {width:40px;height:40px;border:0 none;background:url(../im
 .tab {position: relative; display:flex; align-items:center; gap:16px; width: 100%; margin:60px 0 20px;}
 .tab:first-child {margin-top:0;}
 .tab::after {position: absolute; bottom: 0; left: 0; content:''; width: 100%; height: 1px; background: #B1B8BE;}
-.tab ul {display: inline-flex;}
+.tab ul {display: inline-flex;flex-shrink:0;}
 .tab li + li {margin-left:-1px;}
 .tab li button {display:block; position: relative; width: auto; height: 42px; padding: 5px 15px; border:solid #B1B8BE; border-width:1px 1px 0 1px; text-align: center; font-size: 16px; font-weight: 400; color: #464C53; background: #fff; outline:0 none;}
 .tab li button:hover,
@@ -440,6 +440,7 @@ button.btn-close-menu {width:40px;height:40px;border:0 none;background:url(../im
 .tab li button.active {font-weight: 600; color: #fff; border-color:#524C91; background: #524C91;z-index:1;}
 .tab li button.active::after {z-index: 1; position: absolute; bottom: 0; left:-1px; content:''; width:calc(100% + 2px); height:1px; background: #524C91;}
 .tab li button:disabled {background:#ACABAB;color:#868686;}
+.tab .btn-wrap {align-self:flex-start;}
 
 /* tab intab */
 .tab.ty02 {background-color:#F2F4FE;}
