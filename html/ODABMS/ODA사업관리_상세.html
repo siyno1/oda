@@ -14,6 +14,7 @@
 <link rel="stylesheet" href="../../css/style.css">
 
 <script defer src="../../js/jquery-3.7.1.min.js"></script>
+<script defer src="../../js/swiper.min.js"></script>
 <script defer src="../../js/flatpickr.js"></script>
 <script defer src="../../js/ui.js"></script>
 
@@ -288,8 +289,11 @@
 								<!-- iBox -->
 								<div class="iBox">
 									<div>
-										<div class="imgbox">
-											<img src="../../img/sample_img_01.svg" alt="">
+										<div class="imgbox" onclick="popupImgSlide('pop03');">
+											<div><img src="../../img/sample_img_01.svg" alt=""></div>
+											<div><img src="../../img/sample_img_01.svg" alt=""></div>
+											<div><img src="../../img/sample_img_01.svg" alt=""></div>
+											<div><img src="../../img/sample_img_01.svg" alt=""></div>
 										</div>
 
 										<div class="biz">
@@ -1618,6 +1622,29 @@
 	</div>
 	<!-- //popup : large -->
 
+	<!-- popup : small -->
+	<div class="popup sm" id="pop03">
+		<div class="tit">
+			<p>사업 이미지</p>
+			<button type="button" class="btn-close"><span class="sr-only">팝업창 닫기</span></button>
+		</div>
+
+		<div class="cont">
+			<div class="imgSlide">
+				<button type="button" class="btn-slide-prev"></button>
+				<div><img src="../../img/sample_img_01.svg" alt=""></div>
+				<div><img src="../../img/sample_img_01.svg" alt=""></div>
+				<div><img src="../../img/sample_img_01.svg" alt=""></div>
+				<div><img src="../../img/sample_img_01.svg" alt=""></div>
+			</div>
+		</div>
+
+		<div class="btn-wrap">
+			<button type="button" class="btn close">닫기</button>
+		</div>
+	</div>
+	<!-- //popup : small -->
+
 
 	<script>
 		/* 대륙 컬러 채우기 예시 */
@@ -1629,6 +1656,31 @@
 
 			countryFlag.setAttribute('fill',targetColor);
 			countryExtra.style.color = targetColor;
+		}
+
+		// img slide
+		function popupImgSlide(id) {
+			var $target = $('#' + id);
+			var $originTarget = $target;
+
+			if ($target.hasClass('mapPopup') === false) {
+				var $dim = null;
+				if ($target.closest('.dim').length) {
+					$dim = $target.closest('.dim');
+					$target.show();
+					$target = $dim;
+				} else {
+					$dim = $('<div>');
+					$dim.addClass('dim');
+					$dim.insertBefore($target);
+					$dim.append($target);
+
+					$target.show();
+					$target = $dim;
+				}
+			}
+
+			$target.fadeIn(300);
 		}
 	</script>
 </body>
