@@ -13,10 +13,10 @@
 <link rel="stylesheet" href="../../css/layout.css">
 <link rel="stylesheet" href="../../css/style.css">
 
-<script defer src="../../js/jquery-3.7.1.min.js"></script>
-<script defer src="../../js/swiper.min.js"></script>
-<script defer src="../../js/flatpickr.js"></script>
-<script defer src="../../js/ui.js"></script>
+<script src="../../js/jquery-3.7.1.min.js"></script>
+<script src="../../js/swiper-bundle.min.js"></script>
+<script src="../../js/flatpickr.js"></script>
+<script src="../../js/ui.js"></script>
 
 </head>
 
@@ -1656,10 +1656,15 @@
 		<div class="cont">
 			<div class="imgSlide">
 				<button type="button" class="btn-slide-prev"></button>
-				<div><img src="../../img/sample_img_01.svg" alt=""></div>
-				<div><img src="../../img/sample_img_01.svg" alt=""></div>
-				<div><img src="../../img/sample_img_01.svg" alt=""></div>
-				<div><img src="../../img/sample_img_01.svg" alt=""></div>
+				<div class="swiper">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide"><img src="../../img/sample_img_01.svg" alt=""></div>
+						<div class="swiper-slide"><img src="../../img/sample_img_01.svg" alt=""></div>
+						<div class="swiper-slide"><img src="../../img/sample_img_01.svg" alt=""></div>
+						<div class="swiper-slide"><img src="../../img/sample_img_01.svg" alt=""></div>
+					</div>
+				</div>
+				<button type="button" class="btn-slide-next"></button>
 			</div>
 		</div>
 
@@ -1671,6 +1676,8 @@
 
 
 	<script>
+		let imgSlide = null;
+
 		/* 대륙 컬러 채우기 예시 */
 		function fillCountryColor(imgEl, color) {
 			const targetColor = color ? color : '#8A949E';
@@ -1705,6 +1712,16 @@
 			}
 
 			$target.fadeIn(300);
+
+			if(!imgSlide) {
+				imgSlide = new Swiper('.imgSlide .swiper', {
+					loop:true,
+					navigation: {
+						prevEl: '.imgSlide .btn-slide-prev',
+						nextEl: '.imgSlide .btn-slide-next'
+					}
+				});
+			}
 		}
 	</script>
 </body>
