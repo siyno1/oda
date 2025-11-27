@@ -1303,7 +1303,7 @@ button[class^=btnList] {display:inline-block;box-sizing:border-box;border:0 none
 
 .list-card > li .topInfo {flex:1 1 auto;}
 .list-card > li .topInfo .tit {display:flex;align-items:flex-start;gap:30px;}
-.list-card > li .topInfo .tit strong {flex:1 1 auto;display:block;font-size:18px;line-height:1.5;}
+.list-card > li .topInfo .tit strong {flex:1 1 auto;font-size:18px;line-height:1.5;}
 .list-card > li .topInfo .extra {flex-shrink:0;display:flex;align-items:center;font-size:13px;line-height:1.5;}
 .list-card > li .topInfo .extra .signal {display:flex;align-items:center;gap:5px;}
 .list-card > li .topInfo .extra .signal::after {content:'';display:block;width:18px;height:18px;border-radius:50%;background:#D5D5D5;}
