@@ -96,6 +96,8 @@
 .wrapper.showMenu .side {left:0;}
 .wrapper.showMenu .btnSlide::after{transform:rotate(0);}
 .wrapper.showMenu .container {left:230px;}
+.wrapper.main.showMenu .container {left:0 !important;}
+.wrapper.main #side {display:none !important;}
 
 .contents{width:100%;}
 
