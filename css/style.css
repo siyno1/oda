@@ -1529,7 +1529,7 @@ button[class^=btnList] {display:inline-block;box-sizing:border-box;border:0 none
 .checkFilePath .cnts .btn-wrap {flex:0 0 auto;width:auto;}
 
 .selectPaths {flex:0 0 auto;display:flex;align-items:center;gap:28px;}
-.selectPaths > li {width:288px;}
+.selectPaths > li {width:450px;}
 .selectPaths > li > .selectBtnSt {width:100%;}
 .selectPaths > li + li {position:relative;}
 .selectPaths > li + li::before {content:'';display:block;position:absolute;top:50%;left:-23px;width:18px;height:18px;margin-top:-9px;background:url(../img/ico_path_arr.svg) no-repeat center;}
